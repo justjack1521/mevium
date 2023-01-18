@@ -58,6 +58,7 @@ message RegisterUserResponse {
 
 message AuthTokenRequest {
   protoc.RequestHeader header = 1;
+  string bearer = 2;
 }
 
 message AuthTokenResponse {
