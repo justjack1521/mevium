@@ -9,6 +9,8 @@ import "common.proto";
 service AccessService {
   rpc ChangePassword(ChangePasswordRequest) returns (ChangePasswordResponse) {}
   rpc LoginUser(LoginUserRequest) returns (LoginUserResponse) {}
+  rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {}
+  rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
 }
 
 message ChangePasswordRequest {
@@ -31,4 +33,24 @@ message LoginUserResponse {
   protoc.ResponseHeader header = 1;
   string access_token = 2;
   string refresh_token = 3;
+}
+
+message RefreshTokenRequest {
+  protoc.RequestHeader header = 1;
+  string refresh_token = 2;
+}
+
+message RefreshTokenResponse {
+  protoc.ResponseHeader header = 1;
+}
+
+message RegisterUserRequest {
+  protoc.RequestHeader header = 1;
+  string username = 2;
+  string password = 3;
+  string confirm_password = 4;
+}
+
+message RegisterUserResponse {
+  protoc.ResponseHeader header = 1;
 }
