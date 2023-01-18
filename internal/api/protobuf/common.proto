@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package protoc;
 
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/common";
+option go_package = "/common";
 
 message RequestHeader {
   string client_id = 1;
