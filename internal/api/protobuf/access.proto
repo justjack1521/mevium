@@ -11,6 +11,7 @@ service AccessService {
   rpc LoginUser(LoginUserRequest) returns (LoginUserResponse) {}
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {}
   rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
+  rpc AuthToken(AuthTokenRequest) returns (AuthTokenResponse) {}
 }
 
 message ChangePasswordRequest {
@@ -52,5 +53,13 @@ message RegisterUserRequest {
 }
 
 message RegisterUserResponse {
+  protoc.ResponseHeader header = 1;
+}
+
+message AuthTokenRequest {
+  protoc.RequestHeader header = 1;
+}
+
+message AuthTokenResponse {
   protoc.ResponseHeader header = 1;
 }
