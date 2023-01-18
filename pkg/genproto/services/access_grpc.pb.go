@@ -53,15 +53,14 @@ func (c *accessServiceClient) LoginUser(ctx context.Context, in *LoginUserReques
 }
 
 // AccessServiceServer is the server API for AccessService service.
-// All implementations must embed UnimplementedAccessServiceServer
+// All implementations should embed UnimplementedAccessServiceServer
 // for forward compatibility
 type AccessServiceServer interface {
 	ChangePassword(context.Context, *ChangePasswordRequest) (*ChangePasswordResponse, error)
 	LoginUser(context.Context, *LoginUserRequest) (*LoginUserResponse, error)
-	mustEmbedUnimplementedAccessServiceServer()
 }
 
-// UnimplementedAccessServiceServer must be embedded to have forward compatible implementations.
+// UnimplementedAccessServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedAccessServiceServer struct {
 }
 
@@ -71,7 +70,6 @@ func (UnimplementedAccessServiceServer) ChangePassword(context.Context, *ChangeP
 func (UnimplementedAccessServiceServer) LoginUser(context.Context, *LoginUserRequest) (*LoginUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LoginUser not implemented")
 }
-func (UnimplementedAccessServiceServer) mustEmbedUnimplementedAccessServiceServer() {}
 
 // UnsafeAccessServiceServer may be embedded to opt out of forward compatibility for this service.
 // Use of this interface is not recommended, as added methods to AccessServiceServer will
