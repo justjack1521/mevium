@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package protoc;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
+
+import "common.proto";
+
+message ChangePasswordRequest {
+  protoc.RequestHeader header = 1;
+  string old_password = 2;
+  string new_password = 3;
+}
+
+message protocChangePasswordResponse {
+  protoc.ResponseHeader header = 1;
+}
+
+message LoginUserRequest {
+  protoc.RequestHeader header = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message LoginUserResponse {
+  protoc.ResponseHeader header = 1;
+  string access_token = 2;
+  string refresh_token = 3;
+}
