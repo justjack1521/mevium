@@ -6,13 +6,18 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 
 import "common.proto";
 
+service AccessService {
+  rpc ChangePassword(ChangePasswordRequest) returns (ChangePasswordResponse) {}
+  rpc LoginUser(LoginUserRequest) returns (LoginUserResponse) {}
+}
+
 message ChangePasswordRequest {
   protoc.RequestHeader header = 1;
   string old_password = 2;
   string new_password = 3;
 }
 
-message protocChangePasswordResponse {
+message ChangePasswordResponse {
   protoc.ResponseHeader header = 1;
 }
 
