@@ -22,11 +22,11 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AccessServiceClient interface {
+	AuthToken(ctx context.Context, in *AuthTokenRequest, opts ...grpc.CallOption) (*AuthTokenResponse, error)
 	ChangePassword(ctx context.Context, in *ChangePasswordRequest, opts ...grpc.CallOption) (*ChangePasswordResponse, error)
 	LoginUser(ctx context.Context, in *LoginUserRequest, opts ...grpc.CallOption) (*LoginUserResponse, error)
 	RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error)
 	RegisterUser(ctx context.Context, in *RegisterUserRequest, opts ...grpc.CallOption) (*RegisterUserResponse, error)
-	AuthToken(ctx context.Context, in *AuthTokenRequest, opts ...grpc.CallOption) (*AuthTokenResponse, error)
 }
 
 type accessServiceClient struct {
@@ -35,6 +35,15 @@ type accessServiceClient struct {
 
 func NewAccessServiceClient(cc grpc.ClientConnInterface) AccessServiceClient {
 	return &accessServiceClient{cc}
+}
+
+func (c *accessServiceClient) AuthToken(ctx context.Context, in *AuthTokenRequest, opts ...grpc.CallOption) (*AuthTokenResponse, error) {
+	out := new(AuthTokenResponse)
+	err := c.cc.Invoke(ctx, "/protoc.AccessService/AuthToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
 func (c *accessServiceClient) ChangePassword(ctx context.Context, in *ChangePasswordRequest, opts ...grpc.CallOption) (*ChangePasswordResponse, error) {
@@ -73,30 +82,24 @@ func (c *accessServiceClient) RegisterUser(ctx context.Context, in *RegisterUser
 	return out, nil
 }
 
-func (c *accessServiceClient) AuthToken(ctx context.Context, in *AuthTokenRequest, opts ...grpc.CallOption) (*AuthTokenResponse, error) {
-	out := new(AuthTokenResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/AuthToken", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // AccessServiceServer is the server API for AccessService service.
 // All implementations should embed UnimplementedAccessServiceServer
 // for forward compatibility
 type AccessServiceServer interface {
+	AuthToken(context.Context, *AuthTokenRequest) (*AuthTokenResponse, error)
 	ChangePassword(context.Context, *ChangePasswordRequest) (*ChangePasswordResponse, error)
 	LoginUser(context.Context, *LoginUserRequest) (*LoginUserResponse, error)
 	RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error)
 	RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error)
-	AuthToken(context.Context, *AuthTokenRequest) (*AuthTokenResponse, error)
 }
 
 // UnimplementedAccessServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedAccessServiceServer struct {
 }
 
+func (UnimplementedAccessServiceServer) AuthToken(context.Context, *AuthTokenRequest) (*AuthTokenResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AuthToken not implemented")
+}
 func (UnimplementedAccessServiceServer) ChangePassword(context.Context, *ChangePasswordRequest) (*ChangePasswordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ChangePassword not implemented")
 }
@@ -109,9 +112,6 @@ func (UnimplementedAccessServiceServer) RefreshToken(context.Context, *RefreshTo
 func (UnimplementedAccessServiceServer) RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RegisterUser not implemented")
 }
-func (UnimplementedAccessServiceServer) AuthToken(context.Context, *AuthTokenRequest) (*AuthTokenResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AuthToken not implemented")
-}
 
 // UnsafeAccessServiceServer may be embedded to opt out of forward compatibility for this service.
 // Use of this interface is not recommended, as added methods to AccessServiceServer will
@@ -122,6 +122,24 @@ type UnsafeAccessServiceServer interface {
 
 func RegisterAccessServiceServer(s grpc.ServiceRegistrar, srv AccessServiceServer) {
 	s.RegisterService(&AccessService_ServiceDesc, srv)
+}
+
+func _AccessService_AuthToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AuthTokenRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccessServiceServer).AuthToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protoc.AccessService/AuthToken",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccessServiceServer).AuthToken(ctx, req.(*AuthTokenRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_ChangePassword_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -196,24 +214,6 @@ func _AccessService_RegisterUser_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AccessService_AuthToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AuthTokenRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(AccessServiceServer).AuthToken(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/protoc.AccessService/AuthToken",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).AuthToken(ctx, req.(*AuthTokenRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // AccessService_ServiceDesc is the grpc.ServiceDesc for AccessService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -221,6 +221,10 @@ var AccessService_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "protoc.AccessService",
 	HandlerType: (*AccessServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "AuthToken",
+			Handler:    _AccessService_AuthToken_Handler,
+		},
 		{
 			MethodName: "ChangePassword",
 			Handler:    _AccessService_ChangePassword_Handler,
@@ -236,10 +240,6 @@ var AccessService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RegisterUser",
 			Handler:    _AccessService_RegisterUser_Handler,
-		},
-		{
-			MethodName: "AuthToken",
-			Handler:    _AccessService_AuthToken_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

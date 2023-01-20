@@ -7,11 +7,20 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 import "common.proto";
 
 service AccessService {
+  rpc AuthToken(AuthTokenRequest) returns (AuthTokenResponse) {}
   rpc ChangePassword(ChangePasswordRequest) returns (ChangePasswordResponse) {}
   rpc LoginUser(LoginUserRequest) returns (LoginUserResponse) {}
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {}
   rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
-  rpc AuthToken(AuthTokenRequest) returns (AuthTokenResponse) {}
+}
+
+message AuthTokenRequest {
+  protoc.RequestHeader header = 1;
+  string bearer = 2;
+}
+
+message AuthTokenResponse {
+  protoc.ResponseHeader header = 1;
 }
 
 message ChangePasswordRequest {
@@ -53,14 +62,5 @@ message RegisterUserRequest {
 }
 
 message RegisterUserResponse {
-  protoc.ResponseHeader header = 1;
-}
-
-message AuthTokenRequest {
-  protoc.RequestHeader header = 1;
-  string bearer = 2;
-}
-
-message AuthTokenResponse {
   protoc.ResponseHeader header = 1;
 }
