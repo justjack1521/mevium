@@ -6,8 +6,7 @@ import (
 	"net"
 )
 
-func RunGRPCServer(register func(server *grpc.Server)) {
-	port := "8080"
+func RunGRPCServer(port string, register func(server *grpc.Server)) {
 	addr := fmt.Sprintf(":%s", port)
 	RunGRPCServerOnAddr(addr, register)
 }
