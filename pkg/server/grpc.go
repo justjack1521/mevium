@@ -21,6 +21,8 @@ func RunGRPCServerOnAddr(addr string, registerServer func(server *grpc.Server)) 
 		panic(err)
 	}
 
+	fmt.Println(fmt.Sprintf("Now listening on: %s", listen.Addr()))
+
 	err = svr.Serve(listen)
 	if err != nil {
 		panic(err)
