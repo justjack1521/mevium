@@ -12,6 +12,7 @@ service AccessService {
   rpc LoginUser(LoginUserRequest) returns (LoginUserResponse) {}
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {}
   rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
+  rpc UserHasRole(UserHasRoleRequest) returns (UserHasRoleResponse) {}
 }
 
 message AuthTokenRequest {
@@ -63,4 +64,14 @@ message RegisterUserRequest {
 
 message RegisterUserResponse {
   protoc.ResponseHeader header = 1;
+}
+
+message UserHasRoleRequest {
+  protoc.RequestHeader header = 1;
+  string role = 2;
+}
+
+message UserHasRoleResponse {
+  protoc.ResponseHeader header = 1;
+  bool has_role = 2;
 }

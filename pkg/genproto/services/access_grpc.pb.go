@@ -27,6 +27,7 @@ type AccessServiceClient interface {
 	LoginUser(ctx context.Context, in *LoginUserRequest, opts ...grpc.CallOption) (*LoginUserResponse, error)
 	RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error)
 	RegisterUser(ctx context.Context, in *RegisterUserRequest, opts ...grpc.CallOption) (*RegisterUserResponse, error)
+	UserHasRole(ctx context.Context, in *UserHasRoleRequest, opts ...grpc.CallOption) (*UserHasRoleResponse, error)
 }
 
 type accessServiceClient struct {
@@ -82,6 +83,15 @@ func (c *accessServiceClient) RegisterUser(ctx context.Context, in *RegisterUser
 	return out, nil
 }
 
+func (c *accessServiceClient) UserHasRole(ctx context.Context, in *UserHasRoleRequest, opts ...grpc.CallOption) (*UserHasRoleResponse, error) {
+	out := new(UserHasRoleResponse)
+	err := c.cc.Invoke(ctx, "/protoc.AccessService/UserHasRole", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AccessServiceServer is the server API for AccessService service.
 // All implementations should embed UnimplementedAccessServiceServer
 // for forward compatibility
@@ -91,6 +101,7 @@ type AccessServiceServer interface {
 	LoginUser(context.Context, *LoginUserRequest) (*LoginUserResponse, error)
 	RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error)
 	RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error)
+	UserHasRole(context.Context, *UserHasRoleRequest) (*UserHasRoleResponse, error)
 }
 
 // UnimplementedAccessServiceServer should be embedded to have forward compatible implementations.
@@ -111,6 +122,9 @@ func (UnimplementedAccessServiceServer) RefreshToken(context.Context, *RefreshTo
 }
 func (UnimplementedAccessServiceServer) RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RegisterUser not implemented")
+}
+func (UnimplementedAccessServiceServer) UserHasRole(context.Context, *UserHasRoleRequest) (*UserHasRoleResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UserHasRole not implemented")
 }
 
 // UnsafeAccessServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -214,6 +228,24 @@ func _AccessService_RegisterUser_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AccessService_UserHasRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserHasRoleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccessServiceServer).UserHasRole(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protoc.AccessService/UserHasRole",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccessServiceServer).UserHasRole(ctx, req.(*UserHasRoleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AccessService_ServiceDesc is the grpc.ServiceDesc for AccessService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -240,6 +272,10 @@ var AccessService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RegisterUser",
 			Handler:    _AccessService_RegisterUser_Handler,
+		},
+		{
+			MethodName: "UserHasRole",
+			Handler:    _AccessService_UserHasRole_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
