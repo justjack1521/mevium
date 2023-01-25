@@ -4,6 +4,32 @@ package protoc;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
 
+enum RequestType {
+  BASE = 0;
+  GET_PROFILE = 200;
+  CREATE_PROFILE = 300;
+  CARD_SALE = 400;
+  CARD_FILTER_SORT = 500;
+  CARD_FAVOURITE = 600;
+  SKILL_PANEL = 700;
+  DECK_EDIT = 800;
+  DECK_EDIT_ALL = 900;
+  TELEPORT = 1000;
+  REGION_MAP_OPEN = 1100;
+  BATTLE_REVIVE = 1200;
+  BATTLE_COMPLETE = 1300;
+  FOLLOW_PLAYER = 1400;
+  UNFOLLOW_PLAYER = 1500;
+  CONFIRM_DAILY_MISSION = 1600;
+  CLAIM_EVENT_RANKING = 1700;
+  CLAIM_MAILBOX = 1800;
+  BATTLE_START = 1900;
+  CARD_TRANSFER = 2000;
+  CARD_FUSION = 2100;
+  CARD_FUSION_BOOST = 2200;
+  STAMINA_RESTORE = 2300;
+}
+
 message RequestHeader {
   string client_id      =  1;
   string connection_id  =  2;
