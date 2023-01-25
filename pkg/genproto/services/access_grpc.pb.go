@@ -40,7 +40,7 @@ func NewAccessServiceClient(cc grpc.ClientConnInterface) AccessServiceClient {
 
 func (c *accessServiceClient) AuthToken(ctx context.Context, in *AuthTokenRequest, opts ...grpc.CallOption) (*AuthTokenResponse, error) {
 	out := new(AuthTokenResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/AuthToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/access.AccessService/AuthToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -49,7 +49,7 @@ func (c *accessServiceClient) AuthToken(ctx context.Context, in *AuthTokenReques
 
 func (c *accessServiceClient) ChangePassword(ctx context.Context, in *ChangePasswordRequest, opts ...grpc.CallOption) (*ChangePasswordResponse, error) {
 	out := new(ChangePasswordResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/ChangePassword", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/access.AccessService/ChangePassword", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -58,7 +58,7 @@ func (c *accessServiceClient) ChangePassword(ctx context.Context, in *ChangePass
 
 func (c *accessServiceClient) LoginUser(ctx context.Context, in *LoginUserRequest, opts ...grpc.CallOption) (*LoginUserResponse, error) {
 	out := new(LoginUserResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/LoginUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/access.AccessService/LoginUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -67,7 +67,7 @@ func (c *accessServiceClient) LoginUser(ctx context.Context, in *LoginUserReques
 
 func (c *accessServiceClient) RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error) {
 	out := new(RefreshTokenResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/RefreshToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/access.AccessService/RefreshToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -76,7 +76,7 @@ func (c *accessServiceClient) RefreshToken(ctx context.Context, in *RefreshToken
 
 func (c *accessServiceClient) RegisterUser(ctx context.Context, in *RegisterUserRequest, opts ...grpc.CallOption) (*RegisterUserResponse, error) {
 	out := new(RegisterUserResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/RegisterUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/access.AccessService/RegisterUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -85,7 +85,7 @@ func (c *accessServiceClient) RegisterUser(ctx context.Context, in *RegisterUser
 
 func (c *accessServiceClient) UserHasRole(ctx context.Context, in *UserHasRoleRequest, opts ...grpc.CallOption) (*UserHasRoleResponse, error) {
 	out := new(UserHasRoleResponse)
-	err := c.cc.Invoke(ctx, "/protoc.AccessService/UserHasRole", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/access.AccessService/UserHasRole", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -148,7 +148,7 @@ func _AccessService_AuthToken_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protoc.AccessService/AuthToken",
+		FullMethod: "/access.AccessService/AuthToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).AuthToken(ctx, req.(*AuthTokenRequest))
@@ -166,7 +166,7 @@ func _AccessService_ChangePassword_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protoc.AccessService/ChangePassword",
+		FullMethod: "/access.AccessService/ChangePassword",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).ChangePassword(ctx, req.(*ChangePasswordRequest))
@@ -184,7 +184,7 @@ func _AccessService_LoginUser_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protoc.AccessService/LoginUser",
+		FullMethod: "/access.AccessService/LoginUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).LoginUser(ctx, req.(*LoginUserRequest))
@@ -202,7 +202,7 @@ func _AccessService_RefreshToken_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protoc.AccessService/RefreshToken",
+		FullMethod: "/access.AccessService/RefreshToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).RefreshToken(ctx, req.(*RefreshTokenRequest))
@@ -220,7 +220,7 @@ func _AccessService_RegisterUser_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protoc.AccessService/RegisterUser",
+		FullMethod: "/access.AccessService/RegisterUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).RegisterUser(ctx, req.(*RegisterUserRequest))
@@ -238,7 +238,7 @@ func _AccessService_UserHasRole_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protoc.AccessService/UserHasRole",
+		FullMethod: "/access.AccessService/UserHasRole",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).UserHasRole(ctx, req.(*UserHasRoleRequest))
@@ -250,7 +250,7 @@ func _AccessService_UserHasRole_Handler(srv interface{}, ctx context.Context, de
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AccessService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "protoc.AccessService",
+	ServiceName: "access.AccessService",
 	HandlerType: (*AccessServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

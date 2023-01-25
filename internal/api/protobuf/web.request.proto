@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package protoc;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
+
+message RequestHeader {
+  string client_id      =  1;
+  string connection_id  =  2;
+  string command_id     =  3;
+}
+
+message BaseRequest {
+  RequestHeader header     =  1;
+  int32         operation  =  2;
+  bytes         data       =  3;
+}
+
+message CreateProfileRequest {
+  string player_name = 1;
+}

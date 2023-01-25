@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package core;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
+
+import "web.request.proto";
+import "web.response.proto";
+
+service CoreWebService {
+  rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
+}

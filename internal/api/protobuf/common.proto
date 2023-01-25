@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package protoc;
+package common;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/common";
 
