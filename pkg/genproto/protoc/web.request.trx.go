@@ -9,7 +9,3 @@ func NewCreateProfileRequest(bytes []byte) (*CreateProfileRequest, error) {
 	}
 	return req, nil
 }
-
-func (x *CreateProfileResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
