@@ -3,18 +3,20 @@ package server
 import (
 	"fmt"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/reflection"
 	"net"
 )
 
-func RunGRPCServer(port string, register func(server *grpc.Server)) {
+func RunGRPCServer(port string, credentials credentials.TransportCredentials, register func(server *grpc.Server)) {
 	addr := fmt.Sprintf("0.0.0.0:%s", port)
-	RunGRPCServerOnAddr(addr, register)
+	RunGRPCServerOnAddr(addr, credentials, register)
 }
 
-func RunGRPCServerOnAddr(addr string, registerServer func(server *grpc.Server)) {
+func RunGRPCServerOnAddr(addr string, credentials credentials.TransportCredentials, registerServer func(server *grpc.Server)) {
 
-	svr := grpc.NewServer()
+	svr := grpc.NewServer(grpc.Creds(credentials))
+
 	registerServer(svr)
 
 	reflection.Register(svr)
