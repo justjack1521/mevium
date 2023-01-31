@@ -29,6 +29,6 @@ message CreateProfileResponse {
 }
 
 message CardFavouriteResponse {
-  string CardID = 1;
-  bool Locked = 2;
+  string card_id = 1;
+  bool locked = 2;
 }

@@ -47,5 +47,6 @@ message CreateProfileRequest {
 }
 
 message CardFavouriteRequest {
-  int32 Card = 1;
+  string card = 1;
+  bool value = 2;
 }
