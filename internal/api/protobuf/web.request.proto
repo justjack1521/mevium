@@ -45,3 +45,7 @@ message BaseRequest {
 message CreateProfileRequest {
   string player_name = 1;
 }
+
+message CardFavouriteRequest {
+  int32 Card = 1;
+}

@@ -27,3 +27,8 @@ message ResponseHeader {
 message CreateProfileResponse {
   bytes game_data = 1;
 }
+
+message CardFavouriteResponse {
+  string CardID = 1;
+  bool Locked = 2;
+}
