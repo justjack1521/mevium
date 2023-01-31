@@ -4,6 +4,11 @@ package protoc;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
 
+message ApplicationError {
+  int32   error_code     =  1;
+  string  error_message  =  2;
+}
+
 message Response {
   ResponseHeader  header  =  1;
   bytes           data    =  2;
