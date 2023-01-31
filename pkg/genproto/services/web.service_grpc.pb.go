@@ -24,6 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CoreWebServiceClient interface {
 	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
+	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 }
 
 type coreWebServiceClient struct {
@@ -43,11 +44,21 @@ func (c *coreWebServiceClient) CreateProfile(ctx context.Context, in *protoc.Cre
 	return out, nil
 }
 
+func (c *coreWebServiceClient) FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error) {
+	out := new(protoc.CardFavouriteResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/FavouriteCard", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CoreWebServiceServer is the server API for CoreWebService service.
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
 type CoreWebServiceServer interface {
 	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
+	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 }
 
 // UnimplementedCoreWebServiceServer should be embedded to have forward compatible implementations.
@@ -56,6 +67,9 @@ type UnimplementedCoreWebServiceServer struct {
 
 func (UnimplementedCoreWebServiceServer) CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProfile not implemented")
+}
+func (UnimplementedCoreWebServiceServer) FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FavouriteCard not implemented")
 }
 
 // UnsafeCoreWebServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -87,6 +101,24 @@ func _CoreWebService_CreateProfile_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CoreWebService_FavouriteCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardFavouriteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).FavouriteCard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/FavouriteCard",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).FavouriteCard(ctx, req.(*protoc.CardFavouriteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CoreWebService_ServiceDesc is the grpc.ServiceDesc for CoreWebService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -97,6 +129,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateProfile",
 			Handler:    _CoreWebService_CreateProfile_Handler,
+		},
+		{
+			MethodName: "FavouriteCard",
+			Handler:    _CoreWebService_FavouriteCard_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
