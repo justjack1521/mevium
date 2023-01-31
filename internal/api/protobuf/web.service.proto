@@ -10,4 +10,5 @@ import "web.response.proto";
 service CoreWebService {
   rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
   rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
+  rpc CardSale(protoc.CardSaleRequest) returns (protoc.CardSaleResponse) {}
 }

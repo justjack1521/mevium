@@ -32,3 +32,8 @@ message CardFavouriteResponse {
   string card_id = 1;
   bool locked = 2;
 }
+
+message CardSaleResponse {
+  int32 TotalGold = 1;
+  repeated string CardsRemoved = 2;
+}
