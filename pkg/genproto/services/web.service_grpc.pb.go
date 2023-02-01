@@ -27,6 +27,7 @@ type CoreWebServiceClient interface {
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
+	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 }
 
 type coreWebServiceClient struct {
@@ -73,6 +74,15 @@ func (c *coreWebServiceClient) ConfirmDailyMission(ctx context.Context, in *prot
 	return out, nil
 }
 
+func (c *coreWebServiceClient) RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error) {
+	out := new(protoc.StaminaRestoreResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/RestoreStamina", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CoreWebServiceServer is the server API for CoreWebService service.
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
@@ -81,6 +91,7 @@ type CoreWebServiceServer interface {
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
+	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 }
 
 // UnimplementedCoreWebServiceServer should be embedded to have forward compatible implementations.
@@ -98,6 +109,9 @@ func (UnimplementedCoreWebServiceServer) CardSale(context.Context, *protoc.CardS
 }
 func (UnimplementedCoreWebServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
+}
+func (UnimplementedCoreWebServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
 }
 
 // UnsafeCoreWebServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -183,6 +197,24 @@ func _CoreWebService_ConfirmDailyMission_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CoreWebService_RestoreStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.StaminaRestoreRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).RestoreStamina(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/RestoreStamina",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).RestoreStamina(ctx, req.(*protoc.StaminaRestoreRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CoreWebService_ServiceDesc is the grpc.ServiceDesc for CoreWebService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -205,6 +237,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ConfirmDailyMission",
 			Handler:    _CoreWebService_ConfirmDailyMission_Handler,
+		},
+		{
+			MethodName: "RestoreStamina",
+			Handler:    _CoreWebService_RestoreStamina_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

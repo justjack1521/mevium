@@ -12,4 +12,5 @@ service CoreWebService {
   rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
   rpc CardSale(protoc.CardSaleRequest) returns (protoc.CardSaleResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
+  rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
 }

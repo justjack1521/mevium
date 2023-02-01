@@ -41,3 +41,9 @@ message CardSaleResponse {
 message ConfirmDailyMissionResponse {
 
 }
+
+message StaminaRestoreResponse {
+  string ItemID = 1;
+  int32 ItemAmount = 2;
+  int32 RestoreAmount = 3;
+}

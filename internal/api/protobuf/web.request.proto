@@ -58,3 +58,7 @@ message CardSaleRequest {
 message ConfirmDailyMissionRequest {
 
 }
+
+message StaminaRestoreRequest {
+  bool MultiPlayer = 1;
+}
