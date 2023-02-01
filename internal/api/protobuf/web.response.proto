@@ -4,6 +4,8 @@ package protoc;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
 
+import "game.proto";
+
 message ApplicationError {
   int32   error_code     =  1;
   string  error_message  =  2;
@@ -34,8 +36,8 @@ message CardFavouriteResponse {
 }
 
 message CardSaleResponse {
-  int32 TotalGold = 1;
-  repeated string CardsRemoved = 2;
+  int32 total_gold = 1;
+  repeated string cards_removed = 2;
 }
 
 message ConfirmDailyMissionResponse {
@@ -43,7 +45,15 @@ message ConfirmDailyMissionResponse {
 }
 
 message StaminaRestoreResponse {
-  string ItemID = 1;
-  int32 ItemAmount = 2;
-  int32 RestoreAmount = 3;
+  string item_id = 1;
+  int32 item_amount = 2;
+  int32 restore_amount = 3;
+}
+
+message FollowPlayerResponse {
+  game.ProtoPlayerInfo player_info = 1;
+}
+
+message UnfollowPlayerResponse {
+  string player_id = 1;
 }

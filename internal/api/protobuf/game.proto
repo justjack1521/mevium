@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package game;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
+
+message ProtoPlayerInfo {
+  string PlayerID = 1;
+  string PlayerName = 2;
+  string PlayerComment = 3;
+  int32 PlayerLevel = 4;
+  int64 LastOnline = 5;
+  string JobCardID = 6;
+  int32 SubJobIndex = 7;
+  string CompanionID = 8;
+  ProtoPlayerCardInfo RentalCard = 9;
+}
+
+message ProtoPlayerCardInfo {
+  string AbilityCardID = 1;
+  int32 AbilityLevel = 3;
+  int32 AbilityCardLevel = 2;
+  int32 ExtraSkillUnlock = 4;
+  int32 OverBoostLevel = 5;
+  int32 SlotIndex = 6;
+}

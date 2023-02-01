@@ -52,7 +52,7 @@ message CardFavouriteRequest {
 }
 
 message CardSaleRequest {
-  repeated string Cards = 1;
+  repeated string cards = 1;
 }
 
 message ConfirmDailyMissionRequest {
@@ -60,5 +60,13 @@ message ConfirmDailyMissionRequest {
 }
 
 message StaminaRestoreRequest {
-  bool MultiPlayer = 1;
+  bool multi_player = 1;
+}
+
+message FollowPlayerRequest {
+  string player_id = 1;
+}
+
+message UnfollowPlayerRequest {
+  string player_id = 1;
 }

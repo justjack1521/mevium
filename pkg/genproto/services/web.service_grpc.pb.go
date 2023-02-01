@@ -28,6 +28,8 @@ type CoreWebServiceClient interface {
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
+	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
+	UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error)
 }
 
 type coreWebServiceClient struct {
@@ -83,6 +85,24 @@ func (c *coreWebServiceClient) RestoreStamina(ctx context.Context, in *protoc.St
 	return out, nil
 }
 
+func (c *coreWebServiceClient) FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error) {
+	out := new(protoc.FollowPlayerResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/FollowPlayer", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreWebServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error) {
+	out := new(protoc.UnfollowPlayerResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/UnfollowPlayer", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CoreWebServiceServer is the server API for CoreWebService service.
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
@@ -92,6 +112,8 @@ type CoreWebServiceServer interface {
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
+	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
+	UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error)
 }
 
 // UnimplementedCoreWebServiceServer should be embedded to have forward compatible implementations.
@@ -112,6 +134,12 @@ func (UnimplementedCoreWebServiceServer) ConfirmDailyMission(context.Context, *p
 }
 func (UnimplementedCoreWebServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
+}
+func (UnimplementedCoreWebServiceServer) FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FollowPlayer not implemented")
+}
+func (UnimplementedCoreWebServiceServer) UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UnfollowPlayer not implemented")
 }
 
 // UnsafeCoreWebServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -215,6 +243,42 @@ func _CoreWebService_RestoreStamina_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CoreWebService_FollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.FollowPlayerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).FollowPlayer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/FollowPlayer",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).FollowPlayer(ctx, req.(*protoc.FollowPlayerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CoreWebService_UnfollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.UnfollowPlayerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).UnfollowPlayer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/UnfollowPlayer",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).UnfollowPlayer(ctx, req.(*protoc.UnfollowPlayerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CoreWebService_ServiceDesc is the grpc.ServiceDesc for CoreWebService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -241,6 +305,14 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RestoreStamina",
 			Handler:    _CoreWebService_RestoreStamina_Handler,
+		},
+		{
+			MethodName: "FollowPlayer",
+			Handler:    _CoreWebService_FollowPlayer_Handler,
+		},
+		{
+			MethodName: "UnfollowPlayer",
+			Handler:    _CoreWebService_UnfollowPlayer_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
