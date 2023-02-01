@@ -26,6 +26,7 @@ type CoreWebServiceClient interface {
 	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
+	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
 }
 
 type coreWebServiceClient struct {
@@ -63,6 +64,15 @@ func (c *coreWebServiceClient) CardSale(ctx context.Context, in *protoc.CardSale
 	return out, nil
 }
 
+func (c *coreWebServiceClient) ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error) {
+	out := new(protoc.ConfirmDailyMissionResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/ConfirmDailyMission", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CoreWebServiceServer is the server API for CoreWebService service.
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
@@ -70,6 +80,7 @@ type CoreWebServiceServer interface {
 	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
+	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
 }
 
 // UnimplementedCoreWebServiceServer should be embedded to have forward compatible implementations.
@@ -84,6 +95,9 @@ func (UnimplementedCoreWebServiceServer) FavouriteCard(context.Context, *protoc.
 }
 func (UnimplementedCoreWebServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+}
+func (UnimplementedCoreWebServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
 }
 
 // UnsafeCoreWebServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -151,6 +165,24 @@ func _CoreWebService_CardSale_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CoreWebService_ConfirmDailyMission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ConfirmDailyMissionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).ConfirmDailyMission(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/ConfirmDailyMission",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).ConfirmDailyMission(ctx, req.(*protoc.ConfirmDailyMissionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CoreWebService_ServiceDesc is the grpc.ServiceDesc for CoreWebService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -169,6 +201,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CardSale",
 			Handler:    _CoreWebService_CardSale_Handler,
+		},
+		{
+			MethodName: "ConfirmDailyMission",
+			Handler:    _CoreWebService_ConfirmDailyMission_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

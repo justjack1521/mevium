@@ -37,3 +37,7 @@ message CardSaleResponse {
   int32 TotalGold = 1;
   repeated string CardsRemoved = 2;
 }
+
+message ConfirmDailyMissionResponse {
+
+}

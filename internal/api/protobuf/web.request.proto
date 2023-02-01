@@ -54,3 +54,7 @@ message CardFavouriteRequest {
 message CardSaleRequest {
   repeated string Cards = 1;
 }
+
+message ConfirmDailyMissionRequest {
+
+}
