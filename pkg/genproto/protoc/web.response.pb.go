@@ -556,6 +556,53 @@ func (*ConfirmDailyMissionResponse) Descriptor() ([]byte, []int) {
 	return file_web_response_proto_rawDescGZIP(), []int{8}
 }
 
+type FollowPlayerResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerInfo *services.ProtoPlayerInfo `protobuf:"bytes,1,opt,name=player_info,json=playerInfo,proto3" json:"player_info,omitempty"`
+}
+
+func (x *FollowPlayerResponse) Reset() {
+	*x = FollowPlayerResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_response_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *FollowPlayerResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FollowPlayerResponse) ProtoMessage() {}
+
+func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_response_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FollowPlayerResponse.ProtoReflect.Descriptor instead.
+func (*FollowPlayerResponse) Descriptor() ([]byte, []int) {
+	return file_web_response_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *FollowPlayerResponse) GetPlayerInfo() *services.ProtoPlayerInfo {
+	if x != nil {
+		return x.PlayerInfo
+	}
+	return nil
+}
+
 type StaminaRestoreResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -569,7 +616,7 @@ type StaminaRestoreResponse struct {
 func (x *StaminaRestoreResponse) Reset() {
 	*x = StaminaRestoreResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[9]
+		mi := &file_web_response_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -582,7 +629,7 @@ func (x *StaminaRestoreResponse) String() string {
 func (*StaminaRestoreResponse) ProtoMessage() {}
 
 func (x *StaminaRestoreResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[9]
+	mi := &file_web_response_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -595,7 +642,7 @@ func (x *StaminaRestoreResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StaminaRestoreResponse.ProtoReflect.Descriptor instead.
 func (*StaminaRestoreResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{9}
+	return file_web_response_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *StaminaRestoreResponse) GetItemId() string {
@@ -619,31 +666,32 @@ func (x *StaminaRestoreResponse) GetRestoreAmount() int32 {
 	return 0
 }
 
-type FollowPlayerResponse struct {
+type TeleportResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PlayerInfo *services.ProtoPlayerInfo `protobuf:"bytes,1,opt,name=player_info,json=playerInfo,proto3" json:"player_info,omitempty"`
+	RegionMap     string `protobuf:"bytes,1,opt,name=RegionMap,proto3" json:"RegionMap,omitempty"`
+	RegionMapNode int32  `protobuf:"varint,2,opt,name=RegionMapNode,proto3" json:"RegionMapNode,omitempty"`
 }
 
-func (x *FollowPlayerResponse) Reset() {
-	*x = FollowPlayerResponse{}
+func (x *TeleportResponse) Reset() {
+	*x = TeleportResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[10]
+		mi := &file_web_response_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
 }
 
-func (x *FollowPlayerResponse) String() string {
+func (x *TeleportResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*FollowPlayerResponse) ProtoMessage() {}
+func (*TeleportResponse) ProtoMessage() {}
 
-func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[10]
+func (x *TeleportResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_response_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -654,16 +702,23 @@ func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use FollowPlayerResponse.ProtoReflect.Descriptor instead.
-func (*FollowPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{10}
+// Deprecated: Use TeleportResponse.ProtoReflect.Descriptor instead.
+func (*TeleportResponse) Descriptor() ([]byte, []int) {
+	return file_web_response_proto_rawDescGZIP(), []int{11}
 }
 
-func (x *FollowPlayerResponse) GetPlayerInfo() *services.ProtoPlayerInfo {
+func (x *TeleportResponse) GetRegionMap() string {
 	if x != nil {
-		return x.PlayerInfo
+		return x.RegionMap
 	}
-	return nil
+	return ""
+}
+
+func (x *TeleportResponse) GetRegionMapNode() int32 {
+	if x != nil {
+		return x.RegionMapNode
+	}
+	return 0
 }
 
 type UnfollowPlayerResponse struct {
@@ -677,7 +732,7 @@ type UnfollowPlayerResponse struct {
 func (x *UnfollowPlayerResponse) Reset() {
 	*x = UnfollowPlayerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[11]
+		mi := &file_web_response_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -690,7 +745,7 @@ func (x *UnfollowPlayerResponse) String() string {
 func (*UnfollowPlayerResponse) ProtoMessage() {}
 
 func (x *UnfollowPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[11]
+	mi := &file_web_response_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -703,7 +758,7 @@ func (x *UnfollowPlayerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnfollowPlayerResponse.ProtoReflect.Descriptor instead.
 func (*UnfollowPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{11}
+	return file_web_response_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *UnfollowPlayerResponse) GetPlayerId() string {
@@ -776,7 +831,12 @@ var file_web_response_proto_rawDesc = []byte{
 	0x6c, 0x69, 0x74, 0x79, 0x43, 0x61, 0x72, 0x64, 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65,
 	0x42, 0x08, 0x0a, 0x06, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x22, 0x1d, 0x0a, 0x1b, 0x43, 0x6f,
 	0x6e, 0x66, 0x69, 0x72, 0x6d, 0x44, 0x61, 0x69, 0x6c, 0x79, 0x4d, 0x69, 0x73, 0x73, 0x69, 0x6f,
-	0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x79, 0x0a, 0x16, 0x53, 0x74, 0x61,
+	0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x4e, 0x0a, 0x14, 0x46, 0x6f, 0x6c,
+	0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x36, 0x0a, 0x0b, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x15, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50, 0x72,
+	0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70,
+	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x79, 0x0a, 0x16, 0x53, 0x74, 0x61,
 	0x6d, 0x69, 0x6e, 0x61, 0x52, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x12, 0x17, 0x0a, 0x07, 0x69, 0x74, 0x65, 0x6d, 0x5f, 0x69, 0x64, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x69, 0x74, 0x65, 0x6d, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b,
@@ -784,19 +844,20 @@ var file_web_response_proto_rawDesc = []byte{
 	0x05, 0x52, 0x0a, 0x69, 0x74, 0x65, 0x6d, 0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x25, 0x0a,
 	0x0e, 0x72, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x5f, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18,
 	0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0d, 0x72, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x41, 0x6d,
-	0x6f, 0x75, 0x6e, 0x74, 0x22, 0x4e, 0x0a, 0x14, 0x46, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x0b,
-	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x0b, 0x32, 0x15, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
-	0x49, 0x6e, 0x66, 0x6f, 0x22, 0x35, 0x0a, 0x16, 0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f, 0x77,
-	0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b,
-	0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x34, 0x5a, 0x32, 0x67,
-	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61,
-	0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b,
-	0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x75, 0x6e, 0x74, 0x22, 0x56, 0x0a, 0x10, 0x54, 0x65, 0x6c, 0x65, 0x70, 0x6f, 0x72, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x52, 0x65, 0x67, 0x69,
+	0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x52, 0x65, 0x67,
+	0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x12, 0x24, 0x0a, 0x0d, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e,
+	0x4d, 0x61, 0x70, 0x4e, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0d, 0x52,
+	0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x4e, 0x6f, 0x64, 0x65, 0x22, 0x35, 0x0a, 0x16,
+	0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
+	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x49, 0x64, 0x42, 0x34, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
+	0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d,
+	0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -811,7 +872,7 @@ func file_web_response_proto_rawDescGZIP() []byte {
 	return file_web_response_proto_rawDescData
 }
 
-var file_web_response_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_web_response_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
 var file_web_response_proto_goTypes = []interface{}{
 	(*ApplicationError)(nil),                  // 0: protoc.ApplicationError
 	(*Response)(nil),                          // 1: protoc.Response
@@ -822,19 +883,20 @@ var file_web_response_proto_goTypes = []interface{}{
 	(*ClaimMailBoxItemResponse)(nil),          // 6: protoc.ClaimMailBoxItemResponse
 	(*MailBoxItemClaim)(nil),                  // 7: protoc.MailBoxItemClaim
 	(*ConfirmDailyMissionResponse)(nil),       // 8: protoc.ConfirmDailyMissionResponse
-	(*StaminaRestoreResponse)(nil),            // 9: protoc.StaminaRestoreResponse
-	(*FollowPlayerResponse)(nil),              // 10: protoc.FollowPlayerResponse
-	(*UnfollowPlayerResponse)(nil),            // 11: protoc.UnfollowPlayerResponse
-	(*services.ProtoItemInstance)(nil),        // 12: game.ProtoItemInstance
-	(*services.ProtoAbilityCardInstance)(nil), // 13: game.ProtoAbilityCardInstance
-	(*services.ProtoPlayerInfo)(nil),          // 14: game.ProtoPlayerInfo
+	(*FollowPlayerResponse)(nil),              // 9: protoc.FollowPlayerResponse
+	(*StaminaRestoreResponse)(nil),            // 10: protoc.StaminaRestoreResponse
+	(*TeleportResponse)(nil),                  // 11: protoc.TeleportResponse
+	(*UnfollowPlayerResponse)(nil),            // 12: protoc.UnfollowPlayerResponse
+	(*services.ProtoItemInstance)(nil),        // 13: game.ProtoItemInstance
+	(*services.ProtoAbilityCardInstance)(nil), // 14: game.ProtoAbilityCardInstance
+	(*services.ProtoPlayerInfo)(nil),          // 15: game.ProtoPlayerInfo
 }
 var file_web_response_proto_depIdxs = []int32{
 	2,  // 0: protoc.Response.header:type_name -> protoc.ResponseHeader
 	7,  // 1: protoc.ClaimMailBoxItemResponse.Claims:type_name -> protoc.MailBoxItemClaim
-	12, // 2: protoc.MailBoxItemClaim.ItemInstance:type_name -> game.ProtoItemInstance
-	13, // 3: protoc.MailBoxItemClaim.AbilityCardInstance:type_name -> game.ProtoAbilityCardInstance
-	14, // 4: protoc.FollowPlayerResponse.player_info:type_name -> game.ProtoPlayerInfo
+	13, // 2: protoc.MailBoxItemClaim.ItemInstance:type_name -> game.ProtoItemInstance
+	14, // 3: protoc.MailBoxItemClaim.AbilityCardInstance:type_name -> game.ProtoAbilityCardInstance
+	15, // 4: protoc.FollowPlayerResponse.player_info:type_name -> game.ProtoPlayerInfo
 	5,  // [5:5] is the sub-list for method output_type
 	5,  // [5:5] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
@@ -957,18 +1019,6 @@ func file_web_response_proto_init() {
 			}
 		}
 		file_web_response_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StaminaRestoreResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_web_response_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FollowPlayerResponse); i {
 			case 0:
 				return &v.state
@@ -980,7 +1030,31 @@ func file_web_response_proto_init() {
 				return nil
 			}
 		}
+		file_web_response_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*StaminaRestoreResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 		file_web_response_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*TeleportResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_response_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UnfollowPlayerResponse); i {
 			case 0:
 				return &v.state
@@ -1003,7 +1077,7 @@ func file_web_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_web_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   12,
+			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

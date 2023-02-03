@@ -30,6 +30,7 @@ type CoreWebServiceClient interface {
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
+	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
 	UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error)
 }
 
@@ -104,6 +105,15 @@ func (c *coreWebServiceClient) RestoreStamina(ctx context.Context, in *protoc.St
 	return out, nil
 }
 
+func (c *coreWebServiceClient) Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error) {
+	out := new(protoc.TeleportResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/Teleport", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *coreWebServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error) {
 	out := new(protoc.UnfollowPlayerResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/UnfollowPlayer", in, out, opts...)
@@ -124,6 +134,7 @@ type CoreWebServiceServer interface {
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
+	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
 	UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error)
 }
 
@@ -151,6 +162,9 @@ func (UnimplementedCoreWebServiceServer) FollowPlayer(context.Context, *protoc.F
 }
 func (UnimplementedCoreWebServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
+}
+func (UnimplementedCoreWebServiceServer) Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Teleport not implemented")
 }
 func (UnimplementedCoreWebServiceServer) UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnfollowPlayer not implemented")
@@ -293,6 +307,24 @@ func _CoreWebService_RestoreStamina_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CoreWebService_Teleport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.TeleportRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).Teleport(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/Teleport",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).Teleport(ctx, req.(*protoc.TeleportRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _CoreWebService_UnfollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.UnfollowPlayerRequest)
 	if err := dec(in); err != nil {
@@ -345,6 +377,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RestoreStamina",
 			Handler:    _CoreWebService_RestoreStamina_Handler,
+		},
+		{
+			MethodName: "Teleport",
+			Handler:    _CoreWebService_Teleport_Handler,
 		},
 		{
 			MethodName: "UnfollowPlayer",

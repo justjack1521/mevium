@@ -63,12 +63,17 @@ message ConfirmDailyMissionRequest {
 
 }
 
+message FollowPlayerRequest {
+  string player_id = 1;
+}
+
 message StaminaRestoreRequest {
   bool multi_player = 1;
 }
 
-message FollowPlayerRequest {
-  string player_id = 1;
+message TeleportRequest {
+  string RegionMap = 1;
+  int32 RegionMapNode = 2;
 }
 
 message UnfollowPlayerRequest {

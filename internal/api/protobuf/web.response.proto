@@ -56,14 +56,19 @@ message ConfirmDailyMissionResponse {
 
 }
 
+message FollowPlayerResponse {
+  game.ProtoPlayerInfo player_info = 1;
+}
+
 message StaminaRestoreResponse {
   string item_id = 1;
   int32 item_amount = 2;
   int32 restore_amount = 3;
 }
 
-message FollowPlayerResponse {
-  game.ProtoPlayerInfo player_info = 1;
+message TeleportResponse {
+  string RegionMap = 1;
+  int32 RegionMapNode = 2;
 }
 
 message UnfollowPlayerResponse {
