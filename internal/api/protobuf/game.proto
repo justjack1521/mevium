@@ -24,3 +24,24 @@ message ProtoPlayerCardInfo {
   int32 OverBoostLevel = 5;
   int32 SlotIndex = 6;
 }
+
+message ProtoAbilityCardInstance {
+  string SysId = 1;
+  int32 CardLevel = 2;
+  uint64 AccumExp = 3;
+  bool CardLock = 4;
+  int32 AbilityLevel = 5;
+  int32 SkillSeedUnlock = 6;
+  string AbilityCardId = 7;
+  int64 CreatedAt = 8;
+  uint64 TotalAccumExp = 9;
+  int32 ExtraSkillUnlock = 10;
+  int32 OverBoostLevel = 11;
+}
+
+message ProtoItemInstance {
+  string SysId = 1;
+  int32 Quantity = 2;
+  string ItemId = 3;
+  int64 CreatedAt = 4;
+}

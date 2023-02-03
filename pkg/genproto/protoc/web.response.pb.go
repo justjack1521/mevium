@@ -383,6 +383,141 @@ func (x *CardSaleResponse) GetCardsRemoved() []string {
 	return nil
 }
 
+type ClaimMailBoxItemResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Claims []*MailBoxItemClaim `protobuf:"bytes,1,rep,name=Claims,proto3" json:"Claims,omitempty"`
+}
+
+func (x *ClaimMailBoxItemResponse) Reset() {
+	*x = ClaimMailBoxItemResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_response_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ClaimMailBoxItemResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ClaimMailBoxItemResponse) ProtoMessage() {}
+
+func (x *ClaimMailBoxItemResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_response_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ClaimMailBoxItemResponse.ProtoReflect.Descriptor instead.
+func (*ClaimMailBoxItemResponse) Descriptor() ([]byte, []int) {
+	return file_web_response_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *ClaimMailBoxItemResponse) GetClaims() []*MailBoxItemClaim {
+	if x != nil {
+		return x.Claims
+	}
+	return nil
+}
+
+type MailBoxItemClaim struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Index int32 `protobuf:"varint,1,opt,name=Index,proto3" json:"Index,omitempty"`
+	// Types that are assignable to Reward:
+	//	*MailBoxItemClaim_ItemInstance
+	//	*MailBoxItemClaim_AbilityCardInstance
+	Reward isMailBoxItemClaim_Reward `protobuf_oneof:"Reward"`
+}
+
+func (x *MailBoxItemClaim) Reset() {
+	*x = MailBoxItemClaim{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_response_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *MailBoxItemClaim) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MailBoxItemClaim) ProtoMessage() {}
+
+func (x *MailBoxItemClaim) ProtoReflect() protoreflect.Message {
+	mi := &file_web_response_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MailBoxItemClaim.ProtoReflect.Descriptor instead.
+func (*MailBoxItemClaim) Descriptor() ([]byte, []int) {
+	return file_web_response_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *MailBoxItemClaim) GetIndex() int32 {
+	if x != nil {
+		return x.Index
+	}
+	return 0
+}
+
+func (m *MailBoxItemClaim) GetReward() isMailBoxItemClaim_Reward {
+	if m != nil {
+		return m.Reward
+	}
+	return nil
+}
+
+func (x *MailBoxItemClaim) GetItemInstance() *services.ProtoItemInstance {
+	if x, ok := x.GetReward().(*MailBoxItemClaim_ItemInstance); ok {
+		return x.ItemInstance
+	}
+	return nil
+}
+
+func (x *MailBoxItemClaim) GetAbilityCardInstance() *services.ProtoAbilityCardInstance {
+	if x, ok := x.GetReward().(*MailBoxItemClaim_AbilityCardInstance); ok {
+		return x.AbilityCardInstance
+	}
+	return nil
+}
+
+type isMailBoxItemClaim_Reward interface {
+	isMailBoxItemClaim_Reward()
+}
+
+type MailBoxItemClaim_ItemInstance struct {
+	ItemInstance *services.ProtoItemInstance `protobuf:"bytes,2,opt,name=ItemInstance,proto3,oneof"`
+}
+
+type MailBoxItemClaim_AbilityCardInstance struct {
+	AbilityCardInstance *services.ProtoAbilityCardInstance `protobuf:"bytes,3,opt,name=AbilityCardInstance,proto3,oneof"`
+}
+
+func (*MailBoxItemClaim_ItemInstance) isMailBoxItemClaim_Reward() {}
+
+func (*MailBoxItemClaim_AbilityCardInstance) isMailBoxItemClaim_Reward() {}
+
 type ConfirmDailyMissionResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -392,7 +527,7 @@ type ConfirmDailyMissionResponse struct {
 func (x *ConfirmDailyMissionResponse) Reset() {
 	*x = ConfirmDailyMissionResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[6]
+		mi := &file_web_response_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -405,7 +540,7 @@ func (x *ConfirmDailyMissionResponse) String() string {
 func (*ConfirmDailyMissionResponse) ProtoMessage() {}
 
 func (x *ConfirmDailyMissionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[6]
+	mi := &file_web_response_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -418,7 +553,7 @@ func (x *ConfirmDailyMissionResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfirmDailyMissionResponse.ProtoReflect.Descriptor instead.
 func (*ConfirmDailyMissionResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{6}
+	return file_web_response_proto_rawDescGZIP(), []int{8}
 }
 
 type StaminaRestoreResponse struct {
@@ -434,7 +569,7 @@ type StaminaRestoreResponse struct {
 func (x *StaminaRestoreResponse) Reset() {
 	*x = StaminaRestoreResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[7]
+		mi := &file_web_response_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -447,7 +582,7 @@ func (x *StaminaRestoreResponse) String() string {
 func (*StaminaRestoreResponse) ProtoMessage() {}
 
 func (x *StaminaRestoreResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[7]
+	mi := &file_web_response_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -460,7 +595,7 @@ func (x *StaminaRestoreResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StaminaRestoreResponse.ProtoReflect.Descriptor instead.
 func (*StaminaRestoreResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{7}
+	return file_web_response_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *StaminaRestoreResponse) GetItemId() string {
@@ -495,7 +630,7 @@ type FollowPlayerResponse struct {
 func (x *FollowPlayerResponse) Reset() {
 	*x = FollowPlayerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[8]
+		mi := &file_web_response_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -508,7 +643,7 @@ func (x *FollowPlayerResponse) String() string {
 func (*FollowPlayerResponse) ProtoMessage() {}
 
 func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[8]
+	mi := &file_web_response_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -521,7 +656,7 @@ func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FollowPlayerResponse.ProtoReflect.Descriptor instead.
 func (*FollowPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{8}
+	return file_web_response_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *FollowPlayerResponse) GetPlayerInfo() *services.ProtoPlayerInfo {
@@ -542,7 +677,7 @@ type UnfollowPlayerResponse struct {
 func (x *UnfollowPlayerResponse) Reset() {
 	*x = UnfollowPlayerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_web_response_proto_msgTypes[9]
+		mi := &file_web_response_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -555,7 +690,7 @@ func (x *UnfollowPlayerResponse) String() string {
 func (*UnfollowPlayerResponse) ProtoMessage() {}
 
 func (x *UnfollowPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_web_response_proto_msgTypes[9]
+	mi := &file_web_response_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -568,7 +703,7 @@ func (x *UnfollowPlayerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnfollowPlayerResponse.ProtoReflect.Descriptor instead.
 func (*UnfollowPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_web_response_proto_rawDescGZIP(), []int{9}
+	return file_web_response_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *UnfollowPlayerResponse) GetPlayerId() string {
@@ -622,29 +757,46 @@ var file_web_response_proto_rawDesc = []byte{
 	0x20, 0x01, 0x28, 0x05, 0x52, 0x09, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x47, 0x6f, 0x6c, 0x64, 0x12,
 	0x23, 0x0a, 0x0d, 0x63, 0x61, 0x72, 0x64, 0x73, 0x5f, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x64,
 	0x18, 0x02, 0x20, 0x03, 0x28, 0x09, 0x52, 0x0c, 0x63, 0x61, 0x72, 0x64, 0x73, 0x52, 0x65, 0x6d,
-	0x6f, 0x76, 0x65, 0x64, 0x22, 0x1d, 0x0a, 0x1b, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x72, 0x6d, 0x44,
-	0x61, 0x69, 0x6c, 0x79, 0x4d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x79, 0x0a, 0x16, 0x53, 0x74, 0x61, 0x6d, 0x69, 0x6e, 0x61, 0x52, 0x65,
-	0x73, 0x74, 0x6f, 0x72, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x17, 0x0a,
-	0x07, 0x69, 0x74, 0x65, 0x6d, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06,
-	0x69, 0x74, 0x65, 0x6d, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x69, 0x74, 0x65, 0x6d, 0x5f, 0x61,
-	0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0a, 0x69, 0x74, 0x65,
-	0x6d, 0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x25, 0x0a, 0x0e, 0x72, 0x65, 0x73, 0x74, 0x6f,
-	0x72, 0x65, 0x5f, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52,
-	0x0d, 0x72, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0x4e,
-	0x0a, 0x14, 0x46, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x0b, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
-	0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x15, 0x2e, 0x67, 0x61,
-	0x6d, 0x65, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e,
-	0x66, 0x6f, 0x52, 0x0a, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x35,
-	0x0a, 0x16, 0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79,
-	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61,
-	0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x34, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
-	0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31,
-	0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x6f, 0x76, 0x65, 0x64, 0x22, 0x4c, 0x0a, 0x18, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x4d, 0x61, 0x69,
+	0x6c, 0x42, 0x6f, 0x78, 0x49, 0x74, 0x65, 0x6d, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x12, 0x30, 0x0a, 0x06, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
+	0x32, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x2e, 0x4d, 0x61, 0x69, 0x6c, 0x42, 0x6f,
+	0x78, 0x49, 0x74, 0x65, 0x6d, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x52, 0x06, 0x43, 0x6c, 0x61, 0x69,
+	0x6d, 0x73, 0x22, 0xc5, 0x01, 0x0a, 0x10, 0x4d, 0x61, 0x69, 0x6c, 0x42, 0x6f, 0x78, 0x49, 0x74,
+	0x65, 0x6d, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x12, 0x14, 0x0a, 0x05, 0x49, 0x6e, 0x64, 0x65, 0x78,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x05, 0x49, 0x6e, 0x64, 0x65, 0x78, 0x12, 0x3d, 0x0a,
+	0x0c, 0x49, 0x74, 0x65, 0x6d, 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f,
+	0x49, 0x74, 0x65, 0x6d, 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x48, 0x00, 0x52, 0x0c,
+	0x49, 0x74, 0x65, 0x6d, 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x12, 0x52, 0x0a, 0x13,
+	0x41, 0x62, 0x69, 0x6c, 0x69, 0x74, 0x79, 0x43, 0x61, 0x72, 0x64, 0x49, 0x6e, 0x73, 0x74, 0x61,
+	0x6e, 0x63, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x67, 0x61, 0x6d, 0x65,
+	0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x41, 0x62, 0x69, 0x6c, 0x69, 0x74, 0x79, 0x43, 0x61, 0x72,
+	0x64, 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x48, 0x00, 0x52, 0x13, 0x41, 0x62, 0x69,
+	0x6c, 0x69, 0x74, 0x79, 0x43, 0x61, 0x72, 0x64, 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65,
+	0x42, 0x08, 0x0a, 0x06, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x22, 0x1d, 0x0a, 0x1b, 0x43, 0x6f,
+	0x6e, 0x66, 0x69, 0x72, 0x6d, 0x44, 0x61, 0x69, 0x6c, 0x79, 0x4d, 0x69, 0x73, 0x73, 0x69, 0x6f,
+	0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x79, 0x0a, 0x16, 0x53, 0x74, 0x61,
+	0x6d, 0x69, 0x6e, 0x61, 0x52, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x17, 0x0a, 0x07, 0x69, 0x74, 0x65, 0x6d, 0x5f, 0x69, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x69, 0x74, 0x65, 0x6d, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b,
+	0x69, 0x74, 0x65, 0x6d, 0x5f, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x05, 0x52, 0x0a, 0x69, 0x74, 0x65, 0x6d, 0x41, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x25, 0x0a,
+	0x0e, 0x72, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x5f, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0d, 0x72, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x41, 0x6d,
+	0x6f, 0x75, 0x6e, 0x74, 0x22, 0x4e, 0x0a, 0x14, 0x46, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x0b,
+	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x15, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
+	0x49, 0x6e, 0x66, 0x6f, 0x22, 0x35, 0x0a, 0x16, 0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f, 0x77,
+	0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b,
+	0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x34, 0x5a, 0x32, 0x67,
+	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61,
+	0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b,
+	0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -659,28 +811,35 @@ func file_web_response_proto_rawDescGZIP() []byte {
 	return file_web_response_proto_rawDescData
 }
 
-var file_web_response_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_web_response_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
 var file_web_response_proto_goTypes = []interface{}{
-	(*ApplicationError)(nil),            // 0: protoc.ApplicationError
-	(*Response)(nil),                    // 1: protoc.Response
-	(*ResponseHeader)(nil),              // 2: protoc.ResponseHeader
-	(*CreateProfileResponse)(nil),       // 3: protoc.CreateProfileResponse
-	(*CardFavouriteResponse)(nil),       // 4: protoc.CardFavouriteResponse
-	(*CardSaleResponse)(nil),            // 5: protoc.CardSaleResponse
-	(*ConfirmDailyMissionResponse)(nil), // 6: protoc.ConfirmDailyMissionResponse
-	(*StaminaRestoreResponse)(nil),      // 7: protoc.StaminaRestoreResponse
-	(*FollowPlayerResponse)(nil),        // 8: protoc.FollowPlayerResponse
-	(*UnfollowPlayerResponse)(nil),      // 9: protoc.UnfollowPlayerResponse
-	(*services.ProtoPlayerInfo)(nil),    // 10: game.ProtoPlayerInfo
+	(*ApplicationError)(nil),                  // 0: protoc.ApplicationError
+	(*Response)(nil),                          // 1: protoc.Response
+	(*ResponseHeader)(nil),                    // 2: protoc.ResponseHeader
+	(*CreateProfileResponse)(nil),             // 3: protoc.CreateProfileResponse
+	(*CardFavouriteResponse)(nil),             // 4: protoc.CardFavouriteResponse
+	(*CardSaleResponse)(nil),                  // 5: protoc.CardSaleResponse
+	(*ClaimMailBoxItemResponse)(nil),          // 6: protoc.ClaimMailBoxItemResponse
+	(*MailBoxItemClaim)(nil),                  // 7: protoc.MailBoxItemClaim
+	(*ConfirmDailyMissionResponse)(nil),       // 8: protoc.ConfirmDailyMissionResponse
+	(*StaminaRestoreResponse)(nil),            // 9: protoc.StaminaRestoreResponse
+	(*FollowPlayerResponse)(nil),              // 10: protoc.FollowPlayerResponse
+	(*UnfollowPlayerResponse)(nil),            // 11: protoc.UnfollowPlayerResponse
+	(*services.ProtoItemInstance)(nil),        // 12: game.ProtoItemInstance
+	(*services.ProtoAbilityCardInstance)(nil), // 13: game.ProtoAbilityCardInstance
+	(*services.ProtoPlayerInfo)(nil),          // 14: game.ProtoPlayerInfo
 }
 var file_web_response_proto_depIdxs = []int32{
 	2,  // 0: protoc.Response.header:type_name -> protoc.ResponseHeader
-	10, // 1: protoc.FollowPlayerResponse.player_info:type_name -> game.ProtoPlayerInfo
-	2,  // [2:2] is the sub-list for method output_type
-	2,  // [2:2] is the sub-list for method input_type
-	2,  // [2:2] is the sub-list for extension type_name
-	2,  // [2:2] is the sub-list for extension extendee
-	0,  // [0:2] is the sub-list for field type_name
+	7,  // 1: protoc.ClaimMailBoxItemResponse.Claims:type_name -> protoc.MailBoxItemClaim
+	12, // 2: protoc.MailBoxItemClaim.ItemInstance:type_name -> game.ProtoItemInstance
+	13, // 3: protoc.MailBoxItemClaim.AbilityCardInstance:type_name -> game.ProtoAbilityCardInstance
+	14, // 4: protoc.FollowPlayerResponse.player_info:type_name -> game.ProtoPlayerInfo
+	5,  // [5:5] is the sub-list for method output_type
+	5,  // [5:5] is the sub-list for method input_type
+	5,  // [5:5] is the sub-list for extension type_name
+	5,  // [5:5] is the sub-list for extension extendee
+	0,  // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_web_response_proto_init() }
@@ -762,7 +921,7 @@ func file_web_response_proto_init() {
 			}
 		}
 		file_web_response_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConfirmDailyMissionResponse); i {
+			switch v := v.(*ClaimMailBoxItemResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -774,7 +933,7 @@ func file_web_response_proto_init() {
 			}
 		}
 		file_web_response_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StaminaRestoreResponse); i {
+			switch v := v.(*MailBoxItemClaim); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -786,7 +945,7 @@ func file_web_response_proto_init() {
 			}
 		}
 		file_web_response_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FollowPlayerResponse); i {
+			switch v := v.(*ConfirmDailyMissionResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -798,6 +957,30 @@ func file_web_response_proto_init() {
 			}
 		}
 		file_web_response_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*StaminaRestoreResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_response_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FollowPlayerResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_response_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UnfollowPlayerResponse); i {
 			case 0:
 				return &v.state
@@ -810,13 +993,17 @@ func file_web_response_proto_init() {
 			}
 		}
 	}
+	file_web_response_proto_msgTypes[7].OneofWrappers = []interface{}{
+		(*MailBoxItemClaim_ItemInstance)(nil),
+		(*MailBoxItemClaim_AbilityCardInstance)(nil),
+	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_web_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   10,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

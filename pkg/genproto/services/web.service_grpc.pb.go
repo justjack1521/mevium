@@ -23,12 +23,13 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CoreWebServiceClient interface {
-	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
-	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
+	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
+	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
-	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
+	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
+	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error)
 }
 
@@ -40,6 +41,15 @@ func NewCoreWebServiceClient(cc grpc.ClientConnInterface) CoreWebServiceClient {
 	return &coreWebServiceClient{cc}
 }
 
+func (c *coreWebServiceClient) CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error) {
+	out := new(protoc.CardSaleResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/CardSale", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *coreWebServiceClient) CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error) {
 	out := new(protoc.CreateProfileResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/CreateProfile", in, out, opts...)
@@ -49,18 +59,9 @@ func (c *coreWebServiceClient) CreateProfile(ctx context.Context, in *protoc.Cre
 	return out, nil
 }
 
-func (c *coreWebServiceClient) FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error) {
-	out := new(protoc.CardFavouriteResponse)
-	err := c.cc.Invoke(ctx, "/core.CoreWebService/FavouriteCard", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *coreWebServiceClient) CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error) {
-	out := new(protoc.CardSaleResponse)
-	err := c.cc.Invoke(ctx, "/core.CoreWebService/CardSale", in, out, opts...)
+func (c *coreWebServiceClient) ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error) {
+	out := new(protoc.ClaimMailBoxItemResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/ClaimMailboxItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -76,9 +77,9 @@ func (c *coreWebServiceClient) ConfirmDailyMission(ctx context.Context, in *prot
 	return out, nil
 }
 
-func (c *coreWebServiceClient) RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error) {
-	out := new(protoc.StaminaRestoreResponse)
-	err := c.cc.Invoke(ctx, "/core.CoreWebService/RestoreStamina", in, out, opts...)
+func (c *coreWebServiceClient) FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error) {
+	out := new(protoc.CardFavouriteResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/FavouriteCard", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -88,6 +89,15 @@ func (c *coreWebServiceClient) RestoreStamina(ctx context.Context, in *protoc.St
 func (c *coreWebServiceClient) FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error) {
 	out := new(protoc.FollowPlayerResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/FollowPlayer", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreWebServiceClient) RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error) {
+	out := new(protoc.StaminaRestoreResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/RestoreStamina", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -107,12 +117,13 @@ func (c *coreWebServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.Un
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
 type CoreWebServiceServer interface {
-	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
-	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
+	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
+	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
-	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
+	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
+	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error)
 }
 
@@ -120,23 +131,26 @@ type CoreWebServiceServer interface {
 type UnimplementedCoreWebServiceServer struct {
 }
 
+func (UnimplementedCoreWebServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+}
 func (UnimplementedCoreWebServiceServer) CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProfile not implemented")
 }
-func (UnimplementedCoreWebServiceServer) FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FavouriteCard not implemented")
-}
-func (UnimplementedCoreWebServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+func (UnimplementedCoreWebServiceServer) ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimMailboxItem not implemented")
 }
 func (UnimplementedCoreWebServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
 }
-func (UnimplementedCoreWebServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
+func (UnimplementedCoreWebServiceServer) FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FavouriteCard not implemented")
 }
 func (UnimplementedCoreWebServiceServer) FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FollowPlayer not implemented")
+}
+func (UnimplementedCoreWebServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
 }
 func (UnimplementedCoreWebServiceServer) UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnfollowPlayer not implemented")
@@ -151,6 +165,24 @@ type UnsafeCoreWebServiceServer interface {
 
 func RegisterCoreWebServiceServer(s grpc.ServiceRegistrar, srv CoreWebServiceServer) {
 	s.RegisterService(&CoreWebService_ServiceDesc, srv)
+}
+
+func _CoreWebService_CardSale_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardSaleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).CardSale(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/CardSale",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).CardSale(ctx, req.(*protoc.CardSaleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _CoreWebService_CreateProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -171,38 +203,20 @@ func _CoreWebService_CreateProfile_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CoreWebService_FavouriteCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.CardFavouriteRequest)
+func _CoreWebService_ClaimMailboxItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ClaimMailBoxItemRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CoreWebServiceServer).FavouriteCard(ctx, in)
+		return srv.(CoreWebServiceServer).ClaimMailboxItem(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/core.CoreWebService/FavouriteCard",
+		FullMethod: "/core.CoreWebService/ClaimMailboxItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CoreWebServiceServer).FavouriteCard(ctx, req.(*protoc.CardFavouriteRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _CoreWebService_CardSale_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.CardSaleRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(CoreWebServiceServer).CardSale(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/core.CoreWebService/CardSale",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CoreWebServiceServer).CardSale(ctx, req.(*protoc.CardSaleRequest))
+		return srv.(CoreWebServiceServer).ClaimMailboxItem(ctx, req.(*protoc.ClaimMailBoxItemRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -225,20 +239,20 @@ func _CoreWebService_ConfirmDailyMission_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CoreWebService_RestoreStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.StaminaRestoreRequest)
+func _CoreWebService_FavouriteCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardFavouriteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CoreWebServiceServer).RestoreStamina(ctx, in)
+		return srv.(CoreWebServiceServer).FavouriteCard(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/core.CoreWebService/RestoreStamina",
+		FullMethod: "/core.CoreWebService/FavouriteCard",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CoreWebServiceServer).RestoreStamina(ctx, req.(*protoc.StaminaRestoreRequest))
+		return srv.(CoreWebServiceServer).FavouriteCard(ctx, req.(*protoc.CardFavouriteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -257,6 +271,24 @@ func _CoreWebService_FollowPlayer_Handler(srv interface{}, ctx context.Context, 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CoreWebServiceServer).FollowPlayer(ctx, req.(*protoc.FollowPlayerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CoreWebService_RestoreStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.StaminaRestoreRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).RestoreStamina(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/RestoreStamina",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).RestoreStamina(ctx, req.(*protoc.StaminaRestoreRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -287,28 +319,32 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*CoreWebServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
+			MethodName: "CardSale",
+			Handler:    _CoreWebService_CardSale_Handler,
+		},
+		{
 			MethodName: "CreateProfile",
 			Handler:    _CoreWebService_CreateProfile_Handler,
 		},
 		{
-			MethodName: "FavouriteCard",
-			Handler:    _CoreWebService_FavouriteCard_Handler,
-		},
-		{
-			MethodName: "CardSale",
-			Handler:    _CoreWebService_CardSale_Handler,
+			MethodName: "ClaimMailboxItem",
+			Handler:    _CoreWebService_ClaimMailboxItem_Handler,
 		},
 		{
 			MethodName: "ConfirmDailyMission",
 			Handler:    _CoreWebService_ConfirmDailyMission_Handler,
 		},
 		{
-			MethodName: "RestoreStamina",
-			Handler:    _CoreWebService_RestoreStamina_Handler,
+			MethodName: "FavouriteCard",
+			Handler:    _CoreWebService_FavouriteCard_Handler,
 		},
 		{
 			MethodName: "FollowPlayer",
 			Handler:    _CoreWebService_FollowPlayer_Handler,
+		},
+		{
+			MethodName: "RestoreStamina",
+			Handler:    _CoreWebService_RestoreStamina_Handler,
 		},
 		{
 			MethodName: "UnfollowPlayer",

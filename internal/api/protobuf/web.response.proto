@@ -40,6 +40,18 @@ message CardSaleResponse {
   repeated string cards_removed = 2;
 }
 
+message ClaimMailBoxItemResponse {
+  repeated MailBoxItemClaim Claims = 1;
+}
+
+message MailBoxItemClaim {
+  int32 Index = 1;
+  oneof Reward {
+    game.ProtoItemInstance ItemInstance = 2;
+    game.ProtoAbilityCardInstance AbilityCardInstance = 3;
+  }
+}
+
 message ConfirmDailyMissionResponse {
 
 }

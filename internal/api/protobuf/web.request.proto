@@ -55,6 +55,10 @@ message CardSaleRequest {
   repeated string cards = 1;
 }
 
+message ClaimMailBoxItemRequest {
+  int32 Index = 1;
+}
+
 message ConfirmDailyMissionRequest {
 
 }

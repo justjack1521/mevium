@@ -9,11 +9,12 @@ import "web.response.proto";
 
 
 service CoreWebService {
-  rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
-  rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
   rpc CardSale(protoc.CardSaleRequest) returns (protoc.CardSaleResponse) {}
+  rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
+  rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
-  rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
+  rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
   rpc FollowPlayer(protoc.FollowPlayerRequest) returns (protoc.FollowPlayerResponse) {}
+  rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
   rpc UnfollowPlayer(protoc.UnfollowPlayerRequest) returns (protoc.UnfollowPlayerResponse) {}
 }
