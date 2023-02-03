@@ -56,7 +56,7 @@ message CardSaleRequest {
 }
 
 message ClaimMailBoxItemRequest {
-  int32 Index = 1;
+  repeated int32 Index = 1;
 }
 
 message ConfirmDailyMissionRequest {
