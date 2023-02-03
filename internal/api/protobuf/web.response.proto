@@ -35,6 +35,24 @@ message CardFavouriteResponse {
   bool locked = 2;
 }
 
+message CardFusionResponse {
+  string card_id = 1;
+  int32 card_level = 2;
+  uint64 card_accum_exp = 3;
+  int32 fusion_cost = 4;
+  int32 seed_level_gain = 5;
+  int32 ability_level_gain = 6;
+  repeated string inventory_cards_removed = 7;
+  repeated string bank_cards_removed = 8;
+}
+
+message CardBoostFusionResponse {
+  string card_id = 1;
+  int32 seed_level_gain = 2;
+  int32 ability_level_gain = 3;
+  game.ItemValuePair fusion_cost = 4;
+}
+
 message CardSaleResponse {
   int32 total_gold = 1;
   repeated string cards_removed = 2;
@@ -45,10 +63,10 @@ message ClaimMailBoxItemResponse {
 }
 
 message MailBoxItemClaim {
-  int32 Index = 1;
-  oneof Reward {
-    game.ProtoItemInstance ItemInstance = 2;
-    game.ProtoAbilityCardInstance AbilityCardInstance = 3;
+  int32 index = 1;
+  oneof reward {
+    game.ProtoItemInstance item_instance = 2;
+    game.ProtoAbilityCardInstance ability_card_instance = 3;
   }
 }
 
@@ -67,8 +85,8 @@ message StaminaRestoreResponse {
 }
 
 message TeleportResponse {
-  string RegionMap = 1;
-  int32 RegionMapNode = 2;
+  string region_map = 1;
+  int32 region_map_node = 2;
 }
 
 message UnfollowPlayerResponse {

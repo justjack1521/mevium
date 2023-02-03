@@ -45,3 +45,8 @@ message ProtoItemInstance {
   string ItemId = 3;
   int64 CreatedAt = 4;
 }
+
+message ItemValuePair {
+  string ItemID = 1;
+  int32 Value = 2;
+}

@@ -51,12 +51,23 @@ message CardFavouriteRequest {
   bool value = 2;
 }
 
+message CardFusionRequest {
+  int32 base_card = 1;
+  repeated int32 inventory_cards = 2;
+  repeated int32 bank_cards = 3;
+}
+
+message CardBoostFusionRequest {
+  int32 card = 1;
+  bool max_boost = 2;
+}
+
 message CardSaleRequest {
   repeated string cards = 1;
 }
 
 message ClaimMailBoxItemRequest {
-  repeated int32 Index = 1;
+  repeated int32 index = 1;
 }
 
 message ConfirmDailyMissionRequest {
@@ -72,8 +83,8 @@ message StaminaRestoreRequest {
 }
 
 message TeleportRequest {
-  string RegionMap = 1;
-  int32 RegionMapNode = 2;
+  string region_map = 1;
+  int32 region_map_node = 2;
 }
 
 message UnfollowPlayerRequest {

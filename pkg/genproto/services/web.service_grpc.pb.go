@@ -24,6 +24,8 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CoreWebServiceClient interface {
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
+	CardFusion(ctx context.Context, in *protoc.CardFusionRequest, opts ...grpc.CallOption) (*protoc.CardFusionResponse, error)
+	CardBoostFusion(ctx context.Context, in *protoc.CardBoostFusionRequest, opts ...grpc.CallOption) (*protoc.CardBoostFusionResponse, error)
 	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
@@ -45,6 +47,24 @@ func NewCoreWebServiceClient(cc grpc.ClientConnInterface) CoreWebServiceClient {
 func (c *coreWebServiceClient) CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error) {
 	out := new(protoc.CardSaleResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/CardSale", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreWebServiceClient) CardFusion(ctx context.Context, in *protoc.CardFusionRequest, opts ...grpc.CallOption) (*protoc.CardFusionResponse, error) {
+	out := new(protoc.CardFusionResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/CardFusion", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreWebServiceClient) CardBoostFusion(ctx context.Context, in *protoc.CardBoostFusionRequest, opts ...grpc.CallOption) (*protoc.CardBoostFusionResponse, error) {
+	out := new(protoc.CardBoostFusionResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/CardBoostFusion", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -128,6 +148,8 @@ func (c *coreWebServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.Un
 // for forward compatibility
 type CoreWebServiceServer interface {
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
+	CardFusion(context.Context, *protoc.CardFusionRequest) (*protoc.CardFusionResponse, error)
+	CardBoostFusion(context.Context, *protoc.CardBoostFusionRequest) (*protoc.CardBoostFusionResponse, error)
 	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
@@ -144,6 +166,12 @@ type UnimplementedCoreWebServiceServer struct {
 
 func (UnimplementedCoreWebServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+}
+func (UnimplementedCoreWebServiceServer) CardFusion(context.Context, *protoc.CardFusionRequest) (*protoc.CardFusionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardFusion not implemented")
+}
+func (UnimplementedCoreWebServiceServer) CardBoostFusion(context.Context, *protoc.CardBoostFusionRequest) (*protoc.CardBoostFusionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardBoostFusion not implemented")
 }
 func (UnimplementedCoreWebServiceServer) CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProfile not implemented")
@@ -195,6 +223,42 @@ func _CoreWebService_CardSale_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CoreWebServiceServer).CardSale(ctx, req.(*protoc.CardSaleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CoreWebService_CardFusion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardFusionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).CardFusion(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/CardFusion",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).CardFusion(ctx, req.(*protoc.CardFusionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CoreWebService_CardBoostFusion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardBoostFusionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).CardBoostFusion(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/CardBoostFusion",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).CardBoostFusion(ctx, req.(*protoc.CardBoostFusionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -353,6 +417,14 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CardSale",
 			Handler:    _CoreWebService_CardSale_Handler,
+		},
+		{
+			MethodName: "CardFusion",
+			Handler:    _CoreWebService_CardFusion_Handler,
+		},
+		{
+			MethodName: "CardBoostFusion",
+			Handler:    _CoreWebService_CardBoostFusion_Handler,
 		},
 		{
 			MethodName: "CreateProfile",
