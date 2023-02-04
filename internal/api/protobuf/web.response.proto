@@ -38,12 +38,13 @@ message CardFavouriteResponse {
 message CardFusionResponse {
   string card_id = 1;
   int32 card_level = 2;
-  uint64 card_accum_exp = 3;
-  int32 fusion_cost = 4;
+  uint64 card_total_exp = 3;
+  uint64 card_accum_exp = 4;
   int32 seed_level_gain = 5;
   int32 ability_level_gain = 6;
   repeated string inventory_cards_removed = 7;
   repeated string bank_cards_removed = 8;
+  game.ItemValuePair fusion_cost = 9;
 }
 
 message CardBoostFusionResponse {
