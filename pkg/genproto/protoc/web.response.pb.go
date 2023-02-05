@@ -7,7 +7,7 @@
 package protoc
 
 import (
-	services "github.com/justjack1521/mevium/pkg/genproto/services"
+	game "github.com/justjack1521/mevium/pkg/genproto/game"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -333,15 +333,15 @@ type CardFusionResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CardId                string                  `protobuf:"bytes,1,opt,name=card_id,json=cardId,proto3" json:"card_id,omitempty"`
-	CardLevel             int32                   `protobuf:"varint,2,opt,name=card_level,json=cardLevel,proto3" json:"card_level,omitempty"`
-	CardTotalExp          uint64                  `protobuf:"varint,3,opt,name=card_total_exp,json=cardTotalExp,proto3" json:"card_total_exp,omitempty"`
-	CardAccumExp          uint64                  `protobuf:"varint,4,opt,name=card_accum_exp,json=cardAccumExp,proto3" json:"card_accum_exp,omitempty"`
-	SeedLevelGain         int32                   `protobuf:"varint,5,opt,name=seed_level_gain,json=seedLevelGain,proto3" json:"seed_level_gain,omitempty"`
-	AbilityLevelGain      int32                   `protobuf:"varint,6,opt,name=ability_level_gain,json=abilityLevelGain,proto3" json:"ability_level_gain,omitempty"`
-	InventoryCardsRemoved []string                `protobuf:"bytes,7,rep,name=inventory_cards_removed,json=inventoryCardsRemoved,proto3" json:"inventory_cards_removed,omitempty"`
-	BankCardsRemoved      []string                `protobuf:"bytes,8,rep,name=bank_cards_removed,json=bankCardsRemoved,proto3" json:"bank_cards_removed,omitempty"`
-	FusionCost            *services.ItemValuePair `protobuf:"bytes,9,opt,name=fusion_cost,json=fusionCost,proto3" json:"fusion_cost,omitempty"`
+	CardId                string              `protobuf:"bytes,1,opt,name=card_id,json=cardId,proto3" json:"card_id,omitempty"`
+	CardLevel             int32               `protobuf:"varint,2,opt,name=card_level,json=cardLevel,proto3" json:"card_level,omitempty"`
+	CardTotalExp          uint64              `protobuf:"varint,3,opt,name=card_total_exp,json=cardTotalExp,proto3" json:"card_total_exp,omitempty"`
+	CardAccumExp          uint64              `protobuf:"varint,4,opt,name=card_accum_exp,json=cardAccumExp,proto3" json:"card_accum_exp,omitempty"`
+	SeedLevelGain         int32               `protobuf:"varint,5,opt,name=seed_level_gain,json=seedLevelGain,proto3" json:"seed_level_gain,omitempty"`
+	AbilityLevelGain      int32               `protobuf:"varint,6,opt,name=ability_level_gain,json=abilityLevelGain,proto3" json:"ability_level_gain,omitempty"`
+	InventoryCardsRemoved []string            `protobuf:"bytes,7,rep,name=inventory_cards_removed,json=inventoryCardsRemoved,proto3" json:"inventory_cards_removed,omitempty"`
+	BankCardsRemoved      []string            `protobuf:"bytes,8,rep,name=bank_cards_removed,json=bankCardsRemoved,proto3" json:"bank_cards_removed,omitempty"`
+	FusionCost            *game.ItemValuePair `protobuf:"bytes,9,opt,name=fusion_cost,json=fusionCost,proto3" json:"fusion_cost,omitempty"`
 }
 
 func (x *CardFusionResponse) Reset() {
@@ -432,7 +432,7 @@ func (x *CardFusionResponse) GetBankCardsRemoved() []string {
 	return nil
 }
 
-func (x *CardFusionResponse) GetFusionCost() *services.ItemValuePair {
+func (x *CardFusionResponse) GetFusionCost() *game.ItemValuePair {
 	if x != nil {
 		return x.FusionCost
 	}
@@ -444,10 +444,10 @@ type CardBoostFusionResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CardId           string                  `protobuf:"bytes,1,opt,name=card_id,json=cardId,proto3" json:"card_id,omitempty"`
-	SeedLevelGain    int32                   `protobuf:"varint,2,opt,name=seed_level_gain,json=seedLevelGain,proto3" json:"seed_level_gain,omitempty"`
-	AbilityLevelGain int32                   `protobuf:"varint,3,opt,name=ability_level_gain,json=abilityLevelGain,proto3" json:"ability_level_gain,omitempty"`
-	FusionCost       *services.ItemValuePair `protobuf:"bytes,4,opt,name=fusion_cost,json=fusionCost,proto3" json:"fusion_cost,omitempty"`
+	CardId           string              `protobuf:"bytes,1,opt,name=card_id,json=cardId,proto3" json:"card_id,omitempty"`
+	SeedLevelGain    int32               `protobuf:"varint,2,opt,name=seed_level_gain,json=seedLevelGain,proto3" json:"seed_level_gain,omitempty"`
+	AbilityLevelGain int32               `protobuf:"varint,3,opt,name=ability_level_gain,json=abilityLevelGain,proto3" json:"ability_level_gain,omitempty"`
+	FusionCost       *game.ItemValuePair `protobuf:"bytes,4,opt,name=fusion_cost,json=fusionCost,proto3" json:"fusion_cost,omitempty"`
 }
 
 func (x *CardBoostFusionResponse) Reset() {
@@ -503,7 +503,7 @@ func (x *CardBoostFusionResponse) GetAbilityLevelGain() int32 {
 	return 0
 }
 
-func (x *CardBoostFusionResponse) GetFusionCost() *services.ItemValuePair {
+func (x *CardBoostFusionResponse) GetFusionCost() *game.ItemValuePair {
 	if x != nil {
 		return x.FusionCost
 	}
@@ -670,14 +670,14 @@ func (m *MailBoxItemClaim) GetReward() isMailBoxItemClaim_Reward {
 	return nil
 }
 
-func (x *MailBoxItemClaim) GetItemInstance() *services.ProtoItemInstance {
+func (x *MailBoxItemClaim) GetItemInstance() *game.ProtoItemInstance {
 	if x, ok := x.GetReward().(*MailBoxItemClaim_ItemInstance); ok {
 		return x.ItemInstance
 	}
 	return nil
 }
 
-func (x *MailBoxItemClaim) GetAbilityCardInstance() *services.ProtoAbilityCardInstance {
+func (x *MailBoxItemClaim) GetAbilityCardInstance() *game.ProtoAbilityCardInstance {
 	if x, ok := x.GetReward().(*MailBoxItemClaim_AbilityCardInstance); ok {
 		return x.AbilityCardInstance
 	}
@@ -689,11 +689,11 @@ type isMailBoxItemClaim_Reward interface {
 }
 
 type MailBoxItemClaim_ItemInstance struct {
-	ItemInstance *services.ProtoItemInstance `protobuf:"bytes,2,opt,name=item_instance,json=itemInstance,proto3,oneof"`
+	ItemInstance *game.ProtoItemInstance `protobuf:"bytes,2,opt,name=item_instance,json=itemInstance,proto3,oneof"`
 }
 
 type MailBoxItemClaim_AbilityCardInstance struct {
-	AbilityCardInstance *services.ProtoAbilityCardInstance `protobuf:"bytes,3,opt,name=ability_card_instance,json=abilityCardInstance,proto3,oneof"`
+	AbilityCardInstance *game.ProtoAbilityCardInstance `protobuf:"bytes,3,opt,name=ability_card_instance,json=abilityCardInstance,proto3,oneof"`
 }
 
 func (*MailBoxItemClaim_ItemInstance) isMailBoxItemClaim_Reward() {}
@@ -743,7 +743,7 @@ type FollowPlayerResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PlayerInfo *services.ProtoPlayerInfo `protobuf:"bytes,1,opt,name=player_info,json=playerInfo,proto3" json:"player_info,omitempty"`
+	PlayerInfo *game.ProtoPlayerInfo `protobuf:"bytes,1,opt,name=player_info,json=playerInfo,proto3" json:"player_info,omitempty"`
 }
 
 func (x *FollowPlayerResponse) Reset() {
@@ -778,7 +778,7 @@ func (*FollowPlayerResponse) Descriptor() ([]byte, []int) {
 	return file_web_response_proto_rawDescGZIP(), []int{11}
 }
 
-func (x *FollowPlayerResponse) GetPlayerInfo() *services.ProtoPlayerInfo {
+func (x *FollowPlayerResponse) GetPlayerInfo() *game.ProtoPlayerInfo {
 	if x != nil {
 		return x.PlayerInfo
 	}
@@ -1093,25 +1093,25 @@ func file_web_response_proto_rawDescGZIP() []byte {
 
 var file_web_response_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_web_response_proto_goTypes = []interface{}{
-	(*ApplicationError)(nil),                  // 0: protoc.ApplicationError
-	(*Response)(nil),                          // 1: protoc.Response
-	(*ResponseHeader)(nil),                    // 2: protoc.ResponseHeader
-	(*CreateProfileResponse)(nil),             // 3: protoc.CreateProfileResponse
-	(*CardFavouriteResponse)(nil),             // 4: protoc.CardFavouriteResponse
-	(*CardFusionResponse)(nil),                // 5: protoc.CardFusionResponse
-	(*CardBoostFusionResponse)(nil),           // 6: protoc.CardBoostFusionResponse
-	(*CardSaleResponse)(nil),                  // 7: protoc.CardSaleResponse
-	(*ClaimMailBoxItemResponse)(nil),          // 8: protoc.ClaimMailBoxItemResponse
-	(*MailBoxItemClaim)(nil),                  // 9: protoc.MailBoxItemClaim
-	(*ConfirmDailyMissionResponse)(nil),       // 10: protoc.ConfirmDailyMissionResponse
-	(*FollowPlayerResponse)(nil),              // 11: protoc.FollowPlayerResponse
-	(*StaminaRestoreResponse)(nil),            // 12: protoc.StaminaRestoreResponse
-	(*TeleportResponse)(nil),                  // 13: protoc.TeleportResponse
-	(*UnfollowPlayerResponse)(nil),            // 14: protoc.UnfollowPlayerResponse
-	(*services.ItemValuePair)(nil),            // 15: game.ItemValuePair
-	(*services.ProtoItemInstance)(nil),        // 16: game.ProtoItemInstance
-	(*services.ProtoAbilityCardInstance)(nil), // 17: game.ProtoAbilityCardInstance
-	(*services.ProtoPlayerInfo)(nil),          // 18: game.ProtoPlayerInfo
+	(*ApplicationError)(nil),              // 0: protoc.ApplicationError
+	(*Response)(nil),                      // 1: protoc.Response
+	(*ResponseHeader)(nil),                // 2: protoc.ResponseHeader
+	(*CreateProfileResponse)(nil),         // 3: protoc.CreateProfileResponse
+	(*CardFavouriteResponse)(nil),         // 4: protoc.CardFavouriteResponse
+	(*CardFusionResponse)(nil),            // 5: protoc.CardFusionResponse
+	(*CardBoostFusionResponse)(nil),       // 6: protoc.CardBoostFusionResponse
+	(*CardSaleResponse)(nil),              // 7: protoc.CardSaleResponse
+	(*ClaimMailBoxItemResponse)(nil),      // 8: protoc.ClaimMailBoxItemResponse
+	(*MailBoxItemClaim)(nil),              // 9: protoc.MailBoxItemClaim
+	(*ConfirmDailyMissionResponse)(nil),   // 10: protoc.ConfirmDailyMissionResponse
+	(*FollowPlayerResponse)(nil),          // 11: protoc.FollowPlayerResponse
+	(*StaminaRestoreResponse)(nil),        // 12: protoc.StaminaRestoreResponse
+	(*TeleportResponse)(nil),              // 13: protoc.TeleportResponse
+	(*UnfollowPlayerResponse)(nil),        // 14: protoc.UnfollowPlayerResponse
+	(*game.ItemValuePair)(nil),            // 15: game.ItemValuePair
+	(*game.ProtoItemInstance)(nil),        // 16: game.ProtoItemInstance
+	(*game.ProtoAbilityCardInstance)(nil), // 17: game.ProtoAbilityCardInstance
+	(*game.ProtoPlayerInfo)(nil),          // 18: game.ProtoPlayerInfo
 }
 var file_web_response_proto_depIdxs = []int32{
 	2,  // 0: protoc.Response.header:type_name -> protoc.ResponseHeader

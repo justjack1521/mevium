@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package game;
 
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/game";
 
 message ProtoPlayerInfo {
   string PlayerID = 1;
