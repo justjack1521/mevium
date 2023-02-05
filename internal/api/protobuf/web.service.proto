@@ -13,6 +13,7 @@ service CoreWebService {
   rpc CardFusion(protoc.CardFusionRequest) returns (protoc.CardFusionResponse) {}
   rpc CardBoostFusion(protoc.CardBoostFusionRequest) returns (protoc.CardBoostFusionResponse) {}
   rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
+  rpc ClaimEventRanking(protoc.ClaimEventRankingRequest) returns (protoc.ClaimEventRankingResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
   rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}

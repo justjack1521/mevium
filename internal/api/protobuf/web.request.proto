@@ -70,6 +70,10 @@ message ClaimMailBoxItemRequest {
   repeated int32 index = 1;
 }
 
+message ClaimEventRankingRequest {
+
+}
+
 message ConfirmDailyMissionRequest {
 
 }

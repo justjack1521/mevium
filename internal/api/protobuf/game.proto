@@ -50,3 +50,19 @@ message ItemValuePair {
   string ItemID = 1;
   int32 Value = 2;
 }
+
+message ProtoMailBoxItem {
+  enum ReferenceSource {
+    NONE = 0;
+    ABILITY_CARD = 1;
+    ITEM = 2;
+    JOB_CARD = 3;
+    WEAPON = 4;
+    FAIRY_COMPANION = 5;
+    MP_STAMP = 6;
+  }
+  string ReferenceID = 1;
+  ReferenceSource Source = 2;
+  int32 Quantity = 3;
+  int64 ReceivedAt = 4;
+}

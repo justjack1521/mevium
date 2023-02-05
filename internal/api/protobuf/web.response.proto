@@ -63,6 +63,10 @@ message ClaimMailBoxItemResponse {
   repeated MailBoxItemClaim Claims = 1;
 }
 
+message ClaimEventRankingResponse {
+  repeated game.ProtoMailBoxItem NewMailboxItems = 1;
+}
+
 message MailBoxItemClaim {
   int32 index = 1;
   oneof reward {

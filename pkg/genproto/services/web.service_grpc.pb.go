@@ -27,6 +27,7 @@ type CoreWebServiceClient interface {
 	CardFusion(ctx context.Context, in *protoc.CardFusionRequest, opts ...grpc.CallOption) (*protoc.CardFusionResponse, error)
 	CardBoostFusion(ctx context.Context, in *protoc.CardBoostFusionRequest, opts ...grpc.CallOption) (*protoc.CardBoostFusionResponse, error)
 	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
+	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
@@ -74,6 +75,15 @@ func (c *coreWebServiceClient) CardBoostFusion(ctx context.Context, in *protoc.C
 func (c *coreWebServiceClient) CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error) {
 	out := new(protoc.CreateProfileResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/CreateProfile", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreWebServiceClient) ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error) {
+	out := new(protoc.ClaimEventRankingResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/ClaimEventRanking", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -151,6 +161,7 @@ type CoreWebServiceServer interface {
 	CardFusion(context.Context, *protoc.CardFusionRequest) (*protoc.CardFusionResponse, error)
 	CardBoostFusion(context.Context, *protoc.CardBoostFusionRequest) (*protoc.CardBoostFusionResponse, error)
 	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
+	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
@@ -175,6 +186,9 @@ func (UnimplementedCoreWebServiceServer) CardBoostFusion(context.Context, *proto
 }
 func (UnimplementedCoreWebServiceServer) CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProfile not implemented")
+}
+func (UnimplementedCoreWebServiceServer) ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimEventRanking not implemented")
 }
 func (UnimplementedCoreWebServiceServer) ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClaimMailboxItem not implemented")
@@ -277,6 +291,24 @@ func _CoreWebService_CreateProfile_Handler(srv interface{}, ctx context.Context,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CoreWebServiceServer).CreateProfile(ctx, req.(*protoc.CreateProfileRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CoreWebService_ClaimEventRanking_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ClaimEventRankingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).ClaimEventRanking(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/ClaimEventRanking",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).ClaimEventRanking(ctx, req.(*protoc.ClaimEventRankingRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -429,6 +461,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateProfile",
 			Handler:    _CoreWebService_CreateProfile_Handler,
+		},
+		{
+			MethodName: "ClaimEventRanking",
+			Handler:    _CoreWebService_ClaimEventRanking_Handler,
 		},
 		{
 			MethodName: "ClaimMailboxItem",
