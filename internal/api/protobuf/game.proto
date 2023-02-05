@@ -5,50 +5,58 @@ package game;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/game";
 
 message ProtoPlayerInfo {
-  string PlayerID = 1;
-  string PlayerName = 2;
-  string PlayerComment = 3;
-  int32 PlayerLevel = 4;
-  int64 LastOnline = 5;
-  string JobCardID = 6;
-  int32 SubJobIndex = 7;
-  string CompanionID = 8;
-  ProtoPlayerCardInfo RentalCard = 9;
+  string player_id = 1;
+  string player_name = 2;
+  string player_comment = 3;
+  int32 player_level = 4;
+  int64 last_online = 5;
+  string job_card_id = 6;
+  int32 sub_job_index = 7;
+  string companion_id = 8;
+  ProtoPlayerCardInfo rental_card = 9;
 }
 
 message ProtoPlayerCardInfo {
-  string AbilityCardID = 1;
-  int32 AbilityLevel = 3;
-  int32 AbilityCardLevel = 2;
-  int32 ExtraSkillUnlock = 4;
-  int32 OverBoostLevel = 5;
-  int32 SlotIndex = 6;
+  string ability_card_id = 1;
+  int32 ability_level = 3;
+  int32 ability_card_level = 2;
+  int32 extra_skill_unlock = 4;
+  int32 over_boost_level = 5;
+  int32 slot_index = 6;
 }
 
 message ProtoAbilityCardInstance {
-  string SysId = 1;
-  int32 CardLevel = 2;
-  uint64 AccumExp = 3;
-  bool CardLock = 4;
-  int32 AbilityLevel = 5;
-  int32 SkillSeedUnlock = 6;
-  string AbilityCardId = 7;
-  int64 CreatedAt = 8;
-  uint64 TotalAccumExp = 9;
-  int32 ExtraSkillUnlock = 10;
-  int32 OverBoostLevel = 11;
+  string sys_id = 1;
+  int32 card_level = 2;
+  uint64 accum_exp = 3;
+  bool card_lock = 4;
+  int32 ability_level = 5;
+  int32 seed_unlock = 6;
+  string ability_card_id = 7;
+  int64 created_at = 8;
+  uint64 total_accum_exp = 9;
+  int32 extra_skill_unlock = 10;
+  int32 over_boost_level = 11;
+}
+
+message ProtoBattleStartData {
+  string region_map = 1;
+  int32 index = 2;
+  bool hard_mode = 3;
+  int32 deck_index = 4;
+  int64 created_at = 20;
 }
 
 message ProtoItemInstance {
-  string SysId = 1;
-  int32 Quantity = 2;
-  string ItemId = 3;
-  int64 CreatedAt = 4;
+  string sys_id = 1;
+  int32 quantity = 2;
+  string item_id = 3;
+  int64 created_at = 4;
 }
 
 message ItemValuePair {
-  string ItemID = 1;
-  int32 Value = 2;
+  string item_id = 1;
+  int32 value = 2;
 }
 
 message ProtoMailBoxItem {
@@ -61,8 +69,8 @@ message ProtoMailBoxItem {
     FAIRY_COMPANION = 5;
     MP_STAMP = 6;
   }
-  string ReferenceID = 1;
-  ReferenceSource Source = 2;
-  int32 Quantity = 3;
-  int64 ReceivedAt = 4;
+  string reference_id = 1;
+  ReferenceSource source = 2;
+  int32 quantity = 3;
+  int64 received_at = 4;
 }

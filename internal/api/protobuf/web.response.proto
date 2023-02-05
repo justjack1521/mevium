@@ -26,6 +26,15 @@ message ResponseHeader {
   string  error_message  =  7;
 }
 
+message BattleReviveResponse {
+  game.ItemValuePair ItemRemoved = 1;
+}
+
+message BattleStartResponse {
+  game.ProtoBattleStartData BattleStartData = 1;
+  uint32 StaminaDecreased = 2;
+}
+
 message CreateProfileResponse {
   bytes game_data = 1;
 }

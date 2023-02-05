@@ -42,6 +42,16 @@ message BaseRequest {
   bytes         data       =  3;
 }
 
+message BattleReviveRequest {
+
+}
+
+message BattleStartRequest {
+  int32 index = 1;
+  int32 deck_index = 2;
+  bool hard_mode = 3;
+}
+
 message CreateProfileRequest {
   string player_name = 1;
 }

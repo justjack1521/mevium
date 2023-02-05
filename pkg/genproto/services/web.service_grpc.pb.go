@@ -23,6 +23,8 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CoreWebServiceClient interface {
+	BattleRevive(ctx context.Context, in *protoc.BattleReviveRequest, opts ...grpc.CallOption) (*protoc.BattleReviveResponse, error)
+	BattleStart(ctx context.Context, in *protoc.BattleStartRequest, opts ...grpc.CallOption) (*protoc.BattleStartResponse, error)
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
 	CardFusion(ctx context.Context, in *protoc.CardFusionRequest, opts ...grpc.CallOption) (*protoc.CardFusionResponse, error)
 	CardBoostFusion(ctx context.Context, in *protoc.CardBoostFusionRequest, opts ...grpc.CallOption) (*protoc.CardBoostFusionResponse, error)
@@ -43,6 +45,24 @@ type coreWebServiceClient struct {
 
 func NewCoreWebServiceClient(cc grpc.ClientConnInterface) CoreWebServiceClient {
 	return &coreWebServiceClient{cc}
+}
+
+func (c *coreWebServiceClient) BattleRevive(ctx context.Context, in *protoc.BattleReviveRequest, opts ...grpc.CallOption) (*protoc.BattleReviveResponse, error) {
+	out := new(protoc.BattleReviveResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/BattleRevive", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *coreWebServiceClient) BattleStart(ctx context.Context, in *protoc.BattleStartRequest, opts ...grpc.CallOption) (*protoc.BattleStartResponse, error) {
+	out := new(protoc.BattleStartResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/BattleStart", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
 func (c *coreWebServiceClient) CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error) {
@@ -157,6 +177,8 @@ func (c *coreWebServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.Un
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
 type CoreWebServiceServer interface {
+	BattleRevive(context.Context, *protoc.BattleReviveRequest) (*protoc.BattleReviveResponse, error)
+	BattleStart(context.Context, *protoc.BattleStartRequest) (*protoc.BattleStartResponse, error)
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
 	CardFusion(context.Context, *protoc.CardFusionRequest) (*protoc.CardFusionResponse, error)
 	CardBoostFusion(context.Context, *protoc.CardBoostFusionRequest) (*protoc.CardBoostFusionResponse, error)
@@ -175,6 +197,12 @@ type CoreWebServiceServer interface {
 type UnimplementedCoreWebServiceServer struct {
 }
 
+func (UnimplementedCoreWebServiceServer) BattleRevive(context.Context, *protoc.BattleReviveRequest) (*protoc.BattleReviveResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BattleRevive not implemented")
+}
+func (UnimplementedCoreWebServiceServer) BattleStart(context.Context, *protoc.BattleStartRequest) (*protoc.BattleStartResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BattleStart not implemented")
+}
 func (UnimplementedCoreWebServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
 }
@@ -221,6 +249,42 @@ type UnsafeCoreWebServiceServer interface {
 
 func RegisterCoreWebServiceServer(s grpc.ServiceRegistrar, srv CoreWebServiceServer) {
 	s.RegisterService(&CoreWebService_ServiceDesc, srv)
+}
+
+func _CoreWebService_BattleRevive_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.BattleReviveRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).BattleRevive(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/BattleRevive",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).BattleRevive(ctx, req.(*protoc.BattleReviveRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CoreWebService_BattleStart_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.BattleStartRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).BattleStart(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/BattleStart",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).BattleStart(ctx, req.(*protoc.BattleStartRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _CoreWebService_CardSale_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -446,6 +510,14 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "core.CoreWebService",
 	HandlerType: (*CoreWebServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "BattleRevive",
+			Handler:    _CoreWebService_BattleRevive_Handler,
+		},
+		{
+			MethodName: "BattleStart",
+			Handler:    _CoreWebService_BattleStart_Handler,
+		},
 		{
 			MethodName: "CardSale",
 			Handler:    _CoreWebService_CardSale_Handler,
