@@ -23,6 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CoreWebServiceClient interface {
+	BattleComplete(ctx context.Context, in *protoc.BattleCompleteRequest, opts ...grpc.CallOption) (*protoc.BattleCompleteResponse, error)
 	BattleRevive(ctx context.Context, in *protoc.BattleReviveRequest, opts ...grpc.CallOption) (*protoc.BattleReviveResponse, error)
 	BattleStart(ctx context.Context, in *protoc.BattleStartRequest, opts ...grpc.CallOption) (*protoc.BattleStartResponse, error)
 	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
@@ -45,6 +46,15 @@ type coreWebServiceClient struct {
 
 func NewCoreWebServiceClient(cc grpc.ClientConnInterface) CoreWebServiceClient {
 	return &coreWebServiceClient{cc}
+}
+
+func (c *coreWebServiceClient) BattleComplete(ctx context.Context, in *protoc.BattleCompleteRequest, opts ...grpc.CallOption) (*protoc.BattleCompleteResponse, error) {
+	out := new(protoc.BattleCompleteResponse)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/BattleComplete", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
 func (c *coreWebServiceClient) BattleRevive(ctx context.Context, in *protoc.BattleReviveRequest, opts ...grpc.CallOption) (*protoc.BattleReviveResponse, error) {
@@ -177,6 +187,7 @@ func (c *coreWebServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.Un
 // All implementations should embed UnimplementedCoreWebServiceServer
 // for forward compatibility
 type CoreWebServiceServer interface {
+	BattleComplete(context.Context, *protoc.BattleCompleteRequest) (*protoc.BattleCompleteResponse, error)
 	BattleRevive(context.Context, *protoc.BattleReviveRequest) (*protoc.BattleReviveResponse, error)
 	BattleStart(context.Context, *protoc.BattleStartRequest) (*protoc.BattleStartResponse, error)
 	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
@@ -197,6 +208,9 @@ type CoreWebServiceServer interface {
 type UnimplementedCoreWebServiceServer struct {
 }
 
+func (UnimplementedCoreWebServiceServer) BattleComplete(context.Context, *protoc.BattleCompleteRequest) (*protoc.BattleCompleteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BattleComplete not implemented")
+}
 func (UnimplementedCoreWebServiceServer) BattleRevive(context.Context, *protoc.BattleReviveRequest) (*protoc.BattleReviveResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BattleRevive not implemented")
 }
@@ -249,6 +263,24 @@ type UnsafeCoreWebServiceServer interface {
 
 func RegisterCoreWebServiceServer(s grpc.ServiceRegistrar, srv CoreWebServiceServer) {
 	s.RegisterService(&CoreWebService_ServiceDesc, srv)
+}
+
+func _CoreWebService_BattleComplete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.BattleCompleteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).BattleComplete(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/BattleComplete",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).BattleComplete(ctx, req.(*protoc.BattleCompleteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _CoreWebService_BattleRevive_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -510,6 +542,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "core.CoreWebService",
 	HandlerType: (*CoreWebServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "BattleComplete",
+			Handler:    _CoreWebService_BattleComplete_Handler,
+		},
 		{
 			MethodName: "BattleRevive",
 			Handler:    _CoreWebService_BattleRevive_Handler,
