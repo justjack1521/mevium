@@ -26,6 +26,11 @@ message ResponseHeader {
   string  error_message  =  7;
 }
 
+message BattleCompleteResponse {
+  game.LastBattleResults Results = 1;
+  repeated game.RegionEventData PendingEvents = 2;
+}
+
 message BattleReviveResponse {
   game.ItemValuePair ItemRemoved = 1;
 }

@@ -9,6 +9,7 @@ import "web.response.proto";
 
 
 service CoreWebService {
+  rpc BattleComplete(protoc.BattleCompleteRequest) returns (protoc.BattleCompleteResponse) {}
   rpc BattleRevive(protoc.BattleReviveRequest) returns (protoc.BattleReviveResponse) {}
   rpc BattleStart(protoc.BattleStartRequest) returns (protoc.BattleStartResponse) {}
   rpc CardSale(protoc.CardSaleRequest) returns (protoc.CardSaleResponse) {}
