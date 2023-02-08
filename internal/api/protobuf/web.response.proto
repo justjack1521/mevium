@@ -4,7 +4,7 @@ package protoc;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
 
-import "game.proto";
+import "data.proto";
 
 message ApplicationError {
   int32   error_code     =  1;
@@ -27,21 +27,24 @@ message ResponseHeader {
 }
 
 message BattleCompleteResponse {
-  game.LastBattleResults Results = 1;
-  repeated game.RegionEventData PendingEvents = 2;
+  protog.ProtoLastBattleResults Results = 1;
+  repeated protog.ProtoRegionEventData PendingEvents = 2;
 }
 
 message BattleReviveResponse {
-  game.ItemValuePair ItemRemoved = 1;
+  protog.ProtoItemValuePair ItemRemoved = 1;
 }
 
 message BattleStartResponse {
-  game.ProtoBattleStartData BattleStartData = 1;
+  protog.ProtoBattleStartData BattleStartData = 1;
   uint32 StaminaDecreased = 2;
 }
 
 message CreateProfileResponse {
   bytes game_data = 1;
+}
+
+message CardAugmentResponse {
 }
 
 message CardFavouriteResponse {
@@ -58,14 +61,14 @@ message CardFusionResponse {
   int32 ability_level_gain = 6;
   repeated string inventory_cards_removed = 7;
   repeated string bank_cards_removed = 8;
-  game.ItemValuePair fusion_cost = 9;
+  protog.ProtoItemValuePair fusion_cost = 9;
 }
 
 message CardBoostFusionResponse {
   string card_id = 1;
   int32 seed_level_gain = 2;
   int32 ability_level_gain = 3;
-  game.ItemValuePair fusion_cost = 4;
+  protog.ProtoItemValuePair fusion_cost = 4;
 }
 
 message CardSaleResponse {
@@ -78,14 +81,19 @@ message ClaimMailBoxItemResponse {
 }
 
 message ClaimEventRankingResponse {
-  repeated game.ProtoMailBoxItem NewMailboxItems = 1;
+  repeated protog.ProtoMailBoxItem NewMailboxItems = 1;
+}
+
+message DeckEditAllResponse {
+  protog.ProtoPlayerDeckCollection Collection = 1;
+  bool MultiPlayer = 2;
 }
 
 message MailBoxItemClaim {
   int32 index = 1;
   oneof reward {
-    game.ProtoItemInstance item_instance = 2;
-    game.ProtoAbilityCardInstance ability_card_instance = 3;
+    protog.ProtoItemInstance item_instance = 2;
+    protog.ProtoAbilityCardInstance ability_card_instance = 3;
   }
 }
 
@@ -94,7 +102,7 @@ message ConfirmDailyMissionResponse {
 }
 
 message FollowPlayerResponse {
-  game.ProtoPlayerInfo player_info = 1;
+  protog.ProtoPlayerInfo player_info = 1;
 }
 
 message StaminaRestoreResponse {

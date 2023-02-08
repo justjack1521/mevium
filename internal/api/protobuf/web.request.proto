@@ -60,6 +60,9 @@ message CreateProfileRequest {
   string player_name = 1;
 }
 
+message CardAugmentRequest {
+}
+
 message CardFavouriteRequest {
   string card = 1;
   bool value = 2;
@@ -80,6 +83,11 @@ message CardSaleRequest {
   repeated string cards = 1;
 }
 
+message CardTransferRequest {
+  bool FromBank = 1;
+  repeated int32 Cards = 2;
+}
+
 message ClaimMailBoxItemRequest {
   repeated int32 index = 1;
 }
@@ -90,6 +98,23 @@ message ClaimEventRankingRequest {
 
 message ConfirmDailyMissionRequest {
 
+}
+
+message DeckEditRequest {
+  int32             Index               =  1;
+  int32             JobCardIndex        =  2;
+  int32             JobCardSubIndex     =  3;
+  int32             WeaponIndex         =  4;
+  int32             SubJobCardIndex     =  5;
+  int32             SubJobCardSubIndex  =  6;
+  int32             SubWeaponIndex      =  7;
+  repeated  string  AbilityCardIDs      =  8;
+  repeated  string  SubAbilityCardIDs   =  9;
+}
+
+message DeckEditAllRequest {
+  repeated DeckEditRequest Requests = 1;
+  bool MPDeck = 2;
 }
 
 message FollowPlayerRequest {
