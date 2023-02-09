@@ -33,7 +33,8 @@ message ProtoGameData {
   ProtoPlayerDeckCollection single_player_decks = 17;
   ProtoPlayerDeckCollection multi_player_decks = 18;
   ProtoRegionMapDataCollection region_map_data_collection = 19;
-  ProtoLastBattleResults last_battle_results = 20;
+
+  ProtoLastBattleInformation last_battle_information = 20;
 
   repeated ProtoPlayerInfo following_list = 21;
   repeated ProtoPlayerInfo follower_list = 22;
@@ -184,6 +185,11 @@ message ProtoJobCardInstance {
   int32 crit_chance_stat_mod = 15;
   int32 ultimate_boost = 18;
   map<string, int32> auto_abilities = 19;
+}
+
+message ProtoLastBattleInformation {
+  ProtoBattleStartData start_data = 1;
+  ProtoLastBattleResults results = 2;
 }
 
 message ProtoLastBattleResults {
