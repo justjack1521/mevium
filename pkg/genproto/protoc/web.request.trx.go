@@ -122,6 +122,14 @@ func NewDeckEditAllRequest(bytes []byte) (*DeckEditAllRequest, error) {
 	return req, nil
 }
 
+func NewFetchPlayerDataRequest(bytes []byte) (*FetchPlayerDataRequest, error) {
+	req := &FetchPlayerDataRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewFollowPlayerRequest(bytes []byte) (*FollowPlayerRequest, error) {
 	req := &FollowPlayerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
