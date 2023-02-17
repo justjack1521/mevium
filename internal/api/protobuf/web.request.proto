@@ -117,6 +117,10 @@ message DeckEditAllRequest {
   bool MPDeck = 2;
 }
 
+message FetchPlayerDataRequest {
+
+}
+
 message FollowPlayerRequest {
   string player_id = 1;
 }

@@ -89,6 +89,10 @@ message DeckEditAllResponse {
   bool MultiPlayer = 2;
 }
 
+message FetchPlayerDataResponse {
+  bytes Data = 1;
+}
+
 message MailBoxItemClaim {
   int32 index = 1;
   oneof reward {
