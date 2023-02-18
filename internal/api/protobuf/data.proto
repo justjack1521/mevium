@@ -11,7 +11,6 @@ message ProtoGameData {
   int32 player_level = 2;
 
   ProtoPlayerStamina player_stamina = 3;
-  ProtoPlayerStamina multi_player_stamina = 4;
 
   uint64 total_exp = 4;
   uint64 accum_exp = 5;
