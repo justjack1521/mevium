@@ -2,7 +2,10 @@ syntax = "proto3";
 
 package protoc;
 
+option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
+
+import "data.proto";
 
 enum RequestType {
   BASE = 0;
@@ -68,6 +71,16 @@ message CardFavouriteRequest {
   bool value = 2;
 }
 
+message CardFilterSortSetRequest {
+  int32            View             =  1;
+  int32            Index            =  2;
+  repeated  int32  CardTypes        =  3;
+  repeated  int32  CardElements     =  4;
+  repeated  int32  SpecialFilters   =  5;
+  repeated  int32  SortSelectors    =  6;
+  bool             SortDescending   =  7;
+}
+
 message CardFusionRequest {
   int32 base_card = 1;
   repeated int32 inventory_cards = 2;
@@ -123,6 +136,11 @@ message FetchPlayerDataRequest {
 
 message FollowPlayerRequest {
   string player_id = 1;
+}
+
+message SkillPanelUnlockResponse {
+  repeated protog.ProtoItemValuePair ItemsRemoved = 1;
+  protog.ProtoJobCardInstance JobInstance = 2;
 }
 
 message StaminaRestoreRequest {

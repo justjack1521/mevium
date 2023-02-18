@@ -154,8 +154,8 @@ func NewTeleportRequest(bytes []byte) (*TeleportRequest, error) {
 	return req, nil
 }
 
-func NewUnfollowPlayerRequest(bytes []byte) (*BattleCompleteRequest, error) {
-	req := &BattleCompleteRequest{}
+func NewUnfollowPlayerRequest(bytes []byte) (*UnfollowPlayerRequest, error) {
+	req := &UnfollowPlayerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}

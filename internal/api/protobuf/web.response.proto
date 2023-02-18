@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package protoc;
 
+option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
 
 import "data.proto";
@@ -76,6 +77,10 @@ message CardSaleResponse {
   repeated string cards_removed = 2;
 }
 
+message CardTransferResponse {
+
+}
+
 message ClaimMailBoxItemResponse {
   repeated MailBoxItemClaim Claims = 1;
 }
@@ -91,6 +96,12 @@ message DeckEditAllResponse {
 
 message FetchPlayerDataResponse {
   bytes Data = 1;
+}
+
+message FilterSortResponse {
+  int32 View = 1;
+  int32 Index = 2;
+  protog.ProtoCardFilterSort FilterSort = 3;
 }
 
 message MailBoxItemClaim {
@@ -113,6 +124,12 @@ message StaminaRestoreResponse {
   string item_id = 1;
   int32 item_amount = 2;
   int32 restore_amount = 3;
+}
+
+message SkillPanelUnlockRequest {
+  int32 JobCardIndex = 1;
+  int32 SkillPanelGroupIndex = 2;
+  int32 SkillPanelIndex = 3;
 }
 
 message TeleportResponse {
