@@ -33,6 +33,7 @@ type CoreWebServiceClient interface {
 	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
+	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllRequest, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
@@ -139,6 +140,15 @@ func (c *coreWebServiceClient) ConfirmDailyMission(ctx context.Context, in *prot
 	return out, nil
 }
 
+func (c *coreWebServiceClient) DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllRequest, error) {
+	out := new(protoc.DeckEditAllRequest)
+	err := c.cc.Invoke(ctx, "/core.CoreWebService/DeckEdit", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *coreWebServiceClient) FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error) {
 	out := new(protoc.FetchPlayerDataResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/FetchPlayerData", in, out, opts...)
@@ -207,6 +217,7 @@ type CoreWebServiceServer interface {
 	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
+	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllRequest, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
@@ -248,6 +259,9 @@ func (UnimplementedCoreWebServiceServer) ClaimMailboxItem(context.Context, *prot
 }
 func (UnimplementedCoreWebServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
+}
+func (UnimplementedCoreWebServiceServer) DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllRequest, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeckEdit not implemented")
 }
 func (UnimplementedCoreWebServiceServer) FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FetchPlayerData not implemented")
@@ -459,6 +473,24 @@ func _CoreWebService_ConfirmDailyMission_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CoreWebService_DeckEdit_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.DeckEditAllRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CoreWebServiceServer).DeckEdit(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/core.CoreWebService/DeckEdit",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CoreWebServiceServer).DeckEdit(ctx, req.(*protoc.DeckEditAllRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _CoreWebService_FetchPlayerData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.FetchPlayerDataRequest)
 	if err := dec(in); err != nil {
@@ -613,6 +645,10 @@ var CoreWebService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ConfirmDailyMission",
 			Handler:    _CoreWebService_ConfirmDailyMission_Handler,
+		},
+		{
+			MethodName: "DeckEdit",
+			Handler:    _CoreWebService_DeckEdit_Handler,
 		},
 		{
 			MethodName: "FetchPlayerData",

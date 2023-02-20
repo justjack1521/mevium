@@ -19,6 +19,7 @@ service CoreWebService {
   rpc ClaimEventRanking(protoc.ClaimEventRankingRequest) returns (protoc.ClaimEventRankingResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
+  rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllRequest) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
   rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
   rpc FollowPlayer(protoc.FollowPlayerRequest) returns (protoc.FollowPlayerResponse) {}
