@@ -30,6 +30,8 @@ message ResponseHeader {
 message BattleCompleteResponse {
   protog.ProtoLastBattleResults Results = 1;
   repeated protog.ProtoRegionEventData PendingEvents = 2;
+  string region_map_id = 3;
+  int32 region_node_index = 4;
 }
 
 message BattleReviveResponse {
