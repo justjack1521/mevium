@@ -1,14 +1,14 @@
 syntax = "proto3";
 
-package core;
+package service;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 
-import "web.request.proto";
-import "web.response.proto";
+import "game.request.proto";
+import "game.response.proto";
 
 
-service CoreWebService {
+service MeviusGameService {
   rpc BattleComplete(protoc.BattleCompleteRequest) returns (protoc.BattleCompleteResponse) {}
   rpc BattleRevive(protoc.BattleReviveRequest) returns (protoc.BattleReviveResponse) {}
   rpc BattleStart(protoc.BattleStartRequest) returns (protoc.BattleStartResponse) {}
@@ -19,6 +19,7 @@ service CoreWebService {
   rpc ClaimEventRanking(protoc.ClaimEventRankingRequest) returns (protoc.ClaimEventRankingResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
+  rpc CompanionChange(protoc.CompanionChangeRequest) returns (protoc.CompanionChangeResponse) {}
   rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllResponse) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
   rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
@@ -27,3 +28,4 @@ service CoreWebService {
   rpc Teleport(protoc.TeleportRequest) returns (protoc.TeleportResponse) {}
   rpc UnfollowPlayer(protoc.UnfollowPlayerRequest) returns (protoc.UnfollowPlayerResponse) {}
 }
+

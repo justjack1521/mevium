@@ -101,6 +101,10 @@ message CardTransferRequest {
   repeated int32 Cards = 2;
 }
 
+message CompanionChangeRequest {
+  int32 index = 1;
+}
+
 message ClaimMailBoxItemRequest {
   repeated int32 index = 1;
 }

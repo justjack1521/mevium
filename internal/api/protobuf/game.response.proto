@@ -116,6 +116,10 @@ message ConfirmDailyMissionResponse {
 
 }
 
+message CompanionChangeResponse {
+  string companion_id = 1;
+}
+
 message FollowPlayerResponse {
   protog.ProtoPlayerInfo player_info = 1;
 }
