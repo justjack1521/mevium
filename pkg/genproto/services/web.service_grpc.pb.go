@@ -33,7 +33,7 @@ type CoreWebServiceClient interface {
 	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
-	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllRequest, error)
+	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
@@ -140,8 +140,8 @@ func (c *coreWebServiceClient) ConfirmDailyMission(ctx context.Context, in *prot
 	return out, nil
 }
 
-func (c *coreWebServiceClient) DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllRequest, error) {
-	out := new(protoc.DeckEditAllRequest)
+func (c *coreWebServiceClient) DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error) {
+	out := new(protoc.DeckEditAllResponse)
 	err := c.cc.Invoke(ctx, "/core.CoreWebService/DeckEdit", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -217,7 +217,7 @@ type CoreWebServiceServer interface {
 	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
-	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllRequest, error)
+	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
@@ -260,7 +260,7 @@ func (UnimplementedCoreWebServiceServer) ClaimMailboxItem(context.Context, *prot
 func (UnimplementedCoreWebServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
 }
-func (UnimplementedCoreWebServiceServer) DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllRequest, error) {
+func (UnimplementedCoreWebServiceServer) DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeckEdit not implemented")
 }
 func (UnimplementedCoreWebServiceServer) FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error) {
