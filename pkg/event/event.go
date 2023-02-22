@@ -12,6 +12,10 @@ type Publisher struct {
 	handlers map[string][]Handler
 }
 
+func NewPublisher() *Publisher {
+	return &Publisher{handlers: map[string][]Handler{}}
+}
+
 func (e *Publisher) Subscribe(handler Handler, events ...Event) {
 	for _, event := range events {
 		handlers := e.handlers[event.Name()]
