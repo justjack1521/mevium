@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package presence;
 
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/presence";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
 
 message UpdatePlayerPresenceRequest {
   string client_id = 1;

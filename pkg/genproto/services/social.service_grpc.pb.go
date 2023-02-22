@@ -8,7 +8,7 @@ package services
 
 import (
 	context "context"
-	presence "github.com/justjack1521/mevium/pkg/genproto/presence"
+	protop "github.com/justjack1521/mevium/pkg/genproto/protop"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -23,9 +23,9 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusPresenceServiceClient interface {
-	UpdatePlayerPresence(ctx context.Context, in *presence.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*presence.UpdatePlayerPresenceResponse, error)
-	UpdatePlayerPosition(ctx context.Context, in *presence.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*presence.UpdatePlayerPositionResponse, error)
-	UpdateCompanion(ctx context.Context, in *presence.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*presence.UpdatePlayerCompanionResponse, error)
+	UpdatePlayerPresence(ctx context.Context, in *protop.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPresenceResponse, error)
+	UpdatePlayerPosition(ctx context.Context, in *protop.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPositionResponse, error)
+	UpdateCompanion(ctx context.Context, in *protop.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerCompanionResponse, error)
 }
 
 type meviusPresenceServiceClient struct {
@@ -36,8 +36,8 @@ func NewMeviusPresenceServiceClient(cc grpc.ClientConnInterface) MeviusPresenceS
 	return &meviusPresenceServiceClient{cc}
 }
 
-func (c *meviusPresenceServiceClient) UpdatePlayerPresence(ctx context.Context, in *presence.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*presence.UpdatePlayerPresenceResponse, error) {
-	out := new(presence.UpdatePlayerPresenceResponse)
+func (c *meviusPresenceServiceClient) UpdatePlayerPresence(ctx context.Context, in *protop.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPresenceResponse, error) {
+	out := new(protop.UpdatePlayerPresenceResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusPresenceService/UpdatePlayerPresence", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -45,8 +45,8 @@ func (c *meviusPresenceServiceClient) UpdatePlayerPresence(ctx context.Context, 
 	return out, nil
 }
 
-func (c *meviusPresenceServiceClient) UpdatePlayerPosition(ctx context.Context, in *presence.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*presence.UpdatePlayerPositionResponse, error) {
-	out := new(presence.UpdatePlayerPositionResponse)
+func (c *meviusPresenceServiceClient) UpdatePlayerPosition(ctx context.Context, in *protop.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPositionResponse, error) {
+	out := new(protop.UpdatePlayerPositionResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusPresenceService/UpdatePlayerPosition", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -54,8 +54,8 @@ func (c *meviusPresenceServiceClient) UpdatePlayerPosition(ctx context.Context, 
 	return out, nil
 }
 
-func (c *meviusPresenceServiceClient) UpdateCompanion(ctx context.Context, in *presence.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*presence.UpdatePlayerCompanionResponse, error) {
-	out := new(presence.UpdatePlayerCompanionResponse)
+func (c *meviusPresenceServiceClient) UpdateCompanion(ctx context.Context, in *protop.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerCompanionResponse, error) {
+	out := new(protop.UpdatePlayerCompanionResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusPresenceService/UpdateCompanion", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -67,22 +67,22 @@ func (c *meviusPresenceServiceClient) UpdateCompanion(ctx context.Context, in *p
 // All implementations should embed UnimplementedMeviusPresenceServiceServer
 // for forward compatibility
 type MeviusPresenceServiceServer interface {
-	UpdatePlayerPresence(context.Context, *presence.UpdatePlayerPresenceRequest) (*presence.UpdatePlayerPresenceResponse, error)
-	UpdatePlayerPosition(context.Context, *presence.UpdatePlayerPositionRequest) (*presence.UpdatePlayerPositionResponse, error)
-	UpdateCompanion(context.Context, *presence.UpdatePlayerCompanionRequest) (*presence.UpdatePlayerCompanionResponse, error)
+	UpdatePlayerPresence(context.Context, *protop.UpdatePlayerPresenceRequest) (*protop.UpdatePlayerPresenceResponse, error)
+	UpdatePlayerPosition(context.Context, *protop.UpdatePlayerPositionRequest) (*protop.UpdatePlayerPositionResponse, error)
+	UpdateCompanion(context.Context, *protop.UpdatePlayerCompanionRequest) (*protop.UpdatePlayerCompanionResponse, error)
 }
 
 // UnimplementedMeviusPresenceServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedMeviusPresenceServiceServer struct {
 }
 
-func (UnimplementedMeviusPresenceServiceServer) UpdatePlayerPresence(context.Context, *presence.UpdatePlayerPresenceRequest) (*presence.UpdatePlayerPresenceResponse, error) {
+func (UnimplementedMeviusPresenceServiceServer) UpdatePlayerPresence(context.Context, *protop.UpdatePlayerPresenceRequest) (*protop.UpdatePlayerPresenceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePlayerPresence not implemented")
 }
-func (UnimplementedMeviusPresenceServiceServer) UpdatePlayerPosition(context.Context, *presence.UpdatePlayerPositionRequest) (*presence.UpdatePlayerPositionResponse, error) {
+func (UnimplementedMeviusPresenceServiceServer) UpdatePlayerPosition(context.Context, *protop.UpdatePlayerPositionRequest) (*protop.UpdatePlayerPositionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePlayerPosition not implemented")
 }
-func (UnimplementedMeviusPresenceServiceServer) UpdateCompanion(context.Context, *presence.UpdatePlayerCompanionRequest) (*presence.UpdatePlayerCompanionResponse, error) {
+func (UnimplementedMeviusPresenceServiceServer) UpdateCompanion(context.Context, *protop.UpdatePlayerCompanionRequest) (*protop.UpdatePlayerCompanionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateCompanion not implemented")
 }
 
@@ -98,7 +98,7 @@ func RegisterMeviusPresenceServiceServer(s grpc.ServiceRegistrar, srv MeviusPres
 }
 
 func _MeviusPresenceService_UpdatePlayerPresence_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(presence.UpdatePlayerPresenceRequest)
+	in := new(protop.UpdatePlayerPresenceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -110,13 +110,13 @@ func _MeviusPresenceService_UpdatePlayerPresence_Handler(srv interface{}, ctx co
 		FullMethod: "/service.MeviusPresenceService/UpdatePlayerPresence",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusPresenceServiceServer).UpdatePlayerPresence(ctx, req.(*presence.UpdatePlayerPresenceRequest))
+		return srv.(MeviusPresenceServiceServer).UpdatePlayerPresence(ctx, req.(*protop.UpdatePlayerPresenceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _MeviusPresenceService_UpdatePlayerPosition_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(presence.UpdatePlayerPositionRequest)
+	in := new(protop.UpdatePlayerPositionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -128,13 +128,13 @@ func _MeviusPresenceService_UpdatePlayerPosition_Handler(srv interface{}, ctx co
 		FullMethod: "/service.MeviusPresenceService/UpdatePlayerPosition",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusPresenceServiceServer).UpdatePlayerPosition(ctx, req.(*presence.UpdatePlayerPositionRequest))
+		return srv.(MeviusPresenceServiceServer).UpdatePlayerPosition(ctx, req.(*protop.UpdatePlayerPositionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _MeviusPresenceService_UpdateCompanion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(presence.UpdatePlayerCompanionRequest)
+	in := new(protop.UpdatePlayerCompanionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -146,7 +146,7 @@ func _MeviusPresenceService_UpdateCompanion_Handler(srv interface{}, ctx context
 		FullMethod: "/service.MeviusPresenceService/UpdateCompanion",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusPresenceServiceServer).UpdateCompanion(ctx, req.(*presence.UpdatePlayerCompanionRequest))
+		return srv.(MeviusPresenceServiceServer).UpdateCompanion(ctx, req.(*protop.UpdatePlayerCompanionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
