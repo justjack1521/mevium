@@ -37,10 +37,8 @@ type MeviusGameServiceClient interface {
 	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
-	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
-	UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -177,15 +175,6 @@ func (c *meviusGameServiceClient) FavouriteCard(ctx context.Context, in *protoc.
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error) {
-	out := new(protoc.FollowPlayerResponse)
-	err := c.cc.Invoke(ctx, "/service.MeviusGameService/FollowPlayer", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *meviusGameServiceClient) RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error) {
 	out := new(protoc.StaminaRestoreResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusGameService/RestoreStamina", in, out, opts...)
@@ -198,15 +187,6 @@ func (c *meviusGameServiceClient) RestoreStamina(ctx context.Context, in *protoc
 func (c *meviusGameServiceClient) Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error) {
 	out := new(protoc.TeleportResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusGameService/Teleport", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *meviusGameServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error) {
-	out := new(protoc.UnfollowPlayerResponse)
-	err := c.cc.Invoke(ctx, "/service.MeviusGameService/UnfollowPlayer", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -231,10 +211,8 @@ type MeviusGameServiceServer interface {
 	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
-	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
-	UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -283,17 +261,11 @@ func (UnimplementedMeviusGameServiceServer) FetchPlayerData(context.Context, *pr
 func (UnimplementedMeviusGameServiceServer) FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FavouriteCard not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FollowPlayer not implemented")
-}
 func (UnimplementedMeviusGameServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Teleport not implemented")
-}
-func (UnimplementedMeviusGameServiceServer) UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UnfollowPlayer not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -559,24 +531,6 @@ func _MeviusGameService_FavouriteCard_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_FollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.FollowPlayerRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).FollowPlayer(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/service.MeviusGameService/FollowPlayer",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).FollowPlayer(ctx, req.(*protoc.FollowPlayerRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _MeviusGameService_RestoreStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.StaminaRestoreRequest)
 	if err := dec(in); err != nil {
@@ -609,24 +563,6 @@ func _MeviusGameService_Teleport_Handler(srv interface{}, ctx context.Context, d
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusGameServiceServer).Teleport(ctx, req.(*protoc.TeleportRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusGameService_UnfollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.UnfollowPlayerRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).UnfollowPlayer(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/service.MeviusGameService/UnfollowPlayer",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).UnfollowPlayer(ctx, req.(*protoc.UnfollowPlayerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -695,20 +631,12 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_FavouriteCard_Handler,
 		},
 		{
-			MethodName: "FollowPlayer",
-			Handler:    _MeviusGameService_FollowPlayer_Handler,
-		},
-		{
 			MethodName: "RestoreStamina",
 			Handler:    _MeviusGameService_RestoreStamina_Handler,
 		},
 		{
 			MethodName: "Teleport",
 			Handler:    _MeviusGameService_Teleport_Handler,
-		},
-		{
-			MethodName: "UnfollowPlayer",
-			Handler:    _MeviusGameService_UnfollowPlayer_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

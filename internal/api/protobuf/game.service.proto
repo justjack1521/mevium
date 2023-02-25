@@ -23,9 +23,7 @@ service MeviusGameService {
   rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllResponse) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
   rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
-  rpc FollowPlayer(protoc.FollowPlayerRequest) returns (protoc.FollowPlayerResponse) {}
   rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
   rpc Teleport(protoc.TeleportRequest) returns (protoc.TeleportResponse) {}
-  rpc UnfollowPlayer(protoc.UnfollowPlayerRequest) returns (protoc.UnfollowPlayerResponse) {}
 }
 

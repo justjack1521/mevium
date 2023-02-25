@@ -4,9 +4,13 @@ package service;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 
+import "game.request.proto";
+import "game.response.proto";
 import "social.message.proto";
 
-service MeviusPresenceService {
+service MeviusSocialService {
+  rpc FollowPlayer(protoc.FollowPlayerRequest) returns (protoc.FollowPlayerResponse) {}
+  rpc UnfollowPlayer(protoc.UnfollowPlayerRequest) returns (protoc.UnfollowPlayerResponse) {}
   rpc UpdatePlayerPresence(presence.UpdatePlayerPresenceRequest) returns (presence.UpdatePlayerPresenceResponse) {}
   rpc UpdatePlayerPosition(presence.UpdatePlayerPositionRequest) returns (presence.UpdatePlayerPositionResponse) {}
   rpc UpdateCompanion(presence.UpdatePlayerCompanionRequest) returns (presence.UpdatePlayerCompanionResponse) {}
