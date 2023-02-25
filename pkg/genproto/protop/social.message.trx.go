@@ -26,6 +26,14 @@ func NewUpdatePlayerCompanionRequest(bytes []byte) (*UpdatePlayerCompanionReques
 	return req, nil
 }
 
+func NewUpdatePlayerCommentRequest(bytes []byte) (*UpdatePlayerCommentRequest, error) {
+	req := &UpdatePlayerCommentRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *UpdatePlayerPresenceRequest) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -35,5 +43,9 @@ func (x *UpdatePlayerPositionRequest) MarshallBinary() ([]byte, error) {
 }
 
 func (x *UpdatePlayerCompanionRequest) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *UpdatePlayerCommentRequest) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
