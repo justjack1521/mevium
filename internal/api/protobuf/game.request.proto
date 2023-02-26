@@ -101,8 +101,10 @@ message CardTransferRequest {
   repeated int32 Cards = 2;
 }
 
-message CompanionChangeRequest {
-  int32 index = 1;
+message UpdateProfileRequest {
+  string comment = 2;
+  int32 rental_card = 3;
+  int32 companion = 4;
 }
 
 message ClaimMailBoxItemRequest {

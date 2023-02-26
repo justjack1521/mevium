@@ -161,3 +161,11 @@ func NewUnfollowPlayerRequest(bytes []byte) (*UnfollowPlayerRequest, error) {
 	}
 	return req, nil
 }
+
+func NewUpdateProfileRequest(bytes []byte) (*UpdateProfileRequest, error) {
+	req := &UpdateProfileRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}

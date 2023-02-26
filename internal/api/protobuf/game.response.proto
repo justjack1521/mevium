@@ -118,7 +118,7 @@ message ConfirmDailyMissionResponse {
 
 }
 
-message CompanionChangeResponse {
+message UpdateProfileResponse {
   string companion_id = 1;
 }
 

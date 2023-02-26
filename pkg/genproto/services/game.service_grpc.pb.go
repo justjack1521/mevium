@@ -33,7 +33,7 @@ type MeviusGameServiceClient interface {
 	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
-	CompanionChange(ctx context.Context, in *protoc.CompanionChangeRequest, opts ...grpc.CallOption) (*protoc.CompanionChangeResponse, error)
+	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
 	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
@@ -139,9 +139,9 @@ func (c *meviusGameServiceClient) ConfirmDailyMission(ctx context.Context, in *p
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) CompanionChange(ctx context.Context, in *protoc.CompanionChangeRequest, opts ...grpc.CallOption) (*protoc.CompanionChangeResponse, error) {
-	out := new(protoc.CompanionChangeResponse)
-	err := c.cc.Invoke(ctx, "/service.MeviusGameService/CompanionChange", in, out, opts...)
+func (c *meviusGameServiceClient) UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error) {
+	out := new(protoc.UpdateProfileResponse)
+	err := c.cc.Invoke(ctx, "/service.MeviusGameService/UpdateProfile", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -207,7 +207,7 @@ type MeviusGameServiceServer interface {
 	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
-	CompanionChange(context.Context, *protoc.CompanionChangeRequest) (*protoc.CompanionChangeResponse, error)
+	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
 	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
@@ -249,8 +249,8 @@ func (UnimplementedMeviusGameServiceServer) ClaimMailboxItem(context.Context, *p
 func (UnimplementedMeviusGameServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) CompanionChange(context.Context, *protoc.CompanionChangeRequest) (*protoc.CompanionChangeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CompanionChange not implemented")
+func (UnimplementedMeviusGameServiceServer) UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeckEdit not implemented")
@@ -459,20 +459,20 @@ func _MeviusGameService_ConfirmDailyMission_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_CompanionChange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.CompanionChangeRequest)
+func _MeviusGameService_UpdateProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.UpdateProfileRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).CompanionChange(ctx, in)
+		return srv.(MeviusGameServiceServer).UpdateProfile(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/service.MeviusGameService/CompanionChange",
+		FullMethod: "/service.MeviusGameService/UpdateProfile",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).CompanionChange(ctx, req.(*protoc.CompanionChangeRequest))
+		return srv.(MeviusGameServiceServer).UpdateProfile(ctx, req.(*protoc.UpdateProfileRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -615,8 +615,8 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_ConfirmDailyMission_Handler,
 		},
 		{
-			MethodName: "CompanionChange",
-			Handler:    _MeviusGameService_CompanionChange_Handler,
+			MethodName: "UpdateProfile",
+			Handler:    _MeviusGameService_UpdateProfile_Handler,
 		},
 		{
 			MethodName: "DeckEdit",

@@ -92,3 +92,7 @@ func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
 func (x *UnfollowPlayerResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func (x *UpdateProfileResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
