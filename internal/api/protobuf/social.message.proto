@@ -5,7 +5,6 @@ package presence;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
 
 message UpdatePlayerPresenceRequest {
-  string player_id = 1;
   uint64 online = 2;
 }
 
@@ -14,7 +13,6 @@ message UpdatePlayerPresenceResponse {
 }
 
 message UpdatePlayerPositionRequest {
-  string player_id = 1;
   string region_map = 2;
   int32 region_map_node = 3;
 }
@@ -24,7 +22,6 @@ message UpdatePlayerPositionResponse {
 }
 
 message UpdatePlayerCompanionRequest {
-  string player_id = 1;
   string companion_id = 2;
 }
 
@@ -33,7 +30,6 @@ message UpdatePlayerCompanionResponse {
 }
 
 message UpdatePlayerCommentRequest {
-  string player_id = 1;
   string comment = 2;
 }
 

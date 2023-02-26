@@ -33,12 +33,12 @@ type MeviusGameServiceClient interface {
 	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
-	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
 	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
+	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -139,15 +139,6 @@ func (c *meviusGameServiceClient) ConfirmDailyMission(ctx context.Context, in *p
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error) {
-	out := new(protoc.UpdateProfileResponse)
-	err := c.cc.Invoke(ctx, "/service.MeviusGameService/UpdateProfile", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *meviusGameServiceClient) DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error) {
 	out := new(protoc.DeckEditAllResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusGameService/DeckEdit", in, out, opts...)
@@ -193,6 +184,15 @@ func (c *meviusGameServiceClient) Teleport(ctx context.Context, in *protoc.Telep
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error) {
+	out := new(protoc.UpdateProfileResponse)
+	err := c.cc.Invoke(ctx, "/service.MeviusGameService/UpdateProfile", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -207,12 +207,12 @@ type MeviusGameServiceServer interface {
 	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
-	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
 	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
+	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -249,9 +249,6 @@ func (UnimplementedMeviusGameServiceServer) ClaimMailboxItem(context.Context, *p
 func (UnimplementedMeviusGameServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
-}
 func (UnimplementedMeviusGameServiceServer) DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeckEdit not implemented")
 }
@@ -266,6 +263,9 @@ func (UnimplementedMeviusGameServiceServer) RestoreStamina(context.Context, *pro
 }
 func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Teleport not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -459,24 +459,6 @@ func _MeviusGameService_ConfirmDailyMission_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_UpdateProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.UpdateProfileRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).UpdateProfile(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/service.MeviusGameService/UpdateProfile",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).UpdateProfile(ctx, req.(*protoc.UpdateProfileRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _MeviusGameService_DeckEdit_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.DeckEditAllRequest)
 	if err := dec(in); err != nil {
@@ -567,6 +549,24 @@ func _MeviusGameService_Teleport_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_UpdateProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.UpdateProfileRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).UpdateProfile(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/service.MeviusGameService/UpdateProfile",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).UpdateProfile(ctx, req.(*protoc.UpdateProfileRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -615,10 +615,6 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_ConfirmDailyMission_Handler,
 		},
 		{
-			MethodName: "UpdateProfile",
-			Handler:    _MeviusGameService_UpdateProfile_Handler,
-		},
-		{
 			MethodName: "DeckEdit",
 			Handler:    _MeviusGameService_DeckEdit_Handler,
 		},
@@ -637,6 +633,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Teleport",
 			Handler:    _MeviusGameService_Teleport_Handler,
+		},
+		{
+			MethodName: "UpdateProfile",
+			Handler:    _MeviusGameService_UpdateProfile_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
