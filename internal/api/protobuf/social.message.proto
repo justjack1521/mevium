@@ -36,3 +36,11 @@ message UpdatePlayerCommentRequest {
 message UpdatePlayerCommentResponse {
 
 }
+
+message UpdateRentalCardRequest {
+  string rental_card = 1;
+}
+
+message UpdateRentalCardResponse {
+
+}
