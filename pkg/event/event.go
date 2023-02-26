@@ -1,7 +1,16 @@
 package event
 
+import (
+	uuid "github.com/satori/go.uuid"
+)
+
 type Event interface {
 	Name() string
+}
+
+type PlayerEvent interface {
+	Event
+	PlayerID() uuid.UUID
 }
 
 type Handler interface {
