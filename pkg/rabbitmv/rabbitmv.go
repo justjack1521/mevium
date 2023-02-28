@@ -26,8 +26,26 @@ func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	return client, nil
 }
 
+func ExtractPlayerID(d rabbitmq.Delivery) (uuid.UUID, error) {
+	id, ok := d.Headers["player_id"]
+	if ok == false {
+		return uuid.Nil, errExtractClientIDFromMessageHeader(errClientIDNotFound)
+	}
+	client, err := uuid.FromString(id.(string))
+	if err != nil {
+		return client, errExtractClientIDFromMessageHeader(err)
+	}
+	return client, nil
+}
+
 func ClientPublishingTable(client uuid.UUID) rabbitmq.Table {
 	return rabbitmq.Table{
 		"client_id": client.String(),
+	}
+}
+
+func PlayerPublishingTable(client uuid.UUID) rabbitmq.Table {
+	return rabbitmq.Table{
+		"player_id": client.String(),
 	}
 }
