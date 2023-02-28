@@ -5,5 +5,9 @@ package notification;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protom";
 
 message ClientConnected {
+  string remote_address = 1;
+}
 
+message ClientDisconnected {
+  string remote_address = 1;
 }
