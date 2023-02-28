@@ -8,6 +8,8 @@ protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_ou
 
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protop --go_opt=paths=source_relative social.message.proto
 
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protom --go_opt=paths=source_relative notification.message.proto
+
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protog --go_opt=paths=source_relative data.proto
 
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto/services --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false access.proto

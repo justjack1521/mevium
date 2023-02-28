@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protom";
+
+message ClientConnected {
+
+}
