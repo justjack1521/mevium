@@ -14,7 +14,7 @@ var (
 	}
 )
 
-func extractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
+func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	id, ok := d.Headers["client_id"]
 	if ok == false {
 		return uuid.Nil, errExtractClientIDFromMessageHeader(errClientIDNotFound)
@@ -26,7 +26,7 @@ func extractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	return client, nil
 }
 
-func clientPublishingTable(client uuid.UUID) rabbitmq.Table {
+func ClientPublishingTable(client uuid.UUID) rabbitmq.Table {
 	return rabbitmq.Table{
 		"client_id": client.String(),
 	}
