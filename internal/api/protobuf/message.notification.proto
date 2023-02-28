@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protom";
+
+import "data.proto";
+
+enum NotificationType {
+  BASE = 0;
+  SOCIAL_DATA = 100;
+}
+
+message Notification {
+  NotificationType type = 1;
+  bytes data = 2;
+}
+
+message SocialDataNotification {
+  repeated protog.ProtoPlayerInfo following_list = 1;
+  repeated protog.ProtoPlayerInfo follower_list = 2;
+}
