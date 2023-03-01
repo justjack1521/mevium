@@ -25,3 +25,15 @@ func NewClientDisconnectedMessage(bytes []byte) (*ClientDisconnected, error) {
 func (x *ClientDisconnected) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewClientHeartbeatMessage(bytes []byte) (*ClientHeartbeat, error) {
+	req := &ClientHeartbeat{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *ClientHeartbeat) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
