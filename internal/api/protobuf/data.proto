@@ -38,9 +38,6 @@ message ProtoGameData {
 
   ProtoLastBattleInformation last_battle_information = 20;
 
-  repeated ProtoPlayerInfo following_list = 21;
-  repeated ProtoPlayerInfo follower_list = 22;
-
   ProtoDailyMissionInfo daily_mission_info = 24;
 
   ProtoDailyLoginCampaignInfoSet daily_login_campaigns = 25;
