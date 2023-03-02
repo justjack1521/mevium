@@ -53,11 +53,13 @@ func PlayerPublishingTable(client uuid.UUID) rabbitmq.Table {
 
 func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler rabbitmq.Handler) rabbitmq.Handler {
 	return func(d rabbitmq.Delivery) rabbitmq.Action {
-		action := handler(d)
+
 		logger.WithFields(logrus.Fields{
 			"exchange":    d.Exchange,
 			"routing_key": d.RoutingKey,
 		}).Info("Message Received")
+
+		action := handler(d)
 
 		defer func() {
 			logger.WithFields(logrus.Fields{

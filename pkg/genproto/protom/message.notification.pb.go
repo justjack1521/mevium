@@ -24,8 +24,10 @@ const (
 type NotificationType int32
 
 const (
-	NotificationType_BASE        NotificationType = 0
-	NotificationType_SOCIAL_DATA NotificationType = 100
+	NotificationType_BASE            NotificationType = 0
+	NotificationType_SOCIAL_DATA     NotificationType = 100
+	NotificationType_PLAYER_PRESENCE NotificationType = 101
+	NotificationType_PLAYER_POSITION NotificationType = 102
 )
 
 // Enum value maps for NotificationType.
@@ -33,10 +35,14 @@ var (
 	NotificationType_name = map[int32]string{
 		0:   "BASE",
 		100: "SOCIAL_DATA",
+		101: "PLAYER_PRESENCE",
+		102: "PLAYER_POSITION",
 	}
 	NotificationType_value = map[string]int32{
-		"BASE":        0,
-		"SOCIAL_DATA": 100,
+		"BASE":            0,
+		"SOCIAL_DATA":     100,
+		"PLAYER_PRESENCE": 101,
+		"PLAYER_POSITION": 102,
 	}
 )
 
@@ -177,6 +183,124 @@ func (x *SocialDataNotification) GetFollowerList() []*protog.ProtoPlayerInfo {
 	return nil
 }
 
+type PlayerPresenceNotification struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId   string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	LastOnline int64  `protobuf:"varint,2,opt,name=last_online,json=lastOnline,proto3" json:"last_online,omitempty"`
+}
+
+func (x *PlayerPresenceNotification) Reset() {
+	*x = PlayerPresenceNotification{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_notification_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerPresenceNotification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerPresenceNotification) ProtoMessage() {}
+
+func (x *PlayerPresenceNotification) ProtoReflect() protoreflect.Message {
+	mi := &file_message_notification_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerPresenceNotification.ProtoReflect.Descriptor instead.
+func (*PlayerPresenceNotification) Descriptor() ([]byte, []int) {
+	return file_message_notification_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *PlayerPresenceNotification) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerPresenceNotification) GetLastOnline() int64 {
+	if x != nil {
+		return x.LastOnline
+	}
+	return 0
+}
+
+type PlayerPositionNotification struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId  string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	RegionId  string `protobuf:"bytes,2,opt,name=region_id,json=regionId,proto3" json:"region_id,omitempty"`
+	NodeIndex int32  `protobuf:"varint,3,opt,name=node_index,json=nodeIndex,proto3" json:"node_index,omitempty"`
+}
+
+func (x *PlayerPositionNotification) Reset() {
+	*x = PlayerPositionNotification{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_notification_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerPositionNotification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerPositionNotification) ProtoMessage() {}
+
+func (x *PlayerPositionNotification) ProtoReflect() protoreflect.Message {
+	mi := &file_message_notification_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerPositionNotification.ProtoReflect.Descriptor instead.
+func (*PlayerPositionNotification) Descriptor() ([]byte, []int) {
+	return file_message_notification_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *PlayerPositionNotification) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerPositionNotification) GetRegionId() string {
+	if x != nil {
+		return x.RegionId
+	}
+	return ""
+}
+
+func (x *PlayerPositionNotification) GetNodeIndex() int32 {
+	if x != nil {
+		return x.NodeIndex
+	}
+	return 0
+}
+
 var File_message_notification_proto protoreflect.FileDescriptor
 
 var file_message_notification_proto_rawDesc = []byte{
@@ -198,14 +322,30 @@ var file_message_notification_proto_rawDesc = []byte{
 	0x6c, 0x6f, 0x77, 0x65, 0x72, 0x5f, 0x6c, 0x69, 0x73, 0x74, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b,
 	0x32, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0c, 0x66, 0x6f, 0x6c, 0x6c, 0x6f,
-	0x77, 0x65, 0x72, 0x4c, 0x69, 0x73, 0x74, 0x2a, 0x2d, 0x0a, 0x10, 0x4e, 0x6f, 0x74, 0x69, 0x66,
-	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x08, 0x0a, 0x04, 0x42,
-	0x41, 0x53, 0x45, 0x10, 0x00, 0x12, 0x0f, 0x0a, 0x0b, 0x53, 0x4f, 0x43, 0x49, 0x41, 0x4c, 0x5f,
-	0x44, 0x41, 0x54, 0x41, 0x10, 0x64, 0x42, 0x34, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
-	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32,
-	0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x62, 0x06, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x33,
+	0x77, 0x65, 0x72, 0x4c, 0x69, 0x73, 0x74, 0x22, 0x5a, 0x0a, 0x1a, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x50, 0x72, 0x65, 0x73, 0x65, 0x6e, 0x63, 0x65, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f,
+	0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
+	0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x6c, 0x61, 0x73, 0x74, 0x5f, 0x6f, 0x6e, 0x6c, 0x69, 0x6e,
+	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0a, 0x6c, 0x61, 0x73, 0x74, 0x4f, 0x6e, 0x6c,
+	0x69, 0x6e, 0x65, 0x22, 0x75, 0x0a, 0x1a, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x50, 0x6f, 0x73,
+	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1b,
+	0x0a, 0x09, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x49, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x6e,
+	0x6f, 0x64, 0x65, 0x5f, 0x69, 0x6e, 0x64, 0x65, 0x78, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52,
+	0x09, 0x6e, 0x6f, 0x64, 0x65, 0x49, 0x6e, 0x64, 0x65, 0x78, 0x2a, 0x57, 0x0a, 0x10, 0x4e, 0x6f,
+	0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x08,
+	0x0a, 0x04, 0x42, 0x41, 0x53, 0x45, 0x10, 0x00, 0x12, 0x0f, 0x0a, 0x0b, 0x53, 0x4f, 0x43, 0x49,
+	0x41, 0x4c, 0x5f, 0x44, 0x41, 0x54, 0x41, 0x10, 0x64, 0x12, 0x13, 0x0a, 0x0f, 0x50, 0x4c, 0x41,
+	0x59, 0x45, 0x52, 0x5f, 0x50, 0x52, 0x45, 0x53, 0x45, 0x4e, 0x43, 0x45, 0x10, 0x65, 0x12, 0x13,
+	0x0a, 0x0f, 0x50, 0x4c, 0x41, 0x59, 0x45, 0x52, 0x5f, 0x50, 0x4f, 0x53, 0x49, 0x54, 0x49, 0x4f,
+	0x4e, 0x10, 0x66, 0x42, 0x34, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
+	0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d,
+	0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -221,17 +361,19 @@ func file_message_notification_proto_rawDescGZIP() []byte {
 }
 
 var file_message_notification_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_message_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_message_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_message_notification_proto_goTypes = []interface{}{
-	(NotificationType)(0),          // 0: notification.NotificationType
-	(*Notification)(nil),           // 1: notification.Notification
-	(*SocialDataNotification)(nil), // 2: notification.SocialDataNotification
-	(*protog.ProtoPlayerInfo)(nil), // 3: protog.ProtoPlayerInfo
+	(NotificationType)(0),              // 0: notification.NotificationType
+	(*Notification)(nil),               // 1: notification.Notification
+	(*SocialDataNotification)(nil),     // 2: notification.SocialDataNotification
+	(*PlayerPresenceNotification)(nil), // 3: notification.PlayerPresenceNotification
+	(*PlayerPositionNotification)(nil), // 4: notification.PlayerPositionNotification
+	(*protog.ProtoPlayerInfo)(nil),     // 5: protog.ProtoPlayerInfo
 }
 var file_message_notification_proto_depIdxs = []int32{
 	0, // 0: notification.Notification.type:type_name -> notification.NotificationType
-	3, // 1: notification.SocialDataNotification.following_list:type_name -> protog.ProtoPlayerInfo
-	3, // 2: notification.SocialDataNotification.follower_list:type_name -> protog.ProtoPlayerInfo
+	5, // 1: notification.SocialDataNotification.following_list:type_name -> protog.ProtoPlayerInfo
+	5, // 2: notification.SocialDataNotification.follower_list:type_name -> protog.ProtoPlayerInfo
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
@@ -269,6 +411,30 @@ func file_message_notification_proto_init() {
 				return nil
 			}
 		}
+		file_message_notification_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerPresenceNotification); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_message_notification_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerPositionNotification); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -276,7 +442,7 @@ func file_message_notification_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_message_notification_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   2,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
