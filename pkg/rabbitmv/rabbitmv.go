@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	uuid "github.com/satori/go.uuid"
+	"github.com/sirupsen/logrus"
 	"github.com/wagslane/go-rabbitmq"
 )
 
@@ -47,5 +48,25 @@ func ClientPublishingTable(client uuid.UUID) rabbitmq.Table {
 func PlayerPublishingTable(client uuid.UUID) rabbitmq.Table {
 	return rabbitmq.Table{
 		"player_id": client.String(),
+	}
+}
+
+func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler rabbitmq.Handler) rabbitmq.Handler {
+	return func(d rabbitmq.Delivery) rabbitmq.Action {
+		action := handler(d)
+		logger.WithFields(logrus.Fields{
+			"exchange":    d.Exchange,
+			"routing_key": d.RoutingKey,
+		}).Info("Message Received")
+
+		defer func() {
+			logger.WithFields(logrus.Fields{
+				"exchange":    d.Exchange,
+				"routing_key": d.RoutingKey,
+				"action":      action,
+			}).Info("Message Response")
+		}()
+
+		return action
 	}
 }

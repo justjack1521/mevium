@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/gin-gonic/gin v1.8.2
 	github.com/satori/go.uuid v1.2.0
+	github.com/sirupsen/logrus v1.9.0
 	github.com/wagslane/go-rabbitmq v0.12.1
 	google.golang.org/grpc v1.52.0
 	google.golang.org/protobuf v1.28.1
