@@ -26,7 +26,6 @@ func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	}
 	return client, nil
 }
-
 func ExtractPlayerID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	id, ok := d.Headers["player_id"]
 	if ok == false {
