@@ -2,10 +2,12 @@ package event
 
 import (
 	uuid "github.com/satori/go.uuid"
+	"github.com/sirupsen/logrus"
 )
 
 type Event interface {
 	Name() string
+	ToLogFields() logrus.Fields
 }
 
 type PlayerEvent interface {
