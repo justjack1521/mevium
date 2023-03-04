@@ -1,4 +1,4 @@
-package event
+package mevent
 
 import (
 	uuid "github.com/satori/go.uuid"
