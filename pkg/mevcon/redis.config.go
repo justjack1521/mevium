@@ -11,14 +11,14 @@ type RedisConfig struct {
 	Password string `required:"true"`
 }
 
-func NewRedisConnection(ctx context.Context, config RedisConfig) (*redis.Client, error) {
-	dsn := config.DSN
+func (r RedisConfig) NewRedisConnection(ctx context.Context) (*redis.Client, error) {
+	dsn := r.DSN
 	if len(dsn) == 0 {
 		return nil, errors.New("invalid redis dsn")
 	}
 	client := redis.NewClient(&redis.Options{
 		Addr:     dsn,
-		Password: config.Password,
+		Password: r.Password,
 	})
 	_, err := client.Ping(ctx).Result()
 	if err != nil {

@@ -16,8 +16,8 @@ func (c RabbitMQConfig) getSource() string {
 	return fmt.Sprintf("amqp://%s:%s@%s:%d", c.Username, c.Password, c.Host, c.Port)
 }
 
-func NewRabbitMQConnection(config RabbitMQConfig) (*rabbitmq.Conn, error) {
-	conn, err := rabbitmq.NewConn(config.getSource(), rabbitmq.WithConnectionOptionsLogging)
+func (c RabbitMQConfig) NewRabbitMQConnection() (*rabbitmq.Conn, error) {
+	conn, err := rabbitmq.NewConn(c.getSource(), rabbitmq.WithConnectionOptionsLogging)
 	if err != nil {
 		return nil, err
 	}
