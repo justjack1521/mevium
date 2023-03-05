@@ -37,6 +37,7 @@ const (
 	ClientNotification RoutingKey = "client.notification"
 	ClientHeartbeat    RoutingKey = "client.heartbeat"
 	ClientConnected    RoutingKey = "client.connected"
+	ClientDisconnected RoutingKey = "client.disconnected"
 	PlayerComment      RoutingKey = "player.comment"
 	PlayerCompanion    RoutingKey = "player.companion"
 	PlayerPosition     RoutingKey = "player.position"
@@ -107,7 +108,6 @@ func PlayerPublishingTable(client uuid.UUID) rabbitmq.Table {
 
 func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler rabbitmq.Handler) rabbitmq.Handler {
 	return func(d rabbitmq.Delivery) rabbitmq.Action {
-
 		logger.WithFields(logrus.Fields{
 			"exchange":    d.Exchange,
 			"routing_key": d.RoutingKey,
