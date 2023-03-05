@@ -15,6 +15,61 @@ var (
 	}
 )
 
+type ExchangeKind string
+
+const (
+	Direct  ExchangeKind = "direct"
+	Fanout  ExchangeKind = "fanout"
+	Headers ExchangeKind = "headers"
+	Topic   ExchangeKind = "topic"
+)
+
+type Exchange string
+
+const (
+	Client Exchange = "client"
+	Social Exchange = "social"
+)
+
+type RoutingKey string
+
+const (
+	ClientNotification RoutingKey = "client.notification"
+	ClientHeartbeat    RoutingKey = "client.heartbeat"
+	ClientConnected    RoutingKey = "client.connected"
+	PlayerComment      RoutingKey = "player.comment"
+	PlayerCompanion    RoutingKey = "player.companion"
+	PlayerPosition     RoutingKey = "player.position"
+	PlayerPresence     RoutingKey = "player.presence"
+)
+
+type Queue string
+
+const (
+	ClientUpdate    Queue = "client.update"
+	CommentUpdate   Queue = "comment.update"
+	CompanionUpdate Queue = "companion.update"
+	PositionUpdate  Queue = "position.update"
+	PresenceUpdate  Queue = "presence.update"
+	SocialUpdate    Queue = "social.update"
+)
+
+func NewConsumer(conn *rabbitmq.Conn, handler rabbitmq.Handler, queue Queue, key RoutingKey, exchange Exchange, options ...func(*rabbitmq.ConsumerOptions)) (*rabbitmq.Consumer, error) {
+	options = append(options, rabbitmq.WithConsumerOptionsRoutingKey(string(key)), rabbitmq.WithConsumerOptionsExchangeName(string(exchange)))
+	return rabbitmq.NewConsumer(conn, handler, string(queue), options...)
+}
+
+func NewPublisher(conn *rabbitmq.Conn, exchange Exchange, kind ExchangeKind, options ...func(*rabbitmq.PublisherOptions)) (*rabbitmq.Publisher, error) {
+	options = append(
+		options,
+		rabbitmq.WithPublisherOptionsExchangeName(string(exchange)),
+		rabbitmq.WithPublisherOptionsExchangeKind(string(kind)),
+		rabbitmq.WithPublisherOptionsExchangeDurable,
+		rabbitmq.WithPublisherOptionsExchangeDeclare,
+	)
+	return rabbitmq.NewPublisher(conn, options...)
+}
+
 func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	id, ok := d.Headers["client_id"]
 	if ok == false {
