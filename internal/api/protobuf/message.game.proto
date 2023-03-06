@@ -9,7 +9,9 @@ message BattleComplete {
   string player_name = 2;
   int32 player_level = 3;
   uint64 score = 4;
-  BattleLoadout primary_loadout = 5;
+  string region_id = 5;
+  int32 node_index = 6;
+  BattleLoadout primary_loadout = 7;
 }
 
 message BattleLoadout {
