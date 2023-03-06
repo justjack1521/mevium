@@ -106,23 +106,40 @@ func PlayerPublishingTable(client uuid.UUID) rabbitmq.Table {
 	}
 }
 
-func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler rabbitmq.Handler) rabbitmq.Handler {
+type ConsumerHandler func(d rabbitmq.Delivery) (rabbitmq.Action, error)
+
+func RabbitConsumerMiddleware(handler ConsumerHandler) rabbitmq.Handler {
 	return func(d rabbitmq.Delivery) rabbitmq.Action {
+		result, _ := handler(d)
+		return result
+	}
+}
+
+func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandler) ConsumerHandler {
+	return func(d rabbitmq.Delivery) (rabbitmq.Action, error) {
 		logger.WithFields(logrus.Fields{
 			"exchange":    d.Exchange,
 			"routing_key": d.RoutingKey,
-		}).Info("Message Received")
+		}).Info("Message Received for Consumption")
 
-		action := handler(d)
+		action, err := handler(d)
 
 		defer func() {
-			logger.WithFields(logrus.Fields{
-				"exchange":    d.Exchange,
-				"routing_key": d.RoutingKey,
-				"action":      action,
-			}).Info("Message Response")
+			if err != nil {
+				logger.WithFields(logrus.Fields{
+					"exchange":    d.Exchange,
+					"routing_key": d.RoutingKey,
+					"action":      action,
+				}).WithError(err).Error("Failed to Consume Message")
+			} else {
+				logger.WithFields(logrus.Fields{
+					"exchange":    d.Exchange,
+					"routing_key": d.RoutingKey,
+					"action":      action,
+				}).Info("Message Consumed")
+			}
 		}()
 
-		return action
+		return action, err
 	}
 }
