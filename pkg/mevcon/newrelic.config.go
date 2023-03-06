@@ -11,6 +11,7 @@ func (c NewRelicConfig) NewApplication() (*newrelic.Application, error) {
 	return newrelic.NewApplication(
 		newrelic.ConfigAppName(c.AppName),
 		newrelic.ConfigLicense(c.LicenseKey),
-		newrelic.ConfigAppLogForwardingEnabled(true),
+		newrelic.ConfigAppLogDecoratingEnabled(true),
+		newrelic.ConfigAppLogForwardingEnabled(false),
 	)
 }
