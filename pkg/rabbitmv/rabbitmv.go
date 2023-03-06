@@ -27,8 +27,9 @@ const (
 type Exchange string
 
 const (
-	Client Exchange = "client"
-	Social Exchange = "social"
+	Client  Exchange = "client"
+	Social  Exchange = "social"
+	Ranking Exchange = "ranking"
 )
 
 type RoutingKey string
@@ -42,6 +43,7 @@ const (
 	PlayerCompanion    RoutingKey = "player.companion"
 	PlayerPosition     RoutingKey = "player.position"
 	PlayerPresence     RoutingKey = "player.presence"
+	BattleComplete     RoutingKey = "battle.complete"
 )
 
 type Queue string
@@ -53,6 +55,7 @@ const (
 	PositionUpdate  Queue = "position.update"
 	PresenceUpdate  Queue = "presence.update"
 	SocialUpdate    Queue = "social.update"
+	RankingUpdate   Queue = "ranking.update"
 )
 
 func NewConsumer(conn *rabbitmq.Conn, handler rabbitmq.Handler, queue Queue, key RoutingKey, exchange Exchange, options ...func(*rabbitmq.ConsumerOptions)) (*rabbitmq.Consumer, error) {
@@ -139,7 +142,6 @@ func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandle
 				}).Info("Message Consumed")
 			}
 		}()
-
 		return action, err
 	}
 }
