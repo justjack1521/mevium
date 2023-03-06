@@ -74,6 +74,15 @@ func NewPublisher(conn *rabbitmq.Conn, exchange Exchange, kind ExchangeKind, opt
 	return rabbitmq.NewPublisher(conn, options...)
 }
 
+func Publish(publisher *rabbitmq.Publisher, bytes []byte, client uuid.UUID, key RoutingKey, exchange Exchange) error {
+	return publisher.Publish(
+		bytes,
+		[]string{string(key)},
+		rabbitmq.WithPublishOptionsExchange(string(exchange)),
+		rabbitmq.WithPublishOptionsHeaders(ClientPublishingTable(client)),
+	)
+}
+
 func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	id, ok := d.Headers["client_id"]
 	if ok == false {
