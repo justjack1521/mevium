@@ -17,7 +17,8 @@ type NewRelic struct {
 }
 
 func NewRelicApplication(license string, relic *newrelic.Application) *NewRelic {
-	txn := relic.StartTransaction("log.data")
+	txn := relic.StartTransaction("application.start")
+	txn.End()
 	return &NewRelic{
 		Application: relic,
 		LicenseKey:  license,
