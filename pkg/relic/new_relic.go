@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/justjack1521/mevium/pkg/mevcon"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/sirupsen/logrus"
 	"net/http"
@@ -16,14 +17,16 @@ type NewRelic struct {
 	Application *newrelic.Application
 }
 
-func NewRelicApplication(license string, relic *newrelic.Application) *NewRelic {
-	txn := relic.StartTransaction("application.start")
-	txn.End()
+func NewRelicApplication(config mevcon.NewRelicConfig) *NewRelic {
+	rel, err := config.NewApplication()
+	if err != nil {
+		panic(err)
+	}
 	return &NewRelic{
-		Application: relic,
-		LicenseKey:  license,
-		EntityGUID:  txn.GetLinkingMetadata().EntityGUID,
-		EntityName:  txn.GetLinkingMetadata().EntityName,
+		LicenseKey:  config.LicenseKey,
+		EntityGUID:  config.AppGUID,
+		EntityName:  config.AppName,
+		Application: rel,
 	}
 }
 
