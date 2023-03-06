@@ -17,12 +17,12 @@ type NewRelic struct {
 }
 
 func NewRelicApplication(license string, relic *newrelic.Application) *NewRelic {
-	meta := relic.StartTransaction("log.data").GetLinkingMetadata()
+	txn := relic.StartTransaction("log.data")
 	return &NewRelic{
 		Application: relic,
 		LicenseKey:  license,
-		EntityGUID:  meta.EntityGUID,
-		EntityName:  meta.EntityName,
+		EntityGUID:  txn.GetLinkingMetadata().EntityGUID,
+		EntityName:  txn.GetLinkingMetadata().EntityName,
 	}
 }
 
