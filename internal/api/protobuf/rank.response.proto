@@ -7,15 +7,8 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
 import "data.proto";
 
 message SubmitScoreResponse {
-  PostBattleRankingEventResponse weekly_rank_update = 1;
-  PostBattleRankingEventResponse event_rank_update = 2;
-}
-
-message PostBattleRankingEventResponse {
-  string event_id = 1;
-  string event_code = 2;
-  bool high_score = 3;
-  protog.ProtoPlayerRankSetDetails player_ranking = 4;
-  repeated protog.ProtoPlayerRankSetDetails upper_rankings = 5;
-  repeated protog.ProtoPlayerRankSetDetails lower_rankings = 6;
+  protog.ProtoRankingInfo weekly_rank_update = 1;
+  protog.ProtoRankingInfo event_rank_update = 2;
+  bool weekly_high_score = 3;
+  bool event_high_score = 4;
 }
