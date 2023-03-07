@@ -8,39 +8,19 @@ message UpdatePlayerPresenceRequest {
   uint64 online = 2;
 }
 
-message UpdatePlayerPresenceResponse {
-
-}
-
 message UpdatePlayerPositionRequest {
   string region_map = 2;
   int32 region_map_node = 3;
-}
-
-message UpdatePlayerPositionResponse {
-
 }
 
 message UpdatePlayerCompanionRequest {
   string companion_id = 2;
 }
 
-message UpdatePlayerCompanionResponse {
-
-}
-
 message UpdatePlayerCommentRequest {
   string comment = 2;
 }
 
-message UpdatePlayerCommentResponse {
-
-}
-
 message UpdateRentalCardRequest {
   string rental_card = 1;
-}
-
-message UpdateRentalCardResponse {
-
 }

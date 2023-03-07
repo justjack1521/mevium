@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package rank;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
+
+import "data.proto";
+
+message SubmitPlayerScoreRequest {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  uint64 score = 4;
+  string region_id = 5;
+  int32 node_index = 6;
+  protog.ProtoPlayerLoadout loadout = 7;
+}
+
+message SubmitPlayerScoreResponse {
+  repeated PostBattleRankingEventResponse ranking_updates = 2;
+}
+
+message PostBattleRankingEventResponse {
+  string event_id = 1;
+  string event_code = 2;
+  bool high_score = 3;
+  protog.ProtoPlayerRankSetDetails player_ranking = 4;
+  repeated protog.ProtoPlayerRankSetDetails upper_rankings = 5;
+  repeated protog.ProtoPlayerRankSetDetails lower_rankings = 6;
+}

@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	uuid "github.com/satori/go.uuid"
-	"github.com/sirupsen/logrus"
 	"github.com/wagslane/go-rabbitmq"
 )
 
@@ -58,31 +57,6 @@ const (
 	RankingUpdate   Queue = "ranking.update"
 )
 
-func NewConsumer(conn *rabbitmq.Conn, handler rabbitmq.Handler, queue Queue, key RoutingKey, exchange Exchange, options ...func(*rabbitmq.ConsumerOptions)) (*rabbitmq.Consumer, error) {
-	options = append(options, rabbitmq.WithConsumerOptionsRoutingKey(string(key)), rabbitmq.WithConsumerOptionsExchangeName(string(exchange)))
-	return rabbitmq.NewConsumer(conn, handler, string(queue), options...)
-}
-
-func NewPublisher(conn *rabbitmq.Conn, exchange Exchange, kind ExchangeKind, options ...func(*rabbitmq.PublisherOptions)) (*rabbitmq.Publisher, error) {
-	options = append(
-		options,
-		rabbitmq.WithPublisherOptionsExchangeName(string(exchange)),
-		rabbitmq.WithPublisherOptionsExchangeKind(string(kind)),
-		rabbitmq.WithPublisherOptionsExchangeDurable,
-		rabbitmq.WithPublisherOptionsExchangeDeclare,
-	)
-	return rabbitmq.NewPublisher(conn, options...)
-}
-
-func Publish(publisher *rabbitmq.Publisher, bytes []byte, client uuid.UUID, key RoutingKey, exchange Exchange) error {
-	return publisher.Publish(
-		bytes,
-		[]string{string(key)},
-		rabbitmq.WithPublishOptionsExchange(string(exchange)),
-		rabbitmq.WithPublishOptionsHeaders(ClientPublishingTable(client)),
-	)
-}
-
 func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {
 	id, ok := d.Headers["client_id"]
 	if ok == false {
@@ -115,42 +89,5 @@ func ClientPublishingTable(client uuid.UUID) rabbitmq.Table {
 func PlayerPublishingTable(client uuid.UUID) rabbitmq.Table {
 	return rabbitmq.Table{
 		"player_id": client.String(),
-	}
-}
-
-type ConsumerHandler func(d rabbitmq.Delivery) (rabbitmq.Action, error)
-
-func RabbitConsumerMiddleware(handler ConsumerHandler) rabbitmq.Handler {
-	return func(d rabbitmq.Delivery) rabbitmq.Action {
-		result, _ := handler(d)
-		return result
-	}
-}
-
-func RabbitConsumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandler) ConsumerHandler {
-	return func(d rabbitmq.Delivery) (rabbitmq.Action, error) {
-		logger.WithFields(logrus.Fields{
-			"exchange":    d.Exchange,
-			"routing_key": d.RoutingKey,
-		}).Info("Message Received for Consumption")
-
-		action, err := handler(d)
-
-		defer func() {
-			if err != nil {
-				logger.WithFields(logrus.Fields{
-					"exchange":    d.Exchange,
-					"routing_key": d.RoutingKey,
-					"action":      action,
-				}).WithError(err).Error("Failed to Consume Message")
-			} else {
-				logger.WithFields(logrus.Fields{
-					"exchange":    d.Exchange,
-					"routing_key": d.RoutingKey,
-					"action":      action,
-				}).Info("Message Consumed")
-			}
-		}()
-		return action, err
 	}
 }

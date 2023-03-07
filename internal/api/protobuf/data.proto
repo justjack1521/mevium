@@ -249,10 +249,18 @@ message ProtoPlayerInfo {
   ProtoPlayerCardInfo rental_card = 9;
 }
 
+message ProtoPlayerLoadout {
+  string job_card_id = 1;
+  int32 sub_job_index = 2;
+  string weapon_id = 3;
+  int32 sub_weapon_unlock = 4;
+  repeated ProtoPlayerCardInfo ability_cards = 5;
+}
+
 message ProtoPlayerCardInfo {
   string ability_card_id = 1;
-  int32 ability_level = 3;
   int32 ability_card_level = 2;
+  int32 ability_level = 3;
   int32 extra_skill_unlock = 4;
   int32 over_boost_level = 5;
   int32 slot_index = 6;
@@ -311,11 +319,7 @@ message ProtoPlayerRankSetDetails {
   int32 player_level = 3;
   double score = 4;
   int64 rank = 5;
-  string job_card_id = 6;
-  int32 sub_job_index = 7;
-  string weapon_id = 8;
-  int32 sub_weapon_unlock = 9;
-  repeated ProtoPlayerCardInfo ability_cards = 22;
+  ProtoPlayerLoadout primary_loadout = 6;
 }
 
 message ProtoRankingEventClaim {

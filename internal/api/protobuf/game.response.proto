@@ -91,6 +91,10 @@ message ClaimEventRankingResponse {
   repeated protog.ProtoMailBoxItem NewMailboxItems = 1;
 }
 
+message ConfirmDailyMissionResponse {
+
+}
+
 message DeckEditAllResponse {
   protog.ProtoPlayerDeckCollection Collection = 1;
   bool MultiPlayer = 2;
@@ -112,10 +116,6 @@ message MailBoxItemClaim {
     protog.ProtoItemInstance item_instance = 2;
     protog.ProtoAbilityCardInstance ability_card_instance = 3;
   }
-}
-
-message ConfirmDailyMissionResponse {
-
 }
 
 message UpdateProfileResponse {

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package presence;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
+
+message UpdatePlayerPresenceResponse {
+
+}
+
+message UpdatePlayerPositionResponse {
+
+}
+
+message UpdatePlayerCompanionResponse {
+
+}
+
+message UpdatePlayerCommentResponse {
+
+}
+
+message UpdateRentalCardResponse {
+
+}

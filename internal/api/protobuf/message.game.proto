@@ -18,7 +18,8 @@ message BattleLoadout {
   string job_card_id = 1;
   int32 sub_job_index = 2;
   string weapon_id = 3;
-  repeated BattleLoadoutCard ability_cards = 4;
+  int32 sub_weapon_unlock = 4;
+  repeated BattleLoadoutCard ability_cards = 5;
 }
 
 message BattleLoadoutCard {

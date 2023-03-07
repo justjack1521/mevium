@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+package rank;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
