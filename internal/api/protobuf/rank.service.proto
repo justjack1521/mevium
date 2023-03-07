@@ -8,5 +8,5 @@ import "rank.request.proto";
 import "rank.response.proto";
 
 service MeviusRankService {
-  rpc SubmitScore(rank.SubmitPlayerScoreRequest) returns (rank.SubmitPlayerScoreResponse) {}
+  rpc SubmitScore(rank.SubmitScoreRequest) returns (rank.SubmitScoreResponse) {}
 }

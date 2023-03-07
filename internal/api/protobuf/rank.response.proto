@@ -6,18 +6,9 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
 
 import "data.proto";
 
-message SubmitPlayerScoreRequest {
-  string player_id = 1;
-  string player_name = 2;
-  int32 player_level = 3;
-  uint64 score = 4;
-  string region_id = 5;
-  int32 node_index = 6;
-  protog.ProtoPlayerLoadout loadout = 7;
-}
-
-message SubmitPlayerScoreResponse {
-  repeated PostBattleRankingEventResponse ranking_updates = 2;
+message SubmitScoreResponse {
+  PostBattleRankingEventResponse weekly_rank_update = 1;
+  PostBattleRankingEventResponse event_rank_update = 2;
 }
 
 message PostBattleRankingEventResponse {

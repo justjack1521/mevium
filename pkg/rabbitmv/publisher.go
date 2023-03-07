@@ -12,6 +12,10 @@ type StandardPublisher struct {
 	actual   *rabbitmq.Publisher
 }
 
+func (s *StandardPublisher) Close() {
+	s.actual.Close()
+}
+
 func (s *StandardPublisher) Publish(bytes []byte, client uuid.UUID, key RoutingKey, options ...func(*rabbitmq.PublishOptions)) error {
 	options = append(options, rabbitmq.WithPublishOptionsExchange(string(s.exchange)), rabbitmq.WithPublishOptionsHeaders(ClientPublishingTable(client)))
 	return s.actual.Publish(

@@ -23,7 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusRankServiceClient interface {
-	SubmitScore(ctx context.Context, in *protor.SubmitPlayerScoreRequest, opts ...grpc.CallOption) (*protor.SubmitPlayerScoreResponse, error)
+	SubmitScore(ctx context.Context, in *protor.SubmitScoreRequest, opts ...grpc.CallOption) (*protor.SubmitScoreResponse, error)
 }
 
 type meviusRankServiceClient struct {
@@ -34,8 +34,8 @@ func NewMeviusRankServiceClient(cc grpc.ClientConnInterface) MeviusRankServiceCl
 	return &meviusRankServiceClient{cc}
 }
 
-func (c *meviusRankServiceClient) SubmitScore(ctx context.Context, in *protor.SubmitPlayerScoreRequest, opts ...grpc.CallOption) (*protor.SubmitPlayerScoreResponse, error) {
-	out := new(protor.SubmitPlayerScoreResponse)
+func (c *meviusRankServiceClient) SubmitScore(ctx context.Context, in *protor.SubmitScoreRequest, opts ...grpc.CallOption) (*protor.SubmitScoreResponse, error) {
+	out := new(protor.SubmitScoreResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusRankService/SubmitScore", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -47,14 +47,14 @@ func (c *meviusRankServiceClient) SubmitScore(ctx context.Context, in *protor.Su
 // All implementations should embed UnimplementedMeviusRankServiceServer
 // for forward compatibility
 type MeviusRankServiceServer interface {
-	SubmitScore(context.Context, *protor.SubmitPlayerScoreRequest) (*protor.SubmitPlayerScoreResponse, error)
+	SubmitScore(context.Context, *protor.SubmitScoreRequest) (*protor.SubmitScoreResponse, error)
 }
 
 // UnimplementedMeviusRankServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedMeviusRankServiceServer struct {
 }
 
-func (UnimplementedMeviusRankServiceServer) SubmitScore(context.Context, *protor.SubmitPlayerScoreRequest) (*protor.SubmitPlayerScoreResponse, error) {
+func (UnimplementedMeviusRankServiceServer) SubmitScore(context.Context, *protor.SubmitScoreRequest) (*protor.SubmitScoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SubmitScore not implemented")
 }
 
@@ -70,7 +70,7 @@ func RegisterMeviusRankServiceServer(s grpc.ServiceRegistrar, srv MeviusRankServ
 }
 
 func _MeviusRankService_SubmitScore_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protor.SubmitPlayerScoreRequest)
+	in := new(protor.SubmitScoreRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -82,7 +82,7 @@ func _MeviusRankService_SubmitScore_Handler(srv interface{}, ctx context.Context
 		FullMethod: "/service.MeviusRankService/SubmitScore",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusRankServiceServer).SubmitScore(ctx, req.(*protor.SubmitPlayerScoreRequest))
+		return srv.(MeviusRankServiceServer).SubmitScore(ctx, req.(*protor.SubmitScoreRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
