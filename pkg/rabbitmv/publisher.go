@@ -9,10 +9,15 @@ import (
 type StandardPublisher struct {
 	exchange Exchange
 	kind     ExchangeKind
+	closed   bool
 	actual   *rabbitmq.Publisher
 }
 
 func (s *StandardPublisher) Close() {
+	if s.closed == true {
+		return
+	}
+	s.closed = true
 	s.actual.Close()
 }
 

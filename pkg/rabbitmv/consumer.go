@@ -12,9 +12,14 @@ type StandardConsumer struct {
 	Queue      Queue
 	RoutingKey RoutingKey
 	Exchange   Exchange
+	closed     bool
 }
 
 func (s *StandardConsumer) Close() {
+	if s.closed == true {
+		return
+	}
+	s.closed = true
 	s.actual.Close()
 }
 
