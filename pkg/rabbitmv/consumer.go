@@ -8,12 +8,23 @@ import (
 type ConsumerHandler func(d rabbitmq.Delivery) (rabbitmq.Action, error)
 
 type StandardConsumer struct {
-	actual *rabbitmq.Consumer
+	actual     *rabbitmq.Consumer
+	Queue      Queue
+	RoutingKey RoutingKey
+	Exchange   Exchange
+}
+
+func (s *StandardConsumer) Close() {
+	s.actual.Close()
 }
 
 func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, exchange Exchange, handler ConsumerHandler) *StandardConsumer {
 
-	consumer := &StandardConsumer{}
+	consumer := &StandardConsumer{
+		Queue:      queue,
+		RoutingKey: key,
+		Exchange:   exchange,
+	}
 
 	var options = []func(*rabbitmq.ConsumerOptions){
 		rabbitmq.WithConsumerOptionsRoutingKey(string(key)),
