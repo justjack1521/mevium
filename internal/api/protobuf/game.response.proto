@@ -32,6 +32,8 @@ message BattleCompleteResponse {
   repeated protog.ProtoRegionEventData PendingEvents = 2;
   string region_map_id = 3;
   int32 region_node_index = 4;
+  protog.ProtoRankingInfo weekly_rank_update = 5;
+  protog.ProtoRankingInfo event_rank_update = 6;
 }
 
 message BattleReviveResponse {
