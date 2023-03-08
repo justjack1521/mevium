@@ -11,4 +11,6 @@ message SubmitScoreResponse {
   protog.ProtoRankingInfo event_rank_update = 2;
   bool weekly_high_score = 3;
   bool event_high_score = 4;
+  double previous_weekly_score = 5;
+  double previous_event_score = 6;
 }
