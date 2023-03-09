@@ -13,4 +13,6 @@ message SubmitScoreResponse {
   bool event_high_score = 4;
   double previous_weekly_score = 5;
   double previous_event_score = 6;
+  int64 previous_weekly_rank = 7;
+  int64 previously_event_rank = 8;
 }
