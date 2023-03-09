@@ -39,7 +39,8 @@ message BattleCompleteResponse {
 message ProtoRankingUpdate {
   protog.ProtoRankingInfo ranking_info = 1;
   double previous_score = 2;
-  bool new_high_score = 3;
+  int64 previous_rank = 3;
+  bool new_high_score = 4;
 }
 
 message BattleReviveResponse {
