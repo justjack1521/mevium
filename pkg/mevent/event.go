@@ -1,6 +1,7 @@
 package mevent
 
 import (
+	"context"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	uuid "github.com/satori/go.uuid"
 	"github.com/sirupsen/logrus"
@@ -19,6 +20,11 @@ type ClientEvent interface {
 type PlayerEvent interface {
 	Event
 	PlayerID() uuid.UUID
+}
+
+type ContextEvent interface {
+	Event
+	Context() context.Context
 }
 
 type NewRelicEvent interface {

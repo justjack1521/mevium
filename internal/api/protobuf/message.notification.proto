@@ -11,7 +11,7 @@ enum NotificationType {
   SOCIAL_DATA = 100;
   PLAYER_PRESENCE = 101;
   PLAYER_POSITION = 102;
-  BATTLE_RANK = 103;
+  PLAYER_LOADOUT = 103;
 }
 
 message Notification {
