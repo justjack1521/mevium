@@ -29,6 +29,7 @@ const (
 	Client  Exchange = "client"
 	Social  Exchange = "social"
 	Ranking Exchange = "ranking"
+	Game    Exchange = "game"
 )
 
 type RoutingKey string
@@ -55,6 +56,7 @@ const (
 	PresenceUpdate  Queue = "presence.update"
 	SocialUpdate    Queue = "social.update"
 	RankingUpdate   Queue = "ranking.update"
+	LoadoutUpdate   Queue = "loadout.update"
 )
 
 func ExtractClientID(d rabbitmq.Delivery) (uuid.UUID, error) {

@@ -68,7 +68,7 @@ func NewSocialPublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	return publisher
 }
 
-func NewRankingPublisher(conn *rabbitmq.Conn) *StandardPublisher {
+func NewGamePublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	publisher := &StandardPublisher{
 		exchange: Ranking,
 		kind:     Topic,
