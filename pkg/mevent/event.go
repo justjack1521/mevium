@@ -24,7 +24,7 @@ type PlayerEvent interface {
 
 type ContextEvent interface {
 	Event
-	Context() *context.Context
+	Context() context.Context
 }
 
 type NewRelicEvent interface {
