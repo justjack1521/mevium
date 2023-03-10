@@ -29,6 +29,14 @@ message PlayerPresenceNotification {
   int64 last_online = 2;
 }
 
+message PlayerLoadoutNotification {
+  string player_id = 1;
+  string job_card_id = 2;
+  int32 sub_job_index = 3;
+  string weapon_id = 4;
+  int32 sub_weapon_unlock = 5;
+}
+
 message PlayerPositionNotification {
   string player_id = 1;
   string region_id = 2;
