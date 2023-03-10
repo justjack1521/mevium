@@ -253,7 +253,6 @@ message ProtoPlayerInfo {
   string player_name = 2;
   string player_comment = 3;
   int32 player_level = 4;
-  int64 last_online = 5;
   string job_card_id = 6;
   int32 sub_job_index = 7;
   string companion_id = 8;

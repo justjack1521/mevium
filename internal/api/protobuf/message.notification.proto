@@ -20,8 +20,8 @@ message Notification {
 }
 
 message SocialDataNotification {
-  repeated protog.ProtoPlayerInfo following_list = 1;
-  repeated protog.ProtoPlayerInfo follower_list = 2;
+  repeated ProtoPlayerSocialInfo following_list = 1;
+  repeated ProtoPlayerSocialInfo follower_list = 2;
 }
 
 message PlayerPresenceNotification {
@@ -33,4 +33,11 @@ message PlayerPositionNotification {
   string player_id = 1;
   string region_id = 2;
   int32 node_index = 3;
+}
+
+message ProtoPlayerSocialInfo {
+  protog.ProtoPlayerInfo player_info = 1;
+  int64 last_online = 2;
+  string region_map_id = 3;
+  int32 region_node_index = 4;
 }
