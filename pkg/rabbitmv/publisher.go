@@ -68,9 +68,22 @@ func NewSocialPublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	return publisher
 }
 
-func NewGamePublisher(conn *rabbitmq.Conn) *StandardPublisher {
+func NewRankingPublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	publisher := &StandardPublisher{
 		exchange: Ranking,
+		kind:     Topic,
+	}
+	actual, err := newPublisher(conn, publisher)
+	if err != nil {
+		panic(err)
+	}
+	publisher.actual = actual
+	return publisher
+}
+
+func NewGamePublisher(conn *rabbitmq.Conn) *StandardPublisher {
+	publisher := &StandardPublisher{
+		exchange: Game,
 		kind:     Topic,
 	}
 	actual, err := newPublisher(conn, publisher)
