@@ -10,6 +10,11 @@ type Event interface {
 	ToLogFields() logrus.Fields
 }
 
+type ClientEvent interface {
+	Event
+	ClientID() uuid.UUID
+}
+
 type PlayerEvent interface {
 	Event
 	PlayerID() uuid.UUID
