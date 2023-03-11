@@ -33,15 +33,7 @@ func (s *StandardPublisher) Publish(bytes []byte, client uuid.UUID, key RoutingK
 
 func (s *StandardPublisher) PublishWithContext(ctx context.Context, bytes []byte, client uuid.UUID, key RoutingKey) error {
 	txn := newrelic.FromContext(ctx)
-	segment := newrelic.MessageProducerSegment{
-		StartTime:            txn.StartSegmentNow(),
-		Library:              "RabbitMQ",
-		DestinationType:      newrelic.MessageExchange,
-		DestinationName:      string(s.exchange),
-		DestinationTemporary: false,
-	}
-	defer segment.End()
-	return s.PublishWithContext(ctx, bytes, client, key)
+	return s.PublishWithSegment(txn, bytes, client, key)
 }
 
 func (s *StandardPublisher) PublishWithSegment(txn *newrelic.Transaction, bytes []byte, client uuid.UUID, key RoutingKey) error {
