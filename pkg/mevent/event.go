@@ -38,10 +38,15 @@ type Handler interface {
 
 type Publisher struct {
 	handlers map[string][]Handler
+	logger   *logrus.Logger
 }
 
-func NewPublisher() *Publisher {
-	return &Publisher{handlers: map[string][]Handler{}}
+func NewPublisher(options ...EventPublisherConfiguration) *Publisher {
+	publisher := &Publisher{handlers: map[string][]Handler{}}
+	for _, opt := range options {
+		opt(publisher)
+	}
+	return publisher
 }
 
 func (e *Publisher) Subscribe(handler Handler, events ...Event) {
@@ -53,7 +58,18 @@ func (e *Publisher) Subscribe(handler Handler, events ...Event) {
 }
 
 func (e *Publisher) Notify(event Event) {
+	if e.logger != nil {
+		e.logger.WithFields(event.ToLogFields()).Info("Event Published")
+	}
 	for _, handler := range e.handlers[event.Name()] {
 		handler.Notify(event)
+	}
+}
+
+type EventPublisherConfiguration func(e *Publisher)
+
+func PublisherWithLogger(logger *logrus.Logger) EventPublisherConfiguration {
+	return func(e *Publisher) {
+		e.logger = logger
 	}
 }
