@@ -31,7 +31,7 @@ message FollowPlayerResponse {
 }
 
 message PlayerSearchResponse {
-  notification.ProtoPlayerSocialInfo player_info = 1;
+  notification.ProtoPlayerSocialInfo social_info = 1;
 }
 
 message UnfollowPlayerResponse {
