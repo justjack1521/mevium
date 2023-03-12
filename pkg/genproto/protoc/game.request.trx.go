@@ -130,14 +130,6 @@ func NewFetchPlayerDataRequest(bytes []byte) (*FetchPlayerDataRequest, error) {
 	return req, nil
 }
 
-func NewFollowPlayerRequest(bytes []byte) (*FollowPlayerRequest, error) {
-	req := &FollowPlayerRequest{}
-	if err := proto.Unmarshal(bytes, req); err != nil {
-		return nil, err
-	}
-	return req, nil
-}
-
 func NewStaminaRestoreRequest(bytes []byte) (*StaminaRestoreRequest, error) {
 	req := &StaminaRestoreRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -148,14 +140,6 @@ func NewStaminaRestoreRequest(bytes []byte) (*StaminaRestoreRequest, error) {
 
 func NewTeleportRequest(bytes []byte) (*TeleportRequest, error) {
 	req := &TeleportRequest{}
-	if err := proto.Unmarshal(bytes, req); err != nil {
-		return nil, err
-	}
-	return req, nil
-}
-
-func NewUnfollowPlayerRequest(bytes []byte) (*UnfollowPlayerRequest, error) {
-	req := &UnfollowPlayerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}

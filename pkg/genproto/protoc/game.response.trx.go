@@ -77,19 +77,11 @@ func (x *FetchPlayerDataResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func (x *FollowPlayerResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
 func (x *StaminaRestoreResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
 func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func (x *UnfollowPlayerResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
