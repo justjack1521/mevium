@@ -140,10 +140,6 @@ message FetchPlayerDataRequest {
 
 }
 
-message FollowPlayerRequest {
-  string player_id = 1;
-}
-
 message SkillPanelUnlockResponse {
   repeated protog.ProtoItemValuePair ItemsRemoved = 1;
   protog.ProtoJobCardInstance JobInstance = 2;
@@ -156,8 +152,4 @@ message StaminaRestoreRequest {
 message TeleportRequest {
   string region_map = 1;
   int32 region_map_node = 2;
-}
-
-message UnfollowPlayerRequest {
-  string player_id = 1;
 }

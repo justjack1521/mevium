@@ -4,6 +4,8 @@ package presence;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
 
+import "message.notification.proto";
+
 message UpdatePlayerPresenceResponse {
 
 }
@@ -22,4 +24,16 @@ message UpdatePlayerCommentResponse {
 
 message UpdateRentalCardResponse {
 
+}
+
+message FollowPlayerResponse {
+  notification.ProtoPlayerSocialInfo player_info = 1;
+}
+
+message PlayerSearchResponse {
+  notification.ProtoPlayerSocialInfo player_info = 1;
+}
+
+message UnfollowPlayerResponse {
+  string player_id = 1;
 }

@@ -8,7 +8,6 @@ package services
 
 import (
 	context "context"
-	protoc "github.com/justjack1521/mevium/pkg/genproto/protoc"
 	protop "github.com/justjack1521/mevium/pkg/genproto/protop"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -24,8 +23,9 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusSocialServiceClient interface {
-	FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error)
-	UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error)
+	FollowPlayer(ctx context.Context, in *protop.FollowPlayerRequest, opts ...grpc.CallOption) (*protop.FollowPlayerResponse, error)
+	UnfollowPlayer(ctx context.Context, in *protop.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protop.UnfollowPlayerResponse, error)
+	PlayerSearch(ctx context.Context, in *protop.PlayerSearchRequest, opts ...grpc.CallOption) (*protop.PlayerSearchResponse, error)
 	UpdatePlayerPresence(ctx context.Context, in *protop.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPresenceResponse, error)
 	UpdatePlayerPosition(ctx context.Context, in *protop.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPositionResponse, error)
 	UpdateCompanion(ctx context.Context, in *protop.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerCompanionResponse, error)
@@ -39,8 +39,8 @@ func NewMeviusSocialServiceClient(cc grpc.ClientConnInterface) MeviusSocialServi
 	return &meviusSocialServiceClient{cc}
 }
 
-func (c *meviusSocialServiceClient) FollowPlayer(ctx context.Context, in *protoc.FollowPlayerRequest, opts ...grpc.CallOption) (*protoc.FollowPlayerResponse, error) {
-	out := new(protoc.FollowPlayerResponse)
+func (c *meviusSocialServiceClient) FollowPlayer(ctx context.Context, in *protop.FollowPlayerRequest, opts ...grpc.CallOption) (*protop.FollowPlayerResponse, error) {
+	out := new(protop.FollowPlayerResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusSocialService/FollowPlayer", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -48,9 +48,18 @@ func (c *meviusSocialServiceClient) FollowPlayer(ctx context.Context, in *protoc
 	return out, nil
 }
 
-func (c *meviusSocialServiceClient) UnfollowPlayer(ctx context.Context, in *protoc.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protoc.UnfollowPlayerResponse, error) {
-	out := new(protoc.UnfollowPlayerResponse)
+func (c *meviusSocialServiceClient) UnfollowPlayer(ctx context.Context, in *protop.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protop.UnfollowPlayerResponse, error) {
+	out := new(protop.UnfollowPlayerResponse)
 	err := c.cc.Invoke(ctx, "/service.MeviusSocialService/UnfollowPlayer", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusSocialServiceClient) PlayerSearch(ctx context.Context, in *protop.PlayerSearchRequest, opts ...grpc.CallOption) (*protop.PlayerSearchResponse, error) {
+	out := new(protop.PlayerSearchResponse)
+	err := c.cc.Invoke(ctx, "/service.MeviusSocialService/PlayerSearch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -88,8 +97,9 @@ func (c *meviusSocialServiceClient) UpdateCompanion(ctx context.Context, in *pro
 // All implementations should embed UnimplementedMeviusSocialServiceServer
 // for forward compatibility
 type MeviusSocialServiceServer interface {
-	FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error)
-	UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error)
+	FollowPlayer(context.Context, *protop.FollowPlayerRequest) (*protop.FollowPlayerResponse, error)
+	UnfollowPlayer(context.Context, *protop.UnfollowPlayerRequest) (*protop.UnfollowPlayerResponse, error)
+	PlayerSearch(context.Context, *protop.PlayerSearchRequest) (*protop.PlayerSearchResponse, error)
 	UpdatePlayerPresence(context.Context, *protop.UpdatePlayerPresenceRequest) (*protop.UpdatePlayerPresenceResponse, error)
 	UpdatePlayerPosition(context.Context, *protop.UpdatePlayerPositionRequest) (*protop.UpdatePlayerPositionResponse, error)
 	UpdateCompanion(context.Context, *protop.UpdatePlayerCompanionRequest) (*protop.UpdatePlayerCompanionResponse, error)
@@ -99,11 +109,14 @@ type MeviusSocialServiceServer interface {
 type UnimplementedMeviusSocialServiceServer struct {
 }
 
-func (UnimplementedMeviusSocialServiceServer) FollowPlayer(context.Context, *protoc.FollowPlayerRequest) (*protoc.FollowPlayerResponse, error) {
+func (UnimplementedMeviusSocialServiceServer) FollowPlayer(context.Context, *protop.FollowPlayerRequest) (*protop.FollowPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FollowPlayer not implemented")
 }
-func (UnimplementedMeviusSocialServiceServer) UnfollowPlayer(context.Context, *protoc.UnfollowPlayerRequest) (*protoc.UnfollowPlayerResponse, error) {
+func (UnimplementedMeviusSocialServiceServer) UnfollowPlayer(context.Context, *protop.UnfollowPlayerRequest) (*protop.UnfollowPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnfollowPlayer not implemented")
+}
+func (UnimplementedMeviusSocialServiceServer) PlayerSearch(context.Context, *protop.PlayerSearchRequest) (*protop.PlayerSearchResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PlayerSearch not implemented")
 }
 func (UnimplementedMeviusSocialServiceServer) UpdatePlayerPresence(context.Context, *protop.UpdatePlayerPresenceRequest) (*protop.UpdatePlayerPresenceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePlayerPresence not implemented")
@@ -127,7 +140,7 @@ func RegisterMeviusSocialServiceServer(s grpc.ServiceRegistrar, srv MeviusSocial
 }
 
 func _MeviusSocialService_FollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.FollowPlayerRequest)
+	in := new(protop.FollowPlayerRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -139,13 +152,13 @@ func _MeviusSocialService_FollowPlayer_Handler(srv interface{}, ctx context.Cont
 		FullMethod: "/service.MeviusSocialService/FollowPlayer",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusSocialServiceServer).FollowPlayer(ctx, req.(*protoc.FollowPlayerRequest))
+		return srv.(MeviusSocialServiceServer).FollowPlayer(ctx, req.(*protop.FollowPlayerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _MeviusSocialService_UnfollowPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.UnfollowPlayerRequest)
+	in := new(protop.UnfollowPlayerRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -157,7 +170,25 @@ func _MeviusSocialService_UnfollowPlayer_Handler(srv interface{}, ctx context.Co
 		FullMethod: "/service.MeviusSocialService/UnfollowPlayer",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusSocialServiceServer).UnfollowPlayer(ctx, req.(*protoc.UnfollowPlayerRequest))
+		return srv.(MeviusSocialServiceServer).UnfollowPlayer(ctx, req.(*protop.UnfollowPlayerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusSocialService_PlayerSearch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protop.PlayerSearchRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusSocialServiceServer).PlayerSearch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/service.MeviusSocialService/PlayerSearch",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusSocialServiceServer).PlayerSearch(ctx, req.(*protop.PlayerSearchRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -230,6 +261,10 @@ var MeviusSocialService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UnfollowPlayer",
 			Handler:    _MeviusSocialService_UnfollowPlayer_Handler,
+		},
+		{
+			MethodName: "PlayerSearch",
+			Handler:    _MeviusSocialService_PlayerSearch_Handler,
 		},
 		{
 			MethodName: "UpdatePlayerPresence",
