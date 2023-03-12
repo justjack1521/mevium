@@ -13,6 +13,7 @@ service AccessService {
   rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse) {}
   rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
   rpc UserHasRole(UserHasRoleRequest) returns (UserHasRoleResponse) {}
+  rpc CustomerSearch(CustomerSearchRequest) returns (CustomerSearchResponse) {}
 }
 
 message AuthTokenRequest {
@@ -75,4 +76,14 @@ message UserHasRoleRequest {
 message UserHasRoleResponse {
   common.ResponseHeader header = 1;
   bool has_role = 2;
+}
+
+message CustomerSearchRequest {
+  common.RequestHeader header = 1;
+  string customer_id = 2;
+}
+
+message CustomerSearchResponse {
+  common.ResponseHeader header = 1;
+  string user_id = 2;
 }
