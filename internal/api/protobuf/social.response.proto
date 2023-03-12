@@ -4,6 +4,7 @@ package presence;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
 
+import "data.proto";
 import "message.notification.proto";
 
 message UpdatePlayerPresenceResponse {
@@ -31,7 +32,7 @@ message FollowPlayerResponse {
 }
 
 message PlayerSearchResponse {
-  notification.ProtoPlayerSocialInfo social_info = 1;
+  protog.ProtoPlayerInfo player_info = 1;
 }
 
 message UnfollowPlayerResponse {
