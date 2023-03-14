@@ -15,3 +15,11 @@ message ClientHeartbeat {
 message ClientDisconnected {
   string remote_address = 1;
 }
+
+message PlayerProfileCreatedMessage {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  string player_comment = 4;
+  string companion_id = 5;
+}
