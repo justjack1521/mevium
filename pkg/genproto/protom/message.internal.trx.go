@@ -37,3 +37,15 @@ func NewClientHeartbeatMessage(bytes []byte) (*ClientHeartbeat, error) {
 func (x *ClientHeartbeat) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewPlayerProfileCreatedMessage(bytes []byte) (*PlayerProfileCreatedMessage, error) {
+	req := &PlayerProfileCreatedMessage{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *PlayerProfileCreatedMessage) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
