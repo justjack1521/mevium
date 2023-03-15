@@ -41,6 +41,7 @@ message ProtoRankingUpdate {
   double previous_score = 2;
   int64 previous_rank = 3;
   bool new_high_score = 4;
+  double score = 5;
 }
 
 message BattleReviveResponse {
