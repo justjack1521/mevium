@@ -196,7 +196,7 @@ message ProtoLastBattleResults {
   int32 gold_reward = 2;
   ProtoProgressInformation progress_information = 7;
   repeated ProtoCardPostBattleState card_states = 9;
-  repeated ProtoItemInstance item_rewards = 10;
+  repeated ProtoItemValuePair item_rewards = 10;
 }
 
 message ProtoProgressInformation {
