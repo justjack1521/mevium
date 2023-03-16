@@ -54,9 +54,11 @@ message ProtoAbilityCardHistory {
 
 message ProtoAbilityCardHistoryInstance {
   string sys_id = 1;
-  string ability_card_id = 2;
-  bool auto_sell = 3;
-  int64 created_at = 4;
+  string base_ability_card_id = 2;
+  string ability_card_id = 3;
+  bool auto_sell = 4;
+  int32 star_level = 5;
+  int64 created_at = 6;
 }
 
 message ProtoAbilityCardInventory {
