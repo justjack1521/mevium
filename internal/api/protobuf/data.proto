@@ -86,6 +86,7 @@ message ProtoBattleStartData {
   bool hard_mode = 3;
   int32 deck_index = 4;
   repeated BattleItemDrop item_drop_table = 5;
+  repeated BattleCardDrop card_drop_table = 6;
   int64 created_at = 20;
 }
 
@@ -103,6 +104,11 @@ message BattleItemDrop {
   BattleItemDropResult drop = 2;
 }
 
+message BattleCardDrop {
+  BattleDropTableKey key = 1;
+  BattleCardDropResult drop = 2;
+}
+
 message BattleDropTableKey {
   string fiend_id = 1;
   int32 fiend_index = 2;
@@ -111,6 +117,10 @@ message BattleDropTableKey {
 message BattleItemDropResult {
   string item_id = 1;
   int32 quantity = 2;
+}
+
+message BattleCardDropResult {
+  string card_id = 1;
 }
 
 message ProtoCardFilterSortSet {
