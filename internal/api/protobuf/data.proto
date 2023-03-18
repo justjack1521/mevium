@@ -209,6 +209,7 @@ message ProtoLastBattleResults {
   ProtoProgressInformation progress_information = 7;
   repeated ProtoCardPostBattleState card_states = 9;
   repeated ProtoItemValuePair item_rewards = 10;
+  repeated ProtoAbilityCardInstance card_drops = 11;
 }
 
 message ProtoProgressInformation {
