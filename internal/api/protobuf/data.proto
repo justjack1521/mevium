@@ -206,6 +206,9 @@ message ProtoLastBattleInformation {
 message ProtoLastBattleResults {
   int32 total_exp = 1;
   int32 gold_reward = 2;
+  repeated ProtoItemValuePair seed_rewards = 3;
+  double seed_area_multiplier = 4;
+  double seed_score_multiplier = 5;
   ProtoProgressInformation progress_information = 7;
   repeated ProtoCardPostBattleState card_states = 9;
   repeated ProtoItemValuePair item_rewards = 10;
