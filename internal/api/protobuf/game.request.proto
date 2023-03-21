@@ -33,6 +33,13 @@ enum RequestType {
   STAMINA_RESTORE = 2300;
 }
 
+enum TeleportRequestType {
+  NONE = 0;
+  LOGIN = 1;
+  WORLD = 2;
+  REGION = 3;
+}
+
 message RequestHeader {
   string client_id      =  1;
   string connection_id  =  2;
@@ -152,4 +159,5 @@ message StaminaRestoreRequest {
 message TeleportRequest {
   string region_map = 1;
   int32 region_map_node = 2;
+  TeleportRequestType source = 3;
 }
