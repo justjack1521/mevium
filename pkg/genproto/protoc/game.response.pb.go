@@ -1530,6 +1530,53 @@ func (x *TeleportResponse) GetEvents() []*protog.ProtoRegionTeleportEvent {
 	return nil
 }
 
+type ProcessRegionEventResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Persist bool `protobuf:"varint,1,opt,name=persist,proto3" json:"persist,omitempty"`
+}
+
+func (x *ProcessRegionEventResponse) Reset() {
+	*x = ProcessRegionEventResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_game_response_proto_msgTypes[25]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProcessRegionEventResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProcessRegionEventResponse) ProtoMessage() {}
+
+func (x *ProcessRegionEventResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_game_response_proto_msgTypes[25]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProcessRegionEventResponse.ProtoReflect.Descriptor instead.
+func (*ProcessRegionEventResponse) Descriptor() ([]byte, []int) {
+	return file_game_response_proto_rawDescGZIP(), []int{25}
+}
+
+func (x *ProcessRegionEventResponse) GetPersist() bool {
+	if x != nil {
+		return x.Persist
+	}
+	return false
+}
+
 var File_game_response_proto protoreflect.FileDescriptor
 
 var file_game_response_proto_rawDesc = []byte{
@@ -1741,12 +1788,15 @@ var file_game_response_proto_rawDesc = []byte{
 	0x38, 0x0a, 0x06, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32,
 	0x20, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x52, 0x65,
 	0x67, 0x69, 0x6f, 0x6e, 0x54, 0x65, 0x6c, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x45, 0x76, 0x65, 0x6e,
-	0x74, 0x52, 0x06, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74,
-	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b,
-	0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f,
-	0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0xaa,
-	0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x52, 0x06, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x36, 0x0a, 0x1a, 0x50, 0x72, 0x6f,
+	0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x70, 0x65, 0x72, 0x73, 0x69,
+	0x73, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x70, 0x65, 0x72, 0x73, 0x69, 0x73,
+	0x74, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
+	0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76,
+	0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73,
+	0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1761,7 +1811,7 @@ func file_game_response_proto_rawDescGZIP() []byte {
 	return file_game_response_proto_rawDescData
 }
 
-var file_game_response_proto_msgTypes = make([]protoimpl.MessageInfo, 25)
+var file_game_response_proto_msgTypes = make([]protoimpl.MessageInfo, 26)
 var file_game_response_proto_goTypes = []interface{}{
 	(*ApplicationError)(nil),                 // 0: protoc.ApplicationError
 	(*Response)(nil),                         // 1: protoc.Response
@@ -1788,36 +1838,37 @@ var file_game_response_proto_goTypes = []interface{}{
 	(*StaminaRestoreResponse)(nil),           // 22: protoc.StaminaRestoreResponse
 	(*SkillPanelUnlockRequest)(nil),          // 23: protoc.SkillPanelUnlockRequest
 	(*TeleportResponse)(nil),                 // 24: protoc.TeleportResponse
-	(*protog.ProtoLastBattleResults)(nil),    // 25: protog.ProtoLastBattleResults
-	(*protog.ProtoRegionEventData)(nil),      // 26: protog.ProtoRegionEventData
-	(*protog.ProtoRankingInfo)(nil),          // 27: protog.ProtoRankingInfo
-	(*protog.ProtoItemValuePair)(nil),        // 28: protog.ProtoItemValuePair
-	(*protog.ProtoBattleStartData)(nil),      // 29: protog.ProtoBattleStartData
-	(*protog.ProtoMailBoxItem)(nil),          // 30: protog.ProtoMailBoxItem
-	(*protog.ProtoPlayerDeckCollection)(nil), // 31: protog.ProtoPlayerDeckCollection
-	(*protog.ProtoCardFilterSort)(nil),       // 32: protog.ProtoCardFilterSort
-	(*protog.ProtoItemInstance)(nil),         // 33: protog.ProtoItemInstance
-	(*protog.ProtoAbilityCardInstance)(nil),  // 34: protog.ProtoAbilityCardInstance
-	(*protog.ProtoRegionTeleportEvent)(nil),  // 35: protog.ProtoRegionTeleportEvent
+	(*ProcessRegionEventResponse)(nil),       // 25: protoc.ProcessRegionEventResponse
+	(*protog.ProtoLastBattleResults)(nil),    // 26: protog.ProtoLastBattleResults
+	(*protog.ProtoRegionEventData)(nil),      // 27: protog.ProtoRegionEventData
+	(*protog.ProtoRankingInfo)(nil),          // 28: protog.ProtoRankingInfo
+	(*protog.ProtoItemValuePair)(nil),        // 29: protog.ProtoItemValuePair
+	(*protog.ProtoBattleStartData)(nil),      // 30: protog.ProtoBattleStartData
+	(*protog.ProtoMailBoxItem)(nil),          // 31: protog.ProtoMailBoxItem
+	(*protog.ProtoPlayerDeckCollection)(nil), // 32: protog.ProtoPlayerDeckCollection
+	(*protog.ProtoCardFilterSort)(nil),       // 33: protog.ProtoCardFilterSort
+	(*protog.ProtoItemInstance)(nil),         // 34: protog.ProtoItemInstance
+	(*protog.ProtoAbilityCardInstance)(nil),  // 35: protog.ProtoAbilityCardInstance
+	(*protog.ProtoRegionTeleportEvent)(nil),  // 36: protog.ProtoRegionTeleportEvent
 }
 var file_game_response_proto_depIdxs = []int32{
 	2,  // 0: protoc.Response.header:type_name -> protoc.ResponseHeader
-	25, // 1: protoc.BattleCompleteResponse.Results:type_name -> protog.ProtoLastBattleResults
-	26, // 2: protoc.BattleCompleteResponse.PendingEvents:type_name -> protog.ProtoRegionEventData
+	26, // 1: protoc.BattleCompleteResponse.Results:type_name -> protog.ProtoLastBattleResults
+	27, // 2: protoc.BattleCompleteResponse.PendingEvents:type_name -> protog.ProtoRegionEventData
 	4,  // 3: protoc.BattleCompleteResponse.weekly_rank_update:type_name -> protoc.ProtoRankingUpdate
 	4,  // 4: protoc.BattleCompleteResponse.event_rank_update:type_name -> protoc.ProtoRankingUpdate
-	27, // 5: protoc.ProtoRankingUpdate.ranking_info:type_name -> protog.ProtoRankingInfo
-	28, // 6: protoc.BattleReviveResponse.ItemRemoved:type_name -> protog.ProtoItemValuePair
-	29, // 7: protoc.BattleStartResponse.BattleStartData:type_name -> protog.ProtoBattleStartData
-	28, // 8: protoc.CardFusionResponse.fusion_cost:type_name -> protog.ProtoItemValuePair
-	28, // 9: protoc.CardBoostFusionResponse.fusion_cost:type_name -> protog.ProtoItemValuePair
+	28, // 5: protoc.ProtoRankingUpdate.ranking_info:type_name -> protog.ProtoRankingInfo
+	29, // 6: protoc.BattleReviveResponse.ItemRemoved:type_name -> protog.ProtoItemValuePair
+	30, // 7: protoc.BattleStartResponse.BattleStartData:type_name -> protog.ProtoBattleStartData
+	29, // 8: protoc.CardFusionResponse.fusion_cost:type_name -> protog.ProtoItemValuePair
+	29, // 9: protoc.CardBoostFusionResponse.fusion_cost:type_name -> protog.ProtoItemValuePair
 	20, // 10: protoc.ClaimMailBoxItemResponse.Claims:type_name -> protoc.MailBoxItemClaim
-	30, // 11: protoc.ClaimEventRankingResponse.NewMailboxItems:type_name -> protog.ProtoMailBoxItem
-	31, // 12: protoc.DeckEditAllResponse.Collection:type_name -> protog.ProtoPlayerDeckCollection
-	32, // 13: protoc.FilterSortResponse.FilterSort:type_name -> protog.ProtoCardFilterSort
-	33, // 14: protoc.MailBoxItemClaim.item_instance:type_name -> protog.ProtoItemInstance
-	34, // 15: protoc.MailBoxItemClaim.ability_card_instance:type_name -> protog.ProtoAbilityCardInstance
-	35, // 16: protoc.TeleportResponse.events:type_name -> protog.ProtoRegionTeleportEvent
+	31, // 11: protoc.ClaimEventRankingResponse.NewMailboxItems:type_name -> protog.ProtoMailBoxItem
+	32, // 12: protoc.DeckEditAllResponse.Collection:type_name -> protog.ProtoPlayerDeckCollection
+	33, // 13: protoc.FilterSortResponse.FilterSort:type_name -> protog.ProtoCardFilterSort
+	34, // 14: protoc.MailBoxItemClaim.item_instance:type_name -> protog.ProtoItemInstance
+	35, // 15: protoc.MailBoxItemClaim.ability_card_instance:type_name -> protog.ProtoAbilityCardInstance
+	36, // 16: protoc.TeleportResponse.events:type_name -> protog.ProtoRegionTeleportEvent
 	17, // [17:17] is the sub-list for method output_type
 	17, // [17:17] is the sub-list for method input_type
 	17, // [17:17] is the sub-list for extension type_name
@@ -2131,6 +2182,18 @@ func file_game_response_proto_init() {
 				return nil
 			}
 		}
+		file_game_response_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProcessRegionEventResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	file_game_response_proto_msgTypes[20].OneofWrappers = []interface{}{
 		(*MailBoxItemClaim_ItemInstance)(nil),
@@ -2142,7 +2205,7 @@ func file_game_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_game_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   25,
+			NumMessages:   26,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

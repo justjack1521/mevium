@@ -366,7 +366,8 @@ message ProtoRegionMapData {
   uint64 enemies_defeated = 5;
   uint64 high_score = 6;
   map <string, uint64> job_type_defeats = 7;
-
+  map <string, bool> pending_events = 8;
+  map <string, bool> persisted_events = 9;
 }
 
 message ProtoRegionNodeData {

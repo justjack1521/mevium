@@ -161,3 +161,10 @@ message TeleportRequest {
   int32 region_map_node = 2;
   TeleportRequestType source = 3;
 }
+
+message ProcessRegionEventRequest {
+  string region_map = 1;
+  int32 node_index = 2;
+  int32 definition_value = 3;
+  int32 target = 4;
+}

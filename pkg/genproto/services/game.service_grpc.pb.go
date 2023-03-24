@@ -39,6 +39,7 @@ type MeviusGameServiceClient interface {
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
 	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
+	ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -193,6 +194,15 @@ func (c *meviusGameServiceClient) UpdateProfile(ctx context.Context, in *protoc.
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error) {
+	out := new(protoc.ProcessRegionEventResponse)
+	err := c.cc.Invoke(ctx, "/service.MeviusGameService/ProcessRegionEvent", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -213,6 +223,7 @@ type MeviusGameServiceServer interface {
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
 	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
+	ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -266,6 +277,9 @@ func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protoc.Te
 }
 func (UnimplementedMeviusGameServiceServer) UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProcessRegionEvent not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -567,6 +581,24 @@ func _MeviusGameService_UpdateProfile_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_ProcessRegionEvent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ProcessRegionEventRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/service.MeviusGameService/ProcessRegionEvent",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, req.(*protoc.ProcessRegionEventRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -637,6 +669,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdateProfile",
 			Handler:    _MeviusGameService_UpdateProfile_Handler,
+		},
+		{
+			MethodName: "ProcessRegionEvent",
+			Handler:    _MeviusGameService_ProcessRegionEvent_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

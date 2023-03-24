@@ -25,5 +25,6 @@ service MeviusGameService {
   rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
   rpc Teleport(protoc.TeleportRequest) returns (protoc.TeleportResponse) {}
   rpc UpdateProfile(protoc.UpdateProfileRequest) returns (protoc.UpdateProfileResponse) {}
+  rpc ProcessRegionEvent(protoc.ProcessRegionEventRequest) returns (protoc.ProcessRegionEventResponse) {}
 }
 

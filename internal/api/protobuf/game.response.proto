@@ -149,3 +149,7 @@ message TeleportResponse {
   int32 region_map_node = 2;
   repeated protog.ProtoRegionTeleportEvent events = 3;
 }
+
+message ProcessRegionEventResponse {
+  bool persist = 1;
+}
