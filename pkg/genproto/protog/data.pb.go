@@ -304,6 +304,7 @@ func (x *ProtoGameData) GetMailbox() *ProtoMailBox {
 	return nil
 }
 
+//Test
 type ProtoAbilityCardData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

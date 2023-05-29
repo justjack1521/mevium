@@ -46,6 +46,7 @@ message ProtoGameData {
 
 }
 
+//Test
 message ProtoAbilityCardData {
   ProtoAbilityCardInventory inventory = 1;
   ProtoAbilityCardInventory bank = 2;
