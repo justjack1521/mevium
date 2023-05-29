@@ -20,9 +20,7 @@ message ProtoGameData {
   string player_comment = 7;
   string rental_card = 8;
 
-  ProtoAbilityCardInventory ability_card_inventory = 9;
-  ProtoAbilityCardInventory ability_card_bank = 10;
-  ProtoAbilityCardHistory ability_card_history = 11;
+  ProtoAbilityCardData ability_card_data = 9;
 
   ProtoItemInventory item_inventory = 12;
   ProtoJobInventory job_card_inventory = 13;
@@ -46,6 +44,12 @@ message ProtoGameData {
 
   ProtoMailBox mailbox = 27;
 
+}
+
+message ProtoAbilityCardData {
+  ProtoAbilityCardInventory inventory = 1;
+  ProtoAbilityCardInventory bank = 2;
+  ProtoAbilityCardHistory history = 3;
 }
 
 message ProtoAbilityCardHistory {
