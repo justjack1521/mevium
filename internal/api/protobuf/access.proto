@@ -40,6 +40,7 @@ message LoginUserRequest {
   common.RequestHeader header = 1;
   string username = 2;
   string password = 3;
+  bool remember_me = 4;
 }
 
 message LoginUserResponse {
