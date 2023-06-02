@@ -183,7 +183,7 @@ message ProtoItemValuePair {
 message ProtoJobCardData {
   ProtoJobInventory jobs = 1;
   ProtoWeaponInventory weapons = 2;
-  repeated ProtoSkillPanelGroups skill_panels = 3;
+  map<string, ProtoSkillPanelGroups> skill_panels = 3;
 }
 
 message ProtoJobInventory {
