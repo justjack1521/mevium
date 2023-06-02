@@ -14,6 +14,7 @@ service AccessService {
   rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
   rpc UserHasRole(UserHasRoleRequest) returns (UserHasRoleResponse) {}
   rpc CustomerSearch(CustomerSearchRequest) returns (CustomerSearchResponse) {}
+  rpc RememberTokenQuery(RememberTokenQueryRequest) returns (RememberTokenQueryResponse) {}
 }
 
 message AuthTokenRequest {
@@ -86,4 +87,14 @@ message CustomerSearchRequest {
 message CustomerSearchResponse {
   common.ResponseHeader header = 1;
   string user_id = 2;
+}
+
+message RememberTokenQueryRequest {
+  common.RequestHeader header = 1;
+  string token = 2;
+}
+
+message RememberTokenQueryResponse {
+  common.ResponseHeader header = 1;
+  bool valid = 2;
 }

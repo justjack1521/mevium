@@ -19,13 +19,14 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	AccessService_AuthToken_FullMethodName      = "/access.AccessService/AuthToken"
-	AccessService_ChangePassword_FullMethodName = "/access.AccessService/ChangePassword"
-	AccessService_LoginUser_FullMethodName      = "/access.AccessService/LoginUser"
-	AccessService_RefreshToken_FullMethodName   = "/access.AccessService/RefreshToken"
-	AccessService_RegisterUser_FullMethodName   = "/access.AccessService/RegisterUser"
-	AccessService_UserHasRole_FullMethodName    = "/access.AccessService/UserHasRole"
-	AccessService_CustomerSearch_FullMethodName = "/access.AccessService/CustomerSearch"
+	AccessService_AuthToken_FullMethodName          = "/access.AccessService/AuthToken"
+	AccessService_ChangePassword_FullMethodName     = "/access.AccessService/ChangePassword"
+	AccessService_LoginUser_FullMethodName          = "/access.AccessService/LoginUser"
+	AccessService_RefreshToken_FullMethodName       = "/access.AccessService/RefreshToken"
+	AccessService_RegisterUser_FullMethodName       = "/access.AccessService/RegisterUser"
+	AccessService_UserHasRole_FullMethodName        = "/access.AccessService/UserHasRole"
+	AccessService_CustomerSearch_FullMethodName     = "/access.AccessService/CustomerSearch"
+	AccessService_RememberTokenQuery_FullMethodName = "/access.AccessService/RememberTokenQuery"
 )
 
 // AccessServiceClient is the client API for AccessService service.
@@ -39,6 +40,7 @@ type AccessServiceClient interface {
 	RegisterUser(ctx context.Context, in *RegisterUserRequest, opts ...grpc.CallOption) (*RegisterUserResponse, error)
 	UserHasRole(ctx context.Context, in *UserHasRoleRequest, opts ...grpc.CallOption) (*UserHasRoleResponse, error)
 	CustomerSearch(ctx context.Context, in *CustomerSearchRequest, opts ...grpc.CallOption) (*CustomerSearchResponse, error)
+	RememberTokenQuery(ctx context.Context, in *RememberTokenQueryRequest, opts ...grpc.CallOption) (*RememberTokenQueryResponse, error)
 }
 
 type accessServiceClient struct {
@@ -112,6 +114,15 @@ func (c *accessServiceClient) CustomerSearch(ctx context.Context, in *CustomerSe
 	return out, nil
 }
 
+func (c *accessServiceClient) RememberTokenQuery(ctx context.Context, in *RememberTokenQueryRequest, opts ...grpc.CallOption) (*RememberTokenQueryResponse, error) {
+	out := new(RememberTokenQueryResponse)
+	err := c.cc.Invoke(ctx, AccessService_RememberTokenQuery_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AccessServiceServer is the server API for AccessService service.
 // All implementations should embed UnimplementedAccessServiceServer
 // for forward compatibility
@@ -123,6 +134,7 @@ type AccessServiceServer interface {
 	RegisterUser(context.Context, *RegisterUserRequest) (*RegisterUserResponse, error)
 	UserHasRole(context.Context, *UserHasRoleRequest) (*UserHasRoleResponse, error)
 	CustomerSearch(context.Context, *CustomerSearchRequest) (*CustomerSearchResponse, error)
+	RememberTokenQuery(context.Context, *RememberTokenQueryRequest) (*RememberTokenQueryResponse, error)
 }
 
 // UnimplementedAccessServiceServer should be embedded to have forward compatible implementations.
@@ -149,6 +161,9 @@ func (UnimplementedAccessServiceServer) UserHasRole(context.Context, *UserHasRol
 }
 func (UnimplementedAccessServiceServer) CustomerSearch(context.Context, *CustomerSearchRequest) (*CustomerSearchResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CustomerSearch not implemented")
+}
+func (UnimplementedAccessServiceServer) RememberTokenQuery(context.Context, *RememberTokenQueryRequest) (*RememberTokenQueryResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RememberTokenQuery not implemented")
 }
 
 // UnsafeAccessServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -288,6 +303,24 @@ func _AccessService_CustomerSearch_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AccessService_RememberTokenQuery_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RememberTokenQueryRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccessServiceServer).RememberTokenQuery(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AccessService_RememberTokenQuery_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccessServiceServer).RememberTokenQuery(ctx, req.(*RememberTokenQueryRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AccessService_ServiceDesc is the grpc.ServiceDesc for AccessService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -322,6 +355,10 @@ var AccessService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CustomerSearch",
 			Handler:    _AccessService_CustomerSearch_Handler,
+		},
+		{
+			MethodName: "RememberTokenQuery",
+			Handler:    _AccessService_RememberTokenQuery_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

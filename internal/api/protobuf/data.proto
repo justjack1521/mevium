@@ -51,6 +51,7 @@ message ProtoAbilityCardData {
   ProtoAbilityCardInventory inventory = 1;
   ProtoAbilityCardInventory bank = 2;
   ProtoAbilityCardHistory history = 3;
+  map<string, int32> max_card_levels = 4;
 }
 
 message ProtoAbilityCardHistory {
