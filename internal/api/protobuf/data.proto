@@ -22,8 +22,7 @@ message ProtoGameData {
 
   ProtoAbilityCardData ability_card_data = 9;
   ProtoJobCardData job_card_data = 10;
-
-  ProtoItemInventory item_inventory = 12;
+  ProtoItemData item_data = 11;
 
   ProtoFairyCompanionInventory fairy_companion_inventory = 15;
 
@@ -162,6 +161,16 @@ message ProtoFairyCompanionInstance {
   string sys_id = 1;
   string base_companion_id = 2;
   int64 created_at = 3;
+}
+
+message ProtoItemData {
+  ProtoItemInventory inventory = 1;
+  map<string, ProtoItemDropRecord> limit_data = 2;
+}
+
+message ProtoItemDropRecord {
+  int32 key = 1;
+  int32 count = 2;
 }
 
 message ProtoItemInventory {
