@@ -22,8 +22,7 @@ message ProtoGameData {
   ProtoJobCardData job_card_data = 9;
   ProtoItemData item_data = 10;
   ProtoBattleData battle_data = 11;
-
-  ProtoFairyCompanionInventory fairy_companion_inventory = 12;
+  ProtoFairyCompanionData fairy_companion_data = 12;
 
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 13;
 
@@ -153,6 +152,11 @@ message ProtoDailyLoginCampaignInfo {
   string id = 1;
   repeated bool claimed = 2;
   int32 last_claimed = 3;
+}
+
+message ProtoFairyCompanionData {
+  int32 current_companion_index = 1;
+  ProtoFairyCompanionInventory inventory = 2;
 }
 
 message ProtoFairyCompanionInventory {
