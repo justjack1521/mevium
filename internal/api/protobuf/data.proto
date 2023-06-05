@@ -10,41 +10,33 @@ message ProtoGameData {
   string player_name = 1;
   int32 player_level = 2;
 
-  ProtoPlayerStamina player_stamina = 3;
-  ProtoPlayerStamina multiplayer_stamina = 28;
 
-  uint64 total_exp = 4;
-  uint64 accum_exp = 5;
-  float exp_bonus = 6;
+  uint64 total_exp = 3;
+  uint64 accum_exp = 4;
+  float exp_bonus = 5;
 
-  string player_comment = 7;
-  string rental_card = 8;
+  string player_comment = 6;
+  string rental_card = 7;
 
-  ProtoAbilityCardData ability_card_data = 9;
-  ProtoJobCardData job_card_data = 10;
-  ProtoItemData item_data = 11;
+  ProtoAbilityCardData ability_card_data = 8;
+  ProtoJobCardData job_card_data = 9;
+  ProtoItemData item_data = 10;
+  ProtoBattleData battle_data = 11;
 
-  ProtoFairyCompanionInventory fairy_companion_inventory = 15;
+  ProtoFairyCompanionInventory fairy_companion_inventory = 12;
 
-  repeated ProtoCardFilterSortSet card_filter_sort_sets = 16;
+  repeated ProtoCardFilterSortSet card_filter_sort_sets = 13;
 
-  ProtoPlayerDeckCollection single_player_decks = 17;
-  ProtoPlayerDeckCollection multi_player_decks = 18;
-  ProtoRegionMapDataCollection region_map_data_collection = 19;
+  ProtoRegionMapDataCollection region_map_data_collection = 16;
 
-  ProtoLastBattleInformation last_battle_information = 20;
+  ProtoDailyMissionInfo daily_mission_info = 17;
+  ProtoDailyLoginCampaignInfoSet daily_login_campaigns = 18;
+  ProtoRankingInfoSet event_rankings = 19;
 
-  ProtoDailyMissionInfo daily_mission_info = 24;
-
-  ProtoDailyLoginCampaignInfoSet daily_login_campaigns = 25;
-
-  ProtoRankingInfoSet event_rankings = 26;
-
-  ProtoMailBox mailbox = 27;
+  ProtoMailBox mailbox = 20;
 
 }
 
-//Test
 message ProtoAbilityCardData {
   ProtoAbilityCardInventory inventory = 1;
   ProtoAbilityCardInventory bank = 2;
@@ -82,6 +74,16 @@ message ProtoAbilityCardInstance {
   uint64 total_accum_exp = 9;
   int32 extra_skill_unlock = 10;
   int32 over_boost_level = 11;
+}
+
+message ProtoBattleData {
+  ProtoPlayerStamina single_player_stamina = 1;
+  ProtoPlayerDeckCollection single_player_decks = 2;
+
+  ProtoPlayerStamina multi_player_stamina = 3;
+  ProtoPlayerDeckCollection multi_player_decks = 4;
+
+  ProtoLastBattleInformation last_battle_information = 5;
 }
 
 message ProtoBattleStartData {
