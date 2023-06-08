@@ -23,10 +23,11 @@ message ProtoGameData {
   ProtoItemData item_data = 10;
   ProtoBattleData battle_data = 11;
   ProtoFairyCompanionData fairy_companion_data = 12;
+  ProtoRegionMapData region_map_data = 13;
 
-  repeated ProtoCardFilterSortSet card_filter_sort_sets = 13;
+  repeated ProtoCardFilterSortSet card_filter_sort_sets = 14;
 
-  ProtoRegionMapDataCollection region_map_data_collection = 16;
+
 
   ProtoDailyMissionInfo daily_mission_info = 17;
   ProtoDailyLoginCampaignInfoSet daily_login_campaigns = 18;
@@ -379,12 +380,12 @@ message ProtoRankingEventClaim {
   ProtoRankingInfo ranking_info = 3;
 }
 
-message ProtoRegionMapDataCollection {
+message ProtoRegionMapData {
   string current_map_id = 1;
-  repeated ProtoRegionMapData region_maps = 2;
+  repeated ProtoRegionMapInstance region_maps = 2;
 }
 
-message ProtoRegionMapData {
+message ProtoRegionMapInstance {
   string map_id = 1;
   repeated ProtoRegionNodeData node_data = 2;
   int32 current_node_index = 3;
