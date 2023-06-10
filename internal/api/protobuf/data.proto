@@ -16,6 +16,8 @@ message ProtoGameData {
   ProtoJobCardData job_card_data = 9;
   ProtoItemData item_data = 10;
 
+  ProtoDailyData daily_data  = 11;
+
   ProtoFairyCompanionData fairy_companion_data = 12;
   ProtoRegionMapData region_map_data = 13;
 
@@ -24,10 +26,6 @@ message ProtoGameData {
 
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 16;
 
-
-
-  ProtoDailyMissionInfo daily_mission_info = 17;
-  ProtoDailyLoginCampaignInfoSet daily_login_campaigns = 18;
   ProtoRankingInfoSet event_rankings = 19;
 
   ProtoMailBox mailbox = 20;
@@ -93,7 +91,7 @@ message ProtoBattleStartData {
   int64 created_at = 20;
 }
 
-message ProtoDailyMissionInfo {
+message ProtoDailyMissionInstance {
   string id = 1;
   int32 progress = 2;
   bool confirmed = 3;
@@ -140,13 +138,14 @@ message ProtoCardFilterSort {
   bool sort_descending = 6;
 }
 
-message ProtoDailyLoginCampaignInfoSet {
-  int64 last_received = 1;
-  ProtoDailyLoginCampaignInfo standard_login_bonus = 2;
-  ProtoDailyLoginCampaignInfo special_login_bonus = 3;
+message ProtoDailyData {
+  int64 login_bonus_received = 1;
+  ProtoLoginCampaignInstance standard_login_bonus = 2;
+  ProtoLoginCampaignInstance special_login_bonus = 3;
+  ProtoDailyMissionInstance daily_mission = 4;
 }
 
-message ProtoDailyLoginCampaignInfo {
+message ProtoLoginCampaignInstance {
   string id = 1;
   repeated bool claimed = 2;
   int32 last_claimed = 3;
