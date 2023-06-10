@@ -8,12 +8,6 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protog";
 message ProtoGameData {
 
   string player_name = 1;
-  int32 player_level = 2;
-
-
-  uint64 total_exp = 3;
-  uint64 accum_exp = 4;
-  float exp_bonus = 5;
 
   string player_comment = 6;
   string rental_card = 7;
@@ -21,11 +15,14 @@ message ProtoGameData {
   ProtoAbilityCardData ability_card_data = 8;
   ProtoJobCardData job_card_data = 9;
   ProtoItemData item_data = 10;
-  ProtoBattleData battle_data = 11;
+
   ProtoFairyCompanionData fairy_companion_data = 12;
   ProtoRegionMapData region_map_data = 13;
 
-  repeated ProtoCardFilterSortSet card_filter_sort_sets = 14;
+  ProtoBattleData single_play_battle_data = 14;
+  ProtoBattleData multi_play_battle_data = 15;
+
+  repeated ProtoCardFilterSortSet card_filter_sort_sets = 16;
 
 
 
@@ -77,13 +74,13 @@ message ProtoAbilityCardInstance {
 }
 
 message ProtoBattleData {
-  ProtoPlayerStamina single_player_stamina = 1;
-  ProtoPlayerDeckCollection single_player_decks = 2;
-
-  ProtoPlayerStamina multi_player_stamina = 3;
-  ProtoPlayerDeckCollection multi_player_decks = 4;
-
-  ProtoLastBattleInformation last_battle_information = 5;
+  int32 player_level = 1;
+  uint64 total_exp = 2;
+  uint64 accum_exp = 3;
+  float exp_bonus = 4;
+  ProtoPlayerStamina stamina = 5;
+  ProtoPlayerDeckCollection decks = 6;
+  ProtoLastBattleInformation last_battle_information = 7;
 }
 
 message ProtoBattleStartData {
