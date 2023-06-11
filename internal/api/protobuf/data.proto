@@ -8,9 +8,8 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protog";
 message ProtoGameData {
 
   string player_name = 1;
-
-  string player_comment = 6;
-  string rental_card = 7;
+  string player_comment = 2;
+  ProtoMailBox mailbox = 3;
 
   ProtoAbilityCardData ability_card_data = 8;
   ProtoJobCardData job_card_data = 9;
@@ -28,7 +27,7 @@ message ProtoGameData {
 
   ProtoRankingInfoSet event_rankings = 19;
 
-  ProtoMailBox mailbox = 20;
+
 
 }
 

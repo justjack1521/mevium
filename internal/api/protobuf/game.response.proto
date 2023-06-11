@@ -111,7 +111,22 @@ message DeckEditAllResponse {
 }
 
 message FetchPlayerDataResponse {
-  bytes Data = 1;
+  string player_id = 1;
+  string player_name = 2;
+  string player_comment = 3;
+  protog.ProtoMailBox mailbox = 4;
+
+  protog.ProtoAbilityCardData ability_card_data = 5;
+  protog.ProtoJobCardData job_card_data = 6;
+  protog.ProtoItemData item_data = 7;
+
+  protog.ProtoDailyData daily_data = 8;
+
+  protog.ProtoFairyCompanionData fairy_companion_data = 9;
+  protog.ProtoRegionMapData region_map_data = 10;
+
+  protog.ProtoBattleData single_play_battle_data = 11;
+  protog.ProtoBattleData multi_play_battle_data = 12;
 }
 
 message FilterSortResponse {
