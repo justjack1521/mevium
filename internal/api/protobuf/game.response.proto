@@ -137,10 +137,8 @@ message FilterSortResponse {
 
 message MailBoxItemClaim {
   int32 index = 1;
-  oneof reward {
-    protog.ProtoItemInstance item_instance = 2;
-    protog.ProtoAbilityCardInstance ability_card_instance = 3;
-  }
+  string reference_id = 2;
+  int32 quantity = 3;
 }
 
 message UpdateProfileResponse {
