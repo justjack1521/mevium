@@ -98,7 +98,7 @@ message ClaimMailBoxItemResponse {
 }
 
 message ClaimAllMailBoxItemResponse {
-
+ repeated MailBoxItemClaim Claims = 1;
 }
 
 message ClaimEventRankingResponse {
