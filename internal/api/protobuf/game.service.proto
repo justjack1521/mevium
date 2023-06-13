@@ -18,6 +18,7 @@ service MeviusGameService {
   rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
   rpc ClaimEventRanking(protoc.ClaimEventRankingRequest) returns (protoc.ClaimEventRankingResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
+  rpc ClaimAllMailboxItem(protoc.ClaimAllMailBoxItemRequest) returns (protoc.ClaimAllMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
   rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllResponse) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
