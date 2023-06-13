@@ -115,7 +115,11 @@ message UpdateProfileRequest {
 }
 
 message ClaimMailBoxItemRequest {
-  repeated int32 index = 1;
+  string id = 1;
+}
+
+message ClaimAllMailBoxItemRequest {
+
 }
 
 message ClaimEventRankingRequest {

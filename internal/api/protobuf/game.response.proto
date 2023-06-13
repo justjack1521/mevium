@@ -94,7 +94,11 @@ message CardTransferResponse {
 }
 
 message ClaimMailBoxItemResponse {
-  repeated MailBoxItemClaim Claims = 1;
+  MailBoxItemClaim Claim = 1;
+}
+
+message ClaimAllMailBoxItemResponse {
+
 }
 
 message ClaimEventRankingResponse {
