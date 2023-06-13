@@ -77,7 +77,7 @@ message ProtoBattleData {
   float exp_bonus = 4;
   ProtoPlayerStamina stamina = 5;
   ProtoPlayerDeckCollection decks = 6;
-  ProtoLastBattleInformation last_battle_information = 7;
+  optional ProtoLastBattleInformation last_battle_information = 7;
 }
 
 message ProtoBattleStartData {
@@ -221,8 +221,8 @@ message ProtoJobCardInstance {
 }
 
 message ProtoLastBattleInformation {
-  ProtoBattleStartData start_data = 1;
-  ProtoLastBattleResults results = 2;
+  optional ProtoBattleStartData start_data = 1;
+  optional ProtoLastBattleResults results = 2;
 }
 
 message ProtoLastBattleResults {
