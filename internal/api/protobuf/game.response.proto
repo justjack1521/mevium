@@ -118,6 +118,13 @@ message FetchPlayerDataResponse {
   protog.ProtoGameData data = 1;
 }
 
+message FirstDailyLoginResponse {
+  int64 login_bonus_received = 1;
+  protog.ProtoDailyMissionInstance daily_mission = 2;
+  protog.ProtoLoginCampaignInstance standard_login_bonus = 3;
+  protog.ProtoLoginCampaignInstance special_login_bonus = 4;
+}
+
 message FilterSortResponse {
   int32 View = 1;
   int32 Index = 2;
