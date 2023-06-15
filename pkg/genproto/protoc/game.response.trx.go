@@ -73,6 +73,10 @@ func (x *ConfirmDailyMissionResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *FirstDailyLoginResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *FetchPlayerDataResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
