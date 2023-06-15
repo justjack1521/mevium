@@ -23,9 +23,12 @@ const (
 	MeviusGameService_BattleComplete_FullMethodName      = "/service.MeviusGameService/BattleComplete"
 	MeviusGameService_BattleRevive_FullMethodName        = "/service.MeviusGameService/BattleRevive"
 	MeviusGameService_BattleStart_FullMethodName         = "/service.MeviusGameService/BattleStart"
-	MeviusGameService_CardSale_FullMethodName            = "/service.MeviusGameService/CardSale"
+	MeviusGameService_CardAugment_FullMethodName         = "/service.MeviusGameService/CardAugment"
+	MeviusGameService_CardFavourite_FullMethodName       = "/service.MeviusGameService/CardFavourite"
 	MeviusGameService_CardFusion_FullMethodName          = "/service.MeviusGameService/CardFusion"
 	MeviusGameService_CardBoostFusion_FullMethodName     = "/service.MeviusGameService/CardBoostFusion"
+	MeviusGameService_CardSale_FullMethodName            = "/service.MeviusGameService/CardSale"
+	MeviusGameService_CardTransfer_FullMethodName        = "/service.MeviusGameService/CardTransfer"
 	MeviusGameService_CreateProfile_FullMethodName       = "/service.MeviusGameService/CreateProfile"
 	MeviusGameService_ClaimEventRanking_FullMethodName   = "/service.MeviusGameService/ClaimEventRanking"
 	MeviusGameService_ClaimMailboxItem_FullMethodName    = "/service.MeviusGameService/ClaimMailboxItem"
@@ -33,11 +36,11 @@ const (
 	MeviusGameService_ConfirmDailyMission_FullMethodName = "/service.MeviusGameService/ConfirmDailyMission"
 	MeviusGameService_DeckEdit_FullMethodName            = "/service.MeviusGameService/DeckEdit"
 	MeviusGameService_FetchPlayerData_FullMethodName     = "/service.MeviusGameService/FetchPlayerData"
-	MeviusGameService_FavouriteCard_FullMethodName       = "/service.MeviusGameService/FavouriteCard"
+	MeviusGameService_FirstDailyLogin_FullMethodName     = "/service.MeviusGameService/FirstDailyLogin"
+	MeviusGameService_ProcessRegionEvent_FullMethodName  = "/service.MeviusGameService/ProcessRegionEvent"
 	MeviusGameService_RestoreStamina_FullMethodName      = "/service.MeviusGameService/RestoreStamina"
 	MeviusGameService_Teleport_FullMethodName            = "/service.MeviusGameService/Teleport"
 	MeviusGameService_UpdateProfile_FullMethodName       = "/service.MeviusGameService/UpdateProfile"
-	MeviusGameService_ProcessRegionEvent_FullMethodName  = "/service.MeviusGameService/ProcessRegionEvent"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -47,9 +50,12 @@ type MeviusGameServiceClient interface {
 	BattleComplete(ctx context.Context, in *protoc.BattleCompleteRequest, opts ...grpc.CallOption) (*protoc.BattleCompleteResponse, error)
 	BattleRevive(ctx context.Context, in *protoc.BattleReviveRequest, opts ...grpc.CallOption) (*protoc.BattleReviveResponse, error)
 	BattleStart(ctx context.Context, in *protoc.BattleStartRequest, opts ...grpc.CallOption) (*protoc.BattleStartResponse, error)
-	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
+	CardAugment(ctx context.Context, in *protoc.CardAugmentRequest, opts ...grpc.CallOption) (*protoc.CardAugmentResponse, error)
+	CardFavourite(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
 	CardFusion(ctx context.Context, in *protoc.CardFusionRequest, opts ...grpc.CallOption) (*protoc.CardFusionResponse, error)
 	CardBoostFusion(ctx context.Context, in *protoc.CardBoostFusionRequest, opts ...grpc.CallOption) (*protoc.CardBoostFusionResponse, error)
+	CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error)
+	CardTransfer(ctx context.Context, in *protoc.CardTransferRequest, opts ...grpc.CallOption) (*protoc.CardTransferResponse, error)
 	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
 	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
@@ -57,11 +63,11 @@ type MeviusGameServiceClient interface {
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
 	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
-	FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error)
+	FirstDailyLogin(ctx context.Context, in *protoc.FirstDailyLoginRequest, opts ...grpc.CallOption) (*protoc.FirstDailyLoginResponse, error)
+	ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error)
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
 	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
-	ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -99,9 +105,18 @@ func (c *meviusGameServiceClient) BattleStart(ctx context.Context, in *protoc.Ba
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error) {
-	out := new(protoc.CardSaleResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_CardSale_FullMethodName, in, out, opts...)
+func (c *meviusGameServiceClient) CardAugment(ctx context.Context, in *protoc.CardAugmentRequest, opts ...grpc.CallOption) (*protoc.CardAugmentResponse, error) {
+	out := new(protoc.CardAugmentResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_CardAugment_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) CardFavourite(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error) {
+	out := new(protoc.CardFavouriteResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_CardFavourite_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -120,6 +135,24 @@ func (c *meviusGameServiceClient) CardFusion(ctx context.Context, in *protoc.Car
 func (c *meviusGameServiceClient) CardBoostFusion(ctx context.Context, in *protoc.CardBoostFusionRequest, opts ...grpc.CallOption) (*protoc.CardBoostFusionResponse, error) {
 	out := new(protoc.CardBoostFusionResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_CardBoostFusion_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) CardSale(ctx context.Context, in *protoc.CardSaleRequest, opts ...grpc.CallOption) (*protoc.CardSaleResponse, error) {
+	out := new(protoc.CardSaleResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_CardSale_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) CardTransfer(ctx context.Context, in *protoc.CardTransferRequest, opts ...grpc.CallOption) (*protoc.CardTransferResponse, error) {
+	out := new(protoc.CardTransferResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_CardTransfer_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -189,9 +222,18 @@ func (c *meviusGameServiceClient) FetchPlayerData(ctx context.Context, in *proto
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) FavouriteCard(ctx context.Context, in *protoc.CardFavouriteRequest, opts ...grpc.CallOption) (*protoc.CardFavouriteResponse, error) {
-	out := new(protoc.CardFavouriteResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_FavouriteCard_FullMethodName, in, out, opts...)
+func (c *meviusGameServiceClient) FirstDailyLogin(ctx context.Context, in *protoc.FirstDailyLoginRequest, opts ...grpc.CallOption) (*protoc.FirstDailyLoginResponse, error) {
+	out := new(protoc.FirstDailyLoginResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_FirstDailyLogin_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error) {
+	out := new(protoc.ProcessRegionEventResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ProcessRegionEvent_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -225,15 +267,6 @@ func (c *meviusGameServiceClient) UpdateProfile(ctx context.Context, in *protoc.
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error) {
-	out := new(protoc.ProcessRegionEventResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_ProcessRegionEvent_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -241,9 +274,12 @@ type MeviusGameServiceServer interface {
 	BattleComplete(context.Context, *protoc.BattleCompleteRequest) (*protoc.BattleCompleteResponse, error)
 	BattleRevive(context.Context, *protoc.BattleReviveRequest) (*protoc.BattleReviveResponse, error)
 	BattleStart(context.Context, *protoc.BattleStartRequest) (*protoc.BattleStartResponse, error)
-	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
+	CardAugment(context.Context, *protoc.CardAugmentRequest) (*protoc.CardAugmentResponse, error)
+	CardFavourite(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
 	CardFusion(context.Context, *protoc.CardFusionRequest) (*protoc.CardFusionResponse, error)
 	CardBoostFusion(context.Context, *protoc.CardBoostFusionRequest) (*protoc.CardBoostFusionResponse, error)
+	CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error)
+	CardTransfer(context.Context, *protoc.CardTransferRequest) (*protoc.CardTransferResponse, error)
 	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
 	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
@@ -251,11 +287,11 @@ type MeviusGameServiceServer interface {
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
 	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
-	FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error)
+	FirstDailyLogin(context.Context, *protoc.FirstDailyLoginRequest) (*protoc.FirstDailyLoginResponse, error)
+	ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error)
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
 	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
-	ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -271,14 +307,23 @@ func (UnimplementedMeviusGameServiceServer) BattleRevive(context.Context, *proto
 func (UnimplementedMeviusGameServiceServer) BattleStart(context.Context, *protoc.BattleStartRequest) (*protoc.BattleStartResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BattleStart not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+func (UnimplementedMeviusGameServiceServer) CardAugment(context.Context, *protoc.CardAugmentRequest) (*protoc.CardAugmentResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardAugment not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) CardFavourite(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardFavourite not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) CardFusion(context.Context, *protoc.CardFusionRequest) (*protoc.CardFusionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardFusion not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) CardBoostFusion(context.Context, *protoc.CardBoostFusionRequest) (*protoc.CardBoostFusionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardBoostFusion not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) CardSale(context.Context, *protoc.CardSaleRequest) (*protoc.CardSaleResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) CardTransfer(context.Context, *protoc.CardTransferRequest) (*protoc.CardTransferResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardTransfer not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProfile not implemented")
@@ -301,8 +346,11 @@ func (UnimplementedMeviusGameServiceServer) DeckEdit(context.Context, *protoc.De
 func (UnimplementedMeviusGameServiceServer) FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FetchPlayerData not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) FavouriteCard(context.Context, *protoc.CardFavouriteRequest) (*protoc.CardFavouriteResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FavouriteCard not implemented")
+func (UnimplementedMeviusGameServiceServer) FirstDailyLogin(context.Context, *protoc.FirstDailyLoginRequest) (*protoc.FirstDailyLoginResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FirstDailyLogin not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProcessRegionEvent not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
@@ -312,9 +360,6 @@ func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protoc.Te
 }
 func (UnimplementedMeviusGameServiceServer) UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
-}
-func (UnimplementedMeviusGameServiceServer) ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ProcessRegionEvent not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -382,20 +427,38 @@ func _MeviusGameService_BattleStart_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_CardSale_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.CardSaleRequest)
+func _MeviusGameService_CardAugment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardAugmentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).CardSale(ctx, in)
+		return srv.(MeviusGameServiceServer).CardAugment(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusGameService_CardSale_FullMethodName,
+		FullMethod: MeviusGameService_CardAugment_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).CardSale(ctx, req.(*protoc.CardSaleRequest))
+		return srv.(MeviusGameServiceServer).CardAugment(ctx, req.(*protoc.CardAugmentRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_CardFavourite_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardFavouriteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).CardFavourite(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_CardFavourite_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).CardFavourite(ctx, req.(*protoc.CardFavouriteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -432,6 +495,42 @@ func _MeviusGameService_CardBoostFusion_Handler(srv interface{}, ctx context.Con
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusGameServiceServer).CardBoostFusion(ctx, req.(*protoc.CardBoostFusionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_CardSale_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardSaleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).CardSale(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_CardSale_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).CardSale(ctx, req.(*protoc.CardSaleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_CardTransfer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CardTransferRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).CardTransfer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_CardTransfer_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).CardTransfer(ctx, req.(*protoc.CardTransferRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -562,20 +661,38 @@ func _MeviusGameService_FetchPlayerData_Handler(srv interface{}, ctx context.Con
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_FavouriteCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.CardFavouriteRequest)
+func _MeviusGameService_FirstDailyLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.FirstDailyLoginRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).FavouriteCard(ctx, in)
+		return srv.(MeviusGameServiceServer).FirstDailyLogin(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusGameService_FavouriteCard_FullMethodName,
+		FullMethod: MeviusGameService_FirstDailyLogin_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).FavouriteCard(ctx, req.(*protoc.CardFavouriteRequest))
+		return srv.(MeviusGameServiceServer).FirstDailyLogin(ctx, req.(*protoc.FirstDailyLoginRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_ProcessRegionEvent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ProcessRegionEventRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ProcessRegionEvent_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, req.(*protoc.ProcessRegionEventRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -634,24 +751,6 @@ func _MeviusGameService_UpdateProfile_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_ProcessRegionEvent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.ProcessRegionEventRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusGameService_ProcessRegionEvent_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, req.(*protoc.ProcessRegionEventRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -672,8 +771,12 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_BattleStart_Handler,
 		},
 		{
-			MethodName: "CardSale",
-			Handler:    _MeviusGameService_CardSale_Handler,
+			MethodName: "CardAugment",
+			Handler:    _MeviusGameService_CardAugment_Handler,
+		},
+		{
+			MethodName: "CardFavourite",
+			Handler:    _MeviusGameService_CardFavourite_Handler,
 		},
 		{
 			MethodName: "CardFusion",
@@ -682,6 +785,14 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CardBoostFusion",
 			Handler:    _MeviusGameService_CardBoostFusion_Handler,
+		},
+		{
+			MethodName: "CardSale",
+			Handler:    _MeviusGameService_CardSale_Handler,
+		},
+		{
+			MethodName: "CardTransfer",
+			Handler:    _MeviusGameService_CardTransfer_Handler,
 		},
 		{
 			MethodName: "CreateProfile",
@@ -712,8 +823,12 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_FetchPlayerData_Handler,
 		},
 		{
-			MethodName: "FavouriteCard",
-			Handler:    _MeviusGameService_FavouriteCard_Handler,
+			MethodName: "FirstDailyLogin",
+			Handler:    _MeviusGameService_FirstDailyLogin_Handler,
+		},
+		{
+			MethodName: "ProcessRegionEvent",
+			Handler:    _MeviusGameService_ProcessRegionEvent_Handler,
 		},
 		{
 			MethodName: "RestoreStamina",
@@ -726,10 +841,6 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdateProfile",
 			Handler:    _MeviusGameService_UpdateProfile_Handler,
-		},
-		{
-			MethodName: "ProcessRegionEvent",
-			Handler:    _MeviusGameService_ProcessRegionEvent_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

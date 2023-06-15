@@ -67,10 +67,6 @@ message BattleStartRequest {
   bool hard_mode = 3;
 }
 
-message CreateProfileRequest {
-  string player_name = 1;
-}
-
 message CardAugmentRequest {
 }
 
@@ -109,10 +105,12 @@ message CardTransferRequest {
   repeated int32 Cards = 2;
 }
 
-message UpdateProfileRequest {
-  string comment = 2;
-  int32 rental_card = 3;
-  int32 companion = 4;
+message CreateProfileRequest {
+  string player_name = 1;
+}
+
+message ClaimEventRankingRequest {
+
 }
 
 message ClaimMailBoxItemRequest {
@@ -120,10 +118,6 @@ message ClaimMailBoxItemRequest {
 }
 
 message ClaimAllMailBoxItemRequest {
-
-}
-
-message ClaimEventRankingRequest {
 
 }
 
@@ -148,12 +142,19 @@ message DeckEditAllRequest {
   bool MPDeck = 2;
 }
 
+message FetchPlayerDataRequest {
+
+}
+
 message FirstDailyLoginRequest {
 
 }
 
-message FetchPlayerDataRequest {
-
+message ProcessRegionEventRequest {
+  string region_map = 1;
+  int32 node_index = 2;
+  int32 definition_value = 3;
+  int32 target = 4;
 }
 
 message SkillPanelUnlockResponse {
@@ -171,9 +172,8 @@ message TeleportRequest {
   TeleportRequestType source = 3;
 }
 
-message ProcessRegionEventRequest {
-  string region_map = 1;
-  int32 node_index = 2;
-  int32 definition_value = 3;
-  int32 target = 4;
+message UpdateProfileRequest {
+  string comment = 2;
+  int32 rental_card = 3;
+  int32 companion = 4;
 }

@@ -12,9 +12,12 @@ service MeviusGameService {
   rpc BattleComplete(protoc.BattleCompleteRequest) returns (protoc.BattleCompleteResponse) {}
   rpc BattleRevive(protoc.BattleReviveRequest) returns (protoc.BattleReviveResponse) {}
   rpc BattleStart(protoc.BattleStartRequest) returns (protoc.BattleStartResponse) {}
-  rpc CardSale(protoc.CardSaleRequest) returns (protoc.CardSaleResponse) {}
+  rpc CardAugment(protoc.CardAugmentRequest) returns (protoc.CardAugmentResponse) {}
+  rpc CardFavourite(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
   rpc CardFusion(protoc.CardFusionRequest) returns (protoc.CardFusionResponse) {}
   rpc CardBoostFusion(protoc.CardBoostFusionRequest) returns (protoc.CardBoostFusionResponse) {}
+  rpc CardSale(protoc.CardSaleRequest) returns (protoc.CardSaleResponse) {}
+  rpc CardTransfer(protoc.CardTransferRequest) returns (protoc.CardTransferResponse) {}
   rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
   rpc ClaimEventRanking(protoc.ClaimEventRankingRequest) returns (protoc.ClaimEventRankingResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
@@ -22,10 +25,10 @@ service MeviusGameService {
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
   rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllResponse) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
-  rpc FavouriteCard(protoc.CardFavouriteRequest) returns (protoc.CardFavouriteResponse) {}
+  rpc FirstDailyLogin(protoc.FirstDailyLoginRequest) returns (protoc.FirstDailyLoginResponse) {}
+  rpc ProcessRegionEvent(protoc.ProcessRegionEventRequest) returns (protoc.ProcessRegionEventResponse) {}
   rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
   rpc Teleport(protoc.TeleportRequest) returns (protoc.TeleportResponse) {}
   rpc UpdateProfile(protoc.UpdateProfileRequest) returns (protoc.UpdateProfileResponse) {}
-  rpc ProcessRegionEvent(protoc.ProcessRegionEventRequest) returns (protoc.ProcessRegionEventResponse) {}
 }
 
