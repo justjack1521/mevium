@@ -17,7 +17,7 @@ message ProtoGameData {
   protog.ProtoItemData item_data = 7;
 
   protog.ProtoFairyCompanionData fairy_companion_data = 8;
-  protog.ProtoRegionMapData region_map_data = 9;
+  protog.ProtoRegionHeaderData region_map_data = 9;
 
   protog.ProtoBattleData single_play_battle_data = 10;
   protog.ProtoBattleData multi_play_battle_data = 11;
@@ -368,6 +368,17 @@ message ProtoRankingEventClaim {
 message ProtoRegionMapData {
   string current_map_id = 1;
   repeated ProtoRegionMapInstance region_maps = 2;
+}
+
+message ProtoRegionHeaderData {
+  string current_map_id = 1;
+  repeated ProtoRegionMapHeader headers = 2;
+}
+
+message ProtoRegionMapHeader {
+  string map_id = 1;
+  bool cleared = 2;
+  int32 completed_count = 3;
 }
 
 message ProtoRegionMapInstance {
