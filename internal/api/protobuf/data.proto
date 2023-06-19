@@ -373,6 +373,7 @@ message ProtoRegionMapData {
 message ProtoRegionHeaderData {
   string current_map_id = 1;
   repeated ProtoRegionMapHeader headers = 2;
+  ProtoRegionMapInstance current_map_data = 3;
 }
 
 message ProtoRegionMapHeader {
