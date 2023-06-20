@@ -38,7 +38,8 @@ enum TeleportRequestType {
   NONE = 0;
   LOGIN = 1;
   WORLD = 2;
-  REGION = 3;
+  FIELD = 3;
+  BATTLE = 4;
 }
 
 message RequestHeader {

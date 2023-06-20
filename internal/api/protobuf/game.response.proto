@@ -157,6 +157,7 @@ message TeleportResponse {
   string region_map = 1;
   int32 region_map_node = 2;
   repeated protog.ProtoRegionTeleportEvent events = 3;
+  optional protog.ProtoRegionMapInstance current_map_data = 4;
 }
 
 message ProcessRegionEventResponse {
