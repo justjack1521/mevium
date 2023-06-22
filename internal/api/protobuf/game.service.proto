@@ -20,7 +20,7 @@ service MeviusGameService {
   rpc CardTransfer(protoc.CardTransferRequest) returns (protoc.CardTransferResponse) {}
   rpc CreateProfile(protoc.CreateProfileRequest) returns (protoc.CreateProfileResponse) {}
   rpc ClaimEventRanking(protoc.ClaimEventRankingRequest) returns (protoc.ClaimEventRankingResponse) {}
-  rpc ClaimLoginCampaign(protoc.ClaimLoginBonusRequest) returns (protoc.ClaimLoginCampaignResponse) {}
+  rpc ClaimLoginCampaign(protoc.ClaimLoginCampaignRequest) returns (protoc.ClaimLoginCampaignResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
   rpc ClaimAllMailboxItem(protoc.ClaimAllMailBoxItemRequest) returns (protoc.ClaimAllMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}

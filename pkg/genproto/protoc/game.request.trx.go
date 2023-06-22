@@ -82,6 +82,14 @@ func NewCardTransferRequest(bytes []byte) (*CardTransferRequest, error) {
 	return req, nil
 }
 
+func NewClaimLoginBonusRequest(bytes []byte) (*ClaimLoginCampaignRequest, error) {
+	req := &ClaimLoginCampaignRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewClaimMailBoxItemRequest(bytes []byte) (*ClaimMailBoxItemRequest, error) {
 	req := &ClaimMailBoxItemRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {

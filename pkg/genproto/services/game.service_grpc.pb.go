@@ -59,7 +59,7 @@ type MeviusGameServiceClient interface {
 	CardTransfer(ctx context.Context, in *protoc.CardTransferRequest, opts ...grpc.CallOption) (*protoc.CardTransferResponse, error)
 	CreateProfile(ctx context.Context, in *protoc.CreateProfileRequest, opts ...grpc.CallOption) (*protoc.CreateProfileResponse, error)
 	ClaimEventRanking(ctx context.Context, in *protoc.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protoc.ClaimEventRankingResponse, error)
-	ClaimLoginCampaign(ctx context.Context, in *protoc.ClaimLoginBonusRequest, opts ...grpc.CallOption) (*protoc.ClaimLoginCampaignResponse, error)
+	ClaimLoginCampaign(ctx context.Context, in *protoc.ClaimLoginCampaignRequest, opts ...grpc.CallOption) (*protoc.ClaimLoginCampaignResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ClaimAllMailboxItem(ctx context.Context, in *protoc.ClaimAllMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimAllMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
@@ -179,7 +179,7 @@ func (c *meviusGameServiceClient) ClaimEventRanking(ctx context.Context, in *pro
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) ClaimLoginCampaign(ctx context.Context, in *protoc.ClaimLoginBonusRequest, opts ...grpc.CallOption) (*protoc.ClaimLoginCampaignResponse, error) {
+func (c *meviusGameServiceClient) ClaimLoginCampaign(ctx context.Context, in *protoc.ClaimLoginCampaignRequest, opts ...grpc.CallOption) (*protoc.ClaimLoginCampaignResponse, error) {
 	out := new(protoc.ClaimLoginCampaignResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_ClaimLoginCampaign_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -293,7 +293,7 @@ type MeviusGameServiceServer interface {
 	CardTransfer(context.Context, *protoc.CardTransferRequest) (*protoc.CardTransferResponse, error)
 	CreateProfile(context.Context, *protoc.CreateProfileRequest) (*protoc.CreateProfileResponse, error)
 	ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error)
-	ClaimLoginCampaign(context.Context, *protoc.ClaimLoginBonusRequest) (*protoc.ClaimLoginCampaignResponse, error)
+	ClaimLoginCampaign(context.Context, *protoc.ClaimLoginCampaignRequest) (*protoc.ClaimLoginCampaignResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ClaimAllMailboxItem(context.Context, *protoc.ClaimAllMailBoxItemRequest) (*protoc.ClaimAllMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
@@ -343,7 +343,7 @@ func (UnimplementedMeviusGameServiceServer) CreateProfile(context.Context, *prot
 func (UnimplementedMeviusGameServiceServer) ClaimEventRanking(context.Context, *protoc.ClaimEventRankingRequest) (*protoc.ClaimEventRankingResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClaimEventRanking not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) ClaimLoginCampaign(context.Context, *protoc.ClaimLoginBonusRequest) (*protoc.ClaimLoginCampaignResponse, error) {
+func (UnimplementedMeviusGameServiceServer) ClaimLoginCampaign(context.Context, *protoc.ClaimLoginCampaignRequest) (*protoc.ClaimLoginCampaignResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClaimLoginCampaign not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error) {
@@ -587,7 +587,7 @@ func _MeviusGameService_ClaimEventRanking_Handler(srv interface{}, ctx context.C
 }
 
 func _MeviusGameService_ClaimLoginCampaign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.ClaimLoginBonusRequest)
+	in := new(protoc.ClaimLoginCampaignRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -599,7 +599,7 @@ func _MeviusGameService_ClaimLoginCampaign_Handler(srv interface{}, ctx context.
 		FullMethod: MeviusGameService_ClaimLoginCampaign_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).ClaimLoginCampaign(ctx, req.(*protoc.ClaimLoginBonusRequest))
+		return srv.(MeviusGameServiceServer).ClaimLoginCampaign(ctx, req.(*protoc.ClaimLoginCampaignRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

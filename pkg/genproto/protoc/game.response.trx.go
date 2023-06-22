@@ -65,7 +65,7 @@ func (x *DeckEditAllResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func (x *MailBoxItemClaim) MarshallBinary() ([]byte, error) {
+func (x *ClaimLoginCampaignResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
