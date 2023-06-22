@@ -94,15 +94,15 @@ message CardTransferResponse {
 }
 
 message ClaimLoginCampaignResponse {
-  MailBoxItemClaim claim = 1;
+  protog.ProtoMailBoxItem claim = 1;
 }
 
 message ClaimMailBoxItemResponse {
-  MailBoxItemClaim claim = 1;
+  protog.ProtoMailBoxItem claim = 1;
 }
 
 message ClaimAllMailBoxItemResponse {
- repeated MailBoxItemClaim claims = 1;
+ repeated protog.ProtoMailBoxItem claims = 1;
 }
 
 message ClaimEventRankingResponse {
@@ -133,12 +133,6 @@ message FilterSortResponse {
   int32 View = 1;
   int32 Index = 2;
   protog.ProtoCardFilterSort FilterSort = 3;
-}
-
-message MailBoxItemClaim {
-  int32 index = 1;
-  string reference_id = 2;
-  int32 quantity = 3;
 }
 
 message UpdateProfileResponse {

@@ -5,6 +5,16 @@ package protog;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protog";
 
+enum ReferenceSource {
+  NONE = 0;
+  ABILITY_CARD = 1;
+  ITEM = 2;
+  JOB_CARD = 3;
+  WEAPON = 4;
+  FAIRY_COMPANION = 5;
+  MP_STAMP = 6;
+}
+
 message ProtoGameData {
 
   string player_id = 1;
@@ -260,15 +270,6 @@ message ProtoMailBox {
 }
 
 message ProtoMailBoxItem {
-  enum ReferenceSource {
-    NONE = 0;
-    ABILITY_CARD = 1;
-    ITEM = 2;
-    JOB_CARD = 3;
-    WEAPON = 4;
-    FAIRY_COMPANION = 5;
-    MP_STAMP = 6;
-  }
   string reference_id = 1;
   ReferenceSource source = 2;
   int32 quantity = 3;
