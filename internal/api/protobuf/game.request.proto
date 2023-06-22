@@ -32,6 +32,7 @@ enum RequestType {
   CARD_FUSION_BOOST = 2200;
   STAMINA_RESTORE = 2300;
   FIRST_DAILY_LOGIN = 2400;
+  CLAIM_LOGIN_CAMPAIGN = 2500;
 }
 
 enum TeleportRequestType {
