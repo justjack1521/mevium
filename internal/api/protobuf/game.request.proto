@@ -114,6 +114,10 @@ message ClaimEventRankingRequest {
 
 }
 
+message ClaimLoginBonusRequest {
+  string campaign_id = 1;
+}
+
 message ClaimMailBoxItemRequest {
   string id = 1;
 }

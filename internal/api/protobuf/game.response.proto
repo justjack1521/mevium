@@ -93,12 +93,16 @@ message CardTransferResponse {
 
 }
 
+message ClaimLoginCampaignResponse {
+  MailBoxItemClaim claim = 1;
+}
+
 message ClaimMailBoxItemResponse {
-  MailBoxItemClaim Claim = 1;
+  MailBoxItemClaim claim = 1;
 }
 
 message ClaimAllMailBoxItemResponse {
- repeated MailBoxItemClaim Claims = 1;
+ repeated MailBoxItemClaim claims = 1;
 }
 
 message ClaimEventRankingResponse {
