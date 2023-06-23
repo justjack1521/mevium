@@ -79,12 +79,13 @@ message ProtoAbilityCardInstance {
 
 message ProtoBattleData {
   int32 player_level = 1;
-  uint64 total_exp = 2;
-  uint64 accum_exp = 3;
-  float exp_bonus = 4;
-  ProtoPlayerStamina stamina = 5;
-  ProtoPlayerDeckCollection decks = 6;
-  optional ProtoLastBattleInformation last_battle_information = 7;
+  string play_mode = 2;
+  uint64 total_exp = 3;
+  uint64 accum_exp = 4;
+  float exp_bonus = 5;
+  ProtoPlayerStamina stamina = 6;
+  ProtoPlayerDeckCollection decks = 7;
+  optional ProtoLastBattleInformation last_battle_information = 8;
 }
 
 message ProtoBattleStartData {
