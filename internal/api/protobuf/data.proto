@@ -95,7 +95,27 @@ message ProtoBattleStartData {
   int32 deck_index = 4;
   repeated BattleItemDrop item_drop_table = 5;
   repeated BattleCardDrop card_drop_table = 6;
+  ProtoBattleProgressData progress_data = 7;
+  repeated ProtoCardProgressData card_progress_data = 8;
   int64 created_at = 20;
+}
+
+message ProtoBattleProgressData {
+  int32 player_level = 1;
+  uint64 total_exp = 2;
+  uint64 accum_exp = 3;
+  float exp_bonus = 4;
+  int32 deck_count = 5;
+  int32 max_stamina = 6;
+}
+
+message ProtoCardProgressData {
+  string instance_id = 1;
+  int32 slot_index = 2;
+  int32 level = 3;
+  uint64 total_exp = 4;
+  uint64 accum_exp = 5;
+  int32 extra_skill_unlock = 6;
 }
 
 message ProtoDailyMissionInstance {
@@ -233,37 +253,10 @@ message ProtoLastBattleResults {
   repeated ProtoItemValuePair seed_rewards = 3;
   double seed_area_multiplier = 4;
   double seed_score_multiplier = 5;
-  ProtoProgressInformation progress_information = 7;
-  repeated ProtoCardPostBattleState card_states = 9;
-  repeated ProtoItemValuePair item_rewards = 10;
-  repeated ProtoAbilityCardInstance card_drops = 11;
-}
-
-message ProtoProgressInformation {
-  uint32 previous_level = 1;
-  uint64 previous_accum_exp = 2;
-  uint64 previous_total_exp = 3;
-  uint32 previous_max_stamina = 4;
-  float previous_exp_bonus = 5;
-  int32 previous_deck_count = 6;
-
-  uint32 current_level = 7;
-  uint64 current_accum_exp = 8;
-  uint64 current_total_exp = 9;
-  uint32 current_max_stamina = 10;
-  float current_exp_bonus = 11;
-  int32 current_deck_count = 12;
-
-}
-
-message ProtoCardPostBattleState {
-  string instance_id = 1;
-  int32 slot_index = 2;
-  int32 previous_level = 3;
-  uint64 previous_accum_exp = 4;
-  int32 level_ups = 5;
-  uint64 total_exp = 6;
-  uint64 accum_exp = 7;
+  ProtoBattleProgressData progress_data = 6;
+  repeated ProtoCardProgressData card_progress_data = 7;
+  repeated ProtoItemValuePair item_rewards = 8;
+  repeated ProtoAbilityCardInstance card_drops = 9;
 }
 
 message ProtoMailBox {
