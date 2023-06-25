@@ -250,13 +250,9 @@ message ProtoLastBattleInformation {
 message ProtoLastBattleResults {
   int32 total_exp = 1;
   int32 gold_reward = 2;
-  repeated ProtoItemValuePair seed_rewards = 3;
-  double seed_area_multiplier = 4;
-  double seed_score_multiplier = 5;
-  ProtoBattleProgressData progress_data = 6;
-  repeated ProtoCardProgressData card_progress_data = 7;
-  repeated ProtoItemValuePair item_rewards = 8;
-  repeated ProtoAbilityCardInstance card_drops = 9;
+  uint64 score = 3;
+  ProtoBattleProgressData progress_data = 4;
+  repeated ProtoCardProgressData card_progress_data = 5;
 }
 
 message ProtoMailBox {

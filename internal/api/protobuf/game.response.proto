@@ -28,12 +28,21 @@ message ResponseHeader {
 }
 
 message BattleCompleteResponse {
-  protog.ProtoLastBattleResults Results = 1;
-  repeated protog.ProtoRegionEventData PendingEvents = 2;
-  string region_map_id = 3;
-  int32 region_node_index = 4;
-  ProtoRankingUpdate weekly_rank_update = 5;
-  ProtoRankingUpdate event_rank_update = 6;
+
+  string region_map_id = 1;
+  int32 region_node_index = 2;
+
+  protog.ProtoLastBattleResults Results = 3;
+
+  repeated protog.ProtoItemValuePair seed_rewards = 4;
+  float seed_area_multiplier = 5;
+  float seed_score_multiplier = 6;
+  repeated protog.ProtoItemValuePair item_rewards = 7;
+  repeated protog.ProtoAbilityCardInstance card_drops = 8;
+  repeated protog.ProtoRegionEventData PendingEvents = 9;
+
+  ProtoRankingUpdate weekly_rank_update = 10;
+  ProtoRankingUpdate event_rank_update = 11;
 }
 
 message ProtoRankingUpdate {
