@@ -115,7 +115,7 @@ message ProtoCardProgressData {
   int32 level = 3;
   uint64 total_exp = 4;
   uint64 accum_exp = 5;
-  int32 extra_skill_unlock = 6;
+  bool extra_skill_unlock = 6;
 }
 
 message ProtoDailyMissionInstance {
