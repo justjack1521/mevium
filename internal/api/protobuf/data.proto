@@ -149,6 +149,7 @@ message BattleItemDropResult {
 
 message BattleCardDropResult {
   string card_id = 1;
+  bool new_card = 2;
 }
 
 message ProtoCardFilterSortSet {
