@@ -156,11 +156,13 @@ message FirstDailyLoginRequest {
 
 }
 
+message FetchPendingRegionEventsRequest {
+  string region_map_id = 1;
+}
+
 message ProcessRegionEventRequest {
-  string region_map = 1;
-  int32 node_index = 2;
-  int32 definition_value = 3;
-  int32 target = 4;
+  string region_map_id = 1;
+  protog.ProtoRegionEventData event = 2;
 }
 
 message SkillPanelUnlockResponse {

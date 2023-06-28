@@ -34,7 +34,8 @@ message BattleCompleteResponse {
   float seed_score_multiplier = 6;
   repeated protog.ProtoItemValuePair item_rewards = 7;
   repeated protog.ProtoAbilityCardInstance card_drops = 8;
-  repeated protog.ProtoRegionEventData PendingEvents = 9;
+
+  bool pending_events = 9;
 
   ProtoRankingUpdate weekly_rank_update = 10;
   ProtoRankingUpdate event_rank_update = 11;
@@ -160,6 +161,11 @@ message TeleportResponse {
   int32 region_map_node = 2;
   repeated protog.ProtoRegionTeleportEvent events = 3;
   optional protog.ProtoRegionMapInstance current_map_data = 4;
+}
+
+message FetchPendingRegionEventsResponse {
+  string region_map_id = 1;
+  repeated protog.ProtoRegionEventData event = 2;
 }
 
 message ProcessRegionEventResponse {
