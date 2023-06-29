@@ -257,9 +257,31 @@ message ProtoLastBattleResults {
   int32 region_node_index = 2;
   uint64 score = 3;
   int32 total_exp = 4;
-  int32 gold_reward = 5;
-  ProtoBattleProgressData progress_data = 6;
-  repeated ProtoCardProgressData card_progress_data = 7;
+
+  float seed_area_multiplier = 5;
+  float seed_battle_multiplier = 6;
+
+  ProtoBattleProgressData progress_data = 7;
+  repeated ProtoCardProgressData card_progress_data = 8;
+
+  repeated TaggedBattleItemReward item_rewards = 9;
+  repeated TaggedBattleCardReward card_rewards = 10;
+
+  repeated ProtoRegionEventData pending_events = 11;
+
+}
+
+message TaggedBattleItemReward {
+  string item_id = 1;
+  int32 quantity = 2;
+  int32 tag = 3;
+}
+
+message TaggedBattleCardReward {
+  string instance_id = 1;
+  string ability_card_id = 2;
+  bool new_card = 3;
+  int32 tag = 4;
 }
 
 message ProtoMailBox {
