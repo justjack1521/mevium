@@ -104,11 +104,14 @@ message ProtoBattleStartData {
   float player_experience_bonus = 9;
   float add_experience_bonus = 10;
 
-  repeated BattleItemDrop item_drop_table = 11;
-  repeated BattleCardDrop card_drop_table = 12;
+  float area_seed_multiplier = 11;
+  float ability_seed_multiplier = 12;
 
-  ProtoBattleProgressData progress_data = 13;
-  repeated ProtoCardProgressData card_progress_data = 14;
+  repeated BattleItemDrop item_drop_table = 13;
+  repeated BattleCardDrop card_drop_table = 14;
+
+  ProtoBattleProgressData progress_data = 15;
+  repeated ProtoCardProgressData card_progress_data = 16;
 
   int64 created_at = 20;
 }
