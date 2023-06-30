@@ -91,20 +91,24 @@ message ProtoBattleData {
 
 message ProtoBattleStartData {
   string region_map_id = 1;
-  int32 region_node_index = 2;
+  string region_node_id = 2;
+  int32 region_node_index = 3;
 
-  int32 deck_index = 3;
-  bool hard_mode = 4;
-  bool completed = 5;
+  int32 deck_index = 4;
+  bool hard_mode = 5;
+  bool completed = 6;
 
-  float player_experience_bonus = 6;
-  float add_experience_bonus = 7;
+  uint64 total_exp = 7;
+  int32 gold_reward = 8;
 
-  repeated BattleItemDrop item_drop_table = 8;
-  repeated BattleCardDrop card_drop_table = 9;
+  float player_experience_bonus = 9;
+  float add_experience_bonus = 10;
 
-  ProtoBattleProgressData progress_data = 10;
-  repeated ProtoCardProgressData card_progress_data = 11;
+  repeated BattleItemDrop item_drop_table = 11;
+  repeated BattleCardDrop card_drop_table = 12;
+
+  ProtoBattleProgressData progress_data = 13;
+  repeated ProtoCardProgressData card_progress_data = 14;
 
   int64 created_at = 20;
 }
@@ -256,6 +260,7 @@ message ProtoLastBattleResults {
   string region_map_id = 1;
   int32 region_node_index = 2;
   uint64 score = 3;
+
   int32 total_exp = 4;
 
   float seed_area_multiplier = 5;
