@@ -263,7 +263,6 @@ message ProtoLastBattleResults {
   string region_map_id = 1;
   int32 region_node_index = 2;
   uint64 score = 3;
-
   int32 total_exp = 4;
 
   float seed_area_multiplier = 5;
