@@ -38,26 +38,26 @@ func (x *BattleComplete) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewBattleRankingInfo(bytes []byte) (*BattleRankingInfo, error) {
-	req := &BattleRankingInfo{}
-	if err := proto.Unmarshal(bytes, req); err != nil {
-		return nil, err
-	}
-	return req, nil
-}
-
-func (x *BattleRankingInfo) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func NewBattleRankingClaim(bytes []byte) (*BattleRankingClaim, error) {
-	req := &BattleRankingClaim{}
-	if err := proto.Unmarshal(bytes, req); err != nil {
-		return nil, err
-	}
-	return req, nil
-}
-
-func (x *BattleRankingClaim) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
+//func NewBattleRankingInfo(bytes []byte) (*BattleRankingInfo, error) {
+//	req := &BattleRankingInfo{}
+//	if err := proto.Unmarshal(bytes, req); err != nil {
+//		return nil, err
+//	}
+//	return req, nil
+//}
+//
+//func (x *BattleRankingInfo) MarshallBinary() ([]byte, error) {
+//	return proto.Marshal(x)
+//}
+//
+//func NewBattleRankingClaim(bytes []byte) (*BattleRankingClaim, error) {
+//	req := &BattleRankingClaim{}
+//	if err := proto.Unmarshal(bytes, req); err != nil {
+//		return nil, err
+//	}
+//	return req, nil
+//}
+//
+//func (x *BattleRankingClaim) MarshallBinary() ([]byte, error) {
+//	return proto.Marshal(x)
+//}
