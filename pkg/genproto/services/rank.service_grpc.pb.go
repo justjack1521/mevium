@@ -20,7 +20,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusRankService_SubmitScore_FullMethodName = "/service.MeviusRankService/SubmitScore"
+	MeviusRankService_SubmitScore_FullMethodName         = "/service.MeviusRankService/SubmitScore"
+	MeviusRankService_GetWeeklyRankRange_FullMethodName  = "/service.MeviusRankService/GetWeeklyRankRange"
+	MeviusRankService_GetSpecialRankRange_FullMethodName = "/service.MeviusRankService/GetSpecialRankRange"
 )
 
 // MeviusRankServiceClient is the client API for MeviusRankService service.
@@ -28,6 +30,8 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusRankServiceClient interface {
 	SubmitScore(ctx context.Context, in *protor.SubmitScoreRequest, opts ...grpc.CallOption) (*protor.SubmitScoreResponse, error)
+	GetWeeklyRankRange(ctx context.Context, in *protor.WeeklyRankRangeRequest, opts ...grpc.CallOption) (*protor.WeeklyRankRangeResponse, error)
+	GetSpecialRankRange(ctx context.Context, in *protor.SpecialRankRangeRequest, opts ...grpc.CallOption) (*protor.SpecialRankRangeResponse, error)
 }
 
 type meviusRankServiceClient struct {
@@ -47,11 +51,31 @@ func (c *meviusRankServiceClient) SubmitScore(ctx context.Context, in *protor.Su
 	return out, nil
 }
 
+func (c *meviusRankServiceClient) GetWeeklyRankRange(ctx context.Context, in *protor.WeeklyRankRangeRequest, opts ...grpc.CallOption) (*protor.WeeklyRankRangeResponse, error) {
+	out := new(protor.WeeklyRankRangeResponse)
+	err := c.cc.Invoke(ctx, MeviusRankService_GetWeeklyRankRange_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusRankServiceClient) GetSpecialRankRange(ctx context.Context, in *protor.SpecialRankRangeRequest, opts ...grpc.CallOption) (*protor.SpecialRankRangeResponse, error) {
+	out := new(protor.SpecialRankRangeResponse)
+	err := c.cc.Invoke(ctx, MeviusRankService_GetSpecialRankRange_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusRankServiceServer is the server API for MeviusRankService service.
 // All implementations should embed UnimplementedMeviusRankServiceServer
 // for forward compatibility
 type MeviusRankServiceServer interface {
 	SubmitScore(context.Context, *protor.SubmitScoreRequest) (*protor.SubmitScoreResponse, error)
+	GetWeeklyRankRange(context.Context, *protor.WeeklyRankRangeRequest) (*protor.WeeklyRankRangeResponse, error)
+	GetSpecialRankRange(context.Context, *protor.SpecialRankRangeRequest) (*protor.SpecialRankRangeResponse, error)
 }
 
 // UnimplementedMeviusRankServiceServer should be embedded to have forward compatible implementations.
@@ -60,6 +84,12 @@ type UnimplementedMeviusRankServiceServer struct {
 
 func (UnimplementedMeviusRankServiceServer) SubmitScore(context.Context, *protor.SubmitScoreRequest) (*protor.SubmitScoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SubmitScore not implemented")
+}
+func (UnimplementedMeviusRankServiceServer) GetWeeklyRankRange(context.Context, *protor.WeeklyRankRangeRequest) (*protor.WeeklyRankRangeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetWeeklyRankRange not implemented")
+}
+func (UnimplementedMeviusRankServiceServer) GetSpecialRankRange(context.Context, *protor.SpecialRankRangeRequest) (*protor.SpecialRankRangeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSpecialRankRange not implemented")
 }
 
 // UnsafeMeviusRankServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -91,6 +121,42 @@ func _MeviusRankService_SubmitScore_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusRankService_GetWeeklyRankRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protor.WeeklyRankRangeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusRankServiceServer).GetWeeklyRankRange(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusRankService_GetWeeklyRankRange_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusRankServiceServer).GetWeeklyRankRange(ctx, req.(*protor.WeeklyRankRangeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusRankService_GetSpecialRankRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protor.SpecialRankRangeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusRankServiceServer).GetSpecialRankRange(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusRankService_GetSpecialRankRange_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusRankServiceServer).GetSpecialRankRange(ctx, req.(*protor.SpecialRankRangeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusRankService_ServiceDesc is the grpc.ServiceDesc for MeviusRankService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -101,6 +167,14 @@ var MeviusRankService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SubmitScore",
 			Handler:    _MeviusRankService_SubmitScore_Handler,
+		},
+		{
+			MethodName: "GetWeeklyRankRange",
+			Handler:    _MeviusRankService_GetWeeklyRankRange_Handler,
+		},
+		{
+			MethodName: "GetSpecialRankRange",
+			Handler:    _MeviusRankService_GetSpecialRankRange_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

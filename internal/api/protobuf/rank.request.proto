@@ -15,3 +15,13 @@ message SubmitScoreRequest {
   int32 node_index = 6;
   protog.ProtoPlayerLoadout loadout = 7;
 }
+
+message WeeklyRankRangeRequest {
+  string player_id = 1;
+  string region_id = 2;
+}
+
+message SpecialRankRangeRequest {
+  string player_id = 1;
+  string region_id = 2;
+}

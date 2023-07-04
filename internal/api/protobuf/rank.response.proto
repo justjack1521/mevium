@@ -18,3 +18,11 @@ message SubmitScoreResponse {
   int64 previous_weekly_rank = 9;
   int64 previously_event_rank = 10;
 }
+
+message WeeklyRankRangeResponse {
+  protog.ProtoRankingInfo rank_ranges = 1;
+}
+
+message SpecialRankRangeResponse {
+  protog.ProtoRankingInfo rank_ranges = 1;
+}

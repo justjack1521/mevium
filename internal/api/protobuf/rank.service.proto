@@ -9,4 +9,6 @@ import "rank.response.proto";
 
 service MeviusRankService {
   rpc SubmitScore(rank.SubmitScoreRequest) returns (rank.SubmitScoreResponse) {}
+  rpc GetWeeklyRankRange(rank.WeeklyRankRangeRequest) returns (rank.WeeklyRankRangeResponse) {}
+  rpc GetSpecialRankRange(rank.SpecialRankRangeRequest) returns (rank.SpecialRankRangeResponse) {}
 }
