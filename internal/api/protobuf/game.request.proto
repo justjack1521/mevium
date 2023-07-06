@@ -33,6 +33,7 @@ enum RequestType {
   STAMINA_RESTORE = 2300;
   FIRST_DAILY_LOGIN = 2400;
   CLAIM_LOGIN_CAMPAIGN = 2500;
+  GET_RANKING_EVENTS = 2600;
 }
 
 enum TeleportRequestType {
