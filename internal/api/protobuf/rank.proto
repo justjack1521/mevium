@@ -30,5 +30,6 @@ message ProtoRankingEventClaim {
   string id = 1;
   string short_code = 2;
   bool claimed = 3;
-  ProtoPlayerRankSetDetails player_ranking = 4;
+  bool can_claim = 4;
+  ProtoPlayerRankSetDetails player_ranking = 5;
 }
