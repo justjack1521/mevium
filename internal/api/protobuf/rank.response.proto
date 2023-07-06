@@ -4,11 +4,11 @@ package rank;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
 
-import "data.proto";
+import "rank.proto";
 
 message SubmitScoreResponse {
-  protog.ProtoRankingInfo weekly_rank_update = 1;
-  protog.ProtoRankingInfo event_rank_update = 2;
+  ProtoRankingInfo weekly_rank_update = 1;
+  ProtoRankingInfo event_rank_update = 2;
   bool weekly_high_score = 3;
   bool event_high_score = 4;
   double current_weekly_score = 5;
@@ -19,10 +19,10 @@ message SubmitScoreResponse {
   int64 previously_event_rank = 10;
 }
 
-message WeeklyRankRangeResponse {
-  protog.ProtoRankingInfo rank_ranges = 1;
+message RefreshWeeklyRankRangeResponse {
+  ProtoRankingInfo rank_ranges = 1;
 }
 
-message SpecialRankRangeResponse {
-  protog.ProtoRankingInfo rank_ranges = 1;
+message RefreshSpecialRankRangeResponse {
+  ProtoRankingInfo rank_ranges = 1;
 }

@@ -9,6 +9,7 @@ import "rank.response.proto";
 
 service MeviusRankService {
   rpc SubmitScore(rank.SubmitScoreRequest) returns (rank.SubmitScoreResponse) {}
-  rpc GetWeeklyRankRange(rank.WeeklyRankRangeRequest) returns (rank.WeeklyRankRangeResponse) {}
-  rpc GetSpecialRankRange(rank.SpecialRankRangeRequest) returns (rank.SpecialRankRangeResponse) {}
+  rpc FetchPlayerRankingInfo(rank.FetchPlayerRankingInfoRequest) returns (rank.FetchPlayerRankingInfoResponse) {}
+  rpc RefreshWeeklyRankRange(rank.RefreshWeeklyRankRangeRequest) returns (rank.RefreshWeeklyRankRangeResponse) {}
+  rpc RefreshSpecialRankRange(rank.RefreshSpecialRankRangeRequest) returns (rank.RefreshSpecialRankRangeResponse) {}
 }

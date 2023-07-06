@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package rank;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
+
+import "data.proto";
+
+message ProtoRankingInfo {
+  string id = 1;
+  string short_code = 2;
+  ProtoPlayerRankSetDetails player_ranking = 3;
+  repeated ProtoPlayerRankSetDetails upper_rankings = 4;
+  repeated ProtoPlayerRankSetDetails lower_rankings = 5;
+  repeated ProtoPlayerRankSetDetails top_rankings = 6;
+  map<int64, double> rank_range_scores = 7;
+}
+
+message ProtoPlayerRankSetDetails {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  double score = 4;
+  int64 rank = 5;
+  protog.ProtoPlayerLoadout primary_loadout = 6;
+}
+
+message ProtoRankingEventClaim {
+  string id = 1;
+  string short_code = 2;
+  bool claimed = 3;
+  ProtoPlayerRankSetDetails player_ranking = 4;
+}

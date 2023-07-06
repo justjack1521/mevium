@@ -34,8 +34,6 @@ message ProtoGameData {
 
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 20;
 
-  ProtoRankingInfoSet event_rankings = 30;
-
 }
 
 message ProtoAbilityCardData {
@@ -361,36 +359,6 @@ message ProtoPlayerStamina {
   uint32 current_mp_stamina = 4;
   uint32 max_mp_stamina = 5;
   uint64 mp_stamina_dec = 6;
-}
-
-message ProtoRankingInfoSet {
-  map <string, ProtoRankingInfo> rankings = 1;
-  repeated ProtoRankingEventClaim finished_events = 2;
-}
-
-message ProtoRankingInfo {
-  string id = 1;
-  string short_code = 2;
-  ProtoPlayerRankSetDetails player_ranking = 3;
-  repeated ProtoPlayerRankSetDetails upper_rankings = 4;
-  repeated ProtoPlayerRankSetDetails lower_rankings = 5;
-  repeated ProtoPlayerRankSetDetails top_rankings = 6;
-  map<int64, double> rank_range_scores = 7;
-}
-
-message ProtoPlayerRankSetDetails {
-  string player_id = 1;
-  string player_name = 2;
-  int32 player_level = 3;
-  double score = 4;
-  int64 rank = 5;
-  ProtoPlayerLoadout primary_loadout = 6;
-}
-
-message ProtoRankingEventClaim {
-  bool claimed = 1;
-  bool ready_to_claim = 2;
-  ProtoRankingInfo ranking_info = 3;
 }
 
 message ProtoRegionMapData {

@@ -5,6 +5,7 @@ package rank;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protor";
 
 import "data.proto";
+import "rank.proto";
 
 message SubmitScoreRequest {
   string player_id = 1;
@@ -16,12 +17,22 @@ message SubmitScoreRequest {
   protog.ProtoPlayerLoadout loadout = 7;
 }
 
-message WeeklyRankRangeRequest {
+message RefreshWeeklyRankRangeRequest {
   string player_id = 1;
   string region_id = 2;
 }
 
-message SpecialRankRangeRequest {
+message RefreshSpecialRankRangeRequest {
   string player_id = 1;
   string region_id = 2;
 }
+
+message FetchPlayerRankingInfoRequest {
+  string player_id = 1;
+}
+
+message FetchPlayerRankingInfoResponse {
+  repeated ProtoRankingInfo active = 1;
+  repeated ProtoRankingEventClaim claims = 2;
+}
+
