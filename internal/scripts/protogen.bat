@@ -6,6 +6,7 @@ protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_ou
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protoc --go_opt=paths=source_relative game.request.proto
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protoc --go_opt=paths=source_relative game.response.proto
 
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protor --go_opt=paths=source_relative rank.proto
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protor --go_opt=paths=source_relative rank.request.proto
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto/protor --go_opt=paths=source_relative rank.response.proto
 
