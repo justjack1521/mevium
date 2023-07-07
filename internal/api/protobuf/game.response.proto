@@ -103,6 +103,10 @@ message ClaimAllMailBoxItemResponse {
  repeated protog.ProtoMailBoxItem claims = 1;
 }
 
+message DeleteAllMailboxItemResponse {
+  
+}
+
 message ClaimEventRankingResponse {
   repeated protog.ProtoMailBoxItem claims = 1;
 }

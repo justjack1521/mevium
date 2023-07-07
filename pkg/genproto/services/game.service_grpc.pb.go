@@ -36,6 +36,7 @@ const (
 	MeviusGameService_ClaimAllMailboxItem_FullMethodName      = "/service.MeviusGameService/ClaimAllMailboxItem"
 	MeviusGameService_ConfirmDailyMission_FullMethodName      = "/service.MeviusGameService/ConfirmDailyMission"
 	MeviusGameService_DeckEdit_FullMethodName                 = "/service.MeviusGameService/DeckEdit"
+	MeviusGameService_DeleteAllMailboxItem_FullMethodName     = "/service.MeviusGameService/DeleteAllMailboxItem"
 	MeviusGameService_FetchPlayerData_FullMethodName          = "/service.MeviusGameService/FetchPlayerData"
 	MeviusGameService_FirstDailyLogin_FullMethodName          = "/service.MeviusGameService/FirstDailyLogin"
 	MeviusGameService_FetchPendingRegionEvents_FullMethodName = "/service.MeviusGameService/FetchPendingRegionEvents"
@@ -65,6 +66,7 @@ type MeviusGameServiceClient interface {
 	ClaimAllMailboxItem(ctx context.Context, in *protoc.ClaimAllMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimAllMailBoxItemResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
 	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
+	DeleteAllMailboxItem(ctx context.Context, in *protoc.DeleteAllMailboxItemRequest, opts ...grpc.CallOption) (*protoc.DeleteAllMailboxItemResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FirstDailyLogin(ctx context.Context, in *protoc.FirstDailyLoginRequest, opts ...grpc.CallOption) (*protoc.FirstDailyLoginResponse, error)
 	FetchPendingRegionEvents(ctx context.Context, in *protoc.FetchPendingRegionEventsRequest, opts ...grpc.CallOption) (*protoc.FetchPendingRegionEventsResponse, error)
@@ -226,6 +228,15 @@ func (c *meviusGameServiceClient) DeckEdit(ctx context.Context, in *protoc.DeckE
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) DeleteAllMailboxItem(ctx context.Context, in *protoc.DeleteAllMailboxItemRequest, opts ...grpc.CallOption) (*protoc.DeleteAllMailboxItemResponse, error) {
+	out := new(protoc.DeleteAllMailboxItemResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_DeleteAllMailboxItem_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusGameServiceClient) FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error) {
 	out := new(protoc.FetchPlayerDataResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_FetchPlayerData_FullMethodName, in, out, opts...)
@@ -309,6 +320,7 @@ type MeviusGameServiceServer interface {
 	ClaimAllMailboxItem(context.Context, *protoc.ClaimAllMailBoxItemRequest) (*protoc.ClaimAllMailBoxItemResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
 	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
+	DeleteAllMailboxItem(context.Context, *protoc.DeleteAllMailboxItemRequest) (*protoc.DeleteAllMailboxItemResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FirstDailyLogin(context.Context, *protoc.FirstDailyLoginRequest) (*protoc.FirstDailyLoginResponse, error)
 	FetchPendingRegionEvents(context.Context, *protoc.FetchPendingRegionEventsRequest) (*protoc.FetchPendingRegionEventsResponse, error)
@@ -369,6 +381,9 @@ func (UnimplementedMeviusGameServiceServer) ConfirmDailyMission(context.Context,
 }
 func (UnimplementedMeviusGameServiceServer) DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeckEdit not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) DeleteAllMailboxItem(context.Context, *protoc.DeleteAllMailboxItemRequest) (*protoc.DeleteAllMailboxItemResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteAllMailboxItem not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FetchPlayerData not implemented")
@@ -691,6 +706,24 @@ func _MeviusGameService_DeckEdit_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_DeleteAllMailboxItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.DeleteAllMailboxItemRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).DeleteAllMailboxItem(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_DeleteAllMailboxItem_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).DeleteAllMailboxItem(ctx, req.(*protoc.DeleteAllMailboxItemRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusGameService_FetchPlayerData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.FetchPlayerDataRequest)
 	if err := dec(in); err != nil {
@@ -887,6 +920,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeckEdit",
 			Handler:    _MeviusGameService_DeckEdit_Handler,
+		},
+		{
+			MethodName: "DeleteAllMailboxItem",
+			Handler:    _MeviusGameService_DeleteAllMailboxItem_Handler,
 		},
 		{
 			MethodName: "FetchPlayerData",

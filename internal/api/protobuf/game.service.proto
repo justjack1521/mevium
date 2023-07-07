@@ -25,6 +25,7 @@ service MeviusGameService {
   rpc ClaimAllMailboxItem(protoc.ClaimAllMailBoxItemRequest) returns (protoc.ClaimAllMailBoxItemResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
   rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllResponse) {}
+  rpc DeleteAllMailboxItem(protoc.DeleteAllMailboxItemRequest) returns (protoc.DeleteAllMailboxItemResponse) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
   rpc FirstDailyLogin(protoc.FirstDailyLoginRequest) returns (protoc.FirstDailyLoginResponse) {}
   rpc FetchPendingRegionEvents(protoc.FetchPendingRegionEventsRequest) returns (protoc.FetchPendingRegionEventsResponse) {}

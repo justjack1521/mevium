@@ -43,6 +43,7 @@ message GetPlayerEventRewardsRequest {
 }
 
 message GetPlayerEventRewardsResponse {
-  repeated ProtoRankingEventReward rewards = 1;
+  string event_name = 1;
+  repeated ProtoRankingEventReward rewards = 2;
 }
 

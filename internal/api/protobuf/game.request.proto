@@ -129,6 +129,10 @@ message ClaimAllMailBoxItemRequest {
 
 }
 
+message DeleteAllMailboxItemRequest {
+
+}
+
 message ConfirmDailyMissionRequest {
 
 }

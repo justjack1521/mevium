@@ -299,6 +299,7 @@ message ProtoMailBoxItem {
   ReferenceSource source = 2;
   int32 quantity = 3;
   int64 received_at = 4;
+  string claim_source = 5;
 }
 
 message ProtoPlayerInfo {
