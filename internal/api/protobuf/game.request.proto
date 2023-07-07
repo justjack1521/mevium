@@ -34,6 +34,7 @@ enum RequestType {
   FIRST_DAILY_LOGIN = 2400;
   CLAIM_LOGIN_CAMPAIGN = 2500;
   GET_RANKING_EVENTS = 2600;
+  DELETE_ALL_MAILBOX = 2700;
 }
 
 enum TeleportRequestType {
