@@ -138,7 +138,15 @@ func NewFirstDailyLoginRequest(bytes []byte) (*FirstDailyLoginRequest, error) {
 	return req, nil
 }
 
-func NewFetchPlayerDataRequest(bytes []byte) (*DeleteAllMailboxItemRequest, error) {
+func NewFetchPlayerDataRequest(bytes []byte) (*FetchPlayerDataRequest, error) {
+	req := &FetchPlayerDataRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func NewDeleteAllMailboxItemRequest(bytes []byte) (*DeleteAllMailboxItemRequest, error) {
 	req := &DeleteAllMailboxItemRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
