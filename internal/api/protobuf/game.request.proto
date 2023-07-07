@@ -113,7 +113,8 @@ message CreateProfileRequest {
 }
 
 message ClaimEventRankingRequest {
-
+  string id = 1;
+  string code = 2;
 }
 
 message ClaimLoginCampaignRequest {

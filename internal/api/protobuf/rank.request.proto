@@ -37,3 +37,11 @@ message FetchPlayerRankingInfoResponse {
   repeated ProtoRankingEventClaim claims = 2;
 }
 
+message GetPlayerScoreForEventRequest {
+  string player_id = 1;
+  string code = 2;
+}
+
+message GetPlayerScoreForEventResponse {
+  uint64 score = 2;
+}

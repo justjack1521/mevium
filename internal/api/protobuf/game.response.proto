@@ -104,7 +104,7 @@ message ClaimAllMailBoxItemResponse {
 }
 
 message ClaimEventRankingResponse {
-  repeated protog.ProtoMailBoxItem NewMailboxItems = 1;
+  repeated protog.ProtoMailBoxItem claims = 1;
 }
 
 message ConfirmDailyMissionResponse {

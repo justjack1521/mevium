@@ -328,6 +328,108 @@ func (x *FetchPlayerRankingInfoResponse) GetClaims() []*ProtoRankingEventClaim {
 	return nil
 }
 
+type GetPlayerScoreForEventRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	Code     string `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`
+}
+
+func (x *GetPlayerScoreForEventRequest) Reset() {
+	*x = GetPlayerScoreForEventRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rank_request_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetPlayerScoreForEventRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetPlayerScoreForEventRequest) ProtoMessage() {}
+
+func (x *GetPlayerScoreForEventRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_rank_request_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetPlayerScoreForEventRequest.ProtoReflect.Descriptor instead.
+func (*GetPlayerScoreForEventRequest) Descriptor() ([]byte, []int) {
+	return file_rank_request_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *GetPlayerScoreForEventRequest) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *GetPlayerScoreForEventRequest) GetCode() string {
+	if x != nil {
+		return x.Code
+	}
+	return ""
+}
+
+type GetPlayerScoreForEventResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Score uint64 `protobuf:"varint,2,opt,name=score,proto3" json:"score,omitempty"`
+}
+
+func (x *GetPlayerScoreForEventResponse) Reset() {
+	*x = GetPlayerScoreForEventResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rank_request_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetPlayerScoreForEventResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetPlayerScoreForEventResponse) ProtoMessage() {}
+
+func (x *GetPlayerScoreForEventResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_rank_request_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetPlayerScoreForEventResponse.ProtoReflect.Descriptor instead.
+func (*GetPlayerScoreForEventResponse) Descriptor() ([]byte, []int) {
+	return file_rank_request_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *GetPlayerScoreForEventResponse) GetScore() uint64 {
+	if x != nil {
+		return x.Score
+	}
+	return 0
+}
+
 var File_rank_request_proto protoreflect.FileDescriptor
 
 var file_rank_request_proto_rawDesc = []byte{
@@ -374,11 +476,20 @@ var file_rank_request_proto_rawDesc = []byte{
 	0x61, 0x69, 0x6d, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x72, 0x61, 0x6e,
 	0x6b, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x52, 0x61, 0x6e, 0x6b, 0x69, 0x6e, 0x67, 0x45, 0x76,
 	0x65, 0x6e, 0x74, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x52, 0x06, 0x63, 0x6c, 0x61, 0x69, 0x6d, 0x73,
-	0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a,
-	0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69,
-	0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x72, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e,
-	0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x22, 0x50, 0x0a, 0x1d, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53, 0x63, 0x6f,
+	0x72, 0x65, 0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x12,
+	0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f,
+	0x64, 0x65, 0x22, 0x36, 0x0a, 0x1e, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53,
+	0x63, 0x6f, 0x72, 0x65, 0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x73, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x04, 0x52, 0x05, 0x73, 0x63, 0x6f, 0x72, 0x65, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63,
+	0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67,
+	0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x72,
+	0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -393,21 +504,23 @@ func file_rank_request_proto_rawDescGZIP() []byte {
 	return file_rank_request_proto_rawDescData
 }
 
-var file_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_rank_request_proto_goTypes = []interface{}{
 	(*SubmitScoreRequest)(nil),             // 0: rank.SubmitScoreRequest
 	(*RefreshWeeklyRankRangeRequest)(nil),  // 1: rank.RefreshWeeklyRankRangeRequest
 	(*RefreshSpecialRankRangeRequest)(nil), // 2: rank.RefreshSpecialRankRangeRequest
 	(*FetchPlayerRankingInfoRequest)(nil),  // 3: rank.FetchPlayerRankingInfoRequest
 	(*FetchPlayerRankingInfoResponse)(nil), // 4: rank.FetchPlayerRankingInfoResponse
-	(*protog.ProtoPlayerLoadout)(nil),      // 5: protog.ProtoPlayerLoadout
-	(*ProtoRankingInfo)(nil),               // 6: rank.ProtoRankingInfo
-	(*ProtoRankingEventClaim)(nil),         // 7: rank.ProtoRankingEventClaim
+	(*GetPlayerScoreForEventRequest)(nil),  // 5: rank.GetPlayerScoreForEventRequest
+	(*GetPlayerScoreForEventResponse)(nil), // 6: rank.GetPlayerScoreForEventResponse
+	(*protog.ProtoPlayerLoadout)(nil),      // 7: protog.ProtoPlayerLoadout
+	(*ProtoRankingInfo)(nil),               // 8: rank.ProtoRankingInfo
+	(*ProtoRankingEventClaim)(nil),         // 9: rank.ProtoRankingEventClaim
 }
 var file_rank_request_proto_depIdxs = []int32{
-	5, // 0: rank.SubmitScoreRequest.loadout:type_name -> protog.ProtoPlayerLoadout
-	6, // 1: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
-	7, // 2: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
+	7, // 0: rank.SubmitScoreRequest.loadout:type_name -> protog.ProtoPlayerLoadout
+	8, // 1: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
+	9, // 2: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
@@ -482,6 +595,30 @@ func file_rank_request_proto_init() {
 				return nil
 			}
 		}
+		file_rank_request_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetPlayerScoreForEventRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_rank_request_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetPlayerScoreForEventResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -489,7 +626,7 @@ func file_rank_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_rank_request_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

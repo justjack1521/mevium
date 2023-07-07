@@ -21,6 +21,7 @@ const _ = grpc.SupportPackageIsVersion7
 
 const (
 	MeviusRankService_SubmitScore_FullMethodName             = "/service.MeviusRankService/SubmitScore"
+	MeviusRankService_GetPlayerScore_FullMethodName          = "/service.MeviusRankService/GetPlayerScore"
 	MeviusRankService_FetchPlayerRankingInfo_FullMethodName  = "/service.MeviusRankService/FetchPlayerRankingInfo"
 	MeviusRankService_RefreshWeeklyRankRange_FullMethodName  = "/service.MeviusRankService/RefreshWeeklyRankRange"
 	MeviusRankService_RefreshSpecialRankRange_FullMethodName = "/service.MeviusRankService/RefreshSpecialRankRange"
@@ -31,6 +32,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusRankServiceClient interface {
 	SubmitScore(ctx context.Context, in *protor.SubmitScoreRequest, opts ...grpc.CallOption) (*protor.SubmitScoreResponse, error)
+	GetPlayerScore(ctx context.Context, in *protor.GetPlayerScoreForEventRequest, opts ...grpc.CallOption) (*protor.GetPlayerScoreForEventResponse, error)
 	FetchPlayerRankingInfo(ctx context.Context, in *protor.FetchPlayerRankingInfoRequest, opts ...grpc.CallOption) (*protor.FetchPlayerRankingInfoResponse, error)
 	RefreshWeeklyRankRange(ctx context.Context, in *protor.RefreshWeeklyRankRangeRequest, opts ...grpc.CallOption) (*protor.RefreshWeeklyRankRangeResponse, error)
 	RefreshSpecialRankRange(ctx context.Context, in *protor.RefreshSpecialRankRangeRequest, opts ...grpc.CallOption) (*protor.RefreshSpecialRankRangeResponse, error)
@@ -47,6 +49,15 @@ func NewMeviusRankServiceClient(cc grpc.ClientConnInterface) MeviusRankServiceCl
 func (c *meviusRankServiceClient) SubmitScore(ctx context.Context, in *protor.SubmitScoreRequest, opts ...grpc.CallOption) (*protor.SubmitScoreResponse, error) {
 	out := new(protor.SubmitScoreResponse)
 	err := c.cc.Invoke(ctx, MeviusRankService_SubmitScore_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusRankServiceClient) GetPlayerScore(ctx context.Context, in *protor.GetPlayerScoreForEventRequest, opts ...grpc.CallOption) (*protor.GetPlayerScoreForEventResponse, error) {
+	out := new(protor.GetPlayerScoreForEventResponse)
+	err := c.cc.Invoke(ctx, MeviusRankService_GetPlayerScore_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -85,6 +96,7 @@ func (c *meviusRankServiceClient) RefreshSpecialRankRange(ctx context.Context, i
 // for forward compatibility
 type MeviusRankServiceServer interface {
 	SubmitScore(context.Context, *protor.SubmitScoreRequest) (*protor.SubmitScoreResponse, error)
+	GetPlayerScore(context.Context, *protor.GetPlayerScoreForEventRequest) (*protor.GetPlayerScoreForEventResponse, error)
 	FetchPlayerRankingInfo(context.Context, *protor.FetchPlayerRankingInfoRequest) (*protor.FetchPlayerRankingInfoResponse, error)
 	RefreshWeeklyRankRange(context.Context, *protor.RefreshWeeklyRankRangeRequest) (*protor.RefreshWeeklyRankRangeResponse, error)
 	RefreshSpecialRankRange(context.Context, *protor.RefreshSpecialRankRangeRequest) (*protor.RefreshSpecialRankRangeResponse, error)
@@ -96,6 +108,9 @@ type UnimplementedMeviusRankServiceServer struct {
 
 func (UnimplementedMeviusRankServiceServer) SubmitScore(context.Context, *protor.SubmitScoreRequest) (*protor.SubmitScoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SubmitScore not implemented")
+}
+func (UnimplementedMeviusRankServiceServer) GetPlayerScore(context.Context, *protor.GetPlayerScoreForEventRequest) (*protor.GetPlayerScoreForEventResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerScore not implemented")
 }
 func (UnimplementedMeviusRankServiceServer) FetchPlayerRankingInfo(context.Context, *protor.FetchPlayerRankingInfoRequest) (*protor.FetchPlayerRankingInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FetchPlayerRankingInfo not implemented")
@@ -132,6 +147,24 @@ func _MeviusRankService_SubmitScore_Handler(srv interface{}, ctx context.Context
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusRankServiceServer).SubmitScore(ctx, req.(*protor.SubmitScoreRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusRankService_GetPlayerScore_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protor.GetPlayerScoreForEventRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusRankServiceServer).GetPlayerScore(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusRankService_GetPlayerScore_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusRankServiceServer).GetPlayerScore(ctx, req.(*protor.GetPlayerScoreForEventRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -200,6 +233,10 @@ var MeviusRankService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SubmitScore",
 			Handler:    _MeviusRankService_SubmitScore_Handler,
+		},
+		{
+			MethodName: "GetPlayerScore",
+			Handler:    _MeviusRankService_GetPlayerScore_Handler,
 		},
 		{
 			MethodName: "FetchPlayerRankingInfo",
