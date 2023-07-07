@@ -33,3 +33,11 @@ message ProtoRankingEventClaim {
   bool can_claim = 4;
   ProtoPlayerRankSetDetails player_ranking = 5;
 }
+
+message ProtoRankingEventReward {
+  oneof reward {
+    string reward_item = 1;
+    string reward_card = 2;
+  }
+  int32 quantity = 3;
+}

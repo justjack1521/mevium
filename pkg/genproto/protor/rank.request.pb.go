@@ -328,7 +328,7 @@ func (x *FetchPlayerRankingInfoResponse) GetClaims() []*ProtoRankingEventClaim {
 	return nil
 }
 
-type GetPlayerScoreForEventRequest struct {
+type GetPlayerEventRewardsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -337,8 +337,8 @@ type GetPlayerScoreForEventRequest struct {
 	Code     string `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`
 }
 
-func (x *GetPlayerScoreForEventRequest) Reset() {
-	*x = GetPlayerScoreForEventRequest{}
+func (x *GetPlayerEventRewardsRequest) Reset() {
+	*x = GetPlayerEventRewardsRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_rank_request_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -346,13 +346,13 @@ func (x *GetPlayerScoreForEventRequest) Reset() {
 	}
 }
 
-func (x *GetPlayerScoreForEventRequest) String() string {
+func (x *GetPlayerEventRewardsRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetPlayerScoreForEventRequest) ProtoMessage() {}
+func (*GetPlayerEventRewardsRequest) ProtoMessage() {}
 
-func (x *GetPlayerScoreForEventRequest) ProtoReflect() protoreflect.Message {
+func (x *GetPlayerEventRewardsRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_rank_request_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -364,35 +364,35 @@ func (x *GetPlayerScoreForEventRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetPlayerScoreForEventRequest.ProtoReflect.Descriptor instead.
-func (*GetPlayerScoreForEventRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetPlayerEventRewardsRequest.ProtoReflect.Descriptor instead.
+func (*GetPlayerEventRewardsRequest) Descriptor() ([]byte, []int) {
 	return file_rank_request_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *GetPlayerScoreForEventRequest) GetPlayerId() string {
+func (x *GetPlayerEventRewardsRequest) GetPlayerId() string {
 	if x != nil {
 		return x.PlayerId
 	}
 	return ""
 }
 
-func (x *GetPlayerScoreForEventRequest) GetCode() string {
+func (x *GetPlayerEventRewardsRequest) GetCode() string {
 	if x != nil {
 		return x.Code
 	}
 	return ""
 }
 
-type GetPlayerScoreForEventResponse struct {
+type GetPlayerEventRewardsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Score uint64 `protobuf:"varint,2,opt,name=score,proto3" json:"score,omitempty"`
+	Rewards []*ProtoRankingEventReward `protobuf:"bytes,1,rep,name=rewards,proto3" json:"rewards,omitempty"`
 }
 
-func (x *GetPlayerScoreForEventResponse) Reset() {
-	*x = GetPlayerScoreForEventResponse{}
+func (x *GetPlayerEventRewardsResponse) Reset() {
+	*x = GetPlayerEventRewardsResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_rank_request_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -400,13 +400,13 @@ func (x *GetPlayerScoreForEventResponse) Reset() {
 	}
 }
 
-func (x *GetPlayerScoreForEventResponse) String() string {
+func (x *GetPlayerEventRewardsResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetPlayerScoreForEventResponse) ProtoMessage() {}
+func (*GetPlayerEventRewardsResponse) ProtoMessage() {}
 
-func (x *GetPlayerScoreForEventResponse) ProtoReflect() protoreflect.Message {
+func (x *GetPlayerEventRewardsResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_rank_request_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -418,16 +418,16 @@ func (x *GetPlayerScoreForEventResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetPlayerScoreForEventResponse.ProtoReflect.Descriptor instead.
-func (*GetPlayerScoreForEventResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetPlayerEventRewardsResponse.ProtoReflect.Descriptor instead.
+func (*GetPlayerEventRewardsResponse) Descriptor() ([]byte, []int) {
 	return file_rank_request_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *GetPlayerScoreForEventResponse) GetScore() uint64 {
+func (x *GetPlayerEventRewardsResponse) GetRewards() []*ProtoRankingEventReward {
 	if x != nil {
-		return x.Score
+		return x.Rewards
 	}
-	return 0
+	return nil
 }
 
 var File_rank_request_proto protoreflect.FileDescriptor
@@ -476,20 +476,22 @@ var file_rank_request_proto_rawDesc = []byte{
 	0x61, 0x69, 0x6d, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x72, 0x61, 0x6e,
 	0x6b, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x52, 0x61, 0x6e, 0x6b, 0x69, 0x6e, 0x67, 0x45, 0x76,
 	0x65, 0x6e, 0x74, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x52, 0x06, 0x63, 0x6c, 0x61, 0x69, 0x6d, 0x73,
-	0x22, 0x50, 0x0a, 0x1d, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53, 0x63, 0x6f,
-	0x72, 0x65, 0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x12,
-	0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f,
-	0x64, 0x65, 0x22, 0x36, 0x0a, 0x1e, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53,
-	0x63, 0x6f, 0x72, 0x65, 0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x73, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x04, 0x52, 0x05, 0x73, 0x63, 0x6f, 0x72, 0x65, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69,
-	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63,
-	0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67,
-	0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x72,
-	0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x22, 0x4f, 0x0a, 0x1c, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x45, 0x76, 0x65,
+	0x6e, 0x74, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x12, 0x0a,
+	0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f, 0x64,
+	0x65, 0x22, 0x58, 0x0a, 0x1d, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x45, 0x76,
+	0x65, 0x6e, 0x74, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x37, 0x0a, 0x07, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x18, 0x01, 0x20,
+	0x03, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x72, 0x61, 0x6e, 0x6b, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f,
+	0x52, 0x61, 0x6e, 0x6b, 0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x77, 0x61,
+	0x72, 0x64, 0x52, 0x07, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x42, 0x43, 0x5a, 0x32, 0x67,
+	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61,
+	0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b,
+	0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x72, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f,
+	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -511,21 +513,23 @@ var file_rank_request_proto_goTypes = []interface{}{
 	(*RefreshSpecialRankRangeRequest)(nil), // 2: rank.RefreshSpecialRankRangeRequest
 	(*FetchPlayerRankingInfoRequest)(nil),  // 3: rank.FetchPlayerRankingInfoRequest
 	(*FetchPlayerRankingInfoResponse)(nil), // 4: rank.FetchPlayerRankingInfoResponse
-	(*GetPlayerScoreForEventRequest)(nil),  // 5: rank.GetPlayerScoreForEventRequest
-	(*GetPlayerScoreForEventResponse)(nil), // 6: rank.GetPlayerScoreForEventResponse
+	(*GetPlayerEventRewardsRequest)(nil),   // 5: rank.GetPlayerEventRewardsRequest
+	(*GetPlayerEventRewardsResponse)(nil),  // 6: rank.GetPlayerEventRewardsResponse
 	(*protog.ProtoPlayerLoadout)(nil),      // 7: protog.ProtoPlayerLoadout
 	(*ProtoRankingInfo)(nil),               // 8: rank.ProtoRankingInfo
 	(*ProtoRankingEventClaim)(nil),         // 9: rank.ProtoRankingEventClaim
+	(*ProtoRankingEventReward)(nil),        // 10: rank.ProtoRankingEventReward
 }
 var file_rank_request_proto_depIdxs = []int32{
-	7, // 0: rank.SubmitScoreRequest.loadout:type_name -> protog.ProtoPlayerLoadout
-	8, // 1: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
-	9, // 2: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
-	3, // [3:3] is the sub-list for method output_type
-	3, // [3:3] is the sub-list for method input_type
-	3, // [3:3] is the sub-list for extension type_name
-	3, // [3:3] is the sub-list for extension extendee
-	0, // [0:3] is the sub-list for field type_name
+	7,  // 0: rank.SubmitScoreRequest.loadout:type_name -> protog.ProtoPlayerLoadout
+	8,  // 1: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
+	9,  // 2: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
+	10, // 3: rank.GetPlayerEventRewardsResponse.rewards:type_name -> rank.ProtoRankingEventReward
+	4,  // [4:4] is the sub-list for method output_type
+	4,  // [4:4] is the sub-list for method input_type
+	4,  // [4:4] is the sub-list for extension type_name
+	4,  // [4:4] is the sub-list for extension extendee
+	0,  // [0:4] is the sub-list for field type_name
 }
 
 func init() { file_rank_request_proto_init() }
@@ -596,7 +600,7 @@ func file_rank_request_proto_init() {
 			}
 		}
 		file_rank_request_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetPlayerScoreForEventRequest); i {
+			switch v := v.(*GetPlayerEventRewardsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -608,7 +612,7 @@ func file_rank_request_proto_init() {
 			}
 		}
 		file_rank_request_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetPlayerScoreForEventResponse); i {
+			switch v := v.(*GetPlayerEventRewardsResponse); i {
 			case 0:
 				return &v.state
 			case 1:

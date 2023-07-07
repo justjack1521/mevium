@@ -282,6 +282,94 @@ func (x *ProtoRankingEventClaim) GetPlayerRanking() *ProtoPlayerRankSetDetails {
 	return nil
 }
 
+type ProtoRankingEventReward struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// Types that are assignable to Reward:
+	//	*ProtoRankingEventReward_RewardItem
+	//	*ProtoRankingEventReward_RewardCard
+	Reward   isProtoRankingEventReward_Reward `protobuf_oneof:"reward"`
+	Quantity int32                            `protobuf:"varint,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
+}
+
+func (x *ProtoRankingEventReward) Reset() {
+	*x = ProtoRankingEventReward{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_rank_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProtoRankingEventReward) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoRankingEventReward) ProtoMessage() {}
+
+func (x *ProtoRankingEventReward) ProtoReflect() protoreflect.Message {
+	mi := &file_rank_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoRankingEventReward.ProtoReflect.Descriptor instead.
+func (*ProtoRankingEventReward) Descriptor() ([]byte, []int) {
+	return file_rank_proto_rawDescGZIP(), []int{3}
+}
+
+func (m *ProtoRankingEventReward) GetReward() isProtoRankingEventReward_Reward {
+	if m != nil {
+		return m.Reward
+	}
+	return nil
+}
+
+func (x *ProtoRankingEventReward) GetRewardItem() string {
+	if x, ok := x.GetReward().(*ProtoRankingEventReward_RewardItem); ok {
+		return x.RewardItem
+	}
+	return ""
+}
+
+func (x *ProtoRankingEventReward) GetRewardCard() string {
+	if x, ok := x.GetReward().(*ProtoRankingEventReward_RewardCard); ok {
+		return x.RewardCard
+	}
+	return ""
+}
+
+func (x *ProtoRankingEventReward) GetQuantity() int32 {
+	if x != nil {
+		return x.Quantity
+	}
+	return 0
+}
+
+type isProtoRankingEventReward_Reward interface {
+	isProtoRankingEventReward_Reward()
+}
+
+type ProtoRankingEventReward_RewardItem struct {
+	RewardItem string `protobuf:"bytes,1,opt,name=reward_item,json=rewardItem,proto3,oneof"`
+}
+
+type ProtoRankingEventReward_RewardCard struct {
+	RewardCard string `protobuf:"bytes,2,opt,name=reward_card,json=rewardCard,proto3,oneof"`
+}
+
+func (*ProtoRankingEventReward_RewardItem) isProtoRankingEventReward_Reward() {}
+
+func (*ProtoRankingEventReward_RewardCard) isProtoRankingEventReward_Reward() {}
+
 var File_rank_proto protoreflect.FileDescriptor
 
 var file_rank_proto_rawDesc = []byte{
@@ -346,11 +434,20 @@ var file_rank_proto_rawDesc = []byte{
 	0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x72, 0x61, 0x6e, 0x6b, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x61, 0x6e, 0x6b, 0x53, 0x65, 0x74, 0x44, 0x65, 0x74, 0x61,
 	0x69, 0x6c, 0x73, 0x52, 0x0d, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x61, 0x6e, 0x6b, 0x69,
-	0x6e, 0x67, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
-	0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65,
-	0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x72, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75,
-	0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6e, 0x67, 0x22, 0x85, 0x01, 0x0a, 0x17, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x52, 0x61, 0x6e, 0x6b,
+	0x69, 0x6e, 0x67, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x12, 0x21,
+	0x0a, 0x0b, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64, 0x5f, 0x69, 0x74, 0x65, 0x6d, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x0a, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64, 0x49, 0x74, 0x65,
+	0x6d, 0x12, 0x21, 0x0a, 0x0b, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64, 0x5f, 0x63, 0x61, 0x72, 0x64,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x0a, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64,
+	0x43, 0x61, 0x72, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x71, 0x75, 0x61, 0x6e, 0x74, 0x69, 0x74, 0x79,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x08, 0x71, 0x75, 0x61, 0x6e, 0x74, 0x69, 0x74, 0x79,
+	0x42, 0x08, 0x0a, 0x06, 0x72, 0x65, 0x77, 0x61, 0x72, 0x64, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63,
+	0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67,
+	0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x72,
+	0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -365,21 +462,22 @@ func file_rank_proto_rawDescGZIP() []byte {
 	return file_rank_proto_rawDescData
 }
 
-var file_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_rank_proto_goTypes = []interface{}{
 	(*ProtoRankingInfo)(nil),          // 0: rank.ProtoRankingInfo
 	(*ProtoPlayerRankSetDetails)(nil), // 1: rank.ProtoPlayerRankSetDetails
 	(*ProtoRankingEventClaim)(nil),    // 2: rank.ProtoRankingEventClaim
-	nil,                               // 3: rank.ProtoRankingInfo.RankRangeScoresEntry
-	(*protog.ProtoPlayerLoadout)(nil), // 4: protog.ProtoPlayerLoadout
+	(*ProtoRankingEventReward)(nil),   // 3: rank.ProtoRankingEventReward
+	nil,                               // 4: rank.ProtoRankingInfo.RankRangeScoresEntry
+	(*protog.ProtoPlayerLoadout)(nil), // 5: protog.ProtoPlayerLoadout
 }
 var file_rank_proto_depIdxs = []int32{
 	1, // 0: rank.ProtoRankingInfo.player_ranking:type_name -> rank.ProtoPlayerRankSetDetails
 	1, // 1: rank.ProtoRankingInfo.upper_rankings:type_name -> rank.ProtoPlayerRankSetDetails
 	1, // 2: rank.ProtoRankingInfo.lower_rankings:type_name -> rank.ProtoPlayerRankSetDetails
 	1, // 3: rank.ProtoRankingInfo.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	3, // 4: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
-	4, // 5: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> protog.ProtoPlayerLoadout
+	4, // 4: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
+	5, // 5: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> protog.ProtoPlayerLoadout
 	1, // 6: rank.ProtoRankingEventClaim.player_ranking:type_name -> rank.ProtoPlayerRankSetDetails
 	7, // [7:7] is the sub-list for method output_type
 	7, // [7:7] is the sub-list for method input_type
@@ -430,6 +528,22 @@ func file_rank_proto_init() {
 				return nil
 			}
 		}
+		file_rank_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProtoRankingEventReward); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+	}
+	file_rank_proto_msgTypes[3].OneofWrappers = []interface{}{
+		(*ProtoRankingEventReward_RewardItem)(nil),
+		(*ProtoRankingEventReward_RewardCard)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -437,7 +551,7 @@ func file_rank_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_rank_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
