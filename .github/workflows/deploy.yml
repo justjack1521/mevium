@@ -4,8 +4,21 @@ on:
     branches:
       - master
 jobs:
-  build:
-    name: Build
+  gateway:
+    name: Gateway Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.GATEWAY_SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.GATEWAY_SSH_KEY }}
+        script: |
+                    PATH="/usr/local/go/bin/:$PATH"
+                    bash /opt/git/mevium/update-gateway.sh
+  core:
+    name: Core-Build
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
