@@ -16,4 +16,5 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
                     PATH="/usr/local/go/bin/:$PATH"
-                    bash /opt/git/mevium/update.sh
+                    bash /opt/git/mevium/update-core.sh
+                    bash /opt/git/mevium/update-mevrank.sh
