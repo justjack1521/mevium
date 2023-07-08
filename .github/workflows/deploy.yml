@@ -15,5 +15,5 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-                    PATH="$PATH:$GOPATH/bin"
+                    PATH="$PATH:$GOPATH"
                     bash /opt/git/mevium/update.sh
