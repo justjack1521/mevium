@@ -15,5 +15,5 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-                    PATH="/home/xdiradmin/go/bin:$PATH"
+                    PATH="/home/xdiradmin/go/bin:/usr/local/go/bin:$PATH"
                     bash /opt/git/mevium/update.sh
