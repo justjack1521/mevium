@@ -43,7 +43,6 @@ enum TeleportRequestType {
   WORLD = 2;
   FIELD = 3;
   BATTLE = 4;
-  BATTLE_LOGIN = 5;
 }
 
 message RequestHeader {
