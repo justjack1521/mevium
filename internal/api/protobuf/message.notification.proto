@@ -23,6 +23,7 @@ message Notification {
 message SocialDataNotification {
   repeated ProtoPlayerSocialInfo following_list = 1;
   repeated ProtoPlayerSocialInfo follower_list = 2;
+  repeated ProtoPlayerSocialInfo rental_players = 3;
 }
 
 message PlayerPresenceNotification {
