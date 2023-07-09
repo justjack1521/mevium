@@ -129,6 +129,7 @@ message FirstDailyLoginResponse {
   protog.ProtoDailyMissionInstance daily_mission = 2;
   protog.ProtoLoginCampaignInstance standard_login_bonus = 3;
   protog.ProtoLoginCampaignInstance special_login_bonus = 4;
+  int32 rental_count = 5;
 }
 
 message FilterSortResponse {
