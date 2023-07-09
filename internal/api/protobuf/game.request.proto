@@ -69,6 +69,8 @@ message BattleStartRequest {
   int32 index = 1;
   int32 deck_index = 2;
   bool hard_mode = 3;
+  string rental_player_id = 5;
+  protog.ProtoPlayerCardInfo rental_card = 6;
 }
 
 message CardAugmentRequest {
