@@ -130,6 +130,7 @@ message FirstDailyLoginResponse {
   protog.ProtoLoginCampaignInstance standard_login_bonus = 3;
   protog.ProtoLoginCampaignInstance special_login_bonus = 4;
   int32 rental_count = 5;
+  bool rental_claim = 6;
 }
 
 message FilterSortResponse {
