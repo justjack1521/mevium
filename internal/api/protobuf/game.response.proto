@@ -112,6 +112,10 @@ message ClaimEventRankingResponse {
   repeated protog.ProtoMailBoxItem claims = 1;
 }
 
+message ClaimRentalCardRewardResponse {
+  protog.ProtoItemValuePair reward_item = 1;
+}
+
 message ConfirmDailyMissionResponse {
 
 }

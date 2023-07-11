@@ -106,6 +106,14 @@ func NewClaimEventRankingRequest(bytes []byte) (*ClaimEventRankingRequest, error
 	return req, nil
 }
 
+func NewClaimRentalCardRewardRequest(bytes []byte) (*ClaimRentalCardRewardRequest, error) {
+	req := &ClaimRentalCardRewardRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewConfirmDailyMissionRequest(bytes []byte) (*ConfirmDailyMissionRequest, error) {
 	req := &ConfirmDailyMissionRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {

@@ -34,6 +34,7 @@ const (
 	MeviusGameService_ClaimLoginCampaign_FullMethodName       = "/service.MeviusGameService/ClaimLoginCampaign"
 	MeviusGameService_ClaimMailboxItem_FullMethodName         = "/service.MeviusGameService/ClaimMailboxItem"
 	MeviusGameService_ClaimAllMailboxItem_FullMethodName      = "/service.MeviusGameService/ClaimAllMailboxItem"
+	MeviusGameService_ClaimRentalReward_FullMethodName        = "/service.MeviusGameService/ClaimRentalReward"
 	MeviusGameService_ConfirmDailyMission_FullMethodName      = "/service.MeviusGameService/ConfirmDailyMission"
 	MeviusGameService_DeckEdit_FullMethodName                 = "/service.MeviusGameService/DeckEdit"
 	MeviusGameService_DeleteAllMailboxItem_FullMethodName     = "/service.MeviusGameService/DeleteAllMailboxItem"
@@ -64,6 +65,7 @@ type MeviusGameServiceClient interface {
 	ClaimLoginCampaign(ctx context.Context, in *protoc.ClaimLoginCampaignRequest, opts ...grpc.CallOption) (*protoc.ClaimLoginCampaignResponse, error)
 	ClaimMailboxItem(ctx context.Context, in *protoc.ClaimMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimMailBoxItemResponse, error)
 	ClaimAllMailboxItem(ctx context.Context, in *protoc.ClaimAllMailBoxItemRequest, opts ...grpc.CallOption) (*protoc.ClaimAllMailBoxItemResponse, error)
+	ClaimRentalReward(ctx context.Context, in *protoc.ClaimRentalCardRewardRequest, opts ...grpc.CallOption) (*protoc.ClaimRentalCardRewardResponse, error)
 	ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error)
 	DeckEdit(ctx context.Context, in *protoc.DeckEditAllRequest, opts ...grpc.CallOption) (*protoc.DeckEditAllResponse, error)
 	DeleteAllMailboxItem(ctx context.Context, in *protoc.DeleteAllMailboxItemRequest, opts ...grpc.CallOption) (*protoc.DeleteAllMailboxItemResponse, error)
@@ -210,6 +212,15 @@ func (c *meviusGameServiceClient) ClaimAllMailboxItem(ctx context.Context, in *p
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) ClaimRentalReward(ctx context.Context, in *protoc.ClaimRentalCardRewardRequest, opts ...grpc.CallOption) (*protoc.ClaimRentalCardRewardResponse, error) {
+	out := new(protoc.ClaimRentalCardRewardResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ClaimRentalReward_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusGameServiceClient) ConfirmDailyMission(ctx context.Context, in *protoc.ConfirmDailyMissionRequest, opts ...grpc.CallOption) (*protoc.ConfirmDailyMissionResponse, error) {
 	out := new(protoc.ConfirmDailyMissionResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_ConfirmDailyMission_FullMethodName, in, out, opts...)
@@ -318,6 +329,7 @@ type MeviusGameServiceServer interface {
 	ClaimLoginCampaign(context.Context, *protoc.ClaimLoginCampaignRequest) (*protoc.ClaimLoginCampaignResponse, error)
 	ClaimMailboxItem(context.Context, *protoc.ClaimMailBoxItemRequest) (*protoc.ClaimMailBoxItemResponse, error)
 	ClaimAllMailboxItem(context.Context, *protoc.ClaimAllMailBoxItemRequest) (*protoc.ClaimAllMailBoxItemResponse, error)
+	ClaimRentalReward(context.Context, *protoc.ClaimRentalCardRewardRequest) (*protoc.ClaimRentalCardRewardResponse, error)
 	ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error)
 	DeckEdit(context.Context, *protoc.DeckEditAllRequest) (*protoc.DeckEditAllResponse, error)
 	DeleteAllMailboxItem(context.Context, *protoc.DeleteAllMailboxItemRequest) (*protoc.DeleteAllMailboxItemResponse, error)
@@ -375,6 +387,9 @@ func (UnimplementedMeviusGameServiceServer) ClaimMailboxItem(context.Context, *p
 }
 func (UnimplementedMeviusGameServiceServer) ClaimAllMailboxItem(context.Context, *protoc.ClaimAllMailBoxItemRequest) (*protoc.ClaimAllMailBoxItemResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClaimAllMailboxItem not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ClaimRentalReward(context.Context, *protoc.ClaimRentalCardRewardRequest) (*protoc.ClaimRentalCardRewardResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimRentalReward not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) ConfirmDailyMission(context.Context, *protoc.ConfirmDailyMissionRequest) (*protoc.ConfirmDailyMissionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmDailyMission not implemented")
@@ -670,6 +685,24 @@ func _MeviusGameService_ClaimAllMailboxItem_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_ClaimRentalReward_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ClaimRentalCardRewardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ClaimRentalReward(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ClaimRentalReward_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ClaimRentalReward(ctx, req.(*protoc.ClaimRentalCardRewardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusGameService_ConfirmDailyMission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.ConfirmDailyMissionRequest)
 	if err := dec(in); err != nil {
@@ -912,6 +945,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ClaimAllMailboxItem",
 			Handler:    _MeviusGameService_ClaimAllMailboxItem_Handler,
+		},
+		{
+			MethodName: "ClaimRentalReward",
+			Handler:    _MeviusGameService_ClaimRentalReward_Handler,
 		},
 		{
 			MethodName: "ConfirmDailyMission",

@@ -23,6 +23,7 @@ service MeviusGameService {
   rpc ClaimLoginCampaign(protoc.ClaimLoginCampaignRequest) returns (protoc.ClaimLoginCampaignResponse) {}
   rpc ClaimMailboxItem(protoc.ClaimMailBoxItemRequest) returns (protoc.ClaimMailBoxItemResponse) {}
   rpc ClaimAllMailboxItem(protoc.ClaimAllMailBoxItemRequest) returns (protoc.ClaimAllMailBoxItemResponse) {}
+  rpc ClaimRentalReward(protoc.ClaimRentalCardRewardRequest) returns (protoc.ClaimRentalCardRewardResponse) {}
   rpc ConfirmDailyMission(protoc.ConfirmDailyMissionRequest) returns (protoc.ConfirmDailyMissionResponse) {}
   rpc DeckEdit(protoc.DeckEditAllRequest) returns (protoc.DeckEditAllResponse) {}
   rpc DeleteAllMailboxItem(protoc.DeleteAllMailboxItemRequest) returns (protoc.DeleteAllMailboxItemResponse) {}
