@@ -409,7 +409,15 @@ message ProtoRegionLockData {
   bool unlocked = 4;
 }
 
-message ProtoRegionTeleportEvent {
+message ProtoRegionEvent {
+  string region_map_id = 1;
+  int32 definition_value = 3;
+  int32 target = 4;
+  int32 order = 5;
+  bool repeatable = 6;
+}
+
+message ProtoRegionNodeEvent {
   string region_map_id = 1;
   int32 node_index = 2;
   int32 definition_value = 3;
