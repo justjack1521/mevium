@@ -111,6 +111,9 @@ message ProtoBattleStartData {
   ProtoBattleProgressData progress_data = 15;
   repeated ProtoCardProgressData card_progress_data = 16;
 
+  string rental_player_id = 17;
+  ProtoPlayerCardInfo rental_card = 18;
+
   int64 created_at = 20;
 }
 
