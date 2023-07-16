@@ -63,16 +63,19 @@ message ProtoAbilityCardInventory {
 
 message ProtoAbilityCardInstance {
   string sys_id = 1;
-  int32 card_level = 2;
-  uint64 accum_exp = 3;
-  bool card_lock = 4;
-  int32 ability_level = 5;
-  int32 seed_unlock = 6;
-  string ability_card_id = 7;
-  int64 created_at = 8;
-  uint64 total_accum_exp = 9;
-  int32 extra_skill_unlock = 10;
-  int32 over_boost_level = 11;
+  string ability_card_id = 2;
+  string augment_config_id = 3;
+  uint64 accum_exp = 4;
+  uint64 total_accum_exp = 5;
+  int32 card_level = 6;
+  int32 ability_level = 7;
+  int32 seed_unlock = 8;
+  int32 extra_skill_unlock = 9;
+  int32 over_boost_level = 10;
+  map<string,int32> auto_abilities = 11;
+  bool card_lock = 12;
+  int32 source = 13;
+  int64 created_at = 14;
 }
 
 message ProtoBattleData {
