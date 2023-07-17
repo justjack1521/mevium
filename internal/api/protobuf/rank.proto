@@ -10,9 +10,7 @@ import "data.proto";
 message ProtoRankingInfo {
   string id = 1;
   string short_code = 2;
-  ProtoPlayerRankSetDetails player_ranking = 3;
-  repeated ProtoPlayerRankSetDetails upper_rankings = 4;
-  repeated ProtoPlayerRankSetDetails lower_rankings = 5;
+  repeated ProtoPlayerRankSetDetails player_rankings = 3;
   repeated ProtoPlayerRankSetDetails top_rankings = 6;
   map<int64, double> rank_range_scores = 7;
 }
@@ -31,7 +29,7 @@ message ProtoRankingEventClaim {
   string short_code = 2;
   bool claimed = 3;
   bool can_claim = 4;
-  ProtoPlayerRankSetDetails player_ranking = 5;
+  repeated ProtoPlayerRankSetDetails player_ranking = 5;
 }
 
 message ProtoRankingEventReward {
