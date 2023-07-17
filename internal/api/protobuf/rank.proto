@@ -22,6 +22,7 @@ message ProtoPlayerRankSetDetails {
   double score = 4;
   int64 rank = 5;
   protog.ProtoPlayerLoadout primary_loadout = 6;
+  bool is_player = 7;
 }
 
 message ProtoRankingEventClaim {
