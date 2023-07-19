@@ -23,3 +23,29 @@ message PlayerProfileCreatedMessage {
   string player_comment = 4;
   string companion_id = 5;
 }
+
+message PlayerPresenceUpdateMessage {
+  string player_id = 1;
+  uint64 online = 2;
+}
+
+message PlayerPositionUpdateMessage {
+  string player_id = 1;
+  string region_map = 2;
+  int32 region_map_node = 3;
+}
+
+message PlayerCompanionUpdateMessage {
+  string player_id = 1;
+  string companion_id = 2;
+}
+
+message PlayerCommentUpdateMessage {
+  string player_id = 1;
+  string comment = 2;
+}
+
+message PlayerRentalCardUpdateMessage {
+  string player_id = 1;
+  string rental_card = 2;
+}

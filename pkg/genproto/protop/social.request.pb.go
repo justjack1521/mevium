@@ -67,249 +67,6 @@ func (x *FollowPlayerRequest) GetPlayerId() string {
 	return ""
 }
 
-type UpdatePlayerPresenceRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Online uint64 `protobuf:"varint,2,opt,name=online,proto3" json:"online,omitempty"`
-}
-
-func (x *UpdatePlayerPresenceRequest) Reset() {
-	*x = UpdatePlayerPresenceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerPresenceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerPresenceRequest) ProtoMessage() {}
-
-func (x *UpdatePlayerPresenceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerPresenceRequest.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerPresenceRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{1}
-}
-
-func (x *UpdatePlayerPresenceRequest) GetOnline() uint64 {
-	if x != nil {
-		return x.Online
-	}
-	return 0
-}
-
-type UpdatePlayerPositionRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	RegionMap     string `protobuf:"bytes,2,opt,name=region_map,json=regionMap,proto3" json:"region_map,omitempty"`
-	RegionMapNode int32  `protobuf:"varint,3,opt,name=region_map_node,json=regionMapNode,proto3" json:"region_map_node,omitempty"`
-}
-
-func (x *UpdatePlayerPositionRequest) Reset() {
-	*x = UpdatePlayerPositionRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerPositionRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerPositionRequest) ProtoMessage() {}
-
-func (x *UpdatePlayerPositionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerPositionRequest.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerPositionRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{2}
-}
-
-func (x *UpdatePlayerPositionRequest) GetRegionMap() string {
-	if x != nil {
-		return x.RegionMap
-	}
-	return ""
-}
-
-func (x *UpdatePlayerPositionRequest) GetRegionMapNode() int32 {
-	if x != nil {
-		return x.RegionMapNode
-	}
-	return 0
-}
-
-type UpdatePlayerCompanionRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	CompanionId string `protobuf:"bytes,2,opt,name=companion_id,json=companionId,proto3" json:"companion_id,omitempty"`
-}
-
-func (x *UpdatePlayerCompanionRequest) Reset() {
-	*x = UpdatePlayerCompanionRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerCompanionRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerCompanionRequest) ProtoMessage() {}
-
-func (x *UpdatePlayerCompanionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerCompanionRequest.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerCompanionRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{3}
-}
-
-func (x *UpdatePlayerCompanionRequest) GetCompanionId() string {
-	if x != nil {
-		return x.CompanionId
-	}
-	return ""
-}
-
-type UpdatePlayerCommentRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Comment string `protobuf:"bytes,2,opt,name=comment,proto3" json:"comment,omitempty"`
-}
-
-func (x *UpdatePlayerCommentRequest) Reset() {
-	*x = UpdatePlayerCommentRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerCommentRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerCommentRequest) ProtoMessage() {}
-
-func (x *UpdatePlayerCommentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerCommentRequest.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerCommentRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *UpdatePlayerCommentRequest) GetComment() string {
-	if x != nil {
-		return x.Comment
-	}
-	return ""
-}
-
-type UpdateRentalCardRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	RentalCard string `protobuf:"bytes,1,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
-}
-
-func (x *UpdateRentalCardRequest) Reset() {
-	*x = UpdateRentalCardRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdateRentalCardRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdateRentalCardRequest) ProtoMessage() {}
-
-func (x *UpdateRentalCardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdateRentalCardRequest.ProtoReflect.Descriptor instead.
-func (*UpdateRentalCardRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{5}
-}
-
-func (x *UpdateRentalCardRequest) GetRentalCard() string {
-	if x != nil {
-		return x.RentalCard
-	}
-	return ""
-}
-
 type PlayerSearchRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -321,7 +78,7 @@ type PlayerSearchRequest struct {
 func (x *PlayerSearchRequest) Reset() {
 	*x = PlayerSearchRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[6]
+		mi := &file_social_request_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -334,7 +91,7 @@ func (x *PlayerSearchRequest) String() string {
 func (*PlayerSearchRequest) ProtoMessage() {}
 
 func (x *PlayerSearchRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[6]
+	mi := &file_social_request_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -347,7 +104,7 @@ func (x *PlayerSearchRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlayerSearchRequest.ProtoReflect.Descriptor instead.
 func (*PlayerSearchRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{6}
+	return file_social_request_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PlayerSearchRequest) GetUserId() string {
@@ -368,7 +125,7 @@ type UnfollowPlayerRequest struct {
 func (x *UnfollowPlayerRequest) Reset() {
 	*x = UnfollowPlayerRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_social_request_proto_msgTypes[7]
+		mi := &file_social_request_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -381,7 +138,7 @@ func (x *UnfollowPlayerRequest) String() string {
 func (*UnfollowPlayerRequest) ProtoMessage() {}
 
 func (x *UnfollowPlayerRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_social_request_proto_msgTypes[7]
+	mi := &file_social_request_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -394,7 +151,7 @@ func (x *UnfollowPlayerRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnfollowPlayerRequest.ProtoReflect.Descriptor instead.
 func (*UnfollowPlayerRequest) Descriptor() ([]byte, []int) {
-	return file_social_request_proto_rawDescGZIP(), []int{7}
+	return file_social_request_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *UnfollowPlayerRequest) GetPlayerId() string {
@@ -412,39 +169,18 @@ var file_social_request_proto_rawDesc = []byte{
 	0x22, 0x32, 0x0a, 0x13, 0x46, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65,
 	0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79,
-	0x65, 0x72, 0x49, 0x64, 0x22, 0x35, 0x0a, 0x1b, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x50, 0x72, 0x65, 0x73, 0x65, 0x6e, 0x63, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x04, 0x52, 0x06, 0x6f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x22, 0x64, 0x0a, 0x1b, 0x55,
-	0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x50, 0x6f, 0x73, 0x69, 0x74,
-	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x72, 0x65,
-	0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x70, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09,
-	0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x12, 0x26, 0x0a, 0x0f, 0x72, 0x65, 0x67,
-	0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x70, 0x5f, 0x6e, 0x6f, 0x64, 0x65, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x05, 0x52, 0x0d, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x4e, 0x6f, 0x64,
-	0x65, 0x22, 0x41, 0x0a, 0x1c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65,
-	0x72, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x12, 0x21, 0x0a, 0x0c, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69, 0x6f, 0x6e, 0x5f, 0x69,
-	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69,
-	0x6f, 0x6e, 0x49, 0x64, 0x22, 0x36, 0x0a, 0x1a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x07, 0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x22, 0x3a, 0x0a, 0x17,
-	0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x43, 0x61, 0x72, 0x64,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a, 0x0b, 0x72, 0x65, 0x6e, 0x74, 0x61,
-	0x6c, 0x5f, 0x63, 0x61, 0x72, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x72, 0x65,
-	0x6e, 0x74, 0x61, 0x6c, 0x43, 0x61, 0x72, 0x64, 0x22, 0x2e, 0x0a, 0x13, 0x50, 0x6c, 0x61, 0x79,
-	0x65, 0x72, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
-	0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x34, 0x0a, 0x15, 0x55, 0x6e, 0x66, 0x6f,
-	0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x43,
-	0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73,
-	0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d,
-	0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x70, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72,
-	0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x72, 0x49, 0x64, 0x22, 0x2e, 0x0a, 0x13, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53, 0x65,
+	0x61, 0x72, 0x63, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75,
+	0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73,
+	0x65, 0x72, 0x49, 0x64, 0x22, 0x34, 0x0a, 0x15, 0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f, 0x77,
+	0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1b, 0x0a,
+	0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63,
+	0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67,
+	0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x70,
+	0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -459,16 +195,11 @@ func file_social_request_proto_rawDescGZIP() []byte {
 	return file_social_request_proto_rawDescData
 }
 
-var file_social_request_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_social_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_social_request_proto_goTypes = []interface{}{
-	(*FollowPlayerRequest)(nil),          // 0: presence.FollowPlayerRequest
-	(*UpdatePlayerPresenceRequest)(nil),  // 1: presence.UpdatePlayerPresenceRequest
-	(*UpdatePlayerPositionRequest)(nil),  // 2: presence.UpdatePlayerPositionRequest
-	(*UpdatePlayerCompanionRequest)(nil), // 3: presence.UpdatePlayerCompanionRequest
-	(*UpdatePlayerCommentRequest)(nil),   // 4: presence.UpdatePlayerCommentRequest
-	(*UpdateRentalCardRequest)(nil),      // 5: presence.UpdateRentalCardRequest
-	(*PlayerSearchRequest)(nil),          // 6: presence.PlayerSearchRequest
-	(*UnfollowPlayerRequest)(nil),        // 7: presence.UnfollowPlayerRequest
+	(*FollowPlayerRequest)(nil),   // 0: presence.FollowPlayerRequest
+	(*PlayerSearchRequest)(nil),   // 1: presence.PlayerSearchRequest
+	(*UnfollowPlayerRequest)(nil), // 2: presence.UnfollowPlayerRequest
 }
 var file_social_request_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -497,66 +228,6 @@ func file_social_request_proto_init() {
 			}
 		}
 		file_social_request_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerPresenceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_request_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerPositionRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_request_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerCompanionRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_request_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerCommentRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_request_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateRentalCardRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_request_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PlayerSearchRequest); i {
 			case 0:
 				return &v.state
@@ -568,7 +239,7 @@ func file_social_request_proto_init() {
 				return nil
 			}
 		}
-		file_social_request_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_social_request_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UnfollowPlayerRequest); i {
 			case 0:
 				return &v.state
@@ -587,7 +258,7 @@ func file_social_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_social_request_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

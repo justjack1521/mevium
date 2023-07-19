@@ -22,196 +22,6 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type UpdatePlayerPresenceResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *UpdatePlayerPresenceResponse) Reset() {
-	*x = UpdatePlayerPresenceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerPresenceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerPresenceResponse) ProtoMessage() {}
-
-func (x *UpdatePlayerPresenceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerPresenceResponse.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerPresenceResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{0}
-}
-
-type UpdatePlayerPositionResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *UpdatePlayerPositionResponse) Reset() {
-	*x = UpdatePlayerPositionResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerPositionResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerPositionResponse) ProtoMessage() {}
-
-func (x *UpdatePlayerPositionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerPositionResponse.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerPositionResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{1}
-}
-
-type UpdatePlayerCompanionResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *UpdatePlayerCompanionResponse) Reset() {
-	*x = UpdatePlayerCompanionResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerCompanionResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerCompanionResponse) ProtoMessage() {}
-
-func (x *UpdatePlayerCompanionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerCompanionResponse.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerCompanionResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{2}
-}
-
-type UpdatePlayerCommentResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *UpdatePlayerCommentResponse) Reset() {
-	*x = UpdatePlayerCommentResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdatePlayerCommentResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdatePlayerCommentResponse) ProtoMessage() {}
-
-func (x *UpdatePlayerCommentResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdatePlayerCommentResponse.ProtoReflect.Descriptor instead.
-func (*UpdatePlayerCommentResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{3}
-}
-
-type UpdateRentalCardResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *UpdateRentalCardResponse) Reset() {
-	*x = UpdateRentalCardResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *UpdateRentalCardResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*UpdateRentalCardResponse) ProtoMessage() {}
-
-func (x *UpdateRentalCardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use UpdateRentalCardResponse.ProtoReflect.Descriptor instead.
-func (*UpdateRentalCardResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{4}
-}
-
 type FollowPlayerResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -223,7 +33,7 @@ type FollowPlayerResponse struct {
 func (x *FollowPlayerResponse) Reset() {
 	*x = FollowPlayerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[5]
+		mi := &file_social_response_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -236,7 +46,7 @@ func (x *FollowPlayerResponse) String() string {
 func (*FollowPlayerResponse) ProtoMessage() {}
 
 func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[5]
+	mi := &file_social_response_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -249,7 +59,7 @@ func (x *FollowPlayerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FollowPlayerResponse.ProtoReflect.Descriptor instead.
 func (*FollowPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{5}
+	return file_social_response_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *FollowPlayerResponse) GetPlayerInfo() *protom.ProtoPlayerSocialInfo {
@@ -270,7 +80,7 @@ type PlayerSearchResponse struct {
 func (x *PlayerSearchResponse) Reset() {
 	*x = PlayerSearchResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[6]
+		mi := &file_social_response_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -283,7 +93,7 @@ func (x *PlayerSearchResponse) String() string {
 func (*PlayerSearchResponse) ProtoMessage() {}
 
 func (x *PlayerSearchResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[6]
+	mi := &file_social_response_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -296,7 +106,7 @@ func (x *PlayerSearchResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlayerSearchResponse.ProtoReflect.Descriptor instead.
 func (*PlayerSearchResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{6}
+	return file_social_response_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PlayerSearchResponse) GetPlayerInfo() *protog.ProtoPlayerInfo {
@@ -317,7 +127,7 @@ type UnfollowPlayerResponse struct {
 func (x *UnfollowPlayerResponse) Reset() {
 	*x = UnfollowPlayerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_social_response_proto_msgTypes[7]
+		mi := &file_social_response_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -330,7 +140,7 @@ func (x *UnfollowPlayerResponse) String() string {
 func (*UnfollowPlayerResponse) ProtoMessage() {}
 
 func (x *UnfollowPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_social_response_proto_msgTypes[7]
+	mi := &file_social_response_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -343,7 +153,7 @@ func (x *UnfollowPlayerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnfollowPlayerResponse.ProtoReflect.Descriptor instead.
 func (*UnfollowPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_social_response_proto_rawDescGZIP(), []int{7}
+	return file_social_response_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *UnfollowPlayerResponse) GetPlayerId() string {
@@ -360,36 +170,26 @@ var file_social_response_proto_rawDesc = []byte{
 	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x70, 0x72, 0x65, 0x73, 0x65, 0x6e, 0x63,
 	0x65, 0x1a, 0x0a, 0x64, 0x61, 0x74, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1a, 0x6d,
 	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x1e, 0x0a, 0x1c, 0x55, 0x70, 0x64,
-	0x61, 0x74, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x50, 0x72, 0x65, 0x73, 0x65, 0x6e, 0x63,
-	0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1e, 0x0a, 0x1c, 0x55, 0x70, 0x64,
-	0x61, 0x74, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f,
-	0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1f, 0x0a, 0x1d, 0x55, 0x70, 0x64,
-	0x61, 0x74, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69,
-	0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1d, 0x0a, 0x1b, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e,
-	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1a, 0x0a, 0x18, 0x55, 0x70, 0x64,
-	0x61, 0x74, 0x65, 0x52, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x43, 0x61, 0x72, 0x64, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5c, 0x0a, 0x14, 0x46, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50,
-	0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x44, 0x0a,
-	0x0b, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x0b, 0x32, 0x23, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53, 0x6f, 0x63,
-	0x69, 0x61, 0x6c, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49,
-	0x6e, 0x66, 0x6f, 0x22, 0x50, 0x0a, 0x14, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53, 0x65, 0x61,
-	0x72, 0x63, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x38, 0x0a, 0x0b, 0x70,
-	0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
-	0x32, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50,
-	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70, 0x6c, 0x61, 0x79, 0x65,
-	0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x35, 0x0a, 0x16, 0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f,
-	0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
-	0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x43, 0x5a, 0x32,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a,
-	0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70,
-	0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x70, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x69, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x5c, 0x0a, 0x14, 0x46, 0x6f, 0x6c,
+	0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x44, 0x0a, 0x0b, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x23, 0x2e, 0x6e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x53, 0x6f, 0x63, 0x69, 0x61, 0x6c, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70, 0x6c, 0x61,
+	0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x50, 0x0a, 0x14, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x38, 0x0a, 0x0b, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x67, 0x2e, 0x50, 0x72,
+	0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70,
+	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x35, 0x0a, 0x16, 0x55, 0x6e, 0x66,
+	0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64,
+	0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a,
+	0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69,
+	0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x70, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e,
+	0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -404,22 +204,17 @@ func file_social_response_proto_rawDescGZIP() []byte {
 	return file_social_response_proto_rawDescData
 }
 
-var file_social_response_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_social_response_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_social_response_proto_goTypes = []interface{}{
-	(*UpdatePlayerPresenceResponse)(nil),  // 0: presence.UpdatePlayerPresenceResponse
-	(*UpdatePlayerPositionResponse)(nil),  // 1: presence.UpdatePlayerPositionResponse
-	(*UpdatePlayerCompanionResponse)(nil), // 2: presence.UpdatePlayerCompanionResponse
-	(*UpdatePlayerCommentResponse)(nil),   // 3: presence.UpdatePlayerCommentResponse
-	(*UpdateRentalCardResponse)(nil),      // 4: presence.UpdateRentalCardResponse
-	(*FollowPlayerResponse)(nil),          // 5: presence.FollowPlayerResponse
-	(*PlayerSearchResponse)(nil),          // 6: presence.PlayerSearchResponse
-	(*UnfollowPlayerResponse)(nil),        // 7: presence.UnfollowPlayerResponse
-	(*protom.ProtoPlayerSocialInfo)(nil),  // 8: notification.ProtoPlayerSocialInfo
-	(*protog.ProtoPlayerInfo)(nil),        // 9: protog.ProtoPlayerInfo
+	(*FollowPlayerResponse)(nil),         // 0: presence.FollowPlayerResponse
+	(*PlayerSearchResponse)(nil),         // 1: presence.PlayerSearchResponse
+	(*UnfollowPlayerResponse)(nil),       // 2: presence.UnfollowPlayerResponse
+	(*protom.ProtoPlayerSocialInfo)(nil), // 3: notification.ProtoPlayerSocialInfo
+	(*protog.ProtoPlayerInfo)(nil),       // 4: protog.ProtoPlayerInfo
 }
 var file_social_response_proto_depIdxs = []int32{
-	8, // 0: presence.FollowPlayerResponse.player_info:type_name -> notification.ProtoPlayerSocialInfo
-	9, // 1: presence.PlayerSearchResponse.player_info:type_name -> protog.ProtoPlayerInfo
+	3, // 0: presence.FollowPlayerResponse.player_info:type_name -> notification.ProtoPlayerSocialInfo
+	4, // 1: presence.PlayerSearchResponse.player_info:type_name -> protog.ProtoPlayerInfo
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -434,66 +229,6 @@ func file_social_response_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_social_response_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerPresenceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_response_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerPositionResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_response_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerCompanionResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_response_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdatePlayerCommentResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_response_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateRentalCardResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_social_response_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FollowPlayerResponse); i {
 			case 0:
 				return &v.state
@@ -505,7 +240,7 @@ func file_social_response_proto_init() {
 				return nil
 			}
 		}
-		file_social_response_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_social_response_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PlayerSearchResponse); i {
 			case 0:
 				return &v.state
@@ -517,7 +252,7 @@ func file_social_response_proto_init() {
 				return nil
 			}
 		}
-		file_social_response_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_social_response_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UnfollowPlayerResponse); i {
 			case 0:
 				return &v.state
@@ -536,7 +271,7 @@ func file_social_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_social_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

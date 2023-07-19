@@ -20,12 +20,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusSocialService_FollowPlayer_FullMethodName         = "/service.MeviusSocialService/FollowPlayer"
-	MeviusSocialService_UnfollowPlayer_FullMethodName       = "/service.MeviusSocialService/UnfollowPlayer"
-	MeviusSocialService_PlayerSearch_FullMethodName         = "/service.MeviusSocialService/PlayerSearch"
-	MeviusSocialService_UpdatePlayerPresence_FullMethodName = "/service.MeviusSocialService/UpdatePlayerPresence"
-	MeviusSocialService_UpdatePlayerPosition_FullMethodName = "/service.MeviusSocialService/UpdatePlayerPosition"
-	MeviusSocialService_UpdateCompanion_FullMethodName      = "/service.MeviusSocialService/UpdateCompanion"
+	MeviusSocialService_FollowPlayer_FullMethodName   = "/service.MeviusSocialService/FollowPlayer"
+	MeviusSocialService_UnfollowPlayer_FullMethodName = "/service.MeviusSocialService/UnfollowPlayer"
+	MeviusSocialService_PlayerSearch_FullMethodName   = "/service.MeviusSocialService/PlayerSearch"
 )
 
 // MeviusSocialServiceClient is the client API for MeviusSocialService service.
@@ -35,9 +32,6 @@ type MeviusSocialServiceClient interface {
 	FollowPlayer(ctx context.Context, in *protop.FollowPlayerRequest, opts ...grpc.CallOption) (*protop.FollowPlayerResponse, error)
 	UnfollowPlayer(ctx context.Context, in *protop.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protop.UnfollowPlayerResponse, error)
 	PlayerSearch(ctx context.Context, in *protop.PlayerSearchRequest, opts ...grpc.CallOption) (*protop.PlayerSearchResponse, error)
-	UpdatePlayerPresence(ctx context.Context, in *protop.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPresenceResponse, error)
-	UpdatePlayerPosition(ctx context.Context, in *protop.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPositionResponse, error)
-	UpdateCompanion(ctx context.Context, in *protop.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerCompanionResponse, error)
 }
 
 type meviusSocialServiceClient struct {
@@ -75,33 +69,6 @@ func (c *meviusSocialServiceClient) PlayerSearch(ctx context.Context, in *protop
 	return out, nil
 }
 
-func (c *meviusSocialServiceClient) UpdatePlayerPresence(ctx context.Context, in *protop.UpdatePlayerPresenceRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPresenceResponse, error) {
-	out := new(protop.UpdatePlayerPresenceResponse)
-	err := c.cc.Invoke(ctx, MeviusSocialService_UpdatePlayerPresence_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *meviusSocialServiceClient) UpdatePlayerPosition(ctx context.Context, in *protop.UpdatePlayerPositionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerPositionResponse, error) {
-	out := new(protop.UpdatePlayerPositionResponse)
-	err := c.cc.Invoke(ctx, MeviusSocialService_UpdatePlayerPosition_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *meviusSocialServiceClient) UpdateCompanion(ctx context.Context, in *protop.UpdatePlayerCompanionRequest, opts ...grpc.CallOption) (*protop.UpdatePlayerCompanionResponse, error) {
-	out := new(protop.UpdatePlayerCompanionResponse)
-	err := c.cc.Invoke(ctx, MeviusSocialService_UpdateCompanion_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // MeviusSocialServiceServer is the server API for MeviusSocialService service.
 // All implementations should embed UnimplementedMeviusSocialServiceServer
 // for forward compatibility
@@ -109,9 +76,6 @@ type MeviusSocialServiceServer interface {
 	FollowPlayer(context.Context, *protop.FollowPlayerRequest) (*protop.FollowPlayerResponse, error)
 	UnfollowPlayer(context.Context, *protop.UnfollowPlayerRequest) (*protop.UnfollowPlayerResponse, error)
 	PlayerSearch(context.Context, *protop.PlayerSearchRequest) (*protop.PlayerSearchResponse, error)
-	UpdatePlayerPresence(context.Context, *protop.UpdatePlayerPresenceRequest) (*protop.UpdatePlayerPresenceResponse, error)
-	UpdatePlayerPosition(context.Context, *protop.UpdatePlayerPositionRequest) (*protop.UpdatePlayerPositionResponse, error)
-	UpdateCompanion(context.Context, *protop.UpdatePlayerCompanionRequest) (*protop.UpdatePlayerCompanionResponse, error)
 }
 
 // UnimplementedMeviusSocialServiceServer should be embedded to have forward compatible implementations.
@@ -126,15 +90,6 @@ func (UnimplementedMeviusSocialServiceServer) UnfollowPlayer(context.Context, *p
 }
 func (UnimplementedMeviusSocialServiceServer) PlayerSearch(context.Context, *protop.PlayerSearchRequest) (*protop.PlayerSearchResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PlayerSearch not implemented")
-}
-func (UnimplementedMeviusSocialServiceServer) UpdatePlayerPresence(context.Context, *protop.UpdatePlayerPresenceRequest) (*protop.UpdatePlayerPresenceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdatePlayerPresence not implemented")
-}
-func (UnimplementedMeviusSocialServiceServer) UpdatePlayerPosition(context.Context, *protop.UpdatePlayerPositionRequest) (*protop.UpdatePlayerPositionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdatePlayerPosition not implemented")
-}
-func (UnimplementedMeviusSocialServiceServer) UpdateCompanion(context.Context, *protop.UpdatePlayerCompanionRequest) (*protop.UpdatePlayerCompanionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateCompanion not implemented")
 }
 
 // UnsafeMeviusSocialServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -202,60 +157,6 @@ func _MeviusSocialService_PlayerSearch_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusSocialService_UpdatePlayerPresence_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protop.UpdatePlayerPresenceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusSocialServiceServer).UpdatePlayerPresence(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusSocialService_UpdatePlayerPresence_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusSocialServiceServer).UpdatePlayerPresence(ctx, req.(*protop.UpdatePlayerPresenceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusSocialService_UpdatePlayerPosition_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protop.UpdatePlayerPositionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusSocialServiceServer).UpdatePlayerPosition(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusSocialService_UpdatePlayerPosition_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusSocialServiceServer).UpdatePlayerPosition(ctx, req.(*protop.UpdatePlayerPositionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusSocialService_UpdateCompanion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protop.UpdatePlayerCompanionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusSocialServiceServer).UpdateCompanion(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusSocialService_UpdateCompanion_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusSocialServiceServer).UpdateCompanion(ctx, req.(*protop.UpdatePlayerCompanionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // MeviusSocialService_ServiceDesc is the grpc.ServiceDesc for MeviusSocialService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -274,18 +175,6 @@ var MeviusSocialService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PlayerSearch",
 			Handler:    _MeviusSocialService_PlayerSearch_Handler,
-		},
-		{
-			MethodName: "UpdatePlayerPresence",
-			Handler:    _MeviusSocialService_UpdatePlayerPresence_Handler,
-		},
-		{
-			MethodName: "UpdatePlayerPosition",
-			Handler:    _MeviusSocialService_UpdatePlayerPosition_Handler,
-		},
-		{
-			MethodName: "UpdateCompanion",
-			Handler:    _MeviusSocialService_UpdateCompanion_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -240,6 +240,289 @@ func (x *PlayerProfileCreatedMessage) GetCompanionId() string {
 	return ""
 }
 
+type PlayerPresenceUpdateMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	Online   uint64 `protobuf:"varint,2,opt,name=online,proto3" json:"online,omitempty"`
+}
+
+func (x *PlayerPresenceUpdateMessage) Reset() {
+	*x = PlayerPresenceUpdateMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_internal_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerPresenceUpdateMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerPresenceUpdateMessage) ProtoMessage() {}
+
+func (x *PlayerPresenceUpdateMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_message_internal_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerPresenceUpdateMessage.ProtoReflect.Descriptor instead.
+func (*PlayerPresenceUpdateMessage) Descriptor() ([]byte, []int) {
+	return file_message_internal_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *PlayerPresenceUpdateMessage) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerPresenceUpdateMessage) GetOnline() uint64 {
+	if x != nil {
+		return x.Online
+	}
+	return 0
+}
+
+type PlayerPositionUpdateMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId      string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	RegionMap     string `protobuf:"bytes,2,opt,name=region_map,json=regionMap,proto3" json:"region_map,omitempty"`
+	RegionMapNode int32  `protobuf:"varint,3,opt,name=region_map_node,json=regionMapNode,proto3" json:"region_map_node,omitempty"`
+}
+
+func (x *PlayerPositionUpdateMessage) Reset() {
+	*x = PlayerPositionUpdateMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_internal_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerPositionUpdateMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerPositionUpdateMessage) ProtoMessage() {}
+
+func (x *PlayerPositionUpdateMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_message_internal_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerPositionUpdateMessage.ProtoReflect.Descriptor instead.
+func (*PlayerPositionUpdateMessage) Descriptor() ([]byte, []int) {
+	return file_message_internal_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *PlayerPositionUpdateMessage) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerPositionUpdateMessage) GetRegionMap() string {
+	if x != nil {
+		return x.RegionMap
+	}
+	return ""
+}
+
+func (x *PlayerPositionUpdateMessage) GetRegionMapNode() int32 {
+	if x != nil {
+		return x.RegionMapNode
+	}
+	return 0
+}
+
+type PlayerCompanionUpdateMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId    string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	CompanionId string `protobuf:"bytes,2,opt,name=companion_id,json=companionId,proto3" json:"companion_id,omitempty"`
+}
+
+func (x *PlayerCompanionUpdateMessage) Reset() {
+	*x = PlayerCompanionUpdateMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_internal_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerCompanionUpdateMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerCompanionUpdateMessage) ProtoMessage() {}
+
+func (x *PlayerCompanionUpdateMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_message_internal_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerCompanionUpdateMessage.ProtoReflect.Descriptor instead.
+func (*PlayerCompanionUpdateMessage) Descriptor() ([]byte, []int) {
+	return file_message_internal_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *PlayerCompanionUpdateMessage) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerCompanionUpdateMessage) GetCompanionId() string {
+	if x != nil {
+		return x.CompanionId
+	}
+	return ""
+}
+
+type PlayerCommentUpdateMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	Comment  string `protobuf:"bytes,2,opt,name=comment,proto3" json:"comment,omitempty"`
+}
+
+func (x *PlayerCommentUpdateMessage) Reset() {
+	*x = PlayerCommentUpdateMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_internal_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerCommentUpdateMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerCommentUpdateMessage) ProtoMessage() {}
+
+func (x *PlayerCommentUpdateMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_message_internal_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerCommentUpdateMessage.ProtoReflect.Descriptor instead.
+func (*PlayerCommentUpdateMessage) Descriptor() ([]byte, []int) {
+	return file_message_internal_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *PlayerCommentUpdateMessage) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerCommentUpdateMessage) GetComment() string {
+	if x != nil {
+		return x.Comment
+	}
+	return ""
+}
+
+type PlayerRentalCardUpdateMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId   string `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	RentalCard string `protobuf:"bytes,2,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
+}
+
+func (x *PlayerRentalCardUpdateMessage) Reset() {
+	*x = PlayerRentalCardUpdateMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_message_internal_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerRentalCardUpdateMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerRentalCardUpdateMessage) ProtoMessage() {}
+
+func (x *PlayerRentalCardUpdateMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_message_internal_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerRentalCardUpdateMessage.ProtoReflect.Descriptor instead.
+func (*PlayerRentalCardUpdateMessage) Descriptor() ([]byte, []int) {
+	return file_message_internal_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *PlayerRentalCardUpdateMessage) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *PlayerRentalCardUpdateMessage) GetRentalCard() string {
+	if x != nil {
+		return x.RentalCard
+	}
+	return ""
+}
+
 var File_message_internal_proto protoreflect.FileDescriptor
 
 var file_message_internal_proto_rawDesc = []byte{
@@ -269,10 +552,41 @@ var file_message_internal_proto_rawDesc = []byte{
 	0x52, 0x0d, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x12,
 	0x21, 0x0a, 0x0c, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69, 0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x18,
 	0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69, 0x6f, 0x6e,
-	0x49, 0x64, 0x42, 0x34, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
-	0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65,
-	0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x49, 0x64, 0x22, 0x52, 0x0a, 0x1b, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x50, 0x72, 0x65, 0x73,
+	0x65, 0x6e, 0x63, 0x65, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67,
+	0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x16,
+	0x0a, 0x06, 0x6f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x04, 0x52, 0x06,
+	0x6f, 0x6e, 0x6c, 0x69, 0x6e, 0x65, 0x22, 0x81, 0x01, 0x0a, 0x1b, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d,
+	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
+	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x49, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61,
+	0x70, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d,
+	0x61, 0x70, 0x12, 0x26, 0x0a, 0x0f, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x70,
+	0x5f, 0x6e, 0x6f, 0x64, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0d, 0x72, 0x65, 0x67,
+	0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x4e, 0x6f, 0x64, 0x65, 0x22, 0x5e, 0x0a, 0x1c, 0x50, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69, 0x6f, 0x6e, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70,
+	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x21, 0x0a, 0x0c, 0x63, 0x6f, 0x6d, 0x70, 0x61,
+	0x6e, 0x69, 0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63,
+	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x69, 0x6f, 0x6e, 0x49, 0x64, 0x22, 0x53, 0x0a, 0x1a, 0x50, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0x43, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x55, 0x70, 0x64, 0x61, 0x74,
+	0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79,
+	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61,
+	0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x6e, 0x74, 0x22,
+	0x5d, 0x0a, 0x1d, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x43,
+	0x61, 0x72, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1f, 0x0a,
+	0x0b, 0x72, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x5f, 0x63, 0x61, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x0a, 0x72, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x43, 0x61, 0x72, 0x64, 0x42, 0x34,
+	0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73,
+	0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d,
+	0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -287,12 +601,17 @@ func file_message_internal_proto_rawDescGZIP() []byte {
 	return file_message_internal_proto_rawDescData
 }
 
-var file_message_internal_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_message_internal_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_message_internal_proto_goTypes = []interface{}{
-	(*ClientConnected)(nil),             // 0: notification.ClientConnected
-	(*ClientHeartbeat)(nil),             // 1: notification.ClientHeartbeat
-	(*ClientDisconnected)(nil),          // 2: notification.ClientDisconnected
-	(*PlayerProfileCreatedMessage)(nil), // 3: notification.PlayerProfileCreatedMessage
+	(*ClientConnected)(nil),               // 0: notification.ClientConnected
+	(*ClientHeartbeat)(nil),               // 1: notification.ClientHeartbeat
+	(*ClientDisconnected)(nil),            // 2: notification.ClientDisconnected
+	(*PlayerProfileCreatedMessage)(nil),   // 3: notification.PlayerProfileCreatedMessage
+	(*PlayerPresenceUpdateMessage)(nil),   // 4: notification.PlayerPresenceUpdateMessage
+	(*PlayerPositionUpdateMessage)(nil),   // 5: notification.PlayerPositionUpdateMessage
+	(*PlayerCompanionUpdateMessage)(nil),  // 6: notification.PlayerCompanionUpdateMessage
+	(*PlayerCommentUpdateMessage)(nil),    // 7: notification.PlayerCommentUpdateMessage
+	(*PlayerRentalCardUpdateMessage)(nil), // 8: notification.PlayerRentalCardUpdateMessage
 }
 var file_message_internal_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -356,6 +675,66 @@ func file_message_internal_proto_init() {
 				return nil
 			}
 		}
+		file_message_internal_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerPresenceUpdateMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_message_internal_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerPositionUpdateMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_message_internal_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerCompanionUpdateMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_message_internal_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerCommentUpdateMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_message_internal_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerRentalCardUpdateMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -363,7 +742,7 @@ func file_message_internal_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_message_internal_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
