@@ -109,3 +109,15 @@ func NewPlayerRentalCardUpdateMessage(bytes []byte) (*PlayerRentalCardUpdateMess
 func (x *PlayerRentalCardUpdateMessage) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewPlayerLevelUpdateMessage(bytes []byte) (*PlayerLevelUpdateMessage, error) {
+	req := &PlayerLevelUpdateMessage{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *PlayerLevelUpdateMessage) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

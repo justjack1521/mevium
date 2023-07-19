@@ -49,3 +49,8 @@ message PlayerRentalCardUpdateMessage {
   string player_id = 1;
   string rental_card = 2;
 }
+
+message PlayerLevelUpdateMessage {
+  string player_id = 1;
+  int32 level = 2;
+}
