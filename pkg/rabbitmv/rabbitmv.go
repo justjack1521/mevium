@@ -44,6 +44,7 @@ const (
 	PlayerCompanion    RoutingKey = "player.companion"
 	PlayerPosition     RoutingKey = "player.position"
 	PlayerPresence     RoutingKey = "player.presence"
+	PlayerRental       RoutingKey = "player.rental"
 	BattleComplete     RoutingKey = "battle.complete"
 )
 
@@ -56,6 +57,7 @@ const (
 	PlayerCreated   Queue = "player.created"
 	PositionUpdate  Queue = "position.update"
 	PresenceUpdate  Queue = "presence.update"
+	RentalUpdate    Queue = "rental.update"
 	SocialUpdate    Queue = "social.update"
 	RankingUpdate   Queue = "ranking.update"
 	LoadoutUpdate   Queue = "loadout.update"
