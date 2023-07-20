@@ -31,6 +31,8 @@ message ProtoRankingEventClaim {
   bool claimed = 3;
   bool can_claim = 4;
   repeated ProtoPlayerRankSetDetails player_ranking = 5;
+  repeated ProtoPlayerRankSetDetails top_rankings = 6;
+  ProtoRankingEventStats statistics = 7;
 }
 
 message ProtoRankingEventReward {
@@ -39,4 +41,25 @@ message ProtoRankingEventReward {
     string reward_card = 2;
   }
   int32 quantity = 3;
+}
+
+message ProtoRankingEventStats {
+  int64 total_participants = 1;
+  ProtoRankingEventStatPopularRegion popular_region = 2;
+  ProtoRankingEventStatPopularJob popular_job = 3;
+  ProtoRankingEventStatPopularAbilityCard popular_ability_card = 4;
+}
+
+message ProtoRankingEventStatPopularJob {
+  string job_card_id = 1;
+  int32 sub_job_index = 2;
+}
+
+message ProtoRankingEventStatPopularRegion {
+  string region_map_id = 1;
+  int32 node_index = 2;
+}
+
+message ProtoRankingEventStatPopularAbilityCard {
+  string ability_card_id = 1;
 }
