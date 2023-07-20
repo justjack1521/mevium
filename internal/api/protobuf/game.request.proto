@@ -71,7 +71,7 @@ message BattleStartRequest {
   int32 deck_index = 2;
   bool hard_mode = 3;
   string rental_player_id = 5;
-  protog.ProtoPlayerCardInfo rental_card = 6;
+  game.ProtoPlayerCardInfo rental_card = 6;
 }
 
 message CardAugmentRequest {
@@ -176,12 +176,12 @@ message FetchPendingRegionEventsRequest {
 
 message ProcessRegionEventRequest {
   string region_map_id = 1;
-  protog.ProtoRegionEventData event = 2;
+  game.ProtoRegionEventData event = 2;
 }
 
 message SkillPanelUnlockResponse {
-  repeated protog.ProtoItemValuePair ItemsRemoved = 1;
-  protog.ProtoJobCardInstance JobInstance = 2;
+  repeated game.ProtoItemValuePair ItemsRemoved = 1;
+  game.ProtoJobCardInstance JobInstance = 2;
 }
 
 message StaminaRestoreRequest {

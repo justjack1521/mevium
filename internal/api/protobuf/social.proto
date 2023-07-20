@@ -6,16 +6,10 @@ option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
 
 import "data.proto";
-import "social.proto";
 
-message FollowPlayerResponse {
-  presence.ProtoPlayerSocialInfo player_info = 1;
-}
-
-message PlayerSearchResponse {
+message ProtoPlayerSocialInfo {
   game.ProtoPlayerInfo player_info = 1;
-}
-
-message UnfollowPlayerResponse {
-  string player_id = 1;
+  int64 last_online = 2;
+  string region_map_id = 3;
+  int32 region_node_index = 4;
 }

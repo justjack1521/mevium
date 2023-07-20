@@ -29,12 +29,12 @@ message ResponseHeader {
 }
 
 message BattleCompleteResponse {
-  protog.ProtoLastBattleResults Results = 1;
-  repeated protog.ProtoItemValuePair seed_rewards = 4;
+  game.ProtoLastBattleResults Results = 1;
+  repeated game.ProtoItemValuePair seed_rewards = 4;
   float seed_area_multiplier = 5;
   float seed_score_multiplier = 6;
-  repeated protog.ProtoItemValuePair item_rewards = 7;
-  repeated protog.ProtoAbilityCardInstance card_drops = 8;
+  repeated game.ProtoItemValuePair item_rewards = 7;
+  repeated game.ProtoAbilityCardInstance card_drops = 8;
 
   bool pending_events = 9;
 
@@ -43,11 +43,11 @@ message BattleCompleteResponse {
 }
 
 message BattleReviveResponse {
-  protog.ProtoItemValuePair ItemRemoved = 1;
+  game.ProtoItemValuePair ItemRemoved = 1;
 }
 
 message BattleStartResponse {
-  protog.ProtoBattleStartData BattleStartData = 1;
+  game.ProtoBattleStartData BattleStartData = 1;
   uint32 stamina_decreased = 2;
   uint64 stamina_dec = 3;
 }
@@ -73,14 +73,14 @@ message CardFusionResponse {
   int32 ability_level_gain = 6;
   repeated string inventory_cards_removed = 7;
   repeated string bank_cards_removed = 8;
-  protog.ProtoItemValuePair fusion_cost = 9;
+  game.ProtoItemValuePair fusion_cost = 9;
 }
 
 message CardBoostFusionResponse {
   string card_id = 1;
   int32 seed_level_gain = 2;
   int32 ability_level_gain = 3;
-  protog.ProtoItemValuePair fusion_cost = 4;
+  game.ProtoItemValuePair fusion_cost = 4;
 }
 
 message CardSaleResponse {
@@ -93,15 +93,15 @@ message CardTransferResponse {
 }
 
 message ClaimLoginCampaignResponse {
-  protog.ProtoMailBoxItem claim = 1;
+  game.ProtoMailBoxItem claim = 1;
 }
 
 message ClaimMailBoxItemResponse {
-  protog.ProtoMailBoxItem claim = 1;
+  game.ProtoMailBoxItem claim = 1;
 }
 
 message ClaimAllMailBoxItemResponse {
- repeated protog.ProtoMailBoxItem claims = 1;
+ repeated game.ProtoMailBoxItem claims = 1;
 }
 
 message DeleteAllMailboxItemResponse {
@@ -109,11 +109,11 @@ message DeleteAllMailboxItemResponse {
 }
 
 message ClaimEventRankingResponse {
-  repeated protog.ProtoMailBoxItem claims = 1;
+  repeated game.ProtoMailBoxItem claims = 1;
 }
 
 message ClaimRentalCardRewardResponse {
-  protog.ProtoItemValuePair reward_item = 1;
+  game.ProtoItemValuePair reward_item = 1;
 }
 
 message ConfirmDailyMissionResponse {
@@ -121,19 +121,19 @@ message ConfirmDailyMissionResponse {
 }
 
 message DeckEditAllResponse {
-  protog.ProtoPlayerDeckCollection Collection = 1;
+  game.ProtoPlayerDeckCollection Collection = 1;
   bool MultiPlayer = 2;
 }
 
 message FetchPlayerDataResponse {
-  protog.ProtoGameData data = 1;
+  game.ProtoGameData data = 1;
 }
 
 message FirstDailyLoginResponse {
   int64 login_bonus_received = 1;
-  protog.ProtoDailyMissionInstance daily_mission = 2;
-  protog.ProtoLoginCampaignInstance standard_login_bonus = 3;
-  protog.ProtoLoginCampaignInstance special_login_bonus = 4;
+  game.ProtoDailyMissionInstance daily_mission = 2;
+  game.ProtoLoginCampaignInstance standard_login_bonus = 3;
+  game.ProtoLoginCampaignInstance special_login_bonus = 4;
   int32 rental_count = 5;
   bool rental_claim = 6;
 }
@@ -141,7 +141,7 @@ message FirstDailyLoginResponse {
 message FilterSortResponse {
   int32 View = 1;
   int32 Index = 2;
-  protog.ProtoCardFilterSort FilterSort = 3;
+  game.ProtoCardFilterSort FilterSort = 3;
 }
 
 message UpdateProfileResponse {
@@ -163,14 +163,14 @@ message SkillPanelUnlockRequest {
 message TeleportResponse {
   string region_map = 1;
   int32 region_map_node = 2;
-  repeated protog.ProtoRegionEvent region_events = 3;
-  repeated protog.ProtoRegionNodeEvent node_events = 4;
-  optional protog.ProtoRegionMapInstance current_map_data = 5;
+  repeated game.ProtoRegionEvent region_events = 3;
+  repeated game.ProtoRegionNodeEvent node_events = 4;
+  optional game.ProtoRegionMapInstance current_map_data = 5;
 }
 
 message FetchPendingRegionEventsResponse {
   string region_map_id = 1;
-  repeated protog.ProtoRegionEventData event = 2;
+  repeated game.ProtoRegionEventData event = 2;
 }
 
 message ProcessRegionEventResponse {

@@ -5,7 +5,7 @@ package notification;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protom";
 
-import "data.proto";
+import "social.proto";
 
 enum NotificationType {
   BASE = 0;
@@ -21,9 +21,9 @@ message Notification {
 }
 
 message SocialDataNotification {
-  repeated ProtoPlayerSocialInfo following_list = 1;
-  repeated ProtoPlayerSocialInfo follower_list = 2;
-  repeated ProtoPlayerSocialInfo rental_players = 3;
+  repeated presence.ProtoPlayerSocialInfo following_list = 1;
+  repeated presence.ProtoPlayerSocialInfo follower_list = 2;
+  repeated presence.ProtoPlayerSocialInfo rental_players = 3;
 }
 
 message PlayerPresenceNotification {
@@ -45,9 +45,3 @@ message PlayerPositionNotification {
   int32 node_index = 3;
 }
 
-message ProtoPlayerSocialInfo {
-  protog.ProtoPlayerInfo player_info = 1;
-  int64 last_online = 2;
-  string region_map_id = 3;
-  int32 region_node_index = 4;
-}

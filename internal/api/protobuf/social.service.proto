@@ -11,4 +11,5 @@ service MeviusSocialService {
   rpc FollowPlayer(presence.FollowPlayerRequest) returns (presence.FollowPlayerResponse) {}
   rpc UnfollowPlayer(presence.UnfollowPlayerRequest) returns (presence.UnfollowPlayerResponse) {}
   rpc PlayerSearch(presence.PlayerSearchRequest) returns (presence.PlayerSearchResponse){}
+  rpc FetchPlayerSocialInfo(presence.FetchPlayerSocialInfoRequest) returns (presence.FetchPlayerSocialInfoResponse) {}
 }
