@@ -9,3 +9,7 @@ func (x *FollowPlayerResponse) MarshallBinary() ([]byte, error) {
 func (x *UnfollowPlayerResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func (x *FetchPlayerSocialInfoResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

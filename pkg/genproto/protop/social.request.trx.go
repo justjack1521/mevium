@@ -17,3 +17,11 @@ func NewUnfollowPlayerRequest(bytes []byte) (*UnfollowPlayerRequest, error) {
 	}
 	return req, nil
 }
+
+func NewFetchPlayerSocialInfo(bytes []byte) (*FetchPlayerSocialInfoRequest, error) {
+	req := &FetchPlayerSocialInfoRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
