@@ -19,6 +19,7 @@ message FetchPlayerSocialInfoResponse {
 
 message FollowPlayerRequest {
   string player_id = 1;
+  string target_id = 2;
 }
 
 message PlayerSearchRequest {
@@ -27,4 +28,5 @@ message PlayerSearchRequest {
 
 message UnfollowPlayerRequest {
   string player_id = 1;
+  string target_id = 2;
 }
