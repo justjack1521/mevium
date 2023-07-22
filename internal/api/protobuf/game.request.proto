@@ -36,6 +36,7 @@ enum RequestType {
   GET_RANKING_EVENTS = 2600;
   DELETE_ALL_MAILBOX = 2700;
   CLAIM_RENTAL_REWARD = 2800;
+  GET_SOCIAL_DATA = 2900;
 }
 
 enum TeleportRequestType {
