@@ -385,6 +385,7 @@ message ProtoRegionMapHeader {
   bool cleared = 2;
   int32 completed_count = 3;
   int32 current_node_index = 4;
+  bool visited = 5;
 }
 
 message ProtoRegionMapInstance {
