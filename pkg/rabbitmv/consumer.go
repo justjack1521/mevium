@@ -39,7 +39,7 @@ func (s *StandardConsumer) WithNewRelic(r *newrelic.Application) *StandardConsum
 	return s
 }
 
-func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, exchange Exchange, handler ConsumerHandler) *StandardConsumer {
+func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, exchange Exchange, handler ConsumerHandler, opts ...func(*rabbitmq.ConsumerOptions)) *StandardConsumer {
 
 	consumer := &StandardConsumer{
 		Queue:      queue,
@@ -52,11 +52,13 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 		rabbitmq.WithConsumerOptionsExchangeName(string(exchange)),
 	}
 
+	opts = append(opts, options...)
+
 	actual, err := rabbitmq.NewConsumer(
 		conn,
 		consumer.StandardConsumption(handler),
 		string(queue),
-		options...,
+		opts...,
 	)
 
 	if err != nil {

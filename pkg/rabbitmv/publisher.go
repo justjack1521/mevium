@@ -48,12 +48,12 @@ func (s *StandardPublisher) PublishWithSegment(txn *newrelic.Transaction, bytes 
 	return s.Publish(bytes, client, key)
 }
 
-func NewClientPublisher(conn *rabbitmq.Conn) *StandardPublisher {
+func NewClientPublisher(conn *rabbitmq.Conn, options ...func(publisherOptions *rabbitmq.PublisherOptions)) *StandardPublisher {
 	publisher := &StandardPublisher{
 		exchange: Client,
 		kind:     Topic,
 	}
-	actual, err := newPublisher(conn, publisher)
+	actual, err := newPublisher(conn, publisher, options...)
 	if err != nil {
 		panic(err)
 	}
@@ -61,12 +61,12 @@ func NewClientPublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	return publisher
 }
 
-func NewSocialPublisher(conn *rabbitmq.Conn) *StandardPublisher {
+func NewSocialPublisher(conn *rabbitmq.Conn, options ...func(publisherOptions *rabbitmq.PublisherOptions)) *StandardPublisher {
 	publisher := &StandardPublisher{
 		exchange: Social,
 		kind:     Topic,
 	}
-	actual, err := newPublisher(conn, publisher)
+	actual, err := newPublisher(conn, publisher, options...)
 	if err != nil {
 		panic(err)
 	}
@@ -74,12 +74,12 @@ func NewSocialPublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	return publisher
 }
 
-func NewRankingPublisher(conn *rabbitmq.Conn) *StandardPublisher {
+func NewRankingPublisher(conn *rabbitmq.Conn, options ...func(publisherOptions *rabbitmq.PublisherOptions)) *StandardPublisher {
 	publisher := &StandardPublisher{
 		exchange: Ranking,
 		kind:     Topic,
 	}
-	actual, err := newPublisher(conn, publisher)
+	actual, err := newPublisher(conn, publisher, options...)
 	if err != nil {
 		panic(err)
 	}
@@ -87,12 +87,12 @@ func NewRankingPublisher(conn *rabbitmq.Conn) *StandardPublisher {
 	return publisher
 }
 
-func NewGamePublisher(conn *rabbitmq.Conn) *StandardPublisher {
+func NewGamePublisher(conn *rabbitmq.Conn, options ...func(publisherOptions *rabbitmq.PublisherOptions)) *StandardPublisher {
 	publisher := &StandardPublisher{
 		exchange: Game,
 		kind:     Topic,
 	}
-	actual, err := newPublisher(conn, publisher)
+	actual, err := newPublisher(conn, publisher, options...)
 	if err != nil {
 		panic(err)
 	}
