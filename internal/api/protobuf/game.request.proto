@@ -172,6 +172,7 @@ message FirstDailyLoginRequest {
 }
 
 message ProcessRegionEventRequest {
+  string region_map_id = 1;
   string event_key = 2;
 }
 
