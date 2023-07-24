@@ -97,6 +97,14 @@ func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *ProcessRegionEventResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ProcessRegionNodeEventResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *UpdateProfileResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

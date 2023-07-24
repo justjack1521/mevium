@@ -178,6 +178,22 @@ func NewTeleportRequest(bytes []byte) (*TeleportRequest, error) {
 	return req, nil
 }
 
+func NewProcessRegionEventRequest(bytes []byte) (*ProcessRegionEventRequest, error) {
+	req := &ProcessRegionEventRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func NewProcessRegionNodeEventRequest(bytes []byte) (*ProcessRegionNodeEventRequest, error) {
+	req := &ProcessRegionNodeEventRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewUpdateProfileRequest(bytes []byte) (*UpdateProfileRequest, error) {
 	req := &UpdateProfileRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
