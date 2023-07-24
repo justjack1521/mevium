@@ -398,7 +398,12 @@ message ProtoRegionMapInstance {
   map <string, uint64> job_type_defeats = 7;
   map <string, bool> pending_events = 8;
   map <string, bool> persisted_events = 9;
+
   bool visited = 10;
+
+  map <string, bool> pending_region_events = 11;
+  map <string, bool> pending_node_events = 12;
+
 }
 
 message ProtoRegionNodeData {
