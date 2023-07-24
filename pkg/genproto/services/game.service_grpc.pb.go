@@ -20,31 +20,31 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusGameService_BattleComplete_FullMethodName           = "/service.MeviusGameService/BattleComplete"
-	MeviusGameService_BattleRevive_FullMethodName             = "/service.MeviusGameService/BattleRevive"
-	MeviusGameService_BattleStart_FullMethodName              = "/service.MeviusGameService/BattleStart"
-	MeviusGameService_CardAugment_FullMethodName              = "/service.MeviusGameService/CardAugment"
-	MeviusGameService_CardFavourite_FullMethodName            = "/service.MeviusGameService/CardFavourite"
-	MeviusGameService_CardFusion_FullMethodName               = "/service.MeviusGameService/CardFusion"
-	MeviusGameService_CardBoostFusion_FullMethodName          = "/service.MeviusGameService/CardBoostFusion"
-	MeviusGameService_CardSale_FullMethodName                 = "/service.MeviusGameService/CardSale"
-	MeviusGameService_CardTransfer_FullMethodName             = "/service.MeviusGameService/CardTransfer"
-	MeviusGameService_CreateProfile_FullMethodName            = "/service.MeviusGameService/CreateProfile"
-	MeviusGameService_ClaimEventRanking_FullMethodName        = "/service.MeviusGameService/ClaimEventRanking"
-	MeviusGameService_ClaimLoginCampaign_FullMethodName       = "/service.MeviusGameService/ClaimLoginCampaign"
-	MeviusGameService_ClaimMailboxItem_FullMethodName         = "/service.MeviusGameService/ClaimMailboxItem"
-	MeviusGameService_ClaimAllMailboxItem_FullMethodName      = "/service.MeviusGameService/ClaimAllMailboxItem"
-	MeviusGameService_ClaimRentalReward_FullMethodName        = "/service.MeviusGameService/ClaimRentalReward"
-	MeviusGameService_ConfirmDailyMission_FullMethodName      = "/service.MeviusGameService/ConfirmDailyMission"
-	MeviusGameService_DeckEdit_FullMethodName                 = "/service.MeviusGameService/DeckEdit"
-	MeviusGameService_DeleteAllMailboxItem_FullMethodName     = "/service.MeviusGameService/DeleteAllMailboxItem"
-	MeviusGameService_FetchPlayerData_FullMethodName          = "/service.MeviusGameService/FetchPlayerData"
-	MeviusGameService_FirstDailyLogin_FullMethodName          = "/service.MeviusGameService/FirstDailyLogin"
-	MeviusGameService_FetchPendingRegionEvents_FullMethodName = "/service.MeviusGameService/FetchPendingRegionEvents"
-	MeviusGameService_ProcessRegionEvent_FullMethodName       = "/service.MeviusGameService/ProcessRegionEvent"
-	MeviusGameService_RestoreStamina_FullMethodName           = "/service.MeviusGameService/RestoreStamina"
-	MeviusGameService_Teleport_FullMethodName                 = "/service.MeviusGameService/Teleport"
-	MeviusGameService_UpdateProfile_FullMethodName            = "/service.MeviusGameService/UpdateProfile"
+	MeviusGameService_BattleComplete_FullMethodName         = "/service.MeviusGameService/BattleComplete"
+	MeviusGameService_BattleRevive_FullMethodName           = "/service.MeviusGameService/BattleRevive"
+	MeviusGameService_BattleStart_FullMethodName            = "/service.MeviusGameService/BattleStart"
+	MeviusGameService_CardAugment_FullMethodName            = "/service.MeviusGameService/CardAugment"
+	MeviusGameService_CardFavourite_FullMethodName          = "/service.MeviusGameService/CardFavourite"
+	MeviusGameService_CardFusion_FullMethodName             = "/service.MeviusGameService/CardFusion"
+	MeviusGameService_CardBoostFusion_FullMethodName        = "/service.MeviusGameService/CardBoostFusion"
+	MeviusGameService_CardSale_FullMethodName               = "/service.MeviusGameService/CardSale"
+	MeviusGameService_CardTransfer_FullMethodName           = "/service.MeviusGameService/CardTransfer"
+	MeviusGameService_CreateProfile_FullMethodName          = "/service.MeviusGameService/CreateProfile"
+	MeviusGameService_ClaimEventRanking_FullMethodName      = "/service.MeviusGameService/ClaimEventRanking"
+	MeviusGameService_ClaimLoginCampaign_FullMethodName     = "/service.MeviusGameService/ClaimLoginCampaign"
+	MeviusGameService_ClaimMailboxItem_FullMethodName       = "/service.MeviusGameService/ClaimMailboxItem"
+	MeviusGameService_ClaimAllMailboxItem_FullMethodName    = "/service.MeviusGameService/ClaimAllMailboxItem"
+	MeviusGameService_ClaimRentalReward_FullMethodName      = "/service.MeviusGameService/ClaimRentalReward"
+	MeviusGameService_ConfirmDailyMission_FullMethodName    = "/service.MeviusGameService/ConfirmDailyMission"
+	MeviusGameService_DeckEdit_FullMethodName               = "/service.MeviusGameService/DeckEdit"
+	MeviusGameService_DeleteAllMailboxItem_FullMethodName   = "/service.MeviusGameService/DeleteAllMailboxItem"
+	MeviusGameService_FetchPlayerData_FullMethodName        = "/service.MeviusGameService/FetchPlayerData"
+	MeviusGameService_FirstDailyLogin_FullMethodName        = "/service.MeviusGameService/FirstDailyLogin"
+	MeviusGameService_ProcessRegionEvent_FullMethodName     = "/service.MeviusGameService/ProcessRegionEvent"
+	MeviusGameService_ProcessRegionNodeEvent_FullMethodName = "/service.MeviusGameService/ProcessRegionNodeEvent"
+	MeviusGameService_RestoreStamina_FullMethodName         = "/service.MeviusGameService/RestoreStamina"
+	MeviusGameService_Teleport_FullMethodName               = "/service.MeviusGameService/Teleport"
+	MeviusGameService_UpdateProfile_FullMethodName          = "/service.MeviusGameService/UpdateProfile"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -71,8 +71,8 @@ type MeviusGameServiceClient interface {
 	DeleteAllMailboxItem(ctx context.Context, in *protoc.DeleteAllMailboxItemRequest, opts ...grpc.CallOption) (*protoc.DeleteAllMailboxItemResponse, error)
 	FetchPlayerData(ctx context.Context, in *protoc.FetchPlayerDataRequest, opts ...grpc.CallOption) (*protoc.FetchPlayerDataResponse, error)
 	FirstDailyLogin(ctx context.Context, in *protoc.FirstDailyLoginRequest, opts ...grpc.CallOption) (*protoc.FirstDailyLoginResponse, error)
-	FetchPendingRegionEvents(ctx context.Context, in *protoc.FetchPendingRegionEventsRequest, opts ...grpc.CallOption) (*protoc.FetchPendingRegionEventsResponse, error)
 	ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error)
+	ProcessRegionNodeEvent(ctx context.Context, in *protoc.ProcessRegionNodeEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error)
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
 	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
@@ -266,18 +266,18 @@ func (c *meviusGameServiceClient) FirstDailyLogin(ctx context.Context, in *proto
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) FetchPendingRegionEvents(ctx context.Context, in *protoc.FetchPendingRegionEventsRequest, opts ...grpc.CallOption) (*protoc.FetchPendingRegionEventsResponse, error) {
-	out := new(protoc.FetchPendingRegionEventsResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_FetchPendingRegionEvents_FullMethodName, in, out, opts...)
+func (c *meviusGameServiceClient) ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error) {
+	out := new(protoc.ProcessRegionEventResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ProcessRegionEvent_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) ProcessRegionEvent(ctx context.Context, in *protoc.ProcessRegionEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error) {
+func (c *meviusGameServiceClient) ProcessRegionNodeEvent(ctx context.Context, in *protoc.ProcessRegionNodeEventRequest, opts ...grpc.CallOption) (*protoc.ProcessRegionEventResponse, error) {
 	out := new(protoc.ProcessRegionEventResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_ProcessRegionEvent_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, MeviusGameService_ProcessRegionNodeEvent_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -335,8 +335,8 @@ type MeviusGameServiceServer interface {
 	DeleteAllMailboxItem(context.Context, *protoc.DeleteAllMailboxItemRequest) (*protoc.DeleteAllMailboxItemResponse, error)
 	FetchPlayerData(context.Context, *protoc.FetchPlayerDataRequest) (*protoc.FetchPlayerDataResponse, error)
 	FirstDailyLogin(context.Context, *protoc.FirstDailyLoginRequest) (*protoc.FirstDailyLoginResponse, error)
-	FetchPendingRegionEvents(context.Context, *protoc.FetchPendingRegionEventsRequest) (*protoc.FetchPendingRegionEventsResponse, error)
 	ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error)
+	ProcessRegionNodeEvent(context.Context, *protoc.ProcessRegionNodeEventRequest) (*protoc.ProcessRegionEventResponse, error)
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
 	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
@@ -406,11 +406,11 @@ func (UnimplementedMeviusGameServiceServer) FetchPlayerData(context.Context, *pr
 func (UnimplementedMeviusGameServiceServer) FirstDailyLogin(context.Context, *protoc.FirstDailyLoginRequest) (*protoc.FirstDailyLoginResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FirstDailyLogin not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) FetchPendingRegionEvents(context.Context, *protoc.FetchPendingRegionEventsRequest) (*protoc.FetchPendingRegionEventsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FetchPendingRegionEvents not implemented")
-}
 func (UnimplementedMeviusGameServiceServer) ProcessRegionEvent(context.Context, *protoc.ProcessRegionEventRequest) (*protoc.ProcessRegionEventResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessRegionEvent not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ProcessRegionNodeEvent(context.Context, *protoc.ProcessRegionNodeEventRequest) (*protoc.ProcessRegionEventResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProcessRegionNodeEvent not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreStamina not implemented")
@@ -793,24 +793,6 @@ func _MeviusGameService_FirstDailyLogin_Handler(srv interface{}, ctx context.Con
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_FetchPendingRegionEvents_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.FetchPendingRegionEventsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).FetchPendingRegionEvents(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusGameService_FetchPendingRegionEvents_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).FetchPendingRegionEvents(ctx, req.(*protoc.FetchPendingRegionEventsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _MeviusGameService_ProcessRegionEvent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.ProcessRegionEventRequest)
 	if err := dec(in); err != nil {
@@ -825,6 +807,24 @@ func _MeviusGameService_ProcessRegionEvent_Handler(srv interface{}, ctx context.
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusGameServiceServer).ProcessRegionEvent(ctx, req.(*protoc.ProcessRegionEventRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_ProcessRegionNodeEvent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ProcessRegionNodeEventRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ProcessRegionNodeEvent(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ProcessRegionNodeEvent_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ProcessRegionNodeEvent(ctx, req.(*protoc.ProcessRegionNodeEventRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -971,12 +971,12 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_FirstDailyLogin_Handler,
 		},
 		{
-			MethodName: "FetchPendingRegionEvents",
-			Handler:    _MeviusGameService_FetchPendingRegionEvents_Handler,
-		},
-		{
 			MethodName: "ProcessRegionEvent",
 			Handler:    _MeviusGameService_ProcessRegionEvent_Handler,
+		},
+		{
+			MethodName: "ProcessRegionNodeEvent",
+			Handler:    _MeviusGameService_ProcessRegionNodeEvent_Handler,
 		},
 		{
 			MethodName: "RestoreStamina",

@@ -1678,61 +1678,6 @@ func (x *TeleportResponse) GetCurrentMapData() *protog.ProtoRegionMapInstance {
 	return nil
 }
 
-type FetchPendingRegionEventsResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	RegionMapId string                         `protobuf:"bytes,1,opt,name=region_map_id,json=regionMapId,proto3" json:"region_map_id,omitempty"`
-	Event       []*protog.ProtoRegionEventData `protobuf:"bytes,2,rep,name=event,proto3" json:"event,omitempty"`
-}
-
-func (x *FetchPendingRegionEventsResponse) Reset() {
-	*x = FetchPendingRegionEventsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_game_response_proto_msgTypes[28]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *FetchPendingRegionEventsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*FetchPendingRegionEventsResponse) ProtoMessage() {}
-
-func (x *FetchPendingRegionEventsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_game_response_proto_msgTypes[28]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use FetchPendingRegionEventsResponse.ProtoReflect.Descriptor instead.
-func (*FetchPendingRegionEventsResponse) Descriptor() ([]byte, []int) {
-	return file_game_response_proto_rawDescGZIP(), []int{28}
-}
-
-func (x *FetchPendingRegionEventsResponse) GetRegionMapId() string {
-	if x != nil {
-		return x.RegionMapId
-	}
-	return ""
-}
-
-func (x *FetchPendingRegionEventsResponse) GetEvent() []*protog.ProtoRegionEventData {
-	if x != nil {
-		return x.Event
-	}
-	return nil
-}
-
 type ProcessRegionEventResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1744,7 +1689,7 @@ type ProcessRegionEventResponse struct {
 func (x *ProcessRegionEventResponse) Reset() {
 	*x = ProcessRegionEventResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_game_response_proto_msgTypes[29]
+		mi := &file_game_response_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1757,7 +1702,7 @@ func (x *ProcessRegionEventResponse) String() string {
 func (*ProcessRegionEventResponse) ProtoMessage() {}
 
 func (x *ProcessRegionEventResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_game_response_proto_msgTypes[29]
+	mi := &file_game_response_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1770,10 +1715,57 @@ func (x *ProcessRegionEventResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProcessRegionEventResponse.ProtoReflect.Descriptor instead.
 func (*ProcessRegionEventResponse) Descriptor() ([]byte, []int) {
-	return file_game_response_proto_rawDescGZIP(), []int{29}
+	return file_game_response_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *ProcessRegionEventResponse) GetPersist() bool {
+	if x != nil {
+		return x.Persist
+	}
+	return false
+}
+
+type ProcessRegionNodeEventResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Persist bool `protobuf:"varint,1,opt,name=persist,proto3" json:"persist,omitempty"`
+}
+
+func (x *ProcessRegionNodeEventResponse) Reset() {
+	*x = ProcessRegionNodeEventResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_game_response_proto_msgTypes[29]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProcessRegionNodeEventResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProcessRegionNodeEventResponse) ProtoMessage() {}
+
+func (x *ProcessRegionNodeEventResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_game_response_proto_msgTypes[29]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProcessRegionNodeEventResponse.ProtoReflect.Descriptor instead.
+func (*ProcessRegionNodeEventResponse) Descriptor() ([]byte, []int) {
+	return file_game_response_proto_rawDescGZIP(), []int{29}
+}
+
+func (x *ProcessRegionNodeEventResponse) GetPersist() bool {
 	if x != nil {
 		return x.Persist
 	}
@@ -2028,23 +2020,19 @@ var file_game_response_proto_rawDesc = []byte{
 	0x6f, 0x74, 0x6f, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x49, 0x6e, 0x73, 0x74,
 	0x61, 0x6e, 0x63, 0x65, 0x48, 0x00, 0x52, 0x0e, 0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x4d,
 	0x61, 0x70, 0x44, 0x61, 0x74, 0x61, 0x88, 0x01, 0x01, 0x42, 0x13, 0x0a, 0x11, 0x5f, 0x63, 0x75,
-	0x72, 0x72, 0x65, 0x6e, 0x74, 0x5f, 0x6d, 0x61, 0x70, 0x5f, 0x64, 0x61, 0x74, 0x61, 0x22, 0x78,
-	0x0a, 0x20, 0x46, 0x65, 0x74, 0x63, 0x68, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65,
-	0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x12, 0x22, 0x0a, 0x0d, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x70,
-	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x72, 0x65, 0x67, 0x69, 0x6f,
-	0x6e, 0x4d, 0x61, 0x70, 0x49, 0x64, 0x12, 0x30, 0x0a, 0x05, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x18,
-	0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50, 0x72, 0x6f,
-	0x74, 0x6f, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74,
-	0x61, 0x52, 0x05, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x22, 0x36, 0x0a, 0x1a, 0x50, 0x72, 0x6f, 0x63,
-	0x65, 0x73, 0x73, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x70, 0x65, 0x72, 0x73, 0x69, 0x73,
-	0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x70, 0x65, 0x72, 0x73, 0x69, 0x73, 0x74,
-	0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a,
-	0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69,
-	0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e,
-	0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x72, 0x72, 0x65, 0x6e, 0x74, 0x5f, 0x6d, 0x61, 0x70, 0x5f, 0x64, 0x61, 0x74, 0x61, 0x22, 0x36,
+	0x0a, 0x1a, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45,
+	0x76, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07,
+	0x70, 0x65, 0x72, 0x73, 0x69, 0x73, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x70,
+	0x65, 0x72, 0x73, 0x69, 0x73, 0x74, 0x22, 0x3a, 0x0a, 0x1e, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73,
+	0x73, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4e, 0x6f, 0x64, 0x65, 0x45, 0x76, 0x65, 0x6e, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x70, 0x65, 0x72, 0x73,
+	0x69, 0x73, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x70, 0x65, 0x72, 0x73, 0x69,
+	0x73, 0x74, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
+	0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65,
+	0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75,
+	0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2089,8 +2077,8 @@ var file_game_response_proto_goTypes = []interface{}{
 	(*StaminaRestoreResponse)(nil),            // 25: protoc.StaminaRestoreResponse
 	(*SkillPanelUnlockRequest)(nil),           // 26: protoc.SkillPanelUnlockRequest
 	(*TeleportResponse)(nil),                  // 27: protoc.TeleportResponse
-	(*FetchPendingRegionEventsResponse)(nil),  // 28: protoc.FetchPendingRegionEventsResponse
-	(*ProcessRegionEventResponse)(nil),        // 29: protoc.ProcessRegionEventResponse
+	(*ProcessRegionEventResponse)(nil),        // 28: protoc.ProcessRegionEventResponse
+	(*ProcessRegionNodeEventResponse)(nil),    // 29: protoc.ProcessRegionNodeEventResponse
 	(*protog.ProtoLastBattleResults)(nil),     // 30: game.ProtoLastBattleResults
 	(*protog.ProtoItemValuePair)(nil),         // 31: game.ProtoItemValuePair
 	(*protog.ProtoAbilityCardInstance)(nil),   // 32: game.ProtoAbilityCardInstance
@@ -2105,7 +2093,6 @@ var file_game_response_proto_goTypes = []interface{}{
 	(*protog.ProtoRegionEvent)(nil),           // 41: game.ProtoRegionEvent
 	(*protog.ProtoRegionNodeEvent)(nil),       // 42: game.ProtoRegionNodeEvent
 	(*protog.ProtoRegionMapInstance)(nil),     // 43: game.ProtoRegionMapInstance
-	(*protog.ProtoRegionEventData)(nil),       // 44: game.ProtoRegionEventData
 }
 var file_game_response_proto_depIdxs = []int32{
 	2,  // 0: protoc.Response.header:type_name -> protoc.ResponseHeader
@@ -2133,12 +2120,11 @@ var file_game_response_proto_depIdxs = []int32{
 	41, // 22: protoc.TeleportResponse.region_events:type_name -> game.ProtoRegionEvent
 	42, // 23: protoc.TeleportResponse.node_events:type_name -> game.ProtoRegionNodeEvent
 	43, // 24: protoc.TeleportResponse.current_map_data:type_name -> game.ProtoRegionMapInstance
-	44, // 25: protoc.FetchPendingRegionEventsResponse.event:type_name -> game.ProtoRegionEventData
-	26, // [26:26] is the sub-list for method output_type
-	26, // [26:26] is the sub-list for method input_type
-	26, // [26:26] is the sub-list for extension type_name
-	26, // [26:26] is the sub-list for extension extendee
-	0,  // [0:26] is the sub-list for field type_name
+	25, // [25:25] is the sub-list for method output_type
+	25, // [25:25] is the sub-list for method input_type
+	25, // [25:25] is the sub-list for extension type_name
+	25, // [25:25] is the sub-list for extension extendee
+	0,  // [0:25] is the sub-list for field type_name
 }
 
 func init() { file_game_response_proto_init() }
@@ -2484,7 +2470,7 @@ func file_game_response_proto_init() {
 			}
 		}
 		file_game_response_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FetchPendingRegionEventsResponse); i {
+			switch v := v.(*ProcessRegionEventResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2496,7 +2482,7 @@ func file_game_response_proto_init() {
 			}
 		}
 		file_game_response_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ProcessRegionEventResponse); i {
+			switch v := v.(*ProcessRegionNodeEventResponse); i {
 			case 0:
 				return &v.state
 			case 1:

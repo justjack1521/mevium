@@ -29,8 +29,8 @@ service MeviusGameService {
   rpc DeleteAllMailboxItem(protoc.DeleteAllMailboxItemRequest) returns (protoc.DeleteAllMailboxItemResponse) {}
   rpc FetchPlayerData(protoc.FetchPlayerDataRequest) returns (protoc.FetchPlayerDataResponse) {}
   rpc FirstDailyLogin(protoc.FirstDailyLoginRequest) returns (protoc.FirstDailyLoginResponse) {}
-  rpc FetchPendingRegionEvents(protoc.FetchPendingRegionEventsRequest) returns (protoc.FetchPendingRegionEventsResponse) {}
   rpc ProcessRegionEvent(protoc.ProcessRegionEventRequest) returns (protoc.ProcessRegionEventResponse) {}
+  rpc ProcessRegionNodeEvent(protoc.ProcessRegionNodeEventRequest) returns (protoc.ProcessRegionEventResponse) {}
   rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
   rpc Teleport(protoc.TeleportRequest) returns (protoc.TeleportResponse) {}
   rpc UpdateProfile(protoc.UpdateProfileRequest) returns (protoc.UpdateProfileResponse) {}

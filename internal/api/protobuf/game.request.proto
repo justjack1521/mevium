@@ -171,13 +171,13 @@ message FirstDailyLoginRequest {
 
 }
 
-message FetchPendingRegionEventsRequest {
-  string region_map_id = 1;
+message ProcessRegionEventRequest {
+  string event_key = 2;
 }
 
-message ProcessRegionEventRequest {
+message ProcessRegionNodeEventRequest {
   string region_map_id = 1;
-  game.ProtoRegionEventData event = 2;
+  string event_key = 2;
 }
 
 message SkillPanelUnlockResponse {

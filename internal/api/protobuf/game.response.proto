@@ -168,11 +168,10 @@ message TeleportResponse {
   optional game.ProtoRegionMapInstance current_map_data = 5;
 }
 
-message FetchPendingRegionEventsResponse {
-  string region_map_id = 1;
-  repeated game.ProtoRegionEventData event = 2;
+message ProcessRegionEventResponse {
+  bool persist = 1;
 }
 
-message ProcessRegionEventResponse {
+message ProcessRegionNodeEventResponse {
   bool persist = 1;
 }

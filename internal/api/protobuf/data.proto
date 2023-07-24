@@ -278,7 +278,7 @@ message ProtoLastBattleResults {
   repeated TaggedBattleItemReward item_rewards = 9;
   repeated TaggedBattleCardReward card_rewards = 10;
 
-  repeated ProtoRegionEventData pending_events = 11;
+  repeated ProtoRegionNodeEvent pending_events = 11;
 
 }
 
