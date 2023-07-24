@@ -396,13 +396,13 @@ message ProtoRegionMapInstance {
   uint64 enemies_defeated = 5;
   uint64 high_score = 6;
   map <string, uint64> job_type_defeats = 7;
-  map <string, bool> pending_events = 8;
-  map <string, bool> persisted_events = 9;
+  map <string, ProtoRegionNodeEvent> pending_events = 8;
+  map <string, ProtoRegionNodeEvent> persisted_events = 9;
 
   bool visited = 10;
 
-  map <string, bool> pending_region_events = 11;
-  map <string, bool> persisted_region_events = 12;
+  map <string, ProtoRegionEvent> pending_region_events = 11;
+  map <string, ProtoRegionEvent> persisted_region_events = 12;
 
 }
 
