@@ -402,7 +402,7 @@ message ProtoRegionMapInstance {
   bool visited = 10;
 
   map <string, bool> pending_region_events = 11;
-  map <string, bool> pending_node_events = 12;
+  map <string, bool> persisted_region_events = 12;
 
 }
 
