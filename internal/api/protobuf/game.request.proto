@@ -198,6 +198,7 @@ message TeleportRequest {
 }
 
 message UpdateProfileRequest {
+  string name = 1;
   string comment = 2;
   int32 rental_card = 3;
   int32 companion = 4;
