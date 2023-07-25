@@ -48,6 +48,10 @@ message PlayerCommentUpdateMessage {
 message PlayerRentalCardUpdateMessage {
   string player_id = 1;
   string rental_card = 2;
+  int32 card_level = 3;
+  int32 ability_level = 4;
+  int32 extra_skill_unlock = 5;
+  int32 over_boost_level = 6;
 }
 
 message PlayerLevelUpdateMessage {
