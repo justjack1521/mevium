@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	uuid "github.com/satori/go.uuid"
+	"github.com/sirupsen/logrus"
 	"github.com/wagslane/go-rabbitmq"
 )
 
@@ -12,6 +13,11 @@ type StandardPublisher struct {
 	kind     ExchangeKind
 	closed   bool
 	actual   *rabbitmq.Publisher
+	logger   *logrus.Logger
+}
+
+func (s *StandardPublisher) AttachLogger(logger *logrus.Logger) {
+	s.logger = logger
 }
 
 func (s *StandardPublisher) Close() {
@@ -24,11 +30,24 @@ func (s *StandardPublisher) Close() {
 
 func (s *StandardPublisher) Publish(bytes []byte, client uuid.UUID, key RoutingKey, options ...func(*rabbitmq.PublishOptions)) error {
 	options = append(options, rabbitmq.WithPublishOptionsExchange(string(s.exchange)), rabbitmq.WithPublishOptionsHeaders(ClientPublishingTable(client)))
-	return s.actual.Publish(
-		bytes,
-		[]string{string(key)},
-		options...,
-	)
+	if err := s.actual.Publish(bytes, []string{string(key)}, options...); err != nil {
+		if s.logger != nil {
+			s.logger.WithFields(logrus.Fields{
+				"exchange":    s.exchange,
+				"routing.key": key,
+				"length":      len(bytes),
+			}).WithError(err).Error("Message Failed")
+		}
+		return err
+	}
+	if s.logger != nil {
+		s.logger.WithFields(logrus.Fields{
+			"exchange":    s.exchange,
+			"routing.key": key,
+			"length":      len(bytes),
+		}).Info("Message Published")
+	}
+	return nil
 }
 
 func (s *StandardPublisher) PublishWithContext(ctx context.Context, bytes []byte, client uuid.UUID, key RoutingKey) error {
