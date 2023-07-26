@@ -46,6 +46,8 @@ const (
 	MeviusGameService_RestoreStamina_FullMethodName         = "/service.MeviusGameService/RestoreStamina"
 	MeviusGameService_Teleport_FullMethodName               = "/service.MeviusGameService/Teleport"
 	MeviusGameService_UpdateProfile_FullMethodName          = "/service.MeviusGameService/UpdateProfile"
+	MeviusGameService_PurchaseItem_FullMethodName           = "/service.MeviusGameService/PurchaseItem"
+	MeviusGameService_PurchaseCard_FullMethodName           = "/service.MeviusGameService/PurchaseCard"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -78,6 +80,8 @@ type MeviusGameServiceClient interface {
 	RestoreStamina(ctx context.Context, in *protoc.StaminaRestoreRequest, opts ...grpc.CallOption) (*protoc.StaminaRestoreResponse, error)
 	Teleport(ctx context.Context, in *protoc.TeleportRequest, opts ...grpc.CallOption) (*protoc.TeleportResponse, error)
 	UpdateProfile(ctx context.Context, in *protoc.UpdateProfileRequest, opts ...grpc.CallOption) (*protoc.UpdateProfileResponse, error)
+	PurchaseItem(ctx context.Context, in *protoc.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protoc.ItemShopItemPurchaseResponse, error)
+	PurchaseCard(ctx context.Context, in *protoc.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protoc.ItemShopCardPurchaseResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -322,6 +326,24 @@ func (c *meviusGameServiceClient) UpdateProfile(ctx context.Context, in *protoc.
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) PurchaseItem(ctx context.Context, in *protoc.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protoc.ItemShopItemPurchaseResponse, error) {
+	out := new(protoc.ItemShopItemPurchaseResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_PurchaseItem_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) PurchaseCard(ctx context.Context, in *protoc.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protoc.ItemShopCardPurchaseResponse, error) {
+	out := new(protoc.ItemShopCardPurchaseResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_PurchaseCard_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -352,6 +374,8 @@ type MeviusGameServiceServer interface {
 	RestoreStamina(context.Context, *protoc.StaminaRestoreRequest) (*protoc.StaminaRestoreResponse, error)
 	Teleport(context.Context, *protoc.TeleportRequest) (*protoc.TeleportResponse, error)
 	UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error)
+	PurchaseItem(context.Context, *protoc.ItemShopItemPurchaseRequest) (*protoc.ItemShopItemPurchaseResponse, error)
+	PurchaseCard(context.Context, *protoc.ItemShopCardPurchaseRequest) (*protoc.ItemShopCardPurchaseResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -435,6 +459,12 @@ func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protoc.Te
 }
 func (UnimplementedMeviusGameServiceServer) UpdateProfile(context.Context, *protoc.UpdateProfileRequest) (*protoc.UpdateProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateProfile not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) PurchaseItem(context.Context, *protoc.ItemShopItemPurchaseRequest) (*protoc.ItemShopItemPurchaseResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PurchaseItem not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) PurchaseCard(context.Context, *protoc.ItemShopCardPurchaseRequest) (*protoc.ItemShopCardPurchaseResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PurchaseCard not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -916,6 +946,42 @@ func _MeviusGameService_UpdateProfile_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_PurchaseItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ItemShopItemPurchaseRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).PurchaseItem(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_PurchaseItem_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).PurchaseItem(ctx, req.(*protoc.ItemShopItemPurchaseRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_PurchaseCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.ItemShopCardPurchaseRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).PurchaseCard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_PurchaseCard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).PurchaseCard(ctx, req.(*protoc.ItemShopCardPurchaseRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1026,6 +1092,14 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdateProfile",
 			Handler:    _MeviusGameService_UpdateProfile_Handler,
+		},
+		{
+			MethodName: "PurchaseItem",
+			Handler:    _MeviusGameService_PurchaseItem_Handler,
+		},
+		{
+			MethodName: "PurchaseCard",
+			Handler:    _MeviusGameService_PurchaseCard_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

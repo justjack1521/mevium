@@ -179,3 +179,11 @@ message ProcessRegionNodeEventResponse {
 message ExpandAbilityCardSlotResponse {
   game.ProtoItemValuePair cost_item = 1;
 }
+
+message ItemShopItemPurchaseResponse {
+
+}
+
+message ItemShopCardPurchaseResponse {
+
+}
