@@ -204,3 +204,8 @@ message UpdateProfileRequest {
   int32 rental_card = 3;
   int32 companion = 4;
 }
+
+message ExpandAbilityCardSlotRequest {
+  int32 source = 1;
+  int32 amount = 2;
+}

@@ -60,6 +60,7 @@ message ProtoAbilityCardHistoryInstance {
 message ProtoAbilityCardInventory {
   int32 max_slots = 1;
   repeated ProtoAbilityCardInstance card_list = 2;
+  int32 source = 3;
 }
 
 message ProtoAbilityCardInstance {

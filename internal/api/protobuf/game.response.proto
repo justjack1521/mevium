@@ -175,3 +175,7 @@ message ProcessRegionEventResponse {
 message ProcessRegionNodeEventResponse {
   bool persist = 1;
 }
+
+message ExpandAbilityCardSlotResponse {
+  game.ProtoItemValuePair cost_item = 1;
+}
