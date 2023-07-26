@@ -170,6 +170,14 @@ func NewStaminaRestoreRequest(bytes []byte) (*StaminaRestoreRequest, error) {
 	return req, nil
 }
 
+func NewExpandAbilityCardSlotRequest(bytes []byte) (*ExpandAbilityCardSlotRequest, error) {
+	req := &ExpandAbilityCardSlotRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewTeleportRequest(bytes []byte) (*TeleportRequest, error) {
 	req := &TeleportRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {

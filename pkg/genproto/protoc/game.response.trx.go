@@ -93,6 +93,10 @@ func (x *StaminaRestoreResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *ExpandAbilityCardSlotResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
