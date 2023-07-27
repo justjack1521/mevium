@@ -112,3 +112,11 @@ func (x *ProcessRegionNodeEventResponse) MarshallBinary() ([]byte, error) {
 func (x *UpdateProfileResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func (x *ItemShopItemPurchaseResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ItemShopCardPurchaseResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

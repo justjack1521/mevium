@@ -209,3 +209,19 @@ func NewUpdateProfileRequest(bytes []byte) (*UpdateProfileRequest, error) {
 	}
 	return req, nil
 }
+
+func NewPurchaseItemRequest(bytes []byte) (*ItemShopItemPurchaseRequest, error) {
+	req := &ItemShopItemPurchaseRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func NewPurchaseCardRequest(bytes []byte) (*ItemShopCardPurchaseRequest, error) {
+	req := &ItemShopCardPurchaseRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
