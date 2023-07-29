@@ -117,6 +117,10 @@ func (x *ItemShopItemPurchaseResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *AbilityShopPurchaseResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *ItemShopCardPurchaseResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

@@ -187,3 +187,8 @@ message ItemShopItemPurchaseResponse {
 message ItemShopCardPurchaseResponse {
 
 }
+
+message AbilityShopPurchaseResponse {
+  game.ProtoAbilityCardInstance ability_card_instance = 1;
+  game.ProtoItemValuePair cost_item = 2;
+}

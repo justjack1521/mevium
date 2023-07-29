@@ -225,3 +225,11 @@ func NewPurchaseCardRequest(bytes []byte) (*ItemShopCardPurchaseRequest, error) 
 	}
 	return req, nil
 }
+
+func NewAbilityShopPurchaseRequest(bytes []byte) (*AbilityShopPurchaseRequest, error) {
+	req := &AbilityShopPurchaseRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}

@@ -37,5 +37,6 @@ service MeviusGameService {
   rpc UpdateProfile(protoc.UpdateProfileRequest) returns (protoc.UpdateProfileResponse) {}
   rpc PurchaseItem(protoc.ItemShopItemPurchaseRequest) returns (protoc.ItemShopItemPurchaseResponse) {}
   rpc PurchaseCard(protoc.ItemShopCardPurchaseRequest) returns (protoc.ItemShopCardPurchaseResponse) {}
+  rpc AbilityShopPurchase(protoc.AbilityShopPurchaseRequest) returns (protoc.AbilityShopPurchaseResponse) {}
 }
 
