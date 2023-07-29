@@ -78,6 +78,7 @@ message ProtoAbilityCardInstance {
   bool card_lock = 12;
   int32 source = 13;
   int64 created_at = 14;
+  string base_config_id = 15;
 }
 
 message ProtoBattleData {
