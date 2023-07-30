@@ -222,7 +222,7 @@ message ItemShopItemPurchaseRequest {
 }
 
 message ItemShopCardPurchaseRequest {
-  string receive_item = 1;
+  string receive_card = 1;
   int32 receive_quantity = 2;
   string cost_item = 3;
   int32 cost_quantity = 4;
