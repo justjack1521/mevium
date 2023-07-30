@@ -223,8 +223,9 @@ message ItemShopItemPurchaseRequest {
 
 message ItemShopCardPurchaseRequest {
   string receive_item = 1;
-  string cost_item = 2;
-  int32 cost_quantity = 3;
+  int32 receive_quantity = 2;
+  string cost_item = 3;
+  int32 cost_quantity = 4;
 }
 
 message AbilityShopPurchaseRequest {

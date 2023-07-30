@@ -185,7 +185,7 @@ message ItemShopItemPurchaseResponse {
 }
 
 message ItemShopCardPurchaseResponse {
-
+  repeated game.ProtoAbilityCardInstance ability_cards = 1;
 }
 
 message AbilityShopPurchaseResponse {
