@@ -57,6 +57,12 @@ message CreateProfileResponse {
 }
 
 message CardAugmentResponse {
+  string target_instance_id = 1;
+  string new_ability_card_id = 2;
+  string cost_item_id = 3;
+  int32 cost_quantity = 4;
+  repeated string inventory_cards_removed = 5;
+  repeated string bank_cards_removed = 6;
 }
 
 message CardFavouriteResponse {

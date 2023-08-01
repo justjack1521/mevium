@@ -82,6 +82,9 @@ message BattleStartRequest {
 }
 
 message CardAugmentRequest {
+  int32 target_card_index = 1;
+  repeated int32 inventory_materials = 2;
+  repeated int32 bank_materials = 3;
 }
 
 message CardFavouriteRequest {
