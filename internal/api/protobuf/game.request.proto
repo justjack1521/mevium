@@ -43,6 +43,7 @@ enum RequestType {
   PURCHASE_ITEM = 3000;
   PURCHASE_CARD = 3100;
   ABILITY_SHOP_PURCHASE = 3200;
+  CARD_AUGMENT = 3300;
 }
 
 enum TeleportRequestType {
