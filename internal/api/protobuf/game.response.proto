@@ -160,10 +160,16 @@ message StaminaRestoreResponse {
   int32 restore_amount = 3;
 }
 
-message SkillPanelUnlockRequest {
-  int32 JobCardIndex = 1;
-  int32 SkillPanelGroupIndex = 2;
-  int32 SkillPanelIndex = 3;
+message SkillPanelUnlockResponse {
+  repeated game.ProtoItemValuePair ItemsRemoved = 1;
+  int32 HPStatIncrease = 2;
+  int32 AttackStatIncrease = 3;
+  int32 BreakPowerStatIncrease = 4;
+  int32 MagicStatIncrease = 5;
+  int32 SubJobUnlockIncrease = 6;
+  int32 UltimateBoostIncrease = 7;
+  map<string, int32> WeaponUnlock = 8;
+  map<string, int32> AutoAbilitiesAdded = 9;
 }
 
 message TeleportResponse {

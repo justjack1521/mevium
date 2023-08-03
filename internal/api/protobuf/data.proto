@@ -476,9 +476,18 @@ message ProtoWeaponInventory {
 }
 
 message ProtoWeaponInstance {
-  string sys_id = 1;
+  string base_weapon_id = 1;
   int32 sub_weapon_unlock = 2;
-  string base_weapon_id = 3;
-  int64 created_at = 4;
-  map<string, int32> auto_abilities = 5;
+
+  int32 hp_stat_mod = 3;
+  int32 attack_stat_mod = 4;
+  int32 break_stat_mod = 5;
+  int32 magic_stat_mod = 6;
+  int32 speed_stat_mod = 7;
+  int32 defense_stat_mod = 8;
+  int32 crit_chance_stat_mod = 9;
+  int32 ultimate_boost = 10;
+
+  map<string, int32> auto_abilities = 11;
+  int64 created_at = 12;
 }
