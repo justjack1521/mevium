@@ -37,6 +37,10 @@ func (x *CardAugmentResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *SkillPanelUnlockResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *CardFavouriteResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
