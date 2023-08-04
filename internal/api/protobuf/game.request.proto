@@ -192,9 +192,10 @@ message ProcessRegionNodeEventRequest {
 }
 
 message SkillPanelUnlockRequest {
-  int32 JobCardIndex = 1;
-  int32 SkillPanelGroupIndex = 2;
-  int32 SkillPanelIndex = 3;
+  int32 job_card_index = 1;
+  int32 group_index = 2;
+  int32 page_index = 3;
+  int32 panel_index = 4;
 }
 
 message StaminaRestoreRequest {
