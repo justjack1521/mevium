@@ -33,6 +33,7 @@ service MeviusGameService {
   rpc ProcessRegionEvent(protoc.ProcessRegionEventRequest) returns (protoc.ProcessRegionEventResponse) {}
   rpc ProcessRegionNodeEvent(protoc.ProcessRegionNodeEventRequest) returns (protoc.ProcessRegionEventResponse) {}
   rpc RestoreStamina(protoc.StaminaRestoreRequest) returns (protoc.StaminaRestoreResponse) {}
+  rpc SkillPanelUnlock(protoc.SkillPanelUnlockRequest) returns (protoc.SkillPanelUnlockResponse) {}
   rpc Teleport(protoc.TeleportRequest) returns (protoc.TeleportResponse) {}
   rpc UpdateProfile(protoc.UpdateProfileRequest) returns (protoc.UpdateProfileResponse) {}
   rpc PurchaseItem(protoc.ItemShopItemPurchaseRequest) returns (protoc.ItemShopItemPurchaseResponse) {}
