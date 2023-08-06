@@ -95,7 +95,7 @@ message CardSaleResponse {
 }
 
 message CardTransferResponse {
-
+  repeated string cards_transferred = 1;
 }
 
 message ClaimLoginCampaignResponse {

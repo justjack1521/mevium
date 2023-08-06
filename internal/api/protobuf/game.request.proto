@@ -119,8 +119,8 @@ message CardSaleRequest {
 }
 
 message CardTransferRequest {
-  bool FromBank = 1;
-  repeated int32 Cards = 2;
+  repeated int32 cards = 2;
+  int32 inventory_source = 3;
 }
 
 message CreateProfileRequest {

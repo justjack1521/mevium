@@ -65,6 +65,10 @@ func (x *ClaimEventRankingResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *CardTransferResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *ClaimRentalCardRewardResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
