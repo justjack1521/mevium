@@ -515,5 +515,6 @@ message ProtoBattleStatistics {
   int32 enemies_defeat_weakness         =   9;
   int32 enemies_defeat_single_ability   =   10;
   map<string, int32> element_orb_draws  =   11;
-  map<string, int32> job_type_defeats   =   12;
+  map<string, int32> element_orb_usage  =   12;
+  map<string, int32> job_type_defeats   =   13;
 }
