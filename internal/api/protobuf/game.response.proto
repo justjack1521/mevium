@@ -40,6 +40,7 @@ message BattleCompleteResponse {
 
   rank.ProtoRankingInfo weekly_rank_update = 10;
   rank.ProtoRankingInfo event_rank_update = 11;
+
 }
 
 message BattleReviveResponse {
