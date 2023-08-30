@@ -44,6 +44,7 @@ enum RequestType {
   PURCHASE_CARD = 3100;
   ABILITY_SHOP_PURCHASE = 3200;
   CARD_AUGMENT = 3300;
+  CLAIM_DAILY_MISSION = 3400;
 }
 
 enum TeleportRequestType {
@@ -139,6 +140,10 @@ message ClaimLoginCampaignRequest {
 
 message ClaimMailBoxItemRequest {
   string id = 1;
+}
+
+message ClaimDailyMissionRequest {
+
 }
 
 message ClaimAllMailBoxItemRequest {

@@ -119,6 +119,10 @@ message ClaimEventRankingResponse {
   repeated game.ProtoMailBoxItem claims = 1;
 }
 
+message ClaimDailyMissionResponse {
+  repeated game.ProtoMailBoxItem claims = 1;
+}
+
 message ClaimRentalCardRewardResponse {
   game.ProtoItemValuePair reward_item = 1;
 }
