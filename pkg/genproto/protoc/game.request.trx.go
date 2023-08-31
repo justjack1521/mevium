@@ -90,6 +90,14 @@ func NewClaimLoginBonusRequest(bytes []byte) (*ClaimLoginCampaignRequest, error)
 	return req, nil
 }
 
+func NewClaimDailyMissionRequest(bytes []byte) (*ClaimDailyMissionRequest, error) {
+	req := &ClaimDailyMissionRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewSkillPanelUnlockRequest(bytes []byte) (*SkillPanelUnlockRequest, error) {
 	req := &SkillPanelUnlockRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {

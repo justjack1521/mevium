@@ -73,6 +73,10 @@ func (x *ClaimRentalCardRewardResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *ClaimDailyMissionResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *DeleteAllMailboxItemResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
