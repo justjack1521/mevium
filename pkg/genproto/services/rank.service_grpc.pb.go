@@ -9,6 +9,7 @@ package services
 import (
 	context "context"
 	protor "github.com/justjack1521/mevium/pkg/genproto/protor"
+	protosc "github.com/justjack1521/mevium/pkg/genproto/protosc"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -20,11 +21,12 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusRankService_SubmitScore_FullMethodName             = "/service.MeviusRankService/SubmitScore"
-	MeviusRankService_GetPlayerEventRewards_FullMethodName   = "/service.MeviusRankService/GetPlayerEventRewards"
-	MeviusRankService_FetchPlayerRankingInfo_FullMethodName  = "/service.MeviusRankService/FetchPlayerRankingInfo"
-	MeviusRankService_RefreshWeeklyRankRange_FullMethodName  = "/service.MeviusRankService/RefreshWeeklyRankRange"
-	MeviusRankService_RefreshSpecialRankRange_FullMethodName = "/service.MeviusRankService/RefreshSpecialRankRange"
+	MeviusRankService_SubmitScore_FullMethodName              = "/service.MeviusRankService/SubmitScore"
+	MeviusRankService_GetPlayerEventRewards_FullMethodName    = "/service.MeviusRankService/GetPlayerEventRewards"
+	MeviusRankService_FetchPlayerRankingInfo_FullMethodName   = "/service.MeviusRankService/FetchPlayerRankingInfo"
+	MeviusRankService_RefreshWeeklyRankRange_FullMethodName   = "/service.MeviusRankService/RefreshWeeklyRankRange"
+	MeviusRankService_RefreshSpecialRankRange_FullMethodName  = "/service.MeviusRankService/RefreshSpecialRankRange"
+	MeviusRankService_GetActivePlayerChallenge_FullMethodName = "/service.MeviusRankService/GetActivePlayerChallenge"
 )
 
 // MeviusRankServiceClient is the client API for MeviusRankService service.
@@ -36,6 +38,7 @@ type MeviusRankServiceClient interface {
 	FetchPlayerRankingInfo(ctx context.Context, in *protor.FetchPlayerRankingInfoRequest, opts ...grpc.CallOption) (*protor.FetchPlayerRankingInfoResponse, error)
 	RefreshWeeklyRankRange(ctx context.Context, in *protor.RefreshWeeklyRankRangeRequest, opts ...grpc.CallOption) (*protor.RefreshWeeklyRankRangeResponse, error)
 	RefreshSpecialRankRange(ctx context.Context, in *protor.RefreshSpecialRankRangeRequest, opts ...grpc.CallOption) (*protor.RefreshSpecialRankRangeResponse, error)
+	GetActivePlayerChallenge(ctx context.Context, in *protosc.GetActivePlayerChallengeRequest, opts ...grpc.CallOption) (*protosc.GetActivePlayerChallengeResponse, error)
 }
 
 type meviusRankServiceClient struct {
@@ -91,6 +94,15 @@ func (c *meviusRankServiceClient) RefreshSpecialRankRange(ctx context.Context, i
 	return out, nil
 }
 
+func (c *meviusRankServiceClient) GetActivePlayerChallenge(ctx context.Context, in *protosc.GetActivePlayerChallengeRequest, opts ...grpc.CallOption) (*protosc.GetActivePlayerChallengeResponse, error) {
+	out := new(protosc.GetActivePlayerChallengeResponse)
+	err := c.cc.Invoke(ctx, MeviusRankService_GetActivePlayerChallenge_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusRankServiceServer is the server API for MeviusRankService service.
 // All implementations should embed UnimplementedMeviusRankServiceServer
 // for forward compatibility
@@ -100,6 +112,7 @@ type MeviusRankServiceServer interface {
 	FetchPlayerRankingInfo(context.Context, *protor.FetchPlayerRankingInfoRequest) (*protor.FetchPlayerRankingInfoResponse, error)
 	RefreshWeeklyRankRange(context.Context, *protor.RefreshWeeklyRankRangeRequest) (*protor.RefreshWeeklyRankRangeResponse, error)
 	RefreshSpecialRankRange(context.Context, *protor.RefreshSpecialRankRangeRequest) (*protor.RefreshSpecialRankRangeResponse, error)
+	GetActivePlayerChallenge(context.Context, *protosc.GetActivePlayerChallengeRequest) (*protosc.GetActivePlayerChallengeResponse, error)
 }
 
 // UnimplementedMeviusRankServiceServer should be embedded to have forward compatible implementations.
@@ -120,6 +133,9 @@ func (UnimplementedMeviusRankServiceServer) RefreshWeeklyRankRange(context.Conte
 }
 func (UnimplementedMeviusRankServiceServer) RefreshSpecialRankRange(context.Context, *protor.RefreshSpecialRankRangeRequest) (*protor.RefreshSpecialRankRangeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RefreshSpecialRankRange not implemented")
+}
+func (UnimplementedMeviusRankServiceServer) GetActivePlayerChallenge(context.Context, *protosc.GetActivePlayerChallengeRequest) (*protosc.GetActivePlayerChallengeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetActivePlayerChallenge not implemented")
 }
 
 // UnsafeMeviusRankServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -223,6 +239,24 @@ func _MeviusRankService_RefreshSpecialRankRange_Handler(srv interface{}, ctx con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusRankService_GetActivePlayerChallenge_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protosc.GetActivePlayerChallengeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusRankServiceServer).GetActivePlayerChallenge(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusRankService_GetActivePlayerChallenge_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusRankServiceServer).GetActivePlayerChallenge(ctx, req.(*protosc.GetActivePlayerChallengeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusRankService_ServiceDesc is the grpc.ServiceDesc for MeviusRankService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -249,6 +283,10 @@ var MeviusRankService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RefreshSpecialRankRange",
 			Handler:    _MeviusRankService_RefreshSpecialRankRange_Handler,
+		},
+		{
+			MethodName: "GetActivePlayerChallenge",
+			Handler:    _MeviusRankService_GetActivePlayerChallenge_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
