@@ -45,6 +45,7 @@ enum RequestType {
   ABILITY_SHOP_PURCHASE = 3200;
   CARD_AUGMENT = 3300;
   CLAIM_DAILY_MISSION = 3400;
+  JOIN_SOCIAL_CHALLENGE = 3500;
 }
 
 enum TeleportRequestType {

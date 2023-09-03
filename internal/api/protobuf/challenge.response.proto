@@ -10,3 +10,8 @@ message GetActivePlayerChallengeResponse {
   string challenge_id = 2;
   int32 challenge_flag = 3;
 }
+
+message JoinSocialChallengeResponse {
+  string sys_id = 1;
+  string challenge_id = 2;
+}
