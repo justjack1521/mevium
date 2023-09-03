@@ -12,7 +12,8 @@ message ProtoSocialChallengeInstance {
   int64 register_time = 4;
   int64 start_time = 5;
   int64 end_time = 6;
-  repeated ProtoPlayerSocialChallengeEntry player_entries = 7;
+  int32 state = 7;
+  repeated ProtoPlayerSocialChallengeEntry player_entries = 8;
 }
 
 message ProtoPlayerSocialChallengeEntry {
