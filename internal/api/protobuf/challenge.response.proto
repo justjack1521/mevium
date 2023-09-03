@@ -5,6 +5,8 @@ package challenge;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosc";
 
+import "challenge.proto";
+
 message GetActivePlayerChallengeResponse {
   string sys_id = 1;
   string challenge_id = 2;
@@ -12,6 +14,5 @@ message GetActivePlayerChallengeResponse {
 }
 
 message JoinSocialChallengeResponse {
-  string sys_id = 1;
-  string challenge_id = 2;
+  ProtoSocialChallengeInstance instance = 1;
 }

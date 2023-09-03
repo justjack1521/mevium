@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package challenge;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosc";
+
+message ProtoSocialChallengeInstance {
+  string sys_id = 1;
+  string challenge_id = 2;
+  string mission_id = 3;
+  int64 register_time = 4;
+  int64 start_time = 5;
+  int64 end_time = 6;
+  repeated ProtoPlayerSocialChallengeEntry player_entries = 7;
+}
+
+message ProtoPlayerSocialChallengeEntry {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  int64 score = 4;
+  int64 rank = 5;
+  bool is_player = 10;
+}
