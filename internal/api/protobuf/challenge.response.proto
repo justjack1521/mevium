@@ -16,3 +16,7 @@ message GetActivePlayerChallengeResponse {
 message JoinSocialChallengeResponse {
   ProtoSocialChallengeInstance instance = 1;
 }
+
+message GetPlayerChallengeResponse {
+  ProtoSocialChallengeInstance challenge = 1;
+}

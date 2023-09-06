@@ -5,6 +5,8 @@ package challenge;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosc";
 
+import "data.proto";
+
 message ProtoSocialChallengeInstance {
   string sys_id = 1;
   string challenge_id = 2;
@@ -22,5 +24,6 @@ message ProtoPlayerSocialChallengeEntry {
   int32 player_level = 3;
   int64 score = 4;
   int64 rank = 5;
-  bool is_player = 10;
+  game.ProtoPlayerLoadout primary_loadout = 6;
+  bool is_player = 7;
 }

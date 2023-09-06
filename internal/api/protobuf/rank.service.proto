@@ -19,5 +19,6 @@ service MeviusRankService {
   rpc RefreshSpecialRankRange(rank.RefreshSpecialRankRangeRequest) returns (rank.RefreshSpecialRankRangeResponse) {}
 
   rpc GetActivePlayerChallenge(challenge.GetActivePlayerChallengeRequest) returns (challenge.GetActivePlayerChallengeResponse) {}
+  rpc GetPlayerChallenge(challenge.GetPlayerChallengeRequest) returns (challenge.GetPlayerChallengeResponse) {}
   rpc JoinSocialChallenge(challenge.JoinSocialChallengeRequest) returns (challenge.JoinSocialChallengeResponse) {}
 }
