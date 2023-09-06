@@ -5,15 +5,12 @@ package challenge;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosc";
 
-import "data.proto";
-
 message GetActivePlayerChallengeRequest {
   string player_id = 1;
 }
 
 message JoinSocialChallengeRequest {
   string player_id = 1;
-  game.ProtoPlayerLoadout primary_loadout = 2;
 }
 
 message GetPlayerChallengeRequest {

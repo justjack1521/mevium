@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protoc;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
+
+import "data.proto";
+
+message GetSinglePlayerLoadoutResponse {
+  game.ProtoPlayerLoadout primary_loadout = 1;
+}
