@@ -30,3 +30,8 @@ message UnfollowPlayerRequest {
   string player_id = 1;
   string target_id = 2;
 }
+
+message GetPlayerIdentityRequest {
+  string player_id = 1;
+  string target_id = 2;
+}

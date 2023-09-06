@@ -24,6 +24,7 @@ const (
 	MeviusSocialService_UnfollowPlayer_FullMethodName        = "/service.MeviusSocialService/UnfollowPlayer"
 	MeviusSocialService_PlayerSearch_FullMethodName          = "/service.MeviusSocialService/PlayerSearch"
 	MeviusSocialService_FetchPlayerSocialInfo_FullMethodName = "/service.MeviusSocialService/FetchPlayerSocialInfo"
+	MeviusSocialService_GetPlayerIdentity_FullMethodName     = "/service.MeviusSocialService/GetPlayerIdentity"
 )
 
 // MeviusSocialServiceClient is the client API for MeviusSocialService service.
@@ -34,6 +35,7 @@ type MeviusSocialServiceClient interface {
 	UnfollowPlayer(ctx context.Context, in *protop.UnfollowPlayerRequest, opts ...grpc.CallOption) (*protop.UnfollowPlayerResponse, error)
 	PlayerSearch(ctx context.Context, in *protop.PlayerSearchRequest, opts ...grpc.CallOption) (*protop.PlayerSearchResponse, error)
 	FetchPlayerSocialInfo(ctx context.Context, in *protop.FetchPlayerSocialInfoRequest, opts ...grpc.CallOption) (*protop.FetchPlayerSocialInfoResponse, error)
+	GetPlayerIdentity(ctx context.Context, in *protop.GetPlayerIdentityRequest, opts ...grpc.CallOption) (*protop.GetPlayerIdentityResponse, error)
 }
 
 type meviusSocialServiceClient struct {
@@ -80,6 +82,15 @@ func (c *meviusSocialServiceClient) FetchPlayerSocialInfo(ctx context.Context, i
 	return out, nil
 }
 
+func (c *meviusSocialServiceClient) GetPlayerIdentity(ctx context.Context, in *protop.GetPlayerIdentityRequest, opts ...grpc.CallOption) (*protop.GetPlayerIdentityResponse, error) {
+	out := new(protop.GetPlayerIdentityResponse)
+	err := c.cc.Invoke(ctx, MeviusSocialService_GetPlayerIdentity_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusSocialServiceServer is the server API for MeviusSocialService service.
 // All implementations should embed UnimplementedMeviusSocialServiceServer
 // for forward compatibility
@@ -88,6 +99,7 @@ type MeviusSocialServiceServer interface {
 	UnfollowPlayer(context.Context, *protop.UnfollowPlayerRequest) (*protop.UnfollowPlayerResponse, error)
 	PlayerSearch(context.Context, *protop.PlayerSearchRequest) (*protop.PlayerSearchResponse, error)
 	FetchPlayerSocialInfo(context.Context, *protop.FetchPlayerSocialInfoRequest) (*protop.FetchPlayerSocialInfoResponse, error)
+	GetPlayerIdentity(context.Context, *protop.GetPlayerIdentityRequest) (*protop.GetPlayerIdentityResponse, error)
 }
 
 // UnimplementedMeviusSocialServiceServer should be embedded to have forward compatible implementations.
@@ -105,6 +117,9 @@ func (UnimplementedMeviusSocialServiceServer) PlayerSearch(context.Context, *pro
 }
 func (UnimplementedMeviusSocialServiceServer) FetchPlayerSocialInfo(context.Context, *protop.FetchPlayerSocialInfoRequest) (*protop.FetchPlayerSocialInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FetchPlayerSocialInfo not implemented")
+}
+func (UnimplementedMeviusSocialServiceServer) GetPlayerIdentity(context.Context, *protop.GetPlayerIdentityRequest) (*protop.GetPlayerIdentityResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerIdentity not implemented")
 }
 
 // UnsafeMeviusSocialServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -190,6 +205,24 @@ func _MeviusSocialService_FetchPlayerSocialInfo_Handler(srv interface{}, ctx con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusSocialService_GetPlayerIdentity_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protop.GetPlayerIdentityRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusSocialServiceServer).GetPlayerIdentity(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusSocialService_GetPlayerIdentity_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusSocialServiceServer).GetPlayerIdentity(ctx, req.(*protop.GetPlayerIdentityRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusSocialService_ServiceDesc is the grpc.ServiceDesc for MeviusSocialService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -212,6 +245,10 @@ var MeviusSocialService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "FetchPlayerSocialInfo",
 			Handler:    _MeviusSocialService_FetchPlayerSocialInfo_Handler,
+		},
+		{
+			MethodName: "GetPlayerIdentity",
+			Handler:    _MeviusSocialService_GetPlayerIdentity_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

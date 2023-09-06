@@ -7,6 +7,13 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protop";
 
 import "data.proto";
 
+message ProtoPlayerIdentity {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  bool is_player = 4;
+}
+
 message ProtoPlayerSocialInfo {
   game.ProtoPlayerInfo player_info = 1;
   int64 last_online = 2;

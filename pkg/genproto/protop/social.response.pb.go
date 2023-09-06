@@ -162,6 +162,53 @@ func (x *UnfollowPlayerResponse) GetPlayerId() string {
 	return ""
 }
 
+type GetPlayerIdentityResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerIdentity *ProtoPlayerIdentity `protobuf:"bytes,1,opt,name=player_identity,json=playerIdentity,proto3" json:"player_identity,omitempty"`
+}
+
+func (x *GetPlayerIdentityResponse) Reset() {
+	*x = GetPlayerIdentityResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_social_response_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetPlayerIdentityResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetPlayerIdentityResponse) ProtoMessage() {}
+
+func (x *GetPlayerIdentityResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_social_response_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetPlayerIdentityResponse.ProtoReflect.Descriptor instead.
+func (*GetPlayerIdentityResponse) Descriptor() ([]byte, []int) {
+	return file_social_response_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *GetPlayerIdentityResponse) GetPlayerIdentity() *ProtoPlayerIdentity {
+	if x != nil {
+		return x.PlayerIdentity
+	}
+	return nil
+}
+
 var File_social_response_proto protoreflect.FileDescriptor
 
 var file_social_response_proto_rawDesc = []byte{
@@ -182,12 +229,18 @@ var file_social_response_proto_rawDesc = []byte{
 	0x72, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x35, 0x0a, 0x16, 0x55, 0x6e, 0x66, 0x6f, 0x6c, 0x6c, 0x6f,
 	0x77, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
 	0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x43, 0x5a, 0x32,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a,
-	0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70,
-	0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x70, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x22, 0x63, 0x0a, 0x19,
+	0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74,
+	0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x46, 0x0a, 0x0f, 0x70, 0x6c, 0x61,
+	0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x70, 0x72, 0x65, 0x73, 0x65, 0x6e, 0x63, 0x65, 0x2e, 0x50, 0x72,
+	0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74,
+	0x79, 0x52, 0x0e, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74,
+	0x79, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
+	0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76,
+	0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x70, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73,
+	0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -202,22 +255,25 @@ func file_social_response_proto_rawDescGZIP() []byte {
 	return file_social_response_proto_rawDescData
 }
 
-var file_social_response_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_social_response_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_social_response_proto_goTypes = []interface{}{
-	(*FollowPlayerResponse)(nil),   // 0: presence.FollowPlayerResponse
-	(*PlayerSearchResponse)(nil),   // 1: presence.PlayerSearchResponse
-	(*UnfollowPlayerResponse)(nil), // 2: presence.UnfollowPlayerResponse
-	(*ProtoPlayerSocialInfo)(nil),  // 3: presence.ProtoPlayerSocialInfo
-	(*protog.ProtoPlayerInfo)(nil), // 4: game.ProtoPlayerInfo
+	(*FollowPlayerResponse)(nil),      // 0: presence.FollowPlayerResponse
+	(*PlayerSearchResponse)(nil),      // 1: presence.PlayerSearchResponse
+	(*UnfollowPlayerResponse)(nil),    // 2: presence.UnfollowPlayerResponse
+	(*GetPlayerIdentityResponse)(nil), // 3: presence.GetPlayerIdentityResponse
+	(*ProtoPlayerSocialInfo)(nil),     // 4: presence.ProtoPlayerSocialInfo
+	(*protog.ProtoPlayerInfo)(nil),    // 5: game.ProtoPlayerInfo
+	(*ProtoPlayerIdentity)(nil),       // 6: presence.ProtoPlayerIdentity
 }
 var file_social_response_proto_depIdxs = []int32{
-	3, // 0: presence.FollowPlayerResponse.player_info:type_name -> presence.ProtoPlayerSocialInfo
-	4, // 1: presence.PlayerSearchResponse.player_info:type_name -> game.ProtoPlayerInfo
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	4, // 0: presence.FollowPlayerResponse.player_info:type_name -> presence.ProtoPlayerSocialInfo
+	5, // 1: presence.PlayerSearchResponse.player_info:type_name -> game.ProtoPlayerInfo
+	6, // 2: presence.GetPlayerIdentityResponse.player_identity:type_name -> presence.ProtoPlayerIdentity
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_social_response_proto_init() }
@@ -263,6 +319,18 @@ func file_social_response_proto_init() {
 				return nil
 			}
 		}
+		file_social_response_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetPlayerIdentityResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -270,7 +338,7 @@ func file_social_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_social_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

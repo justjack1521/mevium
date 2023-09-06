@@ -19,3 +19,7 @@ message PlayerSearchResponse {
 message UnfollowPlayerResponse {
   string player_id = 1;
 }
+
+message GetPlayerIdentityResponse {
+  ProtoPlayerIdentity player_identity = 1;
+}
