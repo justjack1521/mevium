@@ -13,6 +13,9 @@ enum NotificationType {
   PLAYER_PRESENCE = 101;
   PLAYER_POSITION = 102;
   PLAYER_LOADOUT = 103;
+  SOCIAL_CHALLENGE_PLAYER_JOINED = 601;
+  SOCIAL_CHALLENGE_STARTED = 602;
+  SOCIAL_CHALLENGE_ENDED = 603;
 }
 
 message Notification {
@@ -44,4 +47,3 @@ message PlayerPositionNotification {
   string region_id = 2;
   int32 node_index = 3;
 }
-

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package notification;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protom";
+
+import "challenge.proto";
+
+message SocialChallengePlayerJoinedNotification {
+  string instance_id = 1;
+  challenge.ProtoPlayerSocialChallengeEntry player_entry = 2;
+}
+
+message SocialChallengeStartedNotification {
+  string instance_id = 1;
+}
+
+message SocialChallengeEndedNotification {
+  string instance_id = 1;
+}
