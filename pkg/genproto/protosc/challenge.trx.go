@@ -22,6 +22,6 @@ func NewGetPlayerChallengeRequest(bytes []byte) (*GetPlayerChallengeRequest, err
 	return req, nil
 }
 
-func (x *GetPlayerChallengeRequest) MarshallBinary() ([]byte, error) {
+func (x *GetPlayerChallengeResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
