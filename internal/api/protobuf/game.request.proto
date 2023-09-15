@@ -47,6 +47,7 @@ enum RequestType {
   CLAIM_DAILY_MISSION = 3400;
   JOIN_SOCIAL_CHALLENGE = 3500;
   GET_SOCIAL_CHALLENGE = 3600;
+  COMPLETE_REGION_MAP = 3700;
 }
 
 enum TeleportRequestType {
@@ -245,4 +246,8 @@ message ItemShopCardPurchaseRequest {
 message AbilityShopPurchaseRequest {
   string ability_card_id = 1;
   bool max = 2;
+}
+
+message CompleteRegionMapRequest {
+  string region_map_id = 1;
 }

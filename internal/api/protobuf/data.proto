@@ -33,6 +33,7 @@ message ProtoGameData {
   game.ProtoBattleData multi_play_battle_data = 11;
 
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 20;
+  map<string, bool> player_progress_data = 100;
 
 }
 

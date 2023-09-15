@@ -42,6 +42,7 @@ service MeviusGameService {
   rpc PurchaseItem(protoc.ItemShopItemPurchaseRequest) returns (protoc.ItemShopItemPurchaseResponse) {}
   rpc PurchaseCard(protoc.ItemShopCardPurchaseRequest) returns (protoc.ItemShopCardPurchaseResponse) {}
   rpc AbilityShopPurchase(protoc.AbilityShopPurchaseRequest) returns (protoc.AbilityShopPurchaseResponse) {}
+  rpc CompleteRegion(protoc.CompleteRegionMapRequest) returns (protoc.CompleteRegionMapResponse) {}
 
   //Core
   rpc GetPlayerLoadout(protoc.GetSinglePlayerLoadoutRequest) returns (protoc.GetSinglePlayerLoadoutResponse) {}

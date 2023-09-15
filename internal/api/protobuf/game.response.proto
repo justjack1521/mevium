@@ -209,3 +209,9 @@ message AbilityShopPurchaseResponse {
   game.ProtoAbilityCardInstance ability_card_instance = 1;
   game.ProtoItemValuePair cost_item = 2;
 }
+
+message CompleteRegionMapResponse {
+  string region_map_id = 1;
+  repeated game.ProtoRegionEvent region_events = 3;
+
+}
