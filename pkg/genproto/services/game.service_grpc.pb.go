@@ -51,6 +51,7 @@ const (
 	MeviusGameService_PurchaseItem_FullMethodName           = "/service.MeviusGameService/PurchaseItem"
 	MeviusGameService_PurchaseCard_FullMethodName           = "/service.MeviusGameService/PurchaseCard"
 	MeviusGameService_AbilityShopPurchase_FullMethodName    = "/service.MeviusGameService/AbilityShopPurchase"
+	MeviusGameService_CompleteRegion_FullMethodName         = "/service.MeviusGameService/CompleteRegion"
 	MeviusGameService_GetPlayerLoadout_FullMethodName       = "/service.MeviusGameService/GetPlayerLoadout"
 )
 
@@ -90,6 +91,7 @@ type MeviusGameServiceClient interface {
 	PurchaseItem(ctx context.Context, in *protoc.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protoc.ItemShopItemPurchaseResponse, error)
 	PurchaseCard(ctx context.Context, in *protoc.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protoc.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(ctx context.Context, in *protoc.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protoc.AbilityShopPurchaseResponse, error)
+	CompleteRegion(ctx context.Context, in *protoc.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protoc.CompleteRegionMapResponse, error)
 	//Core
 	GetPlayerLoadout(ctx context.Context, in *protoc.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoc.GetSinglePlayerLoadoutResponse, error)
 }
@@ -381,6 +383,15 @@ func (c *meviusGameServiceClient) AbilityShopPurchase(ctx context.Context, in *p
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protoc.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protoc.CompleteRegionMapResponse, error) {
+	out := new(protoc.CompleteRegionMapResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_CompleteRegion_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusGameServiceClient) GetPlayerLoadout(ctx context.Context, in *protoc.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoc.GetSinglePlayerLoadoutResponse, error) {
 	out := new(protoc.GetSinglePlayerLoadoutResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_GetPlayerLoadout_FullMethodName, in, out, opts...)
@@ -426,6 +437,7 @@ type MeviusGameServiceServer interface {
 	PurchaseItem(context.Context, *protoc.ItemShopItemPurchaseRequest) (*protoc.ItemShopItemPurchaseResponse, error)
 	PurchaseCard(context.Context, *protoc.ItemShopCardPurchaseRequest) (*protoc.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(context.Context, *protoc.AbilityShopPurchaseRequest) (*protoc.AbilityShopPurchaseResponse, error)
+	CompleteRegion(context.Context, *protoc.CompleteRegionMapRequest) (*protoc.CompleteRegionMapResponse, error)
 	//Core
 	GetPlayerLoadout(context.Context, *protoc.GetSinglePlayerLoadoutRequest) (*protoc.GetSinglePlayerLoadoutResponse, error)
 }
@@ -526,6 +538,9 @@ func (UnimplementedMeviusGameServiceServer) PurchaseCard(context.Context, *proto
 }
 func (UnimplementedMeviusGameServiceServer) AbilityShopPurchase(context.Context, *protoc.AbilityShopPurchaseRequest) (*protoc.AbilityShopPurchaseResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AbilityShopPurchase not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protoc.CompleteRegionMapRequest) (*protoc.CompleteRegionMapResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CompleteRegion not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) GetPlayerLoadout(context.Context, *protoc.GetSinglePlayerLoadoutRequest) (*protoc.GetSinglePlayerLoadoutResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerLoadout not implemented")
@@ -1100,6 +1115,24 @@ func _MeviusGameService_AbilityShopPurchase_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoc.CompleteRegionMapRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).CompleteRegion(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_CompleteRegion_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).CompleteRegion(ctx, req.(*protoc.CompleteRegionMapRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusGameService_GetPlayerLoadout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protoc.GetSinglePlayerLoadoutRequest)
 	if err := dec(in); err != nil {
@@ -1248,6 +1281,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AbilityShopPurchase",
 			Handler:    _MeviusGameService_AbilityShopPurchase_Handler,
+		},
+		{
+			MethodName: "CompleteRegion",
+			Handler:    _MeviusGameService_CompleteRegion_Handler,
 		},
 		{
 			MethodName: "GetPlayerLoadout",
