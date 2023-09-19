@@ -57,6 +57,10 @@ func (x *CardSaleResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *CompleteRegionMapResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *ClaimMailBoxItemResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

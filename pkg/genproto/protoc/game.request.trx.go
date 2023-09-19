@@ -74,6 +74,14 @@ func NewCardSaleRequest(bytes []byte) (*CardSaleRequest, error) {
 	return req, nil
 }
 
+func NewCompleteRegionMapRequest(bytes []byte) (*CompleteRegionMapRequest, error) {
+	req := &CompleteRegionMapRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewCardTransferRequest(bytes []byte) (*CardTransferRequest, error) {
 	req := &CardTransferRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
