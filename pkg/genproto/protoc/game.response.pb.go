@@ -2117,8 +2117,9 @@ type CompleteRegionMapResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RegionMapId  string                     `protobuf:"bytes,1,opt,name=region_map_id,json=regionMapId,proto3" json:"region_map_id,omitempty"`
-	RegionEvents []*protog.ProtoRegionEvent `protobuf:"bytes,3,rep,name=region_events,json=regionEvents,proto3" json:"region_events,omitempty"`
+	RegionMapId         string                     `protobuf:"bytes,1,opt,name=region_map_id,json=regionMapId,proto3" json:"region_map_id,omitempty"`
+	RegionEvents        []*protog.ProtoRegionEvent `protobuf:"bytes,3,rep,name=region_events,json=regionEvents,proto3" json:"region_events,omitempty"`
+	AugmentLevelRewards map[string]int32           `protobuf:"bytes,4,rep,name=augment_level_rewards,json=augmentLevelRewards,proto3" json:"augment_level_rewards,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 }
 
 func (x *CompleteRegionMapResponse) Reset() {
@@ -2163,6 +2164,13 @@ func (x *CompleteRegionMapResponse) GetRegionMapId() string {
 func (x *CompleteRegionMapResponse) GetRegionEvents() []*protog.ProtoRegionEvent {
 	if x != nil {
 		return x.RegionEvents
+	}
+	return nil
+}
+
+func (x *CompleteRegionMapResponse) GetAugmentLevelRewards() map[string]int32 {
+	if x != nil {
+		return x.AugmentLevelRewards
 	}
 	return nil
 }
@@ -2506,20 +2514,32 @@ var file_game_response_proto_rawDesc = []byte{
 	0x6e, 0x73, 0x74, 0x61, 0x6e, 0x63, 0x65, 0x12, 0x35, 0x0a, 0x09, 0x63, 0x6f, 0x73, 0x74, 0x5f,
 	0x69, 0x74, 0x65, 0x6d, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x67, 0x61, 0x6d,
 	0x65, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x49, 0x74, 0x65, 0x6d, 0x56, 0x61, 0x6c, 0x75, 0x65,
-	0x50, 0x61, 0x69, 0x72, 0x52, 0x08, 0x63, 0x6f, 0x73, 0x74, 0x49, 0x74, 0x65, 0x6d, 0x22, 0x7c,
-	0x0a, 0x19, 0x43, 0x6f, 0x6d, 0x70, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e,
-	0x4d, 0x61, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x22, 0x0a, 0x0d, 0x72,
-	0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x70, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x0b, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x49, 0x64, 0x12,
-	0x3b, 0x0a, 0x0d, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73,
-	0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50, 0x72,
-	0x6f, 0x74, 0x6f, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52, 0x0c,
-	0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x42, 0x43, 0x5a, 0x32,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a,
-	0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70,
-	0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0xaa, 0x02, 0x0c, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x50, 0x61, 0x69, 0x72, 0x52, 0x08, 0x63, 0x6f, 0x73, 0x74, 0x49, 0x74, 0x65, 0x6d, 0x22, 0xb4,
+	0x02, 0x0a, 0x19, 0x43, 0x6f, 0x6d, 0x70, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x67, 0x69, 0x6f,
+	0x6e, 0x4d, 0x61, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x22, 0x0a, 0x0d,
+	0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x70, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0b, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x49, 0x64,
+	0x12, 0x3b, 0x0a, 0x0d, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x5f, 0x65, 0x76, 0x65, 0x6e, 0x74,
+	0x73, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x50,
+	0x72, 0x6f, 0x74, 0x6f, 0x52, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x52,
+	0x0c, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x6e, 0x0a,
+	0x15, 0x61, 0x75, 0x67, 0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x6c, 0x65, 0x76, 0x65, 0x6c, 0x5f, 0x72,
+	0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x18, 0x04, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x3a, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x63, 0x2e, 0x43, 0x6f, 0x6d, 0x70, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65,
+	0x67, 0x69, 0x6f, 0x6e, 0x4d, 0x61, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x2e,
+	0x41, 0x75, 0x67, 0x6d, 0x65, 0x6e, 0x74, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x52, 0x65, 0x77, 0x61,
+	0x72, 0x64, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x13, 0x61, 0x75, 0x67, 0x6d, 0x65, 0x6e,
+	0x74, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x52, 0x65, 0x77, 0x61, 0x72, 0x64, 0x73, 0x1a, 0x46, 0x0a,
+	0x18, 0x41, 0x75, 0x67, 0x6d, 0x65, 0x6e, 0x74, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x52, 0x65, 0x77,
+	0x61, 0x72, 0x64, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75,
+	0x65, 0x3a, 0x02, 0x38, 0x01, 0x42, 0x43, 0x5a, 0x32, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
+	0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31,
+	0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0xaa, 0x02, 0x0c, 0x4d, 0x6f,
+	0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
@@ -2534,7 +2554,7 @@ func file_game_response_proto_rawDescGZIP() []byte {
 	return file_game_response_proto_rawDescData
 }
 
-var file_game_response_proto_msgTypes = make([]protoimpl.MessageInfo, 38)
+var file_game_response_proto_msgTypes = make([]protoimpl.MessageInfo, 39)
 var file_game_response_proto_goTypes = []interface{}{
 	(*ApplicationError)(nil),                  // 0: protoc.ApplicationError
 	(*Response)(nil),                          // 1: protoc.Response
@@ -2574,61 +2594,63 @@ var file_game_response_proto_goTypes = []interface{}{
 	(*CompleteRegionMapResponse)(nil),         // 35: protoc.CompleteRegionMapResponse
 	nil,                                       // 36: protoc.SkillPanelUnlockResponse.WeaponUnlockEntry
 	nil,                                       // 37: protoc.SkillPanelUnlockResponse.AutoAbilitiesAddedEntry
-	(*protog.ProtoLastBattleResults)(nil),     // 38: game.ProtoLastBattleResults
-	(*protog.ProtoItemValuePair)(nil),         // 39: game.ProtoItemValuePair
-	(*protog.ProtoAbilityCardInstance)(nil),   // 40: game.ProtoAbilityCardInstance
-	(*protor.ProtoRankingInfo)(nil),           // 41: rank.ProtoRankingInfo
-	(*protog.ProtoBattleStartData)(nil),       // 42: game.ProtoBattleStartData
-	(*protog.ProtoMailBoxItem)(nil),           // 43: game.ProtoMailBoxItem
-	(*protog.ProtoPlayerDeckCollection)(nil),  // 44: game.ProtoPlayerDeckCollection
-	(*protog.ProtoGameData)(nil),              // 45: game.ProtoGameData
-	(*protog.ProtoDailyMissionInstance)(nil),  // 46: game.ProtoDailyMissionInstance
-	(*protog.ProtoLoginCampaignInstance)(nil), // 47: game.ProtoLoginCampaignInstance
-	(*protog.ProtoCardFilterSort)(nil),        // 48: game.ProtoCardFilterSort
-	(*protog.ProtoRegionEvent)(nil),           // 49: game.ProtoRegionEvent
-	(*protog.ProtoRegionNodeEvent)(nil),       // 50: game.ProtoRegionNodeEvent
-	(*protog.ProtoRegionMapInstance)(nil),     // 51: game.ProtoRegionMapInstance
+	nil,                                       // 38: protoc.CompleteRegionMapResponse.AugmentLevelRewardsEntry
+	(*protog.ProtoLastBattleResults)(nil),     // 39: game.ProtoLastBattleResults
+	(*protog.ProtoItemValuePair)(nil),         // 40: game.ProtoItemValuePair
+	(*protog.ProtoAbilityCardInstance)(nil),   // 41: game.ProtoAbilityCardInstance
+	(*protor.ProtoRankingInfo)(nil),           // 42: rank.ProtoRankingInfo
+	(*protog.ProtoBattleStartData)(nil),       // 43: game.ProtoBattleStartData
+	(*protog.ProtoMailBoxItem)(nil),           // 44: game.ProtoMailBoxItem
+	(*protog.ProtoPlayerDeckCollection)(nil),  // 45: game.ProtoPlayerDeckCollection
+	(*protog.ProtoGameData)(nil),              // 46: game.ProtoGameData
+	(*protog.ProtoDailyMissionInstance)(nil),  // 47: game.ProtoDailyMissionInstance
+	(*protog.ProtoLoginCampaignInstance)(nil), // 48: game.ProtoLoginCampaignInstance
+	(*protog.ProtoCardFilterSort)(nil),        // 49: game.ProtoCardFilterSort
+	(*protog.ProtoRegionEvent)(nil),           // 50: game.ProtoRegionEvent
+	(*protog.ProtoRegionNodeEvent)(nil),       // 51: game.ProtoRegionNodeEvent
+	(*protog.ProtoRegionMapInstance)(nil),     // 52: game.ProtoRegionMapInstance
 }
 var file_game_response_proto_depIdxs = []int32{
 	2,  // 0: protoc.Response.header:type_name -> protoc.ResponseHeader
-	38, // 1: protoc.BattleCompleteResponse.Results:type_name -> game.ProtoLastBattleResults
-	39, // 2: protoc.BattleCompleteResponse.seed_rewards:type_name -> game.ProtoItemValuePair
-	39, // 3: protoc.BattleCompleteResponse.item_rewards:type_name -> game.ProtoItemValuePair
-	40, // 4: protoc.BattleCompleteResponse.card_drops:type_name -> game.ProtoAbilityCardInstance
-	41, // 5: protoc.BattleCompleteResponse.weekly_rank_update:type_name -> rank.ProtoRankingInfo
-	41, // 6: protoc.BattleCompleteResponse.event_rank_update:type_name -> rank.ProtoRankingInfo
-	39, // 7: protoc.BattleReviveResponse.ItemRemoved:type_name -> game.ProtoItemValuePair
-	42, // 8: protoc.BattleStartResponse.BattleStartData:type_name -> game.ProtoBattleStartData
-	39, // 9: protoc.CardFusionResponse.fusion_cost:type_name -> game.ProtoItemValuePair
-	39, // 10: protoc.CardBoostFusionResponse.fusion_cost:type_name -> game.ProtoItemValuePair
-	43, // 11: protoc.ClaimLoginCampaignResponse.claim:type_name -> game.ProtoMailBoxItem
-	43, // 12: protoc.ClaimMailBoxItemResponse.claim:type_name -> game.ProtoMailBoxItem
-	43, // 13: protoc.ClaimAllMailBoxItemResponse.claims:type_name -> game.ProtoMailBoxItem
-	43, // 14: protoc.ClaimEventRankingResponse.claims:type_name -> game.ProtoMailBoxItem
-	43, // 15: protoc.ClaimDailyMissionResponse.claims:type_name -> game.ProtoMailBoxItem
-	39, // 16: protoc.ClaimRentalCardRewardResponse.reward_item:type_name -> game.ProtoItemValuePair
-	44, // 17: protoc.DeckEditAllResponse.Collection:type_name -> game.ProtoPlayerDeckCollection
-	45, // 18: protoc.FetchPlayerDataResponse.data:type_name -> game.ProtoGameData
-	46, // 19: protoc.FirstDailyLoginResponse.daily_mission:type_name -> game.ProtoDailyMissionInstance
-	47, // 20: protoc.FirstDailyLoginResponse.standard_login_bonus:type_name -> game.ProtoLoginCampaignInstance
-	47, // 21: protoc.FirstDailyLoginResponse.special_login_bonus:type_name -> game.ProtoLoginCampaignInstance
-	48, // 22: protoc.FilterSortResponse.FilterSort:type_name -> game.ProtoCardFilterSort
-	39, // 23: protoc.SkillPanelUnlockResponse.ItemsRemoved:type_name -> game.ProtoItemValuePair
+	39, // 1: protoc.BattleCompleteResponse.Results:type_name -> game.ProtoLastBattleResults
+	40, // 2: protoc.BattleCompleteResponse.seed_rewards:type_name -> game.ProtoItemValuePair
+	40, // 3: protoc.BattleCompleteResponse.item_rewards:type_name -> game.ProtoItemValuePair
+	41, // 4: protoc.BattleCompleteResponse.card_drops:type_name -> game.ProtoAbilityCardInstance
+	42, // 5: protoc.BattleCompleteResponse.weekly_rank_update:type_name -> rank.ProtoRankingInfo
+	42, // 6: protoc.BattleCompleteResponse.event_rank_update:type_name -> rank.ProtoRankingInfo
+	40, // 7: protoc.BattleReviveResponse.ItemRemoved:type_name -> game.ProtoItemValuePair
+	43, // 8: protoc.BattleStartResponse.BattleStartData:type_name -> game.ProtoBattleStartData
+	40, // 9: protoc.CardFusionResponse.fusion_cost:type_name -> game.ProtoItemValuePair
+	40, // 10: protoc.CardBoostFusionResponse.fusion_cost:type_name -> game.ProtoItemValuePair
+	44, // 11: protoc.ClaimLoginCampaignResponse.claim:type_name -> game.ProtoMailBoxItem
+	44, // 12: protoc.ClaimMailBoxItemResponse.claim:type_name -> game.ProtoMailBoxItem
+	44, // 13: protoc.ClaimAllMailBoxItemResponse.claims:type_name -> game.ProtoMailBoxItem
+	44, // 14: protoc.ClaimEventRankingResponse.claims:type_name -> game.ProtoMailBoxItem
+	44, // 15: protoc.ClaimDailyMissionResponse.claims:type_name -> game.ProtoMailBoxItem
+	40, // 16: protoc.ClaimRentalCardRewardResponse.reward_item:type_name -> game.ProtoItemValuePair
+	45, // 17: protoc.DeckEditAllResponse.Collection:type_name -> game.ProtoPlayerDeckCollection
+	46, // 18: protoc.FetchPlayerDataResponse.data:type_name -> game.ProtoGameData
+	47, // 19: protoc.FirstDailyLoginResponse.daily_mission:type_name -> game.ProtoDailyMissionInstance
+	48, // 20: protoc.FirstDailyLoginResponse.standard_login_bonus:type_name -> game.ProtoLoginCampaignInstance
+	48, // 21: protoc.FirstDailyLoginResponse.special_login_bonus:type_name -> game.ProtoLoginCampaignInstance
+	49, // 22: protoc.FilterSortResponse.FilterSort:type_name -> game.ProtoCardFilterSort
+	40, // 23: protoc.SkillPanelUnlockResponse.ItemsRemoved:type_name -> game.ProtoItemValuePair
 	36, // 24: protoc.SkillPanelUnlockResponse.WeaponUnlock:type_name -> protoc.SkillPanelUnlockResponse.WeaponUnlockEntry
 	37, // 25: protoc.SkillPanelUnlockResponse.AutoAbilitiesAdded:type_name -> protoc.SkillPanelUnlockResponse.AutoAbilitiesAddedEntry
-	49, // 26: protoc.TeleportResponse.region_events:type_name -> game.ProtoRegionEvent
-	50, // 27: protoc.TeleportResponse.node_events:type_name -> game.ProtoRegionNodeEvent
-	51, // 28: protoc.TeleportResponse.current_map_data:type_name -> game.ProtoRegionMapInstance
-	39, // 29: protoc.ExpandAbilityCardSlotResponse.cost_item:type_name -> game.ProtoItemValuePair
-	40, // 30: protoc.ItemShopCardPurchaseResponse.ability_cards:type_name -> game.ProtoAbilityCardInstance
-	40, // 31: protoc.AbilityShopPurchaseResponse.ability_card_instance:type_name -> game.ProtoAbilityCardInstance
-	39, // 32: protoc.AbilityShopPurchaseResponse.cost_item:type_name -> game.ProtoItemValuePair
-	49, // 33: protoc.CompleteRegionMapResponse.region_events:type_name -> game.ProtoRegionEvent
-	34, // [34:34] is the sub-list for method output_type
-	34, // [34:34] is the sub-list for method input_type
-	34, // [34:34] is the sub-list for extension type_name
-	34, // [34:34] is the sub-list for extension extendee
-	0,  // [0:34] is the sub-list for field type_name
+	50, // 26: protoc.TeleportResponse.region_events:type_name -> game.ProtoRegionEvent
+	51, // 27: protoc.TeleportResponse.node_events:type_name -> game.ProtoRegionNodeEvent
+	52, // 28: protoc.TeleportResponse.current_map_data:type_name -> game.ProtoRegionMapInstance
+	40, // 29: protoc.ExpandAbilityCardSlotResponse.cost_item:type_name -> game.ProtoItemValuePair
+	41, // 30: protoc.ItemShopCardPurchaseResponse.ability_cards:type_name -> game.ProtoAbilityCardInstance
+	41, // 31: protoc.AbilityShopPurchaseResponse.ability_card_instance:type_name -> game.ProtoAbilityCardInstance
+	40, // 32: protoc.AbilityShopPurchaseResponse.cost_item:type_name -> game.ProtoItemValuePair
+	50, // 33: protoc.CompleteRegionMapResponse.region_events:type_name -> game.ProtoRegionEvent
+	38, // 34: protoc.CompleteRegionMapResponse.augment_level_rewards:type_name -> protoc.CompleteRegionMapResponse.AugmentLevelRewardsEntry
+	35, // [35:35] is the sub-list for method output_type
+	35, // [35:35] is the sub-list for method input_type
+	35, // [35:35] is the sub-list for extension type_name
+	35, // [35:35] is the sub-list for extension extendee
+	0,  // [0:35] is the sub-list for field type_name
 }
 
 func init() { file_game_response_proto_init() }
@@ -3077,7 +3099,7 @@ func file_game_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_game_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   38,
+			NumMessages:   39,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

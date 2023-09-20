@@ -213,5 +213,5 @@ message AbilityShopPurchaseResponse {
 message CompleteRegionMapResponse {
   string region_map_id = 1;
   repeated game.ProtoRegionEvent region_events = 3;
-
+  map<string, int32> augment_level_rewards = 4;
 }
