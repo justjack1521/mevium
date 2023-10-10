@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package presence;
+package challenge;
 
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protochallenge";
