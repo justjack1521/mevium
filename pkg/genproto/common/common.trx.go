@@ -17,6 +17,14 @@ func (x *Response) MarshallBinary() ([]byte, error) {
 	return bytes, nil
 }
 
+func NewNotification(bytes []byte) (*Notification, error) {
+	req := &Notification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *Notification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
