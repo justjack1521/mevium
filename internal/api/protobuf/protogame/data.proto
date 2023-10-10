@@ -5,6 +5,8 @@ package game;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
+import "protosocial/social.proto";
+
 enum ReferenceSource {
   NONE = 0;
   ABILITY_CARD = 1;
@@ -119,7 +121,7 @@ message ProtoBattleStartData {
   repeated ProtoCardProgressData card_progress_data = 16;
 
   string rental_player_id = 17;
-  ProtoPlayerCardInfo rental_card = 18;
+  presence.ProtoPlayerCardInfo rental_card = 18;
 
   int64 created_at = 20;
 }
@@ -313,34 +315,6 @@ message ProtoMailBoxItem {
   int32 quantity = 4;
   int64 received_at = 5;
   string claim_source = 6;
-}
-
-message ProtoPlayerInfo {
-  string player_id = 1;
-  string player_name = 2;
-  string player_comment = 3;
-  int32 player_level = 4;
-  string job_card_id = 6;
-  int32 sub_job_index = 7;
-  string companion_id = 8;
-  ProtoPlayerCardInfo rental_card = 9;
-}
-
-message ProtoPlayerLoadout {
-  string job_card_id = 1;
-  int32 sub_job_index = 2;
-  string weapon_id = 3;
-  int32 sub_weapon_unlock = 4;
-  repeated ProtoPlayerCardInfo ability_cards = 5;
-}
-
-message ProtoPlayerCardInfo {
-  string ability_card_id = 1;
-  int32 ability_card_level = 2;
-  int32 ability_level = 3;
-  int32 extra_skill_unlock = 4;
-  int32 over_boost_level = 5;
-  int32 slot_index = 6;
 }
 
 message ProtoPlayerDeckCollection {

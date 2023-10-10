@@ -7,6 +7,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
 import "protogame/data.proto";
 import "protorank/rank.proto";
+import "protosocial/social.proto";
 
 message BattleCompleteResponse {
   game.ProtoLastBattleResults Results = 1;
@@ -197,5 +198,5 @@ message CompleteRegionMapResponse {
 }
 
 message GetSinglePlayerLoadoutResponse {
-  game.ProtoPlayerLoadout primary_loadout = 1;
+  presence.ProtoPlayerLoadout primary_loadout = 1;
 }

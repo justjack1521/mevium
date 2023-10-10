@@ -5,7 +5,6 @@ package presence;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosocial";
 
-import "protogame/data.proto";
 import "protosocial/social.proto";
 
 message FollowPlayerResponse {
@@ -13,7 +12,7 @@ message FollowPlayerResponse {
 }
 
 message PlayerSearchResponse {
-  game.ProtoPlayerInfo player_info = 1;
+  presence.ProtoPlayerInfo player_info = 1;
 }
 
 message UnfollowPlayerResponse {

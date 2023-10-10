@@ -5,7 +5,7 @@ package rank;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protorank";
 
-import "protogame/data.proto";
+import "protosocial/social.proto";
 
 message ProtoRankingInfo {
   string id = 1;
@@ -21,7 +21,7 @@ message ProtoPlayerRankSetDetails {
   int32 player_level = 3;
   double score = 4;
   int64 rank = 5;
-  game.ProtoPlayerLoadout primary_loadout = 6;
+  presence.ProtoPlayerLoadout primary_loadout = 6;
   bool is_player = 7;
 }
 
