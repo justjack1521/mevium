@@ -8,7 +8,6 @@ package services
 
 import (
 	context "context"
-	protoc "github.com/justjack1521/mevium/pkg/genproto/protoc"
 	protogame "github.com/justjack1521/mevium/pkg/genproto/protogame"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -94,7 +93,7 @@ type MeviusGameServiceClient interface {
 	AbilityShopPurchase(ctx context.Context, in *protogame.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(ctx context.Context, in *protogame.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protogame.CompleteRegionMapResponse, error)
 	//Core
-	GetPlayerLoadout(ctx context.Context, in *protoc.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoc.GetSinglePlayerLoadoutResponse, error)
+	GetPlayerLoadout(ctx context.Context, in *protogame.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protogame.GetSinglePlayerLoadoutResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -393,8 +392,8 @@ func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protog
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) GetPlayerLoadout(ctx context.Context, in *protoc.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoc.GetSinglePlayerLoadoutResponse, error) {
-	out := new(protoc.GetSinglePlayerLoadoutResponse)
+func (c *meviusGameServiceClient) GetPlayerLoadout(ctx context.Context, in *protogame.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protogame.GetSinglePlayerLoadoutResponse, error) {
+	out := new(protogame.GetSinglePlayerLoadoutResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_GetPlayerLoadout_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -440,7 +439,7 @@ type MeviusGameServiceServer interface {
 	AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error)
 	//Core
-	GetPlayerLoadout(context.Context, *protoc.GetSinglePlayerLoadoutRequest) (*protoc.GetSinglePlayerLoadoutResponse, error)
+	GetPlayerLoadout(context.Context, *protogame.GetSinglePlayerLoadoutRequest) (*protogame.GetSinglePlayerLoadoutResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -543,7 +542,7 @@ func (UnimplementedMeviusGameServiceServer) AbilityShopPurchase(context.Context,
 func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CompleteRegion not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) GetPlayerLoadout(context.Context, *protoc.GetSinglePlayerLoadoutRequest) (*protoc.GetSinglePlayerLoadoutResponse, error) {
+func (UnimplementedMeviusGameServiceServer) GetPlayerLoadout(context.Context, *protogame.GetSinglePlayerLoadoutRequest) (*protogame.GetSinglePlayerLoadoutResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerLoadout not implemented")
 }
 
@@ -1135,7 +1134,7 @@ func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Cont
 }
 
 func _MeviusGameService_GetPlayerLoadout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoc.GetSinglePlayerLoadoutRequest)
+	in := new(protogame.GetSinglePlayerLoadoutRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1147,7 +1146,7 @@ func _MeviusGameService_GetPlayerLoadout_Handler(srv interface{}, ctx context.Co
 		FullMethod: MeviusGameService_GetPlayerLoadout_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).GetPlayerLoadout(ctx, req.(*protoc.GetSinglePlayerLoadoutRequest))
+		return srv.(MeviusGameServiceServer).GetPlayerLoadout(ctx, req.(*protogame.GetSinglePlayerLoadoutRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

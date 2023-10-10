@@ -233,3 +233,7 @@ message AbilityShopPurchaseRequest {
 message CompleteRegionMapRequest {
   string region_map_id = 1;
 }
+
+message GetSinglePlayerLoadoutRequest {
+  string player_id = 1;
+}

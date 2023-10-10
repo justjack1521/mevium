@@ -195,3 +195,7 @@ message CompleteRegionMapResponse {
   repeated game.ProtoRegionEvent region_events = 3;
   map<string, int32> augment_level_rewards = 4;
 }
+
+message GetSinglePlayerLoadoutResponse {
+  game.ProtoPlayerLoadout primary_loadout = 1;
+}
