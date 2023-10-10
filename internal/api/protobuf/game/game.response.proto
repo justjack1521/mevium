@@ -8,26 +8,6 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 import "game/data.proto";
 import "rank/rank.proto";
 
-message ApplicationError {
-  int32   error_code     =  1;
-  string  error_message  =  2;
-}
-
-message Response {
-  ResponseHeader  header  =  1;
-  bytes           data    =  2;
-}
-
-message ResponseHeader {
-  string  client_id      =  1;
-  string  connection_id  =  2;
-  string  command_id     =  3;
-  int32   operation     =  4;
-  bool    error         =  5;
-  int32   error_code     =  6;
-  string  error_message  =  7;
-}
-
 message BattleCompleteResponse {
   game.ProtoLastBattleResults Results = 1;
   repeated game.ProtoItemValuePair seed_rewards = 4;

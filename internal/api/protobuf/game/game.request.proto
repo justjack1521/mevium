@@ -52,12 +52,6 @@ enum TeleportRequestType {
   BATTLE = 4;
 }
 
-message RequestHeader {
-  string client_id      =  1;
-  string connection_id  =  2;
-  string command_id     =  3;
-}
-
 message BattleCompleteRequest {
   uint64 score                            =   1;
   game.ProtoBattleStatistics statistics   =   2;

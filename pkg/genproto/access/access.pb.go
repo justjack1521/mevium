@@ -7,7 +7,7 @@
 package access
 
 import (
-	common "github.com/justjack1521/mevium/pkg/genproto/common"
+	protocommon "github.com/justjack1521/mevium/pkg/genproto/protocommon"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -26,8 +26,8 @@ type AuthTokenRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Bearer string                `protobuf:"bytes,2,opt,name=bearer,proto3" json:"bearer,omitempty"`
+	Header *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Bearer string                     `protobuf:"bytes,2,opt,name=bearer,proto3" json:"bearer,omitempty"`
 }
 
 func (x *AuthTokenRequest) Reset() {
@@ -62,7 +62,7 @@ func (*AuthTokenRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *AuthTokenRequest) GetHeader() *common.RequestHeader {
+func (x *AuthTokenRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -81,7 +81,7 @@ type AuthTokenResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Header *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 }
 
 func (x *AuthTokenResponse) Reset() {
@@ -116,7 +116,7 @@ func (*AuthTokenResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *AuthTokenResponse) GetHeader() *common.ResponseHeader {
+func (x *AuthTokenResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -128,9 +128,9 @@ type ChangePasswordRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header      *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	OldPassword string                `protobuf:"bytes,2,opt,name=old_password,json=oldPassword,proto3" json:"old_password,omitempty"`
-	NewPassword string                `protobuf:"bytes,3,opt,name=new_password,json=newPassword,proto3" json:"new_password,omitempty"`
+	Header      *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	OldPassword string                     `protobuf:"bytes,2,opt,name=old_password,json=oldPassword,proto3" json:"old_password,omitempty"`
+	NewPassword string                     `protobuf:"bytes,3,opt,name=new_password,json=newPassword,proto3" json:"new_password,omitempty"`
 }
 
 func (x *ChangePasswordRequest) Reset() {
@@ -165,7 +165,7 @@ func (*ChangePasswordRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *ChangePasswordRequest) GetHeader() *common.RequestHeader {
+func (x *ChangePasswordRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -191,7 +191,7 @@ type ChangePasswordResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Header *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 }
 
 func (x *ChangePasswordResponse) Reset() {
@@ -226,7 +226,7 @@ func (*ChangePasswordResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *ChangePasswordResponse) GetHeader() *common.ResponseHeader {
+func (x *ChangePasswordResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -238,10 +238,10 @@ type LoginUserRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header     *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Username   string                `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	Password   string                `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
-	RememberMe bool                  `protobuf:"varint,4,opt,name=remember_me,json=rememberMe,proto3" json:"remember_me,omitempty"`
+	Header     *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Username   string                     `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	Password   string                     `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
+	RememberMe bool                       `protobuf:"varint,4,opt,name=remember_me,json=rememberMe,proto3" json:"remember_me,omitempty"`
 }
 
 func (x *LoginUserRequest) Reset() {
@@ -276,7 +276,7 @@ func (*LoginUserRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *LoginUserRequest) GetHeader() *common.RequestHeader {
+func (x *LoginUserRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -309,11 +309,11 @@ type LoginUserResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	AccessToken  string                 `protobuf:"bytes,2,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
-	RefreshToken string                 `protobuf:"bytes,3,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
-	CustomerId   string                 `protobuf:"bytes,4,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
-	RememberMe   string                 `protobuf:"bytes,5,opt,name=remember_me,json=rememberMe,proto3" json:"remember_me,omitempty"`
+	Header       *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	AccessToken  string                      `protobuf:"bytes,2,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
+	RefreshToken string                      `protobuf:"bytes,3,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
+	CustomerId   string                      `protobuf:"bytes,4,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
+	RememberMe   string                      `protobuf:"bytes,5,opt,name=remember_me,json=rememberMe,proto3" json:"remember_me,omitempty"`
 }
 
 func (x *LoginUserResponse) Reset() {
@@ -348,7 +348,7 @@ func (*LoginUserResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *LoginUserResponse) GetHeader() *common.ResponseHeader {
+func (x *LoginUserResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -388,8 +388,8 @@ type RefreshTokenRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	RefreshToken string                `protobuf:"bytes,2,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
+	Header       *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	RefreshToken string                     `protobuf:"bytes,2,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
 }
 
 func (x *RefreshTokenRequest) Reset() {
@@ -424,7 +424,7 @@ func (*RefreshTokenRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *RefreshTokenRequest) GetHeader() *common.RequestHeader {
+func (x *RefreshTokenRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -443,7 +443,7 @@ type RefreshTokenResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Header *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 }
 
 func (x *RefreshTokenResponse) Reset() {
@@ -478,7 +478,7 @@ func (*RefreshTokenResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{7}
 }
 
-func (x *RefreshTokenResponse) GetHeader() *common.ResponseHeader {
+func (x *RefreshTokenResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -490,10 +490,10 @@ type RegisterUserRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header          *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Username        string                `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	Password        string                `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
-	ConfirmPassword string                `protobuf:"bytes,4,opt,name=confirm_password,json=confirmPassword,proto3" json:"confirm_password,omitempty"`
+	Header          *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Username        string                     `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	Password        string                     `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
+	ConfirmPassword string                     `protobuf:"bytes,4,opt,name=confirm_password,json=confirmPassword,proto3" json:"confirm_password,omitempty"`
 }
 
 func (x *RegisterUserRequest) Reset() {
@@ -528,7 +528,7 @@ func (*RegisterUserRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *RegisterUserRequest) GetHeader() *common.RequestHeader {
+func (x *RegisterUserRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -561,7 +561,7 @@ type RegisterUserResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Header *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 }
 
 func (x *RegisterUserResponse) Reset() {
@@ -596,7 +596,7 @@ func (*RegisterUserResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *RegisterUserResponse) GetHeader() *common.ResponseHeader {
+func (x *RegisterUserResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -608,8 +608,8 @@ type UserHasRoleRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Role   string                `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
+	Header *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Role   string                     `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
 }
 
 func (x *UserHasRoleRequest) Reset() {
@@ -644,7 +644,7 @@ func (*UserHasRoleRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{10}
 }
 
-func (x *UserHasRoleRequest) GetHeader() *common.RequestHeader {
+func (x *UserHasRoleRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -663,8 +663,8 @@ type UserHasRoleResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header  *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	HasRole bool                   `protobuf:"varint,2,opt,name=has_role,json=hasRole,proto3" json:"has_role,omitempty"`
+	Header  *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	HasRole bool                        `protobuf:"varint,2,opt,name=has_role,json=hasRole,proto3" json:"has_role,omitempty"`
 }
 
 func (x *UserHasRoleResponse) Reset() {
@@ -699,7 +699,7 @@ func (*UserHasRoleResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{11}
 }
 
-func (x *UserHasRoleResponse) GetHeader() *common.ResponseHeader {
+func (x *UserHasRoleResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -718,8 +718,8 @@ type CustomerSearchRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header     *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	CustomerId string                `protobuf:"bytes,2,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
+	Header     *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	CustomerId string                     `protobuf:"bytes,2,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
 }
 
 func (x *CustomerSearchRequest) Reset() {
@@ -754,7 +754,7 @@ func (*CustomerSearchRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{12}
 }
 
-func (x *CustomerSearchRequest) GetHeader() *common.RequestHeader {
+func (x *CustomerSearchRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -773,8 +773,8 @@ type CustomerSearchResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	UserId string                 `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Header *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	UserId string                      `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 }
 
 func (x *CustomerSearchResponse) Reset() {
@@ -809,7 +809,7 @@ func (*CustomerSearchResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{13}
 }
 
-func (x *CustomerSearchResponse) GetHeader() *common.ResponseHeader {
+func (x *CustomerSearchResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -828,8 +828,8 @@ type RememberTokenQueryRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Token  string                `protobuf:"bytes,2,opt,name=token,proto3" json:"token,omitempty"`
+	Header *protocommon.RequestHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Token  string                     `protobuf:"bytes,2,opt,name=token,proto3" json:"token,omitempty"`
 }
 
 func (x *RememberTokenQueryRequest) Reset() {
@@ -864,7 +864,7 @@ func (*RememberTokenQueryRequest) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{14}
 }
 
-func (x *RememberTokenQueryRequest) GetHeader() *common.RequestHeader {
+func (x *RememberTokenQueryRequest) GetHeader() *protocommon.RequestHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -883,8 +883,8 @@ type RememberTokenQueryResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *common.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Valid  bool                   `protobuf:"varint,2,opt,name=valid,proto3" json:"valid,omitempty"`
+	Header *protocommon.ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Valid  bool                        `protobuf:"varint,2,opt,name=valid,proto3" json:"valid,omitempty"`
 }
 
 func (x *RememberTokenQueryResponse) Reset() {
@@ -919,7 +919,7 @@ func (*RememberTokenQueryResponse) Descriptor() ([]byte, []int) {
 	return file_access_access_proto_rawDescGZIP(), []int{15}
 }
 
-func (x *RememberTokenQueryResponse) GetHeader() *common.ResponseHeader {
+func (x *RememberTokenQueryResponse) GetHeader() *protocommon.ResponseHeader {
 	if x != nil {
 		return x.Header
 	}
@@ -1085,8 +1085,8 @@ var file_access_access_proto_goTypes = []interface{}{
 	(*CustomerSearchResponse)(nil),     // 13: access.CustomerSearchResponse
 	(*RememberTokenQueryRequest)(nil),  // 14: access.RememberTokenQueryRequest
 	(*RememberTokenQueryResponse)(nil), // 15: access.RememberTokenQueryResponse
-	(*common.RequestHeader)(nil),       // 16: common.RequestHeader
-	(*common.ResponseHeader)(nil),      // 17: common.ResponseHeader
+	(*protocommon.RequestHeader)(nil),  // 16: common.RequestHeader
+	(*protocommon.ResponseHeader)(nil), // 17: common.ResponseHeader
 }
 var file_access_access_proto_depIdxs = []int32{
 	16, // 0: access.AuthTokenRequest.header:type_name -> common.RequestHeader

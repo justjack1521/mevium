@@ -2,17 +2,20 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/common";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protocommon";
 
 message RequestHeader {
   string client_id = 1;
 }
 
 message ResponseHeader {
-  string client_id = 1;
-  int32 status_code = 2;
-  string error = 3;
-  string message = 4;
+  string  client_id      =  1;
+  string  connection_id  =  2;
+  string  command_id     =  3;
+  int32   operation     =  4;
+  bool    error         =  5;
+  int32   error_code     =  6;
+  string  error_message  =  7;
 }
 
 enum ServiceKey {
@@ -28,4 +31,14 @@ message BaseRequest {
   common.ServiceKey service = 2;
   int32 operation = 3;
   bytes data = 4;
+}
+
+message Response {
+  ResponseHeader  header  =  1;
+  bytes           data    =  2;
+}
+
+message ApplicationError {
+  int32   error_code     =  1;
+  string  error_message  =  2;
 }
