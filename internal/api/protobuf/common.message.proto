@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protocommon";
+
+message ClientConnected {
+  string remote_address = 1;
+}
+
+message ClientHeartbeat {
+  string remote_address = 1;
+}
+
+message ClientDisconnected {
+  string remote_address = 1;
+}

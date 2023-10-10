@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package internal;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
+
+import "protogame/data.proto";
+
+message BattleCompleteMessage {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  uint64 score = 4;
+  string region_id = 5;
+  int32 node_index = 6;
+  game.ProtoPlayerLoadout primary_loadout = 7;
+}
+
+message PlayerProfileCreatedMessage {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 3;
+  string player_comment = 4;
+  string companion_id = 5;
+}
+
+message PlayerLevelUpdateMessage {
+  string player_id = 1;
+  int32 level = 2;
+}
+
+message PlayerRentalCardUpdateMessage {
+  string player_id = 1;
+  string rental_card = 2;
+  int32 card_level = 3;
+  int32 ability_level = 4;
+  int32 extra_skill_unlock = 5;
+  int32 over_boost_level = 6;
+}
