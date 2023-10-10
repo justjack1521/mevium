@@ -14,3 +14,18 @@ message ResponseHeader {
   string error = 3;
   string message = 4;
 }
+
+enum ServiceKey {
+  EMPTY = 0;
+  GAME = 100;
+  SOCIAL = 200;
+  RANKING = 300;
+  CHALLENGE = 400;
+}
+
+message BaseRequest {
+  RequestHeader header = 1;
+  common.ServiceKey service = 2;
+  int32 operation = 3;
+  bytes data = 4;
+}

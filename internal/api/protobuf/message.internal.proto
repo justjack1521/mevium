@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package notification;
+package internal;
 
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/protom";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protointernal";
 
 message ClientConnected {
   string remote_address = 1;

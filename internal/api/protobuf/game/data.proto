@@ -1,0 +1,523 @@
+syntax = "proto3";
+
+package game;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
+
+enum ReferenceSource {
+  NONE = 0;
+  ABILITY_CARD = 1;
+  ITEM = 2;
+  JOB_CARD = 3;
+  WEAPON = 4;
+  FAIRY_COMPANION = 5;
+  MP_STAMP = 6;
+}
+
+message ProtoGameData {
+
+  string player_id = 1;
+  string player_name = 2;
+  string player_comment = 3;
+  game.ProtoMailBox mailbox = 4;
+
+  game.ProtoAbilityCardData ability_card_data = 5;
+  game.ProtoJobCardData job_card_data = 6;
+  game.ProtoItemData item_data = 7;
+
+  game.ProtoFairyCompanionData fairy_companion_data = 8;
+  game.ProtoRegionHeaderData region_map_data = 9;
+
+  game.ProtoBattleData single_play_battle_data = 10;
+  game.ProtoBattleData multi_play_battle_data = 11;
+
+  repeated ProtoCardFilterSortSet card_filter_sort_sets = 20;
+  map<string, bool> player_progress_data = 100;
+
+}
+
+message ProtoAbilityCardData {
+  string rental_card_id = 1;
+  ProtoAbilityCardInventory inventory = 2;
+  ProtoAbilityCardInventory bank = 3;
+  ProtoAbilityCardHistory history = 4;
+  map<string, int32> max_card_levels = 5;
+}
+
+message ProtoAbilityCardHistory {
+  repeated ProtoAbilityCardHistoryInstance card_list = 1;
+}
+
+message ProtoAbilityCardHistoryInstance {
+  string sys_id = 1;
+  string base_ability_card_id = 2;
+  string ability_card_id = 3;
+  bool auto_sell = 4;
+  int32 star_level = 5;
+  int64 created_at = 6;
+}
+
+message ProtoAbilityCardInventory {
+  int32 max_slots = 1;
+  repeated ProtoAbilityCardInstance card_list = 2;
+  int32 source = 3;
+}
+
+message ProtoAbilityCardInstance {
+  string sys_id = 1;
+  string ability_card_id = 2;
+  string augment_config_id = 3;
+  uint64 accum_exp = 4;
+  uint64 total_accum_exp = 5;
+  int32 card_level = 6;
+  int32 ability_level = 7;
+  int32 seed_unlock = 8;
+  int32 extra_skill_unlock = 9;
+  int32 over_boost_level = 10;
+  map<string,int32> auto_abilities = 11;
+  bool card_lock = 12;
+  int32 source = 13;
+  int64 created_at = 14;
+  string base_config_id = 15;
+}
+
+message ProtoBattleData {
+  int32 player_level = 1;
+  string play_mode = 2;
+  uint64 total_exp = 3;
+  uint64 accum_exp = 4;
+  float exp_bonus = 5;
+  ProtoPlayerStamina stamina = 6;
+  ProtoPlayerDeckCollection decks = 7;
+  optional ProtoBattleStartData start_data = 10;
+  optional ProtoLastBattleResults results = 20;
+}
+
+message ProtoBattleStartData {
+  string region_map_id = 1;
+  string region_node_id = 2;
+  int32 region_node_index = 3;
+
+  int32 deck_index = 4;
+  bool hard_mode = 5;
+  bool completed = 6;
+
+  uint64 total_exp = 7;
+  int32 gold_reward = 8;
+
+  float player_experience_bonus = 9;
+  float add_experience_bonus = 10;
+
+  float area_seed_multiplier = 11;
+  float ability_seed_multiplier = 12;
+
+  repeated BattleItemDrop item_drop_table = 13;
+  repeated BattleCardDrop card_drop_table = 14;
+
+  ProtoBattleProgressData progress_data = 15;
+  repeated ProtoCardProgressData card_progress_data = 16;
+
+  string rental_player_id = 17;
+  ProtoPlayerCardInfo rental_card = 18;
+
+  int64 created_at = 20;
+}
+
+message ProtoBattleProgressData {
+  int32 player_level = 1;
+  uint64 total_exp = 2;
+  uint64 accum_exp = 3;
+  float exp_bonus = 4;
+  int32 deck_count = 5;
+  int32 max_stamina = 6;
+}
+
+message ProtoCardProgressData {
+  string instance_id = 1;
+  int32 slot_index = 2;
+  int32 level = 3;
+  uint64 total_exp = 4;
+  uint64 accum_exp = 5;
+  bool extra_skill_unlock = 6;
+}
+
+message ProtoDailyMissionInstance {
+  string id = 1;
+  int32 progress = 2;
+  bool confirmed = 3;
+  bool claimed = 4;
+  int64 received_at = 5;
+  repeated ProtoItemValuePair item_rewards = 6;
+}
+
+message BattleItemDrop {
+  BattleDropTableKey key = 1;
+  BattleItemDropResult drop = 2;
+}
+
+message BattleCardDrop {
+  BattleDropTableKey key = 1;
+  BattleCardDropResult drop = 2;
+}
+
+message BattleDropTableKey {
+  string fiend_id = 1;
+  int32 fiend_index = 2;
+}
+
+message BattleItemDropResult {
+  string item_id = 1;
+  int32 quantity = 2;
+}
+
+message BattleCardDropResult {
+  string card_id = 1;
+  bool new_card = 2;
+}
+
+message ProtoCardFilterSortSet {
+  int32 view = 1;
+  repeated ProtoCardFilterSort sets = 2;
+}
+
+message ProtoCardFilterSort {
+  int32 index = 1;
+  repeated int32 card_types = 2;
+  repeated int32 card_categories = 3;
+  repeated int32 special_filters = 4;
+  repeated int32 sort_selectors = 5;
+  bool sort_descending = 6;
+}
+
+message ProtoLoginCampaignInstance {
+  string id = 1;
+  repeated bool claimed = 2;
+  int32 last_claim_index = 3;
+  int64 last_claim_added = 4;
+}
+
+message ProtoFairyCompanionData {
+  int32 current_companion_index = 1;
+  ProtoFairyCompanionInventory inventory = 2;
+}
+
+message ProtoFairyCompanionInventory {
+  repeated ProtoFairyCompanionInstance companion_list = 2;
+}
+
+message ProtoFairyCompanionInstance {
+  string sys_id = 1;
+  string base_companion_id = 2;
+  int64 created_at = 3;
+}
+
+message ProtoItemData {
+  ProtoItemInventory inventory = 1;
+  map<string, ProtoItemDropRecord> limit_data = 2;
+}
+
+message ProtoItemDropRecord {
+  int32 key = 1;
+  int32 count = 2;
+}
+
+message ProtoItemInventory {
+  repeated ProtoItemInstance item_list = 1;
+}
+
+message ProtoItemInstance {
+  string sys_id = 1;
+  int32 quantity = 2;
+  string item_id = 3;
+  int64 created_at = 4;
+}
+
+message ProtoItemValuePair {
+  string item_id = 1;
+  int32 value = 2;
+}
+
+message ProtoJobCardData {
+  ProtoJobInventory jobs = 1;
+  ProtoWeaponInventory weapons = 2;
+  map<string, ProtoSkillPanelGroups> skill_panels = 3;
+}
+
+message ProtoJobInventory {
+  repeated ProtoJobCardInstance job_list = 1;
+}
+
+message ProtoJobCardInstance {
+  string sys_id = 1;
+  int32 sub_job_unlock = 2;
+  int32 over_boost_level = 3;
+  ProtoSkillPanelGroups skill_panel_unlocks = 4;
+  string base_job_id = 5;
+  int64 created_at = 6;
+  int32 weapon_unlock = 7;
+  int32 hp_stat_mod = 8;
+  int32 attack_stat_mod = 9;
+  int32 break_stat_mod = 10;
+  int32 magic_stat_mod = 11;
+  int32 speed_stat_mod = 12;
+  int32 defense_stat_mod = 14;
+  int32 crit_chance_stat_mod = 15;
+  int32 ultimate_boost = 18;
+  map<string, int32> auto_abilities = 19;
+}
+
+message ProtoLastBattleResults {
+  string region_map_id = 1;
+  int32 region_node_index = 2;
+  uint64 score = 3;
+  int32 total_exp = 4;
+
+  float seed_area_multiplier = 5;
+  float seed_battle_multiplier = 6;
+
+  ProtoBattleProgressData progress_data = 7;
+  repeated ProtoCardProgressData card_progress_data = 8;
+
+  repeated TaggedBattleItemReward item_rewards = 9;
+  repeated TaggedBattleCardReward card_rewards = 10;
+
+  repeated ProtoRegionNodeEvent pending_events = 11;
+
+  int32 daily_mission_progress = 12;
+
+}
+
+message TaggedBattleItemReward {
+  string item_id = 1;
+  int32 quantity = 2;
+  int32 tag = 3;
+}
+
+message TaggedBattleCardReward {
+  string instance_id = 1;
+  string ability_card_id = 2;
+  bool new_card = 3;
+  int32 tag = 4;
+}
+
+message ProtoMailBox {
+  repeated ProtoMailBoxItem items = 1;
+  int32 max_items = 2;
+}
+
+message ProtoMailBoxItem {
+  string id = 1;
+  string reference_id = 2;
+  ReferenceSource source = 3;
+  int32 quantity = 4;
+  int64 received_at = 5;
+  string claim_source = 6;
+}
+
+message ProtoPlayerInfo {
+  string player_id = 1;
+  string player_name = 2;
+  string player_comment = 3;
+  int32 player_level = 4;
+  string job_card_id = 6;
+  int32 sub_job_index = 7;
+  string companion_id = 8;
+  ProtoPlayerCardInfo rental_card = 9;
+}
+
+message ProtoPlayerLoadout {
+  string job_card_id = 1;
+  int32 sub_job_index = 2;
+  string weapon_id = 3;
+  int32 sub_weapon_unlock = 4;
+  repeated ProtoPlayerCardInfo ability_cards = 5;
+}
+
+message ProtoPlayerCardInfo {
+  string ability_card_id = 1;
+  int32 ability_card_level = 2;
+  int32 ability_level = 3;
+  int32 extra_skill_unlock = 4;
+  int32 over_boost_level = 5;
+  int32 slot_index = 6;
+}
+
+message ProtoPlayerDeckCollection {
+  int32 current_deck_index = 1;
+  repeated ProtoPlayerDeck decks = 2;
+}
+
+message ProtoPlayerDeck {
+  int32 job_card_index = 1;
+  int32 sub_job_card_index = 2;
+  repeated ProtoPlayerDeckSlot ability_card_slots = 3;
+  repeated ProtoPlayerDeckSlot sub_ability_card_slots = 4;
+  int32 weapon_index = 5;
+  int32 sub_weapon_index = 6;
+  int32 deck_index = 7;
+  int32 job_card_sub_index = 8;
+  int32 sub_job_card_sub_index = 9;
+}
+
+message ProtoPlayerDeckSlot {
+  string ability_card_id = 1;
+  int32 slot_index = 2;
+}
+
+message ProtoPlayerStamina {
+  uint32 current_stamina = 1;
+  uint32 max_stamina = 2;
+  uint64 stamina_dec = 3;
+
+  uint32 current_mp_stamina = 4;
+  uint32 max_mp_stamina = 5;
+  uint64 mp_stamina_dec = 6;
+}
+
+message ProtoRegionMapData {
+  string current_map_id = 1;
+  repeated ProtoRegionMapInstance region_maps = 2;
+}
+
+message ProtoRegionHeaderData {
+  string current_map_id = 1;
+  int32 current_node_index = 2;
+  repeated ProtoRegionMapHeader headers = 3;
+}
+
+message ProtoRegionMapHeader {
+  string map_id = 1;
+  bool cleared = 2;
+  int32 completed_count = 3;
+  int32 current_node_index = 4;
+  bool visited = 5;
+}
+
+message ProtoRegionMapInstance {
+  string map_id = 1;
+  repeated ProtoRegionNodeData node_data = 2;
+  int32 current_node_index = 3;
+  repeated ProtoRegionLockData lock_data = 4;
+  uint64 enemies_defeated = 5;
+  uint64 high_score = 6;
+  map <string, uint64> job_type_defeats = 7;
+  repeated ProtoRegionNodeEvent pending_events = 8;
+  repeated ProtoRegionNodeEvent persisted_events = 9;
+
+  bool visited = 10;
+
+  repeated ProtoRegionEvent pending_region_events = 11;
+  repeated ProtoRegionEvent persisted_region_events = 12;
+
+  repeated ProtoRegionMissionInstance mission_data = 13;
+
+}
+
+message ProtoRegionNodeData {
+  string node_id = 1;
+  bool visible = 2;
+  bool locked = 3;
+  bool completed = 4;
+  uint64 completed_count = 5;
+  bool opened = 6;
+}
+
+message ProtoRegionLockData {
+  string lock_id = 1;
+  string parent_node_id = 2;
+  string target_node_id = 3;
+  bool unlocked = 4;
+}
+
+message ProtoRegionEvent {
+  string sys_id = 1;
+  string region_map_id = 2;
+  int32 definition_value = 3;
+  int32 target = 4;
+  int32 order = 5;
+  bool repeatable = 6;
+}
+
+message ProtoRegionNodeEvent {
+  string sys_id = 1;
+  string region_map_id = 2;
+  int32 node_index = 3;
+  int32 definition_value = 4;
+  int32 target = 5;
+  int32 order = 6;
+  bool repeatable = 7;
+}
+
+message ProtoRegionEventData {
+  int32 source_index = 1;
+  int32 target_index = 2;
+  int32 definition_value = 3;
+  int32 order = 4;
+}
+
+message ProtoRegionMissionInstance {
+  string mission_id = 1;
+  int32 definition_value = 2;
+  int32 required = 3;
+  int32 progress = 4;
+  bool apply_to_node = 5;
+  int32 node_index = 6;
+}
+
+message ProtoSkillPanelGroups {
+  repeated ProtoSkillPanelPage panel_pages = 1;
+  int32 completed_count = 2;
+}
+
+message ProtoSkillPanelPage {
+  int32 index = 1;
+  bool visible = 2;
+  bool unlocked = 3;
+  bool completed = 4;
+  repeated ProtoSkillPanel skill_panels = 5;
+}
+
+message ProtoSkillPanel {
+  int32 index = 1;
+  bool unlocked = 2;
+  bool completed = 3;
+  bool cap_item = 4;
+}
+
+message ProtoWeaponInventory {
+  repeated ProtoWeaponInstance weapon_list = 1;
+}
+
+message ProtoWeaponInstance {
+  string base_weapon_id = 1;
+  int32 sub_weapon_unlock = 2;
+
+  int32 hp_stat_mod = 3;
+  int32 attack_stat_mod = 4;
+  int32 break_stat_mod = 5;
+  int32 magic_stat_mod = 6;
+  int32 speed_stat_mod = 7;
+  int32 defense_stat_mod = 8;
+  int32 crit_chance_stat_mod = 9;
+  int32 ultimate_boost = 10;
+
+  map<string, int32> auto_abilities = 11;
+  int64 created_at = 12;
+}
+
+message ProtoBattleStatistics {
+  int32 total_score                     =   1;
+  int32 battle_turns                    =   2;
+  int32 orb_draws                       =   3;
+  int32 abilities_used                  =   4;
+  int32 total_hp_regen                  =   5;
+  int32 total_damage_taken              =   6;
+  int32 enemies_defeated                =   7;
+  int32 enemies_broken                  =   8;
+  int32 enemies_defeat_weakness         =   9;
+  int32 enemies_defeat_single_ability   =   10;
+  map<string, int32> element_orb_draws  =   11;
+  map<string, int32> element_orb_usage  =   12;
+  map<string, int32> job_type_defeats   =   13;
+}

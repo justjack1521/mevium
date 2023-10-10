@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package service;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
+
+import "rank/rank.request.proto";
+import "rank/rank.response.proto";
+
+import "challenge/challenge.request.proto";
+import "challenge/challenge.response.proto";
+
+service MeviusRankService {
+  rpc SubmitScore(rank.SubmitScoreRequest) returns (rank.SubmitScoreResponse) {}
+  rpc GetPlayerEventRewards(rank.GetPlayerEventRewardsRequest) returns (rank.GetPlayerEventRewardsResponse) {}
+  rpc FetchPlayerRankingInfo(rank.FetchPlayerRankingInfoRequest) returns (rank.FetchPlayerRankingInfoResponse) {}
+  rpc RefreshWeeklyRankRange(rank.RefreshWeeklyRankRangeRequest) returns (rank.RefreshWeeklyRankRangeResponse) {}
+  rpc RefreshSpecialRankRange(rank.RefreshSpecialRankRangeRequest) returns (rank.RefreshSpecialRankRangeResponse) {}
+
+  rpc GetActivePlayerChallenge(challenge.GetActivePlayerChallengeRequest) returns (challenge.GetActivePlayerChallengeResponse) {}
+  rpc GetPlayerChallenge(challenge.GetPlayerChallengeRequest) returns (challenge.GetPlayerChallengeResponse) {}
+  rpc JoinSocialChallenge(challenge.JoinSocialChallengeRequest) returns (challenge.JoinSocialChallengeResponse) {}
+}

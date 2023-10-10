@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+package access;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/access";
+
+import "common.proto";
+
+message AuthTokenRequest {
+  common.RequestHeader header = 1;
+  string bearer = 2;
+}
+
+message AuthTokenResponse {
+  common.ResponseHeader header = 1;
+}
+
+message ChangePasswordRequest {
+  common.RequestHeader header = 1;
+  string old_password = 2;
+  string new_password = 3;
+}
+
+message ChangePasswordResponse {
+  common.ResponseHeader header = 1;
+}
+
+message LoginUserRequest {
+  common.RequestHeader header = 1;
+  string username = 2;
+  string password = 3;
+  bool remember_me = 4;
+}
+
+message LoginUserResponse {
+  common.ResponseHeader header = 1;
+  string access_token = 2;
+  string refresh_token = 3;
+  string customer_id = 4;
+  string remember_me = 5;
+}
+
+message RefreshTokenRequest {
+  common.RequestHeader header = 1;
+  string refresh_token = 2;
+}
+
+message RefreshTokenResponse {
+  common.ResponseHeader header = 1;
+}
+
+message RegisterUserRequest {
+  common.RequestHeader header = 1;
+  string username = 2;
+  string password = 3;
+  string confirm_password = 4;
+}
+
+message RegisterUserResponse {
+  common.ResponseHeader header = 1;
+}
+
+message UserHasRoleRequest {
+  common.RequestHeader header = 1;
+  string role = 2;
+}
+
+message UserHasRoleResponse {
+  common.ResponseHeader header = 1;
+  bool has_role = 2;
+}
+
+message CustomerSearchRequest {
+  common.RequestHeader header = 1;
+  string customer_id = 2;
+}
+
+message CustomerSearchResponse {
+  common.ResponseHeader header = 1;
+  string user_id = 2;
+}
+
+message RememberTokenQueryRequest {
+  common.RequestHeader header = 1;
+  string token = 2;
+}
+
+message RememberTokenQueryResponse {
+  common.ResponseHeader header = 1;
+  bool valid = 2;
+}

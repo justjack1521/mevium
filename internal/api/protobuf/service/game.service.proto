@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
+
+import "game/game.request.proto";
+import "game/game.response.proto";
+import "core.request.proto";
+import "core.response.proto";
+
+service MeviusGameService {
+  //Game
+  rpc BattleComplete(game.BattleCompleteRequest) returns (game.BattleCompleteResponse) {}
+  rpc BattleRevive(game.BattleReviveRequest) returns (game.BattleReviveResponse) {}
+  rpc BattleStart(game.BattleStartRequest) returns (game.BattleStartResponse) {}
+  rpc CardAugment(game.CardAugmentRequest) returns (game.CardAugmentResponse) {}
+  rpc CardFavourite(game.CardFavouriteRequest) returns (game.CardFavouriteResponse) {}
+  rpc CardFusion(game.CardFusionRequest) returns (game.CardFusionResponse) {}
+  rpc CardBoostFusion(game.CardBoostFusionRequest) returns (game.CardBoostFusionResponse) {}
+  rpc CardSale(game.CardSaleRequest) returns (game.CardSaleResponse) {}
+  rpc CardTransfer(game.CardTransferRequest) returns (game.CardTransferResponse) {}
+  rpc CreateProfile(game.CreateProfileRequest) returns (game.CreateProfileResponse) {}
+  rpc ClaimEventRanking(game.ClaimEventRankingRequest) returns (game.ClaimEventRankingResponse) {}
+  rpc ClaimLoginCampaign(game.ClaimLoginCampaignRequest) returns (game.ClaimLoginCampaignResponse) {}
+  rpc ClaimMailboxItem(game.ClaimMailBoxItemRequest) returns (game.ClaimMailBoxItemResponse) {}
+  rpc ClaimAllMailboxItem(game.ClaimAllMailBoxItemRequest) returns (game.ClaimAllMailBoxItemResponse) {}
+  rpc ClaimDailyMission(game.ClaimDailyMissionRequest) returns (game.ClaimDailyMissionResponse) {}
+  rpc ClaimRentalReward(game.ClaimRentalCardRewardRequest) returns (game.ClaimRentalCardRewardResponse) {}
+  rpc ConfirmDailyMission(game.ConfirmDailyMissionRequest) returns (game.ConfirmDailyMissionResponse) {}
+  rpc DeckEdit(game.DeckEditAllRequest) returns (game.DeckEditAllResponse) {}
+  rpc DeleteAllMailboxItem(game.DeleteAllMailboxItemRequest) returns (game.DeleteAllMailboxItemResponse) {}
+  rpc ExpandAbilityCardSlot(game.ExpandAbilityCardSlotRequest) returns (game.ExpandAbilityCardSlotResponse) {}
+  rpc FetchPlayerData(game.FetchPlayerDataRequest) returns (game.FetchPlayerDataResponse) {}
+  rpc FirstDailyLogin(game.FirstDailyLoginRequest) returns (game.FirstDailyLoginResponse) {}
+  rpc ProcessRegionEvent(game.ProcessRegionEventRequest) returns (game.ProcessRegionEventResponse) {}
+  rpc ProcessRegionNodeEvent(game.ProcessRegionNodeEventRequest) returns (game.ProcessRegionEventResponse) {}
+  rpc RestoreStamina(game.StaminaRestoreRequest) returns (game.StaminaRestoreResponse) {}
+  rpc SkillPanelUnlock(game.SkillPanelUnlockRequest) returns (game.SkillPanelUnlockResponse) {}
+  rpc Teleport(game.TeleportRequest) returns (game.TeleportResponse) {}
+  rpc UpdateProfile(game.UpdateProfileRequest) returns (game.UpdateProfileResponse) {}
+  rpc PurchaseItem(game.ItemShopItemPurchaseRequest) returns (game.ItemShopItemPurchaseResponse) {}
+  rpc PurchaseCard(game.ItemShopCardPurchaseRequest) returns (game.ItemShopCardPurchaseResponse) {}
+  rpc AbilityShopPurchase(game.AbilityShopPurchaseRequest) returns (game.AbilityShopPurchaseResponse) {}
+  rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
+
+  //Core
+  rpc GetPlayerLoadout(protoc.GetSinglePlayerLoadoutRequest) returns (protoc.GetSinglePlayerLoadoutResponse) {}
+
+}
+

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package rank;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protorank";
+
+import "rank/rank.proto";
+
+message SubmitScoreResponse {
+  ProtoRankingInfo weekly_rank_update = 1;
+  ProtoRankingInfo event_rank_update = 2;
+  bool weekly_high_score = 3;
+  bool event_high_score = 4;
+  double current_weekly_score = 5;
+  double previous_weekly_score = 6;
+  double current_event_score = 7;
+  double previous_event_score = 8;
+  int64 previous_weekly_rank = 9;
+  int64 previously_event_rank = 10;
+}
+
+message RefreshWeeklyRankRangeResponse {
+  ProtoRankingInfo rank_ranges = 1;
+}
+
+message RefreshSpecialRankRangeResponse {
+  ProtoRankingInfo rank_ranges = 1;
+}
