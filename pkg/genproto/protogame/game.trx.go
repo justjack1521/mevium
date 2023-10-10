@@ -252,7 +252,19 @@ func NewAbilityShopPurchaseRequest(bytes []byte) (*AbilityShopPurchaseRequest, e
 	return req, nil
 }
 
+func NewCompleteRegionMapRequest(bytes []byte) (*CompleteRegionMapRequest, error) {
+	req := &CompleteRegionMapRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *BattleCompleteResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *CompleteRegionMapResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
