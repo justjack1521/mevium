@@ -7,6 +7,13 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoc";
 
 import "data.proto";
 
+enum ServiceKey {
+  EMPTY = 0;
+  GAME = 100;
+  SOCIAL = 200;
+  RANKING = 300;
+}
+
 enum RequestType {
   BASE = 0;
   GET_PROFILE = 200;
@@ -65,9 +72,10 @@ message RequestHeader {
 }
 
 message BaseRequest {
-  RequestHeader header     =  1;
-  int32         operation  =  2;
-  bytes         data       =  3;
+  RequestHeader header      =   1;
+  ServiceKey    service     =   2;
+  RequestType   operation   =   3;
+  bytes         data        =   4;
 }
 
 message BattleCompleteRequest {
