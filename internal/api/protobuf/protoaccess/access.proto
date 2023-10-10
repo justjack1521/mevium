@@ -4,7 +4,7 @@ package access;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/access";
 
-import "common.proto";
+import "protocommon/common.proto";
 
 message AuthTokenRequest {
   common.RequestHeader header = 1;
