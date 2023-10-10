@@ -16,3 +16,7 @@ func (x *Response) MarshallBinary() ([]byte, error) {
 	}
 	return bytes, nil
 }
+
+func (x *Notification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
