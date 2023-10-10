@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package notification;
+package presence;
 
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosocial";
