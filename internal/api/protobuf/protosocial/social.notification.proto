@@ -18,11 +18,6 @@ enum NotificationType {
   SOCIAL_CHALLENGE_ENDED = 603;
 }
 
-message Notification {
-  NotificationType type = 1;
-  bytes data = 2;
-}
-
 message SocialDataNotification {
   repeated presence.ProtoPlayerSocialInfo following_list = 1;
   repeated presence.ProtoPlayerSocialInfo follower_list = 2;

@@ -42,3 +42,9 @@ message ApplicationError {
   int32   error_code     =  1;
   string  error_message  =  2;
 }
+
+message Notification {
+  common.ServiceKey service = 1;
+  int32 type = 2;
+  bytes data = 3;
+}
