@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package access;
 
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/access";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoaccess";
 
 import "protocommon/common.proto";
 

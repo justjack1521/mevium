@@ -8,7 +8,7 @@ package services
 
 import (
 	context "context"
-	access "github.com/justjack1521/mevium/pkg/genproto/access"
+	protoaccess "github.com/justjack1521/mevium/pkg/genproto/protoaccess"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -34,14 +34,14 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AccessServiceClient interface {
-	AuthToken(ctx context.Context, in *access.AuthTokenRequest, opts ...grpc.CallOption) (*access.AuthTokenResponse, error)
-	ChangePassword(ctx context.Context, in *access.ChangePasswordRequest, opts ...grpc.CallOption) (*access.ChangePasswordResponse, error)
-	LoginUser(ctx context.Context, in *access.LoginUserRequest, opts ...grpc.CallOption) (*access.LoginUserResponse, error)
-	RefreshToken(ctx context.Context, in *access.RefreshTokenRequest, opts ...grpc.CallOption) (*access.RefreshTokenResponse, error)
-	RegisterUser(ctx context.Context, in *access.RegisterUserRequest, opts ...grpc.CallOption) (*access.RegisterUserResponse, error)
-	UserHasRole(ctx context.Context, in *access.UserHasRoleRequest, opts ...grpc.CallOption) (*access.UserHasRoleResponse, error)
-	CustomerSearch(ctx context.Context, in *access.CustomerSearchRequest, opts ...grpc.CallOption) (*access.CustomerSearchResponse, error)
-	RememberTokenQuery(ctx context.Context, in *access.RememberTokenQueryRequest, opts ...grpc.CallOption) (*access.RememberTokenQueryResponse, error)
+	AuthToken(ctx context.Context, in *protoaccess.AuthTokenRequest, opts ...grpc.CallOption) (*protoaccess.AuthTokenResponse, error)
+	ChangePassword(ctx context.Context, in *protoaccess.ChangePasswordRequest, opts ...grpc.CallOption) (*protoaccess.ChangePasswordResponse, error)
+	LoginUser(ctx context.Context, in *protoaccess.LoginUserRequest, opts ...grpc.CallOption) (*protoaccess.LoginUserResponse, error)
+	RefreshToken(ctx context.Context, in *protoaccess.RefreshTokenRequest, opts ...grpc.CallOption) (*protoaccess.RefreshTokenResponse, error)
+	RegisterUser(ctx context.Context, in *protoaccess.RegisterUserRequest, opts ...grpc.CallOption) (*protoaccess.RegisterUserResponse, error)
+	UserHasRole(ctx context.Context, in *protoaccess.UserHasRoleRequest, opts ...grpc.CallOption) (*protoaccess.UserHasRoleResponse, error)
+	CustomerSearch(ctx context.Context, in *protoaccess.CustomerSearchRequest, opts ...grpc.CallOption) (*protoaccess.CustomerSearchResponse, error)
+	RememberTokenQuery(ctx context.Context, in *protoaccess.RememberTokenQueryRequest, opts ...grpc.CallOption) (*protoaccess.RememberTokenQueryResponse, error)
 }
 
 type accessServiceClient struct {
@@ -52,8 +52,8 @@ func NewAccessServiceClient(cc grpc.ClientConnInterface) AccessServiceClient {
 	return &accessServiceClient{cc}
 }
 
-func (c *accessServiceClient) AuthToken(ctx context.Context, in *access.AuthTokenRequest, opts ...grpc.CallOption) (*access.AuthTokenResponse, error) {
-	out := new(access.AuthTokenResponse)
+func (c *accessServiceClient) AuthToken(ctx context.Context, in *protoaccess.AuthTokenRequest, opts ...grpc.CallOption) (*protoaccess.AuthTokenResponse, error) {
+	out := new(protoaccess.AuthTokenResponse)
 	err := c.cc.Invoke(ctx, AccessService_AuthToken_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -61,8 +61,8 @@ func (c *accessServiceClient) AuthToken(ctx context.Context, in *access.AuthToke
 	return out, nil
 }
 
-func (c *accessServiceClient) ChangePassword(ctx context.Context, in *access.ChangePasswordRequest, opts ...grpc.CallOption) (*access.ChangePasswordResponse, error) {
-	out := new(access.ChangePasswordResponse)
+func (c *accessServiceClient) ChangePassword(ctx context.Context, in *protoaccess.ChangePasswordRequest, opts ...grpc.CallOption) (*protoaccess.ChangePasswordResponse, error) {
+	out := new(protoaccess.ChangePasswordResponse)
 	err := c.cc.Invoke(ctx, AccessService_ChangePassword_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -70,8 +70,8 @@ func (c *accessServiceClient) ChangePassword(ctx context.Context, in *access.Cha
 	return out, nil
 }
 
-func (c *accessServiceClient) LoginUser(ctx context.Context, in *access.LoginUserRequest, opts ...grpc.CallOption) (*access.LoginUserResponse, error) {
-	out := new(access.LoginUserResponse)
+func (c *accessServiceClient) LoginUser(ctx context.Context, in *protoaccess.LoginUserRequest, opts ...grpc.CallOption) (*protoaccess.LoginUserResponse, error) {
+	out := new(protoaccess.LoginUserResponse)
 	err := c.cc.Invoke(ctx, AccessService_LoginUser_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -79,8 +79,8 @@ func (c *accessServiceClient) LoginUser(ctx context.Context, in *access.LoginUse
 	return out, nil
 }
 
-func (c *accessServiceClient) RefreshToken(ctx context.Context, in *access.RefreshTokenRequest, opts ...grpc.CallOption) (*access.RefreshTokenResponse, error) {
-	out := new(access.RefreshTokenResponse)
+func (c *accessServiceClient) RefreshToken(ctx context.Context, in *protoaccess.RefreshTokenRequest, opts ...grpc.CallOption) (*protoaccess.RefreshTokenResponse, error) {
+	out := new(protoaccess.RefreshTokenResponse)
 	err := c.cc.Invoke(ctx, AccessService_RefreshToken_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -88,8 +88,8 @@ func (c *accessServiceClient) RefreshToken(ctx context.Context, in *access.Refre
 	return out, nil
 }
 
-func (c *accessServiceClient) RegisterUser(ctx context.Context, in *access.RegisterUserRequest, opts ...grpc.CallOption) (*access.RegisterUserResponse, error) {
-	out := new(access.RegisterUserResponse)
+func (c *accessServiceClient) RegisterUser(ctx context.Context, in *protoaccess.RegisterUserRequest, opts ...grpc.CallOption) (*protoaccess.RegisterUserResponse, error) {
+	out := new(protoaccess.RegisterUserResponse)
 	err := c.cc.Invoke(ctx, AccessService_RegisterUser_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -97,8 +97,8 @@ func (c *accessServiceClient) RegisterUser(ctx context.Context, in *access.Regis
 	return out, nil
 }
 
-func (c *accessServiceClient) UserHasRole(ctx context.Context, in *access.UserHasRoleRequest, opts ...grpc.CallOption) (*access.UserHasRoleResponse, error) {
-	out := new(access.UserHasRoleResponse)
+func (c *accessServiceClient) UserHasRole(ctx context.Context, in *protoaccess.UserHasRoleRequest, opts ...grpc.CallOption) (*protoaccess.UserHasRoleResponse, error) {
+	out := new(protoaccess.UserHasRoleResponse)
 	err := c.cc.Invoke(ctx, AccessService_UserHasRole_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -106,8 +106,8 @@ func (c *accessServiceClient) UserHasRole(ctx context.Context, in *access.UserHa
 	return out, nil
 }
 
-func (c *accessServiceClient) CustomerSearch(ctx context.Context, in *access.CustomerSearchRequest, opts ...grpc.CallOption) (*access.CustomerSearchResponse, error) {
-	out := new(access.CustomerSearchResponse)
+func (c *accessServiceClient) CustomerSearch(ctx context.Context, in *protoaccess.CustomerSearchRequest, opts ...grpc.CallOption) (*protoaccess.CustomerSearchResponse, error) {
+	out := new(protoaccess.CustomerSearchResponse)
 	err := c.cc.Invoke(ctx, AccessService_CustomerSearch_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -115,8 +115,8 @@ func (c *accessServiceClient) CustomerSearch(ctx context.Context, in *access.Cus
 	return out, nil
 }
 
-func (c *accessServiceClient) RememberTokenQuery(ctx context.Context, in *access.RememberTokenQueryRequest, opts ...grpc.CallOption) (*access.RememberTokenQueryResponse, error) {
-	out := new(access.RememberTokenQueryResponse)
+func (c *accessServiceClient) RememberTokenQuery(ctx context.Context, in *protoaccess.RememberTokenQueryRequest, opts ...grpc.CallOption) (*protoaccess.RememberTokenQueryResponse, error) {
+	out := new(protoaccess.RememberTokenQueryResponse)
 	err := c.cc.Invoke(ctx, AccessService_RememberTokenQuery_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -128,42 +128,42 @@ func (c *accessServiceClient) RememberTokenQuery(ctx context.Context, in *access
 // All implementations should embed UnimplementedAccessServiceServer
 // for forward compatibility
 type AccessServiceServer interface {
-	AuthToken(context.Context, *access.AuthTokenRequest) (*access.AuthTokenResponse, error)
-	ChangePassword(context.Context, *access.ChangePasswordRequest) (*access.ChangePasswordResponse, error)
-	LoginUser(context.Context, *access.LoginUserRequest) (*access.LoginUserResponse, error)
-	RefreshToken(context.Context, *access.RefreshTokenRequest) (*access.RefreshTokenResponse, error)
-	RegisterUser(context.Context, *access.RegisterUserRequest) (*access.RegisterUserResponse, error)
-	UserHasRole(context.Context, *access.UserHasRoleRequest) (*access.UserHasRoleResponse, error)
-	CustomerSearch(context.Context, *access.CustomerSearchRequest) (*access.CustomerSearchResponse, error)
-	RememberTokenQuery(context.Context, *access.RememberTokenQueryRequest) (*access.RememberTokenQueryResponse, error)
+	AuthToken(context.Context, *protoaccess.AuthTokenRequest) (*protoaccess.AuthTokenResponse, error)
+	ChangePassword(context.Context, *protoaccess.ChangePasswordRequest) (*protoaccess.ChangePasswordResponse, error)
+	LoginUser(context.Context, *protoaccess.LoginUserRequest) (*protoaccess.LoginUserResponse, error)
+	RefreshToken(context.Context, *protoaccess.RefreshTokenRequest) (*protoaccess.RefreshTokenResponse, error)
+	RegisterUser(context.Context, *protoaccess.RegisterUserRequest) (*protoaccess.RegisterUserResponse, error)
+	UserHasRole(context.Context, *protoaccess.UserHasRoleRequest) (*protoaccess.UserHasRoleResponse, error)
+	CustomerSearch(context.Context, *protoaccess.CustomerSearchRequest) (*protoaccess.CustomerSearchResponse, error)
+	RememberTokenQuery(context.Context, *protoaccess.RememberTokenQueryRequest) (*protoaccess.RememberTokenQueryResponse, error)
 }
 
 // UnimplementedAccessServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedAccessServiceServer struct {
 }
 
-func (UnimplementedAccessServiceServer) AuthToken(context.Context, *access.AuthTokenRequest) (*access.AuthTokenResponse, error) {
+func (UnimplementedAccessServiceServer) AuthToken(context.Context, *protoaccess.AuthTokenRequest) (*protoaccess.AuthTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AuthToken not implemented")
 }
-func (UnimplementedAccessServiceServer) ChangePassword(context.Context, *access.ChangePasswordRequest) (*access.ChangePasswordResponse, error) {
+func (UnimplementedAccessServiceServer) ChangePassword(context.Context, *protoaccess.ChangePasswordRequest) (*protoaccess.ChangePasswordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ChangePassword not implemented")
 }
-func (UnimplementedAccessServiceServer) LoginUser(context.Context, *access.LoginUserRequest) (*access.LoginUserResponse, error) {
+func (UnimplementedAccessServiceServer) LoginUser(context.Context, *protoaccess.LoginUserRequest) (*protoaccess.LoginUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LoginUser not implemented")
 }
-func (UnimplementedAccessServiceServer) RefreshToken(context.Context, *access.RefreshTokenRequest) (*access.RefreshTokenResponse, error) {
+func (UnimplementedAccessServiceServer) RefreshToken(context.Context, *protoaccess.RefreshTokenRequest) (*protoaccess.RefreshTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RefreshToken not implemented")
 }
-func (UnimplementedAccessServiceServer) RegisterUser(context.Context, *access.RegisterUserRequest) (*access.RegisterUserResponse, error) {
+func (UnimplementedAccessServiceServer) RegisterUser(context.Context, *protoaccess.RegisterUserRequest) (*protoaccess.RegisterUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RegisterUser not implemented")
 }
-func (UnimplementedAccessServiceServer) UserHasRole(context.Context, *access.UserHasRoleRequest) (*access.UserHasRoleResponse, error) {
+func (UnimplementedAccessServiceServer) UserHasRole(context.Context, *protoaccess.UserHasRoleRequest) (*protoaccess.UserHasRoleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserHasRole not implemented")
 }
-func (UnimplementedAccessServiceServer) CustomerSearch(context.Context, *access.CustomerSearchRequest) (*access.CustomerSearchResponse, error) {
+func (UnimplementedAccessServiceServer) CustomerSearch(context.Context, *protoaccess.CustomerSearchRequest) (*protoaccess.CustomerSearchResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CustomerSearch not implemented")
 }
-func (UnimplementedAccessServiceServer) RememberTokenQuery(context.Context, *access.RememberTokenQueryRequest) (*access.RememberTokenQueryResponse, error) {
+func (UnimplementedAccessServiceServer) RememberTokenQuery(context.Context, *protoaccess.RememberTokenQueryRequest) (*protoaccess.RememberTokenQueryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RememberTokenQuery not implemented")
 }
 
@@ -179,7 +179,7 @@ func RegisterAccessServiceServer(s grpc.ServiceRegistrar, srv AccessServiceServe
 }
 
 func _AccessService_AuthToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.AuthTokenRequest)
+	in := new(protoaccess.AuthTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -191,13 +191,13 @@ func _AccessService_AuthToken_Handler(srv interface{}, ctx context.Context, dec 
 		FullMethod: AccessService_AuthToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).AuthToken(ctx, req.(*access.AuthTokenRequest))
+		return srv.(AccessServiceServer).AuthToken(ctx, req.(*protoaccess.AuthTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_ChangePassword_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.ChangePasswordRequest)
+	in := new(protoaccess.ChangePasswordRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -209,13 +209,13 @@ func _AccessService_ChangePassword_Handler(srv interface{}, ctx context.Context,
 		FullMethod: AccessService_ChangePassword_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).ChangePassword(ctx, req.(*access.ChangePasswordRequest))
+		return srv.(AccessServiceServer).ChangePassword(ctx, req.(*protoaccess.ChangePasswordRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_LoginUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.LoginUserRequest)
+	in := new(protoaccess.LoginUserRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -227,13 +227,13 @@ func _AccessService_LoginUser_Handler(srv interface{}, ctx context.Context, dec 
 		FullMethod: AccessService_LoginUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).LoginUser(ctx, req.(*access.LoginUserRequest))
+		return srv.(AccessServiceServer).LoginUser(ctx, req.(*protoaccess.LoginUserRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_RefreshToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.RefreshTokenRequest)
+	in := new(protoaccess.RefreshTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -245,13 +245,13 @@ func _AccessService_RefreshToken_Handler(srv interface{}, ctx context.Context, d
 		FullMethod: AccessService_RefreshToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).RefreshToken(ctx, req.(*access.RefreshTokenRequest))
+		return srv.(AccessServiceServer).RefreshToken(ctx, req.(*protoaccess.RefreshTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_RegisterUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.RegisterUserRequest)
+	in := new(protoaccess.RegisterUserRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -263,13 +263,13 @@ func _AccessService_RegisterUser_Handler(srv interface{}, ctx context.Context, d
 		FullMethod: AccessService_RegisterUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).RegisterUser(ctx, req.(*access.RegisterUserRequest))
+		return srv.(AccessServiceServer).RegisterUser(ctx, req.(*protoaccess.RegisterUserRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_UserHasRole_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.UserHasRoleRequest)
+	in := new(protoaccess.UserHasRoleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -281,13 +281,13 @@ func _AccessService_UserHasRole_Handler(srv interface{}, ctx context.Context, de
 		FullMethod: AccessService_UserHasRole_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).UserHasRole(ctx, req.(*access.UserHasRoleRequest))
+		return srv.(AccessServiceServer).UserHasRole(ctx, req.(*protoaccess.UserHasRoleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_CustomerSearch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.CustomerSearchRequest)
+	in := new(protoaccess.CustomerSearchRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -299,13 +299,13 @@ func _AccessService_CustomerSearch_Handler(srv interface{}, ctx context.Context,
 		FullMethod: AccessService_CustomerSearch_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).CustomerSearch(ctx, req.(*access.CustomerSearchRequest))
+		return srv.(AccessServiceServer).CustomerSearch(ctx, req.(*protoaccess.CustomerSearchRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _AccessService_RememberTokenQuery_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(access.RememberTokenQueryRequest)
+	in := new(protoaccess.RememberTokenQueryRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -317,7 +317,7 @@ func _AccessService_RememberTokenQuery_Handler(srv interface{}, ctx context.Cont
 		FullMethod: AccessService_RememberTokenQuery_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessServiceServer).RememberTokenQuery(ctx, req.(*access.RememberTokenQueryRequest))
+		return srv.(AccessServiceServer).RememberTokenQuery(ctx, req.(*protoaccess.RememberTokenQueryRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
