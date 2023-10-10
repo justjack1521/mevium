@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package challenge;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protochallenge";
+
+import "protochallenge/challenge.proto";
+
+message GetActivePlayerChallengeResponse {
+  string sys_id = 1;
+  string challenge_id = 2;
+  int32 challenge_flag = 3;
+}
+
+message JoinSocialChallengeResponse {
+  ProtoSocialChallengeInstance instance = 1;
+}
+
+message GetPlayerChallengeResponse {
+  ProtoSocialChallengeInstance challenge = 1;
+}

@@ -7,26 +7,26 @@ protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_ou
 
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative access/access.proto
 
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative game/data.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative game/game.request.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative game/game.response.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative game/game.notification.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protogame/data.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protogame/game.request.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protogame/game.response.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protogame/game.notification.proto
 
 
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative rank/rank.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative rank/rank.request.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative rank/rank.response.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protorank/rank.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protorank/rank.request.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protorank/rank.response.proto
 
 
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative social/social.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative social/social.request.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative social/social.response.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative social/social.notification.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protosocial/social.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protosocial/social.request.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protosocial/social.response.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protosocial/social.notification.proto
 
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative challenge/challenge.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative challenge/challenge.request.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative challenge/challenge.response.proto
-protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative challenge/challenge.notification.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protochallenge/challenge.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protochallenge/challenge.request.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protochallenge/challenge.response.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protochallenge/challenge.notification.proto
 
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/access.service.proto
 protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/game.service.proto

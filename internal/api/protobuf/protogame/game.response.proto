@@ -1,0 +1,197 @@
+syntax = "proto3";
+
+package game;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
+
+import "protogame/data.proto";
+import "protorank/rank.proto";
+
+message BattleCompleteResponse {
+  game.ProtoLastBattleResults Results = 1;
+  repeated game.ProtoItemValuePair seed_rewards = 4;
+  float seed_area_multiplier = 5;
+  float seed_score_multiplier = 6;
+  repeated game.ProtoItemValuePair item_rewards = 7;
+  repeated game.ProtoAbilityCardInstance card_drops = 8;
+
+  bool pending_events = 9;
+
+  rank.ProtoRankingInfo weekly_rank_update = 10;
+  rank.ProtoRankingInfo event_rank_update = 11;
+
+}
+
+message BattleReviveResponse {
+  game.ProtoItemValuePair ItemRemoved = 1;
+}
+
+message BattleStartResponse {
+  game.ProtoBattleStartData BattleStartData = 1;
+  uint32 stamina_decreased = 2;
+  uint64 stamina_dec = 3;
+}
+
+message CreateProfileResponse {
+  bytes game_data = 1;
+}
+
+message CardAugmentResponse {
+  string target_instance_id = 1;
+  string new_ability_card_id = 2;
+  string cost_item_id = 3;
+  int32 cost_quantity = 4;
+  repeated string inventory_cards_removed = 5;
+  repeated string bank_cards_removed = 6;
+}
+
+message CardFavouriteResponse {
+  string card_id = 1;
+  bool locked = 2;
+}
+
+message CardFusionResponse {
+  string card_id = 1;
+  int32 card_level = 2;
+  uint64 card_total_exp = 3;
+  uint64 card_accum_exp = 4;
+  int32 seed_level_gain = 5;
+  int32 ability_level_gain = 6;
+  repeated string inventory_cards_removed = 7;
+  repeated string bank_cards_removed = 8;
+  game.ProtoItemValuePair fusion_cost = 9;
+}
+
+message CardBoostFusionResponse {
+  string card_id = 1;
+  int32 seed_level_gain = 2;
+  int32 ability_level_gain = 3;
+  game.ProtoItemValuePair fusion_cost = 4;
+}
+
+message CardSaleResponse {
+  int32 total_gold = 1;
+  repeated string cards_removed = 2;
+}
+
+message CardTransferResponse {
+  repeated string cards_transferred = 1;
+}
+
+message ClaimLoginCampaignResponse {
+  game.ProtoMailBoxItem claim = 1;
+}
+
+message ClaimMailBoxItemResponse {
+  game.ProtoMailBoxItem claim = 1;
+}
+
+message ClaimAllMailBoxItemResponse {
+ repeated game.ProtoMailBoxItem claims = 1;
+}
+
+message DeleteAllMailboxItemResponse {
+  
+}
+
+message ClaimEventRankingResponse {
+  repeated game.ProtoMailBoxItem claims = 1;
+}
+
+message ClaimDailyMissionResponse {
+  repeated game.ProtoMailBoxItem claims = 1;
+}
+
+message ClaimRentalCardRewardResponse {
+  game.ProtoItemValuePair reward_item = 1;
+}
+
+message ConfirmDailyMissionResponse {
+
+}
+
+message DeckEditAllResponse {
+  game.ProtoPlayerDeckCollection Collection = 1;
+  bool MultiPlayer = 2;
+}
+
+message FetchPlayerDataResponse {
+  game.ProtoGameData data = 1;
+}
+
+message FirstDailyLoginResponse {
+  int64 login_bonus_received = 1;
+  game.ProtoDailyMissionInstance daily_mission = 2;
+  game.ProtoLoginCampaignInstance standard_login_bonus = 3;
+  game.ProtoLoginCampaignInstance special_login_bonus = 4;
+  int32 rental_count = 5;
+  bool rental_claim = 6;
+}
+
+message FilterSortResponse {
+  int32 View = 1;
+  int32 Index = 2;
+  game.ProtoCardFilterSort FilterSort = 3;
+}
+
+message UpdateProfileResponse {
+  string companion_id = 1;
+}
+
+message StaminaRestoreResponse {
+  string item_id = 1;
+  int32 item_amount = 2;
+  int32 restore_amount = 3;
+}
+
+message SkillPanelUnlockResponse {
+  repeated game.ProtoItemValuePair ItemsRemoved = 1;
+  int32 HPStatIncrease = 2;
+  int32 AttackStatIncrease = 3;
+  int32 BreakPowerStatIncrease = 4;
+  int32 MagicStatIncrease = 5;
+  int32 SubJobUnlockIncrease = 6;
+  int32 UltimateBoostIncrease = 7;
+  map<string, int32> WeaponUnlock = 8;
+  map<string, int32> AutoAbilitiesAdded = 9;
+}
+
+message TeleportResponse {
+  string region_map = 1;
+  int32 region_map_node = 2;
+  repeated game.ProtoRegionEvent region_events = 3;
+  repeated game.ProtoRegionNodeEvent node_events = 4;
+  optional game.ProtoRegionMapInstance current_map_data = 5;
+}
+
+message ProcessRegionEventResponse {
+  bool persist = 1;
+}
+
+message ProcessRegionNodeEventResponse {
+  bool persist = 1;
+}
+
+message ExpandAbilityCardSlotResponse {
+  game.ProtoItemValuePair cost_item = 1;
+}
+
+message ItemShopItemPurchaseResponse {
+
+}
+
+message ItemShopCardPurchaseResponse {
+  repeated game.ProtoAbilityCardInstance ability_cards = 1;
+}
+
+message AbilityShopPurchaseResponse {
+  game.ProtoAbilityCardInstance ability_card_instance = 1;
+  game.ProtoItemValuePair cost_item = 2;
+}
+
+message CompleteRegionMapResponse {
+  string region_map_id = 1;
+  repeated game.ProtoRegionEvent region_events = 3;
+  map<string, int32> augment_level_rewards = 4;
+}

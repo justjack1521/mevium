@@ -4,8 +4,8 @@ package service;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 
-import "game/game.request.proto";
-import "game/game.response.proto";
+import "protogame/game.request.proto";
+import "protogame/game.response.proto";
 import "core.request.proto";
 import "core.response.proto";
 

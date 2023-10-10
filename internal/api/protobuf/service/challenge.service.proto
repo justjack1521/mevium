@@ -5,8 +5,8 @@ package service;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 
-import "challenge/challenge.request.proto";
-import "challenge/challenge.response.proto";
+import "protochallenge/challenge.request.proto";
+import "protochallenge/challenge.response.proto";
 
 service MeviusChallengeService {
   rpc GetActivePlayerChallenge(challenge.GetActivePlayerChallengeRequest) returns (challenge.GetActivePlayerChallengeResponse) {}
