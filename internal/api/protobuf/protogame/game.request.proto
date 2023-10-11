@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package game;
 
-option csharp_namespace = "Mobius.Proto";
+option csharp_namespace = "Mobius.Proto.Game";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
 import "protogame/data.proto";

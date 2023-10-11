@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package rank;
 
-option csharp_namespace = "Mobius.Proto";
+option csharp_namespace = "Mobius.Proto.Rank";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protorank";
 
 import "protosocial/social.proto";
