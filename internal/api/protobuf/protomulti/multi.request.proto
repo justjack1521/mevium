@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package multi;
+
+option csharp_namespace = "Mobius.Proto";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
+

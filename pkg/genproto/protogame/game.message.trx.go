@@ -2,6 +2,18 @@ package protogame
 
 import "google.golang.org/protobuf/proto"
 
+func NewBattleCompleteMessage(bytes []byte) (*BattleCompleteMessage, error) {
+	req := &BattleCompleteMessage{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *BattleCompleteMessage) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewPlayerLevelUpdateMessage(bytes []byte) (*PlayerLevelUpdateMessage, error) {
 	req := &PlayerLevelUpdateMessage{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
