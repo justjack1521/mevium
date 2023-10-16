@@ -7,13 +7,14 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoplayer";
 message ProtoPlayerInfo {
   string player_id = 1;
   string player_name = 2;
-  int32 player_level = 4;
+  int32 player_level = 3;
+  ProtoPlayerLoadout loadout = 4;
 }
 
 message ProtoPlayerLoadout {
-  string job_card_id = 1;
-  int32 sub_job_index = 2;
-  ProtoJobCard job_card = 3;
+  int32 deck_index = 1;
+  ProtoJobCard job_card = 2;
+  ProtoWeapon weapon = 3;
   repeated ProtoAbilityCard ability_cards = 5;
 }
 

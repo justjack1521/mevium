@@ -4,3 +4,38 @@ package multi;
 
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
+
+message ProtoLobbySummary {
+  string instance_id = 1;
+  string quest_id = 2;
+  string comment = 3;
+  int32 minimum_player_level = 4;
+}
+
+message ProtoLobbyPlayer {
+  string player_id = 1;
+  string player_name = 2;
+  string player_comment = 3;
+  int32 player_level = 4;
+  ProtoLobbyJobCard job_card = 5;
+  ProtoLobbyWeapon weapon = 6;
+  map<int32, ProtoLobbyAbilityCard> ability_cards = 7;
+}
+
+message ProtoLobbyJobCard {
+  string job_card_id = 1;
+  int32 sub_job_index = 2;
+  int32 over_boost_level = 3;
+}
+
+message ProtoLobbyWeapon {
+  string weapon_id = 1;
+  int32 sub_weapon_unlock = 2;
+}
+
+message ProtoLobbyAbilityCard {
+  string ability_card_id = 1;
+  int32 ability_card_level = 2;
+  int32 ability_level = 3;
+  int32 over_boost_level = 4;
+}

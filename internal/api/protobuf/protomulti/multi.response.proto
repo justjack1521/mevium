@@ -5,9 +5,8 @@ package multi;
 option csharp_namespace = "Mobius.Proto";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
-message SearchLobbyRequest {
-  string player_id = 1;
-  string mode_identifier = 2;
-  repeated int32 levels = 3;
-  repeated string categories = 4;
+import "protomulti/multi.proto";
+
+message SearchLobbyResponse {
+  repeated ProtoLobbySummary lobbies = 1;
 }
