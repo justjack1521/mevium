@@ -1,8 +1,12 @@
 package server
 
 import (
+	"context"
+	"errors"
 	"fmt"
+	uuid "github.com/satori/go.uuid"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/reflection"
 	"net"
 )
@@ -57,4 +61,20 @@ func RunGRPCServerOnAddrWithOptions(addr string, registerServer func(server *grp
 	if err != nil {
 		panic(err)
 	}
+}
+
+var ErrUnableToParseMetaData = errors.New("unable to parse metadata")
+var ErrMetaDataContainsMalformedUserID = errors.New("metadata contains malformed user uuid")
+
+func ExtractUserIDFromContext(ctx context.Context) (uuid.UUID, error) {
+	md, ok := metadata.FromIncomingContext(ctx)
+	if ok == false {
+		return uuid.Nil, ErrUnableToParseMetaData
+	}
+	client := md.Get("X-API-CLIENT")[0]
+	user, err := uuid.FromString(client)
+	if err != nil {
+		return uuid.Nil, ErrMetaDataContainsMalformedUserID
+	}
+	return user, nil
 }
