@@ -43,7 +43,7 @@ service MeviusGameService {
   rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
 
   //Internal
-  rpc GetPlayerLoadout(game.GetSinglePlayerLoadoutRequest) returns (game.GetSinglePlayerLoadoutResponse) {}
+  rpc GetSinglePlayerLoadout(game.GetSinglePlayerLoadoutRequest) returns (game.GetSinglePlayerLoadoutResponse) {}
   rpc GetMultiPlayerLoadout(game.GetMultiPlayerLoadoutRequest) returns (game.GetMultiPlayerLoadoutResponse) {}
 
 }
