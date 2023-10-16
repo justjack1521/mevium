@@ -237,4 +237,10 @@ message CompleteRegionMapRequest {
 
 message GetSinglePlayerLoadoutRequest {
   string player_id = 1;
+  int32 deck_index = 2;
+}
+
+message GetMultiPlayerLoadoutRequest {
+  string player_id = 1;
+  int32 deck_index = 2;
 }

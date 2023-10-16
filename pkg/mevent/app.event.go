@@ -14,7 +14,7 @@ func (e ApplicationStartEvent) Name() string {
 }
 
 func (e ApplicationStartEvent) ToLogFields() logrus.Fields {
-	return logrus.Fields{"event_name": e.Name()}
+	return logrus.Fields{"event.name": e.Name()}
 }
 
 type ApplicationShutdownEvent struct {
@@ -25,5 +25,5 @@ func (e ApplicationShutdownEvent) Name() string {
 }
 
 func (e ApplicationShutdownEvent) ToLogFields() logrus.Fields {
-	return logrus.Fields{"event_name": e.Name()}
+	return logrus.Fields{"event.name": e.Name()}
 }

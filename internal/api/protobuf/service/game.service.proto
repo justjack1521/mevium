@@ -8,7 +8,7 @@ import "protogame/game.request.proto";
 import "protogame/game.response.proto";
 
 service MeviusGameService {
-  //Game
+  //External
   rpc BattleComplete(game.BattleCompleteRequest) returns (game.BattleCompleteResponse) {}
   rpc BattleRevive(game.BattleReviveRequest) returns (game.BattleReviveResponse) {}
   rpc BattleStart(game.BattleStartRequest) returns (game.BattleStartResponse) {}
@@ -42,8 +42,9 @@ service MeviusGameService {
   rpc AbilityShopPurchase(game.AbilityShopPurchaseRequest) returns (game.AbilityShopPurchaseResponse) {}
   rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
 
-  //Core
+  //Internal
   rpc GetPlayerLoadout(game.GetSinglePlayerLoadoutRequest) returns (game.GetSinglePlayerLoadoutResponse) {}
+  rpc GetMultiPlayerLoadout(game.GetMultiPlayerLoadoutRequest) returns (game.GetMultiPlayerLoadoutResponse) {}
 
 }
 

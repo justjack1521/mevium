@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package player;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoplayer";
+
+message ProtoPlayerInfo {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_level = 4;
+}
+
+message ProtoPlayerLoadout {
+  string job_card_id = 1;
+  int32 sub_job_index = 2;
+  ProtoJobCard job_card = 3;
+  repeated ProtoAbilityCard ability_cards = 5;
+}
+
+message ProtoJobCard {
+  string base_job_id = 1;
+  int32 sub_job_index = 2;
+  int32 hp_stat_mod = 3;
+  int32 attack_stat_mod = 4;
+  int32 break_stat_mod = 5;
+  int32 magic_stat_mod = 6;
+  int32 speed_stat_mod = 7;
+  int32 defense_stat_mod = 8;
+  int32 crit_chance_stat_mod = 9;
+  int32 ultimate_boost = 10;
+  int32 over_boost_level = 11;
+  map<string, int32> auto_abilities = 12;
+}
+
+message ProtoWeapon {
+  string base_weapon_id = 1;
+  int32 sub_weapon_unlock = 2;
+  int32 hp_stat_mod = 3;
+  int32 attack_stat_mod = 4;
+  int32 break_stat_mod = 5;
+  int32 magic_stat_mod = 6;
+  int32 speed_stat_mod = 7;
+  int32 defense_stat_mod = 8;
+  int32 crit_chance_stat_mod = 9;
+  int32 ultimate_boost = 10;
+  map<string, int32> auto_abilities = 11;
+}
+
+message ProtoAbilityCard {
+  string ability_card_id = 1;
+  int32 ability_card_level = 2;
+  int32 ability_level = 3;
+  int32 extra_skill_unlock = 4;
+  int32 over_boost_level = 5;
+  map<string,int32> auto_abilities = 6;
+  int32 slot_index = 20;
+}

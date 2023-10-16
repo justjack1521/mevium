@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package internal;
+package game;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
