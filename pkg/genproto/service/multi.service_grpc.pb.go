@@ -23,7 +23,7 @@ const (
 	MeviusMultiService_CreateSession_FullMethodName = "/service.MeviusMultiService/CreateSession"
 	MeviusMultiService_EndSession_FullMethodName    = "/service.MeviusMultiService/EndSession"
 	MeviusMultiService_SearchLobby_FullMethodName   = "/service.MeviusMultiService/SearchLobby"
-	MeviusMultiService_InspectLobby_FullMethodName  = "/service.MeviusMultiService/InspectLobby"
+	MeviusMultiService_WatchLobby_FullMethodName    = "/service.MeviusMultiService/WatchLobby"
 	MeviusMultiService_DiscardLobby_FullMethodName  = "/service.MeviusMultiService/DiscardLobby"
 	MeviusMultiService_JoinLobby_FullMethodName     = "/service.MeviusMultiService/JoinLobby"
 	MeviusMultiService_ReadyLobby_FullMethodName    = "/service.MeviusMultiService/ReadyLobby"
@@ -36,7 +36,7 @@ type MeviusMultiServiceClient interface {
 	CreateSession(ctx context.Context, in *protomulti.CreateSessionRequest, opts ...grpc.CallOption) (*protomulti.CreateSessionResponse, error)
 	EndSession(ctx context.Context, in *protomulti.EndSessionRequest, opts ...grpc.CallOption) (*protomulti.EndSessionResponse, error)
 	SearchLobby(ctx context.Context, in *protomulti.SearchLobbyRequest, opts ...grpc.CallOption) (*protomulti.SearchLobbyResponse, error)
-	InspectLobby(ctx context.Context, in *protomulti.InspectLobbyRequest, opts ...grpc.CallOption) (*protomulti.InspectLobbyResponse, error)
+	WatchLobby(ctx context.Context, in *protomulti.WatchLobbyRequest, opts ...grpc.CallOption) (*protomulti.WatchLobbyResponse, error)
 	DiscardLobby(ctx context.Context, in *protomulti.DiscardLobbyRequest, opts ...grpc.CallOption) (*protomulti.DiscardLobbyResponse, error)
 	JoinLobby(ctx context.Context, in *protomulti.JoinLobbyRequest, opts ...grpc.CallOption) (*protomulti.JoinLobbyResponse, error)
 	ReadyLobby(ctx context.Context, in *protomulti.ReadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.ReadyLobbyResponse, error)
@@ -77,9 +77,9 @@ func (c *meviusMultiServiceClient) SearchLobby(ctx context.Context, in *protomul
 	return out, nil
 }
 
-func (c *meviusMultiServiceClient) InspectLobby(ctx context.Context, in *protomulti.InspectLobbyRequest, opts ...grpc.CallOption) (*protomulti.InspectLobbyResponse, error) {
-	out := new(protomulti.InspectLobbyResponse)
-	err := c.cc.Invoke(ctx, MeviusMultiService_InspectLobby_FullMethodName, in, out, opts...)
+func (c *meviusMultiServiceClient) WatchLobby(ctx context.Context, in *protomulti.WatchLobbyRequest, opts ...grpc.CallOption) (*protomulti.WatchLobbyResponse, error) {
+	out := new(protomulti.WatchLobbyResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_WatchLobby_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -120,7 +120,7 @@ type MeviusMultiServiceServer interface {
 	CreateSession(context.Context, *protomulti.CreateSessionRequest) (*protomulti.CreateSessionResponse, error)
 	EndSession(context.Context, *protomulti.EndSessionRequest) (*protomulti.EndSessionResponse, error)
 	SearchLobby(context.Context, *protomulti.SearchLobbyRequest) (*protomulti.SearchLobbyResponse, error)
-	InspectLobby(context.Context, *protomulti.InspectLobbyRequest) (*protomulti.InspectLobbyResponse, error)
+	WatchLobby(context.Context, *protomulti.WatchLobbyRequest) (*protomulti.WatchLobbyResponse, error)
 	DiscardLobby(context.Context, *protomulti.DiscardLobbyRequest) (*protomulti.DiscardLobbyResponse, error)
 	JoinLobby(context.Context, *protomulti.JoinLobbyRequest) (*protomulti.JoinLobbyResponse, error)
 	ReadyLobby(context.Context, *protomulti.ReadyLobbyRequest) (*protomulti.ReadyLobbyResponse, error)
@@ -139,8 +139,8 @@ func (UnimplementedMeviusMultiServiceServer) EndSession(context.Context, *protom
 func (UnimplementedMeviusMultiServiceServer) SearchLobby(context.Context, *protomulti.SearchLobbyRequest) (*protomulti.SearchLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchLobby not implemented")
 }
-func (UnimplementedMeviusMultiServiceServer) InspectLobby(context.Context, *protomulti.InspectLobbyRequest) (*protomulti.InspectLobbyResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method InspectLobby not implemented")
+func (UnimplementedMeviusMultiServiceServer) WatchLobby(context.Context, *protomulti.WatchLobbyRequest) (*protomulti.WatchLobbyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method WatchLobby not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) DiscardLobby(context.Context, *protomulti.DiscardLobbyRequest) (*protomulti.DiscardLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DiscardLobby not implemented")
@@ -217,20 +217,20 @@ func _MeviusMultiService_SearchLobby_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusMultiService_InspectLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomulti.InspectLobbyRequest)
+func _MeviusMultiService_WatchLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.WatchLobbyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusMultiServiceServer).InspectLobby(ctx, in)
+		return srv.(MeviusMultiServiceServer).WatchLobby(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusMultiService_InspectLobby_FullMethodName,
+		FullMethod: MeviusMultiService_WatchLobby_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusMultiServiceServer).InspectLobby(ctx, req.(*protomulti.InspectLobbyRequest))
+		return srv.(MeviusMultiServiceServer).WatchLobby(ctx, req.(*protomulti.WatchLobbyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -309,8 +309,8 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusMultiService_SearchLobby_Handler,
 		},
 		{
-			MethodName: "InspectLobby",
-			Handler:    _MeviusMultiService_InspectLobby_Handler,
+			MethodName: "WatchLobby",
+			Handler:    _MeviusMultiService_WatchLobby_Handler,
 		},
 		{
 			MethodName: "DiscardLobby",
