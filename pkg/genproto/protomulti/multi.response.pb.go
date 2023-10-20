@@ -228,6 +228,61 @@ func (*DiscardLobbyResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{4}
 }
 
+type CreateLobbyResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	LobbyId string `protobuf:"bytes,1,opt,name=lobby_id,json=lobbyId,proto3" json:"lobby_id,omitempty"`
+	PartyId string `protobuf:"bytes,2,opt,name=party_id,json=partyId,proto3" json:"party_id,omitempty"`
+}
+
+func (x *CreateLobbyResponse) Reset() {
+	*x = CreateLobbyResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protomulti_multi_response_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CreateLobbyResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateLobbyResponse) ProtoMessage() {}
+
+func (x *CreateLobbyResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateLobbyResponse.ProtoReflect.Descriptor instead.
+func (*CreateLobbyResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *CreateLobbyResponse) GetLobbyId() string {
+	if x != nil {
+		return x.LobbyId
+	}
+	return ""
+}
+
+func (x *CreateLobbyResponse) GetPartyId() string {
+	if x != nil {
+		return x.PartyId
+	}
+	return ""
+}
+
 type JoinLobbyResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -237,7 +292,7 @@ type JoinLobbyResponse struct {
 func (x *JoinLobbyResponse) Reset() {
 	*x = JoinLobbyResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_response_proto_msgTypes[5]
+		mi := &file_protomulti_multi_response_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -250,7 +305,7 @@ func (x *JoinLobbyResponse) String() string {
 func (*JoinLobbyResponse) ProtoMessage() {}
 
 func (x *JoinLobbyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[5]
+	mi := &file_protomulti_multi_response_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -263,7 +318,7 @@ func (x *JoinLobbyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use JoinLobbyResponse.ProtoReflect.Descriptor instead.
 func (*JoinLobbyResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{5}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{6}
 }
 
 type ReadyLobbyResponse struct {
@@ -275,7 +330,7 @@ type ReadyLobbyResponse struct {
 func (x *ReadyLobbyResponse) Reset() {
 	*x = ReadyLobbyResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_response_proto_msgTypes[6]
+		mi := &file_protomulti_multi_response_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -288,7 +343,7 @@ func (x *ReadyLobbyResponse) String() string {
 func (*ReadyLobbyResponse) ProtoMessage() {}
 
 func (x *ReadyLobbyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[6]
+	mi := &file_protomulti_multi_response_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -301,7 +356,7 @@ func (x *ReadyLobbyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadyLobbyResponse.ProtoReflect.Descriptor instead.
 func (*ReadyLobbyResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{6}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{7}
 }
 
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
@@ -323,15 +378,20 @@ var file_protomulti_multi_response_proto_rawDesc = []byte{
 	0x52, 0x07, 0x6c, 0x6f, 0x62, 0x62, 0x69, 0x65, 0x73, 0x22, 0x14, 0x0a, 0x12, 0x57, 0x61, 0x74,
 	0x63, 0x68, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
 	0x16, 0x0a, 0x14, 0x44, 0x69, 0x73, 0x63, 0x61, 0x72, 0x64, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x13, 0x0a, 0x11, 0x4a, 0x6f, 0x69, 0x6e, 0x4c,
-	0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x14, 0x0a, 0x12,
-	0x52, 0x65, 0x61, 0x64, 0x79, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x42, 0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
-	0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65,
-	0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d,
-	0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74,
-	0x69, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x4b, 0x0a, 0x13, 0x43, 0x72, 0x65, 0x61, 0x74,
+	0x65, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x19,
+	0x0a, 0x08, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x07, 0x6c, 0x6f, 0x62, 0x62, 0x79, 0x49, 0x64, 0x12, 0x19, 0x0a, 0x08, 0x70, 0x61, 0x72,
+	0x74, 0x79, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x70, 0x61, 0x72,
+	0x74, 0x79, 0x49, 0x64, 0x22, 0x13, 0x0a, 0x11, 0x4a, 0x6f, 0x69, 0x6e, 0x4c, 0x6f, 0x62, 0x62,
+	0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x14, 0x0a, 0x12, 0x52, 0x65, 0x61,
+	0x64, 0x79, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42,
+	0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75,
+	0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75,
+	0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d, 0x6f, 0x62, 0x69,
+	0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74, 0x69, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -346,19 +406,20 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_response_proto_rawDescData
 }
 
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_protomulti_multi_response_proto_goTypes = []interface{}{
 	(*CreateSessionResponse)(nil), // 0: multi.CreateSessionResponse
 	(*EndSessionResponse)(nil),    // 1: multi.EndSessionResponse
 	(*SearchLobbyResponse)(nil),   // 2: multi.SearchLobbyResponse
 	(*WatchLobbyResponse)(nil),    // 3: multi.WatchLobbyResponse
 	(*DiscardLobbyResponse)(nil),  // 4: multi.DiscardLobbyResponse
-	(*JoinLobbyResponse)(nil),     // 5: multi.JoinLobbyResponse
-	(*ReadyLobbyResponse)(nil),    // 6: multi.ReadyLobbyResponse
-	(*ProtoLobbySummary)(nil),     // 7: multi.ProtoLobbySummary
+	(*CreateLobbyResponse)(nil),   // 5: multi.CreateLobbyResponse
+	(*JoinLobbyResponse)(nil),     // 6: multi.JoinLobbyResponse
+	(*ReadyLobbyResponse)(nil),    // 7: multi.ReadyLobbyResponse
+	(*ProtoLobbySummary)(nil),     // 8: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	7, // 0: multi.SearchLobbyResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	8, // 0: multi.SearchLobbyResponse.lobbies:type_name -> multi.ProtoLobbySummary
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -434,7 +495,7 @@ func file_protomulti_multi_response_proto_init() {
 			}
 		}
 		file_protomulti_multi_response_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JoinLobbyResponse); i {
+			switch v := v.(*CreateLobbyResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -446,6 +507,18 @@ func file_protomulti_multi_response_proto_init() {
 			}
 		}
 		file_protomulti_multi_response_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*JoinLobbyResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protomulti_multi_response_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ReadyLobbyResponse); i {
 			case 0:
 				return &v.state
@@ -464,7 +537,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protomulti_multi_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
