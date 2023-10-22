@@ -62,6 +62,30 @@ func (x *DiscardLobbyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewCreateLobbyRequest(bytes []byte) (*CreateLobbyRequest, error) {
+	req := &CreateLobbyRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *CreateLobbyResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewCancelLobbyRequest(bytes []byte) (*CancelLobbyRequest, error) {
+	req := &CancelLobbyRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *CancelLobbyResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewJoinLobbyRequest(bytes []byte) (*JoinLobbyRequest, error) {
 	req := &JoinLobbyRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
