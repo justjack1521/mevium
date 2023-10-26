@@ -359,6 +359,44 @@ func (*ReadyLobbyResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{7}
 }
 
+type UnreadyLobbyResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *UnreadyLobbyResponse) Reset() {
+	*x = UnreadyLobbyResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protomulti_multi_response_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UnreadyLobbyResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UnreadyLobbyResponse) ProtoMessage() {}
+
+func (x *UnreadyLobbyResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UnreadyLobbyResponse.ProtoReflect.Descriptor instead.
+func (*UnreadyLobbyResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{8}
+}
+
 type CancelLobbyResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -368,7 +406,7 @@ type CancelLobbyResponse struct {
 func (x *CancelLobbyResponse) Reset() {
 	*x = CancelLobbyResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_response_proto_msgTypes[8]
+		mi := &file_protomulti_multi_response_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -381,7 +419,7 @@ func (x *CancelLobbyResponse) String() string {
 func (*CancelLobbyResponse) ProtoMessage() {}
 
 func (x *CancelLobbyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[8]
+	mi := &file_protomulti_multi_response_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -394,7 +432,7 @@ func (x *CancelLobbyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CancelLobbyResponse.ProtoReflect.Descriptor instead.
 func (*CancelLobbyResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{8}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{9}
 }
 
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
@@ -424,13 +462,15 @@ var file_protomulti_multi_response_proto_rawDesc = []byte{
 	0x74, 0x79, 0x49, 0x64, 0x22, 0x13, 0x0a, 0x11, 0x4a, 0x6f, 0x69, 0x6e, 0x4c, 0x6f, 0x62, 0x62,
 	0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x14, 0x0a, 0x12, 0x52, 0x65, 0x61,
 	0x64, 0x79, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x15, 0x0a, 0x13, 0x43, 0x61, 0x6e, 0x63, 0x65, 0x6c, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
-	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32,
-	0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69,
-	0xaa, 0x02, 0x12, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
-	0x4d, 0x75, 0x6c, 0x74, 0x69, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x16, 0x0a, 0x14, 0x55, 0x6e, 0x72, 0x65, 0x61, 0x64, 0x79, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x15, 0x0a, 0x13, 0x43, 0x61, 0x6e, 0x63, 0x65,
+	0x6c, 0x4c, 0x6f, 0x62, 0x62, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x4d,
+	0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73,
+	0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d,
+	0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d, 0x6f, 0x62, 0x69, 0x75,
+	0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74, 0x69, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -445,7 +485,7 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_response_proto_rawDescData
 }
 
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_protomulti_multi_response_proto_goTypes = []interface{}{
 	(*CreateSessionResponse)(nil), // 0: multi.CreateSessionResponse
 	(*EndSessionResponse)(nil),    // 1: multi.EndSessionResponse
@@ -455,16 +495,17 @@ var file_protomulti_multi_response_proto_goTypes = []interface{}{
 	(*CreateLobbyResponse)(nil),   // 5: multi.CreateLobbyResponse
 	(*JoinLobbyResponse)(nil),     // 6: multi.JoinLobbyResponse
 	(*ReadyLobbyResponse)(nil),    // 7: multi.ReadyLobbyResponse
-	(*CancelLobbyResponse)(nil),   // 8: multi.CancelLobbyResponse
-	(*ProtoLobbySummary)(nil),     // 9: multi.ProtoLobbySummary
+	(*UnreadyLobbyResponse)(nil),  // 8: multi.UnreadyLobbyResponse
+	(*CancelLobbyResponse)(nil),   // 9: multi.CancelLobbyResponse
+	(*ProtoLobbySummary)(nil),     // 10: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	9, // 0: multi.SearchLobbyResponse.lobbies:type_name -> multi.ProtoLobbySummary
-	1, // [1:1] is the sub-list for method output_type
-	1, // [1:1] is the sub-list for method input_type
-	1, // [1:1] is the sub-list for extension type_name
-	1, // [1:1] is the sub-list for extension extendee
-	0, // [0:1] is the sub-list for field type_name
+	10, // 0: multi.SearchLobbyResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	1,  // [1:1] is the sub-list for method output_type
+	1,  // [1:1] is the sub-list for method input_type
+	1,  // [1:1] is the sub-list for extension type_name
+	1,  // [1:1] is the sub-list for extension extendee
+	0,  // [0:1] is the sub-list for field type_name
 }
 
 func init() { file_protomulti_multi_response_proto_init() }
@@ -571,6 +612,18 @@ func file_protomulti_multi_response_proto_init() {
 			}
 		}
 		file_protomulti_multi_response_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UnreadyLobbyResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protomulti_multi_response_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CancelLobbyResponse); i {
 			case 0:
 				return &v.state
@@ -589,7 +642,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protomulti_multi_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   9,
+			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
