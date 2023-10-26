@@ -30,6 +30,7 @@ const (
 	MeviusMultiService_ReadyLobby_FullMethodName    = "/service.MeviusMultiService/ReadyLobby"
 	MeviusMultiService_UnreadyLobby_FullMethodName  = "/service.MeviusMultiService/UnreadyLobby"
 	MeviusMultiService_CancelLobby_FullMethodName   = "/service.MeviusMultiService/CancelLobby"
+	MeviusMultiService_GetPlayer_FullMethodName     = "/service.MeviusMultiService/GetPlayer"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -46,6 +47,7 @@ type MeviusMultiServiceClient interface {
 	ReadyLobby(ctx context.Context, in *protomulti.ReadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.ReadyLobbyResponse, error)
 	UnreadyLobby(ctx context.Context, in *protomulti.UnreadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnreadyLobbyResponse, error)
 	CancelLobby(ctx context.Context, in *protomulti.CancelLobbyRequest, opts ...grpc.CallOption) (*protomulti.CancelLobbyResponse, error)
+	GetPlayer(ctx context.Context, in *protomulti.GetLobbyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GetLobbyPlayerResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -146,6 +148,15 @@ func (c *meviusMultiServiceClient) CancelLobby(ctx context.Context, in *protomul
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) GetPlayer(ctx context.Context, in *protomulti.GetLobbyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GetLobbyPlayerResponse, error) {
+	out := new(protomulti.GetLobbyPlayerResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_GetPlayer_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -160,6 +171,7 @@ type MeviusMultiServiceServer interface {
 	ReadyLobby(context.Context, *protomulti.ReadyLobbyRequest) (*protomulti.ReadyLobbyResponse, error)
 	UnreadyLobby(context.Context, *protomulti.UnreadyLobbyRequest) (*protomulti.UnreadyLobbyResponse, error)
 	CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error)
+	GetPlayer(context.Context, *protomulti.GetLobbyPlayerRequest) (*protomulti.GetLobbyPlayerResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -195,6 +207,9 @@ func (UnimplementedMeviusMultiServiceServer) UnreadyLobby(context.Context, *prot
 }
 func (UnimplementedMeviusMultiServiceServer) CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CancelLobby not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) GetPlayer(context.Context, *protomulti.GetLobbyPlayerRequest) (*protomulti.GetLobbyPlayerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPlayer not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -388,6 +403,24 @@ func _MeviusMultiService_CancelLobby_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_GetPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GetLobbyPlayerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).GetPlayer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_GetPlayer_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).GetPlayer(ctx, req.(*protomulti.GetLobbyPlayerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -434,6 +467,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CancelLobby",
 			Handler:    _MeviusMultiService_CancelLobby_Handler,
+		},
+		{
+			MethodName: "GetPlayer",
+			Handler:    _MeviusMultiService_GetPlayer_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
