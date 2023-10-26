@@ -122,8 +122,8 @@ func (x *UnreadyLobbyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewGetLobbyPlayerResponse(bytes []byte) (*GetLobbyPlayerResponse, error) {
-	req := &GetLobbyPlayerResponse{}
+func NewNewUnreadyLobbyRequest(bytes []byte) (*GetLobbyPlayerRequest, error) {
+	req := &GetLobbyPlayerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
