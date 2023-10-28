@@ -25,3 +25,27 @@ func NewParticipantLeaveNotification(bytes []byte) (*ParticipantLeaveNotificatio
 func (x *ParticipantLeaveNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewParticipantReadyNotification(bytes []byte) (*ParticipantReadyNotification, error) {
+	req := &ParticipantReadyNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *ParticipantReadyNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewParticipantUnreadyNotification(bytes []byte) (*ParticipantUnreadyNotification, error) {
+	req := &ParticipantUnreadyNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *ParticipantUnreadyNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
