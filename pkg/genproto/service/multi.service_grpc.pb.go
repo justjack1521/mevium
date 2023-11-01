@@ -31,6 +31,7 @@ const (
 	MeviusMultiService_UnreadyLobby_FullMethodName  = "/service.MeviusMultiService/UnreadyLobby"
 	MeviusMultiService_CancelLobby_FullMethodName   = "/service.MeviusMultiService/CancelLobby"
 	MeviusMultiService_GetPlayer_FullMethodName     = "/service.MeviusMultiService/GetPlayer"
+	MeviusMultiService_SendStamp_FullMethodName     = "/service.MeviusMultiService/SendStamp"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -48,6 +49,7 @@ type MeviusMultiServiceClient interface {
 	UnreadyLobby(ctx context.Context, in *protomulti.UnreadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnreadyLobbyResponse, error)
 	CancelLobby(ctx context.Context, in *protomulti.CancelLobbyRequest, opts ...grpc.CallOption) (*protomulti.CancelLobbyResponse, error)
 	GetPlayer(ctx context.Context, in *protomulti.GetLobbyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GetLobbyPlayerResponse, error)
+	SendStamp(ctx context.Context, in *protomulti.SendStampRequest, opts ...grpc.CallOption) (*protomulti.SendStampResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -157,6 +159,15 @@ func (c *meviusMultiServiceClient) GetPlayer(ctx context.Context, in *protomulti
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) SendStamp(ctx context.Context, in *protomulti.SendStampRequest, opts ...grpc.CallOption) (*protomulti.SendStampResponse, error) {
+	out := new(protomulti.SendStampResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_SendStamp_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -172,6 +183,7 @@ type MeviusMultiServiceServer interface {
 	UnreadyLobby(context.Context, *protomulti.UnreadyLobbyRequest) (*protomulti.UnreadyLobbyResponse, error)
 	CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error)
 	GetPlayer(context.Context, *protomulti.GetLobbyPlayerRequest) (*protomulti.GetLobbyPlayerResponse, error)
+	SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -210,6 +222,9 @@ func (UnimplementedMeviusMultiServiceServer) CancelLobby(context.Context, *proto
 }
 func (UnimplementedMeviusMultiServiceServer) GetPlayer(context.Context, *protomulti.GetLobbyPlayerRequest) (*protomulti.GetLobbyPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPlayer not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SendStamp not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -421,6 +436,24 @@ func _MeviusMultiService_GetPlayer_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_SendStamp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.SendStampRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).SendStamp(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_SendStamp_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).SendStamp(ctx, req.(*protomulti.SendStampRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -471,6 +504,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetPlayer",
 			Handler:    _MeviusMultiService_GetPlayer_Handler,
+		},
+		{
+			MethodName: "SendStamp",
+			Handler:    _MeviusMultiService_SendStamp_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
