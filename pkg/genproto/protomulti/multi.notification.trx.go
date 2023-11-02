@@ -61,3 +61,15 @@ func NewStampSendNotification(bytes []byte) (*StampSendNotification, error) {
 func (x *StampSendNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewParticipantDeckChangeNotification(bytes []byte) (*ParticipantDeckChangeNotification, error) {
+	req := &ParticipantDeckChangeNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *ParticipantDeckChangeNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
