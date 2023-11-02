@@ -73,3 +73,15 @@ func NewParticipantDeckChangeNotification(bytes []byte) (*ParticipantDeckChangeN
 func (x *ParticipantDeckChangeNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewLobbyCancelNotification(bytes []byte) (*LobbyCancelNotification, error) {
+	req := &LobbyCancelNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *LobbyCancelNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
