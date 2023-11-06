@@ -24,13 +24,13 @@ const (
 	MeviusMultiService_EndSession_FullMethodName    = "/service.MeviusMultiService/EndSession"
 	MeviusMultiService_SearchLobby_FullMethodName   = "/service.MeviusMultiService/SearchLobby"
 	MeviusMultiService_WatchLobby_FullMethodName    = "/service.MeviusMultiService/WatchLobby"
-	MeviusMultiService_DiscardLobby_FullMethodName  = "/service.MeviusMultiService/DiscardLobby"
+	MeviusMultiService_UnwatchLobby_FullMethodName  = "/service.MeviusMultiService/UnwatchLobby"
 	MeviusMultiService_CreateLobby_FullMethodName   = "/service.MeviusMultiService/CreateLobby"
+	MeviusMultiService_CancelLobby_FullMethodName   = "/service.MeviusMultiService/CancelLobby"
 	MeviusMultiService_JoinLobby_FullMethodName     = "/service.MeviusMultiService/JoinLobby"
+	MeviusMultiService_LeaveLobby_FullMethodName    = "/service.MeviusMultiService/LeaveLobby"
 	MeviusMultiService_ReadyLobby_FullMethodName    = "/service.MeviusMultiService/ReadyLobby"
 	MeviusMultiService_UnreadyLobby_FullMethodName  = "/service.MeviusMultiService/UnreadyLobby"
-	MeviusMultiService_CancelLobby_FullMethodName   = "/service.MeviusMultiService/CancelLobby"
-	MeviusMultiService_GetPlayer_FullMethodName     = "/service.MeviusMultiService/GetPlayer"
 	MeviusMultiService_SendStamp_FullMethodName     = "/service.MeviusMultiService/SendStamp"
 )
 
@@ -42,13 +42,13 @@ type MeviusMultiServiceClient interface {
 	EndSession(ctx context.Context, in *protomulti.EndSessionRequest, opts ...grpc.CallOption) (*protomulti.EndSessionResponse, error)
 	SearchLobby(ctx context.Context, in *protomulti.SearchLobbyRequest, opts ...grpc.CallOption) (*protomulti.SearchLobbyResponse, error)
 	WatchLobby(ctx context.Context, in *protomulti.WatchLobbyRequest, opts ...grpc.CallOption) (*protomulti.WatchLobbyResponse, error)
-	DiscardLobby(ctx context.Context, in *protomulti.DiscardLobbyRequest, opts ...grpc.CallOption) (*protomulti.DiscardLobbyResponse, error)
+	UnwatchLobby(ctx context.Context, in *protomulti.UnwatchLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnwatchLobbyResponse, error)
 	CreateLobby(ctx context.Context, in *protomulti.CreateLobbyRequest, opts ...grpc.CallOption) (*protomulti.CreateLobbyResponse, error)
+	CancelLobby(ctx context.Context, in *protomulti.CancelLobbyRequest, opts ...grpc.CallOption) (*protomulti.CancelLobbyResponse, error)
 	JoinLobby(ctx context.Context, in *protomulti.JoinLobbyRequest, opts ...grpc.CallOption) (*protomulti.JoinLobbyResponse, error)
+	LeaveLobby(ctx context.Context, in *protomulti.LeaveLobbyRequest, opts ...grpc.CallOption) (*protomulti.LeaveLobbyResponse, error)
 	ReadyLobby(ctx context.Context, in *protomulti.ReadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.ReadyLobbyResponse, error)
 	UnreadyLobby(ctx context.Context, in *protomulti.UnreadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnreadyLobbyResponse, error)
-	CancelLobby(ctx context.Context, in *protomulti.CancelLobbyRequest, opts ...grpc.CallOption) (*protomulti.CancelLobbyResponse, error)
-	GetPlayer(ctx context.Context, in *protomulti.GetLobbyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GetLobbyPlayerResponse, error)
 	SendStamp(ctx context.Context, in *protomulti.SendStampRequest, opts ...grpc.CallOption) (*protomulti.SendStampResponse, error)
 }
 
@@ -96,9 +96,9 @@ func (c *meviusMultiServiceClient) WatchLobby(ctx context.Context, in *protomult
 	return out, nil
 }
 
-func (c *meviusMultiServiceClient) DiscardLobby(ctx context.Context, in *protomulti.DiscardLobbyRequest, opts ...grpc.CallOption) (*protomulti.DiscardLobbyResponse, error) {
-	out := new(protomulti.DiscardLobbyResponse)
-	err := c.cc.Invoke(ctx, MeviusMultiService_DiscardLobby_FullMethodName, in, out, opts...)
+func (c *meviusMultiServiceClient) UnwatchLobby(ctx context.Context, in *protomulti.UnwatchLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnwatchLobbyResponse, error) {
+	out := new(protomulti.UnwatchLobbyResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_UnwatchLobby_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -114,9 +114,27 @@ func (c *meviusMultiServiceClient) CreateLobby(ctx context.Context, in *protomul
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) CancelLobby(ctx context.Context, in *protomulti.CancelLobbyRequest, opts ...grpc.CallOption) (*protomulti.CancelLobbyResponse, error) {
+	out := new(protomulti.CancelLobbyResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_CancelLobby_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusMultiServiceClient) JoinLobby(ctx context.Context, in *protomulti.JoinLobbyRequest, opts ...grpc.CallOption) (*protomulti.JoinLobbyResponse, error) {
 	out := new(protomulti.JoinLobbyResponse)
 	err := c.cc.Invoke(ctx, MeviusMultiService_JoinLobby_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusMultiServiceClient) LeaveLobby(ctx context.Context, in *protomulti.LeaveLobbyRequest, opts ...grpc.CallOption) (*protomulti.LeaveLobbyResponse, error) {
+	out := new(protomulti.LeaveLobbyResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_LeaveLobby_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -141,24 +159,6 @@ func (c *meviusMultiServiceClient) UnreadyLobby(ctx context.Context, in *protomu
 	return out, nil
 }
 
-func (c *meviusMultiServiceClient) CancelLobby(ctx context.Context, in *protomulti.CancelLobbyRequest, opts ...grpc.CallOption) (*protomulti.CancelLobbyResponse, error) {
-	out := new(protomulti.CancelLobbyResponse)
-	err := c.cc.Invoke(ctx, MeviusMultiService_CancelLobby_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *meviusMultiServiceClient) GetPlayer(ctx context.Context, in *protomulti.GetLobbyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GetLobbyPlayerResponse, error) {
-	out := new(protomulti.GetLobbyPlayerResponse)
-	err := c.cc.Invoke(ctx, MeviusMultiService_GetPlayer_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *meviusMultiServiceClient) SendStamp(ctx context.Context, in *protomulti.SendStampRequest, opts ...grpc.CallOption) (*protomulti.SendStampResponse, error) {
 	out := new(protomulti.SendStampResponse)
 	err := c.cc.Invoke(ctx, MeviusMultiService_SendStamp_FullMethodName, in, out, opts...)
@@ -176,13 +176,13 @@ type MeviusMultiServiceServer interface {
 	EndSession(context.Context, *protomulti.EndSessionRequest) (*protomulti.EndSessionResponse, error)
 	SearchLobby(context.Context, *protomulti.SearchLobbyRequest) (*protomulti.SearchLobbyResponse, error)
 	WatchLobby(context.Context, *protomulti.WatchLobbyRequest) (*protomulti.WatchLobbyResponse, error)
-	DiscardLobby(context.Context, *protomulti.DiscardLobbyRequest) (*protomulti.DiscardLobbyResponse, error)
+	UnwatchLobby(context.Context, *protomulti.UnwatchLobbyRequest) (*protomulti.UnwatchLobbyResponse, error)
 	CreateLobby(context.Context, *protomulti.CreateLobbyRequest) (*protomulti.CreateLobbyResponse, error)
+	CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error)
 	JoinLobby(context.Context, *protomulti.JoinLobbyRequest) (*protomulti.JoinLobbyResponse, error)
+	LeaveLobby(context.Context, *protomulti.LeaveLobbyRequest) (*protomulti.LeaveLobbyResponse, error)
 	ReadyLobby(context.Context, *protomulti.ReadyLobbyRequest) (*protomulti.ReadyLobbyResponse, error)
 	UnreadyLobby(context.Context, *protomulti.UnreadyLobbyRequest) (*protomulti.UnreadyLobbyResponse, error)
-	CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error)
-	GetPlayer(context.Context, *protomulti.GetLobbyPlayerRequest) (*protomulti.GetLobbyPlayerResponse, error)
 	SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error)
 }
 
@@ -202,26 +202,26 @@ func (UnimplementedMeviusMultiServiceServer) SearchLobby(context.Context, *proto
 func (UnimplementedMeviusMultiServiceServer) WatchLobby(context.Context, *protomulti.WatchLobbyRequest) (*protomulti.WatchLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WatchLobby not implemented")
 }
-func (UnimplementedMeviusMultiServiceServer) DiscardLobby(context.Context, *protomulti.DiscardLobbyRequest) (*protomulti.DiscardLobbyResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DiscardLobby not implemented")
+func (UnimplementedMeviusMultiServiceServer) UnwatchLobby(context.Context, *protomulti.UnwatchLobbyRequest) (*protomulti.UnwatchLobbyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UnwatchLobby not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) CreateLobby(context.Context, *protomulti.CreateLobbyRequest) (*protomulti.CreateLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateLobby not implemented")
 }
+func (UnimplementedMeviusMultiServiceServer) CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CancelLobby not implemented")
+}
 func (UnimplementedMeviusMultiServiceServer) JoinLobby(context.Context, *protomulti.JoinLobbyRequest) (*protomulti.JoinLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method JoinLobby not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) LeaveLobby(context.Context, *protomulti.LeaveLobbyRequest) (*protomulti.LeaveLobbyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method LeaveLobby not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) ReadyLobby(context.Context, *protomulti.ReadyLobbyRequest) (*protomulti.ReadyLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReadyLobby not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) UnreadyLobby(context.Context, *protomulti.UnreadyLobbyRequest) (*protomulti.UnreadyLobbyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnreadyLobby not implemented")
-}
-func (UnimplementedMeviusMultiServiceServer) CancelLobby(context.Context, *protomulti.CancelLobbyRequest) (*protomulti.CancelLobbyResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CancelLobby not implemented")
-}
-func (UnimplementedMeviusMultiServiceServer) GetPlayer(context.Context, *protomulti.GetLobbyPlayerRequest) (*protomulti.GetLobbyPlayerResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPlayer not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendStamp not implemented")
@@ -310,20 +310,20 @@ func _MeviusMultiService_WatchLobby_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusMultiService_DiscardLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomulti.DiscardLobbyRequest)
+func _MeviusMultiService_UnwatchLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.UnwatchLobbyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusMultiServiceServer).DiscardLobby(ctx, in)
+		return srv.(MeviusMultiServiceServer).UnwatchLobby(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusMultiService_DiscardLobby_FullMethodName,
+		FullMethod: MeviusMultiService_UnwatchLobby_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusMultiServiceServer).DiscardLobby(ctx, req.(*protomulti.DiscardLobbyRequest))
+		return srv.(MeviusMultiServiceServer).UnwatchLobby(ctx, req.(*protomulti.UnwatchLobbyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -346,6 +346,24 @@ func _MeviusMultiService_CreateLobby_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_CancelLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.CancelLobbyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).CancelLobby(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_CancelLobby_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).CancelLobby(ctx, req.(*protomulti.CancelLobbyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusMultiService_JoinLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protomulti.JoinLobbyRequest)
 	if err := dec(in); err != nil {
@@ -360,6 +378,24 @@ func _MeviusMultiService_JoinLobby_Handler(srv interface{}, ctx context.Context,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusMultiServiceServer).JoinLobby(ctx, req.(*protomulti.JoinLobbyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusMultiService_LeaveLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.LeaveLobbyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).LeaveLobby(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_LeaveLobby_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).LeaveLobby(ctx, req.(*protomulti.LeaveLobbyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -396,42 +432,6 @@ func _MeviusMultiService_UnreadyLobby_Handler(srv interface{}, ctx context.Conte
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusMultiServiceServer).UnreadyLobby(ctx, req.(*protomulti.UnreadyLobbyRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusMultiService_CancelLobby_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomulti.CancelLobbyRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusMultiServiceServer).CancelLobby(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusMultiService_CancelLobby_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusMultiServiceServer).CancelLobby(ctx, req.(*protomulti.CancelLobbyRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusMultiService_GetPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomulti.GetLobbyPlayerRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusMultiServiceServer).GetPlayer(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusMultiService_GetPlayer_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusMultiServiceServer).GetPlayer(ctx, req.(*protomulti.GetLobbyPlayerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -478,16 +478,24 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusMultiService_WatchLobby_Handler,
 		},
 		{
-			MethodName: "DiscardLobby",
-			Handler:    _MeviusMultiService_DiscardLobby_Handler,
+			MethodName: "UnwatchLobby",
+			Handler:    _MeviusMultiService_UnwatchLobby_Handler,
 		},
 		{
 			MethodName: "CreateLobby",
 			Handler:    _MeviusMultiService_CreateLobby_Handler,
 		},
 		{
+			MethodName: "CancelLobby",
+			Handler:    _MeviusMultiService_CancelLobby_Handler,
+		},
+		{
 			MethodName: "JoinLobby",
 			Handler:    _MeviusMultiService_JoinLobby_Handler,
+		},
+		{
+			MethodName: "LeaveLobby",
+			Handler:    _MeviusMultiService_LeaveLobby_Handler,
 		},
 		{
 			MethodName: "ReadyLobby",
@@ -496,14 +504,6 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UnreadyLobby",
 			Handler:    _MeviusMultiService_UnreadyLobby_Handler,
-		},
-		{
-			MethodName: "CancelLobby",
-			Handler:    _MeviusMultiService_CancelLobby_Handler,
-		},
-		{
-			MethodName: "GetPlayer",
-			Handler:    _MeviusMultiService_GetPlayer_Handler,
 		},
 		{
 			MethodName: "SendStamp",

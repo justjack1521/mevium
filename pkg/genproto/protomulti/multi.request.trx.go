@@ -50,15 +50,15 @@ func (x *WatchLobbyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewDiscardLobbyRequest(bytes []byte) (*DiscardLobbyRequest, error) {
-	req := &DiscardLobbyRequest{}
+func NewUnwatchLobbyRequest(bytes []byte) (*UnwatchLobbyRequest, error) {
+	req := &UnwatchLobbyRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *DiscardLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *UnwatchLobbyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
@@ -98,6 +98,18 @@ func (x *JoinLobbyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewLeaveLobbyRequest(bytes []byte) (*LeaveLobbyRequest, error) {
+	req := &LeaveLobbyRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *LeaveLobbyResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewReadyLobbyRequest(bytes []byte) (*ReadyLobbyRequest, error) {
 	req := &ReadyLobbyRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -119,18 +131,6 @@ func NewUnreadyLobbyRequest(bytes []byte) (*UnreadyLobbyRequest, error) {
 }
 
 func (x *UnreadyLobbyResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func NewGetLobbyPlayerRequest(bytes []byte) (*GetLobbyPlayerRequest, error) {
-	req := &GetLobbyPlayerRequest{}
-	if err := proto.Unmarshal(bytes, req); err != nil {
-		return nil, err
-	}
-	return req, nil
-}
-
-func (x *GetLobbyPlayerResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
