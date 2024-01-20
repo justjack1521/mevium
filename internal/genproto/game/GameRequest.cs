@@ -63,48 +63,49 @@ namespace Mobius.Proto.Game {
             "RAoZUHJvY2Vzc1JlZ2lvbkV2ZW50UmVxdWVzdBIVCg1yZWdpb25fbWFwX2lk",
             "GAEgASgJEhAKCGV2ZW50X2lkGAIgASgJIkgKHVByb2Nlc3NSZWdpb25Ob2Rl",
             "RXZlbnRSZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQYASABKAkSEAoIZXZlbnRf",
-            "aWQYAiABKAkibwoXU2tpbGxQYW5lbFVubG9ja1JlcXVlc3QSFgoOam9iX2Nh",
-            "cmRfaW5kZXgYASABKAUSEwoLZ3JvdXBfaW5kZXgYAiABKAUSEgoKcGFnZV9p",
-            "bmRleBgDIAEoBRITCgtwYW5lbF9pbmRleBgEIAEoBSItChVTdGFtaW5hUmVz",
-            "dG9yZVJlcXVlc3QSFAoMbXVsdGlfcGxheWVyGAEgASgIImkKD1RlbGVwb3J0",
-            "UmVxdWVzdBISCgpyZWdpb25fbWFwGAEgASgJEhcKD3JlZ2lvbl9tYXBfbm9k",
-            "ZRgCIAEoBRIpCgZzb3VyY2UYAyABKA4yGS5nYW1lLlRlbGVwb3J0UmVxdWVz",
-            "dFR5cGUiXQoUVXBkYXRlUHJvZmlsZVJlcXVlc3QSDAoEbmFtZRgBIAEoCRIP",
-            "Cgdjb21tZW50GAIgASgJEhMKC3JlbnRhbF9jYXJkGAMgASgFEhEKCWNvbXBh",
-            "bmlvbhgEIAEoBSI+ChxFeHBhbmRBYmlsaXR5Q2FyZFNsb3RSZXF1ZXN0Eg4K",
-            "BnNvdXJjZRgBIAEoBRIOCgZhbW91bnQYAiABKAUidwobSXRlbVNob3BJdGVt",
-            "UHVyY2hhc2VSZXF1ZXN0EhQKDHJlY2VpdmVfaXRlbRgBIAEoCRIYChByZWNl",
-            "aXZlX3F1YW50aXR5GAIgASgFEhEKCWNvc3RfaXRlbRgDIAEoCRIVCg1jb3N0",
-            "X3F1YW50aXR5GAQgASgFIncKG0l0ZW1TaG9wQ2FyZFB1cmNoYXNlUmVxdWVz",
-            "dBIUCgxyZWNlaXZlX2NhcmQYASABKAkSGAoQcmVjZWl2ZV9xdWFudGl0eRgC",
-            "IAEoBRIRCgljb3N0X2l0ZW0YAyABKAkSFQoNY29zdF9xdWFudGl0eRgEIAEo",
-            "BSJCChpBYmlsaXR5U2hvcFB1cmNoYXNlUmVxdWVzdBIXCg9hYmlsaXR5X2Nh",
-            "cmRfaWQYASABKAkSCwoDbWF4GAIgASgIIjEKGENvbXBsZXRlUmVnaW9uTWFw",
-            "UmVxdWVzdBIVCg1yZWdpb25fbWFwX2lkGAEgASgJIkYKHUdldFNpbmdsZVBs",
-            "YXllckxvYWRvdXRSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRISCgpkZWNr",
-            "X2luZGV4GAIgASgFIkUKHEdldE11bHRpUGxheWVyTG9hZG91dFJlcXVlc3QS",
-            "EQoJcGxheWVyX2lkGAEgASgJEhIKCmRlY2tfaW5kZXgYAiABKAUq9wUKD0dh",
-            "bWVSZXF1ZXN0VHlwZRIICgRCQVNFEAASEAoLR0VUX1BST0ZJTEUQyAESEwoO",
-            "Q1JFQVRFX1BST0ZJTEUQrAISEwoOVVBEQVRFX1BST0ZJTEUQ3gISDgoJQ0FS",
-            "RF9TQUxFEJADEhUKEENBUkRfRklMVEVSX1NPUlQQ9AMSEwoOQ0FSRF9GQVZP",
-            "VVJJVEUQ2AQSEAoLU0tJTExfUEFORUwQvAUSDgoJREVDS19FRElUEKAGEhIK",
-            "DURFQ0tfRURJVF9BTEwQhAcSDQoIVEVMRVBPUlQQ6AcSGQoUUFJPQ0VTU19S",
-            "RUdJT05fRVZFTlQQzAgSHgoZUFJPQ0VTU19SRUdJT05fTk9ERV9FVkVOVBD+",
-            "CBISCg1CQVRUTEVfUkVWSVZFELAJEhQKD0JBVFRMRV9DT01QTEVURRCUChIa",
-            "ChVDT05GSVJNX0RBSUxZX01JU1NJT04QwAwSGAoTQ0xBSU1fRVZFTlRfUkFO",
-            "S0lORxCkDRISCg1DTEFJTV9NQUlMQk9YEIgOEhEKDEJBVFRMRV9TVEFSVBDs",
-            "DhISCg1DQVJEX1RSQU5TRkVSENAPEhYKEUVYUEFORF9DQVJEX1NMT1RTEIIQ",
-            "EhAKC0NBUkRfRlVTSU9OELQQEhYKEUNBUkRfRlVTSU9OX0JPT1NUEJgREhQK",
-            "D1NUQU1JTkFfUkVTVE9SRRD8ERIWChFGSVJTVF9EQUlMWV9MT0dJThDgEhIZ",
-            "ChRDTEFJTV9MT0dJTl9DQU1QQUlHThDEExIXChJERUxFVEVfQUxMX01BSUxC",
-            "T1gQjBUSGAoTQ0xBSU1fUkVOVEFMX1JFV0FSRBDwFRISCg1QVVJDSEFTRV9J",
-            "VEVNELgXEhIKDVBVUkNIQVNFX0NBUkQQnBgSGgoVQUJJTElUWV9TSE9QX1BV",
-            "UkNIQVNFEIAZEhEKDENBUkRfQVVHTUVOVBDkGRIYChNDTEFJTV9EQUlMWV9N",
-            "SVNTSU9OEMgaEhgKE0NPTVBMRVRFX1JFR0lPTl9NQVAQ9BwqWAoTVGVsZXBv",
-            "cnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JUEAASCQoFTE9HSU4Q",
-            "ARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExFEARCS1o1Z2l0aHVi",
-            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
-            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "aWQYAiABKAkiggEKF1NraWxsUGFuZWxVbmxvY2tSZXF1ZXN0EhYKDmpvYl9j",
+            "YXJkX2luZGV4GAEgASgFEhMKC2dyb3VwX2luZGV4GAIgASgFEhIKCnBhZ2Vf",
+            "aW5kZXgYAyABKAUSEwoLcGFuZWxfaW5kZXgYBCABKAUSEQoJYWx0ZXJuYXRl",
+            "GAUgASgIIi0KFVN0YW1pbmFSZXN0b3JlUmVxdWVzdBIUCgxtdWx0aV9wbGF5",
+            "ZXIYASABKAgiaQoPVGVsZXBvcnRSZXF1ZXN0EhIKCnJlZ2lvbl9tYXAYASAB",
+            "KAkSFwoPcmVnaW9uX21hcF9ub2RlGAIgASgFEikKBnNvdXJjZRgDIAEoDjIZ",
+            "LmdhbWUuVGVsZXBvcnRSZXF1ZXN0VHlwZSJdChRVcGRhdGVQcm9maWxlUmVx",
+            "dWVzdBIMCgRuYW1lGAEgASgJEg8KB2NvbW1lbnQYAiABKAkSEwoLcmVudGFs",
+            "X2NhcmQYAyABKAUSEQoJY29tcGFuaW9uGAQgASgFIj4KHEV4cGFuZEFiaWxp",
+            "dHlDYXJkU2xvdFJlcXVlc3QSDgoGc291cmNlGAEgASgFEg4KBmFtb3VudBgC",
+            "IAEoBSJ3ChtJdGVtU2hvcEl0ZW1QdXJjaGFzZVJlcXVlc3QSFAoMcmVjZWl2",
+            "ZV9pdGVtGAEgASgJEhgKEHJlY2VpdmVfcXVhbnRpdHkYAiABKAUSEQoJY29z",
+            "dF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRpdHkYBCABKAUidwobSXRlbVNo",
+            "b3BDYXJkUHVyY2hhc2VSZXF1ZXN0EhQKDHJlY2VpdmVfY2FyZBgBIAEoCRIY",
+            "ChByZWNlaXZlX3F1YW50aXR5GAIgASgFEhEKCWNvc3RfaXRlbRgDIAEoCRIV",
+            "Cg1jb3N0X3F1YW50aXR5GAQgASgFIkIKGkFiaWxpdHlTaG9wUHVyY2hhc2VS",
+            "ZXF1ZXN0EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRILCgNtYXgYAiABKAgi",
+            "MQoYQ29tcGxldGVSZWdpb25NYXBSZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQY",
+            "ASABKAkiRgodR2V0U2luZ2xlUGxheWVyTG9hZG91dFJlcXVlc3QSEQoJcGxh",
+            "eWVyX2lkGAEgASgJEhIKCmRlY2tfaW5kZXgYAiABKAUiRQocR2V0TXVsdGlQ",
+            "bGF5ZXJMb2Fkb3V0UmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEgoKZGVj",
+            "a19pbmRleBgCIAEoBSr3BQoPR2FtZVJlcXVlc3RUeXBlEggKBEJBU0UQABIQ",
+            "CgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVfUFJPRklMRRCsAhITCg5VUERB",
+            "VEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQkAMSFQoQQ0FSRF9GSUxURVJf",
+            "U09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDYBBIQCgtTS0lMTF9QQU5FTBC8",
+            "BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19FRElUX0FMTBCEBxINCghURUxF",
+            "UE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9FVkVOVBDMCBIeChlQUk9DRVNT",
+            "X1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJBVFRMRV9SRVZJVkUQsAkSFAoP",
+            "QkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJUk1fREFJTFlfTUlTU0lPThDA",
+            "DBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQNEhIKDUNMQUlNX01BSUxCT1gQ",
+            "iA4SEQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoR",
+            "RVhQQU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FS",
+            "RF9GVVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJ",
+            "UlNUX0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQT",
+            "EhcKEkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVX",
+            "QVJEEPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCc",
+            "GBIaChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5U",
+            "EOQZEhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVH",
+            "SU9OX01BUBD0HCpYChNUZWxlcG9ydFJlcXVlc3RUeXBlEhQKEElOVkFMSURf",
+            "VEVMRVBPUlQQABIJCgVMT0dJThABEgkKBVdPUkxEEAISCQoFRklFTEQQAxIK",
+            "CgZCQVRUTEUQBEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0v",
+            "cGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Social.SocialReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,7 +134,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.FirstDailyLoginRequest), global::Mobius.Proto.Game.FirstDailyLoginRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProcessRegionEventRequest), global::Mobius.Proto.Game.ProcessRegionEventRequest.Parser, new[]{ "RegionMapId", "EventId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProcessRegionNodeEventRequest), global::Mobius.Proto.Game.ProcessRegionNodeEventRequest.Parser, new[]{ "RegionMapId", "EventId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.SkillPanelUnlockRequest), global::Mobius.Proto.Game.SkillPanelUnlockRequest.Parser, new[]{ "JobCardIndex", "GroupIndex", "PageIndex", "PanelIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.SkillPanelUnlockRequest), global::Mobius.Proto.Game.SkillPanelUnlockRequest.Parser, new[]{ "JobCardIndex", "GroupIndex", "PageIndex", "PanelIndex", "Alternate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaRestoreRequest), global::Mobius.Proto.Game.StaminaRestoreRequest.Parser, new[]{ "MultiPlayer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.TeleportRequest), global::Mobius.Proto.Game.TeleportRequest.Parser, new[]{ "RegionMap", "RegionMapNode", "Source" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.UpdateProfileRequest), global::Mobius.Proto.Game.UpdateProfileRequest.Parser, new[]{ "Name", "Comment", "RentalCard", "Companion" }, null, null, null, null),
@@ -5216,6 +5217,7 @@ namespace Mobius.Proto.Game {
       groupIndex_ = other.groupIndex_;
       pageIndex_ = other.pageIndex_;
       panelIndex_ = other.panelIndex_;
+      alternate_ = other.alternate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5268,6 +5270,17 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "alternate" field.</summary>
+    public const int AlternateFieldNumber = 5;
+    private bool alternate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Alternate {
+      get { return alternate_; }
+      set {
+        alternate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SkillPanelUnlockRequest);
@@ -5285,6 +5298,7 @@ namespace Mobius.Proto.Game {
       if (GroupIndex != other.GroupIndex) return false;
       if (PageIndex != other.PageIndex) return false;
       if (PanelIndex != other.PanelIndex) return false;
+      if (Alternate != other.Alternate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5295,6 +5309,7 @@ namespace Mobius.Proto.Game {
       if (GroupIndex != 0) hash ^= GroupIndex.GetHashCode();
       if (PageIndex != 0) hash ^= PageIndex.GetHashCode();
       if (PanelIndex != 0) hash ^= PanelIndex.GetHashCode();
+      if (Alternate != false) hash ^= Alternate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5327,6 +5342,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(32);
         output.WriteInt32(PanelIndex);
       }
+      if (Alternate != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Alternate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5352,6 +5371,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(32);
         output.WriteInt32(PanelIndex);
       }
+      if (Alternate != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Alternate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5372,6 +5395,9 @@ namespace Mobius.Proto.Game {
       }
       if (PanelIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PanelIndex);
+      }
+      if (Alternate != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5395,6 +5421,9 @@ namespace Mobius.Proto.Game {
       }
       if (other.PanelIndex != 0) {
         PanelIndex = other.PanelIndex;
+      }
+      if (other.Alternate != false) {
+        Alternate = other.Alternate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5426,6 +5455,10 @@ namespace Mobius.Proto.Game {
             PanelIndex = input.ReadInt32();
             break;
           }
+          case 40: {
+            Alternate = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -5454,6 +5487,10 @@ namespace Mobius.Proto.Game {
           }
           case 32: {
             PanelIndex = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Alternate = input.ReadBool();
             break;
           }
         }
