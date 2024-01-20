@@ -2,11 +2,55 @@ syntax = "proto3";
 
 package multi;
 
-option csharp_namespace = "Mobius.Proto";
+option csharp_namespace = "Mobius.Proto.Multi";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
 import "protomulti/multi.proto";
 
+message CreateSessionResponse {
+}
+
+message EndSessionResponse {
+
+}
+
 message SearchLobbyResponse {
   repeated ProtoLobbySummary lobbies = 1;
+}
+
+message WatchLobbyResponse {
+
+}
+
+message UnwatchLobbyResponse {
+
+}
+
+message CreateLobbyResponse {
+  string lobby_id = 1;
+  string party_id = 2;
+}
+
+message JoinLobbyResponse {
+
+}
+
+message LeaveLobbyResponse {
+
+}
+
+message ReadyLobbyResponse {
+
+}
+
+message UnreadyLobbyResponse {
+
+}
+
+message CancelLobbyResponse {
+
+}
+
+message SendStampResponse {
+
 }

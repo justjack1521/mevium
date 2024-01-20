@@ -1,0 +1,8 @@
+cd %GOPATH%/src
+
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/access.service.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/game.service.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/social.service.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/rank.service.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/challenge.service.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --go-grpc_out=github.com/justjack1521/mevium/pkg/genproto --go-grpc_opt=paths=source_relative --go-grpc_opt=require_unimplemented_servers=false service/multi.service.proto

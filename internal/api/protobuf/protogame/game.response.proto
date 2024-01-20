@@ -148,15 +148,16 @@ message StaminaRestoreResponse {
 }
 
 message SkillPanelUnlockResponse {
-  repeated game.ProtoItemValuePair ItemsRemoved = 1;
-  int32 HPStatIncrease = 2;
-  int32 AttackStatIncrease = 3;
-  int32 BreakPowerStatIncrease = 4;
-  int32 MagicStatIncrease = 5;
-  int32 SubJobUnlockIncrease = 6;
-  int32 UltimateBoostIncrease = 7;
-  map<string, int32> WeaponUnlock = 8;
-  map<string, int32> AutoAbilitiesAdded = 9;
+  repeated game.ProtoItemValuePair items_removed = 1;
+  int32 hp_stat_increase = 2;
+  int32 attack_stat_increase = 3;
+  int32 break_power_stat_increase = 4;
+  int32 magic_stat_increase = 5;
+  int32 sub_job_unlock_increase = 6;
+  int32 ultimate_boost_increase = 7;
+  map<string, int32> weapon_unlock = 8;
+  map<string, int32> auto_abilities_added = 9;
+  bool crown_level_increase = 10;
 }
 
 message TeleportResponse {

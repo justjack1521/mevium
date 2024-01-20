@@ -1,0 +1,6 @@
+cd %GOPATH%/src
+
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --csharp_out=github.com/justjack1521/mevium/internal/genproto/multi --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protomulti/multi.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --csharp_out=github.com/justjack1521/mevium/internal/genproto/multi --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protomulti/multi.request.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --csharp_out=github.com/justjack1521/mevium/internal/genproto/multi --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protomulti/multi.response.proto
+protoc --proto_path=github.com/justjack1521/mevium/internal/api/protobuf --csharp_out=github.com/justjack1521/mevium/internal/genproto/multi --go_out=github.com/justjack1521/mevium/pkg/genproto --go_opt=paths=source_relative protomulti/multi.notification.proto

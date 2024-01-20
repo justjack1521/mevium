@@ -267,6 +267,7 @@ message ProtoJobCardInstance {
   int32 crit_chance_stat_mod = 15;
   int32 ultimate_boost = 18;
   map<string, int32> auto_abilities = 19;
+  int32 crown_level = 20;
 }
 
 message ProtoLastBattleResults {

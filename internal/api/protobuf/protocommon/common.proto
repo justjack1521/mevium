@@ -27,6 +27,7 @@ enum ServiceKey {
   SOCIAL = 200;
   RANKING = 300;
   CHALLENGE = 400;
+  MULTI = 500;
 }
 
 message BaseRequest {

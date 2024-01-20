@@ -2,12 +2,85 @@ syntax = "proto3";
 
 package multi;
 
-option csharp_namespace = "Mobius.Proto";
+option csharp_namespace = "Mobius.Proto.Multi";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
-message SearchLobbyRequest {
+import "protomulti/multi.proto";
+
+enum MultiRequestType {
+  NONE = 0;
+  CREATE_SESSION = 100;
+  END_SESSION = 200;
+  SEARCH_LOBBY = 300;
+  CREATE_LOBBY = 400;
+  JOIN_LOBBY = 500;
+  READY_LOBBY = 600;
+  WATCH_LOBBY = 700;
+  DISCARD_LOBBY = 800;
+  CANCEL_LOBBY = 900;
+  UNREADY_LOBBY = 1000;
+  SEARCH_PLAYER = 1100;
+  SEND_STAMP = 1200;
+}
+
+message CreateSessionRequest {
   string player_id = 1;
   string mode_identifier = 2;
-  repeated int32 levels = 3;
-  repeated string categories = 4;
+}
+
+message EndSessionRequest {
+  string player_id = 2;
+  string mode_identifier = 3;
+}
+
+message SearchLobbyRequest {
+  int32 deck_index = 2;
+  string mode_identifier = 3;
+  repeated int32 levels = 4;
+  repeated string categories = 5;
+  int32 min_player_level = 6;
+  string party_id = 7;
+}
+
+message WatchLobbyRequest {
+  string lobby_id = 2;
+}
+
+message UnwatchLobbyRequest {
+}
+
+message CreateLobbyRequest {
+  int32 deck_index = 2;
+  string quest_id = 3;
+  string comment = 4;
+  int32 min_player_level = 5;
+  repeated ProtoLobbyPlayerSlotRestriction restrictions = 6;
+}
+
+message JoinLobbyRequest {
+  string lobby_id = 2;
+  int32 slot_index = 3;
+  int32 deck_index = 4;
+  bool use_stamina = 5;
+  bool from_invite = 6;
+}
+
+message LeaveLobbyRequest {
+
+}
+
+message ReadyLobbyRequest {
+  string lobby_id = 2;
+  int32 deck_index = 4;
+}
+
+message UnreadyLobbyRequest {
+  string lobby_id = 2;
+}
+
+message CancelLobbyRequest {
+}
+
+message SendStampRequest {
+  string stamp_id = 1;
 }

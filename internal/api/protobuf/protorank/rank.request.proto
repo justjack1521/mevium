@@ -8,7 +8,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protorank";
 import "protorank/rank.proto";
 import "protosocial/social.proto";
 
-enum RequestType {
+enum RankRequestType {
   NONE = 0;
   GET_RANKING_EVENTS = 2600;
 }

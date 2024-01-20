@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package multi;
 
-option csharp_namespace = "Mobius.Proto";
+option csharp_namespace = "Mobius.Proto.Multi";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
 message ProtoLobbySummary {
@@ -10,6 +10,14 @@ message ProtoLobbySummary {
   string quest_id = 2;
   string comment = 3;
   int32 minimum_player_level = 4;
+  int32 registered_at = 5;
+  repeated ProtoLobbyPlayerSlot players = 6;
+}
+
+message ProtoLobbyPlayerSlot {
+  int32 slot_index = 2;
+  bool ready = 3;
+  ProtoLobbyPlayer player = 4;
 }
 
 message ProtoLobbyPlayer {
@@ -17,15 +25,17 @@ message ProtoLobbyPlayer {
   string player_name = 2;
   string player_comment = 3;
   int32 player_level = 4;
-  ProtoLobbyJobCard job_card = 5;
-  ProtoLobbyWeapon weapon = 6;
-  map<int32, ProtoLobbyAbilityCard> ability_cards = 7;
+  int32 deck_index = 5;
+  ProtoLobbyJobCard job_card = 6;
+  ProtoLobbyWeapon weapon = 7;
+  repeated ProtoLobbyAbilityCard ability_cards = 8;
 }
 
 message ProtoLobbyJobCard {
   string job_card_id = 1;
   int32 sub_job_index = 2;
   int32 over_boost_level = 3;
+  int32 crown_level = 4;
 }
 
 message ProtoLobbyWeapon {
@@ -38,4 +48,13 @@ message ProtoLobbyAbilityCard {
   int32 ability_card_level = 2;
   int32 ability_level = 3;
   int32 over_boost_level = 4;
+  int32 slot_index = 20;
+}
+
+message ProtoLobbyPlayerSlotRestriction {
+  int32 slot_index = 1;
+  string role_restriction = 2;
+  bool locked = 3;
+  bool bot = 4;
+  bool invite_only = 5;
 }

@@ -9,5 +9,16 @@ import "protomulti/multi.request.proto";
 import "protomulti/multi.response.proto";
 
 service MeviusMultiService {
+  rpc CreateSession(multi.CreateSessionRequest) returns (multi.CreateSessionResponse) {}
+  rpc EndSession(multi.EndSessionRequest) returns (multi.EndSessionResponse) {}
   rpc SearchLobby(multi.SearchLobbyRequest) returns (multi.SearchLobbyResponse) {}
+  rpc WatchLobby(multi.WatchLobbyRequest) returns (multi.WatchLobbyResponse) {}
+  rpc UnwatchLobby(multi.UnwatchLobbyRequest) returns (multi.UnwatchLobbyResponse) {}
+  rpc CreateLobby (multi.CreateLobbyRequest) returns (multi.CreateLobbyResponse) {}
+  rpc CancelLobby(multi.CancelLobbyRequest) returns (multi.CancelLobbyResponse) {}
+  rpc JoinLobby(multi.JoinLobbyRequest) returns (multi.JoinLobbyResponse) {}
+  rpc LeaveLobby(multi.LeaveLobbyRequest) returns (multi.LeaveLobbyResponse) {}
+  rpc ReadyLobby(multi.ReadyLobbyRequest) returns (multi.ReadyLobbyResponse) {}
+  rpc UnreadyLobby(multi.UnreadyLobbyRequest) returns (multi.UnreadyLobbyResponse) {}
+  rpc SendStamp(multi.SendStampRequest) returns (multi.SendStampResponse) {}
 }

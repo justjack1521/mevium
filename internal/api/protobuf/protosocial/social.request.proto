@@ -7,7 +7,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protosocial";
 
 import "protosocial/social.proto";
 
-enum RequestType {
+enum SocialRequestType {
   NONE = 0;
   FOLLOW_PLAYER = 1400;
   UNFOLLOW_PLAYER = 1500;

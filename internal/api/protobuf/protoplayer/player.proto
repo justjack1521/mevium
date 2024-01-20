@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package player;
 
+option csharp_namespace = "Mobius.Proto.Player";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoplayer";
 
 message ProtoPlayerInfo {
@@ -31,6 +32,7 @@ message ProtoJobCard {
   int32 ultimate_boost = 10;
   int32 over_boost_level = 11;
   map<string, int32> auto_abilities = 12;
+  int32 crown_level = 13;
 }
 
 message ProtoWeapon {
