@@ -1,15 +1,14 @@
 syntax = "proto3";
 
-package player;
+package identity;
 
-option csharp_namespace = "Mobius.Proto.Player";
-option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoplayer";
+option csharp_namespace = "Mobius.Proto.Identity";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoidentity";
 
-message ProtoPlayerInfo {
+message ProtoPlayerIdentity {
   string player_id = 1;
   string player_name = 2;
   int32 player_level = 3;
-  ProtoPlayerLoadout loadout = 4;
 }
 
 message ProtoPlayerLoadout {

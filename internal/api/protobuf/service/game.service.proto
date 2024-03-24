@@ -41,10 +41,5 @@ service MeviusGameService {
   rpc PurchaseCard(game.ItemShopCardPurchaseRequest) returns (game.ItemShopCardPurchaseResponse) {}
   rpc AbilityShopPurchase(game.AbilityShopPurchaseRequest) returns (game.AbilityShopPurchaseResponse) {}
   rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
-
-  //Internal
-  rpc GetSinglePlayerLoadout(game.GetSinglePlayerLoadoutRequest) returns (game.GetSinglePlayerLoadoutResponse) {}
-  rpc GetMultiPlayerLoadout(game.GetMultiPlayerLoadoutRequest) returns (game.GetMultiPlayerLoadoutResponse) {}
-
 }
 

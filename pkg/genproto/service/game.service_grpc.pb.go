@@ -52,8 +52,6 @@ const (
 	MeviusGameService_PurchaseCard_FullMethodName           = "/service.MeviusGameService/PurchaseCard"
 	MeviusGameService_AbilityShopPurchase_FullMethodName    = "/service.MeviusGameService/AbilityShopPurchase"
 	MeviusGameService_CompleteRegion_FullMethodName         = "/service.MeviusGameService/CompleteRegion"
-	MeviusGameService_GetSinglePlayerLoadout_FullMethodName = "/service.MeviusGameService/GetSinglePlayerLoadout"
-	MeviusGameService_GetMultiPlayerLoadout_FullMethodName  = "/service.MeviusGameService/GetMultiPlayerLoadout"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -93,9 +91,6 @@ type MeviusGameServiceClient interface {
 	PurchaseCard(ctx context.Context, in *protogame.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(ctx context.Context, in *protogame.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(ctx context.Context, in *protogame.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protogame.CompleteRegionMapResponse, error)
-	//Internal
-	GetSinglePlayerLoadout(ctx context.Context, in *protogame.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protogame.GetSinglePlayerLoadoutResponse, error)
-	GetMultiPlayerLoadout(ctx context.Context, in *protogame.GetMultiPlayerLoadoutRequest, opts ...grpc.CallOption) (*protogame.GetMultiPlayerLoadoutResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -394,24 +389,6 @@ func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protog
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) GetSinglePlayerLoadout(ctx context.Context, in *protogame.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protogame.GetSinglePlayerLoadoutResponse, error) {
-	out := new(protogame.GetSinglePlayerLoadoutResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_GetSinglePlayerLoadout_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *meviusGameServiceClient) GetMultiPlayerLoadout(ctx context.Context, in *protogame.GetMultiPlayerLoadoutRequest, opts ...grpc.CallOption) (*protogame.GetMultiPlayerLoadoutResponse, error) {
-	out := new(protogame.GetMultiPlayerLoadoutResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_GetMultiPlayerLoadout_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -449,9 +426,6 @@ type MeviusGameServiceServer interface {
 	PurchaseCard(context.Context, *protogame.ItemShopCardPurchaseRequest) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error)
-	//Internal
-	GetSinglePlayerLoadout(context.Context, *protogame.GetSinglePlayerLoadoutRequest) (*protogame.GetSinglePlayerLoadoutResponse, error)
-	GetMultiPlayerLoadout(context.Context, *protogame.GetMultiPlayerLoadoutRequest) (*protogame.GetMultiPlayerLoadoutResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -553,12 +527,6 @@ func (UnimplementedMeviusGameServiceServer) AbilityShopPurchase(context.Context,
 }
 func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CompleteRegion not implemented")
-}
-func (UnimplementedMeviusGameServiceServer) GetSinglePlayerLoadout(context.Context, *protogame.GetSinglePlayerLoadoutRequest) (*protogame.GetSinglePlayerLoadoutResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetSinglePlayerLoadout not implemented")
-}
-func (UnimplementedMeviusGameServiceServer) GetMultiPlayerLoadout(context.Context, *protogame.GetMultiPlayerLoadoutRequest) (*protogame.GetMultiPlayerLoadoutResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetMultiPlayerLoadout not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1148,42 +1116,6 @@ func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_GetSinglePlayerLoadout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protogame.GetSinglePlayerLoadoutRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).GetSinglePlayerLoadout(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusGameService_GetSinglePlayerLoadout_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).GetSinglePlayerLoadout(ctx, req.(*protogame.GetSinglePlayerLoadoutRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusGameService_GetMultiPlayerLoadout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protogame.GetMultiPlayerLoadoutRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).GetMultiPlayerLoadout(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusGameService_GetMultiPlayerLoadout_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).GetMultiPlayerLoadout(ctx, req.(*protogame.GetMultiPlayerLoadoutRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1318,14 +1250,6 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CompleteRegion",
 			Handler:    _MeviusGameService_CompleteRegion_Handler,
-		},
-		{
-			MethodName: "GetSinglePlayerLoadout",
-			Handler:    _MeviusGameService_GetSinglePlayerLoadout_Handler,
-		},
-		{
-			MethodName: "GetMultiPlayerLoadout",
-			Handler:    _MeviusGameService_GetMultiPlayerLoadout_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

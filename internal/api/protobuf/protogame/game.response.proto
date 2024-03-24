@@ -7,8 +7,6 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
 import "protogame/data.proto";
 import "protorank/rank.proto";
-import "protosocial/social.proto";
-import "protoplayer/player.proto";
 
 message BattleCompleteResponse {
   game.ProtoLastBattleResults Results = 1;
@@ -127,8 +125,9 @@ message FirstDailyLoginResponse {
   game.ProtoDailyMissionInstance daily_mission = 2;
   game.ProtoLoginCampaignInstance standard_login_bonus = 3;
   game.ProtoLoginCampaignInstance special_login_bonus = 4;
-  int32 rental_count = 5;
-  bool rental_claim = 6;
+  game.ProtoMailBoxItem login_rewards = 5;
+  int32 rental_count = 6;
+  bool rental_claim = 7;
 }
 
 message FilterSortResponse {
@@ -199,10 +198,3 @@ message CompleteRegionMapResponse {
   map<string, int32> augment_level_rewards = 4;
 }
 
-message GetSinglePlayerLoadoutResponse {
-  presence.ProtoPlayerLoadout primary_loadout = 1;
-}
-
-message GetMultiPlayerLoadoutResponse {
-  player.ProtoPlayerInfo primary = 1;
-}

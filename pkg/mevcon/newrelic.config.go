@@ -1,6 +1,8 @@
 package mevcon
 
-import "github.com/newrelic/go-agent/v3/newrelic"
+import (
+	"github.com/newrelic/go-agent/v3/newrelic"
+)
 
 type NewRelicConfig struct {
 	AppName    string `required:"true"`

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package identity;
+
+option csharp_namespace = "Mobius.Proto.Identity";
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoidentity";
+
+message GetSinglePlayerIdentityRequest {
+  string player_id = 1;
+}
+
+message GetSinglePlayerLoadoutRequest {
+  string player_id = 1;
+  int32 deck_index = 2;
+}
+
+message GetMultiPlayerLoadoutRequest {
+  string player_id = 1;
+  int32 deck_index = 2;
+}
