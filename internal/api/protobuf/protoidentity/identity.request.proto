@@ -9,6 +9,10 @@ message GetSinglePlayerIdentityRequest {
   string player_id = 1;
 }
 
+message GetSinglePlayerLoadoutIdentityRequest {
+  string player_id = 1;
+}
+
 message GetSinglePlayerLoadoutRequest {
   string player_id = 1;
   int32 deck_index = 2;

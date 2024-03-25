@@ -9,6 +9,7 @@ import "protoidentity/identity.response.proto";
 
 service MeviusIdentityService {
   rpc GetSinglePlayerIdentity(identity.GetSinglePlayerIdentityRequest) returns (identity.GetSinglePlayerIdentityResponse) {}
+  rpc GetSinglePlayerLoadoutIdentity(identity.GetSinglePlayerLoadoutIdentityRequest) returns (identity.GetSinglePlayerLoadoutIdentityResponse) {}
   rpc GetSinglePlayerLoadout(identity.GetSinglePlayerLoadoutRequest) returns (identity.GetSinglePlayerLoadoutResponse) {}
   rpc GetMultiPlayerLoadout(identity.GetMultiPlayerLoadoutRequest) returns (identity.GetMultiPlayerLoadoutResponse) {}
 }
