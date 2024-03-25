@@ -25,21 +25,22 @@ namespace Mobius.Proto.Identity {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVwcm90b2lkZW50aXR5L2lkZW50aXR5LnJlc3BvbnNlLnByb3RvEghpZGVu",
-            "dGl0eRoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8iUgofR2V0U2luZ2xl",
-            "UGxheWVySWRlbnRpdHlSZXNwb25zZRIvCghpZGVudGl0eRgBIAEoCzIdLmlk",
-            "ZW50aXR5LlByb3RvUGxheWVySWRlbnRpdHkigAEKHkdldFNpbmdsZVBsYXll",
-            "ckxvYWRvdXRSZXNwb25zZRIvCghpZGVudGl0eRgBIAEoCzIdLmlkZW50aXR5",
-            "LlByb3RvUGxheWVySWRlbnRpdHkSLQoHbG9hZG91dBgCIAEoCzIcLmlkZW50",
-            "aXR5LlByb3RvUGxheWVyTG9hZG91dCJ/Ch1HZXRNdWx0aVBsYXllckxvYWRv",
-            "dXRSZXNwb25zZRIvCghpZGVudGl0eRgBIAEoCzIdLmlkZW50aXR5LlByb3Rv",
-            "UGxheWVySWRlbnRpdHkSLQoHbG9hZG91dBgCIAEoCzIcLmlkZW50aXR5LlBy",
-            "b3RvUGxheWVyTG9hZG91dEJTWjlnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9t",
-            "ZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvaWRlbnRpdHmqAhVNb2JpdXMuUHJv",
-            "dG8uSWRlbnRpdHliBnByb3RvMw=="));
+            "dGl0eRoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8iiQEKH0dldFNpbmds",
+            "ZVBsYXllcklkZW50aXR5UmVzcG9uc2USLwoIaWRlbnRpdHkYASABKAsyHS5p",
+            "ZGVudGl0eS5Qcm90b1BsYXllcklkZW50aXR5EjUKB2xvYWRvdXQYAiABKAsy",
+            "JC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRvdXRJZGVudGl0eSKAAQoeR2V0",
+            "U2luZ2xlUGxheWVyTG9hZG91dFJlc3BvbnNlEi8KCGlkZW50aXR5GAEgASgL",
+            "Mh0uaWRlbnRpdHkuUHJvdG9QbGF5ZXJJZGVudGl0eRItCgdsb2Fkb3V0GAIg",
+            "ASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0In8KHUdldE11bHRp",
+            "UGxheWVyTG9hZG91dFJlc3BvbnNlEi8KCGlkZW50aXR5GAEgASgLMh0uaWRl",
+            "bnRpdHkuUHJvdG9QbGF5ZXJJZGVudGl0eRItCgdsb2Fkb3V0GAIgASgLMhwu",
+            "aWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0QlNaOWdpdGh1Yi5jb20vanVz",
+            "dGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9pZGVudGl0eaoC",
+            "FU1vYml1cy5Qcm90by5JZGVudGl0eWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerIdentityResponse), global::Mobius.Proto.Identity.GetSinglePlayerIdentityResponse.Parser, new[]{ "Identity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerIdentityResponse), global::Mobius.Proto.Identity.GetSinglePlayerIdentityResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerLoadoutResponse), global::Mobius.Proto.Identity.GetSinglePlayerLoadoutResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetMultiPlayerLoadoutResponse), global::Mobius.Proto.Identity.GetMultiPlayerLoadoutResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null)
           }));
@@ -78,6 +79,7 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSinglePlayerIdentityResponse(GetSinglePlayerIdentityResponse other) : this() {
       identity_ = other.identity_ != null ? other.identity_.Clone() : null;
+      loadout_ = other.loadout_ != null ? other.loadout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,6 +99,17 @@ namespace Mobius.Proto.Identity {
       }
     }
 
+    /// <summary>Field number for the "loadout" field.</summary>
+    public const int LoadoutFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity loadout_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity Loadout {
+      get { return loadout_; }
+      set {
+        loadout_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetSinglePlayerIdentityResponse);
@@ -111,6 +124,7 @@ namespace Mobius.Proto.Identity {
         return true;
       }
       if (!object.Equals(Identity, other.Identity)) return false;
+      if (!object.Equals(Loadout, other.Loadout)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,6 +132,7 @@ namespace Mobius.Proto.Identity {
     public override int GetHashCode() {
       int hash = 1;
       if (identity_ != null) hash ^= Identity.GetHashCode();
+      if (loadout_ != null) hash ^= Loadout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -138,6 +153,10 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(10);
         output.WriteMessage(Identity);
       }
+      if (loadout_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Loadout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -151,6 +170,10 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(10);
         output.WriteMessage(Identity);
       }
+      if (loadout_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Loadout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -162,6 +185,9 @@ namespace Mobius.Proto.Identity {
       int size = 0;
       if (identity_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
+      }
+      if (loadout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Loadout);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,6 +205,12 @@ namespace Mobius.Proto.Identity {
           Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
         }
         Identity.MergeFrom(other.Identity);
+      }
+      if (other.loadout_ != null) {
+        if (loadout_ == null) {
+          Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
+        }
+        Loadout.MergeFrom(other.Loadout);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -201,6 +233,13 @@ namespace Mobius.Proto.Identity {
             input.ReadMessage(Identity);
             break;
           }
+          case 18: {
+            if (loadout_ == null) {
+              Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
+            }
+            input.ReadMessage(Loadout);
+            break;
+          }
         }
       }
     #endif
@@ -220,6 +259,13 @@ namespace Mobius.Proto.Identity {
               Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
             }
             input.ReadMessage(Identity);
+            break;
+          }
+          case 18: {
+            if (loadout_ == null) {
+              Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
+            }
+            input.ReadMessage(Loadout);
             break;
           }
         }
