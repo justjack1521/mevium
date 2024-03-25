@@ -9,6 +9,7 @@ import "protoidentity/player.proto";
 
 message GetSinglePlayerIdentityResponse {
   identity.ProtoPlayerIdentity identity = 1;
+  identity.ProtoPlayerLoadoutIdentity loadout = 2;
 }
 
 message GetSinglePlayerLoadoutResponse {

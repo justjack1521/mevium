@@ -25,29 +25,30 @@ namespace Mobius.Proto.Rank {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxwcm90b3JhbmsvcmFuay5yZXF1ZXN0LnByb3RvEgRyYW5rGhRwcm90b3Jh",
-            "bmsvcmFuay5wcm90bxoYcHJvdG9zb2NpYWwvc29jaWFsLnByb3RvIrcBChJT",
-            "dWJtaXRTY29yZVJlcXVlc3QSEQoJcGxheWVyX2lkGAEgASgJEhMKC3BsYXll",
-            "cl9uYW1lGAIgASgJEhQKDHBsYXllcl9sZXZlbBgDIAEoBRINCgVzY29yZRgE",
-            "IAEoBBIRCglyZWdpb25faWQYBSABKAkSEgoKbm9kZV9pbmRleBgGIAEoBRIt",
-            "Cgdsb2Fkb3V0GAcgASgLMhwucHJlc2VuY2UuUHJvdG9QbGF5ZXJMb2Fkb3V0",
-            "IkUKHVJlZnJlc2hXZWVrbHlSYW5rUmFuZ2VSZXF1ZXN0EhEKCXBsYXllcl9p",
-            "ZBgBIAEoCRIRCglyZWdpb25faWQYAiABKAkiRgoeUmVmcmVzaFNwZWNpYWxS",
-            "YW5rUmFuZ2VSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIRCglyZWdpb25f",
-            "aWQYAiABKAkiMgodRmV0Y2hQbGF5ZXJSYW5raW5nSW5mb1JlcXVlc3QSEQoJ",
-            "cGxheWVyX2lkGAEgASgJInYKHkZldGNoUGxheWVyUmFua2luZ0luZm9SZXNw",
-            "b25zZRImCgZhY3RpdmUYASADKAsyFi5yYW5rLlByb3RvUmFua2luZ0luZm8S",
-            "LAoGY2xhaW1zGAIgAygLMhwucmFuay5Qcm90b1JhbmtpbmdFdmVudENsYWlt",
-            "Ij8KHEdldFBsYXllckV2ZW50UmV3YXJkc1JlcXVlc3QSEQoJcGxheWVyX2lk",
-            "GAEgASgJEgwKBGNvZGUYAiABKAkiYwodR2V0UGxheWVyRXZlbnRSZXdhcmRz",
-            "UmVzcG9uc2USEgoKZXZlbnRfbmFtZRgBIAEoCRIuCgdyZXdhcmRzGAIgAygL",
-            "Mh0ucmFuay5Qcm90b1JhbmtpbmdFdmVudFJld2FyZCo0Cg9SYW5rUmVxdWVz",
-            "dFR5cGUSCAoETk9ORRAAEhcKEkdFVF9SQU5LSU5HX0VWRU5UUxCoFEJLWjVn",
-            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
-            "b3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
+            "bmsvcmFuay5wcm90bxoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8i6AEK",
+            "ElN1Ym1pdFNjb3JlUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEwoLcGxh",
+            "eWVyX25hbWUYAiABKAkSFAoMcGxheWVyX2xldmVsGAMgASgFEg0KBXNjb3Jl",
+            "GAQgASgEEhEKCXJlZ2lvbl9pZBgFIAEoCRISCgpub2RlX2luZGV4GAYgASgF",
+            "Ei8KCGlkZW50aXR5GAcgASgLMh0uaWRlbnRpdHkuUHJvdG9QbGF5ZXJJZGVu",
+            "dGl0eRItCgdsb2Fkb3V0GAggASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5ZXJM",
+            "b2Fkb3V0IkUKHVJlZnJlc2hXZWVrbHlSYW5rUmFuZ2VSZXF1ZXN0EhEKCXBs",
+            "YXllcl9pZBgBIAEoCRIRCglyZWdpb25faWQYAiABKAkiRgoeUmVmcmVzaFNw",
+            "ZWNpYWxSYW5rUmFuZ2VSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIRCgly",
+            "ZWdpb25faWQYAiABKAkiMgodRmV0Y2hQbGF5ZXJSYW5raW5nSW5mb1JlcXVl",
+            "c3QSEQoJcGxheWVyX2lkGAEgASgJInYKHkZldGNoUGxheWVyUmFua2luZ0lu",
+            "Zm9SZXNwb25zZRImCgZhY3RpdmUYASADKAsyFi5yYW5rLlByb3RvUmFua2lu",
+            "Z0luZm8SLAoGY2xhaW1zGAIgAygLMhwucmFuay5Qcm90b1JhbmtpbmdFdmVu",
+            "dENsYWltIj8KHEdldFBsYXllckV2ZW50UmV3YXJkc1JlcXVlc3QSEQoJcGxh",
+            "eWVyX2lkGAEgASgJEgwKBGNvZGUYAiABKAkiYwodR2V0UGxheWVyRXZlbnRS",
+            "ZXdhcmRzUmVzcG9uc2USEgoKZXZlbnRfbmFtZRgBIAEoCRIuCgdyZXdhcmRz",
+            "GAIgAygLMh0ucmFuay5Qcm90b1JhbmtpbmdFdmVudFJld2FyZCo0Cg9SYW5r",
+            "UmVxdWVzdFR5cGUSCAoETk9ORRAAEhcKEkdFVF9SQU5LSU5HX0VWRU5UUxCo",
+            "FEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
+            "b3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Mobius.Proto.Social.SocialReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.SubmitScoreRequest), global::Mobius.Proto.Rank.SubmitScoreRequest.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "RegionId", "NodeIndex", "Loadout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.SubmitScoreRequest), global::Mobius.Proto.Rank.SubmitScoreRequest.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "RegionId", "NodeIndex", "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshWeeklyRankRangeRequest), global::Mobius.Proto.Rank.RefreshWeeklyRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest), global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
@@ -103,6 +104,7 @@ namespace Mobius.Proto.Rank {
       score_ = other.score_;
       regionId_ = other.regionId_;
       nodeIndex_ = other.nodeIndex_;
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
       loadout_ = other.loadout_ != null ? other.loadout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -178,11 +180,22 @@ namespace Mobius.Proto.Rank {
       }
     }
 
-    /// <summary>Field number for the "loadout" field.</summary>
-    public const int LoadoutFieldNumber = 7;
-    private global::Mobius.Proto.Social.ProtoPlayerLoadout loadout_;
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 7;
+    private global::Mobius.Proto.Identity.ProtoPlayerIdentity identity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Social.ProtoPlayerLoadout Loadout {
+    public global::Mobius.Proto.Identity.ProtoPlayerIdentity Identity {
+      get { return identity_; }
+      set {
+        identity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "loadout" field.</summary>
+    public const int LoadoutFieldNumber = 8;
+    private global::Mobius.Proto.Identity.ProtoPlayerLoadout loadout_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Identity.ProtoPlayerLoadout Loadout {
       get { return loadout_; }
       set {
         loadout_ = value;
@@ -208,6 +221,7 @@ namespace Mobius.Proto.Rank {
       if (Score != other.Score) return false;
       if (RegionId != other.RegionId) return false;
       if (NodeIndex != other.NodeIndex) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
       if (!object.Equals(Loadout, other.Loadout)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -221,6 +235,7 @@ namespace Mobius.Proto.Rank {
       if (Score != 0UL) hash ^= Score.GetHashCode();
       if (RegionId.Length != 0) hash ^= RegionId.GetHashCode();
       if (NodeIndex != 0) hash ^= NodeIndex.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
       if (loadout_ != null) hash ^= Loadout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -262,8 +277,12 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(48);
         output.WriteInt32(NodeIndex);
       }
-      if (loadout_ != null) {
+      if (identity_ != null) {
         output.WriteRawTag(58);
+        output.WriteMessage(Identity);
+      }
+      if (loadout_ != null) {
+        output.WriteRawTag(66);
         output.WriteMessage(Loadout);
       }
       if (_unknownFields != null) {
@@ -299,8 +318,12 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(48);
         output.WriteInt32(NodeIndex);
       }
-      if (loadout_ != null) {
+      if (identity_ != null) {
         output.WriteRawTag(58);
+        output.WriteMessage(Identity);
+      }
+      if (loadout_ != null) {
+        output.WriteRawTag(66);
         output.WriteMessage(Loadout);
       }
       if (_unknownFields != null) {
@@ -329,6 +352,9 @@ namespace Mobius.Proto.Rank {
       }
       if (NodeIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeIndex);
+      }
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
       if (loadout_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Loadout);
@@ -362,9 +388,15 @@ namespace Mobius.Proto.Rank {
       if (other.NodeIndex != 0) {
         NodeIndex = other.NodeIndex;
       }
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+        }
+        Identity.MergeFrom(other.Identity);
+      }
       if (other.loadout_ != null) {
         if (loadout_ == null) {
-          Loadout = new global::Mobius.Proto.Social.ProtoPlayerLoadout();
+          Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadout();
         }
         Loadout.MergeFrom(other.Loadout);
       }
@@ -407,8 +439,15 @@ namespace Mobius.Proto.Rank {
             break;
           }
           case 58: {
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+            }
+            input.ReadMessage(Identity);
+            break;
+          }
+          case 66: {
             if (loadout_ == null) {
-              Loadout = new global::Mobius.Proto.Social.ProtoPlayerLoadout();
+              Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadout();
             }
             input.ReadMessage(Loadout);
             break;
@@ -452,8 +491,15 @@ namespace Mobius.Proto.Rank {
             break;
           }
           case 58: {
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+            }
+            input.ReadMessage(Identity);
+            break;
+          }
+          case 66: {
             if (loadout_ == null) {
-              Loadout = new global::Mobius.Proto.Social.ProtoPlayerLoadout();
+              Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadout();
             }
             input.ReadMessage(Loadout);
             break;

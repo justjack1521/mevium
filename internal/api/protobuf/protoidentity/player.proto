@@ -11,6 +11,23 @@ message ProtoPlayerIdentity {
   int32 player_level = 3;
 }
 
+message ProtoPlayerLoadoutIdentity {
+  string job_card_id = 1;
+  int32 sub_job_index = 2;
+  string weapon_id = 3;
+  int32 sub_weapon_unlock = 4;
+  repeated ProtoPlayerCardIdentity ability_cards = 5;
+}
+
+message ProtoPlayerCardIdentity {
+  string ability_card_id = 1;
+  int32 ability_card_level = 2;
+  int32 ability_level = 3;
+  int32 extra_skill_unlock = 4;
+  int32 over_boost_level = 5;
+  int32 slot_index = 6;
+}
+
 message ProtoPlayerLoadout {
   int32 deck_index = 1;
   ProtoJobCard job_card = 2;

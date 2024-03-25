@@ -24,25 +24,26 @@ namespace Mobius.Proto.Challenge {
     static ChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5wcm90b2NoYWxsZW5nZS9jaGFsbGVuZ2UucHJvdG8SCWNoYWxsZW5nZRoY",
-            "cHJvdG9zb2NpYWwvc29jaWFsLnByb3RvIugBChxQcm90b1NvY2lhbENoYWxs",
-            "ZW5nZUluc3RhbmNlEg4KBnN5c19pZBgBIAEoCRIUCgxjaGFsbGVuZ2VfaWQY",
-            "AiABKAkSEgoKbWlzc2lvbl9pZBgDIAEoCRIVCg1yZWdpc3Rlcl90aW1lGAQg",
-            "ASgDEhIKCnN0YXJ0X3RpbWUYBSABKAMSEAoIZW5kX3RpbWUYBiABKAMSDQoF",
-            "c3RhdGUYByABKAUSQgoOcGxheWVyX2VudHJpZXMYCCADKAsyKi5jaGFsbGVu",
-            "Z2UuUHJvdG9QbGF5ZXJTb2NpYWxDaGFsbGVuZ2VFbnRyeSLGAQofUHJvdG9Q",
-            "bGF5ZXJTb2NpYWxDaGFsbGVuZ2VFbnRyeRIRCglwbGF5ZXJfaWQYASABKAkS",
-            "EwoLcGxheWVyX25hbWUYAiABKAkSFAoMcGxheWVyX2xldmVsGAMgASgFEg0K",
-            "BXNjb3JlGAQgASgDEgwKBHJhbmsYBSABKAMSNQoPcHJpbWFyeV9sb2Fkb3V0",
-            "GAYgASgLMhwucHJlc2VuY2UuUHJvdG9QbGF5ZXJMb2Fkb3V0EhEKCWlzX3Bs",
-            "YXllchgHIAEoCEJVWjpnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0v",
-            "cGtnL2dlbnByb3RvL3Byb3RvY2hhbGxlbmdlqgIWTW9iaXVzLlByb3RvLkNo",
-            "YWxsZW5nZWIGcHJvdG8z"));
+            "Ch5wcm90b2NoYWxsZW5nZS9jaGFsbGVuZ2UucHJvdG8SCWNoYWxsZW5nZRoa",
+            "cHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8i6AEKHFByb3RvU29jaWFsQ2hh",
+            "bGxlbmdlSW5zdGFuY2USDgoGc3lzX2lkGAEgASgJEhQKDGNoYWxsZW5nZV9p",
+            "ZBgCIAEoCRISCgptaXNzaW9uX2lkGAMgASgJEhUKDXJlZ2lzdGVyX3RpbWUY",
+            "BCABKAMSEgoKc3RhcnRfdGltZRgFIAEoAxIQCghlbmRfdGltZRgGIAEoAxIN",
+            "CgVzdGF0ZRgHIAEoBRJCCg5wbGF5ZXJfZW50cmllcxgIIAMoCzIqLmNoYWxs",
+            "ZW5nZS5Qcm90b1BsYXllclNvY2lhbENoYWxsZW5nZUVudHJ5Iv8BCh9Qcm90",
+            "b1BsYXllclNvY2lhbENoYWxsZW5nZUVudHJ5EhEKCXBsYXllcl9pZBgBIAEo",
+            "CRITCgtwbGF5ZXJfbmFtZRgCIAEoCRIUCgxwbGF5ZXJfbGV2ZWwYAyABKAUS",
+            "DQoFc2NvcmUYBCABKAMSDAoEcmFuaxgFIAEoAxIvCghpZGVudGl0eRgGIAEo",
+            "CzIdLmlkZW50aXR5LlByb3RvUGxheWVySWRlbnRpdHkSPQoPcHJpbWFyeV9s",
+            "b2Fkb3V0GAcgASgLMiQuaWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0SWRl",
+            "bnRpdHkSEQoJaXNfcGxheWVyGAggASgIQlVaOmdpdGh1Yi5jb20vanVzdGph",
+            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9jaGFsbGVuZ2WqAhZN",
+            "b2JpdXMuUHJvdG8uQ2hhbGxlbmdlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mobius.Proto.Social.SocialReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance), global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance.Parser, new[]{ "SysId", "ChallengeId", "MissionId", "RegisterTime", "StartTime", "EndTime", "State", "PlayerEntries" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry), global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "Rank", "PrimaryLoadout", "IsPlayer" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry), global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "Rank", "Identity", "PrimaryLoadout", "IsPlayer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -496,6 +497,7 @@ namespace Mobius.Proto.Challenge {
       playerLevel_ = other.playerLevel_;
       score_ = other.score_;
       rank_ = other.rank_;
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
       primaryLoadout_ = other.primaryLoadout_ != null ? other.primaryLoadout_.Clone() : null;
       isPlayer_ = other.isPlayer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -561,11 +563,22 @@ namespace Mobius.Proto.Challenge {
       }
     }
 
-    /// <summary>Field number for the "primary_loadout" field.</summary>
-    public const int PrimaryLoadoutFieldNumber = 6;
-    private global::Mobius.Proto.Social.ProtoPlayerLoadout primaryLoadout_;
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 6;
+    private global::Mobius.Proto.Identity.ProtoPlayerIdentity identity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Social.ProtoPlayerLoadout PrimaryLoadout {
+    public global::Mobius.Proto.Identity.ProtoPlayerIdentity Identity {
+      get { return identity_; }
+      set {
+        identity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "primary_loadout" field.</summary>
+    public const int PrimaryLoadoutFieldNumber = 7;
+    private global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity primaryLoadout_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity PrimaryLoadout {
       get { return primaryLoadout_; }
       set {
         primaryLoadout_ = value;
@@ -573,7 +586,7 @@ namespace Mobius.Proto.Challenge {
     }
 
     /// <summary>Field number for the "is_player" field.</summary>
-    public const int IsPlayerFieldNumber = 7;
+    public const int IsPlayerFieldNumber = 8;
     private bool isPlayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsPlayer {
@@ -601,6 +614,7 @@ namespace Mobius.Proto.Challenge {
       if (PlayerLevel != other.PlayerLevel) return false;
       if (Score != other.Score) return false;
       if (Rank != other.Rank) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
       if (!object.Equals(PrimaryLoadout, other.PrimaryLoadout)) return false;
       if (IsPlayer != other.IsPlayer) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -614,6 +628,7 @@ namespace Mobius.Proto.Challenge {
       if (PlayerLevel != 0) hash ^= PlayerLevel.GetHashCode();
       if (Score != 0L) hash ^= Score.GetHashCode();
       if (Rank != 0L) hash ^= Rank.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
       if (primaryLoadout_ != null) hash ^= PrimaryLoadout.GetHashCode();
       if (IsPlayer != false) hash ^= IsPlayer.GetHashCode();
       if (_unknownFields != null) {
@@ -652,12 +667,16 @@ namespace Mobius.Proto.Challenge {
         output.WriteRawTag(40);
         output.WriteInt64(Rank);
       }
-      if (primaryLoadout_ != null) {
+      if (identity_ != null) {
         output.WriteRawTag(50);
+        output.WriteMessage(Identity);
+      }
+      if (primaryLoadout_ != null) {
+        output.WriteRawTag(58);
         output.WriteMessage(PrimaryLoadout);
       }
       if (IsPlayer != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteBool(IsPlayer);
       }
       if (_unknownFields != null) {
@@ -689,12 +708,16 @@ namespace Mobius.Proto.Challenge {
         output.WriteRawTag(40);
         output.WriteInt64(Rank);
       }
-      if (primaryLoadout_ != null) {
+      if (identity_ != null) {
         output.WriteRawTag(50);
+        output.WriteMessage(Identity);
+      }
+      if (primaryLoadout_ != null) {
+        output.WriteRawTag(58);
         output.WriteMessage(PrimaryLoadout);
       }
       if (IsPlayer != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteBool(IsPlayer);
       }
       if (_unknownFields != null) {
@@ -720,6 +743,9 @@ namespace Mobius.Proto.Challenge {
       }
       if (Rank != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Rank);
+      }
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
       if (primaryLoadout_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrimaryLoadout);
@@ -753,9 +779,15 @@ namespace Mobius.Proto.Challenge {
       if (other.Rank != 0L) {
         Rank = other.Rank;
       }
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+        }
+        Identity.MergeFrom(other.Identity);
+      }
       if (other.primaryLoadout_ != null) {
         if (primaryLoadout_ == null) {
-          PrimaryLoadout = new global::Mobius.Proto.Social.ProtoPlayerLoadout();
+          PrimaryLoadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
         }
         PrimaryLoadout.MergeFrom(other.PrimaryLoadout);
       }
@@ -797,13 +829,20 @@ namespace Mobius.Proto.Challenge {
             break;
           }
           case 50: {
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+            }
+            input.ReadMessage(Identity);
+            break;
+          }
+          case 58: {
             if (primaryLoadout_ == null) {
-              PrimaryLoadout = new global::Mobius.Proto.Social.ProtoPlayerLoadout();
+              PrimaryLoadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
             }
             input.ReadMessage(PrimaryLoadout);
             break;
           }
-          case 56: {
+          case 64: {
             IsPlayer = input.ReadBool();
             break;
           }
@@ -842,13 +881,20 @@ namespace Mobius.Proto.Challenge {
             break;
           }
           case 50: {
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+            }
+            input.ReadMessage(Identity);
+            break;
+          }
+          case 58: {
             if (primaryLoadout_ == null) {
-              PrimaryLoadout = new global::Mobius.Proto.Social.ProtoPlayerLoadout();
+              PrimaryLoadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
             }
             input.ReadMessage(PrimaryLoadout);
             break;
           }
-          case 56: {
+          case 64: {
             IsPlayer = input.ReadBool();
             break;
           }

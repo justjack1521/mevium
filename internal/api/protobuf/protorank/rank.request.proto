@@ -6,7 +6,7 @@ option csharp_namespace = "Mobius.Proto.Rank";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protorank";
 
 import "protorank/rank.proto";
-import "protosocial/social.proto";
+import "protoidentity/player.proto";
 
 enum RankRequestType {
   NONE = 0;
@@ -20,7 +20,8 @@ message SubmitScoreRequest {
   uint64 score = 4;
   string region_id = 5;
   int32 node_index = 6;
-  presence.ProtoPlayerLoadout loadout = 7;
+  identity.ProtoPlayerIdentity identity = 7;
+  identity.ProtoPlayerLoadout loadout = 8;
 }
 
 message RefreshWeeklyRankRangeRequest {

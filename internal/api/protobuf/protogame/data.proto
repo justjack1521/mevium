@@ -5,7 +5,7 @@ package game;
 option csharp_namespace = "Mobius.Proto.Game";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
-import "protosocial/social.proto";
+import "protoidentity/player.proto";
 
 enum ReferenceSource {
   NONE = 0;
@@ -121,7 +121,7 @@ message ProtoBattleStartData {
   repeated ProtoCardProgressData card_progress_data = 16;
 
   string rental_player_id = 17;
-  presence.ProtoPlayerCardInfo rental_card = 18;
+  identity.ProtoPlayerCardIdentity rental_card = 18;
 
   int64 created_at = 20;
 }
