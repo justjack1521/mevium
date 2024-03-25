@@ -20,9 +20,10 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusIdentityService_GetSinglePlayerIdentity_FullMethodName = "/service.MeviusIdentityService/GetSinglePlayerIdentity"
-	MeviusIdentityService_GetSinglePlayerLoadout_FullMethodName  = "/service.MeviusIdentityService/GetSinglePlayerLoadout"
-	MeviusIdentityService_GetMultiPlayerLoadout_FullMethodName   = "/service.MeviusIdentityService/GetMultiPlayerLoadout"
+	MeviusIdentityService_GetSinglePlayerIdentity_FullMethodName        = "/service.MeviusIdentityService/GetSinglePlayerIdentity"
+	MeviusIdentityService_GetSinglePlayerLoadoutIdentity_FullMethodName = "/service.MeviusIdentityService/GetSinglePlayerLoadoutIdentity"
+	MeviusIdentityService_GetSinglePlayerLoadout_FullMethodName         = "/service.MeviusIdentityService/GetSinglePlayerLoadout"
+	MeviusIdentityService_GetMultiPlayerLoadout_FullMethodName          = "/service.MeviusIdentityService/GetMultiPlayerLoadout"
 )
 
 // MeviusIdentityServiceClient is the client API for MeviusIdentityService service.
@@ -30,6 +31,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusIdentityServiceClient interface {
 	GetSinglePlayerIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerIdentityResponse, error)
+	GetSinglePlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error)
 	GetSinglePlayerLoadout(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutResponse, error)
 	GetMultiPlayerLoadout(ctx context.Context, in *protoidentity.GetMultiPlayerLoadoutRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutResponse, error)
 }
@@ -45,6 +47,15 @@ func NewMeviusIdentityServiceClient(cc grpc.ClientConnInterface) MeviusIdentityS
 func (c *meviusIdentityServiceClient) GetSinglePlayerIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerIdentityResponse, error) {
 	out := new(protoidentity.GetSinglePlayerIdentityResponse)
 	err := c.cc.Invoke(ctx, MeviusIdentityService_GetSinglePlayerIdentity_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusIdentityServiceClient) GetSinglePlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error) {
+	out := new(protoidentity.GetSinglePlayerLoadoutIdentityResponse)
+	err := c.cc.Invoke(ctx, MeviusIdentityService_GetSinglePlayerLoadoutIdentity_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -74,6 +85,7 @@ func (c *meviusIdentityServiceClient) GetMultiPlayerLoadout(ctx context.Context,
 // for forward compatibility
 type MeviusIdentityServiceServer interface {
 	GetSinglePlayerIdentity(context.Context, *protoidentity.GetSinglePlayerIdentityRequest) (*protoidentity.GetSinglePlayerIdentityResponse, error)
+	GetSinglePlayerLoadoutIdentity(context.Context, *protoidentity.GetSinglePlayerLoadoutIdentityRequest) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error)
 	GetSinglePlayerLoadout(context.Context, *protoidentity.GetSinglePlayerLoadoutRequest) (*protoidentity.GetSinglePlayerLoadoutResponse, error)
 	GetMultiPlayerLoadout(context.Context, *protoidentity.GetMultiPlayerLoadoutRequest) (*protoidentity.GetMultiPlayerLoadoutResponse, error)
 }
@@ -84,6 +96,9 @@ type UnimplementedMeviusIdentityServiceServer struct {
 
 func (UnimplementedMeviusIdentityServiceServer) GetSinglePlayerIdentity(context.Context, *protoidentity.GetSinglePlayerIdentityRequest) (*protoidentity.GetSinglePlayerIdentityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSinglePlayerIdentity not implemented")
+}
+func (UnimplementedMeviusIdentityServiceServer) GetSinglePlayerLoadoutIdentity(context.Context, *protoidentity.GetSinglePlayerLoadoutIdentityRequest) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSinglePlayerLoadoutIdentity not implemented")
 }
 func (UnimplementedMeviusIdentityServiceServer) GetSinglePlayerLoadout(context.Context, *protoidentity.GetSinglePlayerLoadoutRequest) (*protoidentity.GetSinglePlayerLoadoutResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSinglePlayerLoadout not implemented")
@@ -117,6 +132,24 @@ func _MeviusIdentityService_GetSinglePlayerIdentity_Handler(srv interface{}, ctx
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusIdentityServiceServer).GetSinglePlayerIdentity(ctx, req.(*protoidentity.GetSinglePlayerIdentityRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusIdentityService_GetSinglePlayerLoadoutIdentity_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoidentity.GetSinglePlayerLoadoutIdentityRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusIdentityServiceServer).GetSinglePlayerLoadoutIdentity(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusIdentityService_GetSinglePlayerLoadoutIdentity_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusIdentityServiceServer).GetSinglePlayerLoadoutIdentity(ctx, req.(*protoidentity.GetSinglePlayerLoadoutIdentityRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -167,6 +200,10 @@ var MeviusIdentityService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetSinglePlayerIdentity",
 			Handler:    _MeviusIdentityService_GetSinglePlayerIdentity_Handler,
+		},
+		{
+			MethodName: "GetSinglePlayerLoadoutIdentity",
+			Handler:    _MeviusIdentityService_GetSinglePlayerLoadoutIdentity_Handler,
 		},
 		{
 			MethodName: "GetSinglePlayerLoadout",
