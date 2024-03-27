@@ -51,6 +51,7 @@ message RegisterUserRequest {
 }
 
 message RegisterUserResponse {
+  string user_id = 1;
 }
 
 message UserHasRoleRequest {
