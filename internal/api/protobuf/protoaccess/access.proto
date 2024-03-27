@@ -4,8 +4,6 @@ package access;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoaccess";
 
-import "protocommon/common.proto";
-
 message AuthenticateTokenRequest {
   string user_id = 1;
   string bearer = 2;
@@ -13,7 +11,6 @@ message AuthenticateTokenRequest {
 }
 
 message AuthenticateTokenResponse {
-  common.ResponseHeader header = 1;
 }
 
 message ChangePasswordRequest {
@@ -24,7 +21,6 @@ message ChangePasswordRequest {
 }
 
 message ChangePasswordResponse {
-  common.ResponseHeader header = 1;
 }
 
 message LoginUserRequest {
@@ -33,6 +29,7 @@ message LoginUserRequest {
 }
 
 message LoginUserResponse {
+  string user_id = 1;
   string access_token = 2;
   string refresh_token = 3;
   string customer_id = 4;
