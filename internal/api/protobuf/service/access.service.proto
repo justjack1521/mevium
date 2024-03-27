@@ -8,12 +8,11 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/services";
 import "protoaccess/access.proto";
 
 service AccessService {
-  rpc AuthToken(access.AuthTokenRequest) returns (access.AuthTokenResponse) {}
+  rpc AuthenticateToken(access.AuthenticateTokenRequest) returns (access.AuthenticateTokenResponse) {}
   rpc ChangePassword(access.ChangePasswordRequest) returns (access.ChangePasswordResponse) {}
   rpc LoginUser(access.LoginUserRequest) returns (access.LoginUserResponse) {}
   rpc RefreshToken(access.RefreshTokenRequest) returns (access.RefreshTokenResponse) {}
   rpc RegisterUser(access.RegisterUserRequest) returns (access.RegisterUserResponse) {}
   rpc UserHasRole(access.UserHasRoleRequest) returns (access.UserHasRoleResponse) {}
   rpc CustomerSearch(access.CustomerSearchRequest) returns (access.CustomerSearchResponse) {}
-  rpc RememberTokenQuery(access.RememberTokenQueryRequest) returns (access.RememberTokenQueryResponse) {}
 }
