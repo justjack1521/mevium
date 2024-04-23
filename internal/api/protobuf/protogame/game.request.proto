@@ -43,6 +43,7 @@ enum GameRequestType {
   CARD_AUGMENT = 3300;
   CLAIM_DAILY_MISSION = 3400;
   COMPLETE_REGION_MAP = 3700;
+  SUMMON_CARD = 3800;
 }
 
 enum TeleportRequestType {
@@ -234,4 +235,8 @@ message AbilityShopPurchaseRequest {
 
 message CompleteRegionMapRequest {
   string region_map_id = 1;
+}
+
+message CardSummonRequest {
+  string banner_id = 1;
 }

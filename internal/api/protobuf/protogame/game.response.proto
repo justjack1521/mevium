@@ -198,3 +198,6 @@ message CompleteRegionMapResponse {
   map<string, int32> augment_level_rewards = 4;
 }
 
+message CardSummonResponse {
+
+}

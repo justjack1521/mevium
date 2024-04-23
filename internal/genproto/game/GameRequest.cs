@@ -81,28 +81,29 @@ namespace Mobius.Proto.Game {
             "IAEoCRIVCg1jb3N0X3F1YW50aXR5GAQgASgFIkIKGkFiaWxpdHlTaG9wUHVy",
             "Y2hhc2VSZXF1ZXN0EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRILCgNtYXgY",
             "AiABKAgiMQoYQ29tcGxldGVSZWdpb25NYXBSZXF1ZXN0EhUKDXJlZ2lvbl9t",
-            "YXBfaWQYASABKAkq9wUKD0dhbWVSZXF1ZXN0VHlwZRIICgRCQVNFEAASEAoL",
-            "R0VUX1BST0ZJTEUQyAESEwoOQ1JFQVRFX1BST0ZJTEUQrAISEwoOVVBEQVRF",
-            "X1BST0ZJTEUQ3gISDgoJQ0FSRF9TQUxFEJADEhUKEENBUkRfRklMVEVSX1NP",
-            "UlQQ9AMSEwoOQ0FSRF9GQVZPVVJJVEUQ2AQSEAoLU0tJTExfUEFORUwQvAUS",
-            "DgoJREVDS19FRElUEKAGEhIKDURFQ0tfRURJVF9BTEwQhAcSDQoIVEVMRVBP",
-            "UlQQ6AcSGQoUUFJPQ0VTU19SRUdJT05fRVZFTlQQzAgSHgoZUFJPQ0VTU19S",
-            "RUdJT05fTk9ERV9FVkVOVBD+CBISCg1CQVRUTEVfUkVWSVZFELAJEhQKD0JB",
-            "VFRMRV9DT01QTEVURRCUChIaChVDT05GSVJNX0RBSUxZX01JU1NJT04QwAwS",
-            "GAoTQ0xBSU1fRVZFTlRfUkFOS0lORxCkDRISCg1DTEFJTV9NQUlMQk9YEIgO",
-            "EhEKDEJBVFRMRV9TVEFSVBDsDhISCg1DQVJEX1RSQU5TRkVSENAPEhYKEUVY",
-            "UEFORF9DQVJEX1NMT1RTEIIQEhAKC0NBUkRfRlVTSU9OELQQEhYKEUNBUkRf",
-            "RlVTSU9OX0JPT1NUEJgREhQKD1NUQU1JTkFfUkVTVE9SRRD8ERIWChFGSVJT",
-            "VF9EQUlMWV9MT0dJThDgEhIZChRDTEFJTV9MT0dJTl9DQU1QQUlHThDEExIX",
-            "ChJERUxFVEVfQUxMX01BSUxCT1gQjBUSGAoTQ0xBSU1fUkVOVEFMX1JFV0FS",
-            "RBDwFRISCg1QVVJDSEFTRV9JVEVNELgXEhIKDVBVUkNIQVNFX0NBUkQQnBgS",
-            "GgoVQUJJTElUWV9TSE9QX1BVUkNIQVNFEIAZEhEKDENBUkRfQVVHTUVOVBDk",
-            "GRIYChNDTEFJTV9EQUlMWV9NSVNTSU9OEMgaEhgKE0NPTVBMRVRFX1JFR0lP",
-            "Tl9NQVAQ9BwqWAoTVGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RF",
-            "TEVQT1JUEAASCQoFTE9HSU4QARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoG",
-            "QkFUVExFEARCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3Br",
-            "Zy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJv",
-            "dG8z"));
+            "YXBfaWQYASABKAkiJgoRQ2FyZFN1bW1vblJlcXVlc3QSEQoJYmFubmVyX2lk",
+            "GAEgASgJKokGCg9HYW1lUmVxdWVzdFR5cGUSCAoEQkFTRRAAEhAKC0dFVF9Q",
+            "Uk9GSUxFEMgBEhMKDkNSRUFURV9QUk9GSUxFEKwCEhMKDlVQREFURV9QUk9G",
+            "SUxFEN4CEg4KCUNBUkRfU0FMRRCQAxIVChBDQVJEX0ZJTFRFUl9TT1JUEPQD",
+            "EhMKDkNBUkRfRkFWT1VSSVRFENgEEhAKC1NLSUxMX1BBTkVMELwFEg4KCURF",
+            "Q0tfRURJVBCgBhISCg1ERUNLX0VESVRfQUxMEIQHEg0KCFRFTEVQT1JUEOgH",
+            "EhkKFFBST0NFU1NfUkVHSU9OX0VWRU5UEMwIEh4KGVBST0NFU1NfUkVHSU9O",
+            "X05PREVfRVZFTlQQ/ggSEgoNQkFUVExFX1JFVklWRRCwCRIUCg9CQVRUTEVf",
+            "Q09NUExFVEUQlAoSGgoVQ09ORklSTV9EQUlMWV9NSVNTSU9OEMAMEhgKE0NM",
+            "QUlNX0VWRU5UX1JBTktJTkcQpA0SEgoNQ0xBSU1fTUFJTEJPWBCIDhIRCgxC",
+            "QVRUTEVfU1RBUlQQ7A4SEgoNQ0FSRF9UUkFOU0ZFUhDQDxIWChFFWFBBTkRf",
+            "Q0FSRF9TTE9UUxCCEBIQCgtDQVJEX0ZVU0lPThC0EBIWChFDQVJEX0ZVU0lP",
+            "Tl9CT09TVBCYERIUCg9TVEFNSU5BX1JFU1RPUkUQ/BESFgoRRklSU1RfREFJ",
+            "TFlfTE9HSU4Q4BISGQoUQ0xBSU1fTE9HSU5fQ0FNUEFJR04QxBMSFwoSREVM",
+            "RVRFX0FMTF9NQUlMQk9YEIwVEhgKE0NMQUlNX1JFTlRBTF9SRVdBUkQQ8BUS",
+            "EgoNUFVSQ0hBU0VfSVRFTRC4FxISCg1QVVJDSEFTRV9DQVJEEJwYEhoKFUFC",
+            "SUxJVFlfU0hPUF9QVVJDSEFTRRCAGRIRCgxDQVJEX0FVR01FTlQQ5BkSGAoT",
+            "Q0xBSU1fREFJTFlfTUlTU0lPThDIGhIYChNDT01QTEVURV9SRUdJT05fTUFQ",
+            "EPQcEhAKC1NVTU1PTl9DQVJEENgdKlgKE1RlbGVwb3J0UmVxdWVzdFR5cGUS",
+            "FAoQSU5WQUxJRF9URUxFUE9SVBAAEgkKBUxPR0lOEAESCQoFV09STEQQAhIJ",
+            "CgVGSUVMRBADEgoKBkJBVFRMRRAEQktaNWdpdGh1Yi5jb20vanVzdGphY2sx",
+            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlBy",
+            "b3RvLkdhbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -139,7 +140,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopItemPurchaseRequest), global::Mobius.Proto.Game.ItemShopItemPurchaseRequest.Parser, new[]{ "ReceiveItem", "ReceiveQuantity", "CostItem", "CostQuantity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopCardPurchaseRequest), global::Mobius.Proto.Game.ItemShopCardPurchaseRequest.Parser, new[]{ "ReceiveCard", "ReceiveQuantity", "CostItem", "CostQuantity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityShopPurchaseRequest), global::Mobius.Proto.Game.AbilityShopPurchaseRequest.Parser, new[]{ "AbilityCardId", "Max" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CompleteRegionMapRequest), global::Mobius.Proto.Game.CompleteRegionMapRequest.Parser, new[]{ "RegionMapId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CompleteRegionMapRequest), global::Mobius.Proto.Game.CompleteRegionMapRequest.Parser, new[]{ "RegionMapId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSummonRequest), global::Mobius.Proto.Game.CardSummonRequest.Parser, new[]{ "BannerId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -181,6 +183,7 @@ namespace Mobius.Proto.Game {
     [pbr::OriginalName("CARD_AUGMENT")] CardAugment = 3300,
     [pbr::OriginalName("CLAIM_DAILY_MISSION")] ClaimDailyMission = 3400,
     [pbr::OriginalName("COMPLETE_REGION_MAP")] CompleteRegionMap = 3700,
+    [pbr::OriginalName("SUMMON_CARD")] SummonCard = 3800,
   }
 
   public enum TeleportRequestType {
@@ -7330,6 +7333,178 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             RegionMapId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class CardSummonRequest : pb::IMessage<CardSummonRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CardSummonRequest> _parser = new pb::MessageParser<CardSummonRequest>(() => new CardSummonRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CardSummonRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameRequestReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CardSummonRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CardSummonRequest(CardSummonRequest other) : this() {
+      bannerId_ = other.bannerId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CardSummonRequest Clone() {
+      return new CardSummonRequest(this);
+    }
+
+    /// <summary>Field number for the "banner_id" field.</summary>
+    public const int BannerIdFieldNumber = 1;
+    private string bannerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BannerId {
+      get { return bannerId_; }
+      set {
+        bannerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CardSummonRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CardSummonRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (BannerId != other.BannerId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (BannerId.Length != 0) hash ^= BannerId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (BannerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(BannerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BannerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(BannerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (BannerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BannerId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CardSummonRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.BannerId.Length != 0) {
+        BannerId = other.BannerId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            BannerId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            BannerId = input.ReadString();
             break;
           }
         }
