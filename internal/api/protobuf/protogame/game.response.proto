@@ -199,5 +199,5 @@ message CompleteRegionMapResponse {
 }
 
 message CardSummonResponse {
-
+  repeated game.ProtoSummonDrawResult results = 1;
 }
