@@ -81,29 +81,29 @@ namespace Mobius.Proto.Game {
             "IAEoCRIVCg1jb3N0X3F1YW50aXR5GAQgASgFIkIKGkFiaWxpdHlTaG9wUHVy",
             "Y2hhc2VSZXF1ZXN0EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRILCgNtYXgY",
             "AiABKAgiMQoYQ29tcGxldGVSZWdpb25NYXBSZXF1ZXN0EhUKDXJlZ2lvbl9t",
-            "YXBfaWQYASABKAkiJgoRQ2FyZFN1bW1vblJlcXVlc3QSEQoJYmFubmVyX2lk",
-            "GAEgASgJKokGCg9HYW1lUmVxdWVzdFR5cGUSCAoEQkFTRRAAEhAKC0dFVF9Q",
-            "Uk9GSUxFEMgBEhMKDkNSRUFURV9QUk9GSUxFEKwCEhMKDlVQREFURV9QUk9G",
-            "SUxFEN4CEg4KCUNBUkRfU0FMRRCQAxIVChBDQVJEX0ZJTFRFUl9TT1JUEPQD",
-            "EhMKDkNBUkRfRkFWT1VSSVRFENgEEhAKC1NLSUxMX1BBTkVMELwFEg4KCURF",
-            "Q0tfRURJVBCgBhISCg1ERUNLX0VESVRfQUxMEIQHEg0KCFRFTEVQT1JUEOgH",
-            "EhkKFFBST0NFU1NfUkVHSU9OX0VWRU5UEMwIEh4KGVBST0NFU1NfUkVHSU9O",
-            "X05PREVfRVZFTlQQ/ggSEgoNQkFUVExFX1JFVklWRRCwCRIUCg9CQVRUTEVf",
-            "Q09NUExFVEUQlAoSGgoVQ09ORklSTV9EQUlMWV9NSVNTSU9OEMAMEhgKE0NM",
-            "QUlNX0VWRU5UX1JBTktJTkcQpA0SEgoNQ0xBSU1fTUFJTEJPWBCIDhIRCgxC",
-            "QVRUTEVfU1RBUlQQ7A4SEgoNQ0FSRF9UUkFOU0ZFUhDQDxIWChFFWFBBTkRf",
-            "Q0FSRF9TTE9UUxCCEBIQCgtDQVJEX0ZVU0lPThC0EBIWChFDQVJEX0ZVU0lP",
-            "Tl9CT09TVBCYERIUCg9TVEFNSU5BX1JFU1RPUkUQ/BESFgoRRklSU1RfREFJ",
-            "TFlfTE9HSU4Q4BISGQoUQ0xBSU1fTE9HSU5fQ0FNUEFJR04QxBMSFwoSREVM",
-            "RVRFX0FMTF9NQUlMQk9YEIwVEhgKE0NMQUlNX1JFTlRBTF9SRVdBUkQQ8BUS",
-            "EgoNUFVSQ0hBU0VfSVRFTRC4FxISCg1QVVJDSEFTRV9DQVJEEJwYEhoKFUFC",
-            "SUxJVFlfU0hPUF9QVVJDSEFTRRCAGRIRCgxDQVJEX0FVR01FTlQQ5BkSGAoT",
-            "Q0xBSU1fREFJTFlfTUlTU0lPThDIGhIYChNDT01QTEVURV9SRUdJT05fTUFQ",
-            "EPQcEhAKC1NVTU1PTl9DQVJEENgdKlgKE1RlbGVwb3J0UmVxdWVzdFR5cGUS",
-            "FAoQSU5WQUxJRF9URUxFUE9SVBAAEgkKBUxPR0lOEAESCQoFV09STEQQAhIJ",
-            "CgVGSUVMRBADEgoKBkJBVFRMRRAEQktaNWdpdGh1Yi5jb20vanVzdGphY2sx",
-            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlBy",
-            "b3RvLkdhbWViBnByb3RvMw=="));
+            "YXBfaWQYASABKAkiLQoYQWJpbGl0eUNhcmRTdW1tb25SZXF1ZXN0EhEKCWJh",
+            "bm5lcl9pZBgBIAEoCSqRBgoPR2FtZVJlcXVlc3RUeXBlEggKBEJBU0UQABIQ",
+            "CgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVfUFJPRklMRRCsAhITCg5VUERB",
+            "VEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQkAMSFQoQQ0FSRF9GSUxURVJf",
+            "U09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDYBBIQCgtTS0lMTF9QQU5FTBC8",
+            "BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19FRElUX0FMTBCEBxINCghURUxF",
+            "UE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9FVkVOVBDMCBIeChlQUk9DRVNT",
+            "X1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJBVFRMRV9SRVZJVkUQsAkSFAoP",
+            "QkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJUk1fREFJTFlfTUlTU0lPThDA",
+            "DBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQNEhIKDUNMQUlNX01BSUxCT1gQ",
+            "iA4SEQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoR",
+            "RVhQQU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FS",
+            "RF9GVVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJ",
+            "UlNUX0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQT",
+            "EhcKEkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVX",
+            "QVJEEPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCc",
+            "GBIaChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5U",
+            "EOQZEhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVH",
+            "SU9OX01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdKlgKE1RlbGVw",
+            "b3J0UmVxdWVzdFR5cGUSFAoQSU5WQUxJRF9URUxFUE9SVBAAEgkKBUxPR0lO",
+            "EAESCQoFV09STEQQAhIJCgVGSUVMRBADEgoKBkJBVFRMRRAEQktaNWdpdGh1",
+            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9n",
+            "YW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -141,7 +141,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopCardPurchaseRequest), global::Mobius.Proto.Game.ItemShopCardPurchaseRequest.Parser, new[]{ "ReceiveCard", "ReceiveQuantity", "CostItem", "CostQuantity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityShopPurchaseRequest), global::Mobius.Proto.Game.AbilityShopPurchaseRequest.Parser, new[]{ "AbilityCardId", "Max" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CompleteRegionMapRequest), global::Mobius.Proto.Game.CompleteRegionMapRequest.Parser, new[]{ "RegionMapId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSummonRequest), global::Mobius.Proto.Game.CardSummonRequest.Parser, new[]{ "BannerId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonRequest), global::Mobius.Proto.Game.AbilityCardSummonRequest.Parser, new[]{ "BannerId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -183,7 +183,7 @@ namespace Mobius.Proto.Game {
     [pbr::OriginalName("CARD_AUGMENT")] CardAugment = 3300,
     [pbr::OriginalName("CLAIM_DAILY_MISSION")] ClaimDailyMission = 3400,
     [pbr::OriginalName("COMPLETE_REGION_MAP")] CompleteRegionMap = 3700,
-    [pbr::OriginalName("SUMMON_CARD")] SummonCard = 3800,
+    [pbr::OriginalName("SUMMON_ABILITY_CARD")] SummonAbilityCard = 3800,
   }
 
   public enum TeleportRequestType {
@@ -7342,15 +7342,15 @@ namespace Mobius.Proto.Game {
 
   }
 
-  public sealed partial class CardSummonRequest : pb::IMessage<CardSummonRequest>
+  public sealed partial class AbilityCardSummonRequest : pb::IMessage<AbilityCardSummonRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CardSummonRequest> _parser = new pb::MessageParser<CardSummonRequest>(() => new CardSummonRequest());
+    private static readonly pb::MessageParser<AbilityCardSummonRequest> _parser = new pb::MessageParser<AbilityCardSummonRequest>(() => new AbilityCardSummonRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CardSummonRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<AbilityCardSummonRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -7363,21 +7363,21 @@ namespace Mobius.Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CardSummonRequest() {
+    public AbilityCardSummonRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CardSummonRequest(CardSummonRequest other) : this() {
+    public AbilityCardSummonRequest(AbilityCardSummonRequest other) : this() {
       bannerId_ = other.bannerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CardSummonRequest Clone() {
-      return new CardSummonRequest(this);
+    public AbilityCardSummonRequest Clone() {
+      return new AbilityCardSummonRequest(this);
     }
 
     /// <summary>Field number for the "banner_id" field.</summary>
@@ -7393,11 +7393,11 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as CardSummonRequest);
+      return Equals(other as AbilityCardSummonRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CardSummonRequest other) {
+    public bool Equals(AbilityCardSummonRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -7464,7 +7464,7 @@ namespace Mobius.Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CardSummonRequest other) {
+    public void MergeFrom(AbilityCardSummonRequest other) {
       if (other == null) {
         return;
       }
