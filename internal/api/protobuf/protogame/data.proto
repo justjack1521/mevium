@@ -497,8 +497,7 @@ message ProtoBattleStatistics {
   map<string, int32> job_type_defeats   =   13;
 }
 
-message ProtoSummonDrawResult {
-  string reference_id = 1;
-  string reference_source = 2;
-  bool boosted = 3;
+message ProtoAbilityCardSummonDrawResult {
+  ProtoAbilityCardInstance instance = 1;
+  bool new = 2;
 }

@@ -198,6 +198,6 @@ message CompleteRegionMapResponse {
   map<string, int32> augment_level_rewards = 4;
 }
 
-message CardSummonResponse {
-  repeated game.ProtoSummonDrawResult results = 1;
+message AbilityCardSummonResponse {
+  repeated game.ProtoAbilityCardSummonDrawResult results = 1;
 }
