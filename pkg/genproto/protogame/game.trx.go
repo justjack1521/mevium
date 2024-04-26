@@ -260,6 +260,18 @@ func NewCompleteRegionMapRequest(bytes []byte) (*CompleteRegionMapRequest, error
 	return req, nil
 }
 
+func NewAbilityCardSummonRequest(bytes []byte) (*AbilityCardSummonRequest, error) {
+	req := &AbilityCardSummonRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *AbilityCardSummonResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *BattleCompleteResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
