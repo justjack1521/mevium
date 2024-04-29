@@ -48,16 +48,21 @@ message ProtoAbilityCardData {
 }
 
 message ProtoAbilityCardHistory {
-  repeated ProtoAbilityCardHistoryInstance card_list = 1;
+  repeated ProtoBaseCardHistoryInstance base_list = 1;
+  repeated ProtoAbilityCardHistoryInstance card_list = 2;
+}
+
+message ProtoBaseCardHistoryInstance {
+  string base_card_id = 1;
+  int32 highest_star_level = 2;
+  string highest_ability_card_id = 3;
 }
 
 message ProtoAbilityCardHistoryInstance {
-  string sys_id = 1;
-  string base_ability_card_id = 2;
-  string ability_card_id = 3;
-  bool auto_sell = 4;
-  int32 star_level = 5;
-  int64 created_at = 6;
+  string ability_card_id = 1;
+  int32 star_level = 2;
+  bool auto_sell = 3;
+  int64 created_at = 4;
 }
 
 message ProtoAbilityCardInventory {
