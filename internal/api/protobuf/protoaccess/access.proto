@@ -5,12 +5,14 @@ package access;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoaccess";
 
 message AuthenticateTokenRequest {
-  string user_id = 1;
+  string session_id = 1;
   string bearer = 2;
   string device_id = 3;
 }
 
 message AuthenticateTokenResponse {
+  string user_id = 1;
+  string player_id = 2;
 }
 
 message ChangePasswordRequest {
@@ -30,7 +32,6 @@ message LoginUserRequest {
 }
 
 message LoginUserResponse {
-  string user_id = 1;
   string access_token = 2;
   string refresh_token = 3;
   string customer_id = 4;
