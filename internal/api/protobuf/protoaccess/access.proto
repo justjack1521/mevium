@@ -33,9 +33,10 @@ message LoginUserRequest {
 
 message LoginUserResponse {
   string session_id = 1;
-  string access_token = 2;
-  string refresh_token = 3;
-  string customer_id = 4;
+  string user_id = 2;
+  string access_token = 3;
+  string refresh_token = 4;
+  string customer_id = 5;
 }
 
 message RefreshTokenRequest {
@@ -58,6 +59,7 @@ message RegisterUserResponse {
 }
 
 message UserHasRoleRequest {
+  string user_id =1;
   string role = 2;
 }
 
