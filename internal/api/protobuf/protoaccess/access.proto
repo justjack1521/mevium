@@ -58,7 +58,6 @@ message RegisterUserResponse {
 }
 
 message UserHasRoleRequest {
-  string user_id = 1;
   string role = 2;
 }
 
