@@ -28,8 +28,12 @@ func (s *StandardPublisher) Close() {
 	s.actual.Close()
 }
 
-func (s *StandardPublisher) Publish(bytes []byte, client uuid.UUID, key RoutingKey, options ...func(*rabbitmq.PublishOptions)) error {
-	options = append(options, rabbitmq.WithPublishOptionsExchange(string(s.exchange)), rabbitmq.WithPublishOptionsHeaders(ClientPublishingTable(client)))
+func (s *StandardPublisher) Publish(bytes []byte, user, player uuid.UUID, key RoutingKey, options ...func(*rabbitmq.PublishOptions)) error {
+	options = append(
+		options,
+		rabbitmq.WithPublishOptionsExchange(string(s.exchange)),
+		rabbitmq.WithPublishOptionsHeaders(IdentityPublishingTable(user, player)),
+	)
 	if err := s.actual.Publish(bytes, []string{string(key)}, options...); err != nil {
 		if s.logger != nil {
 			s.logger.WithFields(logrus.Fields{
@@ -50,12 +54,12 @@ func (s *StandardPublisher) Publish(bytes []byte, client uuid.UUID, key RoutingK
 	return nil
 }
 
-func (s *StandardPublisher) PublishWithContext(ctx context.Context, bytes []byte, client uuid.UUID, key RoutingKey) error {
+func (s *StandardPublisher) PublishWithContext(ctx context.Context, bytes []byte, user, player uuid.UUID, key RoutingKey) error {
 	txn := newrelic.FromContext(ctx)
-	return s.PublishWithSegment(txn, bytes, client, key)
+	return s.PublishWithSegment(txn, bytes, user, player, key)
 }
 
-func (s *StandardPublisher) PublishWithSegment(txn *newrelic.Transaction, bytes []byte, client uuid.UUID, key RoutingKey) error {
+func (s *StandardPublisher) PublishWithSegment(txn *newrelic.Transaction, bytes []byte, user, player uuid.UUID, key RoutingKey) error {
 	segment := newrelic.MessageProducerSegment{
 		StartTime:            txn.StartSegmentNow(),
 		Library:              "RabbitMQ",
@@ -64,7 +68,7 @@ func (s *StandardPublisher) PublishWithSegment(txn *newrelic.Transaction, bytes 
 		DestinationTemporary: false,
 	}
 	defer segment.End()
-	return s.Publish(bytes, client, key)
+	return s.Publish(bytes, user, player, key)
 }
 
 func NewClientPublisher(conn *rabbitmq.Conn, options ...func(publisherOptions *rabbitmq.PublisherOptions)) *StandardPublisher {
@@ -128,4 +132,11 @@ func newPublisher(conn *rabbitmq.Conn, standard *StandardPublisher, options ...f
 		rabbitmq.WithPublisherOptionsExchangeDeclare,
 	)
 	return rabbitmq.NewPublisher(conn, options...)
+}
+
+func IdentityPublishingTable(user, player uuid.UUID) rabbitmq.Table {
+	return rabbitmq.Table{
+		userIDHeaderKey:   user.String(),
+		playerIDHeaderKey: player.String(),
+	}
 }

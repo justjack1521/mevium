@@ -11,7 +11,8 @@ import (
 type ConsumerContext struct {
 	Context     context.Context
 	Transaction *newrelic.Transaction
-	ClientID    uuid.UUID
+	UserID      uuid.UUID
+	PlayerID    uuid.UUID
 	Delivery    rabbitmq.Delivery
 }
 
@@ -75,15 +76,21 @@ func (s *StandardConsumer) StandardConsumption(handler ConsumerHandler) rabbitmq
 			Context:  context.Background(),
 			Delivery: d,
 		}
-		client, err := ExtractClientID(d)
+		user, err := ExtractUserID(d)
 		if err != nil {
 			return rabbitmq.NackDiscard
 		}
-		ctx.ClientID = client
+		ctx.UserID = user
+		player, err := ExtractPlayerID(d)
+		if err != nil {
+			return rabbitmq.NackDiscard
+		}
+		ctx.PlayerID = player
 		if s.relic != nil {
 			ctx.Transaction = s.relic.StartTransaction("message." + d.RoutingKey + ":" + d.Exchange)
 			ctx.Context = newrelic.NewContext(ctx.Context, ctx.Transaction)
-			ctx.Transaction.AddAttribute("client.id", ctx.ClientID.String())
+			ctx.Transaction.AddAttribute("user.id", ctx.UserID.String())
+			ctx.Transaction.AddAttribute("player.id", ctx.PlayerID.String())
 			ctx.Transaction.AddAttribute("message.routingKey", d.RoutingKey)
 			ctx.Transaction.AddAttribute("message.exchange", d.Exchange)
 			ctx.Transaction.AddAttribute("message.type", d.Type)
@@ -120,4 +127,27 @@ func ConsumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandler) Con
 		}()
 		return action, err
 	}
+}
+
+func ExtractUserID(d rabbitmq.Delivery) (uuid.UUID, error) {
+	id, ok := d.Headers[userIDHeaderKey]
+	if ok == false {
+		return uuid.Nil, errExtractClientIDFromMessageHeader(errClientIDNotFound)
+	}
+	client, err := uuid.FromString(id.(string))
+	if err != nil {
+		return client, errExtractClientIDFromMessageHeader(err)
+	}
+	return client, nil
+}
+func ExtractPlayerID(d rabbitmq.Delivery) (uuid.UUID, error) {
+	id, ok := d.Headers[playerIDHeaderKey]
+	if ok == false {
+		return uuid.Nil, errExtractClientIDFromMessageHeader(errClientIDNotFound)
+	}
+	client, err := uuid.FromString(id.(string))
+	if err != nil {
+		return client, errExtractClientIDFromMessageHeader(err)
+	}
+	return client, nil
 }
