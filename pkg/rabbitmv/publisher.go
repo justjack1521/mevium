@@ -28,13 +28,13 @@ func (s *StandardPublisher) Close() {
 	s.actual.Close()
 }
 
-func (s *StandardPublisher) Publish(bytes []byte, user, player uuid.UUID, key RoutingKey, options ...func(*rabbitmq.PublishOptions)) error {
+func (s *StandardPublisher) Publish(ctx context.Context, bytes []byte, user, player uuid.UUID, key RoutingKey, options ...func(*rabbitmq.PublishOptions)) error {
 	options = append(
 		options,
 		rabbitmq.WithPublishOptionsExchange(string(s.exchange)),
 		rabbitmq.WithPublishOptionsHeaders(IdentityPublishingTable(user, player)),
 	)
-	if err := s.actual.Publish(bytes, []string{string(key)}, options...); err != nil {
+	if err := s.actual.PublishWithContext(ctx, bytes, []string{string(key)}, options...); err != nil {
 		if s.logger != nil {
 			s.logger.WithFields(logrus.Fields{
 				"exchange":    s.exchange,
@@ -55,20 +55,26 @@ func (s *StandardPublisher) Publish(bytes []byte, user, player uuid.UUID, key Ro
 }
 
 func (s *StandardPublisher) PublishWithContext(ctx context.Context, bytes []byte, user, player uuid.UUID, key RoutingKey) error {
-	txn := newrelic.FromContext(ctx)
-	return s.PublishWithSegment(txn, bytes, user, player, key)
+
+	return s.PublishWithSegment(ctx, bytes, user, player, key)
 }
 
-func (s *StandardPublisher) PublishWithSegment(txn *newrelic.Transaction, bytes []byte, user, player uuid.UUID, key RoutingKey) error {
-	segment := newrelic.MessageProducerSegment{
-		StartTime:            txn.StartSegmentNow(),
-		Library:              "RabbitMQ",
-		DestinationType:      newrelic.MessageExchange,
-		DestinationName:      string(s.exchange),
-		DestinationTemporary: false,
+func (s *StandardPublisher) PublishWithSegment(ctx context.Context, bytes []byte, user, player uuid.UUID, key RoutingKey) error {
+
+	txn := newrelic.FromContext(ctx)
+
+	if txn != nil {
+		segment := newrelic.MessageProducerSegment{
+			StartTime:            txn.StartSegmentNow(),
+			Library:              "RabbitMQ",
+			DestinationType:      newrelic.MessageExchange,
+			DestinationName:      string(s.exchange),
+			DestinationTemporary: false,
+		}
+		defer segment.End()
 	}
-	defer segment.End()
-	return s.Publish(bytes, user, player, key)
+
+	return s.Publish(ctx, bytes, user, player, key)
 }
 
 func NewClientPublisher(conn *rabbitmq.Conn, options ...func(publisherOptions *rabbitmq.PublisherOptions)) *StandardPublisher {
