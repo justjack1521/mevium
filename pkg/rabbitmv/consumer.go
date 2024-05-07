@@ -2,6 +2,7 @@ package rabbitmv
 
 import (
 	"context"
+	"github.com/justjack1521/mevrpc"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	uuid "github.com/satori/go.uuid"
 	"github.com/sirupsen/logrus"
@@ -72,23 +73,27 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 
 func (s *StandardConsumer) StandardConsumption(handler ConsumerHandler) rabbitmq.Handler {
 	return func(d rabbitmq.Delivery) rabbitmq.Action {
-		ctx := &ConsumerContext{
-			Context:  context.Background(),
-			Delivery: d,
-		}
+
 		user, err := ExtractUserID(d)
 		if err != nil {
 			return rabbitmq.NackDiscard
 		}
-		ctx.UserID = user
+
 		player, err := ExtractPlayerID(d)
 		if err != nil {
 			return rabbitmq.NackDiscard
 		}
-		ctx.PlayerID = player
+
+		ctx := &ConsumerContext{
+			Context:  mevrpc.NewOutgoingContext(context.Background(), user, player),
+			Delivery: d,
+			UserID:   user,
+			PlayerID: player,
+		}
+
 		if s.relic != nil {
 			ctx.Transaction = s.relic.StartTransaction("message." + d.RoutingKey + ":" + d.Exchange)
-			ctx.Context = newrelic.NewContext(ctx.Context, ctx.Transaction)
+			//ctx.Context = newrelic.NewContext(ctx.Context, ctx.Transaction)
 			ctx.Transaction.AddAttribute("user.id", ctx.UserID.String())
 			ctx.Transaction.AddAttribute("player.id", ctx.PlayerID.String())
 			ctx.Transaction.AddAttribute("message.routingKey", d.RoutingKey)
