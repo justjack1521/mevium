@@ -14,7 +14,6 @@ enum RankRequestType {
 }
 
 message SubmitScoreRequest {
-  string player_id = 1;
   string player_name = 2;
   int32 player_level = 3;
   uint64 score = 4;

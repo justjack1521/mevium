@@ -15,7 +15,6 @@ enum SocialRequestType {
 }
 
 message FetchPlayerSocialInfoRequest {
-  string player_id = 1;
 }
 
 message FetchPlayerSocialInfoResponse {
@@ -25,7 +24,6 @@ message FetchPlayerSocialInfoResponse {
 }
 
 message FollowPlayerRequest {
-  string player_id = 1;
   string target_id = 2;
 }
 
@@ -34,7 +32,6 @@ message PlayerSearchRequest {
 }
 
 message UnfollowPlayerRequest {
-  string player_id = 1;
   string target_id = 2;
 }
 

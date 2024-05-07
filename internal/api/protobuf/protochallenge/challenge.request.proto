@@ -12,13 +12,10 @@ enum ChallengeRequestType {
 }
 
 message GetActivePlayerChallengeRequest {
-  string player_id = 1;
 }
 
 message JoinSocialChallengeRequest {
-  string player_id = 1;
 }
 
 message GetPlayerChallengeRequest {
-  string player_id = 1;
 }

@@ -9,7 +9,7 @@ import (
 )
 
 type ConsumerContext struct {
-	Context     context.Context
+	context.Context
 	Transaction *newrelic.Transaction
 	UserID      uuid.UUID
 	PlayerID    uuid.UUID
