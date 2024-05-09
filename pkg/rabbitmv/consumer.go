@@ -12,9 +12,17 @@ import (
 type ConsumerContext struct {
 	context.Context
 	Transaction *newrelic.Transaction
-	UserID      uuid.UUID
-	PlayerID    uuid.UUID
+	userID      uuid.UUID
+	playerID    uuid.UUID
 	Delivery    rabbitmq.Delivery
+}
+
+func (c *ConsumerContext) UserID() uuid.UUID {
+	return c.userID
+}
+
+func (c *ConsumerContext) PlayerID() uuid.UUID {
+	return c.playerID
 }
 
 type ConsumerHandler func(ctx *ConsumerContext) (rabbitmq.Action, error)
@@ -87,15 +95,14 @@ func (s *StandardConsumer) StandardConsumption(handler ConsumerHandler) rabbitmq
 		ctx := &ConsumerContext{
 			Context:  mevrpc.NewOutgoingContext(context.Background(), user, player),
 			Delivery: d,
-			UserID:   user,
-			PlayerID: player,
+			userID:   user,
+			playerID: player,
 		}
 
 		if s.relic != nil {
 			ctx.Transaction = s.relic.StartTransaction("message." + d.RoutingKey + ":" + d.Exchange)
-			//ctx.Context = newrelic.NewContext(ctx.Context, ctx.Transaction)
-			ctx.Transaction.AddAttribute("user.id", ctx.UserID.String())
-			ctx.Transaction.AddAttribute("player.id", ctx.PlayerID.String())
+			ctx.Transaction.AddAttribute("user.id", ctx.userID.String())
+			ctx.Transaction.AddAttribute("player.id", ctx.playerID.String())
 			ctx.Transaction.AddAttribute("message.routingKey", d.RoutingKey)
 			ctx.Transaction.AddAttribute("message.exchange", d.Exchange)
 			ctx.Transaction.AddAttribute("message.type", d.Type)
