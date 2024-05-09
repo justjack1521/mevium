@@ -68,9 +68,10 @@ message UserHasRoleResponse {
 }
 
 message CustomerSearchRequest {
-  string customer_id = 2;
+  string customer_id = 1;
 }
 
 message CustomerSearchResponse {
   string user_id = 1;
+  string player_id = 2;
 }
