@@ -25,30 +25,29 @@ namespace Mobius.Proto.Social {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBwcm90b3NvY2lhbC9zb2NpYWwucmVxdWVzdC5wcm90bxIIcHJlc2VuY2Ua",
-            "GHByb3Rvc29jaWFsL3NvY2lhbC5wcm90byIxChxGZXRjaFBsYXllclNvY2lh",
-            "bEluZm9SZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCSLJAQodRmV0Y2hQbGF5",
-            "ZXJTb2NpYWxJbmZvUmVzcG9uc2USNwoOZm9sbG93aW5nX2xpc3QYASADKAsy",
-            "Hy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lhbEluZm8SNgoNZm9sbG93ZXJf",
-            "bGlzdBgCIAMoCzIfLnByZXNlbmNlLlByb3RvUGxheWVyU29jaWFsSW5mbxI3",
-            "Cg5yZW50YWxfcGxheWVycxgDIAMoCzIfLnByZXNlbmNlLlByb3RvUGxheWVy",
-            "U29jaWFsSW5mbyI7ChNGb2xsb3dQbGF5ZXJSZXF1ZXN0EhEKCXBsYXllcl9p",
-            "ZBgBIAEoCRIRCgl0YXJnZXRfaWQYAiABKAkiJgoTUGxheWVyU2VhcmNoUmVx",
-            "dWVzdBIPCgd1c2VyX2lkGAEgASgJIj0KFVVuZm9sbG93UGxheWVyUmVxdWVz",
-            "dBIRCglwbGF5ZXJfaWQYASABKAkSEQoJdGFyZ2V0X2lkGAIgASgJIkAKGEdl",
-            "dFBsYXllcklkZW50aXR5UmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEQoJ",
-            "dGFyZ2V0X2lkGAIgASgJKl0KEVNvY2lhbFJlcXVlc3RUeXBlEggKBE5PTkUQ",
-            "ABISCg1GT0xMT1dfUExBWUVSEPgKEhQKD1VORk9MTE9XX1BMQVlFUhDcCxIU",
-            "Cg9HRVRfU09DSUFMX0RBVEEQ1BZCT1o3Z2l0aHViLmNvbS9qdXN0amFjazE1",
-            "MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b3NvY2lhbKoCE01vYml1cy5Q",
-            "cm90by5Tb2NpYWxiBnByb3RvMw=="));
+            "GHByb3Rvc29jaWFsL3NvY2lhbC5wcm90byIeChxGZXRjaFBsYXllclNvY2lh",
+            "bEluZm9SZXF1ZXN0IskBCh1GZXRjaFBsYXllclNvY2lhbEluZm9SZXNwb25z",
+            "ZRI3Cg5mb2xsb3dpbmdfbGlzdBgBIAMoCzIfLnByZXNlbmNlLlByb3RvUGxh",
+            "eWVyU29jaWFsSW5mbxI2Cg1mb2xsb3dlcl9saXN0GAIgAygLMh8ucHJlc2Vu",
+            "Y2UuUHJvdG9QbGF5ZXJTb2NpYWxJbmZvEjcKDnJlbnRhbF9wbGF5ZXJzGAMg",
+            "AygLMh8ucHJlc2VuY2UuUHJvdG9QbGF5ZXJTb2NpYWxJbmZvIigKE0ZvbGxv",
+            "d1BsYXllclJlcXVlc3QSEQoJdGFyZ2V0X2lkGAIgASgJIigKE1BsYXllclNl",
+            "YXJjaFJlcXVlc3QSEQoJcGxheWVyX2lkGAEgASgJIioKFVVuZm9sbG93UGxh",
+            "eWVyUmVxdWVzdBIRCgl0YXJnZXRfaWQYAiABKAkiQAoYR2V0UGxheWVySWRl",
+            "bnRpdHlSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIRCgl0YXJnZXRfaWQY",
+            "AiABKAkqXQoRU29jaWFsUmVxdWVzdFR5cGUSCAoETk9ORRAAEhIKDUZPTExP",
+            "V19QTEFZRVIQ+AoSFAoPVU5GT0xMT1dfUExBWUVSENwLEhQKD0dFVF9TT0NJ",
+            "QUxfREFUQRDUFkJPWjdnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0v",
+            "cGtnL2dlbnByb3RvL3Byb3Rvc29jaWFsqgITTW9iaXVzLlByb3RvLlNvY2lh",
+            "bGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Social.SocialReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Social.SocialRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FetchPlayerSocialInfoRequest), global::Mobius.Proto.Social.FetchPlayerSocialInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FetchPlayerSocialInfoRequest), global::Mobius.Proto.Social.FetchPlayerSocialInfoRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FetchPlayerSocialInfoResponse), global::Mobius.Proto.Social.FetchPlayerSocialInfoResponse.Parser, new[]{ "FollowingList", "FollowerList", "RentalPlayers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FollowPlayerRequest), global::Mobius.Proto.Social.FollowPlayerRequest.Parser, new[]{ "PlayerId", "TargetId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.PlayerSearchRequest), global::Mobius.Proto.Social.PlayerSearchRequest.Parser, new[]{ "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.UnfollowPlayerRequest), global::Mobius.Proto.Social.UnfollowPlayerRequest.Parser, new[]{ "PlayerId", "TargetId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FollowPlayerRequest), global::Mobius.Proto.Social.FollowPlayerRequest.Parser, new[]{ "TargetId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.PlayerSearchRequest), global::Mobius.Proto.Social.PlayerSearchRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.UnfollowPlayerRequest), global::Mobius.Proto.Social.UnfollowPlayerRequest.Parser, new[]{ "TargetId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.GetPlayerIdentityRequest), global::Mobius.Proto.Social.GetPlayerIdentityRequest.Parser, new[]{ "PlayerId", "TargetId" }, null, null, null, null)
           }));
     }
@@ -95,24 +94,12 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FetchPlayerSocialInfoRequest(FetchPlayerSocialInfoRequest other) : this() {
-      playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FetchPlayerSocialInfoRequest Clone() {
       return new FetchPlayerSocialInfoRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -128,14 +115,12 @@ namespace Mobius.Proto.Social {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,10 +137,6 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -165,10 +146,6 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -178,9 +155,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -191,9 +165,6 @@ namespace Mobius.Proto.Social {
     public void MergeFrom(FetchPlayerSocialInfoRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -209,10 +180,6 @@ namespace Mobius.Proto.Social {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -227,10 +194,6 @@ namespace Mobius.Proto.Social {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -478,7 +441,6 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FollowPlayerRequest(FollowPlayerRequest other) : this() {
-      playerId_ = other.playerId_;
       targetId_ = other.targetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -486,17 +448,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FollowPlayerRequest Clone() {
       return new FollowPlayerRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "target_id" field.</summary>
@@ -523,7 +474,6 @@ namespace Mobius.Proto.Social {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       if (TargetId != other.TargetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -531,7 +481,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (TargetId.Length != 0) hash ^= TargetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -549,10 +498,6 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (TargetId.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(TargetId);
@@ -566,10 +511,6 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (TargetId.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(TargetId);
@@ -583,9 +524,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (TargetId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetId);
       }
@@ -599,9 +537,6 @@ namespace Mobius.Proto.Social {
     public void MergeFrom(FollowPlayerRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       if (other.TargetId.Length != 0) {
         TargetId = other.TargetId;
@@ -620,10 +555,6 @@ namespace Mobius.Proto.Social {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
           case 18: {
             TargetId = input.ReadString();
             break;
@@ -642,10 +573,6 @@ namespace Mobius.Proto.Social {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
           case 18: {
             TargetId = input.ReadString();
             break;
@@ -686,7 +613,7 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PlayerSearchRequest(PlayerSearchRequest other) : this() {
-      userId_ = other.userId_;
+      playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -695,14 +622,14 @@ namespace Mobius.Proto.Social {
       return new PlayerSearchRequest(this);
     }
 
-    /// <summary>Field number for the "user_id" field.</summary>
-    public const int UserIdFieldNumber = 1;
-    private string userId_ = "";
+    /// <summary>Field number for the "player_id" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private string playerId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string UserId {
-      get { return userId_; }
+    public string PlayerId {
+      get { return playerId_; }
       set {
-        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -719,14 +646,14 @@ namespace Mobius.Proto.Social {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UserId != other.UserId) return false;
+      if (PlayerId != other.PlayerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -743,9 +670,9 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UserId.Length != 0) {
+      if (PlayerId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(UserId);
+        output.WriteString(PlayerId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -756,9 +683,9 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UserId.Length != 0) {
+      if (PlayerId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(UserId);
+        output.WriteString(PlayerId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -769,8 +696,8 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (UserId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      if (PlayerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -783,8 +710,8 @@ namespace Mobius.Proto.Social {
       if (other == null) {
         return;
       }
-      if (other.UserId.Length != 0) {
-        UserId = other.UserId;
+      if (other.PlayerId.Length != 0) {
+        PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -801,7 +728,7 @@ namespace Mobius.Proto.Social {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            UserId = input.ReadString();
+            PlayerId = input.ReadString();
             break;
           }
         }
@@ -819,7 +746,7 @@ namespace Mobius.Proto.Social {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            UserId = input.ReadString();
+            PlayerId = input.ReadString();
             break;
           }
         }
@@ -858,7 +785,6 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UnfollowPlayerRequest(UnfollowPlayerRequest other) : this() {
-      playerId_ = other.playerId_;
       targetId_ = other.targetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -866,17 +792,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UnfollowPlayerRequest Clone() {
       return new UnfollowPlayerRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "target_id" field.</summary>
@@ -903,7 +818,6 @@ namespace Mobius.Proto.Social {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       if (TargetId != other.TargetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -911,7 +825,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (TargetId.Length != 0) hash ^= TargetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -929,10 +842,6 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (TargetId.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(TargetId);
@@ -946,10 +855,6 @@ namespace Mobius.Proto.Social {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (TargetId.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(TargetId);
@@ -963,9 +868,6 @@ namespace Mobius.Proto.Social {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (TargetId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetId);
       }
@@ -979,9 +881,6 @@ namespace Mobius.Proto.Social {
     public void MergeFrom(UnfollowPlayerRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       if (other.TargetId.Length != 0) {
         TargetId = other.TargetId;
@@ -1000,10 +899,6 @@ namespace Mobius.Proto.Social {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
           case 18: {
             TargetId = input.ReadString();
             break;
@@ -1022,10 +917,6 @@ namespace Mobius.Proto.Social {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
           case 18: {
             TargetId = input.ReadString();
             break;

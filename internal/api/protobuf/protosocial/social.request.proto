@@ -28,7 +28,7 @@ message FollowPlayerRequest {
 }
 
 message PlayerSearchRequest {
-  string user_id = 1;
+  string player_id = 1;
 }
 
 message UnfollowPlayerRequest {
