@@ -12,7 +12,7 @@ message FollowPlayerResponse {
 }
 
 message PlayerSearchResponse {
-  presence.ProtoPlayerInfo player_info = 1;
+  presence.ProtoPlayerSocialInfo player_info = 1;
 }
 
 message UnfollowPlayerResponse {

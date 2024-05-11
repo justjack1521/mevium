@@ -27,13 +27,13 @@ namespace Mobius.Proto.Social {
             "CiFwcm90b3NvY2lhbC9zb2NpYWwucmVzcG9uc2UucHJvdG8SCHByZXNlbmNl",
             "Ghhwcm90b3NvY2lhbC9zb2NpYWwucHJvdG8iTAoURm9sbG93UGxheWVyUmVz",
             "cG9uc2USNAoLcGxheWVyX2luZm8YASABKAsyHy5wcmVzZW5jZS5Qcm90b1Bs",
-            "YXllclNvY2lhbEluZm8iRgoUUGxheWVyU2VhcmNoUmVzcG9uc2USLgoLcGxh",
-            "eWVyX2luZm8YASABKAsyGS5wcmVzZW5jZS5Qcm90b1BsYXllckluZm8iKwoW",
-            "VW5mb2xsb3dQbGF5ZXJSZXNwb25zZRIRCglwbGF5ZXJfaWQYASABKAkiUwoZ",
-            "R2V0UGxheWVySWRlbnRpdHlSZXNwb25zZRI2Cg9wbGF5ZXJfaWRlbnRpdHkY",
-            "ASABKAsyHS5wcmVzZW5jZS5Qcm90b1BsYXllcklkZW50aXR5Qk9aN2dpdGh1",
-            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9z",
-            "b2NpYWyqAhNNb2JpdXMuUHJvdG8uU29jaWFsYgZwcm90bzM="));
+            "YXllclNvY2lhbEluZm8iTAoUUGxheWVyU2VhcmNoUmVzcG9uc2USNAoLcGxh",
+            "eWVyX2luZm8YASABKAsyHy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lhbElu",
+            "Zm8iKwoWVW5mb2xsb3dQbGF5ZXJSZXNwb25zZRIRCglwbGF5ZXJfaWQYASAB",
+            "KAkiUwoZR2V0UGxheWVySWRlbnRpdHlSZXNwb25zZRI2Cg9wbGF5ZXJfaWRl",
+            "bnRpdHkYASABKAsyHS5wcmVzZW5jZS5Qcm90b1BsYXllcklkZW50aXR5Qk9a",
+            "N2dpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
+            "cHJvdG9zb2NpYWyqAhNNb2JpdXMuUHJvdG8uU29jaWFsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Social.SocialReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -268,9 +268,9 @@ namespace Mobius.Proto.Social {
 
     /// <summary>Field number for the "player_info" field.</summary>
     public const int PlayerInfoFieldNumber = 1;
-    private global::Mobius.Proto.Social.ProtoPlayerInfo playerInfo_;
+    private global::Mobius.Proto.Social.ProtoPlayerSocialInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Social.ProtoPlayerInfo PlayerInfo {
+    public global::Mobius.Proto.Social.ProtoPlayerSocialInfo PlayerInfo {
       get { return playerInfo_; }
       set {
         playerInfo_ = value;
@@ -356,7 +356,7 @@ namespace Mobius.Proto.Social {
       }
       if (other.playerInfo_ != null) {
         if (playerInfo_ == null) {
-          PlayerInfo = new global::Mobius.Proto.Social.ProtoPlayerInfo();
+          PlayerInfo = new global::Mobius.Proto.Social.ProtoPlayerSocialInfo();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
       }
@@ -376,7 +376,7 @@ namespace Mobius.Proto.Social {
             break;
           case 10: {
             if (playerInfo_ == null) {
-              PlayerInfo = new global::Mobius.Proto.Social.ProtoPlayerInfo();
+              PlayerInfo = new global::Mobius.Proto.Social.ProtoPlayerSocialInfo();
             }
             input.ReadMessage(PlayerInfo);
             break;
@@ -397,7 +397,7 @@ namespace Mobius.Proto.Social {
             break;
           case 10: {
             if (playerInfo_ == null) {
-              PlayerInfo = new global::Mobius.Proto.Social.ProtoPlayerInfo();
+              PlayerInfo = new global::Mobius.Proto.Social.ProtoPlayerSocialInfo();
             }
             input.ReadMessage(PlayerInfo);
             break;
