@@ -11,10 +11,9 @@ import (
 
 type ConsumerContext struct {
 	context.Context
-	Transaction *newrelic.Transaction
-	userID      uuid.UUID
-	playerID    uuid.UUID
-	Delivery    rabbitmq.Delivery
+	userID   uuid.UUID
+	playerID uuid.UUID
+	Delivery rabbitmq.Delivery
 }
 
 func (c *ConsumerContext) UserID() uuid.UUID {
@@ -29,7 +28,6 @@ type ConsumerHandler func(ctx *ConsumerContext) (rabbitmq.Action, error)
 
 type StandardConsumer struct {
 	actual     *rabbitmq.Consumer
-	relic      *newrelic.Application
 	Queue      Queue
 	RoutingKey RoutingKey
 	Exchange   Exchange
@@ -42,11 +40,6 @@ func (s *StandardConsumer) Close() {
 	}
 	s.closed = true
 	s.actual.Close()
-}
-
-func (s *StandardConsumer) WithNewRelic(r *newrelic.Application) *StandardConsumer {
-	s.relic = r
-	return s
 }
 
 func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, exchange Exchange, handler ConsumerHandler, opts ...func(*rabbitmq.ConsumerOptions)) *StandardConsumer {
@@ -99,18 +92,33 @@ func (s *StandardConsumer) StandardConsumption(handler ConsumerHandler) rabbitmq
 			playerID: player,
 		}
 
-		if s.relic != nil {
-			ctx.Transaction = s.relic.StartTransaction("message." + d.RoutingKey + ":" + d.Exchange)
-			ctx.Transaction.AddAttribute("user.id", ctx.userID.String())
-			ctx.Transaction.AddAttribute("player.id", ctx.playerID.String())
-			ctx.Transaction.AddAttribute("message.routingKey", d.RoutingKey)
-			ctx.Transaction.AddAttribute("message.exchange", d.Exchange)
-			ctx.Transaction.AddAttribute("message.type", d.Type)
-			defer ctx.Transaction.End()
-		}
 		result, _ := handler(ctx)
 		return result
 	}
+}
+
+func ConsumerNewRelicMiddleWare(relic *newrelic.Application, handler ConsumerHandler) ConsumerHandler {
+
+	return func(ctx *ConsumerContext) (rabbitmq.Action, error) {
+
+		var transaction = relic.StartTransaction("message." + ctx.Delivery.RoutingKey + ":" + ctx.Delivery.Exchange)
+		transaction.AddAttribute("user.id", ctx.userID.String())
+		transaction.AddAttribute("player.id", ctx.playerID.String())
+		transaction.AddAttribute("message.routingKey", ctx.Delivery.RoutingKey)
+		transaction.AddAttribute("message.exchange", ctx.Delivery.Exchange)
+		transaction.AddAttribute("message.type", ctx.Delivery.Type)
+
+		action, err := handler(ctx)
+
+		if err != nil {
+			transaction.NoticeError(err)
+		}
+		transaction.End()
+
+		return action, err
+
+	}
+
 }
 
 func ConsumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandler) ConsumerHandler {
