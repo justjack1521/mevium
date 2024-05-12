@@ -32,6 +32,7 @@ type StandardConsumer struct {
 	RoutingKey RoutingKey
 	Exchange   Exchange
 	closed     bool
+	handler    ConsumerHandler
 }
 
 func (s *StandardConsumer) Close() {
@@ -48,6 +49,7 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 		Queue:      queue,
 		RoutingKey: key,
 		Exchange:   exchange,
+		handler:    handler,
 	}
 
 	var options = []func(*rabbitmq.ConsumerOptions){
@@ -59,7 +61,7 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 
 	actual, err := rabbitmq.NewConsumer(
 		conn,
-		consumer.StandardConsumption(handler),
+		consumer.standardConsumption(),
 		string(queue),
 		opts...,
 	)
@@ -72,7 +74,7 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 	return consumer
 }
 
-func (s *StandardConsumer) StandardConsumption(handler ConsumerHandler) rabbitmq.Handler {
+func (s *StandardConsumer) standardConsumption() rabbitmq.Handler {
 	return func(d rabbitmq.Delivery) rabbitmq.Action {
 
 		user, err := ExtractUserID(d)
@@ -92,13 +94,20 @@ func (s *StandardConsumer) StandardConsumption(handler ConsumerHandler) rabbitmq
 			playerID: player,
 		}
 
-		result, _ := handler(ctx)
+		result, _ := s.handler(ctx)
 		return result
 	}
 }
 
-func ConsumerNewRelicMiddleWare(relic *newrelic.Application, handler ConsumerHandler) ConsumerHandler {
+func (s *StandardConsumer) WithNewRelic(relic *newrelic.Application) {
+	s.handler = consumerNewRelicMiddleWare(relic, s.handler)
+}
 
+func (s *StandardConsumer) WithLogging(logger *logrus.Logger) {
+	s.handler = consumeLoggerMiddleWare(logger, s.handler)
+}
+
+func consumerNewRelicMiddleWare(relic *newrelic.Application, handler ConsumerHandler) ConsumerHandler {
 	return func(ctx *ConsumerContext) (rabbitmq.Action, error) {
 
 		var transaction = relic.StartTransaction("message." + ctx.Delivery.RoutingKey + ":" + ctx.Delivery.Exchange)
@@ -118,10 +127,9 @@ func ConsumerNewRelicMiddleWare(relic *newrelic.Application, handler ConsumerHan
 		return action, err
 
 	}
-
 }
 
-func ConsumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandler) ConsumerHandler {
+func consumeLoggerMiddleWare(logger *logrus.Logger, handler ConsumerHandler) ConsumerHandler {
 	return func(ctx *ConsumerContext) (rabbitmq.Action, error) {
 		logger.WithFields(logrus.Fields{
 			"exchange":    ctx.Delivery.Exchange,
