@@ -54,74 +54,74 @@ namespace Mobius.Proto.Game {
             "ASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIijgEKF0NhcmRCb29zdEZ1",
             "c2lvblJlc3BvbnNlEg8KB2NhcmRfaWQYASABKAkSFwoPc2VlZF9sZXZlbF9n",
             "YWluGAIgASgFEhoKEmFiaWxpdHlfbGV2ZWxfZ2FpbhgDIAEoBRItCgtmdXNp",
-            "b25fY29zdBgEIAEoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIj0KEENh",
-            "cmRTYWxlUmVzcG9uc2USEgoKdG90YWxfZ29sZBgBIAEoBRIVCg1jYXJkc19y",
-            "ZW1vdmVkGAIgAygJIjEKFENhcmRUcmFuc2ZlclJlc3BvbnNlEhkKEWNhcmRz",
-            "X3RyYW5zZmVycmVkGAEgAygJIkMKGkNsYWltTG9naW5DYW1wYWlnblJlc3Bv",
-            "bnNlEiUKBWNsYWltGAEgASgLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtIkEK",
-            "GENsYWltTWFpbEJveEl0ZW1SZXNwb25zZRIlCgVjbGFpbRgBIAEoCzIWLmdh",
-            "bWUuUHJvdG9NYWlsQm94SXRlbSJFChtDbGFpbUFsbE1haWxCb3hJdGVtUmVz",
-            "cG9uc2USJgoGY2xhaW1zGAEgAygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVt",
-            "Ih4KHERlbGV0ZUFsbE1haWxib3hJdGVtUmVzcG9uc2UiQwoZQ2xhaW1FdmVu",
-            "dFJhbmtpbmdSZXNwb25zZRImCgZjbGFpbXMYASADKAsyFi5nYW1lLlByb3Rv",
-            "TWFpbEJveEl0ZW0iQwoZQ2xhaW1EYWlseU1pc3Npb25SZXNwb25zZRImCgZj",
-            "bGFpbXMYASADKAsyFi5nYW1lLlByb3RvTWFpbEJveEl0ZW0iTgodQ2xhaW1S",
-            "ZW50YWxDYXJkUmV3YXJkUmVzcG9uc2USLQoLcmV3YXJkX2l0ZW0YASABKAsy",
-            "GC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciIdChtDb25maXJtRGFpbHlNaXNz",
-            "aW9uUmVzcG9uc2UiXwoTRGVja0VkaXRBbGxSZXNwb25zZRIzCgpDb2xsZWN0",
-            "aW9uGAEgASgLMh8uZ2FtZS5Qcm90b1BsYXllckRlY2tDb2xsZWN0aW9uEhMK",
-            "C011bHRpUGxheWVyGAIgASgIIjwKF0ZldGNoUGxheWVyRGF0YVJlc3BvbnNl",
-            "EiEKBGRhdGEYASABKAsyEy5nYW1lLlByb3RvR2FtZURhdGEiyQIKF0ZpcnN0",
-            "RGFpbHlMb2dpblJlc3BvbnNlEhwKFGxvZ2luX2JvbnVzX3JlY2VpdmVkGAEg",
-            "ASgDEjYKDWRhaWx5X21pc3Npb24YAiABKAsyHy5nYW1lLlByb3RvRGFpbHlN",
-            "aXNzaW9uSW5zdGFuY2USPgoUc3RhbmRhcmRfbG9naW5fYm9udXMYAyABKAsy",
-            "IC5nYW1lLlByb3RvTG9naW5DYW1wYWlnbkluc3RhbmNlEj0KE3NwZWNpYWxf",
-            "bG9naW5fYm9udXMYBCABKAsyIC5nYW1lLlByb3RvTG9naW5DYW1wYWlnbklu",
-            "c3RhbmNlEi0KDWxvZ2luX3Jld2FyZHMYBSABKAsyFi5nYW1lLlByb3RvTWFp",
-            "bEJveEl0ZW0SFAoMcmVudGFsX2NvdW50GAYgASgFEhQKDHJlbnRhbF9jbGFp",
-            "bRgHIAEoCCJgChJGaWx0ZXJTb3J0UmVzcG9uc2USDAoEVmlldxgBIAEoBRIN",
-            "CgVJbmRleBgCIAEoBRItCgpGaWx0ZXJTb3J0GAMgASgLMhkuZ2FtZS5Qcm90",
-            "b0NhcmRGaWx0ZXJTb3J0Ii0KFVVwZGF0ZVByb2ZpbGVSZXNwb25zZRIUCgxj",
-            "b21wYW5pb25faWQYASABKAkiVgoWU3RhbWluYVJlc3RvcmVSZXNwb25zZRIP",
-            "CgdpdGVtX2lkGAEgASgJEhMKC2l0ZW1fYW1vdW50GAIgASgFEhYKDnJlc3Rv",
-            "cmVfYW1vdW50GAMgASgFIrIEChhTa2lsbFBhbmVsVW5sb2NrUmVzcG9uc2US",
-            "LwoNaXRlbXNfcmVtb3ZlZBgBIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQ",
-            "YWlyEhgKEGhwX3N0YXRfaW5jcmVhc2UYAiABKAUSHAoUYXR0YWNrX3N0YXRf",
-            "aW5jcmVhc2UYAyABKAUSIQoZYnJlYWtfcG93ZXJfc3RhdF9pbmNyZWFzZRgE",
-            "IAEoBRIbChNtYWdpY19zdGF0X2luY3JlYXNlGAUgASgFEh8KF3N1Yl9qb2Jf",
-            "dW5sb2NrX2luY3JlYXNlGAYgASgFEh8KF3VsdGltYXRlX2Jvb3N0X2luY3Jl",
-            "YXNlGAcgASgFEkcKDXdlYXBvbl91bmxvY2sYCCADKAsyMC5nYW1lLlNraWxs",
-            "UGFuZWxVbmxvY2tSZXNwb25zZS5XZWFwb25VbmxvY2tFbnRyeRJUChRhdXRv",
-            "X2FiaWxpdGllc19hZGRlZBgJIAMoCzI2LmdhbWUuU2tpbGxQYW5lbFVubG9j",
-            "a1Jlc3BvbnNlLkF1dG9BYmlsaXRpZXNBZGRlZEVudHJ5EhwKFGNyb3duX2xl",
-            "dmVsX2luY3JlYXNlGAogASgIGjMKEVdlYXBvblVubG9ja0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaOQoXQXV0b0FiaWxpdGllc0Fk",
-            "ZGVkRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASLxAQoQ",
-            "VGVsZXBvcnRSZXNwb25zZRISCgpyZWdpb25fbWFwGAEgASgJEhcKD3JlZ2lv",
-            "bl9tYXBfbm9kZRgCIAEoBRItCg1yZWdpb25fZXZlbnRzGAMgAygLMhYuZ2Ft",
-            "ZS5Qcm90b1JlZ2lvbkV2ZW50Ei8KC25vZGVfZXZlbnRzGAQgAygLMhouZ2Ft",
-            "ZS5Qcm90b1JlZ2lvbk5vZGVFdmVudBI7ChBjdXJyZW50X21hcF9kYXRhGAUg",
-            "ASgLMhwuZ2FtZS5Qcm90b1JlZ2lvbk1hcEluc3RhbmNlSACIAQFCEwoRX2N1",
-            "cnJlbnRfbWFwX2RhdGEiLQoaUHJvY2Vzc1JlZ2lvbkV2ZW50UmVzcG9uc2US",
-            "DwoHcGVyc2lzdBgBIAEoCCIxCh5Qcm9jZXNzUmVnaW9uTm9kZUV2ZW50UmVz",
-            "cG9uc2USDwoHcGVyc2lzdBgBIAEoCCJMCh1FeHBhbmRBYmlsaXR5Q2FyZFNs",
-            "b3RSZXNwb25zZRIrCgljb3N0X2l0ZW0YASABKAsyGC5nYW1lLlByb3RvSXRl",
-            "bVZhbHVlUGFpciIeChxJdGVtU2hvcEl0ZW1QdXJjaGFzZVJlc3BvbnNlIlUK",
-            "HEl0ZW1TaG9wQ2FyZFB1cmNoYXNlUmVzcG9uc2USNQoNYWJpbGl0eV9jYXJk",
-            "cxgBIAMoCzIeLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlIokBChtB",
-            "YmlsaXR5U2hvcFB1cmNoYXNlUmVzcG9uc2USPQoVYWJpbGl0eV9jYXJkX2lu",
-            "c3RhbmNlGAEgASgLMh4uZ2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2US",
-            "KwoJY29zdF9pdGVtGAIgASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIi",
-            "9gEKGUNvbXBsZXRlUmVnaW9uTWFwUmVzcG9uc2USFQoNcmVnaW9uX21hcF9p",
-            "ZBgBIAEoCRItCg1yZWdpb25fZXZlbnRzGAMgAygLMhYuZ2FtZS5Qcm90b1Jl",
-            "Z2lvbkV2ZW50ElcKFWF1Z21lbnRfbGV2ZWxfcmV3YXJkcxgEIAMoCzI4Lmdh",
-            "bWUuQ29tcGxldGVSZWdpb25NYXBSZXNwb25zZS5BdWdtZW50TGV2ZWxSZXdh",
-            "cmRzRW50cnkaOgoYQXVnbWVudExldmVsUmV3YXJkc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoBToCOAEiVAoZQWJpbGl0eUNhcmRTdW1tb25S",
-            "ZXNwb25zZRI3CgdyZXN1bHRzGAEgAygLMiYuZ2FtZS5Qcm90b0FiaWxpdHlD",
-            "YXJkU3VtbW9uRHJhd1Jlc3VsdEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUy",
-            "MS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90",
-            "by5HYW1lYgZwcm90bzM="));
+            "b25fY29zdBgEIAEoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIlsKEENh",
+            "cmRTYWxlUmVzcG9uc2USMAoOaXRlbXNfcmVjZWl2ZWQYASADKAsyGC5nYW1l",
+            "LlByb3RvSXRlbVZhbHVlUGFpchIVCg1jYXJkc19yZW1vdmVkGAIgAygJIjEK",
+            "FENhcmRUcmFuc2ZlclJlc3BvbnNlEhkKEWNhcmRzX3RyYW5zZmVycmVkGAEg",
+            "AygJIkMKGkNsYWltTG9naW5DYW1wYWlnblJlc3BvbnNlEiUKBWNsYWltGAEg",
+            "ASgLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtIkEKGENsYWltTWFpbEJveEl0",
+            "ZW1SZXNwb25zZRIlCgVjbGFpbRgBIAEoCzIWLmdhbWUuUHJvdG9NYWlsQm94",
+            "SXRlbSJFChtDbGFpbUFsbE1haWxCb3hJdGVtUmVzcG9uc2USJgoGY2xhaW1z",
+            "GAEgAygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtIh4KHERlbGV0ZUFsbE1h",
+            "aWxib3hJdGVtUmVzcG9uc2UiQwoZQ2xhaW1FdmVudFJhbmtpbmdSZXNwb25z",
+            "ZRImCgZjbGFpbXMYASADKAsyFi5nYW1lLlByb3RvTWFpbEJveEl0ZW0iQwoZ",
+            "Q2xhaW1EYWlseU1pc3Npb25SZXNwb25zZRImCgZjbGFpbXMYASADKAsyFi5n",
+            "YW1lLlByb3RvTWFpbEJveEl0ZW0iTgodQ2xhaW1SZW50YWxDYXJkUmV3YXJk",
+            "UmVzcG9uc2USLQoLcmV3YXJkX2l0ZW0YASABKAsyGC5nYW1lLlByb3RvSXRl",
+            "bVZhbHVlUGFpciIdChtDb25maXJtRGFpbHlNaXNzaW9uUmVzcG9uc2UiXwoT",
+            "RGVja0VkaXRBbGxSZXNwb25zZRIzCgpDb2xsZWN0aW9uGAEgASgLMh8uZ2Ft",
+            "ZS5Qcm90b1BsYXllckRlY2tDb2xsZWN0aW9uEhMKC011bHRpUGxheWVyGAIg",
+            "ASgIIjwKF0ZldGNoUGxheWVyRGF0YVJlc3BvbnNlEiEKBGRhdGEYASABKAsy",
+            "Ey5nYW1lLlByb3RvR2FtZURhdGEiyQIKF0ZpcnN0RGFpbHlMb2dpblJlc3Bv",
+            "bnNlEhwKFGxvZ2luX2JvbnVzX3JlY2VpdmVkGAEgASgDEjYKDWRhaWx5X21p",
+            "c3Npb24YAiABKAsyHy5nYW1lLlByb3RvRGFpbHlNaXNzaW9uSW5zdGFuY2US",
+            "PgoUc3RhbmRhcmRfbG9naW5fYm9udXMYAyABKAsyIC5nYW1lLlByb3RvTG9n",
+            "aW5DYW1wYWlnbkluc3RhbmNlEj0KE3NwZWNpYWxfbG9naW5fYm9udXMYBCAB",
+            "KAsyIC5nYW1lLlByb3RvTG9naW5DYW1wYWlnbkluc3RhbmNlEi0KDWxvZ2lu",
+            "X3Jld2FyZHMYBSABKAsyFi5nYW1lLlByb3RvTWFpbEJveEl0ZW0SFAoMcmVu",
+            "dGFsX2NvdW50GAYgASgFEhQKDHJlbnRhbF9jbGFpbRgHIAEoCCJgChJGaWx0",
+            "ZXJTb3J0UmVzcG9uc2USDAoEVmlldxgBIAEoBRINCgVJbmRleBgCIAEoBRIt",
+            "CgpGaWx0ZXJTb3J0GAMgASgLMhkuZ2FtZS5Qcm90b0NhcmRGaWx0ZXJTb3J0",
+            "Ii0KFVVwZGF0ZVByb2ZpbGVSZXNwb25zZRIUCgxjb21wYW5pb25faWQYASAB",
+            "KAkiVgoWU3RhbWluYVJlc3RvcmVSZXNwb25zZRIPCgdpdGVtX2lkGAEgASgJ",
+            "EhMKC2l0ZW1fYW1vdW50GAIgASgFEhYKDnJlc3RvcmVfYW1vdW50GAMgASgF",
+            "IrIEChhTa2lsbFBhbmVsVW5sb2NrUmVzcG9uc2USLwoNaXRlbXNfcmVtb3Zl",
+            "ZBgBIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyEhgKEGhwX3N0YXRf",
+            "aW5jcmVhc2UYAiABKAUSHAoUYXR0YWNrX3N0YXRfaW5jcmVhc2UYAyABKAUS",
+            "IQoZYnJlYWtfcG93ZXJfc3RhdF9pbmNyZWFzZRgEIAEoBRIbChNtYWdpY19z",
+            "dGF0X2luY3JlYXNlGAUgASgFEh8KF3N1Yl9qb2JfdW5sb2NrX2luY3JlYXNl",
+            "GAYgASgFEh8KF3VsdGltYXRlX2Jvb3N0X2luY3JlYXNlGAcgASgFEkcKDXdl",
+            "YXBvbl91bmxvY2sYCCADKAsyMC5nYW1lLlNraWxsUGFuZWxVbmxvY2tSZXNw",
+            "b25zZS5XZWFwb25VbmxvY2tFbnRyeRJUChRhdXRvX2FiaWxpdGllc19hZGRl",
+            "ZBgJIAMoCzI2LmdhbWUuU2tpbGxQYW5lbFVubG9ja1Jlc3BvbnNlLkF1dG9B",
+            "YmlsaXRpZXNBZGRlZEVudHJ5EhwKFGNyb3duX2xldmVsX2luY3JlYXNlGAog",
+            "ASgIGjMKEVdlYXBvblVubG9ja0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoBToCOAEaOQoXQXV0b0FiaWxpdGllc0FkZGVkRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASLxAQoQVGVsZXBvcnRSZXNwb25z",
+            "ZRISCgpyZWdpb25fbWFwGAEgASgJEhcKD3JlZ2lvbl9tYXBfbm9kZRgCIAEo",
+            "BRItCg1yZWdpb25fZXZlbnRzGAMgAygLMhYuZ2FtZS5Qcm90b1JlZ2lvbkV2",
+            "ZW50Ei8KC25vZGVfZXZlbnRzGAQgAygLMhouZ2FtZS5Qcm90b1JlZ2lvbk5v",
+            "ZGVFdmVudBI7ChBjdXJyZW50X21hcF9kYXRhGAUgASgLMhwuZ2FtZS5Qcm90",
+            "b1JlZ2lvbk1hcEluc3RhbmNlSACIAQFCEwoRX2N1cnJlbnRfbWFwX2RhdGEi",
+            "LQoaUHJvY2Vzc1JlZ2lvbkV2ZW50UmVzcG9uc2USDwoHcGVyc2lzdBgBIAEo",
+            "CCIxCh5Qcm9jZXNzUmVnaW9uTm9kZUV2ZW50UmVzcG9uc2USDwoHcGVyc2lz",
+            "dBgBIAEoCCJMCh1FeHBhbmRBYmlsaXR5Q2FyZFNsb3RSZXNwb25zZRIrCglj",
+            "b3N0X2l0ZW0YASABKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciIeChxJ",
+            "dGVtU2hvcEl0ZW1QdXJjaGFzZVJlc3BvbnNlIlUKHEl0ZW1TaG9wQ2FyZFB1",
+            "cmNoYXNlUmVzcG9uc2USNQoNYWJpbGl0eV9jYXJkcxgBIAMoCzIeLmdhbWUu",
+            "UHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlIokBChtBYmlsaXR5U2hvcFB1cmNo",
+            "YXNlUmVzcG9uc2USPQoVYWJpbGl0eV9jYXJkX2luc3RhbmNlGAEgASgLMh4u",
+            "Z2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2USKwoJY29zdF9pdGVtGAIg",
+            "ASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIi9gEKGUNvbXBsZXRlUmVn",
+            "aW9uTWFwUmVzcG9uc2USFQoNcmVnaW9uX21hcF9pZBgBIAEoCRItCg1yZWdp",
+            "b25fZXZlbnRzGAMgAygLMhYuZ2FtZS5Qcm90b1JlZ2lvbkV2ZW50ElcKFWF1",
+            "Z21lbnRfbGV2ZWxfcmV3YXJkcxgEIAMoCzI4LmdhbWUuQ29tcGxldGVSZWdp",
+            "b25NYXBSZXNwb25zZS5BdWdtZW50TGV2ZWxSZXdhcmRzRW50cnkaOgoYQXVn",
+            "bWVudExldmVsUmV3YXJkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoBToCOAEiVAoZQWJpbGl0eUNhcmRTdW1tb25SZXNwb25zZRI3CgdyZXN1",
+            "bHRzGAEgAygLMiYuZ2FtZS5Qcm90b0FiaWxpdHlDYXJkU3VtbW9uRHJhd1Jl",
+            "c3VsdEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dl",
+            "bnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,7 +133,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFavouriteResponse), global::Mobius.Proto.Game.CardFavouriteResponse.Parser, new[]{ "CardId", "Locked" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFusionResponse), global::Mobius.Proto.Game.CardFusionResponse.Parser, new[]{ "CardId", "CardLevel", "CardTotalExp", "CardAccumExp", "SeedLevelGain", "AbilityLevelGain", "InventoryCardsRemoved", "BankCardsRemoved", "FusionCost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardBoostFusionResponse), global::Mobius.Proto.Game.CardBoostFusionResponse.Parser, new[]{ "CardId", "SeedLevelGain", "AbilityLevelGain", "FusionCost" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSaleResponse), global::Mobius.Proto.Game.CardSaleResponse.Parser, new[]{ "TotalGold", "CardsRemoved" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSaleResponse), global::Mobius.Proto.Game.CardSaleResponse.Parser, new[]{ "ItemsReceived", "CardsRemoved" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardTransferResponse), global::Mobius.Proto.Game.CardTransferResponse.Parser, new[]{ "CardsTransferred" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimLoginCampaignResponse), global::Mobius.Proto.Game.ClaimLoginCampaignResponse.Parser, new[]{ "Claim" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimMailBoxItemResponse), global::Mobius.Proto.Game.ClaimMailBoxItemResponse.Parser, new[]{ "Claim" }, null, null, null, null),
@@ -2528,7 +2528,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CardSaleResponse(CardSaleResponse other) : this() {
-      totalGold_ = other.totalGold_;
+      itemsReceived_ = other.itemsReceived_.Clone();
       cardsRemoved_ = other.cardsRemoved_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2538,15 +2538,14 @@ namespace Mobius.Proto.Game {
       return new CardSaleResponse(this);
     }
 
-    /// <summary>Field number for the "total_gold" field.</summary>
-    public const int TotalGoldFieldNumber = 1;
-    private int totalGold_;
+    /// <summary>Field number for the "items_received" field.</summary>
+    public const int ItemsReceivedFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoItemValuePair> _repeated_itemsReceived_codec
+        = pb::FieldCodec.ForMessage(10, global::Mobius.Proto.Game.ProtoItemValuePair.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> itemsReceived_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int TotalGold {
-      get { return totalGold_; }
-      set {
-        totalGold_ = value;
-      }
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> ItemsReceived {
+      get { return itemsReceived_; }
     }
 
     /// <summary>Field number for the "cards_removed" field.</summary>
@@ -2572,7 +2571,7 @@ namespace Mobius.Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TotalGold != other.TotalGold) return false;
+      if(!itemsReceived_.Equals(other.itemsReceived_)) return false;
       if(!cardsRemoved_.Equals(other.cardsRemoved_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2580,7 +2579,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TotalGold != 0) hash ^= TotalGold.GetHashCode();
+      hash ^= itemsReceived_.GetHashCode();
       hash ^= cardsRemoved_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2598,10 +2597,7 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TotalGold != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(TotalGold);
-      }
+      itemsReceived_.WriteTo(output, _repeated_itemsReceived_codec);
       cardsRemoved_.WriteTo(output, _repeated_cardsRemoved_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2612,10 +2608,7 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TotalGold != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(TotalGold);
-      }
+      itemsReceived_.WriteTo(ref output, _repeated_itemsReceived_codec);
       cardsRemoved_.WriteTo(ref output, _repeated_cardsRemoved_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2626,9 +2619,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TotalGold != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalGold);
-      }
+      size += itemsReceived_.CalculateSize(_repeated_itemsReceived_codec);
       size += cardsRemoved_.CalculateSize(_repeated_cardsRemoved_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2641,9 +2632,7 @@ namespace Mobius.Proto.Game {
       if (other == null) {
         return;
       }
-      if (other.TotalGold != 0) {
-        TotalGold = other.TotalGold;
-      }
+      itemsReceived_.Add(other.itemsReceived_);
       cardsRemoved_.Add(other.cardsRemoved_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2659,8 +2648,8 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            TotalGold = input.ReadInt32();
+          case 10: {
+            itemsReceived_.AddEntriesFrom(input, _repeated_itemsReceived_codec);
             break;
           }
           case 18: {
@@ -2681,8 +2670,8 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            TotalGold = input.ReadInt32();
+          case 10: {
+            itemsReceived_.AddEntriesFrom(ref input, _repeated_itemsReceived_codec);
             break;
           }
           case 18: {

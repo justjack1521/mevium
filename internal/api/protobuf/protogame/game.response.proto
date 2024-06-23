@@ -71,7 +71,7 @@ message CardBoostFusionResponse {
 }
 
 message CardSaleResponse {
-  int32 total_gold = 1;
+  repeated game.ProtoItemValuePair items_received = 1;
   repeated string cards_removed = 2;
 }
 

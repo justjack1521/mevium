@@ -104,12 +104,13 @@ message CardBoostFusionRequest {
 }
 
 message CardSaleRequest {
-  repeated string cards = 1;
+  repeated int32 cards = 1;
+  int32 inventory_source = 2;
 }
 
 message CardTransferRequest {
-  repeated int32 cards = 2;
-  int32 inventory_source = 3;
+  repeated int32 cards = 1;
+  int32 inventory_source = 2;
 }
 
 message CreateProfileRequest {

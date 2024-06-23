@@ -42,68 +42,69 @@ namespace Mobius.Proto.Game {
             "ZxgHIAEoCCJTChFDYXJkRnVzaW9uUmVxdWVzdBIRCgliYXNlX2NhcmQYASAB",
             "KAUSFwoPaW52ZW50b3J5X2NhcmRzGAIgAygFEhIKCmJhbmtfY2FyZHMYAyAD",
             "KAUiOQoWQ2FyZEJvb3N0RnVzaW9uUmVxdWVzdBIMCgRjYXJkGAEgASgFEhEK",
-            "CW1heF9ib29zdBgCIAEoCCIgCg9DYXJkU2FsZVJlcXVlc3QSDQoFY2FyZHMY",
-            "ASADKAkiPgoTQ2FyZFRyYW5zZmVyUmVxdWVzdBINCgVjYXJkcxgCIAMoBRIY",
-            "ChBpbnZlbnRvcnlfc291cmNlGAMgASgFIisKFENyZWF0ZVByb2ZpbGVSZXF1",
-            "ZXN0EhMKC3BsYXllcl9uYW1lGAEgASgJIjQKGENsYWltRXZlbnRSYW5raW5n",
-            "UmVxdWVzdBIKCgJpZBgBIAEoCRIMCgRjb2RlGAIgASgJIjAKGUNsYWltTG9n",
-            "aW5DYW1wYWlnblJlcXVlc3QSEwoLY2FtcGFpZ25faWQYASABKAkiJQoXQ2xh",
-            "aW1NYWlsQm94SXRlbVJlcXVlc3QSCgoCaWQYASABKAkiGgoYQ2xhaW1EYWls",
-            "eU1pc3Npb25SZXF1ZXN0IhwKGkNsYWltQWxsTWFpbEJveEl0ZW1SZXF1ZXN0",
-            "Ih0KG0RlbGV0ZUFsbE1haWxib3hJdGVtUmVxdWVzdCIeChxDbGFpbVJlbnRh",
-            "bENhcmRSZXdhcmRSZXF1ZXN0IhwKGkNvbmZpcm1EYWlseU1pc3Npb25SZXF1",
-            "ZXN0IuQBCg9EZWNrRWRpdFJlcXVlc3QSDQoFSW5kZXgYASABKAUSFAoMSm9i",
-            "Q2FyZEluZGV4GAIgASgFEhcKD0pvYkNhcmRTdWJJbmRleBgDIAEoBRITCgtX",
-            "ZWFwb25JbmRleBgEIAEoBRIXCg9TdWJKb2JDYXJkSW5kZXgYBSABKAUSGgoS",
-            "U3ViSm9iQ2FyZFN1YkluZGV4GAYgASgFEhYKDlN1YldlYXBvbkluZGV4GAcg",
-            "ASgFEhYKDkFiaWxpdHlDYXJkSURzGAggAygJEhkKEVN1YkFiaWxpdHlDYXJk",
-            "SURzGAkgAygJIk0KEkRlY2tFZGl0QWxsUmVxdWVzdBInCghSZXF1ZXN0cxgB",
-            "IAMoCzIVLmdhbWUuRGVja0VkaXRSZXF1ZXN0Eg4KBk1QRGVjaxgCIAEoCCIY",
-            "ChZGZXRjaFBsYXllckRhdGFSZXF1ZXN0IhgKFkZpcnN0RGFpbHlMb2dpblJl",
-            "cXVlc3QiRAoZUHJvY2Vzc1JlZ2lvbkV2ZW50UmVxdWVzdBIVCg1yZWdpb25f",
-            "bWFwX2lkGAEgASgJEhAKCGV2ZW50X2lkGAIgASgJIkgKHVByb2Nlc3NSZWdp",
-            "b25Ob2RlRXZlbnRSZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQYASABKAkSEAoI",
-            "ZXZlbnRfaWQYAiABKAkiggEKF1NraWxsUGFuZWxVbmxvY2tSZXF1ZXN0EhYK",
-            "DmpvYl9jYXJkX2luZGV4GAEgASgFEhMKC2dyb3VwX2luZGV4GAIgASgFEhIK",
-            "CnBhZ2VfaW5kZXgYAyABKAUSEwoLcGFuZWxfaW5kZXgYBCABKAUSEQoJYWx0",
-            "ZXJuYXRlGAUgASgIIi0KFVN0YW1pbmFSZXN0b3JlUmVxdWVzdBIUCgxtdWx0",
-            "aV9wbGF5ZXIYASABKAgiaQoPVGVsZXBvcnRSZXF1ZXN0EhIKCnJlZ2lvbl9t",
-            "YXAYASABKAkSFwoPcmVnaW9uX21hcF9ub2RlGAIgASgFEikKBnNvdXJjZRgD",
-            "IAEoDjIZLmdhbWUuVGVsZXBvcnRSZXF1ZXN0VHlwZSJdChRVcGRhdGVQcm9m",
-            "aWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJEg8KB2NvbW1lbnQYAiABKAkSEwoL",
-            "cmVudGFsX2NhcmQYAyABKAUSEQoJY29tcGFuaW9uGAQgASgFIj4KHEV4cGFu",
-            "ZEFiaWxpdHlDYXJkU2xvdFJlcXVlc3QSDgoGc291cmNlGAEgASgFEg4KBmFt",
-            "b3VudBgCIAEoBSJ3ChtJdGVtU2hvcEl0ZW1QdXJjaGFzZVJlcXVlc3QSFAoM",
-            "cmVjZWl2ZV9pdGVtGAEgASgJEhgKEHJlY2VpdmVfcXVhbnRpdHkYAiABKAUS",
-            "EQoJY29zdF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRpdHkYBCABKAUidwob",
-            "SXRlbVNob3BDYXJkUHVyY2hhc2VSZXF1ZXN0EhQKDHJlY2VpdmVfY2FyZBgB",
-            "IAEoCRIYChByZWNlaXZlX3F1YW50aXR5GAIgASgFEhEKCWNvc3RfaXRlbRgD",
-            "IAEoCRIVCg1jb3N0X3F1YW50aXR5GAQgASgFIkIKGkFiaWxpdHlTaG9wUHVy",
-            "Y2hhc2VSZXF1ZXN0EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRILCgNtYXgY",
-            "AiABKAgiMQoYQ29tcGxldGVSZWdpb25NYXBSZXF1ZXN0EhUKDXJlZ2lvbl9t",
-            "YXBfaWQYASABKAkiLQoYQWJpbGl0eUNhcmRTdW1tb25SZXF1ZXN0EhEKCWJh",
-            "bm5lcl9pZBgBIAEoCSqRBgoPR2FtZVJlcXVlc3RUeXBlEggKBEJBU0UQABIQ",
-            "CgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVfUFJPRklMRRCsAhITCg5VUERB",
-            "VEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQkAMSFQoQQ0FSRF9GSUxURVJf",
-            "U09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDYBBIQCgtTS0lMTF9QQU5FTBC8",
-            "BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19FRElUX0FMTBCEBxINCghURUxF",
-            "UE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9FVkVOVBDMCBIeChlQUk9DRVNT",
-            "X1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJBVFRMRV9SRVZJVkUQsAkSFAoP",
-            "QkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJUk1fREFJTFlfTUlTU0lPThDA",
-            "DBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQNEhIKDUNMQUlNX01BSUxCT1gQ",
-            "iA4SEQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoR",
-            "RVhQQU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FS",
-            "RF9GVVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJ",
-            "UlNUX0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQT",
-            "EhcKEkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVX",
-            "QVJEEPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCc",
-            "GBIaChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5U",
-            "EOQZEhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVH",
-            "SU9OX01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdKlgKE1RlbGVw",
-            "b3J0UmVxdWVzdFR5cGUSFAoQSU5WQUxJRF9URUxFUE9SVBAAEgkKBUxPR0lO",
-            "EAESCQoFV09STEQQAhIJCgVGSUVMRBADEgoKBkJBVFRMRRAEQktaNWdpdGh1",
-            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9n",
-            "YW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
+            "CW1heF9ib29zdBgCIAEoCCI6Cg9DYXJkU2FsZVJlcXVlc3QSDQoFY2FyZHMY",
+            "ASADKAUSGAoQaW52ZW50b3J5X3NvdXJjZRgCIAEoBSI+ChNDYXJkVHJhbnNm",
+            "ZXJSZXF1ZXN0Eg0KBWNhcmRzGAEgAygFEhgKEGludmVudG9yeV9zb3VyY2UY",
+            "AiABKAUiKwoUQ3JlYXRlUHJvZmlsZVJlcXVlc3QSEwoLcGxheWVyX25hbWUY",
+            "ASABKAkiNAoYQ2xhaW1FdmVudFJhbmtpbmdSZXF1ZXN0EgoKAmlkGAEgASgJ",
+            "EgwKBGNvZGUYAiABKAkiMAoZQ2xhaW1Mb2dpbkNhbXBhaWduUmVxdWVzdBIT",
+            "CgtjYW1wYWlnbl9pZBgBIAEoCSIlChdDbGFpbU1haWxCb3hJdGVtUmVxdWVz",
+            "dBIKCgJpZBgBIAEoCSIaChhDbGFpbURhaWx5TWlzc2lvblJlcXVlc3QiHAoa",
+            "Q2xhaW1BbGxNYWlsQm94SXRlbVJlcXVlc3QiHQobRGVsZXRlQWxsTWFpbGJv",
+            "eEl0ZW1SZXF1ZXN0Ih4KHENsYWltUmVudGFsQ2FyZFJld2FyZFJlcXVlc3Qi",
+            "HAoaQ29uZmlybURhaWx5TWlzc2lvblJlcXVlc3Qi5AEKD0RlY2tFZGl0UmVx",
+            "dWVzdBINCgVJbmRleBgBIAEoBRIUCgxKb2JDYXJkSW5kZXgYAiABKAUSFwoP",
+            "Sm9iQ2FyZFN1YkluZGV4GAMgASgFEhMKC1dlYXBvbkluZGV4GAQgASgFEhcK",
+            "D1N1YkpvYkNhcmRJbmRleBgFIAEoBRIaChJTdWJKb2JDYXJkU3ViSW5kZXgY",
+            "BiABKAUSFgoOU3ViV2VhcG9uSW5kZXgYByABKAUSFgoOQWJpbGl0eUNhcmRJ",
+            "RHMYCCADKAkSGQoRU3ViQWJpbGl0eUNhcmRJRHMYCSADKAkiTQoSRGVja0Vk",
+            "aXRBbGxSZXF1ZXN0EicKCFJlcXVlc3RzGAEgAygLMhUuZ2FtZS5EZWNrRWRp",
+            "dFJlcXVlc3QSDgoGTVBEZWNrGAIgASgIIhgKFkZldGNoUGxheWVyRGF0YVJl",
+            "cXVlc3QiGAoWRmlyc3REYWlseUxvZ2luUmVxdWVzdCJEChlQcm9jZXNzUmVn",
+            "aW9uRXZlbnRSZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQYASABKAkSEAoIZXZl",
+            "bnRfaWQYAiABKAkiSAodUHJvY2Vzc1JlZ2lvbk5vZGVFdmVudFJlcXVlc3QS",
+            "FQoNcmVnaW9uX21hcF9pZBgBIAEoCRIQCghldmVudF9pZBgCIAEoCSKCAQoX",
+            "U2tpbGxQYW5lbFVubG9ja1JlcXVlc3QSFgoOam9iX2NhcmRfaW5kZXgYASAB",
+            "KAUSEwoLZ3JvdXBfaW5kZXgYAiABKAUSEgoKcGFnZV9pbmRleBgDIAEoBRIT",
+            "CgtwYW5lbF9pbmRleBgEIAEoBRIRCglhbHRlcm5hdGUYBSABKAgiLQoVU3Rh",
+            "bWluYVJlc3RvcmVSZXF1ZXN0EhQKDG11bHRpX3BsYXllchgBIAEoCCJpCg9U",
+            "ZWxlcG9ydFJlcXVlc3QSEgoKcmVnaW9uX21hcBgBIAEoCRIXCg9yZWdpb25f",
+            "bWFwX25vZGUYAiABKAUSKQoGc291cmNlGAMgASgOMhkuZ2FtZS5UZWxlcG9y",
+            "dFJlcXVlc3RUeXBlIl0KFFVwZGF0ZVByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUY",
+            "ASABKAkSDwoHY29tbWVudBgCIAEoCRITCgtyZW50YWxfY2FyZBgDIAEoBRIR",
+            "Cgljb21wYW5pb24YBCABKAUiPgocRXhwYW5kQWJpbGl0eUNhcmRTbG90UmVx",
+            "dWVzdBIOCgZzb3VyY2UYASABKAUSDgoGYW1vdW50GAIgASgFIncKG0l0ZW1T",
+            "aG9wSXRlbVB1cmNoYXNlUmVxdWVzdBIUCgxyZWNlaXZlX2l0ZW0YASABKAkS",
+            "GAoQcmVjZWl2ZV9xdWFudGl0eRgCIAEoBRIRCgljb3N0X2l0ZW0YAyABKAkS",
+            "FQoNY29zdF9xdWFudGl0eRgEIAEoBSJ3ChtJdGVtU2hvcENhcmRQdXJjaGFz",
+            "ZVJlcXVlc3QSFAoMcmVjZWl2ZV9jYXJkGAEgASgJEhgKEHJlY2VpdmVfcXVh",
+            "bnRpdHkYAiABKAUSEQoJY29zdF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRp",
+            "dHkYBCABKAUiQgoaQWJpbGl0eVNob3BQdXJjaGFzZVJlcXVlc3QSFwoPYWJp",
+            "bGl0eV9jYXJkX2lkGAEgASgJEgsKA21heBgCIAEoCCIxChhDb21wbGV0ZVJl",
+            "Z2lvbk1hcFJlcXVlc3QSFQoNcmVnaW9uX21hcF9pZBgBIAEoCSItChhBYmls",
+            "aXR5Q2FyZFN1bW1vblJlcXVlc3QSEQoJYmFubmVyX2lkGAEgASgJKpEGCg9H",
+            "YW1lUmVxdWVzdFR5cGUSCAoEQkFTRRAAEhAKC0dFVF9QUk9GSUxFEMgBEhMK",
+            "DkNSRUFURV9QUk9GSUxFEKwCEhMKDlVQREFURV9QUk9GSUxFEN4CEg4KCUNB",
+            "UkRfU0FMRRCQAxIVChBDQVJEX0ZJTFRFUl9TT1JUEPQDEhMKDkNBUkRfRkFW",
+            "T1VSSVRFENgEEhAKC1NLSUxMX1BBTkVMELwFEg4KCURFQ0tfRURJVBCgBhIS",
+            "Cg1ERUNLX0VESVRfQUxMEIQHEg0KCFRFTEVQT1JUEOgHEhkKFFBST0NFU1Nf",
+            "UkVHSU9OX0VWRU5UEMwIEh4KGVBST0NFU1NfUkVHSU9OX05PREVfRVZFTlQQ",
+            "/ggSEgoNQkFUVExFX1JFVklWRRCwCRIUCg9CQVRUTEVfQ09NUExFVEUQlAoS",
+            "GgoVQ09ORklSTV9EQUlMWV9NSVNTSU9OEMAMEhgKE0NMQUlNX0VWRU5UX1JB",
+            "TktJTkcQpA0SEgoNQ0xBSU1fTUFJTEJPWBCIDhIRCgxCQVRUTEVfU1RBUlQQ",
+            "7A4SEgoNQ0FSRF9UUkFOU0ZFUhDQDxIWChFFWFBBTkRfQ0FSRF9TTE9UUxCC",
+            "EBIQCgtDQVJEX0ZVU0lPThC0EBIWChFDQVJEX0ZVU0lPTl9CT09TVBCYERIU",
+            "Cg9TVEFNSU5BX1JFU1RPUkUQ/BESFgoRRklSU1RfREFJTFlfTE9HSU4Q4BIS",
+            "GQoUQ0xBSU1fTE9HSU5fQ0FNUEFJR04QxBMSFwoSREVMRVRFX0FMTF9NQUlM",
+            "Qk9YEIwVEhgKE0NMQUlNX1JFTlRBTF9SRVdBUkQQ8BUSEgoNUFVSQ0hBU0Vf",
+            "SVRFTRC4FxISCg1QVVJDSEFTRV9DQVJEEJwYEhoKFUFCSUxJVFlfU0hPUF9Q",
+            "VVJDSEFTRRCAGRIRCgxDQVJEX0FVR01FTlQQ5BkSGAoTQ0xBSU1fREFJTFlf",
+            "TUlTU0lPThDIGhIYChNDT01QTEVURV9SRUdJT05fTUFQEPQcEhgKE1NVTU1P",
+            "Tl9BQklMSVRZX0NBUkQQ2B0qWAoTVGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJ",
+            "TlZBTElEX1RFTEVQT1JUEAASCQoFTE9HSU4QARIJCgVXT1JMRBACEgkKBUZJ",
+            "RUxEEAMSCgoGQkFUVExFEARCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEv",
+            "bWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8u",
+            "R2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,7 +116,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFilterSortSetRequest), global::Mobius.Proto.Game.CardFilterSortSetRequest.Parser, new[]{ "View", "Index", "CardTypes", "CardElements", "SpecialFilters", "SortSelectors", "SortDescending" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFusionRequest), global::Mobius.Proto.Game.CardFusionRequest.Parser, new[]{ "BaseCard", "InventoryCards", "BankCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardBoostFusionRequest), global::Mobius.Proto.Game.CardBoostFusionRequest.Parser, new[]{ "Card", "MaxBoost" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSaleRequest), global::Mobius.Proto.Game.CardSaleRequest.Parser, new[]{ "Cards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSaleRequest), global::Mobius.Proto.Game.CardSaleRequest.Parser, new[]{ "Cards", "InventorySource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardTransferRequest), global::Mobius.Proto.Game.CardTransferRequest.Parser, new[]{ "Cards", "InventorySource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CreateProfileRequest), global::Mobius.Proto.Game.CreateProfileRequest.Parser, new[]{ "PlayerName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimEventRankingRequest), global::Mobius.Proto.Game.ClaimEventRankingRequest.Parser, new[]{ "Id", "Code" }, null, null, null, null),
@@ -2125,6 +2126,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CardSaleRequest(CardSaleRequest other) : this() {
       cards_ = other.cards_.Clone();
+      inventorySource_ = other.inventorySource_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2135,12 +2137,23 @@ namespace Mobius.Proto.Game {
 
     /// <summary>Field number for the "cards" field.</summary>
     public const int CardsFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_cards_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> cards_ = new pbc::RepeatedField<string>();
+    private static readonly pb::FieldCodec<int> _repeated_cards_codec
+        = pb::FieldCodec.ForInt32(10);
+    private readonly pbc::RepeatedField<int> cards_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Cards {
+    public pbc::RepeatedField<int> Cards {
       get { return cards_; }
+    }
+
+    /// <summary>Field number for the "inventory_source" field.</summary>
+    public const int InventorySourceFieldNumber = 2;
+    private int inventorySource_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int InventorySource {
+      get { return inventorySource_; }
+      set {
+        inventorySource_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2157,6 +2170,7 @@ namespace Mobius.Proto.Game {
         return true;
       }
       if(!cards_.Equals(other.cards_)) return false;
+      if (InventorySource != other.InventorySource) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2164,6 +2178,7 @@ namespace Mobius.Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= cards_.GetHashCode();
+      if (InventorySource != 0) hash ^= InventorySource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2181,6 +2196,10 @@ namespace Mobius.Proto.Game {
       output.WriteRawMessage(this);
     #else
       cards_.WriteTo(output, _repeated_cards_codec);
+      if (InventorySource != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(InventorySource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2191,6 +2210,10 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       cards_.WriteTo(ref output, _repeated_cards_codec);
+      if (InventorySource != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(InventorySource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2201,6 +2224,9 @@ namespace Mobius.Proto.Game {
     public int CalculateSize() {
       int size = 0;
       size += cards_.CalculateSize(_repeated_cards_codec);
+      if (InventorySource != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InventorySource);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2213,6 +2239,9 @@ namespace Mobius.Proto.Game {
         return;
       }
       cards_.Add(other.cards_);
+      if (other.InventorySource != 0) {
+        InventorySource = other.InventorySource;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2227,8 +2256,13 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 10:
+          case 8: {
             cards_.AddEntriesFrom(input, _repeated_cards_codec);
+            break;
+          }
+          case 16: {
+            InventorySource = input.ReadInt32();
             break;
           }
         }
@@ -2245,8 +2279,13 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 10:
+          case 8: {
             cards_.AddEntriesFrom(ref input, _repeated_cards_codec);
+            break;
+          }
+          case 16: {
+            InventorySource = input.ReadInt32();
             break;
           }
         }
@@ -2296,9 +2335,9 @@ namespace Mobius.Proto.Game {
     }
 
     /// <summary>Field number for the "cards" field.</summary>
-    public const int CardsFieldNumber = 2;
+    public const int CardsFieldNumber = 1;
     private static readonly pb::FieldCodec<int> _repeated_cards_codec
-        = pb::FieldCodec.ForInt32(18);
+        = pb::FieldCodec.ForInt32(10);
     private readonly pbc::RepeatedField<int> cards_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> Cards {
@@ -2306,7 +2345,7 @@ namespace Mobius.Proto.Game {
     }
 
     /// <summary>Field number for the "inventory_source" field.</summary>
-    public const int InventorySourceFieldNumber = 3;
+    public const int InventorySourceFieldNumber = 2;
     private int inventorySource_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int InventorySource {
@@ -2357,7 +2396,7 @@ namespace Mobius.Proto.Game {
     #else
       cards_.WriteTo(output, _repeated_cards_codec);
       if (InventorySource != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteInt32(InventorySource);
       }
       if (_unknownFields != null) {
@@ -2371,7 +2410,7 @@ namespace Mobius.Proto.Game {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       cards_.WriteTo(ref output, _repeated_cards_codec);
       if (InventorySource != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteInt32(InventorySource);
       }
       if (_unknownFields != null) {
@@ -2416,12 +2455,12 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 10:
+          case 8: {
             cards_.AddEntriesFrom(input, _repeated_cards_codec);
             break;
           }
-          case 24: {
+          case 16: {
             InventorySource = input.ReadInt32();
             break;
           }
@@ -2439,12 +2478,12 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 10:
+          case 8: {
             cards_.AddEntriesFrom(ref input, _repeated_cards_codec);
             break;
           }
-          case 24: {
+          case 16: {
             InventorySource = input.ReadInt32();
             break;
           }
