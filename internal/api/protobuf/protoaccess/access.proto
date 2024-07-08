@@ -29,6 +29,7 @@ message LoginUserRequest {
   string username = 1;
   string password = 2;
   string device_id = 3;
+  bool remember_me = 4;
 }
 
 message LoginUserResponse {
@@ -37,6 +38,7 @@ message LoginUserResponse {
   string access_token = 3;
   string refresh_token = 4;
   string customer_id = 5;
+  string remember_token = 6;
 }
 
 message RefreshTokenRequest {
@@ -74,4 +76,16 @@ message CustomerSearchRequest {
 message CustomerSearchResponse {
   string user_id = 1;
   string player_id = 2;
+}
+
+message RememberUserRequest {
+  string remember_token = 1;
+}
+
+message RememberUserResponse {
+  string session_id = 1;
+  string user_id = 2;
+  string access_token = 3;
+  string refresh_token = 4;
+  string customer_id = 5;
 }
