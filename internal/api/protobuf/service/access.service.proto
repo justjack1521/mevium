@@ -11,6 +11,7 @@ service AccessService {
   rpc AuthenticateToken(access.AuthenticateTokenRequest) returns (access.AuthenticateTokenResponse) {}
   rpc ChangePassword(access.ChangePasswordRequest) returns (access.ChangePasswordResponse) {}
   rpc LoginUser(access.LoginUserRequest) returns (access.LoginUserResponse) {}
+  rpc RememberUser(access.RememberUserRequest) returns (access.RememberUserResponse) {}
   rpc RefreshToken(access.RefreshTokenRequest) returns (access.RefreshTokenResponse) {}
   rpc RegisterUser(access.RegisterUserRequest) returns (access.RegisterUserResponse) {}
   rpc UserHasRole(access.UserHasRoleRequest) returns (access.UserHasRoleResponse) {}

@@ -23,6 +23,7 @@ const (
 	AccessService_AuthenticateToken_FullMethodName = "/service.AccessService/AuthenticateToken"
 	AccessService_ChangePassword_FullMethodName    = "/service.AccessService/ChangePassword"
 	AccessService_LoginUser_FullMethodName         = "/service.AccessService/LoginUser"
+	AccessService_RememberUser_FullMethodName      = "/service.AccessService/RememberUser"
 	AccessService_RefreshToken_FullMethodName      = "/service.AccessService/RefreshToken"
 	AccessService_RegisterUser_FullMethodName      = "/service.AccessService/RegisterUser"
 	AccessService_UserHasRole_FullMethodName       = "/service.AccessService/UserHasRole"
@@ -36,6 +37,7 @@ type AccessServiceClient interface {
 	AuthenticateToken(ctx context.Context, in *protoaccess.AuthenticateTokenRequest, opts ...grpc.CallOption) (*protoaccess.AuthenticateTokenResponse, error)
 	ChangePassword(ctx context.Context, in *protoaccess.ChangePasswordRequest, opts ...grpc.CallOption) (*protoaccess.ChangePasswordResponse, error)
 	LoginUser(ctx context.Context, in *protoaccess.LoginUserRequest, opts ...grpc.CallOption) (*protoaccess.LoginUserResponse, error)
+	RememberUser(ctx context.Context, in *protoaccess.RememberUserRequest, opts ...grpc.CallOption) (*protoaccess.RememberUserResponse, error)
 	RefreshToken(ctx context.Context, in *protoaccess.RefreshTokenRequest, opts ...grpc.CallOption) (*protoaccess.RefreshTokenResponse, error)
 	RegisterUser(ctx context.Context, in *protoaccess.RegisterUserRequest, opts ...grpc.CallOption) (*protoaccess.RegisterUserResponse, error)
 	UserHasRole(ctx context.Context, in *protoaccess.UserHasRoleRequest, opts ...grpc.CallOption) (*protoaccess.UserHasRoleResponse, error)
@@ -71,6 +73,15 @@ func (c *accessServiceClient) ChangePassword(ctx context.Context, in *protoacces
 func (c *accessServiceClient) LoginUser(ctx context.Context, in *protoaccess.LoginUserRequest, opts ...grpc.CallOption) (*protoaccess.LoginUserResponse, error) {
 	out := new(protoaccess.LoginUserResponse)
 	err := c.cc.Invoke(ctx, AccessService_LoginUser_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *accessServiceClient) RememberUser(ctx context.Context, in *protoaccess.RememberUserRequest, opts ...grpc.CallOption) (*protoaccess.RememberUserResponse, error) {
+	out := new(protoaccess.RememberUserResponse)
+	err := c.cc.Invoke(ctx, AccessService_RememberUser_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -120,6 +131,7 @@ type AccessServiceServer interface {
 	AuthenticateToken(context.Context, *protoaccess.AuthenticateTokenRequest) (*protoaccess.AuthenticateTokenResponse, error)
 	ChangePassword(context.Context, *protoaccess.ChangePasswordRequest) (*protoaccess.ChangePasswordResponse, error)
 	LoginUser(context.Context, *protoaccess.LoginUserRequest) (*protoaccess.LoginUserResponse, error)
+	RememberUser(context.Context, *protoaccess.RememberUserRequest) (*protoaccess.RememberUserResponse, error)
 	RefreshToken(context.Context, *protoaccess.RefreshTokenRequest) (*protoaccess.RefreshTokenResponse, error)
 	RegisterUser(context.Context, *protoaccess.RegisterUserRequest) (*protoaccess.RegisterUserResponse, error)
 	UserHasRole(context.Context, *protoaccess.UserHasRoleRequest) (*protoaccess.UserHasRoleResponse, error)
@@ -138,6 +150,9 @@ func (UnimplementedAccessServiceServer) ChangePassword(context.Context, *protoac
 }
 func (UnimplementedAccessServiceServer) LoginUser(context.Context, *protoaccess.LoginUserRequest) (*protoaccess.LoginUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LoginUser not implemented")
+}
+func (UnimplementedAccessServiceServer) RememberUser(context.Context, *protoaccess.RememberUserRequest) (*protoaccess.RememberUserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RememberUser not implemented")
 }
 func (UnimplementedAccessServiceServer) RefreshToken(context.Context, *protoaccess.RefreshTokenRequest) (*protoaccess.RefreshTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RefreshToken not implemented")
@@ -213,6 +228,24 @@ func _AccessService_LoginUser_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessServiceServer).LoginUser(ctx, req.(*protoaccess.LoginUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AccessService_RememberUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoaccess.RememberUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AccessServiceServer).RememberUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AccessService_RememberUser_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AccessServiceServer).RememberUser(ctx, req.(*protoaccess.RememberUserRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -307,6 +340,10 @@ var AccessService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "LoginUser",
 			Handler:    _AccessService_LoginUser_Handler,
+		},
+		{
+			MethodName: "RememberUser",
+			Handler:    _AccessService_RememberUser_Handler,
 		},
 		{
 			MethodName: "RefreshToken",
