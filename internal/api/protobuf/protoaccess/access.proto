@@ -85,7 +85,8 @@ message RememberUserRequest {
 message RememberUserResponse {
   string session_id = 1;
   string user_id = 2;
-  string access_token = 3;
-  string refresh_token = 4;
-  string customer_id = 5;
+  string username = 3;
+  string access_token = 4;
+  string refresh_token = 5;
+  string customer_id = 6;
 }
