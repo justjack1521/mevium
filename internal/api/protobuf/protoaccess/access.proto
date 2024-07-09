@@ -80,6 +80,7 @@ message CustomerSearchResponse {
 
 message RememberUserRequest {
   string remember_token = 1;
+  string device_id = 2;
 }
 
 message RememberUserResponse {
