@@ -13,6 +13,7 @@ message AuthenticateTokenRequest {
 message AuthenticateTokenResponse {
   string user_id = 1;
   string player_id = 2;
+  string environment = 3;
 }
 
 message ChangePasswordRequest {
