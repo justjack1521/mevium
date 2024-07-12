@@ -22,3 +22,7 @@ message GetMultiPlayerLoadoutRequest {
   string player_id = 1;
   int32 deck_index = 2;
 }
+
+message GetRentalCardRequest {
+  string player_id = 1;
+}

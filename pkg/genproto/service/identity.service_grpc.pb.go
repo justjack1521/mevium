@@ -24,6 +24,7 @@ const (
 	MeviusIdentityService_GetSinglePlayerLoadoutIdentity_FullMethodName = "/service.MeviusIdentityService/GetSinglePlayerLoadoutIdentity"
 	MeviusIdentityService_GetSinglePlayerLoadout_FullMethodName         = "/service.MeviusIdentityService/GetSinglePlayerLoadout"
 	MeviusIdentityService_GetMultiPlayerLoadout_FullMethodName          = "/service.MeviusIdentityService/GetMultiPlayerLoadout"
+	MeviusIdentityService_GetRentalCard_FullMethodName                  = "/service.MeviusIdentityService/GetRentalCard"
 )
 
 // MeviusIdentityServiceClient is the client API for MeviusIdentityService service.
@@ -34,6 +35,7 @@ type MeviusIdentityServiceClient interface {
 	GetSinglePlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error)
 	GetSinglePlayerLoadout(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutResponse, error)
 	GetMultiPlayerLoadout(ctx context.Context, in *protoidentity.GetMultiPlayerLoadoutRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutResponse, error)
+	GetRentalCard(ctx context.Context, in *protoidentity.GetRentalCardRequest, opts ...grpc.CallOption) (*protoidentity.GetRentalCardResponse, error)
 }
 
 type meviusIdentityServiceClient struct {
@@ -80,6 +82,15 @@ func (c *meviusIdentityServiceClient) GetMultiPlayerLoadout(ctx context.Context,
 	return out, nil
 }
 
+func (c *meviusIdentityServiceClient) GetRentalCard(ctx context.Context, in *protoidentity.GetRentalCardRequest, opts ...grpc.CallOption) (*protoidentity.GetRentalCardResponse, error) {
+	out := new(protoidentity.GetRentalCardResponse)
+	err := c.cc.Invoke(ctx, MeviusIdentityService_GetRentalCard_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusIdentityServiceServer is the server API for MeviusIdentityService service.
 // All implementations should embed UnimplementedMeviusIdentityServiceServer
 // for forward compatibility
@@ -88,6 +99,7 @@ type MeviusIdentityServiceServer interface {
 	GetSinglePlayerLoadoutIdentity(context.Context, *protoidentity.GetSinglePlayerLoadoutIdentityRequest) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error)
 	GetSinglePlayerLoadout(context.Context, *protoidentity.GetSinglePlayerLoadoutRequest) (*protoidentity.GetSinglePlayerLoadoutResponse, error)
 	GetMultiPlayerLoadout(context.Context, *protoidentity.GetMultiPlayerLoadoutRequest) (*protoidentity.GetMultiPlayerLoadoutResponse, error)
+	GetRentalCard(context.Context, *protoidentity.GetRentalCardRequest) (*protoidentity.GetRentalCardResponse, error)
 }
 
 // UnimplementedMeviusIdentityServiceServer should be embedded to have forward compatible implementations.
@@ -105,6 +117,9 @@ func (UnimplementedMeviusIdentityServiceServer) GetSinglePlayerLoadout(context.C
 }
 func (UnimplementedMeviusIdentityServiceServer) GetMultiPlayerLoadout(context.Context, *protoidentity.GetMultiPlayerLoadoutRequest) (*protoidentity.GetMultiPlayerLoadoutResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMultiPlayerLoadout not implemented")
+}
+func (UnimplementedMeviusIdentityServiceServer) GetRentalCard(context.Context, *protoidentity.GetRentalCardRequest) (*protoidentity.GetRentalCardResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRentalCard not implemented")
 }
 
 // UnsafeMeviusIdentityServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -190,6 +205,24 @@ func _MeviusIdentityService_GetMultiPlayerLoadout_Handler(srv interface{}, ctx c
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusIdentityService_GetRentalCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoidentity.GetRentalCardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusIdentityServiceServer).GetRentalCard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusIdentityService_GetRentalCard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusIdentityServiceServer).GetRentalCard(ctx, req.(*protoidentity.GetRentalCardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusIdentityService_ServiceDesc is the grpc.ServiceDesc for MeviusIdentityService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -212,6 +245,10 @@ var MeviusIdentityService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetMultiPlayerLoadout",
 			Handler:    _MeviusIdentityService_GetMultiPlayerLoadout_Handler,
+		},
+		{
+			MethodName: "GetRentalCard",
+			Handler:    _MeviusIdentityService_GetRentalCard_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -36,16 +36,19 @@ namespace Mobius.Proto.Identity {
             "IAEoCzIcLmlkZW50aXR5LlByb3RvUGxheWVyTG9hZG91dCJ/Ch1HZXRNdWx0",
             "aVBsYXllckxvYWRvdXRSZXNwb25zZRIvCghpZGVudGl0eRgBIAEoCzIdLmlk",
             "ZW50aXR5LlByb3RvUGxheWVySWRlbnRpdHkSLQoHbG9hZG91dBgCIAEoCzIc",
-            "LmlkZW50aXR5LlByb3RvUGxheWVyTG9hZG91dEJTWjlnaXRodWIuY29tL2p1",
-            "c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvaWRlbnRpdHmq",
-            "AhVNb2JpdXMuUHJvdG8uSWRlbnRpdHliBnByb3RvMw=="));
+            "LmlkZW50aXR5LlByb3RvUGxheWVyTG9hZG91dCJPChVHZXRSZW50YWxDYXJk",
+            "UmVzcG9uc2USNgoLcmVudGFsX2NhcmQYASABKAsyIS5pZGVudGl0eS5Qcm90",
+            "b1BsYXllckNhcmRJZGVudGl0eUJTWjlnaXRodWIuY29tL2p1c3RqYWNrMTUy",
+            "MS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvaWRlbnRpdHmqAhVNb2JpdXMu",
+            "UHJvdG8uSWRlbnRpdHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerIdentityResponse), global::Mobius.Proto.Identity.GetSinglePlayerIdentityResponse.Parser, new[]{ "Identity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerLoadoutIdentityResponse), global::Mobius.Proto.Identity.GetSinglePlayerLoadoutIdentityResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerLoadoutResponse), global::Mobius.Proto.Identity.GetSinglePlayerLoadoutResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetMultiPlayerLoadoutResponse), global::Mobius.Proto.Identity.GetMultiPlayerLoadoutResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetMultiPlayerLoadoutResponse), global::Mobius.Proto.Identity.GetMultiPlayerLoadoutResponse.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetRentalCardResponse), global::Mobius.Proto.Identity.GetRentalCardResponse.Parser, new[]{ "RentalCard" }, null, null, null, null)
           }));
     }
     #endregion
@@ -902,6 +905,187 @@ namespace Mobius.Proto.Identity {
               Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadout();
             }
             input.ReadMessage(Loadout);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetRentalCardResponse : pb::IMessage<GetRentalCardResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetRentalCardResponse> _parser = new pb::MessageParser<GetRentalCardResponse>(() => new GetRentalCardResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetRentalCardResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Identity.IdentityResponseReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetRentalCardResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetRentalCardResponse(GetRentalCardResponse other) : this() {
+      rentalCard_ = other.rentalCard_ != null ? other.rentalCard_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetRentalCardResponse Clone() {
+      return new GetRentalCardResponse(this);
+    }
+
+    /// <summary>Field number for the "rental_card" field.</summary>
+    public const int RentalCardFieldNumber = 1;
+    private global::Mobius.Proto.Identity.ProtoPlayerCardIdentity rentalCard_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Identity.ProtoPlayerCardIdentity RentalCard {
+      get { return rentalCard_; }
+      set {
+        rentalCard_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetRentalCardResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetRentalCardResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(RentalCard, other.RentalCard)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (rentalCard_ != null) hash ^= RentalCard.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (rentalCard_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RentalCard);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (rentalCard_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RentalCard);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (rentalCard_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RentalCard);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetRentalCardResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.rentalCard_ != null) {
+        if (rentalCard_ == null) {
+          RentalCard = new global::Mobius.Proto.Identity.ProtoPlayerCardIdentity();
+        }
+        RentalCard.MergeFrom(other.RentalCard);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (rentalCard_ == null) {
+              RentalCard = new global::Mobius.Proto.Identity.ProtoPlayerCardIdentity();
+            }
+            input.ReadMessage(RentalCard);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (rentalCard_ == null) {
+              RentalCard = new global::Mobius.Proto.Identity.ProtoPlayerCardIdentity();
+            }
+            input.ReadMessage(RentalCard);
             break;
           }
         }

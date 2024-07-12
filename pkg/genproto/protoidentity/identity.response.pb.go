@@ -232,6 +232,53 @@ func (x *GetMultiPlayerLoadoutResponse) GetLoadout() *ProtoPlayerLoadout {
 	return nil
 }
 
+type GetRentalCardResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	RentalCard *ProtoPlayerCardIdentity `protobuf:"bytes,1,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
+}
+
+func (x *GetRentalCardResponse) Reset() {
+	*x = GetRentalCardResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protoidentity_identity_response_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetRentalCardResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetRentalCardResponse) ProtoMessage() {}
+
+func (x *GetRentalCardResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protoidentity_identity_response_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetRentalCardResponse.ProtoReflect.Descriptor instead.
+func (*GetRentalCardResponse) Descriptor() ([]byte, []int) {
+	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetRentalCardResponse) GetRentalCard() *ProtoPlayerCardIdentity {
+	if x != nil {
+		return x.RentalCard
+	}
+	return nil
+}
+
 var File_protoidentity_identity_response_proto protoreflect.FileDescriptor
 
 var file_protoidentity_identity_response_proto_rawDesc = []byte{
@@ -274,13 +321,19 @@ var file_protoidentity_identity_response_proto_rawDesc = []byte{
 	0x74, 0x69, 0x74, 0x79, 0x12, 0x36, 0x0a, 0x07, 0x6c, 0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x18,
 	0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79,
 	0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x4c, 0x6f, 0x61, 0x64,
-	0x6f, 0x75, 0x74, 0x52, 0x07, 0x6c, 0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x42, 0x53, 0x5a, 0x39,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a,
-	0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70,
-	0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0xaa, 0x02, 0x15, 0x4d, 0x6f, 0x62, 0x69,
-	0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74,
-	0x79, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x75, 0x74, 0x52, 0x07, 0x6c, 0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x22, 0x5b, 0x0a, 0x15,
+	0x47, 0x65, 0x74, 0x52, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x43, 0x61, 0x72, 0x64, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x42, 0x0a, 0x0b, 0x72, 0x65, 0x6e, 0x74, 0x61, 0x6c, 0x5f,
+	0x63, 0x61, 0x72, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x21, 0x2e, 0x69, 0x64, 0x65,
+	0x6e, 0x74, 0x69, 0x74, 0x79, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x43, 0x61, 0x72, 0x64, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x0a, 0x72,
+	0x65, 0x6e, 0x74, 0x61, 0x6c, 0x43, 0x61, 0x72, 0x64, 0x42, 0x53, 0x5a, 0x39, 0x67, 0x69, 0x74,
+	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b,
+	0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f,
+	0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x69, 0x64,
+	0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0xaa, 0x02, 0x15, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e,
+	0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -295,29 +348,32 @@ func file_protoidentity_identity_response_proto_rawDescGZIP() []byte {
 	return file_protoidentity_identity_response_proto_rawDescData
 }
 
-var file_protoidentity_identity_response_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_protoidentity_identity_response_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_protoidentity_identity_response_proto_goTypes = []interface{}{
 	(*GetSinglePlayerIdentityResponse)(nil),        // 0: identity.GetSinglePlayerIdentityResponse
 	(*GetSinglePlayerLoadoutIdentityResponse)(nil), // 1: identity.GetSinglePlayerLoadoutIdentityResponse
 	(*GetSinglePlayerLoadoutResponse)(nil),         // 2: identity.GetSinglePlayerLoadoutResponse
 	(*GetMultiPlayerLoadoutResponse)(nil),          // 3: identity.GetMultiPlayerLoadoutResponse
-	(*ProtoPlayerIdentity)(nil),                    // 4: identity.ProtoPlayerIdentity
-	(*ProtoPlayerLoadoutIdentity)(nil),             // 5: identity.ProtoPlayerLoadoutIdentity
-	(*ProtoPlayerLoadout)(nil),                     // 6: identity.ProtoPlayerLoadout
+	(*GetRentalCardResponse)(nil),                  // 4: identity.GetRentalCardResponse
+	(*ProtoPlayerIdentity)(nil),                    // 5: identity.ProtoPlayerIdentity
+	(*ProtoPlayerLoadoutIdentity)(nil),             // 6: identity.ProtoPlayerLoadoutIdentity
+	(*ProtoPlayerLoadout)(nil),                     // 7: identity.ProtoPlayerLoadout
+	(*ProtoPlayerCardIdentity)(nil),                // 8: identity.ProtoPlayerCardIdentity
 }
 var file_protoidentity_identity_response_proto_depIdxs = []int32{
-	4, // 0: identity.GetSinglePlayerIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	4, // 1: identity.GetSinglePlayerLoadoutIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	5, // 2: identity.GetSinglePlayerLoadoutIdentityResponse.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	4, // 3: identity.GetSinglePlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	6, // 4: identity.GetSinglePlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
-	4, // 5: identity.GetMultiPlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	6, // 6: identity.GetMultiPlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
-	7, // [7:7] is the sub-list for method output_type
-	7, // [7:7] is the sub-list for method input_type
-	7, // [7:7] is the sub-list for extension type_name
-	7, // [7:7] is the sub-list for extension extendee
-	0, // [0:7] is the sub-list for field type_name
+	5, // 0: identity.GetSinglePlayerIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	5, // 1: identity.GetSinglePlayerLoadoutIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	6, // 2: identity.GetSinglePlayerLoadoutIdentityResponse.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	5, // 3: identity.GetSinglePlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	7, // 4: identity.GetSinglePlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
+	5, // 5: identity.GetMultiPlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	7, // 6: identity.GetMultiPlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
+	8, // 7: identity.GetRentalCardResponse.rental_card:type_name -> identity.ProtoPlayerCardIdentity
+	8, // [8:8] is the sub-list for method output_type
+	8, // [8:8] is the sub-list for method input_type
+	8, // [8:8] is the sub-list for extension type_name
+	8, // [8:8] is the sub-list for extension extendee
+	0, // [0:8] is the sub-list for field type_name
 }
 
 func init() { file_protoidentity_identity_response_proto_init() }
@@ -375,6 +431,18 @@ func file_protoidentity_identity_response_proto_init() {
 				return nil
 			}
 		}
+		file_protoidentity_identity_response_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetRentalCardResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -382,7 +450,7 @@ func file_protoidentity_identity_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protoidentity_identity_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

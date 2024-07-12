@@ -12,4 +12,7 @@ service MeviusIdentityService {
   rpc GetSinglePlayerLoadoutIdentity(identity.GetSinglePlayerLoadoutIdentityRequest) returns (identity.GetSinglePlayerLoadoutIdentityResponse) {}
   rpc GetSinglePlayerLoadout(identity.GetSinglePlayerLoadoutRequest) returns (identity.GetSinglePlayerLoadoutResponse) {}
   rpc GetMultiPlayerLoadout(identity.GetMultiPlayerLoadoutRequest) returns (identity.GetMultiPlayerLoadoutResponse) {}
+
+  rpc GetRentalCard(identity.GetRentalCardRequest) returns (identity.GetRentalCardResponse) {}
+
 }
