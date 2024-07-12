@@ -24,40 +24,28 @@ namespace Mobius.Proto.Multi {
     static MultiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZwcm90b211bHRpL211bHRpLnByb3RvEgVtdWx0aSKuAQoRUHJvdG9Mb2Ji",
-            "eVN1bW1hcnkSEwoLaW5zdGFuY2VfaWQYASABKAkSEAoIcXVlc3RfaWQYAiAB",
-            "KAkSDwoHY29tbWVudBgDIAEoCRIcChRtaW5pbXVtX3BsYXllcl9sZXZlbBgE",
-            "IAEoBRIVCg1yZWdpc3RlcmVkX2F0GAUgASgFEiwKB3BsYXllcnMYBiADKAsy",
-            "Gy5tdWx0aS5Qcm90b0xvYmJ5UGxheWVyU2xvdCJiChRQcm90b0xvYmJ5UGxh",
-            "eWVyU2xvdBISCgpzbG90X2luZGV4GAIgASgFEg0KBXJlYWR5GAMgASgIEicK",
-            "BnBsYXllchgEIAEoCzIXLm11bHRpLlByb3RvTG9iYnlQbGF5ZXIihgIKEFBy",
-            "b3RvTG9iYnlQbGF5ZXISEQoJcGxheWVyX2lkGAEgASgJEhMKC3BsYXllcl9u",
-            "YW1lGAIgASgJEhYKDnBsYXllcl9jb21tZW50GAMgASgJEhQKDHBsYXllcl9s",
-            "ZXZlbBgEIAEoBRISCgpkZWNrX2luZGV4GAUgASgFEioKCGpvYl9jYXJkGAYg",
-            "ASgLMhgubXVsdGkuUHJvdG9Mb2JieUpvYkNhcmQSJwoGd2VhcG9uGAcgASgL",
-            "MhcubXVsdGkuUHJvdG9Mb2JieVdlYXBvbhIzCg1hYmlsaXR5X2NhcmRzGAgg",
-            "AygLMhwubXVsdGkuUHJvdG9Mb2JieUFiaWxpdHlDYXJkIm4KEVByb3RvTG9i",
-            "YnlKb2JDYXJkEhMKC2pvYl9jYXJkX2lkGAEgASgJEhUKDXN1Yl9qb2JfaW5k",
-            "ZXgYAiABKAUSGAoQb3Zlcl9ib29zdF9sZXZlbBgDIAEoBRITCgtjcm93bl9s",
-            "ZXZlbBgEIAEoBSJAChBQcm90b0xvYmJ5V2VhcG9uEhEKCXdlYXBvbl9pZBgB",
-            "IAEoCRIZChFzdWJfd2VhcG9uX3VubG9jaxgCIAEoBSKRAQoVUHJvdG9Mb2Ji",
-            "eUFiaWxpdHlDYXJkEhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRIaChJhYmls",
-            "aXR5X2NhcmRfbGV2ZWwYAiABKAUSFQoNYWJpbGl0eV9sZXZlbBgDIAEoBRIY",
-            "ChBvdmVyX2Jvb3N0X2xldmVsGAQgASgFEhIKCnNsb3RfaW5kZXgYFCABKAUi",
-            "gQEKH1Byb3RvTG9iYnlQbGF5ZXJTbG90UmVzdHJpY3Rpb24SEgoKc2xvdF9p",
-            "bmRleBgBIAEoBRIYChByb2xlX3Jlc3RyaWN0aW9uGAIgASgJEg4KBmxvY2tl",
-            "ZBgDIAEoCBILCgNib3QYBCABKAgSEwoLaW52aXRlX29ubHkYBSABKAhCTVo2",
-            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
-            "cm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "ChZwcm90b211bHRpL211bHRpLnByb3RvEgVtdWx0aRoacHJvdG9pZGVudGl0",
+            "eS9wbGF5ZXIucHJvdG8irgEKEVByb3RvTG9iYnlTdW1tYXJ5EhMKC2luc3Rh",
+            "bmNlX2lkGAEgASgJEhAKCHF1ZXN0X2lkGAIgASgJEg8KB2NvbW1lbnQYAyAB",
+            "KAkSHAoUbWluaW11bV9wbGF5ZXJfbGV2ZWwYBCABKAUSFQoNcmVnaXN0ZXJl",
+            "ZF9hdBgFIAEoBRIsCgdwbGF5ZXJzGAYgAygLMhsubXVsdGkuUHJvdG9Mb2Ji",
+            "eVBsYXllclNsb3QiYgoUUHJvdG9Mb2JieVBsYXllclNsb3QSEgoKc2xvdF9p",
+            "bmRleBgCIAEoBRINCgVyZWFkeRgDIAEoCBInCgZwbGF5ZXIYBCABKAsyFy5t",
+            "dWx0aS5Qcm90b0xvYmJ5UGxheWVyInoKEFByb3RvTG9iYnlQbGF5ZXISLwoI",
+            "aWRlbnRpdHkYASABKAsyHS5pZGVudGl0eS5Qcm90b1BsYXllcklkZW50aXR5",
+            "EjUKB2xvYWRvdXQYAiABKAsyJC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRv",
+            "dXRJZGVudGl0eSKBAQofUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlv",
+            "bhISCgpzbG90X2luZGV4GAEgASgFEhgKEHJvbGVfcmVzdHJpY3Rpb24YAiAB",
+            "KAkSDgoGbG9ja2VkGAMgASgIEgsKA2JvdBgEIAEoCBITCgtpbnZpdGVfb25s",
+            "eRgFIAEoCEJNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtn",
+            "L2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbySummary), global::Mobius.Proto.Multi.ProtoLobbySummary.Parser, new[]{ "InstanceId", "QuestId", "Comment", "MinimumPlayerLevel", "RegisteredAt", "Players" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser, new[]{ "SlotIndex", "Ready", "Player" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "PlayerId", "PlayerName", "PlayerComment", "PlayerLevel", "DeckIndex", "JobCard", "Weapon", "AbilityCards" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyJobCard), global::Mobius.Proto.Multi.ProtoLobbyJobCard.Parser, new[]{ "JobCardId", "SubJobIndex", "OverBoostLevel", "CrownLevel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyWeapon), global::Mobius.Proto.Multi.ProtoLobbyWeapon.Parser, new[]{ "WeaponId", "SubWeaponUnlock" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyAbilityCard), global::Mobius.Proto.Multi.ProtoLobbyAbilityCard.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser, new[]{ "SlotIndex", "RoleRestriction", "Locked", "Bot", "InviteOnly" }, null, null, null, null)
           }));
     }
@@ -688,14 +676,8 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoLobbyPlayer(ProtoLobbyPlayer other) : this() {
-      playerId_ = other.playerId_;
-      playerName_ = other.playerName_;
-      playerComment_ = other.playerComment_;
-      playerLevel_ = other.playerLevel_;
-      deckIndex_ = other.deckIndex_;
-      jobCard_ = other.jobCard_ != null ? other.jobCard_.Clone() : null;
-      weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
-      abilityCards_ = other.abilityCards_.Clone();
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
+      loadout_ = other.loadout_ != null ? other.loadout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -704,91 +686,26 @@ namespace Mobius.Proto.Multi {
       return new ProtoLobbyPlayer(this);
     }
 
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 1;
+    private global::Mobius.Proto.Identity.ProtoPlayerIdentity identity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerIdentity Identity {
+      get { return identity_; }
       set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        identity_ = value;
       }
     }
 
-    /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
-    private string playerName_ = "";
+    /// <summary>Field number for the "loadout" field.</summary>
+    public const int LoadoutFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity loadout_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerName {
-      get { return playerName_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity Loadout {
+      get { return loadout_; }
       set {
-        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        loadout_ = value;
       }
-    }
-
-    /// <summary>Field number for the "player_comment" field.</summary>
-    public const int PlayerCommentFieldNumber = 3;
-    private string playerComment_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerComment {
-      get { return playerComment_; }
-      set {
-        playerComment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "player_level" field.</summary>
-    public const int PlayerLevelFieldNumber = 4;
-    private int playerLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PlayerLevel {
-      get { return playerLevel_; }
-      set {
-        playerLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "deck_index" field.</summary>
-    public const int DeckIndexFieldNumber = 5;
-    private int deckIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int DeckIndex {
-      get { return deckIndex_; }
-      set {
-        deckIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "job_card" field.</summary>
-    public const int JobCardFieldNumber = 6;
-    private global::Mobius.Proto.Multi.ProtoLobbyJobCard jobCard_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Multi.ProtoLobbyJobCard JobCard {
-      get { return jobCard_; }
-      set {
-        jobCard_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "weapon" field.</summary>
-    public const int WeaponFieldNumber = 7;
-    private global::Mobius.Proto.Multi.ProtoLobbyWeapon weapon_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Multi.ProtoLobbyWeapon Weapon {
-      get { return weapon_; }
-      set {
-        weapon_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ability_cards" field.</summary>
-    public const int AbilityCardsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoLobbyAbilityCard> _repeated_abilityCards_codec
-        = pb::FieldCodec.ForMessage(66, global::Mobius.Proto.Multi.ProtoLobbyAbilityCard.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyAbilityCard> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyAbilityCard>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyAbilityCard> AbilityCards {
-      get { return abilityCards_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -804,28 +721,16 @@ namespace Mobius.Proto.Multi {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
-      if (PlayerName != other.PlayerName) return false;
-      if (PlayerComment != other.PlayerComment) return false;
-      if (PlayerLevel != other.PlayerLevel) return false;
-      if (DeckIndex != other.DeckIndex) return false;
-      if (!object.Equals(JobCard, other.JobCard)) return false;
-      if (!object.Equals(Weapon, other.Weapon)) return false;
-      if(!abilityCards_.Equals(other.abilityCards_)) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
+      if (!object.Equals(Loadout, other.Loadout)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
-      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
-      if (PlayerComment.Length != 0) hash ^= PlayerComment.GetHashCode();
-      if (PlayerLevel != 0) hash ^= PlayerLevel.GetHashCode();
-      if (DeckIndex != 0) hash ^= DeckIndex.GetHashCode();
-      if (jobCard_ != null) hash ^= JobCard.GetHashCode();
-      if (weapon_ != null) hash ^= Weapon.GetHashCode();
-      hash ^= abilityCards_.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
+      if (loadout_ != null) hash ^= Loadout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -842,35 +747,14 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(PlayerId);
+        output.WriteMessage(Identity);
       }
-      if (PlayerName.Length != 0) {
+      if (loadout_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(PlayerName);
+        output.WriteMessage(Loadout);
       }
-      if (PlayerComment.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(PlayerComment);
-      }
-      if (PlayerLevel != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(PlayerLevel);
-      }
-      if (DeckIndex != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(DeckIndex);
-      }
-      if (jobCard_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(JobCard);
-      }
-      if (weapon_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Weapon);
-      }
-      abilityCards_.WriteTo(output, _repeated_abilityCards_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -880,35 +764,14 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(PlayerId);
+        output.WriteMessage(Identity);
       }
-      if (PlayerName.Length != 0) {
+      if (loadout_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(PlayerName);
+        output.WriteMessage(Loadout);
       }
-      if (PlayerComment.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(PlayerComment);
-      }
-      if (PlayerLevel != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(PlayerLevel);
-      }
-      if (DeckIndex != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(DeckIndex);
-      }
-      if (jobCard_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(JobCard);
-      }
-      if (weapon_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Weapon);
-      }
-      abilityCards_.WriteTo(ref output, _repeated_abilityCards_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -918,28 +781,12 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
-      if (PlayerName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      if (loadout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Loadout);
       }
-      if (PlayerComment.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerComment);
-      }
-      if (PlayerLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerLevel);
-      }
-      if (DeckIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeckIndex);
-      }
-      if (jobCard_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JobCard);
-      }
-      if (weapon_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
-      }
-      size += abilityCards_.CalculateSize(_repeated_abilityCards_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -951,34 +798,18 @@ namespace Mobius.Proto.Multi {
       if (other == null) {
         return;
       }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
-      }
-      if (other.PlayerName.Length != 0) {
-        PlayerName = other.PlayerName;
-      }
-      if (other.PlayerComment.Length != 0) {
-        PlayerComment = other.PlayerComment;
-      }
-      if (other.PlayerLevel != 0) {
-        PlayerLevel = other.PlayerLevel;
-      }
-      if (other.DeckIndex != 0) {
-        DeckIndex = other.DeckIndex;
-      }
-      if (other.jobCard_ != null) {
-        if (jobCard_ == null) {
-          JobCard = new global::Mobius.Proto.Multi.ProtoLobbyJobCard();
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
         }
-        JobCard.MergeFrom(other.JobCard);
+        Identity.MergeFrom(other.Identity);
       }
-      if (other.weapon_ != null) {
-        if (weapon_ == null) {
-          Weapon = new global::Mobius.Proto.Multi.ProtoLobbyWeapon();
+      if (other.loadout_ != null) {
+        if (loadout_ == null) {
+          Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
         }
-        Weapon.MergeFrom(other.Weapon);
+        Loadout.MergeFrom(other.Loadout);
       }
-      abilityCards_.Add(other.abilityCards_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -994,41 +825,17 @@ namespace Mobius.Proto.Multi {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            PlayerId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
           case 18: {
-            PlayerName = input.ReadString();
-            break;
-          }
-          case 26: {
-            PlayerComment = input.ReadString();
-            break;
-          }
-          case 32: {
-            PlayerLevel = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            DeckIndex = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            if (jobCard_ == null) {
-              JobCard = new global::Mobius.Proto.Multi.ProtoLobbyJobCard();
+            if (loadout_ == null) {
+              Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
             }
-            input.ReadMessage(JobCard);
-            break;
-          }
-          case 58: {
-            if (weapon_ == null) {
-              Weapon = new global::Mobius.Proto.Multi.ProtoLobbyWeapon();
-            }
-            input.ReadMessage(Weapon);
-            break;
-          }
-          case 66: {
-            abilityCards_.AddEntriesFrom(input, _repeated_abilityCards_codec);
+            input.ReadMessage(Loadout);
             break;
           }
         }
@@ -1046,845 +853,17 @@ namespace Mobius.Proto.Multi {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            PlayerId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
           case 18: {
-            PlayerName = input.ReadString();
-            break;
-          }
-          case 26: {
-            PlayerComment = input.ReadString();
-            break;
-          }
-          case 32: {
-            PlayerLevel = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            DeckIndex = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            if (jobCard_ == null) {
-              JobCard = new global::Mobius.Proto.Multi.ProtoLobbyJobCard();
+            if (loadout_ == null) {
+              Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity();
             }
-            input.ReadMessage(JobCard);
-            break;
-          }
-          case 58: {
-            if (weapon_ == null) {
-              Weapon = new global::Mobius.Proto.Multi.ProtoLobbyWeapon();
-            }
-            input.ReadMessage(Weapon);
-            break;
-          }
-          case 66: {
-            abilityCards_.AddEntriesFrom(ref input, _repeated_abilityCards_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class ProtoLobbyJobCard : pb::IMessage<ProtoLobbyJobCard>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ProtoLobbyJobCard> _parser = new pb::MessageParser<ProtoLobbyJobCard>(() => new ProtoLobbyJobCard());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoLobbyJobCard> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyJobCard() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyJobCard(ProtoLobbyJobCard other) : this() {
-      jobCardId_ = other.jobCardId_;
-      subJobIndex_ = other.subJobIndex_;
-      overBoostLevel_ = other.overBoostLevel_;
-      crownLevel_ = other.crownLevel_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyJobCard Clone() {
-      return new ProtoLobbyJobCard(this);
-    }
-
-    /// <summary>Field number for the "job_card_id" field.</summary>
-    public const int JobCardIdFieldNumber = 1;
-    private string jobCardId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string JobCardId {
-      get { return jobCardId_; }
-      set {
-        jobCardId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "sub_job_index" field.</summary>
-    public const int SubJobIndexFieldNumber = 2;
-    private int subJobIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SubJobIndex {
-      get { return subJobIndex_; }
-      set {
-        subJobIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "over_boost_level" field.</summary>
-    public const int OverBoostLevelFieldNumber = 3;
-    private int overBoostLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int OverBoostLevel {
-      get { return overBoostLevel_; }
-      set {
-        overBoostLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "crown_level" field.</summary>
-    public const int CrownLevelFieldNumber = 4;
-    private int crownLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CrownLevel {
-      get { return crownLevel_; }
-      set {
-        crownLevel_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ProtoLobbyJobCard);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoLobbyJobCard other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (JobCardId != other.JobCardId) return false;
-      if (SubJobIndex != other.SubJobIndex) return false;
-      if (OverBoostLevel != other.OverBoostLevel) return false;
-      if (CrownLevel != other.CrownLevel) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (JobCardId.Length != 0) hash ^= JobCardId.GetHashCode();
-      if (SubJobIndex != 0) hash ^= SubJobIndex.GetHashCode();
-      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
-      if (CrownLevel != 0) hash ^= CrownLevel.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (JobCardId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(JobCardId);
-      }
-      if (SubJobIndex != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubJobIndex);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(OverBoostLevel);
-      }
-      if (CrownLevel != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(CrownLevel);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JobCardId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(JobCardId);
-      }
-      if (SubJobIndex != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubJobIndex);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(OverBoostLevel);
-      }
-      if (CrownLevel != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(CrownLevel);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (JobCardId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(JobCardId);
-      }
-      if (SubJobIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubJobIndex);
-      }
-      if (OverBoostLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
-      }
-      if (CrownLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CrownLevel);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoLobbyJobCard other) {
-      if (other == null) {
-        return;
-      }
-      if (other.JobCardId.Length != 0) {
-        JobCardId = other.JobCardId;
-      }
-      if (other.SubJobIndex != 0) {
-        SubJobIndex = other.SubJobIndex;
-      }
-      if (other.OverBoostLevel != 0) {
-        OverBoostLevel = other.OverBoostLevel;
-      }
-      if (other.CrownLevel != 0) {
-        CrownLevel = other.CrownLevel;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            JobCardId = input.ReadString();
-            break;
-          }
-          case 16: {
-            SubJobIndex = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            CrownLevel = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            JobCardId = input.ReadString();
-            break;
-          }
-          case 16: {
-            SubJobIndex = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            CrownLevel = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class ProtoLobbyWeapon : pb::IMessage<ProtoLobbyWeapon>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ProtoLobbyWeapon> _parser = new pb::MessageParser<ProtoLobbyWeapon>(() => new ProtoLobbyWeapon());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoLobbyWeapon> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyWeapon() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyWeapon(ProtoLobbyWeapon other) : this() {
-      weaponId_ = other.weaponId_;
-      subWeaponUnlock_ = other.subWeaponUnlock_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyWeapon Clone() {
-      return new ProtoLobbyWeapon(this);
-    }
-
-    /// <summary>Field number for the "weapon_id" field.</summary>
-    public const int WeaponIdFieldNumber = 1;
-    private string weaponId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string WeaponId {
-      get { return weaponId_; }
-      set {
-        weaponId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "sub_weapon_unlock" field.</summary>
-    public const int SubWeaponUnlockFieldNumber = 2;
-    private int subWeaponUnlock_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SubWeaponUnlock {
-      get { return subWeaponUnlock_; }
-      set {
-        subWeaponUnlock_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ProtoLobbyWeapon);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoLobbyWeapon other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (WeaponId != other.WeaponId) return false;
-      if (SubWeaponUnlock != other.SubWeaponUnlock) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (WeaponId.Length != 0) hash ^= WeaponId.GetHashCode();
-      if (SubWeaponUnlock != 0) hash ^= SubWeaponUnlock.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (WeaponId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(WeaponId);
-      }
-      if (SubWeaponUnlock != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubWeaponUnlock);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WeaponId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(WeaponId);
-      }
-      if (SubWeaponUnlock != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubWeaponUnlock);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (WeaponId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(WeaponId);
-      }
-      if (SubWeaponUnlock != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubWeaponUnlock);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoLobbyWeapon other) {
-      if (other == null) {
-        return;
-      }
-      if (other.WeaponId.Length != 0) {
-        WeaponId = other.WeaponId;
-      }
-      if (other.SubWeaponUnlock != 0) {
-        SubWeaponUnlock = other.SubWeaponUnlock;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            WeaponId = input.ReadString();
-            break;
-          }
-          case 16: {
-            SubWeaponUnlock = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            WeaponId = input.ReadString();
-            break;
-          }
-          case 16: {
-            SubWeaponUnlock = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class ProtoLobbyAbilityCard : pb::IMessage<ProtoLobbyAbilityCard>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<ProtoLobbyAbilityCard> _parser = new pb::MessageParser<ProtoLobbyAbilityCard>(() => new ProtoLobbyAbilityCard());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoLobbyAbilityCard> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyAbilityCard() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyAbilityCard(ProtoLobbyAbilityCard other) : this() {
-      abilityCardId_ = other.abilityCardId_;
-      abilityCardLevel_ = other.abilityCardLevel_;
-      abilityLevel_ = other.abilityLevel_;
-      overBoostLevel_ = other.overBoostLevel_;
-      slotIndex_ = other.slotIndex_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoLobbyAbilityCard Clone() {
-      return new ProtoLobbyAbilityCard(this);
-    }
-
-    /// <summary>Field number for the "ability_card_id" field.</summary>
-    public const int AbilityCardIdFieldNumber = 1;
-    private string abilityCardId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string AbilityCardId {
-      get { return abilityCardId_; }
-      set {
-        abilityCardId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ability_card_level" field.</summary>
-    public const int AbilityCardLevelFieldNumber = 2;
-    private int abilityCardLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AbilityCardLevel {
-      get { return abilityCardLevel_; }
-      set {
-        abilityCardLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ability_level" field.</summary>
-    public const int AbilityLevelFieldNumber = 3;
-    private int abilityLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AbilityLevel {
-      get { return abilityLevel_; }
-      set {
-        abilityLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "over_boost_level" field.</summary>
-    public const int OverBoostLevelFieldNumber = 4;
-    private int overBoostLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int OverBoostLevel {
-      get { return overBoostLevel_; }
-      set {
-        overBoostLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "slot_index" field.</summary>
-    public const int SlotIndexFieldNumber = 20;
-    private int slotIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SlotIndex {
-      get { return slotIndex_; }
-      set {
-        slotIndex_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ProtoLobbyAbilityCard);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoLobbyAbilityCard other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (AbilityCardId != other.AbilityCardId) return false;
-      if (AbilityCardLevel != other.AbilityCardLevel) return false;
-      if (AbilityLevel != other.AbilityLevel) return false;
-      if (OverBoostLevel != other.OverBoostLevel) return false;
-      if (SlotIndex != other.SlotIndex) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (AbilityCardId.Length != 0) hash ^= AbilityCardId.GetHashCode();
-      if (AbilityCardLevel != 0) hash ^= AbilityCardLevel.GetHashCode();
-      if (AbilityLevel != 0) hash ^= AbilityLevel.GetHashCode();
-      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
-      if (SlotIndex != 0) hash ^= SlotIndex.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (AbilityCardId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AbilityCardId);
-      }
-      if (AbilityCardLevel != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(AbilityCardLevel);
-      }
-      if (AbilityLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(AbilityLevel);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(OverBoostLevel);
-      }
-      if (SlotIndex != 0) {
-        output.WriteRawTag(160, 1);
-        output.WriteInt32(SlotIndex);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AbilityCardId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AbilityCardId);
-      }
-      if (AbilityCardLevel != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(AbilityCardLevel);
-      }
-      if (AbilityLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(AbilityLevel);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(OverBoostLevel);
-      }
-      if (SlotIndex != 0) {
-        output.WriteRawTag(160, 1);
-        output.WriteInt32(SlotIndex);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (AbilityCardId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AbilityCardId);
-      }
-      if (AbilityCardLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AbilityCardLevel);
-      }
-      if (AbilityLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AbilityLevel);
-      }
-      if (OverBoostLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
-      }
-      if (SlotIndex != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(SlotIndex);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoLobbyAbilityCard other) {
-      if (other == null) {
-        return;
-      }
-      if (other.AbilityCardId.Length != 0) {
-        AbilityCardId = other.AbilityCardId;
-      }
-      if (other.AbilityCardLevel != 0) {
-        AbilityCardLevel = other.AbilityCardLevel;
-      }
-      if (other.AbilityLevel != 0) {
-        AbilityLevel = other.AbilityLevel;
-      }
-      if (other.OverBoostLevel != 0) {
-        OverBoostLevel = other.OverBoostLevel;
-      }
-      if (other.SlotIndex != 0) {
-        SlotIndex = other.SlotIndex;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            AbilityCardId = input.ReadString();
-            break;
-          }
-          case 16: {
-            AbilityCardLevel = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            AbilityLevel = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 160: {
-            SlotIndex = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            AbilityCardId = input.ReadString();
-            break;
-          }
-          case 16: {
-            AbilityCardLevel = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            AbilityLevel = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 160: {
-            SlotIndex = input.ReadInt32();
+            input.ReadMessage(Loadout);
             break;
           }
         }
@@ -1906,7 +885,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

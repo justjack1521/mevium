@@ -5,6 +5,8 @@ package multi;
 option csharp_namespace = "Mobius.Proto.Multi";
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
+import "protoidentity/player.proto";
+
 message ProtoLobbySummary {
   string instance_id = 1;
   string quest_id = 2;
@@ -21,34 +23,8 @@ message ProtoLobbyPlayerSlot {
 }
 
 message ProtoLobbyPlayer {
-  string player_id = 1;
-  string player_name = 2;
-  string player_comment = 3;
-  int32 player_level = 4;
-  int32 deck_index = 5;
-  ProtoLobbyJobCard job_card = 6;
-  ProtoLobbyWeapon weapon = 7;
-  repeated ProtoLobbyAbilityCard ability_cards = 8;
-}
-
-message ProtoLobbyJobCard {
-  string job_card_id = 1;
-  int32 sub_job_index = 2;
-  int32 over_boost_level = 3;
-  int32 crown_level = 4;
-}
-
-message ProtoLobbyWeapon {
-  string weapon_id = 1;
-  int32 sub_weapon_unlock = 2;
-}
-
-message ProtoLobbyAbilityCard {
-  string ability_card_id = 1;
-  int32 ability_card_level = 2;
-  int32 ability_level = 3;
-  int32 over_boost_level = 4;
-  int32 slot_index = 20;
+  identity.ProtoPlayerIdentity identity = 1;
+  identity.ProtoPlayerLoadoutIdentity loadout = 2;
 }
 
 message ProtoLobbyPlayerSlotRestriction {
