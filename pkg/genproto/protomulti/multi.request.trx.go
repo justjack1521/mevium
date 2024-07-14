@@ -38,6 +38,18 @@ func (x *SearchLobbyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewStartLobbyRequest(bytes []byte) (*StartLobbyRequest, error) {
+	req := &StartLobbyRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *StartLobbyResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewWatchLobbyRequest(bytes []byte) (*WatchLobbyRequest, error) {
 	req := &WatchLobbyRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
