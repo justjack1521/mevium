@@ -27,51 +27,57 @@ namespace Mobius.Proto.Identity {
             "Chpwcm90b2lkZW50aXR5L3BsYXllci5wcm90bxIIaWRlbnRpdHkigQEKE1By",
             "b3RvUGxheWVySWRlbnRpdHkSEQoJcGxheWVyX2lkGAEgASgJEhMKC3BsYXll",
             "cl9uYW1lGAIgASgJEhQKDHBsYXllcl9sZXZlbBgDIAEoBRIWCg5wbGF5ZXJf",
-            "Y29tbWVudBgEIAEoCRIUCgxjb21wYW5pb25faWQYBSABKAkisAEKGlByb3Rv",
-            "UGxheWVyTG9hZG91dElkZW50aXR5EhMKC2pvYl9jYXJkX2lkGAEgASgJEhUK",
-            "DXN1Yl9qb2JfaW5kZXgYAiABKAUSEQoJd2VhcG9uX2lkGAMgASgJEhkKEXN1",
-            "Yl93ZWFwb25fdW5sb2NrGAQgASgFEjgKDWFiaWxpdHlfY2FyZHMYBSADKAsy",
-            "IS5pZGVudGl0eS5Qcm90b1BsYXllckNhcmRJZGVudGl0eSKvAQoXUHJvdG9Q",
-            "bGF5ZXJDYXJkSWRlbnRpdHkSFwoPYWJpbGl0eV9jYXJkX2lkGAEgASgJEhoK",
-            "EmFiaWxpdHlfY2FyZF9sZXZlbBgCIAEoBRIVCg1hYmlsaXR5X2xldmVsGAMg",
-            "ASgFEhoKEmV4dHJhX3NraWxsX3VubG9jaxgEIAEoBRIYChBvdmVyX2Jvb3N0",
-            "X2xldmVsGAUgASgFEhIKCnNsb3RfaW5kZXgYBiABKAUirAEKElByb3RvUGxh",
-            "eWVyTG9hZG91dBISCgpkZWNrX2luZGV4GAEgASgFEigKCGpvYl9jYXJkGAIg",
-            "ASgLMhYuaWRlbnRpdHkuUHJvdG9Kb2JDYXJkEiUKBndlYXBvbhgDIAEoCzIV",
-            "LmlkZW50aXR5LlByb3RvV2VhcG9uEjEKDWFiaWxpdHlfY2FyZHMYBSADKAsy",
-            "Gi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkIqgDCgxQcm90b0pvYkNhcmQS",
-            "EwoLYmFzZV9qb2JfaWQYASABKAkSFQoNc3ViX2pvYl9pbmRleBgCIAEoBRIT",
-            "CgtocF9zdGF0X21vZBgDIAEoBRIXCg9hdHRhY2tfc3RhdF9tb2QYBCABKAUS",
-            "FgoOYnJlYWtfc3RhdF9tb2QYBSABKAUSFgoObWFnaWNfc3RhdF9tb2QYBiAB",
-            "KAUSFgoOc3BlZWRfc3RhdF9tb2QYByABKAUSGAoQZGVmZW5zZV9zdGF0X21v",
-            "ZBgIIAEoBRIcChRjcml0X2NoYW5jZV9zdGF0X21vZBgJIAEoBRIWCg51bHRp",
-            "bWF0ZV9ib29zdBgKIAEoBRIYChBvdmVyX2Jvb3N0X2xldmVsGAsgASgFEkEK",
-            "DmF1dG9fYWJpbGl0aWVzGAwgAygLMikuaWRlbnRpdHkuUHJvdG9Kb2JDYXJk",
-            "LkF1dG9BYmlsaXRpZXNFbnRyeRITCgtjcm93bl9sZXZlbBgNIAEoBRo0ChJB",
-            "dXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgF",
-            "OgI4ASL+AgoLUHJvdG9XZWFwb24SFgoOYmFzZV93ZWFwb25faWQYASABKAkS",
-            "GQoRc3ViX3dlYXBvbl91bmxvY2sYAiABKAUSEwoLaHBfc3RhdF9tb2QYAyAB",
-            "KAUSFwoPYXR0YWNrX3N0YXRfbW9kGAQgASgFEhYKDmJyZWFrX3N0YXRfbW9k",
-            "GAUgASgFEhYKDm1hZ2ljX3N0YXRfbW9kGAYgASgFEhYKDnNwZWVkX3N0YXRf",
-            "bW9kGAcgASgFEhgKEGRlZmVuc2Vfc3RhdF9tb2QYCCABKAUSHAoUY3JpdF9j",
-            "aGFuY2Vfc3RhdF9tb2QYCSABKAUSFgoOdWx0aW1hdGVfYm9vc3QYCiABKAUS",
-            "QAoOYXV0b19hYmlsaXRpZXMYCyADKAsyKC5pZGVudGl0eS5Qcm90b1dlYXBv",
-            "bi5BdXRvQWJpbGl0aWVzRW50cnkaNAoSQXV0b0FiaWxpdGllc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEipQIKEFByb3RvQWJpbGl0",
-            "eUNhcmQSFwoPYWJpbGl0eV9jYXJkX2lkGAEgASgJEhoKEmFiaWxpdHlfY2Fy",
-            "ZF9sZXZlbBgCIAEoBRIVCg1hYmlsaXR5X2xldmVsGAMgASgFEhoKEmV4dHJh",
-            "X3NraWxsX3VubG9jaxgEIAEoBRIYChBvdmVyX2Jvb3N0X2xldmVsGAUgASgF",
-            "EkUKDmF1dG9fYWJpbGl0aWVzGAYgAygLMi0uaWRlbnRpdHkuUHJvdG9BYmls",
-            "aXR5Q2FyZC5BdXRvQWJpbGl0aWVzRW50cnkSEgoKc2xvdF9pbmRleBgUIAEo",
-            "BRo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgFOgI4AUJTWjlnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0v",
-            "cGtnL2dlbnByb3RvL3Byb3RvaWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRl",
-            "bnRpdHliBnByb3RvMw=="));
+            "Y29tbWVudBgEIAEoCRIUCgxjb21wYW5pb25faWQYBSABKAkivwEKGlByb3Rv",
+            "UGxheWVyTG9hZG91dElkZW50aXR5EjIKCGpvYl9jYXJkGAEgASgLMiAuaWRl",
+            "bnRpdHkuUHJvdG9QbGF5ZXJKb2JJZGVudGl0eRIzCgZ3ZWFwb24YAiABKAsy",
+            "Iy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBvbklkZW50aXR5EjgKDWFiaWxp",
+            "dHlfY2FyZHMYAyADKAsyIS5pZGVudGl0eS5Qcm90b1BsYXllckNhcmRJZGVu",
+            "dGl0eSJzChZQcm90b1BsYXllckpvYklkZW50aXR5EhMKC2pvYl9jYXJkX2lk",
+            "GAEgASgJEhUKDXN1Yl9qb2JfaW5kZXgYAiABKAUSEwoLY3Jvd25fbGV2ZWwY",
+            "AyABKAUSGAoQb3Zlcl9ib29zdF9sZXZlbBgEIAEoBSJJChlQcm90b1BsYXll",
+            "cldlYXBvbklkZW50aXR5EhEKCXdlYXBvbl9pZBgBIAEoCRIZChFzdWJfd2Vh",
+            "cG9uX3VubG9jaxgCIAEoBSKvAQoXUHJvdG9QbGF5ZXJDYXJkSWRlbnRpdHkS",
+            "FwoPYWJpbGl0eV9jYXJkX2lkGAEgASgJEhoKEmFiaWxpdHlfY2FyZF9sZXZl",
+            "bBgCIAEoBRIVCg1hYmlsaXR5X2xldmVsGAMgASgFEhoKEmV4dHJhX3NraWxs",
+            "X3VubG9jaxgEIAEoBRIYChBvdmVyX2Jvb3N0X2xldmVsGAUgASgFEhIKCnNs",
+            "b3RfaW5kZXgYBiABKAUirAEKElByb3RvUGxheWVyTG9hZG91dBISCgpkZWNr",
+            "X2luZGV4GAEgASgFEigKCGpvYl9jYXJkGAIgASgLMhYuaWRlbnRpdHkuUHJv",
+            "dG9Kb2JDYXJkEiUKBndlYXBvbhgDIAEoCzIVLmlkZW50aXR5LlByb3RvV2Vh",
+            "cG9uEjEKDWFiaWxpdHlfY2FyZHMYBSADKAsyGi5pZGVudGl0eS5Qcm90b0Fi",
+            "aWxpdHlDYXJkIqgDCgxQcm90b0pvYkNhcmQSEwoLYmFzZV9qb2JfaWQYASAB",
+            "KAkSFQoNc3ViX2pvYl9pbmRleBgCIAEoBRITCgtocF9zdGF0X21vZBgDIAEo",
+            "BRIXCg9hdHRhY2tfc3RhdF9tb2QYBCABKAUSFgoOYnJlYWtfc3RhdF9tb2QY",
+            "BSABKAUSFgoObWFnaWNfc3RhdF9tb2QYBiABKAUSFgoOc3BlZWRfc3RhdF9t",
+            "b2QYByABKAUSGAoQZGVmZW5zZV9zdGF0X21vZBgIIAEoBRIcChRjcml0X2No",
+            "YW5jZV9zdGF0X21vZBgJIAEoBRIWCg51bHRpbWF0ZV9ib29zdBgKIAEoBRIY",
+            "ChBvdmVyX2Jvb3N0X2xldmVsGAsgASgFEkEKDmF1dG9fYWJpbGl0aWVzGAwg",
+            "AygLMikuaWRlbnRpdHkuUHJvdG9Kb2JDYXJkLkF1dG9BYmlsaXRpZXNFbnRy",
+            "eRITCgtjcm93bl9sZXZlbBgNIAEoBRo0ChJBdXRvQWJpbGl0aWVzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASL+AgoLUHJvdG9XZWFw",
+            "b24SFgoOYmFzZV93ZWFwb25faWQYASABKAkSGQoRc3ViX3dlYXBvbl91bmxv",
+            "Y2sYAiABKAUSEwoLaHBfc3RhdF9tb2QYAyABKAUSFwoPYXR0YWNrX3N0YXRf",
+            "bW9kGAQgASgFEhYKDmJyZWFrX3N0YXRfbW9kGAUgASgFEhYKDm1hZ2ljX3N0",
+            "YXRfbW9kGAYgASgFEhYKDnNwZWVkX3N0YXRfbW9kGAcgASgFEhgKEGRlZmVu",
+            "c2Vfc3RhdF9tb2QYCCABKAUSHAoUY3JpdF9jaGFuY2Vfc3RhdF9tb2QYCSAB",
+            "KAUSFgoOdWx0aW1hdGVfYm9vc3QYCiABKAUSQAoOYXV0b19hYmlsaXRpZXMY",
+            "CyADKAsyKC5pZGVudGl0eS5Qcm90b1dlYXBvbi5BdXRvQWJpbGl0aWVzRW50",
+            "cnkaNAoSQXV0b0FiaWxpdGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoBToCOAEipQIKEFByb3RvQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9j",
+            "YXJkX2lkGAEgASgJEhoKEmFiaWxpdHlfY2FyZF9sZXZlbBgCIAEoBRIVCg1h",
+            "YmlsaXR5X2xldmVsGAMgASgFEhoKEmV4dHJhX3NraWxsX3VubG9jaxgEIAEo",
+            "BRIYChBvdmVyX2Jvb3N0X2xldmVsGAUgASgFEkUKDmF1dG9fYWJpbGl0aWVz",
+            "GAYgAygLMi0uaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZC5BdXRvQWJpbGl0",
+            "aWVzRW50cnkSEgoKc2xvdF9pbmRleBgUIAEoBRo0ChJBdXRvQWJpbGl0aWVz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4AUJTWjlnaXRo",
+            "dWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3Rv",
+            "aWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRlbnRpdHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerIdentity), global::Mobius.Proto.Identity.ProtoPlayerIdentity.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "PlayerComment", "CompanionId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity), global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity.Parser, new[]{ "JobCardId", "SubJobIndex", "WeaponId", "SubWeaponUnlock", "AbilityCards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity), global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity.Parser, new[]{ "JobCard", "Weapon", "AbilityCards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobIdentity), global::Mobius.Proto.Identity.ProtoPlayerJobIdentity.Parser, new[]{ "JobCardId", "SubJobIndex", "CrownLevel", "OverBoostLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity), global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity.Parser, new[]{ "WeaponId", "SubWeaponUnlock" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerCardIdentity), global::Mobius.Proto.Identity.ProtoPlayerCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadout), global::Mobius.Proto.Identity.ProtoPlayerLoadout.Parser, new[]{ "DeckIndex", "JobCard", "Weapon", "AbilityCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoJobCard), global::Mobius.Proto.Identity.ProtoJobCard.Parser, new[]{ "BaseJobId", "SubJobIndex", "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "OverBoostLevel", "AutoAbilities", "CrownLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -428,10 +434,8 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoPlayerLoadoutIdentity(ProtoPlayerLoadoutIdentity other) : this() {
-      jobCardId_ = other.jobCardId_;
-      subJobIndex_ = other.subJobIndex_;
-      weaponId_ = other.weaponId_;
-      subWeaponUnlock_ = other.subWeaponUnlock_;
+      jobCard_ = other.jobCard_ != null ? other.jobCard_.Clone() : null;
+      weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
       abilityCards_ = other.abilityCards_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -439,6 +443,258 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoPlayerLoadoutIdentity Clone() {
       return new ProtoPlayerLoadoutIdentity(this);
+    }
+
+    /// <summary>Field number for the "job_card" field.</summary>
+    public const int JobCardFieldNumber = 1;
+    private global::Mobius.Proto.Identity.ProtoPlayerJobIdentity jobCard_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Identity.ProtoPlayerJobIdentity JobCard {
+      get { return jobCard_; }
+      set {
+        jobCard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "weapon" field.</summary>
+    public const int WeaponFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity weapon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity Weapon {
+      get { return weapon_; }
+      set {
+        weapon_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ability_cards" field.</summary>
+    public const int AbilityCardsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> _repeated_abilityCards_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Identity.ProtoPlayerCardIdentity.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> AbilityCards {
+      get { return abilityCards_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoPlayerLoadoutIdentity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoPlayerLoadoutIdentity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(JobCard, other.JobCard)) return false;
+      if (!object.Equals(Weapon, other.Weapon)) return false;
+      if(!abilityCards_.Equals(other.abilityCards_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (jobCard_ != null) hash ^= JobCard.GetHashCode();
+      if (weapon_ != null) hash ^= Weapon.GetHashCode();
+      hash ^= abilityCards_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (jobCard_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(JobCard);
+      }
+      if (weapon_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Weapon);
+      }
+      abilityCards_.WriteTo(output, _repeated_abilityCards_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (jobCard_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(JobCard);
+      }
+      if (weapon_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Weapon);
+      }
+      abilityCards_.WriteTo(ref output, _repeated_abilityCards_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (jobCard_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JobCard);
+      }
+      if (weapon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
+      }
+      size += abilityCards_.CalculateSize(_repeated_abilityCards_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoPlayerLoadoutIdentity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.jobCard_ != null) {
+        if (jobCard_ == null) {
+          JobCard = new global::Mobius.Proto.Identity.ProtoPlayerJobIdentity();
+        }
+        JobCard.MergeFrom(other.JobCard);
+      }
+      if (other.weapon_ != null) {
+        if (weapon_ == null) {
+          Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity();
+        }
+        Weapon.MergeFrom(other.Weapon);
+      }
+      abilityCards_.Add(other.abilityCards_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (jobCard_ == null) {
+              JobCard = new global::Mobius.Proto.Identity.ProtoPlayerJobIdentity();
+            }
+            input.ReadMessage(JobCard);
+            break;
+          }
+          case 18: {
+            if (weapon_ == null) {
+              Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity();
+            }
+            input.ReadMessage(Weapon);
+            break;
+          }
+          case 26: {
+            abilityCards_.AddEntriesFrom(input, _repeated_abilityCards_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (jobCard_ == null) {
+              JobCard = new global::Mobius.Proto.Identity.ProtoPlayerJobIdentity();
+            }
+            input.ReadMessage(JobCard);
+            break;
+          }
+          case 18: {
+            if (weapon_ == null) {
+              Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity();
+            }
+            input.ReadMessage(Weapon);
+            break;
+          }
+          case 26: {
+            abilityCards_.AddEntriesFrom(ref input, _repeated_abilityCards_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoPlayerJobIdentity : pb::IMessage<ProtoPlayerJobIdentity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoPlayerJobIdentity> _parser = new pb::MessageParser<ProtoPlayerJobIdentity>(() => new ProtoPlayerJobIdentity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoPlayerJobIdentity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerJobIdentity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerJobIdentity(ProtoPlayerJobIdentity other) : this() {
+      jobCardId_ = other.jobCardId_;
+      subJobIndex_ = other.subJobIndex_;
+      crownLevel_ = other.crownLevel_;
+      overBoostLevel_ = other.overBoostLevel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerJobIdentity Clone() {
+      return new ProtoPlayerJobIdentity(this);
     }
 
     /// <summary>Field number for the "job_card_id" field.</summary>
@@ -463,45 +719,35 @@ namespace Mobius.Proto.Identity {
       }
     }
 
-    /// <summary>Field number for the "weapon_id" field.</summary>
-    public const int WeaponIdFieldNumber = 3;
-    private string weaponId_ = "";
+    /// <summary>Field number for the "crown_level" field.</summary>
+    public const int CrownLevelFieldNumber = 3;
+    private int crownLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string WeaponId {
-      get { return weaponId_; }
+    public int CrownLevel {
+      get { return crownLevel_; }
       set {
-        weaponId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        crownLevel_ = value;
       }
     }
 
-    /// <summary>Field number for the "sub_weapon_unlock" field.</summary>
-    public const int SubWeaponUnlockFieldNumber = 4;
-    private int subWeaponUnlock_;
+    /// <summary>Field number for the "over_boost_level" field.</summary>
+    public const int OverBoostLevelFieldNumber = 4;
+    private int overBoostLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SubWeaponUnlock {
-      get { return subWeaponUnlock_; }
+    public int OverBoostLevel {
+      get { return overBoostLevel_; }
       set {
-        subWeaponUnlock_ = value;
+        overBoostLevel_ = value;
       }
-    }
-
-    /// <summary>Field number for the "ability_cards" field.</summary>
-    public const int AbilityCardsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> _repeated_abilityCards_codec
-        = pb::FieldCodec.ForMessage(42, global::Mobius.Proto.Identity.ProtoPlayerCardIdentity.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> AbilityCards {
-      get { return abilityCards_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoPlayerLoadoutIdentity);
+      return Equals(other as ProtoPlayerJobIdentity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoPlayerLoadoutIdentity other) {
+    public bool Equals(ProtoPlayerJobIdentity other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -510,9 +756,8 @@ namespace Mobius.Proto.Identity {
       }
       if (JobCardId != other.JobCardId) return false;
       if (SubJobIndex != other.SubJobIndex) return false;
-      if (WeaponId != other.WeaponId) return false;
-      if (SubWeaponUnlock != other.SubWeaponUnlock) return false;
-      if(!abilityCards_.Equals(other.abilityCards_)) return false;
+      if (CrownLevel != other.CrownLevel) return false;
+      if (OverBoostLevel != other.OverBoostLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -521,9 +766,8 @@ namespace Mobius.Proto.Identity {
       int hash = 1;
       if (JobCardId.Length != 0) hash ^= JobCardId.GetHashCode();
       if (SubJobIndex != 0) hash ^= SubJobIndex.GetHashCode();
-      if (WeaponId.Length != 0) hash ^= WeaponId.GetHashCode();
-      if (SubWeaponUnlock != 0) hash ^= SubWeaponUnlock.GetHashCode();
-      hash ^= abilityCards_.GetHashCode();
+      if (CrownLevel != 0) hash ^= CrownLevel.GetHashCode();
+      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -548,15 +792,14 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(16);
         output.WriteInt32(SubJobIndex);
       }
-      if (WeaponId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(WeaponId);
+      if (CrownLevel != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(CrownLevel);
       }
-      if (SubWeaponUnlock != 0) {
+      if (OverBoostLevel != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(SubWeaponUnlock);
+        output.WriteInt32(OverBoostLevel);
       }
-      abilityCards_.WriteTo(output, _repeated_abilityCards_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -574,15 +817,14 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(16);
         output.WriteInt32(SubJobIndex);
       }
-      if (WeaponId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(WeaponId);
+      if (CrownLevel != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(CrownLevel);
       }
-      if (SubWeaponUnlock != 0) {
+      if (OverBoostLevel != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(SubWeaponUnlock);
+        output.WriteInt32(OverBoostLevel);
       }
-      abilityCards_.WriteTo(ref output, _repeated_abilityCards_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -598,13 +840,12 @@ namespace Mobius.Proto.Identity {
       if (SubJobIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubJobIndex);
       }
-      if (WeaponId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(WeaponId);
+      if (CrownLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CrownLevel);
       }
-      if (SubWeaponUnlock != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubWeaponUnlock);
+      if (OverBoostLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
       }
-      size += abilityCards_.CalculateSize(_repeated_abilityCards_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -612,7 +853,7 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoPlayerLoadoutIdentity other) {
+    public void MergeFrom(ProtoPlayerJobIdentity other) {
       if (other == null) {
         return;
       }
@@ -622,13 +863,12 @@ namespace Mobius.Proto.Identity {
       if (other.SubJobIndex != 0) {
         SubJobIndex = other.SubJobIndex;
       }
-      if (other.WeaponId.Length != 0) {
-        WeaponId = other.WeaponId;
+      if (other.CrownLevel != 0) {
+        CrownLevel = other.CrownLevel;
       }
-      if (other.SubWeaponUnlock != 0) {
-        SubWeaponUnlock = other.SubWeaponUnlock;
+      if (other.OverBoostLevel != 0) {
+        OverBoostLevel = other.OverBoostLevel;
       }
-      abilityCards_.Add(other.abilityCards_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -651,16 +891,12 @@ namespace Mobius.Proto.Identity {
             SubJobIndex = input.ReadInt32();
             break;
           }
-          case 26: {
-            WeaponId = input.ReadString();
+          case 24: {
+            CrownLevel = input.ReadInt32();
             break;
           }
           case 32: {
-            SubWeaponUnlock = input.ReadInt32();
-            break;
-          }
-          case 42: {
-            abilityCards_.AddEntriesFrom(input, _repeated_abilityCards_codec);
+            OverBoostLevel = input.ReadInt32();
             break;
           }
         }
@@ -685,16 +921,220 @@ namespace Mobius.Proto.Identity {
             SubJobIndex = input.ReadInt32();
             break;
           }
-          case 26: {
-            WeaponId = input.ReadString();
+          case 24: {
+            CrownLevel = input.ReadInt32();
             break;
           }
           case 32: {
+            OverBoostLevel = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoPlayerWeaponIdentity : pb::IMessage<ProtoPlayerWeaponIdentity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoPlayerWeaponIdentity> _parser = new pb::MessageParser<ProtoPlayerWeaponIdentity>(() => new ProtoPlayerWeaponIdentity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoPlayerWeaponIdentity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerWeaponIdentity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerWeaponIdentity(ProtoPlayerWeaponIdentity other) : this() {
+      weaponId_ = other.weaponId_;
+      subWeaponUnlock_ = other.subWeaponUnlock_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerWeaponIdentity Clone() {
+      return new ProtoPlayerWeaponIdentity(this);
+    }
+
+    /// <summary>Field number for the "weapon_id" field.</summary>
+    public const int WeaponIdFieldNumber = 1;
+    private string weaponId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WeaponId {
+      get { return weaponId_; }
+      set {
+        weaponId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sub_weapon_unlock" field.</summary>
+    public const int SubWeaponUnlockFieldNumber = 2;
+    private int subWeaponUnlock_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SubWeaponUnlock {
+      get { return subWeaponUnlock_; }
+      set {
+        subWeaponUnlock_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoPlayerWeaponIdentity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoPlayerWeaponIdentity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WeaponId != other.WeaponId) return false;
+      if (SubWeaponUnlock != other.SubWeaponUnlock) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WeaponId.Length != 0) hash ^= WeaponId.GetHashCode();
+      if (SubWeaponUnlock != 0) hash ^= SubWeaponUnlock.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WeaponId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WeaponId);
+      }
+      if (SubWeaponUnlock != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SubWeaponUnlock);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WeaponId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WeaponId);
+      }
+      if (SubWeaponUnlock != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SubWeaponUnlock);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (WeaponId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WeaponId);
+      }
+      if (SubWeaponUnlock != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubWeaponUnlock);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoPlayerWeaponIdentity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WeaponId.Length != 0) {
+        WeaponId = other.WeaponId;
+      }
+      if (other.SubWeaponUnlock != 0) {
+        SubWeaponUnlock = other.SubWeaponUnlock;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            WeaponId = input.ReadString();
+            break;
+          }
+          case 16: {
             SubWeaponUnlock = input.ReadInt32();
             break;
           }
-          case 42: {
-            abilityCards_.AddEntriesFrom(ref input, _repeated_abilityCards_codec);
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WeaponId = input.ReadString();
+            break;
+          }
+          case 16: {
+            SubWeaponUnlock = input.ReadInt32();
             break;
           }
         }
@@ -716,7 +1156,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1068,7 +1508,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1355,7 +1795,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1948,7 +2388,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2469,7 +2909,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

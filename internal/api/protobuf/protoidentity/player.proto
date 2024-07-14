@@ -14,11 +14,21 @@ message ProtoPlayerIdentity {
 }
 
 message ProtoPlayerLoadoutIdentity {
+  ProtoPlayerJobIdentity job_card = 1;
+  ProtoPlayerWeaponIdentity weapon = 2;
+  repeated ProtoPlayerCardIdentity ability_cards = 3;
+}
+
+message ProtoPlayerJobIdentity {
   string job_card_id = 1;
   int32 sub_job_index = 2;
-  string weapon_id = 3;
-  int32 sub_weapon_unlock = 4;
-  repeated ProtoPlayerCardIdentity ability_cards = 5;
+  int32 crown_level = 3;
+  int32 over_boost_level = 4;
+}
+
+message ProtoPlayerWeaponIdentity {
+  string weapon_id = 1;
+  int32 sub_weapon_unlock = 2;
 }
 
 message ProtoPlayerCardIdentity {
