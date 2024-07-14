@@ -21,6 +21,7 @@ enum MultiRequestType {
   UNREADY_LOBBY = 1000;
   SEARCH_PLAYER = 1100;
   SEND_STAMP = 1200;
+  START_LOBBY = 1300;
 }
 
 message CreateSessionRequest {
