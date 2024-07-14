@@ -25,20 +25,19 @@ namespace Mobius.Proto.Challenge {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZwcm90b2NoYWxsZW5nZS9jaGFsbGVuZ2UucmVxdWVzdC5wcm90bxIJY2hh",
-            "bGxlbmdlIjQKH0dldEFjdGl2ZVBsYXllckNoYWxsZW5nZVJlcXVlc3QSEQoJ",
-            "cGxheWVyX2lkGAEgASgJIi8KGkpvaW5Tb2NpYWxDaGFsbGVuZ2VSZXF1ZXN0",
-            "EhEKCXBsYXllcl9pZBgBIAEoCSIuChlHZXRQbGF5ZXJDaGFsbGVuZ2VSZXF1",
-            "ZXN0EhEKCXBsYXllcl9pZBgBIAEoCSpXChRDaGFsbGVuZ2VSZXF1ZXN0VHlw",
-            "ZRIICgROT05FEAASGgoVSk9JTl9TT0NJQUxfQ0hBTExFTkdFEKwbEhkKFEdF",
-            "VF9TT0NJQUxfQ0hBTExFTkdFEJAcQlVaOmdpdGh1Yi5jb20vanVzdGphY2sx",
-            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9jaGFsbGVuZ2WqAhZNb2Jp",
-            "dXMuUHJvdG8uQ2hhbGxlbmdlYgZwcm90bzM="));
+            "bGxlbmdlIiEKH0dldEFjdGl2ZVBsYXllckNoYWxsZW5nZVJlcXVlc3QiHAoa",
+            "Sm9pblNvY2lhbENoYWxsZW5nZVJlcXVlc3QiGwoZR2V0UGxheWVyQ2hhbGxl",
+            "bmdlUmVxdWVzdCpXChRDaGFsbGVuZ2VSZXF1ZXN0VHlwZRIICgROT05FEAAS",
+            "GgoVSk9JTl9TT0NJQUxfQ0hBTExFTkdFEKwbEhkKFEdFVF9TT0NJQUxfQ0hB",
+            "TExFTkdFEJAcQlVaOmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
+            "a2cvZ2VucHJvdG8vcHJvdG9jaGFsbGVuZ2WqAhZNb2JpdXMuUHJvdG8uQ2hh",
+            "bGxlbmdlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Challenge.ChallengeRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetActivePlayerChallengeRequest), global::Mobius.Proto.Challenge.GetActivePlayerChallengeRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.JoinSocialChallengeRequest), global::Mobius.Proto.Challenge.JoinSocialChallengeRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetPlayerChallengeRequest), global::Mobius.Proto.Challenge.GetPlayerChallengeRequest.Parser, new[]{ "PlayerId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetActivePlayerChallengeRequest), global::Mobius.Proto.Challenge.GetActivePlayerChallengeRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.JoinSocialChallengeRequest), global::Mobius.Proto.Challenge.JoinSocialChallengeRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetPlayerChallengeRequest), global::Mobius.Proto.Challenge.GetPlayerChallengeRequest.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -83,24 +82,12 @@ namespace Mobius.Proto.Challenge {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetActivePlayerChallengeRequest(GetActivePlayerChallengeRequest other) : this() {
-      playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetActivePlayerChallengeRequest Clone() {
       return new GetActivePlayerChallengeRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -116,14 +103,12 @@ namespace Mobius.Proto.Challenge {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,10 +125,6 @@ namespace Mobius.Proto.Challenge {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -153,10 +134,6 @@ namespace Mobius.Proto.Challenge {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -166,9 +143,6 @@ namespace Mobius.Proto.Challenge {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -179,9 +153,6 @@ namespace Mobius.Proto.Challenge {
     public void MergeFrom(GetActivePlayerChallengeRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,10 +168,6 @@ namespace Mobius.Proto.Challenge {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -215,10 +182,6 @@ namespace Mobius.Proto.Challenge {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -255,24 +218,12 @@ namespace Mobius.Proto.Challenge {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public JoinSocialChallengeRequest(JoinSocialChallengeRequest other) : this() {
-      playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public JoinSocialChallengeRequest Clone() {
       return new JoinSocialChallengeRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -288,14 +239,12 @@ namespace Mobius.Proto.Challenge {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -312,10 +261,6 @@ namespace Mobius.Proto.Challenge {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -325,10 +270,6 @@ namespace Mobius.Proto.Challenge {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -338,9 +279,6 @@ namespace Mobius.Proto.Challenge {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -351,9 +289,6 @@ namespace Mobius.Proto.Challenge {
     public void MergeFrom(JoinSocialChallengeRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -369,10 +304,6 @@ namespace Mobius.Proto.Challenge {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -387,10 +318,6 @@ namespace Mobius.Proto.Challenge {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -427,24 +354,12 @@ namespace Mobius.Proto.Challenge {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPlayerChallengeRequest(GetPlayerChallengeRequest other) : this() {
-      playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPlayerChallengeRequest Clone() {
       return new GetPlayerChallengeRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -460,14 +375,12 @@ namespace Mobius.Proto.Challenge {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -484,10 +397,6 @@ namespace Mobius.Proto.Challenge {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -497,10 +406,6 @@ namespace Mobius.Proto.Challenge {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -510,9 +415,6 @@ namespace Mobius.Proto.Challenge {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -523,9 +425,6 @@ namespace Mobius.Proto.Challenge {
     public void MergeFrom(GetPlayerChallengeRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -541,10 +440,6 @@ namespace Mobius.Proto.Challenge {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -559,10 +454,6 @@ namespace Mobius.Proto.Challenge {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
         }
       }
     }

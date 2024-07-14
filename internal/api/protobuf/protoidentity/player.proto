@@ -35,7 +35,6 @@ message ProtoPlayerJobStat {
   int32 defense_stat_mod = 8;
   int32 crit_chance_stat_mod = 9;
   int32 ultimate_boost = 10;
-  int32 over_boost_level = 11;
   map<string, int32> auto_abilities = 12;
 }
 

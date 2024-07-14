@@ -34,55 +34,54 @@ namespace Mobius.Proto.Identity {
             "dHlfY2FyZHMYAyADKAsyIi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkSWRl",
             "bnRpdHkicwoWUHJvdG9QbGF5ZXJKb2JJZGVudGl0eRITCgtqb2JfY2FyZF9p",
             "ZBgBIAEoCRIVCg1zdWJfam9iX2luZGV4GAIgASgFEhMKC2Nyb3duX2xldmVs",
-            "GAMgASgFEhgKEG92ZXJfYm9vc3RfbGV2ZWwYBCABKAUi8wIKElByb3RvUGxh",
+            "GAMgASgFEhgKEG92ZXJfYm9vc3RfbGV2ZWwYBCABKAUi2QIKElByb3RvUGxh",
             "eWVySm9iU3RhdBITCgtocF9zdGF0X21vZBgDIAEoBRIXCg9hdHRhY2tfc3Rh",
             "dF9tb2QYBCABKAUSFgoOYnJlYWtfc3RhdF9tb2QYBSABKAUSFgoObWFnaWNf",
             "c3RhdF9tb2QYBiABKAUSFgoOc3BlZWRfc3RhdF9tb2QYByABKAUSGAoQZGVm",
             "ZW5zZV9zdGF0X21vZBgIIAEoBRIcChRjcml0X2NoYW5jZV9zdGF0X21vZBgJ",
-            "IAEoBRIWCg51bHRpbWF0ZV9ib29zdBgKIAEoBRIYChBvdmVyX2Jvb3N0X2xl",
-            "dmVsGAsgASgFEkcKDmF1dG9fYWJpbGl0aWVzGAwgAygLMi8uaWRlbnRpdHku",
-            "UHJvdG9QbGF5ZXJKb2JTdGF0LkF1dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRv",
-            "QWJpbGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4",
-            "ASJJChlQcm90b1BsYXllcldlYXBvbklkZW50aXR5EhEKCXdlYXBvbl9pZBgB",
-            "IAEoCRIZChFzdWJfd2VhcG9uX3VubG9jaxgCIAEoBSLfAgoVUHJvdG9QbGF5",
-            "ZXJXZWFwb25TdGF0EhMKC2hwX3N0YXRfbW9kGAMgASgFEhcKD2F0dGFja19z",
-            "dGF0X21vZBgEIAEoBRIWCg5icmVha19zdGF0X21vZBgFIAEoBRIWCg5tYWdp",
-            "Y19zdGF0X21vZBgGIAEoBRIWCg5zcGVlZF9zdGF0X21vZBgHIAEoBRIYChBk",
-            "ZWZlbnNlX3N0YXRfbW9kGAggASgFEhwKFGNyaXRfY2hhbmNlX3N0YXRfbW9k",
-            "GAkgASgFEhYKDnVsdGltYXRlX2Jvb3N0GAogASgFEkoKDmF1dG9fYWJpbGl0",
-            "aWVzGAsgAygLMjIuaWRlbnRpdHkuUHJvdG9QbGF5ZXJXZWFwb25TdGF0LkF1",
-            "dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASKwAQoYUHJvdG9BYmlsaXR5Q2Fy",
-            "ZElkZW50aXR5EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRIaChJhYmlsaXR5",
-            "X2NhcmRfbGV2ZWwYAiABKAUSFQoNYWJpbGl0eV9sZXZlbBgDIAEoBRIaChJl",
-            "eHRyYV9za2lsbF91bmxvY2sYBCABKAUSGAoQb3Zlcl9ib29zdF9sZXZlbBgF",
-            "IAEoBRISCgpzbG90X2luZGV4GAYgASgFIpcBChRQcm90b0FiaWxpdHlDYXJk",
-            "U3RhdBJJCg5hdXRvX2FiaWxpdGllcxgGIAMoCzIxLmlkZW50aXR5LlByb3Rv",
-            "QWJpbGl0eUNhcmRTdGF0LkF1dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRvQWJp",
-            "bGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASLK",
-            "AQoSUHJvdG9QbGF5ZXJMb2Fkb3V0EhIKCmRlY2tfaW5kZXgYASABKAUSLAoD",
-            "am9iGAIgASgLMh8uaWRlbnRpdHkuUHJvdG9QbGF5ZXJKb2JMb2Fkb3V0EjIK",
-            "BndlYXBvbhgDIAEoCzIiLmlkZW50aXR5LlByb3RvUGxheWVyV2VhcG9uTG9h",
-            "ZG91dBI+Cg1hYmlsaXR5X2NhcmRzGAQgAygLMicuaWRlbnRpdHkuUHJvdG9Q",
-            "bGF5ZXJBYmlsaXR5Q2FyZExvYWRvdXQidwoVUHJvdG9QbGF5ZXJKb2JMb2Fk",
-            "b3V0EjIKCGlkZW50aXR5GAEgASgLMiAuaWRlbnRpdHkuUHJvdG9QbGF5ZXJK",
-            "b2JJZGVudGl0eRIqCgRzdGF0GAIgASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5",
-            "ZXJKb2JTdGF0IoABChhQcm90b1BsYXllcldlYXBvbkxvYWRvdXQSNQoIaWRl",
-            "bnRpdHkYASABKAsyIy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBvbklkZW50",
-            "aXR5Ei0KBHN0YXQYAiABKAsyHy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBv",
-            "blN0YXQigwEKHVByb3RvUGxheWVyQWJpbGl0eUNhcmRMb2Fkb3V0EjQKCGlk",
-            "ZW50aXR5GAEgASgLMiIuaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZElkZW50",
-            "aXR5EiwKBHN0YXQYAiABKAsyHi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJk",
-            "U3RhdEJTWjlnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dl",
-            "bnByb3RvL3Byb3RvaWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRlbnRpdHli",
-            "BnByb3RvMw=="));
+            "IAEoBRIWCg51bHRpbWF0ZV9ib29zdBgKIAEoBRJHCg5hdXRvX2FiaWxpdGll",
+            "cxgMIAMoCzIvLmlkZW50aXR5LlByb3RvUGxheWVySm9iU3RhdC5BdXRvQWJp",
+            "bGl0aWVzRW50cnkaNAoSQXV0b0FiaWxpdGllc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoBToCOAEiSQoZUHJvdG9QbGF5ZXJXZWFwb25JZGVu",
+            "dGl0eRIRCgl3ZWFwb25faWQYASABKAkSGQoRc3ViX3dlYXBvbl91bmxvY2sY",
+            "AiABKAUi3wIKFVByb3RvUGxheWVyV2VhcG9uU3RhdBITCgtocF9zdGF0X21v",
+            "ZBgDIAEoBRIXCg9hdHRhY2tfc3RhdF9tb2QYBCABKAUSFgoOYnJlYWtfc3Rh",
+            "dF9tb2QYBSABKAUSFgoObWFnaWNfc3RhdF9tb2QYBiABKAUSFgoOc3BlZWRf",
+            "c3RhdF9tb2QYByABKAUSGAoQZGVmZW5zZV9zdGF0X21vZBgIIAEoBRIcChRj",
+            "cml0X2NoYW5jZV9zdGF0X21vZBgJIAEoBRIWCg51bHRpbWF0ZV9ib29zdBgK",
+            "IAEoBRJKCg5hdXRvX2FiaWxpdGllcxgLIAMoCzIyLmlkZW50aXR5LlByb3Rv",
+            "UGxheWVyV2VhcG9uU3RhdC5BdXRvQWJpbGl0aWVzRW50cnkaNAoSQXV0b0Fi",
+            "aWxpdGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEi",
+            "sAEKGFByb3RvQWJpbGl0eUNhcmRJZGVudGl0eRIXCg9hYmlsaXR5X2NhcmRf",
+            "aWQYASABKAkSGgoSYWJpbGl0eV9jYXJkX2xldmVsGAIgASgFEhUKDWFiaWxp",
+            "dHlfbGV2ZWwYAyABKAUSGgoSZXh0cmFfc2tpbGxfdW5sb2NrGAQgASgFEhgK",
+            "EG92ZXJfYm9vc3RfbGV2ZWwYBSABKAUSEgoKc2xvdF9pbmRleBgGIAEoBSKX",
+            "AQoUUHJvdG9BYmlsaXR5Q2FyZFN0YXQSSQoOYXV0b19hYmlsaXRpZXMYBiAD",
+            "KAsyMS5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkU3RhdC5BdXRvQWJpbGl0",
+            "aWVzRW50cnkaNAoSQXV0b0FiaWxpdGllc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoBToCOAEiygEKElByb3RvUGxheWVyTG9hZG91dBISCgpk",
+            "ZWNrX2luZGV4GAEgASgFEiwKA2pvYhgCIAEoCzIfLmlkZW50aXR5LlByb3Rv",
+            "UGxheWVySm9iTG9hZG91dBIyCgZ3ZWFwb24YAyABKAsyIi5pZGVudGl0eS5Q",
+            "cm90b1BsYXllcldlYXBvbkxvYWRvdXQSPgoNYWJpbGl0eV9jYXJkcxgEIAMo",
+            "CzInLmlkZW50aXR5LlByb3RvUGxheWVyQWJpbGl0eUNhcmRMb2Fkb3V0IncK",
+            "FVByb3RvUGxheWVySm9iTG9hZG91dBIyCghpZGVudGl0eRgBIAEoCzIgLmlk",
+            "ZW50aXR5LlByb3RvUGxheWVySm9iSWRlbnRpdHkSKgoEc3RhdBgCIAEoCzIc",
+            "LmlkZW50aXR5LlByb3RvUGxheWVySm9iU3RhdCKAAQoYUHJvdG9QbGF5ZXJX",
+            "ZWFwb25Mb2Fkb3V0EjUKCGlkZW50aXR5GAEgASgLMiMuaWRlbnRpdHkuUHJv",
+            "dG9QbGF5ZXJXZWFwb25JZGVudGl0eRItCgRzdGF0GAIgASgLMh8uaWRlbnRp",
+            "dHkuUHJvdG9QbGF5ZXJXZWFwb25TdGF0IoMBCh1Qcm90b1BsYXllckFiaWxp",
+            "dHlDYXJkTG9hZG91dBI0CghpZGVudGl0eRgBIAEoCzIiLmlkZW50aXR5LlBy",
+            "b3RvQWJpbGl0eUNhcmRJZGVudGl0eRIsCgRzdGF0GAIgASgLMh4uaWRlbnRp",
+            "dHkuUHJvdG9BYmlsaXR5Q2FyZFN0YXRCU1o5Z2l0aHViLmNvbS9qdXN0amFj",
+            "azE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2lkZW50aXR5qgIVTW9i",
+            "aXVzLlByb3RvLklkZW50aXR5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerIdentity), global::Mobius.Proto.Identity.ProtoPlayerIdentity.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "PlayerComment", "CompanionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity), global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity.Parser, new[]{ "JobCard", "Weapon", "AbilityCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobIdentity), global::Mobius.Proto.Identity.ProtoPlayerJobIdentity.Parser, new[]{ "JobCardId", "SubJobIndex", "CrownLevel", "OverBoostLevel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobStat), global::Mobius.Proto.Identity.ProtoPlayerJobStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "OverBoostLevel", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobStat), global::Mobius.Proto.Identity.ProtoPlayerJobStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity), global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity.Parser, new[]{ "WeaponId", "SubWeaponUnlock" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponStat), global::Mobius.Proto.Identity.ProtoPlayerWeaponStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardIdentity), global::Mobius.Proto.Identity.ProtoAbilityCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
@@ -981,7 +980,6 @@ namespace Mobius.Proto.Identity {
       defenseStatMod_ = other.defenseStatMod_;
       critChanceStatMod_ = other.critChanceStatMod_;
       ultimateBoost_ = other.ultimateBoost_;
-      overBoostLevel_ = other.overBoostLevel_;
       autoAbilities_ = other.autoAbilities_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1079,17 +1077,6 @@ namespace Mobius.Proto.Identity {
       }
     }
 
-    /// <summary>Field number for the "over_boost_level" field.</summary>
-    public const int OverBoostLevelFieldNumber = 11;
-    private int overBoostLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int OverBoostLevel {
-      get { return overBoostLevel_; }
-      set {
-        overBoostLevel_ = value;
-      }
-    }
-
     /// <summary>Field number for the "auto_abilities" field.</summary>
     public const int AutoAbilitiesFieldNumber = 12;
     private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
@@ -1121,7 +1108,6 @@ namespace Mobius.Proto.Identity {
       if (DefenseStatMod != other.DefenseStatMod) return false;
       if (CritChanceStatMod != other.CritChanceStatMod) return false;
       if (UltimateBoost != other.UltimateBoost) return false;
-      if (OverBoostLevel != other.OverBoostLevel) return false;
       if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1137,7 +1123,6 @@ namespace Mobius.Proto.Identity {
       if (DefenseStatMod != 0) hash ^= DefenseStatMod.GetHashCode();
       if (CritChanceStatMod != 0) hash ^= CritChanceStatMod.GetHashCode();
       if (UltimateBoost != 0) hash ^= UltimateBoost.GetHashCode();
-      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
       hash ^= AutoAbilities.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1187,10 +1172,6 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(80);
         output.WriteInt32(UltimateBoost);
       }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(OverBoostLevel);
-      }
       autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1233,10 +1214,6 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(80);
         output.WriteInt32(UltimateBoost);
       }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(OverBoostLevel);
-      }
       autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1270,9 +1247,6 @@ namespace Mobius.Proto.Identity {
       }
       if (UltimateBoost != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(UltimateBoost);
-      }
-      if (OverBoostLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
       }
       size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
       if (_unknownFields != null) {
@@ -1309,9 +1283,6 @@ namespace Mobius.Proto.Identity {
       }
       if (other.UltimateBoost != 0) {
         UltimateBoost = other.UltimateBoost;
-      }
-      if (other.OverBoostLevel != 0) {
-        OverBoostLevel = other.OverBoostLevel;
       }
       autoAbilities_.Add(other.autoAbilities_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1358,10 +1329,6 @@ namespace Mobius.Proto.Identity {
           }
           case 80: {
             UltimateBoost = input.ReadInt32();
-            break;
-          }
-          case 88: {
-            OverBoostLevel = input.ReadInt32();
             break;
           }
           case 98: {
@@ -1412,10 +1379,6 @@ namespace Mobius.Proto.Identity {
           }
           case 80: {
             UltimateBoost = input.ReadInt32();
-            break;
-          }
-          case 88: {
-            OverBoostLevel = input.ReadInt32();
             break;
           }
           case 98: {

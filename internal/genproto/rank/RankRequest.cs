@@ -25,30 +25,30 @@ namespace Mobius.Proto.Rank {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxwcm90b3JhbmsvcmFuay5yZXF1ZXN0LnByb3RvEgRyYW5rGhRwcm90b3Jh",
-            "bmsvcmFuay5wcm90bxoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8i6AEK",
-            "ElN1Ym1pdFNjb3JlUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEwoLcGxh",
-            "eWVyX25hbWUYAiABKAkSFAoMcGxheWVyX2xldmVsGAMgASgFEg0KBXNjb3Jl",
-            "GAQgASgEEhEKCXJlZ2lvbl9pZBgFIAEoCRISCgpub2RlX2luZGV4GAYgASgF",
-            "Ei8KCGlkZW50aXR5GAcgASgLMh0uaWRlbnRpdHkuUHJvdG9QbGF5ZXJJZGVu",
-            "dGl0eRItCgdsb2Fkb3V0GAggASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5ZXJM",
-            "b2Fkb3V0IkUKHVJlZnJlc2hXZWVrbHlSYW5rUmFuZ2VSZXF1ZXN0EhEKCXBs",
-            "YXllcl9pZBgBIAEoCRIRCglyZWdpb25faWQYAiABKAkiRgoeUmVmcmVzaFNw",
-            "ZWNpYWxSYW5rUmFuZ2VSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIRCgly",
-            "ZWdpb25faWQYAiABKAkiMgodRmV0Y2hQbGF5ZXJSYW5raW5nSW5mb1JlcXVl",
-            "c3QSEQoJcGxheWVyX2lkGAEgASgJInYKHkZldGNoUGxheWVyUmFua2luZ0lu",
-            "Zm9SZXNwb25zZRImCgZhY3RpdmUYASADKAsyFi5yYW5rLlByb3RvUmFua2lu",
-            "Z0luZm8SLAoGY2xhaW1zGAIgAygLMhwucmFuay5Qcm90b1JhbmtpbmdFdmVu",
-            "dENsYWltIj8KHEdldFBsYXllckV2ZW50UmV3YXJkc1JlcXVlc3QSEQoJcGxh",
-            "eWVyX2lkGAEgASgJEgwKBGNvZGUYAiABKAkiYwodR2V0UGxheWVyRXZlbnRS",
-            "ZXdhcmRzUmVzcG9uc2USEgoKZXZlbnRfbmFtZRgBIAEoCRIuCgdyZXdhcmRz",
-            "GAIgAygLMh0ucmFuay5Qcm90b1JhbmtpbmdFdmVudFJld2FyZCo0Cg9SYW5r",
-            "UmVxdWVzdFR5cGUSCAoETk9ORRAAEhcKEkdFVF9SQU5LSU5HX0VWRU5UUxCo",
-            "FEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
-            "b3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
+            "bmsvcmFuay5wcm90bxoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8i1QEK",
+            "ElN1Ym1pdFNjb3JlUmVxdWVzdBITCgtwbGF5ZXJfbmFtZRgCIAEoCRIUCgxw",
+            "bGF5ZXJfbGV2ZWwYAyABKAUSDQoFc2NvcmUYBCABKAQSEQoJcmVnaW9uX2lk",
+            "GAUgASgJEhIKCm5vZGVfaW5kZXgYBiABKAUSLwoIaWRlbnRpdHkYByABKAsy",
+            "HS5pZGVudGl0eS5Qcm90b1BsYXllcklkZW50aXR5Ei0KB2xvYWRvdXQYCCAB",
+            "KAsyHC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRvdXQiRQodUmVmcmVzaFdl",
+            "ZWtseVJhbmtSYW5nZVJlcXVlc3QSEQoJcGxheWVyX2lkGAEgASgJEhEKCXJl",
+            "Z2lvbl9pZBgCIAEoCSJGCh5SZWZyZXNoU3BlY2lhbFJhbmtSYW5nZVJlcXVl",
+            "c3QSEQoJcGxheWVyX2lkGAEgASgJEhEKCXJlZ2lvbl9pZBgCIAEoCSIyCh1G",
+            "ZXRjaFBsYXllclJhbmtpbmdJbmZvUmVxdWVzdBIRCglwbGF5ZXJfaWQYASAB",
+            "KAkidgoeRmV0Y2hQbGF5ZXJSYW5raW5nSW5mb1Jlc3BvbnNlEiYKBmFjdGl2",
+            "ZRgBIAMoCzIWLnJhbmsuUHJvdG9SYW5raW5nSW5mbxIsCgZjbGFpbXMYAiAD",
+            "KAsyHC5yYW5rLlByb3RvUmFua2luZ0V2ZW50Q2xhaW0iPwocR2V0UGxheWVy",
+            "RXZlbnRSZXdhcmRzUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSDAoEY29k",
+            "ZRgCIAEoCSJjCh1HZXRQbGF5ZXJFdmVudFJld2FyZHNSZXNwb25zZRISCgpl",
+            "dmVudF9uYW1lGAEgASgJEi4KB3Jld2FyZHMYAiADKAsyHS5yYW5rLlByb3Rv",
+            "UmFua2luZ0V2ZW50UmV3YXJkKjQKD1JhbmtSZXF1ZXN0VHlwZRIICgROT05F",
+            "EAASFwoSR0VUX1JBTktJTkdfRVZFTlRTEKgUQktaNWdpdGh1Yi5jb20vanVz",
+            "dGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5rqgIRTW9i",
+            "aXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.SubmitScoreRequest), global::Mobius.Proto.Rank.SubmitScoreRequest.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "RegionId", "NodeIndex", "Identity", "Loadout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.SubmitScoreRequest), global::Mobius.Proto.Rank.SubmitScoreRequest.Parser, new[]{ "PlayerName", "PlayerLevel", "Score", "RegionId", "NodeIndex", "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshWeeklyRankRangeRequest), global::Mobius.Proto.Rank.RefreshWeeklyRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest), global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
@@ -98,7 +98,6 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SubmitScoreRequest(SubmitScoreRequest other) : this() {
-      playerId_ = other.playerId_;
       playerName_ = other.playerName_;
       playerLevel_ = other.playerLevel_;
       score_ = other.score_;
@@ -112,17 +111,6 @@ namespace Mobius.Proto.Rank {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SubmitScoreRequest Clone() {
       return new SubmitScoreRequest(this);
-    }
-
-    /// <summary>Field number for the "player_id" field.</summary>
-    public const int PlayerIdFieldNumber = 1;
-    private string playerId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerId {
-      get { return playerId_; }
-      set {
-        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "player_name" field.</summary>
@@ -215,7 +203,6 @@ namespace Mobius.Proto.Rank {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerId != other.PlayerId) return false;
       if (PlayerName != other.PlayerName) return false;
       if (PlayerLevel != other.PlayerLevel) return false;
       if (Score != other.Score) return false;
@@ -229,7 +216,6 @@ namespace Mobius.Proto.Rank {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (PlayerLevel != 0) hash ^= PlayerLevel.GetHashCode();
       if (Score != 0UL) hash ^= Score.GetHashCode();
@@ -253,10 +239,6 @@ namespace Mobius.Proto.Rank {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (PlayerName.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(PlayerName);
@@ -294,10 +276,6 @@ namespace Mobius.Proto.Rank {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlayerId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PlayerId);
-      }
       if (PlayerName.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(PlayerName);
@@ -335,9 +313,6 @@ namespace Mobius.Proto.Rank {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
-      }
       if (PlayerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
       }
@@ -369,9 +344,6 @@ namespace Mobius.Proto.Rank {
     public void MergeFrom(SubmitScoreRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.PlayerId.Length != 0) {
-        PlayerId = other.PlayerId;
       }
       if (other.PlayerName.Length != 0) {
         PlayerName = other.PlayerName;
@@ -414,10 +386,6 @@ namespace Mobius.Proto.Rank {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
           case 18: {
             PlayerName = input.ReadString();
             break;
@@ -466,10 +434,6 @@ namespace Mobius.Proto.Rank {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PlayerId = input.ReadString();
-            break;
-          }
           case 18: {
             PlayerName = input.ReadString();
             break;

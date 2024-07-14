@@ -29,5 +29,5 @@ message ProtoPlayerInfo {
   string job_card_id = 6;
   int32 sub_job_index = 7;
   string companion_id = 8;
-  identity.ProtoPlayerCardIdentity rental_card = 9;
+  identity.ProtoAbilityCardIdentity rental_card = 9;
 }

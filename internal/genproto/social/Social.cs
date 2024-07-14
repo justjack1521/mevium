@@ -30,14 +30,15 @@ namespace Mobius.Proto.Social {
             "ZXJfbGV2ZWwYAyABKAUSEQoJaXNfcGxheWVyGAQgASgIIo4BChVQcm90b1Bs",
             "YXllclNvY2lhbEluZm8SLgoLcGxheWVyX2luZm8YASABKAsyGS5wcmVzZW5j",
             "ZS5Qcm90b1BsYXllckluZm8SEwoLbGFzdF9vbmxpbmUYAiABKAMSFQoNcmVn",
-            "aW9uX21hcF9pZBgDIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgEIAEoBSLh",
+            "aW9uX21hcF9pZBgDIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgEIAEoBSLi",
             "AQoPUHJvdG9QbGF5ZXJJbmZvEhEKCXBsYXllcl9pZBgBIAEoCRITCgtwbGF5",
             "ZXJfbmFtZRgCIAEoCRIWCg5wbGF5ZXJfY29tbWVudBgDIAEoCRIUCgxwbGF5",
             "ZXJfbGV2ZWwYBCABKAUSEwoLam9iX2NhcmRfaWQYBiABKAkSFQoNc3ViX2pv",
-            "Yl9pbmRleBgHIAEoBRIUCgxjb21wYW5pb25faWQYCCABKAkSNgoLcmVudGFs",
-            "X2NhcmQYCSABKAsyIS5pZGVudGl0eS5Qcm90b1BsYXllckNhcmRJZGVudGl0",
-            "eUJPWjdnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
-            "b3RvL3Byb3Rvc29jaWFsqgITTW9iaXVzLlByb3RvLlNvY2lhbGIGcHJvdG8z"));
+            "Yl9pbmRleBgHIAEoBRIUCgxjb21wYW5pb25faWQYCCABKAkSNwoLcmVudGFs",
+            "X2NhcmQYCSABKAsyIi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkSWRlbnRp",
+            "dHlCT1o3Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5w",
+            "cm90by9wcm90b3NvY2lhbKoCE01vYml1cy5Qcm90by5Tb2NpYWxiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -743,9 +744,9 @@ namespace Mobius.Proto.Social {
 
     /// <summary>Field number for the "rental_card" field.</summary>
     public const int RentalCardFieldNumber = 9;
-    private global::Mobius.Proto.Identity.ProtoPlayerCardIdentity rentalCard_;
+    private global::Mobius.Proto.Identity.ProtoAbilityCardIdentity rentalCard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Identity.ProtoPlayerCardIdentity RentalCard {
+    public global::Mobius.Proto.Identity.ProtoAbilityCardIdentity RentalCard {
       get { return rentalCard_; }
       set {
         rentalCard_ = value;
@@ -943,7 +944,7 @@ namespace Mobius.Proto.Social {
       }
       if (other.rentalCard_ != null) {
         if (rentalCard_ == null) {
-          RentalCard = new global::Mobius.Proto.Identity.ProtoPlayerCardIdentity();
+          RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
         }
         RentalCard.MergeFrom(other.RentalCard);
       }
@@ -991,7 +992,7 @@ namespace Mobius.Proto.Social {
           }
           case 74: {
             if (rentalCard_ == null) {
-              RentalCard = new global::Mobius.Proto.Identity.ProtoPlayerCardIdentity();
+              RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
             }
             input.ReadMessage(RentalCard);
             break;
@@ -1040,7 +1041,7 @@ namespace Mobius.Proto.Social {
           }
           case 74: {
             if (rentalCard_ == null) {
-              RentalCard = new global::Mobius.Proto.Identity.ProtoPlayerCardIdentity();
+              RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
             }
             input.ReadMessage(RentalCard);
             break;
