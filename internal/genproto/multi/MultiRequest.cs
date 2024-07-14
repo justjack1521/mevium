@@ -43,15 +43,15 @@ namespace Mobius.Proto.Multi {
             "cnRMb2JieVJlcXVlc3QiOQoRUmVhZHlMb2JieVJlcXVlc3QSEAoIbG9iYnlf",
             "aWQYAiABKAkSEgoKZGVja19pbmRleBgEIAEoBSInChNVbnJlYWR5TG9iYnlS",
             "ZXF1ZXN0EhAKCGxvYmJ5X2lkGAIgASgJIhQKEkNhbmNlbExvYmJ5UmVxdWVz",
-            "dCIkChBTZW5kU3RhbXBSZXF1ZXN0EhAKCHN0YW1wX2lkGAEgASgJKv0BChBN",
+            "dCIkChBTZW5kU3RhbXBSZXF1ZXN0EhAKCHN0YW1wX2lkGAEgASgJKo8CChBN",
             "dWx0aVJlcXVlc3RUeXBlEggKBE5PTkUQABISCg5DUkVBVEVfU0VTU0lPThBk",
             "EhAKC0VORF9TRVNTSU9OEMgBEhEKDFNFQVJDSF9MT0JCWRCsAhIRCgxDUkVB",
             "VEVfTE9CQlkQkAMSDwoKSk9JTl9MT0JCWRD0AxIQCgtSRUFEWV9MT0JCWRDY",
             "BBIQCgtXQVRDSF9MT0JCWRC8BRISCg1ESVNDQVJEX0xPQkJZEKAGEhEKDENB",
             "TkNFTF9MT0JCWRCEBxISCg1VTlJFQURZX0xPQkJZEOgHEhIKDVNFQVJDSF9Q",
-            "TEFZRVIQzAgSDwoKU0VORF9TVEFNUBCwCUJNWjZnaXRodWIuY29tL2p1c3Rq",
-            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2Jp",
-            "dXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "TEFZRVIQzAgSDwoKU0VORF9TVEFNUBCwCRIQCgtTVEFSVF9MT0JCWRCUCkJN",
+            "WjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3Rv",
+            "L3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,6 +88,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("UNREADY_LOBBY")] UnreadyLobby = 1000,
     [pbr::OriginalName("SEARCH_PLAYER")] SearchPlayer = 1100,
     [pbr::OriginalName("SEND_STAMP")] SendStamp = 1200,
+    [pbr::OriginalName("START_LOBBY")] StartLobby = 1300,
   }
 
   #endregion
