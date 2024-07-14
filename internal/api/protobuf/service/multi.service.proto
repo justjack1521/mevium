@@ -16,6 +16,7 @@ service MeviusMultiService {
   rpc UnwatchLobby(multi.UnwatchLobbyRequest) returns (multi.UnwatchLobbyResponse) {}
   rpc CreateLobby (multi.CreateLobbyRequest) returns (multi.CreateLobbyResponse) {}
   rpc CancelLobby(multi.CancelLobbyRequest) returns (multi.CancelLobbyResponse) {}
+  rpc StartLobby(multi.StartLobbyRequest) returns (multi.StartLobbyResponse) {}
   rpc JoinLobby(multi.JoinLobbyRequest) returns (multi.JoinLobbyResponse) {}
   rpc LeaveLobby(multi.LeaveLobbyRequest) returns (multi.LeaveLobbyResponse) {}
   rpc ReadyLobby(multi.ReadyLobbyRequest) returns (multi.ReadyLobbyResponse) {}

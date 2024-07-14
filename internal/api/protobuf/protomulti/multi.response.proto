@@ -54,3 +54,7 @@ message CancelLobbyResponse {
 message SendStampResponse {
 
 }
+
+message StartLobbyResponse {
+  
+}

@@ -69,6 +69,10 @@ message LeaveLobbyRequest {
 
 }
 
+message StartLobbyRequest {
+
+}
+
 message ReadyLobbyRequest {
   string lobby_id = 2;
   int32 deck_index = 4;
