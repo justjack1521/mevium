@@ -16,7 +16,7 @@ message ProtoPlayerIdentity {
 message ProtoPlayerLoadoutIdentity {
   ProtoPlayerJobIdentity job_card = 1;
   ProtoPlayerWeaponIdentity weapon = 2;
-  repeated ProtoPlayerCardIdentity ability_cards = 3;
+  repeated ProtoAbilityCardIdentity ability_cards = 3;
 }
 
 message ProtoPlayerJobIdentity {
@@ -26,30 +26,7 @@ message ProtoPlayerJobIdentity {
   int32 over_boost_level = 4;
 }
 
-message ProtoPlayerWeaponIdentity {
-  string weapon_id = 1;
-  int32 sub_weapon_unlock = 2;
-}
-
-message ProtoPlayerCardIdentity {
-  string ability_card_id = 1;
-  int32 ability_card_level = 2;
-  int32 ability_level = 3;
-  int32 extra_skill_unlock = 4;
-  int32 over_boost_level = 5;
-  int32 slot_index = 6;
-}
-
-message ProtoPlayerLoadout {
-  int32 deck_index = 1;
-  ProtoJobCard job_card = 2;
-  ProtoWeapon weapon = 3;
-  repeated ProtoAbilityCard ability_cards = 5;
-}
-
-message ProtoJobCard {
-  string base_job_id = 1;
-  int32 sub_job_index = 2;
+message ProtoPlayerJobStat {
   int32 hp_stat_mod = 3;
   int32 attack_stat_mod = 4;
   int32 break_stat_mod = 5;
@@ -60,12 +37,14 @@ message ProtoJobCard {
   int32 ultimate_boost = 10;
   int32 over_boost_level = 11;
   map<string, int32> auto_abilities = 12;
-  int32 crown_level = 13;
 }
 
-message ProtoWeapon {
-  string base_weapon_id = 1;
+message ProtoPlayerWeaponIdentity {
+  string weapon_id = 1;
   int32 sub_weapon_unlock = 2;
+}
+
+message ProtoPlayerWeaponStat {
   int32 hp_stat_mod = 3;
   int32 attack_stat_mod = 4;
   int32 break_stat_mod = 5;
@@ -77,12 +56,37 @@ message ProtoWeapon {
   map<string, int32> auto_abilities = 11;
 }
 
-message ProtoAbilityCard {
+message ProtoAbilityCardIdentity {
   string ability_card_id = 1;
   int32 ability_card_level = 2;
   int32 ability_level = 3;
   int32 extra_skill_unlock = 4;
   int32 over_boost_level = 5;
+  int32 slot_index = 6;
+}
+
+message ProtoAbilityCardStat {
   map<string,int32> auto_abilities = 6;
-  int32 slot_index = 20;
+}
+
+message ProtoPlayerLoadout {
+  int32 deck_index = 1;
+  ProtoPlayerJobLoadout job = 2;
+  ProtoPlayerWeaponLoadout weapon = 3;
+  repeated ProtoPlayerAbilityCardLoadout ability_cards = 4;
+}
+
+message ProtoPlayerJobLoadout {
+    ProtoPlayerJobIdentity identity = 1;
+    ProtoPlayerJobStat stat = 2;
+}
+
+message ProtoPlayerWeaponLoadout {
+  ProtoPlayerWeaponIdentity identity = 1;
+  ProtoPlayerWeaponStat stat = 2;
+}
+
+message ProtoPlayerAbilityCardLoadout {
+  ProtoAbilityCardIdentity identity = 1;
+  ProtoAbilityCardStat stat = 2;
 }

@@ -27,62 +27,70 @@ namespace Mobius.Proto.Identity {
             "Chpwcm90b2lkZW50aXR5L3BsYXllci5wcm90bxIIaWRlbnRpdHkigQEKE1By",
             "b3RvUGxheWVySWRlbnRpdHkSEQoJcGxheWVyX2lkGAEgASgJEhMKC3BsYXll",
             "cl9uYW1lGAIgASgJEhQKDHBsYXllcl9sZXZlbBgDIAEoBRIWCg5wbGF5ZXJf",
-            "Y29tbWVudBgEIAEoCRIUCgxjb21wYW5pb25faWQYBSABKAkivwEKGlByb3Rv",
+            "Y29tbWVudBgEIAEoCRIUCgxjb21wYW5pb25faWQYBSABKAkiwAEKGlByb3Rv",
             "UGxheWVyTG9hZG91dElkZW50aXR5EjIKCGpvYl9jYXJkGAEgASgLMiAuaWRl",
             "bnRpdHkuUHJvdG9QbGF5ZXJKb2JJZGVudGl0eRIzCgZ3ZWFwb24YAiABKAsy",
-            "Iy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBvbklkZW50aXR5EjgKDWFiaWxp",
-            "dHlfY2FyZHMYAyADKAsyIS5pZGVudGl0eS5Qcm90b1BsYXllckNhcmRJZGVu",
-            "dGl0eSJzChZQcm90b1BsYXllckpvYklkZW50aXR5EhMKC2pvYl9jYXJkX2lk",
-            "GAEgASgJEhUKDXN1Yl9qb2JfaW5kZXgYAiABKAUSEwoLY3Jvd25fbGV2ZWwY",
-            "AyABKAUSGAoQb3Zlcl9ib29zdF9sZXZlbBgEIAEoBSJJChlQcm90b1BsYXll",
-            "cldlYXBvbklkZW50aXR5EhEKCXdlYXBvbl9pZBgBIAEoCRIZChFzdWJfd2Vh",
-            "cG9uX3VubG9jaxgCIAEoBSKvAQoXUHJvdG9QbGF5ZXJDYXJkSWRlbnRpdHkS",
-            "FwoPYWJpbGl0eV9jYXJkX2lkGAEgASgJEhoKEmFiaWxpdHlfY2FyZF9sZXZl",
-            "bBgCIAEoBRIVCg1hYmlsaXR5X2xldmVsGAMgASgFEhoKEmV4dHJhX3NraWxs",
-            "X3VubG9jaxgEIAEoBRIYChBvdmVyX2Jvb3N0X2xldmVsGAUgASgFEhIKCnNs",
-            "b3RfaW5kZXgYBiABKAUirAEKElByb3RvUGxheWVyTG9hZG91dBISCgpkZWNr",
-            "X2luZGV4GAEgASgFEigKCGpvYl9jYXJkGAIgASgLMhYuaWRlbnRpdHkuUHJv",
-            "dG9Kb2JDYXJkEiUKBndlYXBvbhgDIAEoCzIVLmlkZW50aXR5LlByb3RvV2Vh",
-            "cG9uEjEKDWFiaWxpdHlfY2FyZHMYBSADKAsyGi5pZGVudGl0eS5Qcm90b0Fi",
-            "aWxpdHlDYXJkIqgDCgxQcm90b0pvYkNhcmQSEwoLYmFzZV9qb2JfaWQYASAB",
-            "KAkSFQoNc3ViX2pvYl9pbmRleBgCIAEoBRITCgtocF9zdGF0X21vZBgDIAEo",
-            "BRIXCg9hdHRhY2tfc3RhdF9tb2QYBCABKAUSFgoOYnJlYWtfc3RhdF9tb2QY",
-            "BSABKAUSFgoObWFnaWNfc3RhdF9tb2QYBiABKAUSFgoOc3BlZWRfc3RhdF9t",
-            "b2QYByABKAUSGAoQZGVmZW5zZV9zdGF0X21vZBgIIAEoBRIcChRjcml0X2No",
-            "YW5jZV9zdGF0X21vZBgJIAEoBRIWCg51bHRpbWF0ZV9ib29zdBgKIAEoBRIY",
-            "ChBvdmVyX2Jvb3N0X2xldmVsGAsgASgFEkEKDmF1dG9fYWJpbGl0aWVzGAwg",
-            "AygLMikuaWRlbnRpdHkuUHJvdG9Kb2JDYXJkLkF1dG9BYmlsaXRpZXNFbnRy",
-            "eRITCgtjcm93bl9sZXZlbBgNIAEoBRo0ChJBdXRvQWJpbGl0aWVzRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASL+AgoLUHJvdG9XZWFw",
-            "b24SFgoOYmFzZV93ZWFwb25faWQYASABKAkSGQoRc3ViX3dlYXBvbl91bmxv",
-            "Y2sYAiABKAUSEwoLaHBfc3RhdF9tb2QYAyABKAUSFwoPYXR0YWNrX3N0YXRf",
-            "bW9kGAQgASgFEhYKDmJyZWFrX3N0YXRfbW9kGAUgASgFEhYKDm1hZ2ljX3N0",
-            "YXRfbW9kGAYgASgFEhYKDnNwZWVkX3N0YXRfbW9kGAcgASgFEhgKEGRlZmVu",
-            "c2Vfc3RhdF9tb2QYCCABKAUSHAoUY3JpdF9jaGFuY2Vfc3RhdF9tb2QYCSAB",
-            "KAUSFgoOdWx0aW1hdGVfYm9vc3QYCiABKAUSQAoOYXV0b19hYmlsaXRpZXMY",
-            "CyADKAsyKC5pZGVudGl0eS5Qcm90b1dlYXBvbi5BdXRvQWJpbGl0aWVzRW50",
-            "cnkaNAoSQXV0b0FiaWxpdGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoBToCOAEipQIKEFByb3RvQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9j",
-            "YXJkX2lkGAEgASgJEhoKEmFiaWxpdHlfY2FyZF9sZXZlbBgCIAEoBRIVCg1h",
-            "YmlsaXR5X2xldmVsGAMgASgFEhoKEmV4dHJhX3NraWxsX3VubG9jaxgEIAEo",
-            "BRIYChBvdmVyX2Jvb3N0X2xldmVsGAUgASgFEkUKDmF1dG9fYWJpbGl0aWVz",
-            "GAYgAygLMi0uaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZC5BdXRvQWJpbGl0",
-            "aWVzRW50cnkSEgoKc2xvdF9pbmRleBgUIAEoBRo0ChJBdXRvQWJpbGl0aWVz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4AUJTWjlnaXRo",
-            "dWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3Rv",
-            "aWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRlbnRpdHliBnByb3RvMw=="));
+            "Iy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBvbklkZW50aXR5EjkKDWFiaWxp",
+            "dHlfY2FyZHMYAyADKAsyIi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkSWRl",
+            "bnRpdHkicwoWUHJvdG9QbGF5ZXJKb2JJZGVudGl0eRITCgtqb2JfY2FyZF9p",
+            "ZBgBIAEoCRIVCg1zdWJfam9iX2luZGV4GAIgASgFEhMKC2Nyb3duX2xldmVs",
+            "GAMgASgFEhgKEG92ZXJfYm9vc3RfbGV2ZWwYBCABKAUi8wIKElByb3RvUGxh",
+            "eWVySm9iU3RhdBITCgtocF9zdGF0X21vZBgDIAEoBRIXCg9hdHRhY2tfc3Rh",
+            "dF9tb2QYBCABKAUSFgoOYnJlYWtfc3RhdF9tb2QYBSABKAUSFgoObWFnaWNf",
+            "c3RhdF9tb2QYBiABKAUSFgoOc3BlZWRfc3RhdF9tb2QYByABKAUSGAoQZGVm",
+            "ZW5zZV9zdGF0X21vZBgIIAEoBRIcChRjcml0X2NoYW5jZV9zdGF0X21vZBgJ",
+            "IAEoBRIWCg51bHRpbWF0ZV9ib29zdBgKIAEoBRIYChBvdmVyX2Jvb3N0X2xl",
+            "dmVsGAsgASgFEkcKDmF1dG9fYWJpbGl0aWVzGAwgAygLMi8uaWRlbnRpdHku",
+            "UHJvdG9QbGF5ZXJKb2JTdGF0LkF1dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRv",
+            "QWJpbGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4",
+            "ASJJChlQcm90b1BsYXllcldlYXBvbklkZW50aXR5EhEKCXdlYXBvbl9pZBgB",
+            "IAEoCRIZChFzdWJfd2VhcG9uX3VubG9jaxgCIAEoBSLfAgoVUHJvdG9QbGF5",
+            "ZXJXZWFwb25TdGF0EhMKC2hwX3N0YXRfbW9kGAMgASgFEhcKD2F0dGFja19z",
+            "dGF0X21vZBgEIAEoBRIWCg5icmVha19zdGF0X21vZBgFIAEoBRIWCg5tYWdp",
+            "Y19zdGF0X21vZBgGIAEoBRIWCg5zcGVlZF9zdGF0X21vZBgHIAEoBRIYChBk",
+            "ZWZlbnNlX3N0YXRfbW9kGAggASgFEhwKFGNyaXRfY2hhbmNlX3N0YXRfbW9k",
+            "GAkgASgFEhYKDnVsdGltYXRlX2Jvb3N0GAogASgFEkoKDmF1dG9fYWJpbGl0",
+            "aWVzGAsgAygLMjIuaWRlbnRpdHkuUHJvdG9QbGF5ZXJXZWFwb25TdGF0LkF1",
+            "dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASKwAQoYUHJvdG9BYmlsaXR5Q2Fy",
+            "ZElkZW50aXR5EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEoCRIaChJhYmlsaXR5",
+            "X2NhcmRfbGV2ZWwYAiABKAUSFQoNYWJpbGl0eV9sZXZlbBgDIAEoBRIaChJl",
+            "eHRyYV9za2lsbF91bmxvY2sYBCABKAUSGAoQb3Zlcl9ib29zdF9sZXZlbBgF",
+            "IAEoBRISCgpzbG90X2luZGV4GAYgASgFIpcBChRQcm90b0FiaWxpdHlDYXJk",
+            "U3RhdBJJCg5hdXRvX2FiaWxpdGllcxgGIAMoCzIxLmlkZW50aXR5LlByb3Rv",
+            "QWJpbGl0eUNhcmRTdGF0LkF1dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRvQWJp",
+            "bGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASLK",
+            "AQoSUHJvdG9QbGF5ZXJMb2Fkb3V0EhIKCmRlY2tfaW5kZXgYASABKAUSLAoD",
+            "am9iGAIgASgLMh8uaWRlbnRpdHkuUHJvdG9QbGF5ZXJKb2JMb2Fkb3V0EjIK",
+            "BndlYXBvbhgDIAEoCzIiLmlkZW50aXR5LlByb3RvUGxheWVyV2VhcG9uTG9h",
+            "ZG91dBI+Cg1hYmlsaXR5X2NhcmRzGAQgAygLMicuaWRlbnRpdHkuUHJvdG9Q",
+            "bGF5ZXJBYmlsaXR5Q2FyZExvYWRvdXQidwoVUHJvdG9QbGF5ZXJKb2JMb2Fk",
+            "b3V0EjIKCGlkZW50aXR5GAEgASgLMiAuaWRlbnRpdHkuUHJvdG9QbGF5ZXJK",
+            "b2JJZGVudGl0eRIqCgRzdGF0GAIgASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5",
+            "ZXJKb2JTdGF0IoABChhQcm90b1BsYXllcldlYXBvbkxvYWRvdXQSNQoIaWRl",
+            "bnRpdHkYASABKAsyIy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBvbklkZW50",
+            "aXR5Ei0KBHN0YXQYAiABKAsyHy5pZGVudGl0eS5Qcm90b1BsYXllcldlYXBv",
+            "blN0YXQigwEKHVByb3RvUGxheWVyQWJpbGl0eUNhcmRMb2Fkb3V0EjQKCGlk",
+            "ZW50aXR5GAEgASgLMiIuaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZElkZW50",
+            "aXR5EiwKBHN0YXQYAiABKAsyHi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJk",
+            "U3RhdEJTWjlnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dl",
+            "bnByb3RvL3Byb3RvaWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRlbnRpdHli",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerIdentity), global::Mobius.Proto.Identity.ProtoPlayerIdentity.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "PlayerComment", "CompanionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity), global::Mobius.Proto.Identity.ProtoPlayerLoadoutIdentity.Parser, new[]{ "JobCard", "Weapon", "AbilityCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobIdentity), global::Mobius.Proto.Identity.ProtoPlayerJobIdentity.Parser, new[]{ "JobCardId", "SubJobIndex", "CrownLevel", "OverBoostLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobStat), global::Mobius.Proto.Identity.ProtoPlayerJobStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "OverBoostLevel", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity), global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity.Parser, new[]{ "WeaponId", "SubWeaponUnlock" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerCardIdentity), global::Mobius.Proto.Identity.ProtoPlayerCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadout), global::Mobius.Proto.Identity.ProtoPlayerLoadout.Parser, new[]{ "DeckIndex", "JobCard", "Weapon", "AbilityCards" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoJobCard), global::Mobius.Proto.Identity.ProtoJobCard.Parser, new[]{ "BaseJobId", "SubJobIndex", "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "OverBoostLevel", "AutoAbilities", "CrownLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoWeapon), global::Mobius.Proto.Identity.ProtoWeapon.Parser, new[]{ "BaseWeaponId", "SubWeaponUnlock", "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCard), global::Mobius.Proto.Identity.ProtoAbilityCard.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "AutoAbilities", "SlotIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponStat), global::Mobius.Proto.Identity.ProtoPlayerWeaponStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardIdentity), global::Mobius.Proto.Identity.ProtoAbilityCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardStat), global::Mobius.Proto.Identity.ProtoAbilityCardStat.Parser, new[]{ "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadout), global::Mobius.Proto.Identity.ProtoPlayerLoadout.Parser, new[]{ "DeckIndex", "Job", "Weapon", "AbilityCards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobLoadout), global::Mobius.Proto.Identity.ProtoPlayerJobLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout), global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout), global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null)
           }));
     }
     #endregion
@@ -469,11 +477,11 @@ namespace Mobius.Proto.Identity {
 
     /// <summary>Field number for the "ability_cards" field.</summary>
     public const int AbilityCardsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> _repeated_abilityCards_codec
-        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Identity.ProtoPlayerCardIdentity.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity>();
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoAbilityCardIdentity> _repeated_abilityCards_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Identity.ProtoAbilityCardIdentity.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoAbilityCardIdentity> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoAbilityCardIdentity>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerCardIdentity> AbilityCards {
+    public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoAbilityCardIdentity> AbilityCards {
       get { return abilityCards_; }
     }
 
@@ -936,6 +944,491 @@ namespace Mobius.Proto.Identity {
 
   }
 
+  public sealed partial class ProtoPlayerJobStat : pb::IMessage<ProtoPlayerJobStat>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoPlayerJobStat> _parser = new pb::MessageParser<ProtoPlayerJobStat>(() => new ProtoPlayerJobStat());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoPlayerJobStat> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerJobStat() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerJobStat(ProtoPlayerJobStat other) : this() {
+      hpStatMod_ = other.hpStatMod_;
+      attackStatMod_ = other.attackStatMod_;
+      breakStatMod_ = other.breakStatMod_;
+      magicStatMod_ = other.magicStatMod_;
+      speedStatMod_ = other.speedStatMod_;
+      defenseStatMod_ = other.defenseStatMod_;
+      critChanceStatMod_ = other.critChanceStatMod_;
+      ultimateBoost_ = other.ultimateBoost_;
+      overBoostLevel_ = other.overBoostLevel_;
+      autoAbilities_ = other.autoAbilities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerJobStat Clone() {
+      return new ProtoPlayerJobStat(this);
+    }
+
+    /// <summary>Field number for the "hp_stat_mod" field.</summary>
+    public const int HpStatModFieldNumber = 3;
+    private int hpStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int HpStatMod {
+      get { return hpStatMod_; }
+      set {
+        hpStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack_stat_mod" field.</summary>
+    public const int AttackStatModFieldNumber = 4;
+    private int attackStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AttackStatMod {
+      get { return attackStatMod_; }
+      set {
+        attackStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "break_stat_mod" field.</summary>
+    public const int BreakStatModFieldNumber = 5;
+    private int breakStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int BreakStatMod {
+      get { return breakStatMod_; }
+      set {
+        breakStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "magic_stat_mod" field.</summary>
+    public const int MagicStatModFieldNumber = 6;
+    private int magicStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MagicStatMod {
+      get { return magicStatMod_; }
+      set {
+        magicStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speed_stat_mod" field.</summary>
+    public const int SpeedStatModFieldNumber = 7;
+    private int speedStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SpeedStatMod {
+      get { return speedStatMod_; }
+      set {
+        speedStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "defense_stat_mod" field.</summary>
+    public const int DefenseStatModFieldNumber = 8;
+    private int defenseStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DefenseStatMod {
+      get { return defenseStatMod_; }
+      set {
+        defenseStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "crit_chance_stat_mod" field.</summary>
+    public const int CritChanceStatModFieldNumber = 9;
+    private int critChanceStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CritChanceStatMod {
+      get { return critChanceStatMod_; }
+      set {
+        critChanceStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ultimate_boost" field.</summary>
+    public const int UltimateBoostFieldNumber = 10;
+    private int ultimateBoost_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int UltimateBoost {
+      get { return ultimateBoost_; }
+      set {
+        ultimateBoost_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "over_boost_level" field.</summary>
+    public const int OverBoostLevelFieldNumber = 11;
+    private int overBoostLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int OverBoostLevel {
+      get { return overBoostLevel_; }
+      set {
+        overBoostLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_abilities" field.</summary>
+    public const int AutoAbilitiesFieldNumber = 12;
+    private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 98);
+    private readonly pbc::MapField<string, int> autoAbilities_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, int> AutoAbilities {
+      get { return autoAbilities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoPlayerJobStat);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoPlayerJobStat other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HpStatMod != other.HpStatMod) return false;
+      if (AttackStatMod != other.AttackStatMod) return false;
+      if (BreakStatMod != other.BreakStatMod) return false;
+      if (MagicStatMod != other.MagicStatMod) return false;
+      if (SpeedStatMod != other.SpeedStatMod) return false;
+      if (DefenseStatMod != other.DefenseStatMod) return false;
+      if (CritChanceStatMod != other.CritChanceStatMod) return false;
+      if (UltimateBoost != other.UltimateBoost) return false;
+      if (OverBoostLevel != other.OverBoostLevel) return false;
+      if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HpStatMod != 0) hash ^= HpStatMod.GetHashCode();
+      if (AttackStatMod != 0) hash ^= AttackStatMod.GetHashCode();
+      if (BreakStatMod != 0) hash ^= BreakStatMod.GetHashCode();
+      if (MagicStatMod != 0) hash ^= MagicStatMod.GetHashCode();
+      if (SpeedStatMod != 0) hash ^= SpeedStatMod.GetHashCode();
+      if (DefenseStatMod != 0) hash ^= DefenseStatMod.GetHashCode();
+      if (CritChanceStatMod != 0) hash ^= CritChanceStatMod.GetHashCode();
+      if (UltimateBoost != 0) hash ^= UltimateBoost.GetHashCode();
+      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
+      hash ^= AutoAbilities.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HpStatMod != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(HpStatMod);
+      }
+      if (AttackStatMod != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AttackStatMod);
+      }
+      if (BreakStatMod != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(BreakStatMod);
+      }
+      if (MagicStatMod != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MagicStatMod);
+      }
+      if (SpeedStatMod != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SpeedStatMod);
+      }
+      if (DefenseStatMod != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DefenseStatMod);
+      }
+      if (CritChanceStatMod != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(CritChanceStatMod);
+      }
+      if (UltimateBoost != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(UltimateBoost);
+      }
+      if (OverBoostLevel != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(OverBoostLevel);
+      }
+      autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HpStatMod != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(HpStatMod);
+      }
+      if (AttackStatMod != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AttackStatMod);
+      }
+      if (BreakStatMod != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(BreakStatMod);
+      }
+      if (MagicStatMod != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MagicStatMod);
+      }
+      if (SpeedStatMod != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SpeedStatMod);
+      }
+      if (DefenseStatMod != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DefenseStatMod);
+      }
+      if (CritChanceStatMod != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(CritChanceStatMod);
+      }
+      if (UltimateBoost != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(UltimateBoost);
+      }
+      if (OverBoostLevel != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(OverBoostLevel);
+      }
+      autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (HpStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(HpStatMod);
+      }
+      if (AttackStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AttackStatMod);
+      }
+      if (BreakStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BreakStatMod);
+      }
+      if (MagicStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MagicStatMod);
+      }
+      if (SpeedStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SpeedStatMod);
+      }
+      if (DefenseStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefenseStatMod);
+      }
+      if (CritChanceStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CritChanceStatMod);
+      }
+      if (UltimateBoost != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UltimateBoost);
+      }
+      if (OverBoostLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
+      }
+      size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoPlayerJobStat other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HpStatMod != 0) {
+        HpStatMod = other.HpStatMod;
+      }
+      if (other.AttackStatMod != 0) {
+        AttackStatMod = other.AttackStatMod;
+      }
+      if (other.BreakStatMod != 0) {
+        BreakStatMod = other.BreakStatMod;
+      }
+      if (other.MagicStatMod != 0) {
+        MagicStatMod = other.MagicStatMod;
+      }
+      if (other.SpeedStatMod != 0) {
+        SpeedStatMod = other.SpeedStatMod;
+      }
+      if (other.DefenseStatMod != 0) {
+        DefenseStatMod = other.DefenseStatMod;
+      }
+      if (other.CritChanceStatMod != 0) {
+        CritChanceStatMod = other.CritChanceStatMod;
+      }
+      if (other.UltimateBoost != 0) {
+        UltimateBoost = other.UltimateBoost;
+      }
+      if (other.OverBoostLevel != 0) {
+        OverBoostLevel = other.OverBoostLevel;
+      }
+      autoAbilities_.Add(other.autoAbilities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 24: {
+            HpStatMod = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AttackStatMod = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            BreakStatMod = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MagicStatMod = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            SpeedStatMod = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DefenseStatMod = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            CritChanceStatMod = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            UltimateBoost = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            OverBoostLevel = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            autoAbilities_.AddEntriesFrom(input, _map_autoAbilities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            HpStatMod = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AttackStatMod = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            BreakStatMod = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MagicStatMod = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            SpeedStatMod = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DefenseStatMod = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            CritChanceStatMod = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            UltimateBoost = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            OverBoostLevel = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            autoAbilities_.AddEntriesFrom(ref input, _map_autoAbilities_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class ProtoPlayerWeaponIdentity : pb::IMessage<ProtoPlayerWeaponIdentity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -948,7 +1441,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1144,19 +1637,19 @@ namespace Mobius.Proto.Identity {
 
   }
 
-  public sealed partial class ProtoPlayerCardIdentity : pb::IMessage<ProtoPlayerCardIdentity>
+  public sealed partial class ProtoPlayerWeaponStat : pb::IMessage<ProtoPlayerWeaponStat>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ProtoPlayerCardIdentity> _parser = new pb::MessageParser<ProtoPlayerCardIdentity>(() => new ProtoPlayerCardIdentity());
+    private static readonly pb::MessageParser<ProtoPlayerWeaponStat> _parser = new pb::MessageParser<ProtoPlayerWeaponStat>(() => new ProtoPlayerWeaponStat());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoPlayerCardIdentity> Parser { get { return _parser; } }
+    public static pb::MessageParser<ProtoPlayerWeaponStat> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1165,14 +1658,463 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoPlayerCardIdentity() {
+    public ProtoPlayerWeaponStat() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoPlayerCardIdentity(ProtoPlayerCardIdentity other) : this() {
+    public ProtoPlayerWeaponStat(ProtoPlayerWeaponStat other) : this() {
+      hpStatMod_ = other.hpStatMod_;
+      attackStatMod_ = other.attackStatMod_;
+      breakStatMod_ = other.breakStatMod_;
+      magicStatMod_ = other.magicStatMod_;
+      speedStatMod_ = other.speedStatMod_;
+      defenseStatMod_ = other.defenseStatMod_;
+      critChanceStatMod_ = other.critChanceStatMod_;
+      ultimateBoost_ = other.ultimateBoost_;
+      autoAbilities_ = other.autoAbilities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoPlayerWeaponStat Clone() {
+      return new ProtoPlayerWeaponStat(this);
+    }
+
+    /// <summary>Field number for the "hp_stat_mod" field.</summary>
+    public const int HpStatModFieldNumber = 3;
+    private int hpStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int HpStatMod {
+      get { return hpStatMod_; }
+      set {
+        hpStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack_stat_mod" field.</summary>
+    public const int AttackStatModFieldNumber = 4;
+    private int attackStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AttackStatMod {
+      get { return attackStatMod_; }
+      set {
+        attackStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "break_stat_mod" field.</summary>
+    public const int BreakStatModFieldNumber = 5;
+    private int breakStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int BreakStatMod {
+      get { return breakStatMod_; }
+      set {
+        breakStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "magic_stat_mod" field.</summary>
+    public const int MagicStatModFieldNumber = 6;
+    private int magicStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MagicStatMod {
+      get { return magicStatMod_; }
+      set {
+        magicStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speed_stat_mod" field.</summary>
+    public const int SpeedStatModFieldNumber = 7;
+    private int speedStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SpeedStatMod {
+      get { return speedStatMod_; }
+      set {
+        speedStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "defense_stat_mod" field.</summary>
+    public const int DefenseStatModFieldNumber = 8;
+    private int defenseStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DefenseStatMod {
+      get { return defenseStatMod_; }
+      set {
+        defenseStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "crit_chance_stat_mod" field.</summary>
+    public const int CritChanceStatModFieldNumber = 9;
+    private int critChanceStatMod_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CritChanceStatMod {
+      get { return critChanceStatMod_; }
+      set {
+        critChanceStatMod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ultimate_boost" field.</summary>
+    public const int UltimateBoostFieldNumber = 10;
+    private int ultimateBoost_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int UltimateBoost {
+      get { return ultimateBoost_; }
+      set {
+        ultimateBoost_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_abilities" field.</summary>
+    public const int AutoAbilitiesFieldNumber = 11;
+    private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 90);
+    private readonly pbc::MapField<string, int> autoAbilities_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, int> AutoAbilities {
+      get { return autoAbilities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoPlayerWeaponStat);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoPlayerWeaponStat other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HpStatMod != other.HpStatMod) return false;
+      if (AttackStatMod != other.AttackStatMod) return false;
+      if (BreakStatMod != other.BreakStatMod) return false;
+      if (MagicStatMod != other.MagicStatMod) return false;
+      if (SpeedStatMod != other.SpeedStatMod) return false;
+      if (DefenseStatMod != other.DefenseStatMod) return false;
+      if (CritChanceStatMod != other.CritChanceStatMod) return false;
+      if (UltimateBoost != other.UltimateBoost) return false;
+      if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HpStatMod != 0) hash ^= HpStatMod.GetHashCode();
+      if (AttackStatMod != 0) hash ^= AttackStatMod.GetHashCode();
+      if (BreakStatMod != 0) hash ^= BreakStatMod.GetHashCode();
+      if (MagicStatMod != 0) hash ^= MagicStatMod.GetHashCode();
+      if (SpeedStatMod != 0) hash ^= SpeedStatMod.GetHashCode();
+      if (DefenseStatMod != 0) hash ^= DefenseStatMod.GetHashCode();
+      if (CritChanceStatMod != 0) hash ^= CritChanceStatMod.GetHashCode();
+      if (UltimateBoost != 0) hash ^= UltimateBoost.GetHashCode();
+      hash ^= AutoAbilities.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HpStatMod != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(HpStatMod);
+      }
+      if (AttackStatMod != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AttackStatMod);
+      }
+      if (BreakStatMod != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(BreakStatMod);
+      }
+      if (MagicStatMod != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MagicStatMod);
+      }
+      if (SpeedStatMod != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SpeedStatMod);
+      }
+      if (DefenseStatMod != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DefenseStatMod);
+      }
+      if (CritChanceStatMod != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(CritChanceStatMod);
+      }
+      if (UltimateBoost != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(UltimateBoost);
+      }
+      autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HpStatMod != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(HpStatMod);
+      }
+      if (AttackStatMod != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AttackStatMod);
+      }
+      if (BreakStatMod != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(BreakStatMod);
+      }
+      if (MagicStatMod != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MagicStatMod);
+      }
+      if (SpeedStatMod != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SpeedStatMod);
+      }
+      if (DefenseStatMod != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DefenseStatMod);
+      }
+      if (CritChanceStatMod != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(CritChanceStatMod);
+      }
+      if (UltimateBoost != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(UltimateBoost);
+      }
+      autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (HpStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(HpStatMod);
+      }
+      if (AttackStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AttackStatMod);
+      }
+      if (BreakStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BreakStatMod);
+      }
+      if (MagicStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MagicStatMod);
+      }
+      if (SpeedStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SpeedStatMod);
+      }
+      if (DefenseStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefenseStatMod);
+      }
+      if (CritChanceStatMod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CritChanceStatMod);
+      }
+      if (UltimateBoost != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UltimateBoost);
+      }
+      size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoPlayerWeaponStat other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HpStatMod != 0) {
+        HpStatMod = other.HpStatMod;
+      }
+      if (other.AttackStatMod != 0) {
+        AttackStatMod = other.AttackStatMod;
+      }
+      if (other.BreakStatMod != 0) {
+        BreakStatMod = other.BreakStatMod;
+      }
+      if (other.MagicStatMod != 0) {
+        MagicStatMod = other.MagicStatMod;
+      }
+      if (other.SpeedStatMod != 0) {
+        SpeedStatMod = other.SpeedStatMod;
+      }
+      if (other.DefenseStatMod != 0) {
+        DefenseStatMod = other.DefenseStatMod;
+      }
+      if (other.CritChanceStatMod != 0) {
+        CritChanceStatMod = other.CritChanceStatMod;
+      }
+      if (other.UltimateBoost != 0) {
+        UltimateBoost = other.UltimateBoost;
+      }
+      autoAbilities_.Add(other.autoAbilities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 24: {
+            HpStatMod = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AttackStatMod = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            BreakStatMod = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MagicStatMod = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            SpeedStatMod = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DefenseStatMod = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            CritChanceStatMod = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            UltimateBoost = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            autoAbilities_.AddEntriesFrom(input, _map_autoAbilities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            HpStatMod = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AttackStatMod = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            BreakStatMod = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MagicStatMod = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            SpeedStatMod = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DefenseStatMod = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            CritChanceStatMod = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            UltimateBoost = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            autoAbilities_.AddEntriesFrom(ref input, _map_autoAbilities_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoAbilityCardIdentity : pb::IMessage<ProtoAbilityCardIdentity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoAbilityCardIdentity> _parser = new pb::MessageParser<ProtoAbilityCardIdentity>(() => new ProtoAbilityCardIdentity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoAbilityCardIdentity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoAbilityCardIdentity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoAbilityCardIdentity(ProtoAbilityCardIdentity other) : this() {
       abilityCardId_ = other.abilityCardId_;
       abilityCardLevel_ = other.abilityCardLevel_;
       abilityLevel_ = other.abilityLevel_;
@@ -1183,8 +2125,8 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoPlayerCardIdentity Clone() {
-      return new ProtoPlayerCardIdentity(this);
+    public ProtoAbilityCardIdentity Clone() {
+      return new ProtoAbilityCardIdentity(this);
     }
 
     /// <summary>Field number for the "ability_card_id" field.</summary>
@@ -1255,11 +2197,11 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoPlayerCardIdentity);
+      return Equals(other as ProtoAbilityCardIdentity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoPlayerCardIdentity other) {
+    public bool Equals(ProtoAbilityCardIdentity other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1391,7 +2333,7 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoPlayerCardIdentity other) {
+    public void MergeFrom(ProtoAbilityCardIdentity other) {
       if (other == null) {
         return;
       }
@@ -1496,6 +2438,167 @@ namespace Mobius.Proto.Identity {
 
   }
 
+  public sealed partial class ProtoAbilityCardStat : pb::IMessage<ProtoAbilityCardStat>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoAbilityCardStat> _parser = new pb::MessageParser<ProtoAbilityCardStat>(() => new ProtoAbilityCardStat());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoAbilityCardStat> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoAbilityCardStat() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoAbilityCardStat(ProtoAbilityCardStat other) : this() {
+      autoAbilities_ = other.autoAbilities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoAbilityCardStat Clone() {
+      return new ProtoAbilityCardStat(this);
+    }
+
+    /// <summary>Field number for the "auto_abilities" field.</summary>
+    public const int AutoAbilitiesFieldNumber = 6;
+    private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 50);
+    private readonly pbc::MapField<string, int> autoAbilities_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, int> AutoAbilities {
+      get { return autoAbilities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoAbilityCardStat);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoAbilityCardStat other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= AutoAbilities.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoAbilityCardStat other) {
+      if (other == null) {
+        return;
+      }
+      autoAbilities_.Add(other.autoAbilities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 50: {
+            autoAbilities_.AddEntriesFrom(input, _map_autoAbilities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 50: {
+            autoAbilities_.AddEntriesFrom(ref input, _map_autoAbilities_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class ProtoPlayerLoadout : pb::IMessage<ProtoPlayerLoadout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1508,7 +2611,7 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1526,7 +2629,7 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoPlayerLoadout(ProtoPlayerLoadout other) : this() {
       deckIndex_ = other.deckIndex_;
-      jobCard_ = other.jobCard_ != null ? other.jobCard_.Clone() : null;
+      job_ = other.job_ != null ? other.job_.Clone() : null;
       weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
       abilityCards_ = other.abilityCards_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1548,22 +2651,22 @@ namespace Mobius.Proto.Identity {
       }
     }
 
-    /// <summary>Field number for the "job_card" field.</summary>
-    public const int JobCardFieldNumber = 2;
-    private global::Mobius.Proto.Identity.ProtoJobCard jobCard_;
+    /// <summary>Field number for the "job" field.</summary>
+    public const int JobFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoPlayerJobLoadout job_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Identity.ProtoJobCard JobCard {
-      get { return jobCard_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerJobLoadout Job {
+      get { return job_; }
       set {
-        jobCard_ = value;
+        job_ = value;
       }
     }
 
     /// <summary>Field number for the "weapon" field.</summary>
     public const int WeaponFieldNumber = 3;
-    private global::Mobius.Proto.Identity.ProtoWeapon weapon_;
+    private global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout weapon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Identity.ProtoWeapon Weapon {
+    public global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout Weapon {
       get { return weapon_; }
       set {
         weapon_ = value;
@@ -1571,12 +2674,12 @@ namespace Mobius.Proto.Identity {
     }
 
     /// <summary>Field number for the "ability_cards" field.</summary>
-    public const int AbilityCardsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoAbilityCard> _repeated_abilityCards_codec
-        = pb::FieldCodec.ForMessage(42, global::Mobius.Proto.Identity.ProtoAbilityCard.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoAbilityCard> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoAbilityCard>();
+    public const int AbilityCardsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout> _repeated_abilityCards_codec
+        = pb::FieldCodec.ForMessage(34, global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoAbilityCard> AbilityCards {
+    public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout> AbilityCards {
       get { return abilityCards_; }
     }
 
@@ -1594,7 +2697,7 @@ namespace Mobius.Proto.Identity {
         return true;
       }
       if (DeckIndex != other.DeckIndex) return false;
-      if (!object.Equals(JobCard, other.JobCard)) return false;
+      if (!object.Equals(Job, other.Job)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
       if(!abilityCards_.Equals(other.abilityCards_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1604,7 +2707,7 @@ namespace Mobius.Proto.Identity {
     public override int GetHashCode() {
       int hash = 1;
       if (DeckIndex != 0) hash ^= DeckIndex.GetHashCode();
-      if (jobCard_ != null) hash ^= JobCard.GetHashCode();
+      if (job_ != null) hash ^= Job.GetHashCode();
       if (weapon_ != null) hash ^= Weapon.GetHashCode();
       hash ^= abilityCards_.GetHashCode();
       if (_unknownFields != null) {
@@ -1627,9 +2730,9 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(8);
         output.WriteInt32(DeckIndex);
       }
-      if (jobCard_ != null) {
+      if (job_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(JobCard);
+        output.WriteMessage(Job);
       }
       if (weapon_ != null) {
         output.WriteRawTag(26);
@@ -1649,9 +2752,9 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(8);
         output.WriteInt32(DeckIndex);
       }
-      if (jobCard_ != null) {
+      if (job_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(JobCard);
+        output.WriteMessage(Job);
       }
       if (weapon_ != null) {
         output.WriteRawTag(26);
@@ -1670,8 +2773,8 @@ namespace Mobius.Proto.Identity {
       if (DeckIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeckIndex);
       }
-      if (jobCard_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JobCard);
+      if (job_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Job);
       }
       if (weapon_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
@@ -1691,15 +2794,15 @@ namespace Mobius.Proto.Identity {
       if (other.DeckIndex != 0) {
         DeckIndex = other.DeckIndex;
       }
-      if (other.jobCard_ != null) {
-        if (jobCard_ == null) {
-          JobCard = new global::Mobius.Proto.Identity.ProtoJobCard();
+      if (other.job_ != null) {
+        if (job_ == null) {
+          Job = new global::Mobius.Proto.Identity.ProtoPlayerJobLoadout();
         }
-        JobCard.MergeFrom(other.JobCard);
+        Job.MergeFrom(other.Job);
       }
       if (other.weapon_ != null) {
         if (weapon_ == null) {
-          Weapon = new global::Mobius.Proto.Identity.ProtoWeapon();
+          Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout();
         }
         Weapon.MergeFrom(other.Weapon);
       }
@@ -1723,20 +2826,20 @@ namespace Mobius.Proto.Identity {
             break;
           }
           case 18: {
-            if (jobCard_ == null) {
-              JobCard = new global::Mobius.Proto.Identity.ProtoJobCard();
+            if (job_ == null) {
+              Job = new global::Mobius.Proto.Identity.ProtoPlayerJobLoadout();
             }
-            input.ReadMessage(JobCard);
+            input.ReadMessage(Job);
             break;
           }
           case 26: {
             if (weapon_ == null) {
-              Weapon = new global::Mobius.Proto.Identity.ProtoWeapon();
+              Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout();
             }
             input.ReadMessage(Weapon);
             break;
           }
-          case 42: {
+          case 34: {
             abilityCards_.AddEntriesFrom(input, _repeated_abilityCards_codec);
             break;
           }
@@ -1759,20 +2862,20 @@ namespace Mobius.Proto.Identity {
             break;
           }
           case 18: {
-            if (jobCard_ == null) {
-              JobCard = new global::Mobius.Proto.Identity.ProtoJobCard();
+            if (job_ == null) {
+              Job = new global::Mobius.Proto.Identity.ProtoPlayerJobLoadout();
             }
-            input.ReadMessage(JobCard);
+            input.ReadMessage(Job);
             break;
           }
           case 26: {
             if (weapon_ == null) {
-              Weapon = new global::Mobius.Proto.Identity.ProtoWeapon();
+              Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout();
             }
             input.ReadMessage(Weapon);
             break;
           }
-          case 42: {
+          case 34: {
             abilityCards_.AddEntriesFrom(ref input, _repeated_abilityCards_codec);
             break;
           }
@@ -1783,19 +2886,19 @@ namespace Mobius.Proto.Identity {
 
   }
 
-  public sealed partial class ProtoJobCard : pb::IMessage<ProtoJobCard>
+  public sealed partial class ProtoPlayerJobLoadout : pb::IMessage<ProtoPlayerJobLoadout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ProtoJobCard> _parser = new pb::MessageParser<ProtoJobCard>(() => new ProtoJobCard());
+    private static readonly pb::MessageParser<ProtoPlayerJobLoadout> _parser = new pb::MessageParser<ProtoPlayerJobLoadout>(() => new ProtoPlayerJobLoadout());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoJobCard> Parser { get { return _parser; } }
+    public static pb::MessageParser<ProtoPlayerJobLoadout> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1804,222 +2907,69 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoJobCard() {
+    public ProtoPlayerJobLoadout() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoJobCard(ProtoJobCard other) : this() {
-      baseJobId_ = other.baseJobId_;
-      subJobIndex_ = other.subJobIndex_;
-      hpStatMod_ = other.hpStatMod_;
-      attackStatMod_ = other.attackStatMod_;
-      breakStatMod_ = other.breakStatMod_;
-      magicStatMod_ = other.magicStatMod_;
-      speedStatMod_ = other.speedStatMod_;
-      defenseStatMod_ = other.defenseStatMod_;
-      critChanceStatMod_ = other.critChanceStatMod_;
-      ultimateBoost_ = other.ultimateBoost_;
-      overBoostLevel_ = other.overBoostLevel_;
-      autoAbilities_ = other.autoAbilities_.Clone();
-      crownLevel_ = other.crownLevel_;
+    public ProtoPlayerJobLoadout(ProtoPlayerJobLoadout other) : this() {
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
+      stat_ = other.stat_ != null ? other.stat_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoJobCard Clone() {
-      return new ProtoJobCard(this);
+    public ProtoPlayerJobLoadout Clone() {
+      return new ProtoPlayerJobLoadout(this);
     }
 
-    /// <summary>Field number for the "base_job_id" field.</summary>
-    public const int BaseJobIdFieldNumber = 1;
-    private string baseJobId_ = "";
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 1;
+    private global::Mobius.Proto.Identity.ProtoPlayerJobIdentity identity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BaseJobId {
-      get { return baseJobId_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerJobIdentity Identity {
+      get { return identity_; }
       set {
-        baseJobId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        identity_ = value;
       }
     }
 
-    /// <summary>Field number for the "sub_job_index" field.</summary>
-    public const int SubJobIndexFieldNumber = 2;
-    private int subJobIndex_;
+    /// <summary>Field number for the "stat" field.</summary>
+    public const int StatFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoPlayerJobStat stat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SubJobIndex {
-      get { return subJobIndex_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerJobStat Stat {
+      get { return stat_; }
       set {
-        subJobIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hp_stat_mod" field.</summary>
-    public const int HpStatModFieldNumber = 3;
-    private int hpStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int HpStatMod {
-      get { return hpStatMod_; }
-      set {
-        hpStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "attack_stat_mod" field.</summary>
-    public const int AttackStatModFieldNumber = 4;
-    private int attackStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AttackStatMod {
-      get { return attackStatMod_; }
-      set {
-        attackStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "break_stat_mod" field.</summary>
-    public const int BreakStatModFieldNumber = 5;
-    private int breakStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int BreakStatMod {
-      get { return breakStatMod_; }
-      set {
-        breakStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "magic_stat_mod" field.</summary>
-    public const int MagicStatModFieldNumber = 6;
-    private int magicStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MagicStatMod {
-      get { return magicStatMod_; }
-      set {
-        magicStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "speed_stat_mod" field.</summary>
-    public const int SpeedStatModFieldNumber = 7;
-    private int speedStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SpeedStatMod {
-      get { return speedStatMod_; }
-      set {
-        speedStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "defense_stat_mod" field.</summary>
-    public const int DefenseStatModFieldNumber = 8;
-    private int defenseStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int DefenseStatMod {
-      get { return defenseStatMod_; }
-      set {
-        defenseStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "crit_chance_stat_mod" field.</summary>
-    public const int CritChanceStatModFieldNumber = 9;
-    private int critChanceStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CritChanceStatMod {
-      get { return critChanceStatMod_; }
-      set {
-        critChanceStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ultimate_boost" field.</summary>
-    public const int UltimateBoostFieldNumber = 10;
-    private int ultimateBoost_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UltimateBoost {
-      get { return ultimateBoost_; }
-      set {
-        ultimateBoost_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "over_boost_level" field.</summary>
-    public const int OverBoostLevelFieldNumber = 11;
-    private int overBoostLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int OverBoostLevel {
-      get { return overBoostLevel_; }
-      set {
-        overBoostLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "auto_abilities" field.</summary>
-    public const int AutoAbilitiesFieldNumber = 12;
-    private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 98);
-    private readonly pbc::MapField<string, int> autoAbilities_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, int> AutoAbilities {
-      get { return autoAbilities_; }
-    }
-
-    /// <summary>Field number for the "crown_level" field.</summary>
-    public const int CrownLevelFieldNumber = 13;
-    private int crownLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CrownLevel {
-      get { return crownLevel_; }
-      set {
-        crownLevel_ = value;
+        stat_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoJobCard);
+      return Equals(other as ProtoPlayerJobLoadout);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoJobCard other) {
+    public bool Equals(ProtoPlayerJobLoadout other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BaseJobId != other.BaseJobId) return false;
-      if (SubJobIndex != other.SubJobIndex) return false;
-      if (HpStatMod != other.HpStatMod) return false;
-      if (AttackStatMod != other.AttackStatMod) return false;
-      if (BreakStatMod != other.BreakStatMod) return false;
-      if (MagicStatMod != other.MagicStatMod) return false;
-      if (SpeedStatMod != other.SpeedStatMod) return false;
-      if (DefenseStatMod != other.DefenseStatMod) return false;
-      if (CritChanceStatMod != other.CritChanceStatMod) return false;
-      if (UltimateBoost != other.UltimateBoost) return false;
-      if (OverBoostLevel != other.OverBoostLevel) return false;
-      if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
-      if (CrownLevel != other.CrownLevel) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
+      if (!object.Equals(Stat, other.Stat)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (BaseJobId.Length != 0) hash ^= BaseJobId.GetHashCode();
-      if (SubJobIndex != 0) hash ^= SubJobIndex.GetHashCode();
-      if (HpStatMod != 0) hash ^= HpStatMod.GetHashCode();
-      if (AttackStatMod != 0) hash ^= AttackStatMod.GetHashCode();
-      if (BreakStatMod != 0) hash ^= BreakStatMod.GetHashCode();
-      if (MagicStatMod != 0) hash ^= MagicStatMod.GetHashCode();
-      if (SpeedStatMod != 0) hash ^= SpeedStatMod.GetHashCode();
-      if (DefenseStatMod != 0) hash ^= DefenseStatMod.GetHashCode();
-      if (CritChanceStatMod != 0) hash ^= CritChanceStatMod.GetHashCode();
-      if (UltimateBoost != 0) hash ^= UltimateBoost.GetHashCode();
-      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
-      hash ^= AutoAbilities.GetHashCode();
-      if (CrownLevel != 0) hash ^= CrownLevel.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
+      if (stat_ != null) hash ^= Stat.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2036,54 +2986,13 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BaseJobId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(BaseJobId);
+        output.WriteMessage(Identity);
       }
-      if (SubJobIndex != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubJobIndex);
-      }
-      if (HpStatMod != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(HpStatMod);
-      }
-      if (AttackStatMod != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(AttackStatMod);
-      }
-      if (BreakStatMod != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(BreakStatMod);
-      }
-      if (MagicStatMod != 0) {
-        output.WriteRawTag(48);
-        output.WriteInt32(MagicStatMod);
-      }
-      if (SpeedStatMod != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(SpeedStatMod);
-      }
-      if (DefenseStatMod != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(DefenseStatMod);
-      }
-      if (CritChanceStatMod != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(CritChanceStatMod);
-      }
-      if (UltimateBoost != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(UltimateBoost);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(OverBoostLevel);
-      }
-      autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
-      if (CrownLevel != 0) {
-        output.WriteRawTag(104);
-        output.WriteInt32(CrownLevel);
+      if (stat_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stat);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2094,54 +3003,13 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BaseJobId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(BaseJobId);
+        output.WriteMessage(Identity);
       }
-      if (SubJobIndex != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubJobIndex);
-      }
-      if (HpStatMod != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(HpStatMod);
-      }
-      if (AttackStatMod != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(AttackStatMod);
-      }
-      if (BreakStatMod != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(BreakStatMod);
-      }
-      if (MagicStatMod != 0) {
-        output.WriteRawTag(48);
-        output.WriteInt32(MagicStatMod);
-      }
-      if (SpeedStatMod != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(SpeedStatMod);
-      }
-      if (DefenseStatMod != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(DefenseStatMod);
-      }
-      if (CritChanceStatMod != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(CritChanceStatMod);
-      }
-      if (UltimateBoost != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(UltimateBoost);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(OverBoostLevel);
-      }
-      autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
-      if (CrownLevel != 0) {
-        output.WriteRawTag(104);
-        output.WriteInt32(CrownLevel);
+      if (stat_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stat);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2152,42 +3020,11 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (BaseJobId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BaseJobId);
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
-      if (SubJobIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubJobIndex);
-      }
-      if (HpStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(HpStatMod);
-      }
-      if (AttackStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AttackStatMod);
-      }
-      if (BreakStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BreakStatMod);
-      }
-      if (MagicStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MagicStatMod);
-      }
-      if (SpeedStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SpeedStatMod);
-      }
-      if (DefenseStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefenseStatMod);
-      }
-      if (CritChanceStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CritChanceStatMod);
-      }
-      if (UltimateBoost != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UltimateBoost);
-      }
-      if (OverBoostLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
-      }
-      size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
-      if (CrownLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CrownLevel);
+      if (stat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stat);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2196,46 +3033,21 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoJobCard other) {
+    public void MergeFrom(ProtoPlayerJobLoadout other) {
       if (other == null) {
         return;
       }
-      if (other.BaseJobId.Length != 0) {
-        BaseJobId = other.BaseJobId;
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Mobius.Proto.Identity.ProtoPlayerJobIdentity();
+        }
+        Identity.MergeFrom(other.Identity);
       }
-      if (other.SubJobIndex != 0) {
-        SubJobIndex = other.SubJobIndex;
-      }
-      if (other.HpStatMod != 0) {
-        HpStatMod = other.HpStatMod;
-      }
-      if (other.AttackStatMod != 0) {
-        AttackStatMod = other.AttackStatMod;
-      }
-      if (other.BreakStatMod != 0) {
-        BreakStatMod = other.BreakStatMod;
-      }
-      if (other.MagicStatMod != 0) {
-        MagicStatMod = other.MagicStatMod;
-      }
-      if (other.SpeedStatMod != 0) {
-        SpeedStatMod = other.SpeedStatMod;
-      }
-      if (other.DefenseStatMod != 0) {
-        DefenseStatMod = other.DefenseStatMod;
-      }
-      if (other.CritChanceStatMod != 0) {
-        CritChanceStatMod = other.CritChanceStatMod;
-      }
-      if (other.UltimateBoost != 0) {
-        UltimateBoost = other.UltimateBoost;
-      }
-      if (other.OverBoostLevel != 0) {
-        OverBoostLevel = other.OverBoostLevel;
-      }
-      autoAbilities_.Add(other.autoAbilities_);
-      if (other.CrownLevel != 0) {
-        CrownLevel = other.CrownLevel;
+      if (other.stat_ != null) {
+        if (stat_ == null) {
+          Stat = new global::Mobius.Proto.Identity.ProtoPlayerJobStat();
+        }
+        Stat.MergeFrom(other.Stat);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2252,55 +3064,17 @@ namespace Mobius.Proto.Identity {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            BaseJobId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerJobIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
-          case 16: {
-            SubJobIndex = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            HpStatMod = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            AttackStatMod = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            BreakStatMod = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            MagicStatMod = input.ReadInt32();
-            break;
-          }
-          case 56: {
-            SpeedStatMod = input.ReadInt32();
-            break;
-          }
-          case 64: {
-            DefenseStatMod = input.ReadInt32();
-            break;
-          }
-          case 72: {
-            CritChanceStatMod = input.ReadInt32();
-            break;
-          }
-          case 80: {
-            UltimateBoost = input.ReadInt32();
-            break;
-          }
-          case 88: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 98: {
-            autoAbilities_.AddEntriesFrom(input, _map_autoAbilities_codec);
-            break;
-          }
-          case 104: {
-            CrownLevel = input.ReadInt32();
+          case 18: {
+            if (stat_ == null) {
+              Stat = new global::Mobius.Proto.Identity.ProtoPlayerJobStat();
+            }
+            input.ReadMessage(Stat);
             break;
           }
         }
@@ -2318,55 +3092,17 @@ namespace Mobius.Proto.Identity {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            BaseJobId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerJobIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
-          case 16: {
-            SubJobIndex = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            HpStatMod = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            AttackStatMod = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            BreakStatMod = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            MagicStatMod = input.ReadInt32();
-            break;
-          }
-          case 56: {
-            SpeedStatMod = input.ReadInt32();
-            break;
-          }
-          case 64: {
-            DefenseStatMod = input.ReadInt32();
-            break;
-          }
-          case 72: {
-            CritChanceStatMod = input.ReadInt32();
-            break;
-          }
-          case 80: {
-            UltimateBoost = input.ReadInt32();
-            break;
-          }
-          case 88: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 98: {
-            autoAbilities_.AddEntriesFrom(ref input, _map_autoAbilities_codec);
-            break;
-          }
-          case 104: {
-            CrownLevel = input.ReadInt32();
+          case 18: {
+            if (stat_ == null) {
+              Stat = new global::Mobius.Proto.Identity.ProtoPlayerJobStat();
+            }
+            input.ReadMessage(Stat);
             break;
           }
         }
@@ -2376,19 +3112,19 @@ namespace Mobius.Proto.Identity {
 
   }
 
-  public sealed partial class ProtoWeapon : pb::IMessage<ProtoWeapon>
+  public sealed partial class ProtoPlayerWeaponLoadout : pb::IMessage<ProtoPlayerWeaponLoadout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ProtoWeapon> _parser = new pb::MessageParser<ProtoWeapon>(() => new ProtoWeapon());
+    private static readonly pb::MessageParser<ProtoPlayerWeaponLoadout> _parser = new pb::MessageParser<ProtoPlayerWeaponLoadout>(() => new ProtoPlayerWeaponLoadout());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoWeapon> Parser { get { return _parser; } }
+    public static pb::MessageParser<ProtoPlayerWeaponLoadout> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2397,194 +3133,69 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoWeapon() {
+    public ProtoPlayerWeaponLoadout() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoWeapon(ProtoWeapon other) : this() {
-      baseWeaponId_ = other.baseWeaponId_;
-      subWeaponUnlock_ = other.subWeaponUnlock_;
-      hpStatMod_ = other.hpStatMod_;
-      attackStatMod_ = other.attackStatMod_;
-      breakStatMod_ = other.breakStatMod_;
-      magicStatMod_ = other.magicStatMod_;
-      speedStatMod_ = other.speedStatMod_;
-      defenseStatMod_ = other.defenseStatMod_;
-      critChanceStatMod_ = other.critChanceStatMod_;
-      ultimateBoost_ = other.ultimateBoost_;
-      autoAbilities_ = other.autoAbilities_.Clone();
+    public ProtoPlayerWeaponLoadout(ProtoPlayerWeaponLoadout other) : this() {
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
+      stat_ = other.stat_ != null ? other.stat_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoWeapon Clone() {
-      return new ProtoWeapon(this);
+    public ProtoPlayerWeaponLoadout Clone() {
+      return new ProtoPlayerWeaponLoadout(this);
     }
 
-    /// <summary>Field number for the "base_weapon_id" field.</summary>
-    public const int BaseWeaponIdFieldNumber = 1;
-    private string baseWeaponId_ = "";
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 1;
+    private global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity identity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BaseWeaponId {
-      get { return baseWeaponId_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity Identity {
+      get { return identity_; }
       set {
-        baseWeaponId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        identity_ = value;
       }
     }
 
-    /// <summary>Field number for the "sub_weapon_unlock" field.</summary>
-    public const int SubWeaponUnlockFieldNumber = 2;
-    private int subWeaponUnlock_;
+    /// <summary>Field number for the "stat" field.</summary>
+    public const int StatFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoPlayerWeaponStat stat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SubWeaponUnlock {
-      get { return subWeaponUnlock_; }
+    public global::Mobius.Proto.Identity.ProtoPlayerWeaponStat Stat {
+      get { return stat_; }
       set {
-        subWeaponUnlock_ = value;
+        stat_ = value;
       }
-    }
-
-    /// <summary>Field number for the "hp_stat_mod" field.</summary>
-    public const int HpStatModFieldNumber = 3;
-    private int hpStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int HpStatMod {
-      get { return hpStatMod_; }
-      set {
-        hpStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "attack_stat_mod" field.</summary>
-    public const int AttackStatModFieldNumber = 4;
-    private int attackStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AttackStatMod {
-      get { return attackStatMod_; }
-      set {
-        attackStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "break_stat_mod" field.</summary>
-    public const int BreakStatModFieldNumber = 5;
-    private int breakStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int BreakStatMod {
-      get { return breakStatMod_; }
-      set {
-        breakStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "magic_stat_mod" field.</summary>
-    public const int MagicStatModFieldNumber = 6;
-    private int magicStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MagicStatMod {
-      get { return magicStatMod_; }
-      set {
-        magicStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "speed_stat_mod" field.</summary>
-    public const int SpeedStatModFieldNumber = 7;
-    private int speedStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SpeedStatMod {
-      get { return speedStatMod_; }
-      set {
-        speedStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "defense_stat_mod" field.</summary>
-    public const int DefenseStatModFieldNumber = 8;
-    private int defenseStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int DefenseStatMod {
-      get { return defenseStatMod_; }
-      set {
-        defenseStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "crit_chance_stat_mod" field.</summary>
-    public const int CritChanceStatModFieldNumber = 9;
-    private int critChanceStatMod_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CritChanceStatMod {
-      get { return critChanceStatMod_; }
-      set {
-        critChanceStatMod_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ultimate_boost" field.</summary>
-    public const int UltimateBoostFieldNumber = 10;
-    private int ultimateBoost_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UltimateBoost {
-      get { return ultimateBoost_; }
-      set {
-        ultimateBoost_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "auto_abilities" field.</summary>
-    public const int AutoAbilitiesFieldNumber = 11;
-    private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 90);
-    private readonly pbc::MapField<string, int> autoAbilities_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, int> AutoAbilities {
-      get { return autoAbilities_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoWeapon);
+      return Equals(other as ProtoPlayerWeaponLoadout);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoWeapon other) {
+    public bool Equals(ProtoPlayerWeaponLoadout other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BaseWeaponId != other.BaseWeaponId) return false;
-      if (SubWeaponUnlock != other.SubWeaponUnlock) return false;
-      if (HpStatMod != other.HpStatMod) return false;
-      if (AttackStatMod != other.AttackStatMod) return false;
-      if (BreakStatMod != other.BreakStatMod) return false;
-      if (MagicStatMod != other.MagicStatMod) return false;
-      if (SpeedStatMod != other.SpeedStatMod) return false;
-      if (DefenseStatMod != other.DefenseStatMod) return false;
-      if (CritChanceStatMod != other.CritChanceStatMod) return false;
-      if (UltimateBoost != other.UltimateBoost) return false;
-      if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
+      if (!object.Equals(Stat, other.Stat)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (BaseWeaponId.Length != 0) hash ^= BaseWeaponId.GetHashCode();
-      if (SubWeaponUnlock != 0) hash ^= SubWeaponUnlock.GetHashCode();
-      if (HpStatMod != 0) hash ^= HpStatMod.GetHashCode();
-      if (AttackStatMod != 0) hash ^= AttackStatMod.GetHashCode();
-      if (BreakStatMod != 0) hash ^= BreakStatMod.GetHashCode();
-      if (MagicStatMod != 0) hash ^= MagicStatMod.GetHashCode();
-      if (SpeedStatMod != 0) hash ^= SpeedStatMod.GetHashCode();
-      if (DefenseStatMod != 0) hash ^= DefenseStatMod.GetHashCode();
-      if (CritChanceStatMod != 0) hash ^= CritChanceStatMod.GetHashCode();
-      if (UltimateBoost != 0) hash ^= UltimateBoost.GetHashCode();
-      hash ^= AutoAbilities.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
+      if (stat_ != null) hash ^= Stat.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2601,47 +3212,14 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BaseWeaponId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(BaseWeaponId);
+        output.WriteMessage(Identity);
       }
-      if (SubWeaponUnlock != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubWeaponUnlock);
+      if (stat_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stat);
       }
-      if (HpStatMod != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(HpStatMod);
-      }
-      if (AttackStatMod != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(AttackStatMod);
-      }
-      if (BreakStatMod != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(BreakStatMod);
-      }
-      if (MagicStatMod != 0) {
-        output.WriteRawTag(48);
-        output.WriteInt32(MagicStatMod);
-      }
-      if (SpeedStatMod != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(SpeedStatMod);
-      }
-      if (DefenseStatMod != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(DefenseStatMod);
-      }
-      if (CritChanceStatMod != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(CritChanceStatMod);
-      }
-      if (UltimateBoost != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(UltimateBoost);
-      }
-      autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2651,47 +3229,14 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BaseWeaponId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(BaseWeaponId);
+        output.WriteMessage(Identity);
       }
-      if (SubWeaponUnlock != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(SubWeaponUnlock);
+      if (stat_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stat);
       }
-      if (HpStatMod != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(HpStatMod);
-      }
-      if (AttackStatMod != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(AttackStatMod);
-      }
-      if (BreakStatMod != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(BreakStatMod);
-      }
-      if (MagicStatMod != 0) {
-        output.WriteRawTag(48);
-        output.WriteInt32(MagicStatMod);
-      }
-      if (SpeedStatMod != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(SpeedStatMod);
-      }
-      if (DefenseStatMod != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(DefenseStatMod);
-      }
-      if (CritChanceStatMod != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(CritChanceStatMod);
-      }
-      if (UltimateBoost != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(UltimateBoost);
-      }
-      autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2701,37 +3246,12 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (BaseWeaponId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BaseWeaponId);
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
-      if (SubWeaponUnlock != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubWeaponUnlock);
+      if (stat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stat);
       }
-      if (HpStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(HpStatMod);
-      }
-      if (AttackStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AttackStatMod);
-      }
-      if (BreakStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BreakStatMod);
-      }
-      if (MagicStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MagicStatMod);
-      }
-      if (SpeedStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SpeedStatMod);
-      }
-      if (DefenseStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefenseStatMod);
-      }
-      if (CritChanceStatMod != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CritChanceStatMod);
-      }
-      if (UltimateBoost != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UltimateBoost);
-      }
-      size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2739,41 +3259,22 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoWeapon other) {
+    public void MergeFrom(ProtoPlayerWeaponLoadout other) {
       if (other == null) {
         return;
       }
-      if (other.BaseWeaponId.Length != 0) {
-        BaseWeaponId = other.BaseWeaponId;
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity();
+        }
+        Identity.MergeFrom(other.Identity);
       }
-      if (other.SubWeaponUnlock != 0) {
-        SubWeaponUnlock = other.SubWeaponUnlock;
+      if (other.stat_ != null) {
+        if (stat_ == null) {
+          Stat = new global::Mobius.Proto.Identity.ProtoPlayerWeaponStat();
+        }
+        Stat.MergeFrom(other.Stat);
       }
-      if (other.HpStatMod != 0) {
-        HpStatMod = other.HpStatMod;
-      }
-      if (other.AttackStatMod != 0) {
-        AttackStatMod = other.AttackStatMod;
-      }
-      if (other.BreakStatMod != 0) {
-        BreakStatMod = other.BreakStatMod;
-      }
-      if (other.MagicStatMod != 0) {
-        MagicStatMod = other.MagicStatMod;
-      }
-      if (other.SpeedStatMod != 0) {
-        SpeedStatMod = other.SpeedStatMod;
-      }
-      if (other.DefenseStatMod != 0) {
-        DefenseStatMod = other.DefenseStatMod;
-      }
-      if (other.CritChanceStatMod != 0) {
-        CritChanceStatMod = other.CritChanceStatMod;
-      }
-      if (other.UltimateBoost != 0) {
-        UltimateBoost = other.UltimateBoost;
-      }
-      autoAbilities_.Add(other.autoAbilities_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2789,47 +3290,17 @@ namespace Mobius.Proto.Identity {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            BaseWeaponId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
-          case 16: {
-            SubWeaponUnlock = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            HpStatMod = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            AttackStatMod = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            BreakStatMod = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            MagicStatMod = input.ReadInt32();
-            break;
-          }
-          case 56: {
-            SpeedStatMod = input.ReadInt32();
-            break;
-          }
-          case 64: {
-            DefenseStatMod = input.ReadInt32();
-            break;
-          }
-          case 72: {
-            CritChanceStatMod = input.ReadInt32();
-            break;
-          }
-          case 80: {
-            UltimateBoost = input.ReadInt32();
-            break;
-          }
-          case 90: {
-            autoAbilities_.AddEntriesFrom(input, _map_autoAbilities_codec);
+          case 18: {
+            if (stat_ == null) {
+              Stat = new global::Mobius.Proto.Identity.ProtoPlayerWeaponStat();
+            }
+            input.ReadMessage(Stat);
             break;
           }
         }
@@ -2847,47 +3318,17 @@ namespace Mobius.Proto.Identity {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            BaseWeaponId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
-          case 16: {
-            SubWeaponUnlock = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            HpStatMod = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            AttackStatMod = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            BreakStatMod = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            MagicStatMod = input.ReadInt32();
-            break;
-          }
-          case 56: {
-            SpeedStatMod = input.ReadInt32();
-            break;
-          }
-          case 64: {
-            DefenseStatMod = input.ReadInt32();
-            break;
-          }
-          case 72: {
-            CritChanceStatMod = input.ReadInt32();
-            break;
-          }
-          case 80: {
-            UltimateBoost = input.ReadInt32();
-            break;
-          }
-          case 90: {
-            autoAbilities_.AddEntriesFrom(ref input, _map_autoAbilities_codec);
+          case 18: {
+            if (stat_ == null) {
+              Stat = new global::Mobius.Proto.Identity.ProtoPlayerWeaponStat();
+            }
+            input.ReadMessage(Stat);
             break;
           }
         }
@@ -2897,19 +3338,19 @@ namespace Mobius.Proto.Identity {
 
   }
 
-  public sealed partial class ProtoAbilityCard : pb::IMessage<ProtoAbilityCard>
+  public sealed partial class ProtoPlayerAbilityCardLoadout : pb::IMessage<ProtoPlayerAbilityCardLoadout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ProtoAbilityCard> _parser = new pb::MessageParser<ProtoAbilityCard>(() => new ProtoAbilityCard());
+    private static readonly pb::MessageParser<ProtoPlayerAbilityCardLoadout> _parser = new pb::MessageParser<ProtoPlayerAbilityCardLoadout>(() => new ProtoPlayerAbilityCardLoadout());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoAbilityCard> Parser { get { return _parser; } }
+    public static pb::MessageParser<ProtoPlayerAbilityCardLoadout> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Mobius.Proto.Identity.PlayerReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2918,138 +3359,69 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoAbilityCard() {
+    public ProtoPlayerAbilityCardLoadout() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoAbilityCard(ProtoAbilityCard other) : this() {
-      abilityCardId_ = other.abilityCardId_;
-      abilityCardLevel_ = other.abilityCardLevel_;
-      abilityLevel_ = other.abilityLevel_;
-      extraSkillUnlock_ = other.extraSkillUnlock_;
-      overBoostLevel_ = other.overBoostLevel_;
-      autoAbilities_ = other.autoAbilities_.Clone();
-      slotIndex_ = other.slotIndex_;
+    public ProtoPlayerAbilityCardLoadout(ProtoPlayerAbilityCardLoadout other) : this() {
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
+      stat_ = other.stat_ != null ? other.stat_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoAbilityCard Clone() {
-      return new ProtoAbilityCard(this);
+    public ProtoPlayerAbilityCardLoadout Clone() {
+      return new ProtoPlayerAbilityCardLoadout(this);
     }
 
-    /// <summary>Field number for the "ability_card_id" field.</summary>
-    public const int AbilityCardIdFieldNumber = 1;
-    private string abilityCardId_ = "";
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 1;
+    private global::Mobius.Proto.Identity.ProtoAbilityCardIdentity identity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string AbilityCardId {
-      get { return abilityCardId_; }
+    public global::Mobius.Proto.Identity.ProtoAbilityCardIdentity Identity {
+      get { return identity_; }
       set {
-        abilityCardId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        identity_ = value;
       }
     }
 
-    /// <summary>Field number for the "ability_card_level" field.</summary>
-    public const int AbilityCardLevelFieldNumber = 2;
-    private int abilityCardLevel_;
+    /// <summary>Field number for the "stat" field.</summary>
+    public const int StatFieldNumber = 2;
+    private global::Mobius.Proto.Identity.ProtoAbilityCardStat stat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AbilityCardLevel {
-      get { return abilityCardLevel_; }
+    public global::Mobius.Proto.Identity.ProtoAbilityCardStat Stat {
+      get { return stat_; }
       set {
-        abilityCardLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ability_level" field.</summary>
-    public const int AbilityLevelFieldNumber = 3;
-    private int abilityLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AbilityLevel {
-      get { return abilityLevel_; }
-      set {
-        abilityLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "extra_skill_unlock" field.</summary>
-    public const int ExtraSkillUnlockFieldNumber = 4;
-    private int extraSkillUnlock_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int ExtraSkillUnlock {
-      get { return extraSkillUnlock_; }
-      set {
-        extraSkillUnlock_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "over_boost_level" field.</summary>
-    public const int OverBoostLevelFieldNumber = 5;
-    private int overBoostLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int OverBoostLevel {
-      get { return overBoostLevel_; }
-      set {
-        overBoostLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "auto_abilities" field.</summary>
-    public const int AutoAbilitiesFieldNumber = 6;
-    private static readonly pbc::MapField<string, int>.Codec _map_autoAbilities_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 50);
-    private readonly pbc::MapField<string, int> autoAbilities_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, int> AutoAbilities {
-      get { return autoAbilities_; }
-    }
-
-    /// <summary>Field number for the "slot_index" field.</summary>
-    public const int SlotIndexFieldNumber = 20;
-    private int slotIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SlotIndex {
-      get { return slotIndex_; }
-      set {
-        slotIndex_ = value;
+        stat_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoAbilityCard);
+      return Equals(other as ProtoPlayerAbilityCardLoadout);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoAbilityCard other) {
+    public bool Equals(ProtoPlayerAbilityCardLoadout other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AbilityCardId != other.AbilityCardId) return false;
-      if (AbilityCardLevel != other.AbilityCardLevel) return false;
-      if (AbilityLevel != other.AbilityLevel) return false;
-      if (ExtraSkillUnlock != other.ExtraSkillUnlock) return false;
-      if (OverBoostLevel != other.OverBoostLevel) return false;
-      if (!AutoAbilities.Equals(other.AutoAbilities)) return false;
-      if (SlotIndex != other.SlotIndex) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
+      if (!object.Equals(Stat, other.Stat)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (AbilityCardId.Length != 0) hash ^= AbilityCardId.GetHashCode();
-      if (AbilityCardLevel != 0) hash ^= AbilityCardLevel.GetHashCode();
-      if (AbilityLevel != 0) hash ^= AbilityLevel.GetHashCode();
-      if (ExtraSkillUnlock != 0) hash ^= ExtraSkillUnlock.GetHashCode();
-      if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
-      hash ^= AutoAbilities.GetHashCode();
-      if (SlotIndex != 0) hash ^= SlotIndex.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
+      if (stat_ != null) hash ^= Stat.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3066,30 +3438,13 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AbilityCardId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(AbilityCardId);
+        output.WriteMessage(Identity);
       }
-      if (AbilityCardLevel != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(AbilityCardLevel);
-      }
-      if (AbilityLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(AbilityLevel);
-      }
-      if (ExtraSkillUnlock != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(ExtraSkillUnlock);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(OverBoostLevel);
-      }
-      autoAbilities_.WriteTo(output, _map_autoAbilities_codec);
-      if (SlotIndex != 0) {
-        output.WriteRawTag(160, 1);
-        output.WriteInt32(SlotIndex);
+      if (stat_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stat);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3100,30 +3455,13 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AbilityCardId.Length != 0) {
+      if (identity_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(AbilityCardId);
+        output.WriteMessage(Identity);
       }
-      if (AbilityCardLevel != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(AbilityCardLevel);
-      }
-      if (AbilityLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(AbilityLevel);
-      }
-      if (ExtraSkillUnlock != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(ExtraSkillUnlock);
-      }
-      if (OverBoostLevel != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(OverBoostLevel);
-      }
-      autoAbilities_.WriteTo(ref output, _map_autoAbilities_codec);
-      if (SlotIndex != 0) {
-        output.WriteRawTag(160, 1);
-        output.WriteInt32(SlotIndex);
+      if (stat_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stat);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3134,24 +3472,11 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (AbilityCardId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AbilityCardId);
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
-      if (AbilityCardLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AbilityCardLevel);
-      }
-      if (AbilityLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AbilityLevel);
-      }
-      if (ExtraSkillUnlock != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ExtraSkillUnlock);
-      }
-      if (OverBoostLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OverBoostLevel);
-      }
-      size += autoAbilities_.CalculateSize(_map_autoAbilities_codec);
-      if (SlotIndex != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(SlotIndex);
+      if (stat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stat);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3160,28 +3485,21 @@ namespace Mobius.Proto.Identity {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoAbilityCard other) {
+    public void MergeFrom(ProtoPlayerAbilityCardLoadout other) {
       if (other == null) {
         return;
       }
-      if (other.AbilityCardId.Length != 0) {
-        AbilityCardId = other.AbilityCardId;
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
+        }
+        Identity.MergeFrom(other.Identity);
       }
-      if (other.AbilityCardLevel != 0) {
-        AbilityCardLevel = other.AbilityCardLevel;
-      }
-      if (other.AbilityLevel != 0) {
-        AbilityLevel = other.AbilityLevel;
-      }
-      if (other.ExtraSkillUnlock != 0) {
-        ExtraSkillUnlock = other.ExtraSkillUnlock;
-      }
-      if (other.OverBoostLevel != 0) {
-        OverBoostLevel = other.OverBoostLevel;
-      }
-      autoAbilities_.Add(other.autoAbilities_);
-      if (other.SlotIndex != 0) {
-        SlotIndex = other.SlotIndex;
+      if (other.stat_ != null) {
+        if (stat_ == null) {
+          Stat = new global::Mobius.Proto.Identity.ProtoAbilityCardStat();
+        }
+        Stat.MergeFrom(other.Stat);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3198,31 +3516,17 @@ namespace Mobius.Proto.Identity {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            AbilityCardId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
-          case 16: {
-            AbilityCardLevel = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            AbilityLevel = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            ExtraSkillUnlock = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            autoAbilities_.AddEntriesFrom(input, _map_autoAbilities_codec);
-            break;
-          }
-          case 160: {
-            SlotIndex = input.ReadInt32();
+          case 18: {
+            if (stat_ == null) {
+              Stat = new global::Mobius.Proto.Identity.ProtoAbilityCardStat();
+            }
+            input.ReadMessage(Stat);
             break;
           }
         }
@@ -3240,31 +3544,17 @@ namespace Mobius.Proto.Identity {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            AbilityCardId = input.ReadString();
+            if (identity_ == null) {
+              Identity = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
-          case 16: {
-            AbilityCardLevel = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            AbilityLevel = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            ExtraSkillUnlock = input.ReadInt32();
-            break;
-          }
-          case 40: {
-            OverBoostLevel = input.ReadInt32();
-            break;
-          }
-          case 50: {
-            autoAbilities_.AddEntriesFrom(ref input, _map_autoAbilities_codec);
-            break;
-          }
-          case 160: {
-            SlotIndex = input.ReadInt32();
+          case 18: {
+            if (stat_ == null) {
+              Stat = new global::Mobius.Proto.Identity.ProtoAbilityCardStat();
+            }
+            input.ReadMessage(Stat);
             break;
           }
         }

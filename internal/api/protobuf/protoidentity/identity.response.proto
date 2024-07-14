@@ -27,5 +27,5 @@ message GetMultiPlayerLoadoutResponse {
 }
 
 message GetRentalCardResponse {
-  identity.ProtoPlayerCardIdentity rental_card = 1;
+  identity.ProtoAbilityCardIdentity rental_card = 1;
 }
