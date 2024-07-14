@@ -16,9 +16,14 @@ enum MultiNotificationType {
   STAMP_SEND = 500;
   PARTICIPANT_DECK_CHANGE = 600;
   LOBBY_CANCEL = 700;
+  LOBBY_START = 800;
 }
 
 message LobbyCancelNotification {
+  string lobby_id = 1;
+}
+
+message LobbyStartNotification {
   string lobby_id = 1;
 }
 
