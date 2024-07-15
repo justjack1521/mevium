@@ -44,7 +44,8 @@ message ProtoGameInstance {
   int64 registered_at = 20;
 }
 
-message ProtoGamePlayer {
-  identity.ProtoPlayerIdentity identity = 1;
-  identity.ProtoPlayerLoadout loadout = 2;
+message ProtoGameParticipant {
+  int32 party_slot = 1;
+  bool bot_control = 2;
+  identity.ProtoPlayerLoadout loadout = 3;
 }

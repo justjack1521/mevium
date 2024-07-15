@@ -70,5 +70,4 @@ enum MultiGameNotificationType {
 
 message GameStartNotification {
   string game_id = 1;
-  repeated ProtoGamePlayer players = 2;
 }

@@ -40,11 +40,11 @@ namespace Mobius.Proto.Multi {
             "eRgFIAEoCCJ9ChFQcm90b0dhbWVJbnN0YW5jZRIOCgZzeXNfaWQYASABKAkS",
             "EAoIcGFydHlfaWQYAiABKAkSDAoEc2VlZBgDIAEoAxINCgVzdGF0ZRgEIAEo",
             "BRISCgpzdGFydGVkX2F0GAUgASgDEhUKDXJlZ2lzdGVyZWRfYXQYFCABKAMi",
-            "cQoPUHJvdG9HYW1lUGxheWVyEi8KCGlkZW50aXR5GAEgASgLMh0uaWRlbnRp",
-            "dHkuUHJvdG9QbGF5ZXJJZGVudGl0eRItCgdsb2Fkb3V0GAIgASgLMhwuaWRl",
-            "bnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0Qk1aNmdpdGh1Yi5jb20vanVzdGph",
-            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1",
-            "cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
+            "bgoUUHJvdG9HYW1lUGFydGljaXBhbnQSEgoKcGFydHlfc2xvdBgBIAEoBRIT",
+            "Cgtib3RfY29udHJvbBgCIAEoCBItCgdsb2Fkb3V0GAMgASgLMhwuaWRlbnRp",
+            "dHkuUHJvdG9QbGF5ZXJMb2Fkb3V0Qk1aNmdpdGh1Yi5jb20vanVzdGphY2sx",
+            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Q",
+            "cm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,7 +53,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser, new[]{ "SlotIndex", "RoleRestriction", "Locked", "Bot", "InviteOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstance), global::Mobius.Proto.Multi.ProtoGameInstance.Parser, new[]{ "SysId", "PartyId", "Seed", "State", "StartedAt", "RegisteredAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGamePlayer), global::Mobius.Proto.Multi.ProtoGamePlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameParticipant), global::Mobius.Proto.Multi.ProtoGameParticipant.Parser, new[]{ "PartySlot", "BotControl", "Loadout" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1548,15 +1548,15 @@ namespace Mobius.Proto.Multi {
 
   }
 
-  public sealed partial class ProtoGamePlayer : pb::IMessage<ProtoGamePlayer>
+  public sealed partial class ProtoGameParticipant : pb::IMessage<ProtoGameParticipant>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ProtoGamePlayer> _parser = new pb::MessageParser<ProtoGamePlayer>(() => new ProtoGamePlayer());
+    private static readonly pb::MessageParser<ProtoGameParticipant> _parser = new pb::MessageParser<ProtoGameParticipant>(() => new ProtoGameParticipant());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoGamePlayer> Parser { get { return _parser; } }
+    public static pb::MessageParser<ProtoGameParticipant> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1569,37 +1569,49 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoGamePlayer() {
+    public ProtoGameParticipant() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoGamePlayer(ProtoGamePlayer other) : this() {
-      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
+    public ProtoGameParticipant(ProtoGameParticipant other) : this() {
+      partySlot_ = other.partySlot_;
+      botControl_ = other.botControl_;
       loadout_ = other.loadout_ != null ? other.loadout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoGamePlayer Clone() {
-      return new ProtoGamePlayer(this);
+    public ProtoGameParticipant Clone() {
+      return new ProtoGameParticipant(this);
     }
 
-    /// <summary>Field number for the "identity" field.</summary>
-    public const int IdentityFieldNumber = 1;
-    private global::Mobius.Proto.Identity.ProtoPlayerIdentity identity_;
+    /// <summary>Field number for the "party_slot" field.</summary>
+    public const int PartySlotFieldNumber = 1;
+    private int partySlot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Identity.ProtoPlayerIdentity Identity {
-      get { return identity_; }
+    public int PartySlot {
+      get { return partySlot_; }
       set {
-        identity_ = value;
+        partySlot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bot_control" field.</summary>
+    public const int BotControlFieldNumber = 2;
+    private bool botControl_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool BotControl {
+      get { return botControl_; }
+      set {
+        botControl_ = value;
       }
     }
 
     /// <summary>Field number for the "loadout" field.</summary>
-    public const int LoadoutFieldNumber = 2;
+    public const int LoadoutFieldNumber = 3;
     private global::Mobius.Proto.Identity.ProtoPlayerLoadout loadout_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Mobius.Proto.Identity.ProtoPlayerLoadout Loadout {
@@ -1611,18 +1623,19 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoGamePlayer);
+      return Equals(other as ProtoGameParticipant);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoGamePlayer other) {
+    public bool Equals(ProtoGameParticipant other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Identity, other.Identity)) return false;
+      if (PartySlot != other.PartySlot) return false;
+      if (BotControl != other.BotControl) return false;
       if (!object.Equals(Loadout, other.Loadout)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1630,7 +1643,8 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (identity_ != null) hash ^= Identity.GetHashCode();
+      if (PartySlot != 0) hash ^= PartySlot.GetHashCode();
+      if (BotControl != false) hash ^= BotControl.GetHashCode();
       if (loadout_ != null) hash ^= Loadout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1648,12 +1662,16 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (identity_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Identity);
+      if (PartySlot != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PartySlot);
+      }
+      if (BotControl != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(BotControl);
       }
       if (loadout_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(Loadout);
       }
       if (_unknownFields != null) {
@@ -1665,12 +1683,16 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (identity_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Identity);
+      if (PartySlot != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PartySlot);
+      }
+      if (BotControl != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(BotControl);
       }
       if (loadout_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(Loadout);
       }
       if (_unknownFields != null) {
@@ -1682,8 +1704,11 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (identity_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
+      if (PartySlot != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PartySlot);
+      }
+      if (BotControl != false) {
+        size += 1 + 1;
       }
       if (loadout_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Loadout);
@@ -1695,15 +1720,15 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoGamePlayer other) {
+    public void MergeFrom(ProtoGameParticipant other) {
       if (other == null) {
         return;
       }
-      if (other.identity_ != null) {
-        if (identity_ == null) {
-          Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
-        }
-        Identity.MergeFrom(other.Identity);
+      if (other.PartySlot != 0) {
+        PartySlot = other.PartySlot;
+      }
+      if (other.BotControl != false) {
+        BotControl = other.BotControl;
       }
       if (other.loadout_ != null) {
         if (loadout_ == null) {
@@ -1725,14 +1750,15 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (identity_ == null) {
-              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
-            }
-            input.ReadMessage(Identity);
+          case 8: {
+            PartySlot = input.ReadInt32();
             break;
           }
-          case 18: {
+          case 16: {
+            BotControl = input.ReadBool();
+            break;
+          }
+          case 26: {
             if (loadout_ == null) {
               Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadout();
             }
@@ -1753,14 +1779,15 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (identity_ == null) {
-              Identity = new global::Mobius.Proto.Identity.ProtoPlayerIdentity();
-            }
-            input.ReadMessage(Identity);
+          case 8: {
+            PartySlot = input.ReadInt32();
             break;
           }
-          case 18: {
+          case 16: {
+            BotControl = input.ReadBool();
+            break;
+          }
+          case 26: {
             if (loadout_ == null) {
               Loadout = new global::Mobius.Proto.Identity.ProtoPlayerLoadout();
             }
