@@ -66,6 +66,7 @@ message StampSendNotification {
 enum MultiGameNotificationType {
   GAME_NONE = 0;
   GAME_START = 100;
+  GAME_READY = 200;
 }
 
 message GameStartNotification {

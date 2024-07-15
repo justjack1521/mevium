@@ -47,10 +47,10 @@ namespace Mobius.Proto.Multi {
             "TlRfTEVBVkUQyAESFgoRUEFSVElDSVBBTlRfUkVBRFkQrAISGAoTUEFSVElD",
             "SVBBTlRfVU5SRUFEWRCQAxIPCgpTVEFNUF9TRU5EEPQDEhwKF1BBUlRJQ0lQ",
             "QU5UX0RFQ0tfQ0hBTkdFENgEEhEKDExPQkJZX0NBTkNFTBC8BRIQCgtMT0JC",
-            "WV9TVEFSVBCgBio6ChlNdWx0aUdhbWVOb3RpZmljYXRpb25UeXBlEg0KCUdB",
-            "TUVfTk9ORRAAEg4KCkdBTUVfU1RBUlQQZEJNWjZnaXRodWIuY29tL2p1c3Rq",
-            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2Jp",
-            "dXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "WV9TVEFSVBCgBipLChlNdWx0aUdhbWVOb3RpZmljYXRpb25UeXBlEg0KCUdB",
+            "TUVfTk9ORRAAEg4KCkdBTUVfU1RBUlQQZBIPCgpHQU1FX1JFQURZEMgBQk1a",
+            "NmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
+            "cHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,6 +85,7 @@ namespace Mobius.Proto.Multi {
   public enum MultiGameNotificationType {
     [pbr::OriginalName("GAME_NONE")] GameNone = 0,
     [pbr::OriginalName("GAME_START")] GameStart = 100,
+    [pbr::OriginalName("GAME_READY")] GameReady = 200,
   }
 
   #endregion
