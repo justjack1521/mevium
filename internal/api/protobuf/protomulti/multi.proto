@@ -34,3 +34,8 @@ message ProtoLobbyPlayerSlotRestriction {
   bool bot = 4;
   bool invite_only = 5;
 }
+
+message ProtoGamePlayer {
+  identity.ProtoPlayerIdentity identity = 1;
+  identity.ProtoPlayerLoadout loadout = 2;
+}

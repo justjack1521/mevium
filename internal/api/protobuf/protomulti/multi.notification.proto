@@ -7,7 +7,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
 import "protomulti/multi.proto";
 
-enum MultiNotificationType {
+enum MultiLobbyNotificationType {
   EMPTY = 0;
   PARTICIPANT_JOIN = 100;
   PARTICIPANT_LEAVE = 200;
@@ -61,4 +61,14 @@ message StampSendNotification {
   string lobby_id = 1;
   string stamp_id = 2;
   int32 party_slot = 3;
+}
+
+enum MultiGameNotificationType {
+  GAME_NONE = 0;
+  GAME_START = 100;
+}
+
+message GameStartNotification {
+  string game_id = 1;
+  repeated ProtoGamePlayer players = 2;
 }
