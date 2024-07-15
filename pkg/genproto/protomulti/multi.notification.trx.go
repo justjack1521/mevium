@@ -97,3 +97,27 @@ func NewLobbyStartNotification(bytes []byte) (*LobbyStartNotification, error) {
 func (x *LobbyStartNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameStartNotification(bytes []byte) (*GameStartNotification, error) {
+	req := &GameStartNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameStartNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGameReadyNotification(bytes []byte) (*GameReadyNotification, error) {
+	req := &GameReadyNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameReadyNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

@@ -71,3 +71,7 @@ enum MultiGameNotificationType {
 message GameStartNotification {
   string game_id = 1;
 }
+
+message GameReadyNotification {
+  string game_id = 1;
+}
