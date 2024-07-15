@@ -19,6 +19,15 @@ message ProtoPlayerLoadoutIdentity {
   repeated ProtoAbilityCardIdentity ability_cards = 3;
 }
 
+message ProtoPlayerLoadout {
+  string player_id = 1;
+  string player_name = 2;
+  int32 deck_index = 3;
+  ProtoPlayerJobLoadout job = 4;
+  ProtoPlayerWeaponLoadout weapon = 5;
+  repeated ProtoPlayerAbilityCardLoadout ability_cards = 6;
+}
+
 message ProtoPlayerJobIdentity {
   string job_card_id = 1;
   int32 sub_job_index = 2;
@@ -38,9 +47,19 @@ message ProtoPlayerJobStat {
   map<string, int32> auto_abilities = 12;
 }
 
+message ProtoPlayerJobLoadout {
+  ProtoPlayerJobIdentity identity = 1;
+  ProtoPlayerJobStat stat = 2;
+}
+
 message ProtoPlayerWeaponIdentity {
   string weapon_id = 1;
   int32 sub_weapon_unlock = 2;
+}
+
+message ProtoPlayerWeaponLoadout {
+  ProtoPlayerWeaponIdentity identity = 1;
+  ProtoPlayerWeaponStat stat = 2;
 }
 
 message ProtoPlayerWeaponStat {
@@ -68,24 +87,9 @@ message ProtoAbilityCardStat {
   map<string,int32> auto_abilities = 6;
 }
 
-message ProtoPlayerLoadout {
-  int32 deck_index = 1;
-  ProtoPlayerJobLoadout job = 2;
-  ProtoPlayerWeaponLoadout weapon = 3;
-  repeated ProtoPlayerAbilityCardLoadout ability_cards = 4;
-}
-
-message ProtoPlayerJobLoadout {
-    ProtoPlayerJobIdentity identity = 1;
-    ProtoPlayerJobStat stat = 2;
-}
-
-message ProtoPlayerWeaponLoadout {
-  ProtoPlayerWeaponIdentity identity = 1;
-  ProtoPlayerWeaponStat stat = 2;
-}
-
 message ProtoPlayerAbilityCardLoadout {
   ProtoAbilityCardIdentity identity = 1;
   ProtoAbilityCardStat stat = 2;
 }
+
+

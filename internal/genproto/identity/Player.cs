@@ -59,22 +59,23 @@ namespace Mobius.Proto.Identity {
             "AQoUUHJvdG9BYmlsaXR5Q2FyZFN0YXQSSQoOYXV0b19hYmlsaXRpZXMYBiAD",
             "KAsyMS5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkU3RhdC5BdXRvQWJpbGl0",
             "aWVzRW50cnkaNAoSQXV0b0FiaWxpdGllc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoBToCOAEiygEKElByb3RvUGxheWVyTG9hZG91dBISCgpk",
-            "ZWNrX2luZGV4GAEgASgFEiwKA2pvYhgCIAEoCzIfLmlkZW50aXR5LlByb3Rv",
-            "UGxheWVySm9iTG9hZG91dBIyCgZ3ZWFwb24YAyABKAsyIi5pZGVudGl0eS5Q",
-            "cm90b1BsYXllcldlYXBvbkxvYWRvdXQSPgoNYWJpbGl0eV9jYXJkcxgEIAMo",
-            "CzInLmlkZW50aXR5LlByb3RvUGxheWVyQWJpbGl0eUNhcmRMb2Fkb3V0IncK",
-            "FVByb3RvUGxheWVySm9iTG9hZG91dBIyCghpZGVudGl0eRgBIAEoCzIgLmlk",
-            "ZW50aXR5LlByb3RvUGxheWVySm9iSWRlbnRpdHkSKgoEc3RhdBgCIAEoCzIc",
-            "LmlkZW50aXR5LlByb3RvUGxheWVySm9iU3RhdCKAAQoYUHJvdG9QbGF5ZXJX",
-            "ZWFwb25Mb2Fkb3V0EjUKCGlkZW50aXR5GAEgASgLMiMuaWRlbnRpdHkuUHJv",
-            "dG9QbGF5ZXJXZWFwb25JZGVudGl0eRItCgRzdGF0GAIgASgLMh8uaWRlbnRp",
-            "dHkuUHJvdG9QbGF5ZXJXZWFwb25TdGF0IoMBCh1Qcm90b1BsYXllckFiaWxp",
-            "dHlDYXJkTG9hZG91dBI0CghpZGVudGl0eRgBIAEoCzIiLmlkZW50aXR5LlBy",
-            "b3RvQWJpbGl0eUNhcmRJZGVudGl0eRIsCgRzdGF0GAIgASgLMh4uaWRlbnRp",
-            "dHkuUHJvdG9BYmlsaXR5Q2FyZFN0YXRCU1o5Z2l0aHViLmNvbS9qdXN0amFj",
-            "azE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2lkZW50aXR5qgIVTW9i",
-            "aXVzLlByb3RvLklkZW50aXR5YgZwcm90bzM="));
+            "CgV2YWx1ZRgCIAEoBToCOAEi8gEKElByb3RvUGxheWVyTG9hZG91dBIRCglw",
+            "bGF5ZXJfaWQYASABKAkSEwoLcGxheWVyX25hbWUYAiABKAkSEgoKZGVja19p",
+            "bmRleBgDIAEoBRIsCgNqb2IYBCABKAsyHy5pZGVudGl0eS5Qcm90b1BsYXll",
+            "ckpvYkxvYWRvdXQSMgoGd2VhcG9uGAUgASgLMiIuaWRlbnRpdHkuUHJvdG9Q",
+            "bGF5ZXJXZWFwb25Mb2Fkb3V0Ej4KDWFiaWxpdHlfY2FyZHMYBiADKAsyJy5p",
+            "ZGVudGl0eS5Qcm90b1BsYXllckFiaWxpdHlDYXJkTG9hZG91dCJ3ChVQcm90",
+            "b1BsYXllckpvYkxvYWRvdXQSMgoIaWRlbnRpdHkYASABKAsyIC5pZGVudGl0",
+            "eS5Qcm90b1BsYXllckpvYklkZW50aXR5EioKBHN0YXQYAiABKAsyHC5pZGVu",
+            "dGl0eS5Qcm90b1BsYXllckpvYlN0YXQigAEKGFByb3RvUGxheWVyV2VhcG9u",
+            "TG9hZG91dBI1CghpZGVudGl0eRgBIAEoCzIjLmlkZW50aXR5LlByb3RvUGxh",
+            "eWVyV2VhcG9uSWRlbnRpdHkSLQoEc3RhdBgCIAEoCzIfLmlkZW50aXR5LlBy",
+            "b3RvUGxheWVyV2VhcG9uU3RhdCKDAQodUHJvdG9QbGF5ZXJBYmlsaXR5Q2Fy",
+            "ZExvYWRvdXQSNAoIaWRlbnRpdHkYASABKAsyIi5pZGVudGl0eS5Qcm90b0Fi",
+            "aWxpdHlDYXJkSWRlbnRpdHkSLAoEc3RhdBgCIAEoCzIeLmlkZW50aXR5LlBy",
+            "b3RvQWJpbGl0eUNhcmRTdGF0QlNaOWdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
+            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9pZGVudGl0eaoCFU1vYml1cy5Q",
+            "cm90by5JZGVudGl0eWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +87,7 @@ namespace Mobius.Proto.Identity {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponStat), global::Mobius.Proto.Identity.ProtoPlayerWeaponStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardIdentity), global::Mobius.Proto.Identity.ProtoAbilityCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardStat), global::Mobius.Proto.Identity.ProtoAbilityCardStat.Parser, new[]{ "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadout), global::Mobius.Proto.Identity.ProtoPlayerLoadout.Parser, new[]{ "DeckIndex", "Job", "Weapon", "AbilityCards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerLoadout), global::Mobius.Proto.Identity.ProtoPlayerLoadout.Parser, new[]{ "PlayerId", "PlayerName", "DeckIndex", "Job", "Weapon", "AbilityCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerJobLoadout), global::Mobius.Proto.Identity.ProtoPlayerJobLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout), global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout), global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null)
@@ -2591,6 +2592,8 @@ namespace Mobius.Proto.Identity {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoPlayerLoadout(ProtoPlayerLoadout other) : this() {
+      playerId_ = other.playerId_;
+      playerName_ = other.playerName_;
       deckIndex_ = other.deckIndex_;
       job_ = other.job_ != null ? other.job_.Clone() : null;
       weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
@@ -2603,8 +2606,30 @@ namespace Mobius.Proto.Identity {
       return new ProtoPlayerLoadout(this);
     }
 
+    /// <summary>Field number for the "player_id" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private string playerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "player_name" field.</summary>
+    public const int PlayerNameFieldNumber = 2;
+    private string playerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PlayerName {
+      get { return playerName_; }
+      set {
+        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "deck_index" field.</summary>
-    public const int DeckIndexFieldNumber = 1;
+    public const int DeckIndexFieldNumber = 3;
     private int deckIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int DeckIndex {
@@ -2615,7 +2640,7 @@ namespace Mobius.Proto.Identity {
     }
 
     /// <summary>Field number for the "job" field.</summary>
-    public const int JobFieldNumber = 2;
+    public const int JobFieldNumber = 4;
     private global::Mobius.Proto.Identity.ProtoPlayerJobLoadout job_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Mobius.Proto.Identity.ProtoPlayerJobLoadout Job {
@@ -2626,7 +2651,7 @@ namespace Mobius.Proto.Identity {
     }
 
     /// <summary>Field number for the "weapon" field.</summary>
-    public const int WeaponFieldNumber = 3;
+    public const int WeaponFieldNumber = 5;
     private global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout weapon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout Weapon {
@@ -2637,9 +2662,9 @@ namespace Mobius.Proto.Identity {
     }
 
     /// <summary>Field number for the "ability_cards" field.</summary>
-    public const int AbilityCardsFieldNumber = 4;
+    public const int AbilityCardsFieldNumber = 6;
     private static readonly pb::FieldCodec<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout> _repeated_abilityCards_codec
-        = pb::FieldCodec.ForMessage(34, global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout.Parser);
+        = pb::FieldCodec.ForMessage(50, global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout.Parser);
     private readonly pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout> abilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout> AbilityCards {
@@ -2659,6 +2684,8 @@ namespace Mobius.Proto.Identity {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PlayerId != other.PlayerId) return false;
+      if (PlayerName != other.PlayerName) return false;
       if (DeckIndex != other.DeckIndex) return false;
       if (!object.Equals(Job, other.Job)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
@@ -2669,6 +2696,8 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
+      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (DeckIndex != 0) hash ^= DeckIndex.GetHashCode();
       if (job_ != null) hash ^= Job.GetHashCode();
       if (weapon_ != null) hash ^= Weapon.GetHashCode();
@@ -2689,16 +2718,24 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PlayerName);
+      }
       if (DeckIndex != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteInt32(DeckIndex);
       }
       if (job_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(Job);
       }
       if (weapon_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(Weapon);
       }
       abilityCards_.WriteTo(output, _repeated_abilityCards_codec);
@@ -2711,16 +2748,24 @@ namespace Mobius.Proto.Identity {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PlayerName);
+      }
       if (DeckIndex != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteInt32(DeckIndex);
       }
       if (job_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(Job);
       }
       if (weapon_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(Weapon);
       }
       abilityCards_.WriteTo(ref output, _repeated_abilityCards_codec);
@@ -2733,6 +2778,12 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (PlayerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      }
+      if (PlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      }
       if (DeckIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeckIndex);
       }
@@ -2753,6 +2804,12 @@ namespace Mobius.Proto.Identity {
     public void MergeFrom(ProtoPlayerLoadout other) {
       if (other == null) {
         return;
+      }
+      if (other.PlayerId.Length != 0) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.PlayerName.Length != 0) {
+        PlayerName = other.PlayerName;
       }
       if (other.DeckIndex != 0) {
         DeckIndex = other.DeckIndex;
@@ -2784,25 +2841,33 @@ namespace Mobius.Proto.Identity {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            DeckIndex = input.ReadInt32();
+          case 10: {
+            PlayerId = input.ReadString();
             break;
           }
           case 18: {
+            PlayerName = input.ReadString();
+            break;
+          }
+          case 24: {
+            DeckIndex = input.ReadInt32();
+            break;
+          }
+          case 34: {
             if (job_ == null) {
               Job = new global::Mobius.Proto.Identity.ProtoPlayerJobLoadout();
             }
             input.ReadMessage(Job);
             break;
           }
-          case 26: {
+          case 42: {
             if (weapon_ == null) {
               Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout();
             }
             input.ReadMessage(Weapon);
             break;
           }
-          case 34: {
+          case 50: {
             abilityCards_.AddEntriesFrom(input, _repeated_abilityCards_codec);
             break;
           }
@@ -2820,25 +2885,33 @@ namespace Mobius.Proto.Identity {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            DeckIndex = input.ReadInt32();
+          case 10: {
+            PlayerId = input.ReadString();
             break;
           }
           case 18: {
+            PlayerName = input.ReadString();
+            break;
+          }
+          case 24: {
+            DeckIndex = input.ReadInt32();
+            break;
+          }
+          case 34: {
             if (job_ == null) {
               Job = new global::Mobius.Proto.Identity.ProtoPlayerJobLoadout();
             }
             input.ReadMessage(Job);
             break;
           }
-          case 26: {
+          case 42: {
             if (weapon_ == null) {
               Weapon = new global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout();
             }
             input.ReadMessage(Weapon);
             break;
           }
-          case 34: {
+          case 50: {
             abilityCards_.AddEntriesFrom(ref input, _repeated_abilityCards_codec);
             break;
           }
