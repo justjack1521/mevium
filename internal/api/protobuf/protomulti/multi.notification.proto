@@ -17,6 +17,7 @@ enum MultiLobbyNotificationType {
   PARTICIPANT_DECK_CHANGE = 600;
   LOBBY_CANCEL = 700;
   LOBBY_START = 800;
+  LOBBY_READY = 900;
 }
 
 message LobbyCancelNotification {
@@ -24,6 +25,10 @@ message LobbyCancelNotification {
 }
 
 message LobbyStartNotification {
+  string lobby_id = 1;
+}
+
+message LobbyReadyNotification {
   string lobby_id = 1;
 }
 
@@ -70,9 +75,5 @@ enum MultiGameNotificationType {
 }
 
 message GameStartNotification {
-  string game_id = 1;
-}
-
-message GameReadyNotification {
   string game_id = 1;
 }
