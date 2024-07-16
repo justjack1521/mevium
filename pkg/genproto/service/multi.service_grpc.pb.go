@@ -33,6 +33,7 @@ const (
 	MeviusMultiService_ReadyLobby_FullMethodName    = "/service.MeviusMultiService/ReadyLobby"
 	MeviusMultiService_UnreadyLobby_FullMethodName  = "/service.MeviusMultiService/UnreadyLobby"
 	MeviusMultiService_SendStamp_FullMethodName     = "/service.MeviusMultiService/SendStamp"
+	MeviusMultiService_GetGame_FullMethodName       = "/service.MeviusMultiService/GetGame"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -52,6 +53,7 @@ type MeviusMultiServiceClient interface {
 	ReadyLobby(ctx context.Context, in *protomulti.ReadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.ReadyLobbyResponse, error)
 	UnreadyLobby(ctx context.Context, in *protomulti.UnreadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnreadyLobbyResponse, error)
 	SendStamp(ctx context.Context, in *protomulti.SendStampRequest, opts ...grpc.CallOption) (*protomulti.SendStampResponse, error)
+	GetGame(ctx context.Context, in *protomulti.GetGameRequest, opts ...grpc.CallOption) (*protomulti.GetGameResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -179,6 +181,15 @@ func (c *meviusMultiServiceClient) SendStamp(ctx context.Context, in *protomulti
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) GetGame(ctx context.Context, in *protomulti.GetGameRequest, opts ...grpc.CallOption) (*protomulti.GetGameResponse, error) {
+	out := new(protomulti.GetGameResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_GetGame_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -196,6 +207,7 @@ type MeviusMultiServiceServer interface {
 	ReadyLobby(context.Context, *protomulti.ReadyLobbyRequest) (*protomulti.ReadyLobbyResponse, error)
 	UnreadyLobby(context.Context, *protomulti.UnreadyLobbyRequest) (*protomulti.UnreadyLobbyResponse, error)
 	SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error)
+	GetGame(context.Context, *protomulti.GetGameRequest) (*protomulti.GetGameResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -240,6 +252,9 @@ func (UnimplementedMeviusMultiServiceServer) UnreadyLobby(context.Context, *prot
 }
 func (UnimplementedMeviusMultiServiceServer) SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendStamp not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) GetGame(context.Context, *protomulti.GetGameRequest) (*protomulti.GetGameResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetGame not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -487,6 +502,24 @@ func _MeviusMultiService_SendStamp_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_GetGame_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GetGameRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).GetGame(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_GetGame_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).GetGame(ctx, req.(*protomulti.GetGameRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -545,6 +578,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SendStamp",
 			Handler:    _MeviusMultiService_SendStamp_Handler,
+		},
+		{
+			MethodName: "GetGame",
+			Handler:    _MeviusMultiService_GetGame_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -22,4 +22,7 @@ service MeviusMultiService {
   rpc ReadyLobby(multi.ReadyLobbyRequest) returns (multi.ReadyLobbyResponse) {}
   rpc UnreadyLobby(multi.UnreadyLobbyRequest) returns (multi.UnreadyLobbyResponse) {}
   rpc SendStamp(multi.SendStampRequest) returns (multi.SendStampResponse) {}
+
+  rpc GetGame(multi.GetGameRequest) returns (multi.GetGameResponse) {}
+
 }

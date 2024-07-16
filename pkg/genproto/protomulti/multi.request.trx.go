@@ -157,3 +157,15 @@ func NewSendStampRequest(bytes []byte) (*SendStampRequest, error) {
 func (x *SendStampResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func New(bytes []byte) (*GetGameRequest, error) {
+	req := &GetGameRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GetGameResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
