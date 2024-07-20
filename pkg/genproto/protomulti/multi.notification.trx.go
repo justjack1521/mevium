@@ -98,6 +98,18 @@ func (x *LobbyStartNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewLobbyReadyNotification(bytes []byte) (*LobbyReadyNotification, error) {
+	req := &LobbyReadyNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *LobbyReadyNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewGameStartNotification(bytes []byte) (*GameStartNotification, error) {
 	req := &GameStartNotification{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -110,14 +122,38 @@ func (x *GameStartNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewLobbyReadyNotification(bytes []byte) (*LobbyReadyNotification, error) {
-	req := &LobbyReadyNotification{}
+func NewGameEnqueueAbilityNotification(bytes []byte) (*GameEnqueueAbilityNotification, error) {
+	req := &GameEnqueueAbilityNotification{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *LobbyReadyNotification) MarshallBinary() ([]byte, error) {
+func (x *GameEnqueueAbilityNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGameDequeueAbilityNotification(bytes []byte) (*GameDequeueAbilityNotification, error) {
+	req := &GameDequeueAbilityNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameDequeueAbilityNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGameLockActionNotification(bytes []byte) (*GameLockActionNotification, error) {
+	req := &GameLockActionNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameLockActionNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

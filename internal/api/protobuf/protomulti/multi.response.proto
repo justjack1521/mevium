@@ -12,6 +12,18 @@ message GetGameResponse {
   repeated ProtoGameParticipant participants = 2;
 }
 
+message GameEnqueueAbilityResponse {
+
+}
+
+message GameDequeueAbilityResponse {
+
+}
+
+message GameLockActionResponse {
+
+}
+
 message CreateSessionResponse {
 }
 

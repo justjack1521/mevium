@@ -8,7 +8,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 import "protomulti/multi.proto";
 
 enum MultiRequestType {
-  NONE = 0;
+  REQUEST_TYPE_NONE = 0;
   CREATE_SESSION = 100;
   END_SESSION = 200;
   SEARCH_LOBBY = 300;
@@ -24,12 +24,31 @@ enum MultiRequestType {
   START_LOBBY = 1300;
 
   GET_GAME = 1400;
+  GAME_ENQUEUE_ABILITY = 1500;
+  GAME_DEQUEUE_ABILITY = 1600;
+  GAME_LOCK_ACTIONS = 1700;
 
 }
 
 message GetGameRequest {
   string game_id = 1;
 }
+
+message GameEnqueueAbilityRequest {
+  GamePlayerActionType action = 2;
+  int32 slot_index = 3;
+  string element_id = 4;
+}
+
+message GameDequeueAbilityRequest {
+
+}
+
+message GameLockActionRequest {
+
+}
+
+
 
 message CreateSessionRequest {
   string player_id = 1;

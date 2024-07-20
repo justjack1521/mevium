@@ -169,3 +169,39 @@ func NewGetGameRequest(bytes []byte) (*GetGameRequest, error) {
 func (x *GetGameResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameEnqueueAbilityRequest(bytes []byte) (*GameEnqueueAbilityRequest, error) {
+	req := &GameEnqueueAbilityRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameEnqueueAbilityResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGameDequeueAbilityRequest(bytes []byte) (*GameDequeueAbilityRequest, error) {
+	req := &GameDequeueAbilityRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameDequeueAbilityResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGameLockActionRequest(bytes []byte) (*GameLockActionRequest, error) {
+	req := &GameLockActionRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameLockActionResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

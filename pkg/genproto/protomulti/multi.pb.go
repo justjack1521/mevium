@@ -21,6 +21,58 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type GamePlayerActionType int32
+
+const (
+	GamePlayerActionType_PLAYER_ACTION_TYPE_NONE GamePlayerActionType = 0
+	GamePlayerActionType_NORMAL_ATTACK           GamePlayerActionType = 100
+	GamePlayerActionType_ABILITY_CAST            GamePlayerActionType = 200
+	GamePlayerActionType_ELEMENT_DRIVE           GamePlayerActionType = 300
+)
+
+// Enum value maps for GamePlayerActionType.
+var (
+	GamePlayerActionType_name = map[int32]string{
+		0:   "PLAYER_ACTION_TYPE_NONE",
+		100: "NORMAL_ATTACK",
+		200: "ABILITY_CAST",
+		300: "ELEMENT_DRIVE",
+	}
+	GamePlayerActionType_value = map[string]int32{
+		"PLAYER_ACTION_TYPE_NONE": 0,
+		"NORMAL_ATTACK":           100,
+		"ABILITY_CAST":            200,
+		"ELEMENT_DRIVE":           300,
+	}
+)
+
+func (x GamePlayerActionType) Enum() *GamePlayerActionType {
+	p := new(GamePlayerActionType)
+	*p = x
+	return p
+}
+
+func (x GamePlayerActionType) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (GamePlayerActionType) Descriptor() protoreflect.EnumDescriptor {
+	return file_protomulti_multi_proto_enumTypes[0].Descriptor()
+}
+
+func (GamePlayerActionType) Type() protoreflect.EnumType {
+	return &file_protomulti_multi_proto_enumTypes[0]
+}
+
+func (x GamePlayerActionType) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use GamePlayerActionType.Descriptor instead.
+func (GamePlayerActionType) EnumDescriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{0}
+}
+
 type ProtoLobbySummary struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -526,12 +578,19 @@ var file_protomulti_multi_proto_rawDesc = []byte{
 	0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x69,
 	0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61,
 	0x79, 0x65, 0x72, 0x4c, 0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x52, 0x07, 0x6c, 0x6f, 0x61, 0x64,
-	0x6f, 0x75, 0x74, 0x42, 0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
-	0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d,
-	0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12,
-	0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c,
-	0x74, 0x69, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x75, 0x74, 0x2a, 0x6d, 0x0a, 0x14, 0x47, 0x61, 0x6d, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x72, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x1b, 0x0a, 0x17, 0x50,
+	0x4c, 0x41, 0x59, 0x45, 0x52, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x5f, 0x54, 0x59, 0x50,
+	0x45, 0x5f, 0x4e, 0x4f, 0x4e, 0x45, 0x10, 0x00, 0x12, 0x11, 0x0a, 0x0d, 0x4e, 0x4f, 0x52, 0x4d,
+	0x41, 0x4c, 0x5f, 0x41, 0x54, 0x54, 0x41, 0x43, 0x4b, 0x10, 0x64, 0x12, 0x11, 0x0a, 0x0c, 0x41,
+	0x42, 0x49, 0x4c, 0x49, 0x54, 0x59, 0x5f, 0x43, 0x41, 0x53, 0x54, 0x10, 0xc8, 0x01, 0x12, 0x12,
+	0x0a, 0x0d, 0x45, 0x4c, 0x45, 0x4d, 0x45, 0x4e, 0x54, 0x5f, 0x44, 0x52, 0x49, 0x56, 0x45, 0x10,
+	0xac, 0x02, 0x42, 0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
+	0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65,
+	0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d,
+	0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74,
+	0x69, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -546,24 +605,26 @@ func file_protomulti_multi_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_proto_rawDescData
 }
 
+var file_protomulti_multi_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protomulti_multi_proto_goTypes = []interface{}{
-	(*ProtoLobbySummary)(nil),                        // 0: multi.ProtoLobbySummary
-	(*ProtoLobbyPlayerSlot)(nil),                     // 1: multi.ProtoLobbyPlayerSlot
-	(*ProtoLobbyPlayer)(nil),                         // 2: multi.ProtoLobbyPlayer
-	(*ProtoLobbyPlayerSlotRestriction)(nil),          // 3: multi.ProtoLobbyPlayerSlotRestriction
-	(*ProtoGameInstance)(nil),                        // 4: multi.ProtoGameInstance
-	(*ProtoGameParticipant)(nil),                     // 5: multi.ProtoGameParticipant
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 6: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 7: identity.ProtoPlayerLoadoutIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),         // 8: identity.ProtoPlayerLoadout
+	(GamePlayerActionType)(0),                        // 0: multi.GamePlayerActionType
+	(*ProtoLobbySummary)(nil),                        // 1: multi.ProtoLobbySummary
+	(*ProtoLobbyPlayerSlot)(nil),                     // 2: multi.ProtoLobbyPlayerSlot
+	(*ProtoLobbyPlayer)(nil),                         // 3: multi.ProtoLobbyPlayer
+	(*ProtoLobbyPlayerSlotRestriction)(nil),          // 4: multi.ProtoLobbyPlayerSlotRestriction
+	(*ProtoGameInstance)(nil),                        // 5: multi.ProtoGameInstance
+	(*ProtoGameParticipant)(nil),                     // 6: multi.ProtoGameParticipant
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 7: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 8: identity.ProtoPlayerLoadoutIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),         // 9: identity.ProtoPlayerLoadout
 }
 var file_protomulti_multi_proto_depIdxs = []int32{
-	1, // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
-	2, // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
-	6, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
-	7, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	8, // 4: multi.ProtoGameParticipant.loadout:type_name -> identity.ProtoPlayerLoadout
+	2, // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
+	3, // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
+	7, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
+	8, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	9, // 4: multi.ProtoGameParticipant.loadout:type_name -> identity.ProtoPlayerLoadout
 	5, // [5:5] is the sub-list for method output_type
 	5, // [5:5] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name
@@ -655,13 +716,14 @@ func file_protomulti_multi_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protomulti_multi_proto_rawDesc,
-			NumEnums:      0,
+			NumEnums:      1,
 			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
 		GoTypes:           file_protomulti_multi_proto_goTypes,
 		DependencyIndexes: file_protomulti_multi_proto_depIdxs,
+		EnumInfos:         file_protomulti_multi_proto_enumTypes,
 		MessageInfos:      file_protomulti_multi_proto_msgTypes,
 	}.Build()
 	File_protomulti_multi_proto = out.File

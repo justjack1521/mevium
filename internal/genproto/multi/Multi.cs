@@ -42,12 +42,14 @@ namespace Mobius.Proto.Multi {
             "BRISCgpzdGFydGVkX2F0GAUgASgDEhUKDXJlZ2lzdGVyZWRfYXQYFCABKAMi",
             "bgoUUHJvdG9HYW1lUGFydGljaXBhbnQSEgoKcGFydHlfc2xvdBgBIAEoBRIT",
             "Cgtib3RfY29udHJvbBgCIAEoCBItCgdsb2Fkb3V0GAMgASgLMhwuaWRlbnRp",
-            "dHkuUHJvdG9QbGF5ZXJMb2Fkb3V0Qk1aNmdpdGh1Yi5jb20vanVzdGphY2sx",
-            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Q",
-            "cm90by5NdWx0aWIGcHJvdG8z"));
+            "dHkuUHJvdG9QbGF5ZXJMb2Fkb3V0Km0KFEdhbWVQbGF5ZXJBY3Rpb25UeXBl",
+            "EhsKF1BMQVlFUl9BQ1RJT05fVFlQRV9OT05FEAASEQoNTk9STUFMX0FUVEFD",
+            "SxBkEhEKDEFCSUxJVFlfQ0FTVBDIARISCg1FTEVNRU5UX0RSSVZFEKwCQk1a",
+            "NmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
+            "cHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbySummary), global::Mobius.Proto.Multi.ProtoLobbySummary.Parser, new[]{ "InstanceId", "QuestId", "Comment", "MinimumPlayerLevel", "RegisteredAt", "Players" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser, new[]{ "SlotIndex", "Ready", "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
@@ -59,6 +61,16 @@ namespace Mobius.Proto.Multi {
     #endregion
 
   }
+  #region Enums
+  public enum GamePlayerActionType {
+    [pbr::OriginalName("PLAYER_ACTION_TYPE_NONE")] PlayerActionTypeNone = 0,
+    [pbr::OriginalName("NORMAL_ATTACK")] NormalAttack = 100,
+    [pbr::OriginalName("ABILITY_CAST")] AbilityCast = 200,
+    [pbr::OriginalName("ELEMENT_DRIVE")] ElementDrive = 300,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class ProtoLobbySummary : pb::IMessage<ProtoLobbySummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

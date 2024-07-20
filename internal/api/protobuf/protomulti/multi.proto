@@ -7,6 +7,13 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 
 import "protoidentity/player.proto";
 
+enum GamePlayerActionType {
+  PLAYER_ACTION_TYPE_NONE = 0;
+  NORMAL_ATTACK = 100;
+  ABILITY_CAST = 200;
+  ELEMENT_DRIVE = 300;
+}
+
 message ProtoLobbySummary {
   string instance_id = 1;
   string quest_id = 2;
