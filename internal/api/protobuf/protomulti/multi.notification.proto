@@ -87,6 +87,10 @@ message GamePlayerReadyNotification {
   int32 player_index = 2;
 }
 
+message GameReadyNotification {
+  string game_id = 1;
+}
+
 message GameEnqueueAbilityNotification {
   string game_id = 1;
   int32 player_index = 2;
