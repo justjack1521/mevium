@@ -43,7 +43,7 @@ namespace Mobius.Proto.Multi {
             "aWNhdGlvbhIQCghsb2JieV9pZBgBIAEoCRIQCghzdGFtcF9pZBgCIAEoCRIS",
             "CgpwYXJ0eV9zbG90GAMgASgFIigKFUdhbWVTdGFydE5vdGlmaWNhdGlvbhIP",
             "CgdnYW1lX2lkGAEgASgJIkQKG0dhbWVQbGF5ZXJSZWFkeU5vdGlmaWNhdGlv",
-            "bhIPCgdnYW1lX2lkGAEgASgJEhQKDHBsYXllcl9pbmRleBgCIAEoCSKcAQoe",
+            "bhIPCgdnYW1lX2lkGAEgASgJEhQKDHBsYXllcl9pbmRleBgCIAEoBSKcAQoe",
             "R2FtZUVucXVldWVBYmlsaXR5Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASAB",
             "KAkSFAoMcGxheWVyX2luZGV4GAIgASgFEisKBmFjdGlvbhgDIAEoDjIbLm11",
             "bHRpLkdhbWVQbGF5ZXJBY3Rpb25UeXBlEhIKCnNsb3RfaW5kZXgYBCABKAUS",
@@ -2333,12 +2333,12 @@ namespace Mobius.Proto.Multi {
 
     /// <summary>Field number for the "player_index" field.</summary>
     public const int PlayerIndexFieldNumber = 2;
-    private string playerIndex_ = "";
+    private int playerIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerIndex {
+    public int PlayerIndex {
       get { return playerIndex_; }
       set {
-        playerIndex_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        playerIndex_ = value;
       }
     }
 
@@ -2364,7 +2364,7 @@ namespace Mobius.Proto.Multi {
     public override int GetHashCode() {
       int hash = 1;
       if (GameId.Length != 0) hash ^= GameId.GetHashCode();
-      if (PlayerIndex.Length != 0) hash ^= PlayerIndex.GetHashCode();
+      if (PlayerIndex != 0) hash ^= PlayerIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2385,9 +2385,9 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(10);
         output.WriteString(GameId);
       }
-      if (PlayerIndex.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PlayerIndex);
+      if (PlayerIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PlayerIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2402,9 +2402,9 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(10);
         output.WriteString(GameId);
       }
-      if (PlayerIndex.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PlayerIndex);
+      if (PlayerIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PlayerIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2418,8 +2418,8 @@ namespace Mobius.Proto.Multi {
       if (GameId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GameId);
       }
-      if (PlayerIndex.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerIndex);
+      if (PlayerIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2435,7 +2435,7 @@ namespace Mobius.Proto.Multi {
       if (other.GameId.Length != 0) {
         GameId = other.GameId;
       }
-      if (other.PlayerIndex.Length != 0) {
+      if (other.PlayerIndex != 0) {
         PlayerIndex = other.PlayerIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2456,8 +2456,8 @@ namespace Mobius.Proto.Multi {
             GameId = input.ReadString();
             break;
           }
-          case 18: {
-            PlayerIndex = input.ReadString();
+          case 16: {
+            PlayerIndex = input.ReadInt32();
             break;
           }
         }
@@ -2478,8 +2478,8 @@ namespace Mobius.Proto.Multi {
             GameId = input.ReadString();
             break;
           }
-          case 18: {
-            PlayerIndex = input.ReadString();
+          case 16: {
+            PlayerIndex = input.ReadInt32();
             break;
           }
         }
