@@ -157,3 +157,15 @@ func NewGameLockActionNotification(bytes []byte) (*GameLockActionNotification, e
 func (x *GameLockActionNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGamePlayerReadyNotification(bytes []byte) (*GamePlayerReadyNotification, error) {
+	req := &GamePlayerReadyNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReadyNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

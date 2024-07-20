@@ -72,6 +72,7 @@ enum MultiGameNotificationType {
   GAME_NONE = 0;
   GAME_START = 100;
   GAME_READY = 200;
+  GAME_PLAYER_READY = 250;
   GAME_ENQUEUE_ABILITY = 1500;
   GAME_DEQUEUE_ABILITY = 1600;
   GAME_LOCK_ACTION = 1700;
@@ -79,6 +80,11 @@ enum MultiGameNotificationType {
 
 message GameStartNotification {
   string game_id = 1;
+}
+
+message GamePlayerReadyNotification {
+  string game_id = 1;
+  string player_index = 2;
 }
 
 message GameEnqueueAbilityNotification {
