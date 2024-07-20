@@ -56,13 +56,14 @@ namespace Mobius.Proto.Multi {
             "EVBBUlRJQ0lQQU5UX0xFQVZFEMgBEhYKEVBBUlRJQ0lQQU5UX1JFQURZEKwC",
             "EhgKE1BBUlRJQ0lQQU5UX1VOUkVBRFkQkAMSDwoKU1RBTVBfU0VORBD0AxIc",
             "ChdQQVJUSUNJUEFOVF9ERUNLX0NIQU5HRRDYBBIRCgxMT0JCWV9DQU5DRUwQ",
-            "vAUSEAoLTE9CQllfU1RBUlQQoAYSEAoLTE9CQllfUkVBRFkQhAcqsAEKGU11",
-            "bHRpR2FtZU5vdGlmaWNhdGlvblR5cGUSDQoJR0FNRV9OT05FEAASDgoKR0FN",
-            "RV9TVEFSVBBkEg8KCkdBTUVfUkVBRFkQyAESFgoRR0FNRV9QTEFZRVJfUkVB",
-            "RFkQ+gESGQoUR0FNRV9FTlFVRVVFX0FCSUxJVFkQ3AsSGQoUR0FNRV9ERVFV",
-            "RVVFX0FCSUxJVFkQwAwSFQoQR0FNRV9MT0NLX0FDVElPThCkDUJNWjZnaXRo",
-            "dWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3Rv",
-            "bXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "vAUSEAoLTE9CQllfU1RBUlQQoAYSEAoLTE9CQllfUkVBRFkQhAcq4QEKGU11",
+            "bHRpR2FtZU5vdGlmaWNhdGlvblR5cGUSFAoQR0FNRV9OT1RJRllfTk9ORRAA",
+            "EhUKEUdBTUVfTk9USUZZX1NUQVJUEGQSFgoRR0FNRV9OT1RJRllfUkVBRFkQ",
+            "yAESHQoYR0FNRV9OT1RJRllfUExBWUVSX1JFQURZEPoBEiAKG0dBTUVfTk9U",
+            "SUZZX0VOUVVFVUVfQUJJTElUWRDcCxIgChtHQU1FX05PVElGWV9ERVFVRVVF",
+            "X0FCSUxJVFkQwAwSHAoXR0FNRV9OT1RJRllfTE9DS19BQ1RJT04QpA1CTVo2",
+            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
+            "cm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,13 +102,13 @@ namespace Mobius.Proto.Multi {
   }
 
   public enum MultiGameNotificationType {
-    [pbr::OriginalName("GAME_NONE")] GameNone = 0,
-    [pbr::OriginalName("GAME_START")] GameStart = 100,
-    [pbr::OriginalName("GAME_READY")] GameReady = 200,
-    [pbr::OriginalName("GAME_PLAYER_READY")] GamePlayerReady = 250,
-    [pbr::OriginalName("GAME_ENQUEUE_ABILITY")] GameEnqueueAbility = 1500,
-    [pbr::OriginalName("GAME_DEQUEUE_ABILITY")] GameDequeueAbility = 1600,
-    [pbr::OriginalName("GAME_LOCK_ACTION")] GameLockAction = 1700,
+    [pbr::OriginalName("GAME_NOTIFY_NONE")] GameNotifyNone = 0,
+    [pbr::OriginalName("GAME_NOTIFY_START")] GameNotifyStart = 100,
+    [pbr::OriginalName("GAME_NOTIFY_READY")] GameNotifyReady = 200,
+    [pbr::OriginalName("GAME_NOTIFY_PLAYER_READY")] GameNotifyPlayerReady = 250,
+    [pbr::OriginalName("GAME_NOTIFY_ENQUEUE_ABILITY")] GameNotifyEnqueueAbility = 1500,
+    [pbr::OriginalName("GAME_NOTIFY_DEQUEUE_ABILITY")] GameNotifyDequeueAbility = 1600,
+    [pbr::OriginalName("GAME_NOTIFY_LOCK_ACTION")] GameNotifyLockAction = 1700,
   }
 
   #endregion
