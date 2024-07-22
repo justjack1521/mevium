@@ -42,11 +42,11 @@ namespace Mobius.Proto.Multi {
             "BRISCgpzdGFydGVkX2F0GAUgASgDEhUKDXJlZ2lzdGVyZWRfYXQYFCABKAMi",
             "bgoUUHJvdG9HYW1lUGFydGljaXBhbnQSEgoKcGFydHlfc2xvdBgBIAEoBRIT",
             "Cgtib3RfY29udHJvbBgCIAEoCBItCgdsb2Fkb3V0GAMgASgLMhwuaWRlbnRp",
-            "dHkuUHJvdG9QbGF5ZXJMb2Fkb3V0Km0KFEdhbWVQbGF5ZXJBY3Rpb25UeXBl",
+            "dHkuUHJvdG9QbGF5ZXJMb2Fkb3V0KmsKFEdhbWVQbGF5ZXJBY3Rpb25UeXBl",
             "EhsKF1BMQVlFUl9BQ1RJT05fVFlQRV9OT05FEAASEQoNTk9STUFMX0FUVEFD",
-            "SxBkEhEKDEFCSUxJVFlfQ0FTVBDIARISCg1FTEVNRU5UX0RSSVZFEKwCQk1a",
-            "NmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
-            "cHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
+            "SxABEhAKDEFCSUxJVFlfQ0FTVBACEhEKDUVMRU1FTlRfRFJJVkUQA0JNWjZn",
+            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
+            "b3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,9 +64,9 @@ namespace Mobius.Proto.Multi {
   #region Enums
   public enum GamePlayerActionType {
     [pbr::OriginalName("PLAYER_ACTION_TYPE_NONE")] PlayerActionTypeNone = 0,
-    [pbr::OriginalName("NORMAL_ATTACK")] NormalAttack = 100,
-    [pbr::OriginalName("ABILITY_CAST")] AbilityCast = 200,
-    [pbr::OriginalName("ELEMENT_DRIVE")] ElementDrive = 300,
+    [pbr::OriginalName("NORMAL_ATTACK")] NormalAttack = 1,
+    [pbr::OriginalName("ABILITY_CAST")] AbilityCast = 2,
+    [pbr::OriginalName("ELEMENT_DRIVE")] ElementDrive = 3,
   }
 
   #endregion

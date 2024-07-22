@@ -9,9 +9,9 @@ import "protoidentity/player.proto";
 
 enum GamePlayerActionType {
   PLAYER_ACTION_TYPE_NONE = 0;
-  NORMAL_ATTACK = 100;
-  ABILITY_CAST = 200;
-  ELEMENT_DRIVE = 300;
+  NORMAL_ATTACK = 1;
+  ABILITY_CAST = 2;
+  ELEMENT_DRIVE = 3;
 }
 
 message ProtoLobbySummary {

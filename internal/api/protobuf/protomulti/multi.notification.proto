@@ -96,7 +96,8 @@ message GameEnqueueAbilityNotification {
   int32 player_index = 2;
   GamePlayerActionType action = 3;
   int32 slot_index = 4;
-  string element_id = 5;
+  int32 target = 5;
+  string element_id = 6;
 }
 
 message GameDequeueAbilityNotification {
