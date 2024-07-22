@@ -122,27 +122,27 @@ func (x *GameStartNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewGameEnqueueAbilityNotification(bytes []byte) (*GameEnqueueAbilityNotification, error) {
-	req := &GameEnqueueAbilityNotification{}
+func NewGameEnqueueAbilityNotification(bytes []byte) (*GameEnqueueActionNotification, error) {
+	req := &GameEnqueueActionNotification{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *GameEnqueueAbilityNotification) MarshallBinary() ([]byte, error) {
+func (x *GameEnqueueActionNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewGameDequeueAbilityNotification(bytes []byte) (*GameDequeueAbilityNotification, error) {
-	req := &GameDequeueAbilityNotification{}
+func NewGameDequeueAbilityNotification(bytes []byte) (*GameDequeueActionNotification, error) {
+	req := &GameDequeueActionNotification{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *GameDequeueAbilityNotification) MarshallBinary() ([]byte, error) {
+func (x *GameDequeueActionNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
