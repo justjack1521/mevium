@@ -50,21 +50,21 @@ namespace Mobius.Proto.Multi {
             "R2FtZVBsYXllckFjdGlvblR5cGUSEgoKc2xvdF9pbmRleBgEIAEoBRIOCgZ0",
             "YXJnZXQYBSABKAUSEgoKZWxlbWVudF9pZBgGIAEoCSJGCh1HYW1lRGVxdWV1",
             "ZUFjdGlvbk5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJEhQKDHBsYXll",
-            "cl9pbmRleBgCIAEoBSJDChpHYW1lTG9ja0FjdGlvbk5vdGlmaWNhdGlvbhIP",
-            "CgdnYW1lX2lkGAEgASgJEhQKDHBsYXllcl9pbmRleBgCIAEoBSrtAQoaTXVs",
-            "dGlMb2JieU5vdGlmaWNhdGlvblR5cGUSCQoFRU1QVFkQABIUChBQQVJUSUNJ",
-            "UEFOVF9KT0lOEGQSFgoRUEFSVElDSVBBTlRfTEVBVkUQyAESFgoRUEFSVElD",
-            "SVBBTlRfUkVBRFkQrAISGAoTUEFSVElDSVBBTlRfVU5SRUFEWRCQAxIPCgpT",
-            "VEFNUF9TRU5EEPQDEhwKF1BBUlRJQ0lQQU5UX0RFQ0tfQ0hBTkdFENgEEhEK",
-            "DExPQkJZX0NBTkNFTBC8BRIQCgtMT0JCWV9TVEFSVBCgBhIQCgtMT0JCWV9S",
-            "RUFEWRCEByrfAQoZTXVsdGlHYW1lTm90aWZpY2F0aW9uVHlwZRIUChBHQU1F",
-            "X05PVElGWV9OT05FEAASFQoRR0FNRV9OT1RJRllfU1RBUlQQZBIWChFHQU1F",
-            "X05PVElGWV9SRUFEWRDIARIdChhHQU1FX05PVElGWV9QTEFZRVJfUkVBRFkQ",
-            "+gESHwoaR0FNRV9OT1RJRllfRU5RVUVVRV9BQ1RJT04Q3AsSHwoaR0FNRV9O",
-            "T1RJRllfREVRVUVVRV9BQ1RJT04QwAwSHAoXR0FNRV9OT1RJRllfTE9DS19B",
-            "Q1RJT04QpA1CTVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3Br",
-            "Zy9nZW5wcm90by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZw",
-            "cm90bzM="));
+            "cl9pbmRleBgCIAEoBSJeChpHYW1lTG9ja0FjdGlvbk5vdGlmaWNhdGlvbhIP",
+            "CgdnYW1lX2lkGAEgASgJEhQKDHBsYXllcl9pbmRleBgCIAEoBRIZChFhY3Rp",
+            "b25fbG9ja19pbmRleBgDIAEoBSrtAQoaTXVsdGlMb2JieU5vdGlmaWNhdGlv",
+            "blR5cGUSCQoFRU1QVFkQABIUChBQQVJUSUNJUEFOVF9KT0lOEGQSFgoRUEFS",
+            "VElDSVBBTlRfTEVBVkUQyAESFgoRUEFSVElDSVBBTlRfUkVBRFkQrAISGAoT",
+            "UEFSVElDSVBBTlRfVU5SRUFEWRCQAxIPCgpTVEFNUF9TRU5EEPQDEhwKF1BB",
+            "UlRJQ0lQQU5UX0RFQ0tfQ0hBTkdFENgEEhEKDExPQkJZX0NBTkNFTBC8BRIQ",
+            "CgtMT0JCWV9TVEFSVBCgBhIQCgtMT0JCWV9SRUFEWRCEByrfAQoZTXVsdGlH",
+            "YW1lTm90aWZpY2F0aW9uVHlwZRIUChBHQU1FX05PVElGWV9OT05FEAASFQoR",
+            "R0FNRV9OT1RJRllfU1RBUlQQZBIWChFHQU1FX05PVElGWV9SRUFEWRDIARId",
+            "ChhHQU1FX05PVElGWV9QTEFZRVJfUkVBRFkQ+gESHwoaR0FNRV9OT1RJRllf",
+            "RU5RVUVVRV9BQ1RJT04Q3AsSHwoaR0FNRV9OT1RJRllfREVRVUVVRV9BQ1RJ",
+            "T04QwAwSHAoXR0FNRV9OT1RJRllfTE9DS19BQ1RJT04QpA1CTVo2Z2l0aHVi",
+            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b211",
+            "bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,7 +82,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyNotification), global::Mobius.Proto.Multi.GameReadyNotification.Parser, new[]{ "GameId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionNotification), global::Mobius.Proto.Multi.GameEnqueueActionNotification.Parser, new[]{ "GameId", "PlayerIndex", "Action", "SlotIndex", "Target", "ElementId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameDequeueActionNotification), global::Mobius.Proto.Multi.GameDequeueActionNotification.Parser, new[]{ "GameId", "PlayerIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameLockActionNotification), global::Mobius.Proto.Multi.GameLockActionNotification.Parser, new[]{ "GameId", "PlayerIndex" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameLockActionNotification), global::Mobius.Proto.Multi.GameLockActionNotification.Parser, new[]{ "GameId", "PlayerIndex", "ActionLockIndex" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3256,6 +3256,7 @@ namespace Mobius.Proto.Multi {
     public GameLockActionNotification(GameLockActionNotification other) : this() {
       gameId_ = other.gameId_;
       playerIndex_ = other.playerIndex_;
+      actionLockIndex_ = other.actionLockIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3286,6 +3287,17 @@ namespace Mobius.Proto.Multi {
       }
     }
 
+    /// <summary>Field number for the "action_lock_index" field.</summary>
+    public const int ActionLockIndexFieldNumber = 3;
+    private int actionLockIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ActionLockIndex {
+      get { return actionLockIndex_; }
+      set {
+        actionLockIndex_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GameLockActionNotification);
@@ -3301,6 +3313,7 @@ namespace Mobius.Proto.Multi {
       }
       if (GameId != other.GameId) return false;
       if (PlayerIndex != other.PlayerIndex) return false;
+      if (ActionLockIndex != other.ActionLockIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3309,6 +3322,7 @@ namespace Mobius.Proto.Multi {
       int hash = 1;
       if (GameId.Length != 0) hash ^= GameId.GetHashCode();
       if (PlayerIndex != 0) hash ^= PlayerIndex.GetHashCode();
+      if (ActionLockIndex != 0) hash ^= ActionLockIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3333,6 +3347,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(16);
         output.WriteInt32(PlayerIndex);
       }
+      if (ActionLockIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ActionLockIndex);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3350,6 +3368,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(16);
         output.WriteInt32(PlayerIndex);
       }
+      if (ActionLockIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ActionLockIndex);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3364,6 +3386,9 @@ namespace Mobius.Proto.Multi {
       }
       if (PlayerIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerIndex);
+      }
+      if (ActionLockIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ActionLockIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3381,6 +3406,9 @@ namespace Mobius.Proto.Multi {
       }
       if (other.PlayerIndex != 0) {
         PlayerIndex = other.PlayerIndex;
+      }
+      if (other.ActionLockIndex != 0) {
+        ActionLockIndex = other.ActionLockIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3404,6 +3432,10 @@ namespace Mobius.Proto.Multi {
             PlayerIndex = input.ReadInt32();
             break;
           }
+          case 24: {
+            ActionLockIndex = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -3424,6 +3456,10 @@ namespace Mobius.Proto.Multi {
           }
           case 16: {
             PlayerIndex = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ActionLockIndex = input.ReadInt32();
             break;
           }
         }
