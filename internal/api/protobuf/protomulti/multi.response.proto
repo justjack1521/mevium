@@ -12,11 +12,11 @@ message GetGameResponse {
   repeated ProtoGameParticipant participants = 2;
 }
 
-message GameEnqueueAbilityResponse {
+message GameEnqueueActionResponse {
 
 }
 
-message GameDequeueAbilityResponse {
+message GameDequeueActionResponse {
 
 }
 

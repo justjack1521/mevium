@@ -73,8 +73,8 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_START = 100;
   GAME_NOTIFY_READY = 200;
   GAME_NOTIFY_PLAYER_READY = 250;
-  GAME_NOTIFY_ENQUEUE_ABILITY = 1500;
-  GAME_NOTIFY_DEQUEUE_ABILITY = 1600;
+  GAME_NOTIFY_ENQUEUE_ACTION = 1500;
+  GAME_NOTIFY_DEQUEUE_ACTION = 1600;
   GAME_NOTIFY_LOCK_ACTION = 1700;
 }
 
@@ -91,7 +91,7 @@ message GameReadyNotification {
   string game_id = 1;
 }
 
-message GameEnqueueAbilityNotification {
+message GameEnqueueActionNotification {
   string game_id = 1;
   int32 player_index = 2;
   GamePlayerActionType action = 3;
@@ -100,7 +100,7 @@ message GameEnqueueAbilityNotification {
   string element_id = 6;
 }
 
-message GameDequeueAbilityNotification {
+message GameDequeueActionNotification {
   string game_id = 1;
   int32 player_index = 2;
 }

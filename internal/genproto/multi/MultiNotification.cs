@@ -44,27 +44,27 @@ namespace Mobius.Proto.Multi {
             "CgpwYXJ0eV9zbG90GAMgASgFIigKFUdhbWVTdGFydE5vdGlmaWNhdGlvbhIP",
             "CgdnYW1lX2lkGAEgASgJIkQKG0dhbWVQbGF5ZXJSZWFkeU5vdGlmaWNhdGlv",
             "bhIPCgdnYW1lX2lkGAEgASgJEhQKDHBsYXllcl9pbmRleBgCIAEoBSIoChVH",
-            "YW1lUmVhZHlOb3RpZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEoCSKsAQoeR2Ft",
-            "ZUVucXVldWVBYmlsaXR5Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkS",
-            "FAoMcGxheWVyX2luZGV4GAIgASgFEisKBmFjdGlvbhgDIAEoDjIbLm11bHRp",
-            "LkdhbWVQbGF5ZXJBY3Rpb25UeXBlEhIKCnNsb3RfaW5kZXgYBCABKAUSDgoG",
-            "dGFyZ2V0GAUgASgFEhIKCmVsZW1lbnRfaWQYBiABKAkiRwoeR2FtZURlcXVl",
-            "dWVBYmlsaXR5Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkSFAoMcGxh",
-            "eWVyX2luZGV4GAIgASgFIkMKGkdhbWVMb2NrQWN0aW9uTm90aWZpY2F0aW9u",
-            "Eg8KB2dhbWVfaWQYASABKAkSFAoMcGxheWVyX2luZGV4GAIgASgFKu0BChpN",
-            "dWx0aUxvYmJ5Tm90aWZpY2F0aW9uVHlwZRIJCgVFTVBUWRAAEhQKEFBBUlRJ",
-            "Q0lQQU5UX0pPSU4QZBIWChFQQVJUSUNJUEFOVF9MRUFWRRDIARIWChFQQVJU",
-            "SUNJUEFOVF9SRUFEWRCsAhIYChNQQVJUSUNJUEFOVF9VTlJFQURZEJADEg8K",
-            "ClNUQU1QX1NFTkQQ9AMSHAoXUEFSVElDSVBBTlRfREVDS19DSEFOR0UQ2AQS",
-            "EQoMTE9CQllfQ0FOQ0VMELwFEhAKC0xPQkJZX1NUQVJUEKAGEhAKC0xPQkJZ",
-            "X1JFQURZEIQHKuEBChlNdWx0aUdhbWVOb3RpZmljYXRpb25UeXBlEhQKEEdB",
-            "TUVfTk9USUZZX05PTkUQABIVChFHQU1FX05PVElGWV9TVEFSVBBkEhYKEUdB",
-            "TUVfTk9USUZZX1JFQURZEMgBEh0KGEdBTUVfTk9USUZZX1BMQVlFUl9SRUFE",
-            "WRD6ARIgChtHQU1FX05PVElGWV9FTlFVRVVFX0FCSUxJVFkQ3AsSIAobR0FN",
-            "RV9OT1RJRllfREVRVUVVRV9BQklMSVRZEMAMEhwKF0dBTUVfTk9USUZZX0xP",
-            "Q0tfQUNUSU9OEKQNQk1aNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1",
-            "bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0",
-            "aWIGcHJvdG8z"));
+            "YW1lUmVhZHlOb3RpZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEoCSKrAQodR2Ft",
+            "ZUVucXVldWVBY3Rpb25Ob3RpZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEoCRIU",
+            "CgxwbGF5ZXJfaW5kZXgYAiABKAUSKwoGYWN0aW9uGAMgASgOMhsubXVsdGku",
+            "R2FtZVBsYXllckFjdGlvblR5cGUSEgoKc2xvdF9pbmRleBgEIAEoBRIOCgZ0",
+            "YXJnZXQYBSABKAUSEgoKZWxlbWVudF9pZBgGIAEoCSJGCh1HYW1lRGVxdWV1",
+            "ZUFjdGlvbk5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJEhQKDHBsYXll",
+            "cl9pbmRleBgCIAEoBSJDChpHYW1lTG9ja0FjdGlvbk5vdGlmaWNhdGlvbhIP",
+            "CgdnYW1lX2lkGAEgASgJEhQKDHBsYXllcl9pbmRleBgCIAEoBSrtAQoaTXVs",
+            "dGlMb2JieU5vdGlmaWNhdGlvblR5cGUSCQoFRU1QVFkQABIUChBQQVJUSUNJ",
+            "UEFOVF9KT0lOEGQSFgoRUEFSVElDSVBBTlRfTEVBVkUQyAESFgoRUEFSVElD",
+            "SVBBTlRfUkVBRFkQrAISGAoTUEFSVElDSVBBTlRfVU5SRUFEWRCQAxIPCgpT",
+            "VEFNUF9TRU5EEPQDEhwKF1BBUlRJQ0lQQU5UX0RFQ0tfQ0hBTkdFENgEEhEK",
+            "DExPQkJZX0NBTkNFTBC8BRIQCgtMT0JCWV9TVEFSVBCgBhIQCgtMT0JCWV9S",
+            "RUFEWRCEByrfAQoZTXVsdGlHYW1lTm90aWZpY2F0aW9uVHlwZRIUChBHQU1F",
+            "X05PVElGWV9OT05FEAASFQoRR0FNRV9OT1RJRllfU1RBUlQQZBIWChFHQU1F",
+            "X05PVElGWV9SRUFEWRDIARIdChhHQU1FX05PVElGWV9QTEFZRVJfUkVBRFkQ",
+            "+gESHwoaR0FNRV9OT1RJRllfRU5RVUVVRV9BQ1RJT04Q3AsSHwoaR0FNRV9O",
+            "T1RJRllfREVRVUVVRV9BQ1RJT04QwAwSHAoXR0FNRV9OT1RJRllfTE9DS19B",
+            "Q1RJT04QpA1CTVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3Br",
+            "Zy9nZW5wcm90by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,8 +80,8 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameStartNotification), global::Mobius.Proto.Multi.GameStartNotification.Parser, new[]{ "GameId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReadyNotification), global::Mobius.Proto.Multi.GamePlayerReadyNotification.Parser, new[]{ "GameId", "PlayerIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyNotification), global::Mobius.Proto.Multi.GameReadyNotification.Parser, new[]{ "GameId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueAbilityNotification), global::Mobius.Proto.Multi.GameEnqueueAbilityNotification.Parser, new[]{ "GameId", "PlayerIndex", "Action", "SlotIndex", "Target", "ElementId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameDequeueAbilityNotification), global::Mobius.Proto.Multi.GameDequeueAbilityNotification.Parser, new[]{ "GameId", "PlayerIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionNotification), global::Mobius.Proto.Multi.GameEnqueueActionNotification.Parser, new[]{ "GameId", "PlayerIndex", "Action", "SlotIndex", "Target", "ElementId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameDequeueActionNotification), global::Mobius.Proto.Multi.GameDequeueActionNotification.Parser, new[]{ "GameId", "PlayerIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameLockActionNotification), global::Mobius.Proto.Multi.GameLockActionNotification.Parser, new[]{ "GameId", "PlayerIndex" }, null, null, null, null)
           }));
     }
@@ -107,8 +107,8 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("GAME_NOTIFY_START")] GameNotifyStart = 100,
     [pbr::OriginalName("GAME_NOTIFY_READY")] GameNotifyReady = 200,
     [pbr::OriginalName("GAME_NOTIFY_PLAYER_READY")] GameNotifyPlayerReady = 250,
-    [pbr::OriginalName("GAME_NOTIFY_ENQUEUE_ABILITY")] GameNotifyEnqueueAbility = 1500,
-    [pbr::OriginalName("GAME_NOTIFY_DEQUEUE_ABILITY")] GameNotifyDequeueAbility = 1600,
+    [pbr::OriginalName("GAME_NOTIFY_ENQUEUE_ACTION")] GameNotifyEnqueueAction = 1500,
+    [pbr::OriginalName("GAME_NOTIFY_DEQUEUE_ACTION")] GameNotifyDequeueAction = 1600,
     [pbr::OriginalName("GAME_NOTIFY_LOCK_ACTION")] GameNotifyLockAction = 1700,
   }
 
@@ -2665,15 +2665,15 @@ namespace Mobius.Proto.Multi {
 
   }
 
-  public sealed partial class GameEnqueueAbilityNotification : pb::IMessage<GameEnqueueAbilityNotification>
+  public sealed partial class GameEnqueueActionNotification : pb::IMessage<GameEnqueueActionNotification>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GameEnqueueAbilityNotification> _parser = new pb::MessageParser<GameEnqueueAbilityNotification>(() => new GameEnqueueAbilityNotification());
+    private static readonly pb::MessageParser<GameEnqueueActionNotification> _parser = new pb::MessageParser<GameEnqueueActionNotification>(() => new GameEnqueueActionNotification());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GameEnqueueAbilityNotification> Parser { get { return _parser; } }
+    public static pb::MessageParser<GameEnqueueActionNotification> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -2686,14 +2686,14 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameEnqueueAbilityNotification() {
+    public GameEnqueueActionNotification() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameEnqueueAbilityNotification(GameEnqueueAbilityNotification other) : this() {
+    public GameEnqueueActionNotification(GameEnqueueActionNotification other) : this() {
       gameId_ = other.gameId_;
       playerIndex_ = other.playerIndex_;
       action_ = other.action_;
@@ -2704,8 +2704,8 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameEnqueueAbilityNotification Clone() {
-      return new GameEnqueueAbilityNotification(this);
+    public GameEnqueueActionNotification Clone() {
+      return new GameEnqueueActionNotification(this);
     }
 
     /// <summary>Field number for the "game_id" field.</summary>
@@ -2776,11 +2776,11 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GameEnqueueAbilityNotification);
+      return Equals(other as GameEnqueueActionNotification);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GameEnqueueAbilityNotification other) {
+    public bool Equals(GameEnqueueActionNotification other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2912,7 +2912,7 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GameEnqueueAbilityNotification other) {
+    public void MergeFrom(GameEnqueueActionNotification other) {
       if (other == null) {
         return;
       }
@@ -3017,15 +3017,15 @@ namespace Mobius.Proto.Multi {
 
   }
 
-  public sealed partial class GameDequeueAbilityNotification : pb::IMessage<GameDequeueAbilityNotification>
+  public sealed partial class GameDequeueActionNotification : pb::IMessage<GameDequeueActionNotification>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GameDequeueAbilityNotification> _parser = new pb::MessageParser<GameDequeueAbilityNotification>(() => new GameDequeueAbilityNotification());
+    private static readonly pb::MessageParser<GameDequeueActionNotification> _parser = new pb::MessageParser<GameDequeueActionNotification>(() => new GameDequeueActionNotification());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GameDequeueAbilityNotification> Parser { get { return _parser; } }
+    public static pb::MessageParser<GameDequeueActionNotification> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -3038,22 +3038,22 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameDequeueAbilityNotification() {
+    public GameDequeueActionNotification() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameDequeueAbilityNotification(GameDequeueAbilityNotification other) : this() {
+    public GameDequeueActionNotification(GameDequeueActionNotification other) : this() {
       gameId_ = other.gameId_;
       playerIndex_ = other.playerIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameDequeueAbilityNotification Clone() {
-      return new GameDequeueAbilityNotification(this);
+    public GameDequeueActionNotification Clone() {
+      return new GameDequeueActionNotification(this);
     }
 
     /// <summary>Field number for the "game_id" field.</summary>
@@ -3080,11 +3080,11 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GameDequeueAbilityNotification);
+      return Equals(other as GameDequeueActionNotification);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GameDequeueAbilityNotification other) {
+    public bool Equals(GameDequeueActionNotification other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -3164,7 +3164,7 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GameDequeueAbilityNotification other) {
+    public void MergeFrom(GameDequeueActionNotification other) {
       if (other == null) {
         return;
       }
