@@ -170,15 +170,15 @@ func (x *GetGameResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewGamePlayerReadyActionRequest(bytes []byte) (*GamePlayerReadyActionRequest, error) {
-	req := &GamePlayerReadyActionRequest{}
+func NewGameReadyPlayerRequest(bytes []byte) (*GameReadyPlayerRequest, error) {
+	req := &GameReadyPlayerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *GamePlayerReadyActionResponse) MarshallBinary() ([]byte, error) {
+func (x *GameReadyPlayerResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
