@@ -26,46 +26,46 @@ namespace Mobius.Proto.Multi {
           string.Concat(
             "Ch5wcm90b211bHRpL211bHRpLnJlcXVlc3QucHJvdG8SBW11bHRpGhZwcm90",
             "b211bHRpL211bHRpLnByb3RvIiEKDkdldEdhbWVSZXF1ZXN0Eg8KB2dhbWVf",
-            "aWQYASABKAkiHgocR2FtZVBsYXllclJlYWR5QWN0aW9uUmVxdWVzdCJ/ChhH",
-            "YW1lRW5xdWV1ZUFjdGlvblJlcXVlc3QSKwoGYWN0aW9uGAEgASgOMhsubXVs",
-            "dGkuR2FtZVBsYXllckFjdGlvblR5cGUSDgoGdGFyZ2V0GAIgASgFEhIKCnNs",
-            "b3RfaW5kZXgYAyABKAUSEgoKZWxlbWVudF9pZBgEIAEoCSIaChhHYW1lRGVx",
-            "dWV1ZUFjdGlvblJlcXVlc3QiFwoVR2FtZUxvY2tBY3Rpb25SZXF1ZXN0IkIK",
-            "FENyZWF0ZVNlc3Npb25SZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIXCg9t",
-            "b2RlX2lkZW50aWZpZXIYAiABKAkiPwoRRW5kU2Vzc2lvblJlcXVlc3QSEQoJ",
-            "cGxheWVyX2lkGAIgASgJEhcKD21vZGVfaWRlbnRpZmllchgDIAEoCSKRAQoS",
-            "U2VhcmNoTG9iYnlSZXF1ZXN0EhIKCmRlY2tfaW5kZXgYAiABKAUSFwoPbW9k",
-            "ZV9pZGVudGlmaWVyGAMgASgJEg4KBmxldmVscxgEIAMoBRISCgpjYXRlZ29y",
-            "aWVzGAUgAygJEhgKEG1pbl9wbGF5ZXJfbGV2ZWwYBiABKAUSEAoIcGFydHlf",
-            "aWQYByABKAkiJQoRV2F0Y2hMb2JieVJlcXVlc3QSEAoIbG9iYnlfaWQYAiAB",
-            "KAkiFQoTVW53YXRjaExvYmJ5UmVxdWVzdCKjAQoSQ3JlYXRlTG9iYnlSZXF1",
-            "ZXN0EhIKCmRlY2tfaW5kZXgYAiABKAUSEAoIcXVlc3RfaWQYAyABKAkSDwoH",
-            "Y29tbWVudBgEIAEoCRIYChBtaW5fcGxheWVyX2xldmVsGAUgASgFEjwKDHJl",
-            "c3RyaWN0aW9ucxgGIAMoCzImLm11bHRpLlByb3RvTG9iYnlQbGF5ZXJTbG90",
-            "UmVzdHJpY3Rpb24idgoQSm9pbkxvYmJ5UmVxdWVzdBIQCghsb2JieV9pZBgC",
-            "IAEoCRISCgpzbG90X2luZGV4GAMgASgFEhIKCmRlY2tfaW5kZXgYBCABKAUS",
-            "EwoLdXNlX3N0YW1pbmEYBSABKAgSEwoLZnJvbV9pbnZpdGUYBiABKAgiEwoR",
-            "TGVhdmVMb2JieVJlcXVlc3QiEwoRU3RhcnRMb2JieVJlcXVlc3QiOQoRUmVh",
-            "ZHlMb2JieVJlcXVlc3QSEAoIbG9iYnlfaWQYAiABKAkSEgoKZGVja19pbmRl",
-            "eBgEIAEoBSInChNVbnJlYWR5TG9iYnlSZXF1ZXN0EhAKCGxvYmJ5X2lkGAIg",
-            "ASgJIhQKEkNhbmNlbExvYmJ5UmVxdWVzdCIkChBTZW5kU3RhbXBSZXF1ZXN0",
-            "EhAKCHN0YW1wX2lkGAEgASgJKpYDChBNdWx0aVJlcXVlc3RUeXBlEhUKEVJF",
-            "UVVFU1RfVFlQRV9OT05FEAASEgoOQ1JFQVRFX1NFU1NJT04QZBIQCgtFTkRf",
-            "U0VTU0lPThDIARIRCgxTRUFSQ0hfTE9CQlkQrAISEQoMQ1JFQVRFX0xPQkJZ",
-            "EJADEg8KCkpPSU5fTE9CQlkQ9AMSEAoLUkVBRFlfTE9CQlkQ2AQSEAoLV0FU",
-            "Q0hfTE9CQlkQvAUSEgoNRElTQ0FSRF9MT0JCWRCgBhIRCgxDQU5DRUxfTE9C",
-            "QlkQhAcSEgoNVU5SRUFEWV9MT0JCWRDoBxISCg1TRUFSQ0hfUExBWUVSEMwI",
-            "Eg8KClNFTkRfU1RBTVAQsAkSEAoLU1RBUlRfTE9CQlkQlAoSDQoIR0VUX0dB",
-            "TUUQ+AoSHQoYR0FNRV9QTEFZRVJfUkVBRFlfQUNUSU9OEKoLEhgKE0dBTUVf",
-            "RU5RVUVVRV9BQ1RJT04Q3AsSGAoTR0FNRV9ERVFVRVVFX0FDVElPThDADBIW",
-            "ChFHQU1FX0xPQ0tfQUNUSU9OUxCkDUJNWjZnaXRodWIuY29tL2p1c3RqYWNr",
-            "MTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMu",
-            "UHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "aWQYASABKAkiGAoWR2FtZVJlYWR5UGxheWVyUmVxdWVzdCJ/ChhHYW1lRW5x",
+            "dWV1ZUFjdGlvblJlcXVlc3QSKwoGYWN0aW9uGAEgASgOMhsubXVsdGkuR2Ft",
+            "ZVBsYXllckFjdGlvblR5cGUSDgoGdGFyZ2V0GAIgASgFEhIKCnNsb3RfaW5k",
+            "ZXgYAyABKAUSEgoKZWxlbWVudF9pZBgEIAEoCSIaChhHYW1lRGVxdWV1ZUFj",
+            "dGlvblJlcXVlc3QiFwoVR2FtZUxvY2tBY3Rpb25SZXF1ZXN0IkIKFENyZWF0",
+            "ZVNlc3Npb25SZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIXCg9tb2RlX2lk",
+            "ZW50aWZpZXIYAiABKAkiPwoRRW5kU2Vzc2lvblJlcXVlc3QSEQoJcGxheWVy",
+            "X2lkGAIgASgJEhcKD21vZGVfaWRlbnRpZmllchgDIAEoCSKRAQoSU2VhcmNo",
+            "TG9iYnlSZXF1ZXN0EhIKCmRlY2tfaW5kZXgYAiABKAUSFwoPbW9kZV9pZGVu",
+            "dGlmaWVyGAMgASgJEg4KBmxldmVscxgEIAMoBRISCgpjYXRlZ29yaWVzGAUg",
+            "AygJEhgKEG1pbl9wbGF5ZXJfbGV2ZWwYBiABKAUSEAoIcGFydHlfaWQYByAB",
+            "KAkiJQoRV2F0Y2hMb2JieVJlcXVlc3QSEAoIbG9iYnlfaWQYAiABKAkiFQoT",
+            "VW53YXRjaExvYmJ5UmVxdWVzdCKjAQoSQ3JlYXRlTG9iYnlSZXF1ZXN0EhIK",
+            "CmRlY2tfaW5kZXgYAiABKAUSEAoIcXVlc3RfaWQYAyABKAkSDwoHY29tbWVu",
+            "dBgEIAEoCRIYChBtaW5fcGxheWVyX2xldmVsGAUgASgFEjwKDHJlc3RyaWN0",
+            "aW9ucxgGIAMoCzImLm11bHRpLlByb3RvTG9iYnlQbGF5ZXJTbG90UmVzdHJp",
+            "Y3Rpb24idgoQSm9pbkxvYmJ5UmVxdWVzdBIQCghsb2JieV9pZBgCIAEoCRIS",
+            "CgpzbG90X2luZGV4GAMgASgFEhIKCmRlY2tfaW5kZXgYBCABKAUSEwoLdXNl",
+            "X3N0YW1pbmEYBSABKAgSEwoLZnJvbV9pbnZpdGUYBiABKAgiEwoRTGVhdmVM",
+            "b2JieVJlcXVlc3QiEwoRU3RhcnRMb2JieVJlcXVlc3QiOQoRUmVhZHlMb2Ji",
+            "eVJlcXVlc3QSEAoIbG9iYnlfaWQYAiABKAkSEgoKZGVja19pbmRleBgEIAEo",
+            "BSInChNVbnJlYWR5TG9iYnlSZXF1ZXN0EhAKCGxvYmJ5X2lkGAIgASgJIhQK",
+            "EkNhbmNlbExvYmJ5UmVxdWVzdCIkChBTZW5kU3RhbXBSZXF1ZXN0EhAKCHN0",
+            "YW1wX2lkGAEgASgJKo8DChBNdWx0aVJlcXVlc3RUeXBlEhUKEVJFUVVFU1Rf",
+            "VFlQRV9OT05FEAASEgoOQ1JFQVRFX1NFU1NJT04QZBIQCgtFTkRfU0VTU0lP",
+            "ThDIARIRCgxTRUFSQ0hfTE9CQlkQrAISEQoMQ1JFQVRFX0xPQkJZEJADEg8K",
+            "CkpPSU5fTE9CQlkQ9AMSEAoLUkVBRFlfTE9CQlkQ2AQSEAoLV0FUQ0hfTE9C",
+            "QlkQvAUSEgoNRElTQ0FSRF9MT0JCWRCgBhIRCgxDQU5DRUxfTE9CQlkQhAcS",
+            "EgoNVU5SRUFEWV9MT0JCWRDoBxISCg1TRUFSQ0hfUExBWUVSEMwIEg8KClNF",
+            "TkRfU1RBTVAQsAkSEAoLU1RBUlRfTE9CQlkQlAoSDQoIR0VUX0dBTUUQ+AoS",
+            "FgoRR0FNRV9SRUFEWV9QTEFZRVIQqgsSGAoTR0FNRV9FTlFVRVVFX0FDVElP",
+            "ThDcCxIYChNHQU1FX0RFUVVFVUVfQUNUSU9OEMAMEhYKEUdBTUVfTE9DS19B",
+            "Q1RJT05TEKQNQk1aNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
+            "a2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GetGameRequest), global::Mobius.Proto.Multi.GetGameRequest.Parser, new[]{ "GameId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReadyActionRequest), global::Mobius.Proto.Multi.GamePlayerReadyActionRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyPlayerRequest), global::Mobius.Proto.Multi.GameReadyPlayerRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionRequest), global::Mobius.Proto.Multi.GameEnqueueActionRequest.Parser, new[]{ "Action", "Target", "SlotIndex", "ElementId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameDequeueActionRequest), global::Mobius.Proto.Multi.GameDequeueActionRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameLockActionRequest), global::Mobius.Proto.Multi.GameLockActionRequest.Parser, null, null, null, null, null),
@@ -104,7 +104,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("SEND_STAMP")] SendStamp = 1200,
     [pbr::OriginalName("START_LOBBY")] StartLobby = 1300,
     [pbr::OriginalName("GET_GAME")] GetGame = 1400,
-    [pbr::OriginalName("GAME_PLAYER_READY_ACTION")] GamePlayerReadyAction = 1450,
+    [pbr::OriginalName("GAME_READY_PLAYER")] GameReadyPlayer = 1450,
     [pbr::OriginalName("GAME_ENQUEUE_ACTION")] GameEnqueueAction = 1500,
     [pbr::OriginalName("GAME_DEQUEUE_ACTION")] GameDequeueAction = 1600,
     [pbr::OriginalName("GAME_LOCK_ACTIONS")] GameLockActions = 1700,
@@ -285,15 +285,15 @@ namespace Mobius.Proto.Multi {
 
   }
 
-  public sealed partial class GamePlayerReadyActionRequest : pb::IMessage<GamePlayerReadyActionRequest>
+  public sealed partial class GameReadyPlayerRequest : pb::IMessage<GameReadyPlayerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GamePlayerReadyActionRequest> _parser = new pb::MessageParser<GamePlayerReadyActionRequest>(() => new GamePlayerReadyActionRequest());
+    private static readonly pb::MessageParser<GameReadyPlayerRequest> _parser = new pb::MessageParser<GameReadyPlayerRequest>(() => new GameReadyPlayerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GamePlayerReadyActionRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<GameReadyPlayerRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -306,29 +306,29 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GamePlayerReadyActionRequest() {
+    public GameReadyPlayerRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GamePlayerReadyActionRequest(GamePlayerReadyActionRequest other) : this() {
+    public GameReadyPlayerRequest(GameReadyPlayerRequest other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GamePlayerReadyActionRequest Clone() {
-      return new GamePlayerReadyActionRequest(this);
+    public GameReadyPlayerRequest Clone() {
+      return new GameReadyPlayerRequest(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GamePlayerReadyActionRequest);
+      return Equals(other as GameReadyPlayerRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GamePlayerReadyActionRequest other) {
+    public bool Equals(GameReadyPlayerRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -382,7 +382,7 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GamePlayerReadyActionRequest other) {
+    public void MergeFrom(GameReadyPlayerRequest other) {
       if (other == null) {
         return;
       }

@@ -28,24 +28,24 @@ namespace Mobius.Proto.Multi {
             "dG9tdWx0aS9tdWx0aS5wcm90byJxCg9HZXRHYW1lUmVzcG9uc2USKwoJZ2Ft",
             "ZV9kYXRhGAEgASgLMhgubXVsdGkuUHJvdG9HYW1lSW5zdGFuY2USMQoMcGFy",
             "dGljaXBhbnRzGAIgAygLMhsubXVsdGkuUHJvdG9HYW1lUGFydGljaXBhbnQi",
-            "HwodR2FtZVBsYXllclJlYWR5QWN0aW9uUmVzcG9uc2UiGwoZR2FtZUVucXVl",
-            "dWVBY3Rpb25SZXNwb25zZSIbChlHYW1lRGVxdWV1ZUFjdGlvblJlc3BvbnNl",
-            "IhgKFkdhbWVMb2NrQWN0aW9uUmVzcG9uc2UiFwoVQ3JlYXRlU2Vzc2lvblJl",
-            "c3BvbnNlIhQKEkVuZFNlc3Npb25SZXNwb25zZSJAChNTZWFyY2hMb2JieVJl",
-            "c3BvbnNlEikKB2xvYmJpZXMYASADKAsyGC5tdWx0aS5Qcm90b0xvYmJ5U3Vt",
-            "bWFyeSIUChJXYXRjaExvYmJ5UmVzcG9uc2UiFgoUVW53YXRjaExvYmJ5UmVz",
-            "cG9uc2UiOQoTQ3JlYXRlTG9iYnlSZXNwb25zZRIQCghsb2JieV9pZBgBIAEo",
-            "CRIQCghwYXJ0eV9pZBgCIAEoCSITChFKb2luTG9iYnlSZXNwb25zZSIUChJM",
-            "ZWF2ZUxvYmJ5UmVzcG9uc2UiFAoSUmVhZHlMb2JieVJlc3BvbnNlIhYKFFVu",
-            "cmVhZHlMb2JieVJlc3BvbnNlIhUKE0NhbmNlbExvYmJ5UmVzcG9uc2UiEwoR",
-            "U2VuZFN0YW1wUmVzcG9uc2UiFAoSU3RhcnRMb2JieVJlc3BvbnNlQk1aNmdp",
-            "dGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJv",
-            "dG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
+            "GQoXR2FtZVJlYWR5UGxheWVyUmVzcG9uc2UiGwoZR2FtZUVucXVldWVBY3Rp",
+            "b25SZXNwb25zZSIbChlHYW1lRGVxdWV1ZUFjdGlvblJlc3BvbnNlIhgKFkdh",
+            "bWVMb2NrQWN0aW9uUmVzcG9uc2UiFwoVQ3JlYXRlU2Vzc2lvblJlc3BvbnNl",
+            "IhQKEkVuZFNlc3Npb25SZXNwb25zZSJAChNTZWFyY2hMb2JieVJlc3BvbnNl",
+            "EikKB2xvYmJpZXMYASADKAsyGC5tdWx0aS5Qcm90b0xvYmJ5U3VtbWFyeSIU",
+            "ChJXYXRjaExvYmJ5UmVzcG9uc2UiFgoUVW53YXRjaExvYmJ5UmVzcG9uc2Ui",
+            "OQoTQ3JlYXRlTG9iYnlSZXNwb25zZRIQCghsb2JieV9pZBgBIAEoCRIQCghw",
+            "YXJ0eV9pZBgCIAEoCSITChFKb2luTG9iYnlSZXNwb25zZSIUChJMZWF2ZUxv",
+            "YmJ5UmVzcG9uc2UiFAoSUmVhZHlMb2JieVJlc3BvbnNlIhYKFFVucmVhZHlM",
+            "b2JieVJlc3BvbnNlIhUKE0NhbmNlbExvYmJ5UmVzcG9uc2UiEwoRU2VuZFN0",
+            "YW1wUmVzcG9uc2UiFAoSU3RhcnRMb2JieVJlc3BvbnNlQk1aNmdpdGh1Yi5j",
+            "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0",
+            "aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GetGameResponse), global::Mobius.Proto.Multi.GetGameResponse.Parser, new[]{ "GameData", "Participants" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReadyActionResponse), global::Mobius.Proto.Multi.GamePlayerReadyActionResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyPlayerResponse), global::Mobius.Proto.Multi.GameReadyPlayerResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionResponse), global::Mobius.Proto.Multi.GameEnqueueActionResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameDequeueActionResponse), global::Mobius.Proto.Multi.GameDequeueActionResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameLockActionResponse), global::Mobius.Proto.Multi.GameLockActionResponse.Parser, null, null, null, null, null),
@@ -274,15 +274,15 @@ namespace Mobius.Proto.Multi {
 
   }
 
-  public sealed partial class GamePlayerReadyActionResponse : pb::IMessage<GamePlayerReadyActionResponse>
+  public sealed partial class GameReadyPlayerResponse : pb::IMessage<GameReadyPlayerResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GamePlayerReadyActionResponse> _parser = new pb::MessageParser<GamePlayerReadyActionResponse>(() => new GamePlayerReadyActionResponse());
+    private static readonly pb::MessageParser<GameReadyPlayerResponse> _parser = new pb::MessageParser<GameReadyPlayerResponse>(() => new GameReadyPlayerResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GamePlayerReadyActionResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<GameReadyPlayerResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -295,29 +295,29 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GamePlayerReadyActionResponse() {
+    public GameReadyPlayerResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GamePlayerReadyActionResponse(GamePlayerReadyActionResponse other) : this() {
+    public GameReadyPlayerResponse(GameReadyPlayerResponse other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GamePlayerReadyActionResponse Clone() {
-      return new GamePlayerReadyActionResponse(this);
+    public GameReadyPlayerResponse Clone() {
+      return new GameReadyPlayerResponse(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GamePlayerReadyActionResponse);
+      return Equals(other as GameReadyPlayerResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GamePlayerReadyActionResponse other) {
+    public bool Equals(GameReadyPlayerResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -371,7 +371,7 @@ namespace Mobius.Proto.Multi {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GamePlayerReadyActionResponse other) {
+    public void MergeFrom(GameReadyPlayerResponse other) {
       if (other == null) {
         return;
       }

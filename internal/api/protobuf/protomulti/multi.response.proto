@@ -12,7 +12,7 @@ message GetGameResponse {
   repeated ProtoGameParticipant participants = 2;
 }
 
-message GamePlayerReadyActionResponse {
+message GameReadyPlayerResponse {
 
 }
 

@@ -24,7 +24,7 @@ enum MultiRequestType {
   START_LOBBY = 1300;
 
   GET_GAME = 1400;
-  GAME_PLAYER_READY_ACTION = 1450;
+  GAME_READY_PLAYER = 1450;
   GAME_ENQUEUE_ACTION = 1500;
   GAME_DEQUEUE_ACTION = 1600;
   GAME_LOCK_ACTIONS = 1700;
@@ -35,7 +35,7 @@ message GetGameRequest {
   string game_id = 1;
 }
 
-message GamePlayerReadyActionRequest {
+message GameReadyPlayerRequest {
 
 }
 

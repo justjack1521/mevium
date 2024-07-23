@@ -20,24 +20,24 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusMultiService_CreateSession_FullMethodName     = "/service.MeviusMultiService/CreateSession"
-	MeviusMultiService_EndSession_FullMethodName        = "/service.MeviusMultiService/EndSession"
-	MeviusMultiService_SearchLobby_FullMethodName       = "/service.MeviusMultiService/SearchLobby"
-	MeviusMultiService_WatchLobby_FullMethodName        = "/service.MeviusMultiService/WatchLobby"
-	MeviusMultiService_UnwatchLobby_FullMethodName      = "/service.MeviusMultiService/UnwatchLobby"
-	MeviusMultiService_CreateLobby_FullMethodName       = "/service.MeviusMultiService/CreateLobby"
-	MeviusMultiService_CancelLobby_FullMethodName       = "/service.MeviusMultiService/CancelLobby"
-	MeviusMultiService_StartLobby_FullMethodName        = "/service.MeviusMultiService/StartLobby"
-	MeviusMultiService_JoinLobby_FullMethodName         = "/service.MeviusMultiService/JoinLobby"
-	MeviusMultiService_LeaveLobby_FullMethodName        = "/service.MeviusMultiService/LeaveLobby"
-	MeviusMultiService_ReadyLobby_FullMethodName        = "/service.MeviusMultiService/ReadyLobby"
-	MeviusMultiService_UnreadyLobby_FullMethodName      = "/service.MeviusMultiService/UnreadyLobby"
-	MeviusMultiService_SendStamp_FullMethodName         = "/service.MeviusMultiService/SendStamp"
-	MeviusMultiService_GetGame_FullMethodName           = "/service.MeviusMultiService/GetGame"
-	MeviusMultiService_PlayerReadyAction_FullMethodName = "/service.MeviusMultiService/PlayerReadyAction"
-	MeviusMultiService_EnqueueAction_FullMethodName     = "/service.MeviusMultiService/EnqueueAction"
-	MeviusMultiService_DequeueAction_FullMethodName     = "/service.MeviusMultiService/DequeueAction"
-	MeviusMultiService_LockAction_FullMethodName        = "/service.MeviusMultiService/LockAction"
+	MeviusMultiService_CreateSession_FullMethodName = "/service.MeviusMultiService/CreateSession"
+	MeviusMultiService_EndSession_FullMethodName    = "/service.MeviusMultiService/EndSession"
+	MeviusMultiService_SearchLobby_FullMethodName   = "/service.MeviusMultiService/SearchLobby"
+	MeviusMultiService_WatchLobby_FullMethodName    = "/service.MeviusMultiService/WatchLobby"
+	MeviusMultiService_UnwatchLobby_FullMethodName  = "/service.MeviusMultiService/UnwatchLobby"
+	MeviusMultiService_CreateLobby_FullMethodName   = "/service.MeviusMultiService/CreateLobby"
+	MeviusMultiService_CancelLobby_FullMethodName   = "/service.MeviusMultiService/CancelLobby"
+	MeviusMultiService_StartLobby_FullMethodName    = "/service.MeviusMultiService/StartLobby"
+	MeviusMultiService_JoinLobby_FullMethodName     = "/service.MeviusMultiService/JoinLobby"
+	MeviusMultiService_LeaveLobby_FullMethodName    = "/service.MeviusMultiService/LeaveLobby"
+	MeviusMultiService_ReadyLobby_FullMethodName    = "/service.MeviusMultiService/ReadyLobby"
+	MeviusMultiService_UnreadyLobby_FullMethodName  = "/service.MeviusMultiService/UnreadyLobby"
+	MeviusMultiService_SendStamp_FullMethodName     = "/service.MeviusMultiService/SendStamp"
+	MeviusMultiService_GetGame_FullMethodName       = "/service.MeviusMultiService/GetGame"
+	MeviusMultiService_ReadyPlayer_FullMethodName   = "/service.MeviusMultiService/ReadyPlayer"
+	MeviusMultiService_EnqueueAction_FullMethodName = "/service.MeviusMultiService/EnqueueAction"
+	MeviusMultiService_DequeueAction_FullMethodName = "/service.MeviusMultiService/DequeueAction"
+	MeviusMultiService_LockAction_FullMethodName    = "/service.MeviusMultiService/LockAction"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -58,7 +58,7 @@ type MeviusMultiServiceClient interface {
 	UnreadyLobby(ctx context.Context, in *protomulti.UnreadyLobbyRequest, opts ...grpc.CallOption) (*protomulti.UnreadyLobbyResponse, error)
 	SendStamp(ctx context.Context, in *protomulti.SendStampRequest, opts ...grpc.CallOption) (*protomulti.SendStampResponse, error)
 	GetGame(ctx context.Context, in *protomulti.GetGameRequest, opts ...grpc.CallOption) (*protomulti.GetGameResponse, error)
-	PlayerReadyAction(ctx context.Context, in *protomulti.GamePlayerReadyActionRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReadyActionResponse, error)
+	ReadyPlayer(ctx context.Context, in *protomulti.GameReadyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GameReadyPlayerResponse, error)
 	EnqueueAction(ctx context.Context, in *protomulti.GameEnqueueActionRequest, opts ...grpc.CallOption) (*protomulti.GameEnqueueActionResponse, error)
 	DequeueAction(ctx context.Context, in *protomulti.GameDequeueActionRequest, opts ...grpc.CallOption) (*protomulti.GameDequeueActionResponse, error)
 	LockAction(ctx context.Context, in *protomulti.GameLockActionRequest, opts ...grpc.CallOption) (*protomulti.GameLockActionResponse, error)
@@ -198,9 +198,9 @@ func (c *meviusMultiServiceClient) GetGame(ctx context.Context, in *protomulti.G
 	return out, nil
 }
 
-func (c *meviusMultiServiceClient) PlayerReadyAction(ctx context.Context, in *protomulti.GamePlayerReadyActionRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReadyActionResponse, error) {
-	out := new(protomulti.GamePlayerReadyActionResponse)
-	err := c.cc.Invoke(ctx, MeviusMultiService_PlayerReadyAction_FullMethodName, in, out, opts...)
+func (c *meviusMultiServiceClient) ReadyPlayer(ctx context.Context, in *protomulti.GameReadyPlayerRequest, opts ...grpc.CallOption) (*protomulti.GameReadyPlayerResponse, error) {
+	out := new(protomulti.GameReadyPlayerResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_ReadyPlayer_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -252,7 +252,7 @@ type MeviusMultiServiceServer interface {
 	UnreadyLobby(context.Context, *protomulti.UnreadyLobbyRequest) (*protomulti.UnreadyLobbyResponse, error)
 	SendStamp(context.Context, *protomulti.SendStampRequest) (*protomulti.SendStampResponse, error)
 	GetGame(context.Context, *protomulti.GetGameRequest) (*protomulti.GetGameResponse, error)
-	PlayerReadyAction(context.Context, *protomulti.GamePlayerReadyActionRequest) (*protomulti.GamePlayerReadyActionResponse, error)
+	ReadyPlayer(context.Context, *protomulti.GameReadyPlayerRequest) (*protomulti.GameReadyPlayerResponse, error)
 	EnqueueAction(context.Context, *protomulti.GameEnqueueActionRequest) (*protomulti.GameEnqueueActionResponse, error)
 	DequeueAction(context.Context, *protomulti.GameDequeueActionRequest) (*protomulti.GameDequeueActionResponse, error)
 	LockAction(context.Context, *protomulti.GameLockActionRequest) (*protomulti.GameLockActionResponse, error)
@@ -304,8 +304,8 @@ func (UnimplementedMeviusMultiServiceServer) SendStamp(context.Context, *protomu
 func (UnimplementedMeviusMultiServiceServer) GetGame(context.Context, *protomulti.GetGameRequest) (*protomulti.GetGameResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGame not implemented")
 }
-func (UnimplementedMeviusMultiServiceServer) PlayerReadyAction(context.Context, *protomulti.GamePlayerReadyActionRequest) (*protomulti.GamePlayerReadyActionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PlayerReadyAction not implemented")
+func (UnimplementedMeviusMultiServiceServer) ReadyPlayer(context.Context, *protomulti.GameReadyPlayerRequest) (*protomulti.GameReadyPlayerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ReadyPlayer not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) EnqueueAction(context.Context, *protomulti.GameEnqueueActionRequest) (*protomulti.GameEnqueueActionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method EnqueueAction not implemented")
@@ -580,20 +580,20 @@ func _MeviusMultiService_GetGame_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusMultiService_PlayerReadyAction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomulti.GamePlayerReadyActionRequest)
+func _MeviusMultiService_ReadyPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GameReadyPlayerRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusMultiServiceServer).PlayerReadyAction(ctx, in)
+		return srv.(MeviusMultiServiceServer).ReadyPlayer(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusMultiService_PlayerReadyAction_FullMethodName,
+		FullMethod: MeviusMultiService_ReadyPlayer_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusMultiServiceServer).PlayerReadyAction(ctx, req.(*protomulti.GamePlayerReadyActionRequest))
+		return srv.(MeviusMultiServiceServer).ReadyPlayer(ctx, req.(*protomulti.GameReadyPlayerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -716,8 +716,8 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusMultiService_GetGame_Handler,
 		},
 		{
-			MethodName: "PlayerReadyAction",
-			Handler:    _MeviusMultiService_PlayerReadyAction_Handler,
+			MethodName: "ReadyPlayer",
+			Handler:    _MeviusMultiService_ReadyPlayer_Handler,
 		},
 		{
 			MethodName: "EnqueueAction",

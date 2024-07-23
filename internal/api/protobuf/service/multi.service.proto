@@ -24,7 +24,7 @@ service MeviusMultiService {
   rpc SendStamp(multi.SendStampRequest) returns (multi.SendStampResponse) {}
 
   rpc GetGame(multi.GetGameRequest) returns (multi.GetGameResponse) {}
-  rpc PlayerReadyAction(multi.GamePlayerReadyActionRequest) returns (multi.GamePlayerReadyActionResponse) {}
+  rpc ReadyPlayer(multi.GameReadyPlayerRequest) returns (multi.GameReadyPlayerResponse) {}
   rpc EnqueueAction(multi.GameEnqueueActionRequest) returns (multi.GameEnqueueActionResponse) {}
   rpc DequeueAction(multi.GameDequeueActionRequest) returns (multi.GameDequeueActionResponse) {}
   rpc LockAction(multi.GameLockActionRequest) returns (multi.GameLockActionResponse) {}
