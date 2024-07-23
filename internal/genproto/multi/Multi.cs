@@ -38,7 +38,7 @@ namespace Mobius.Proto.Multi {
             "bhISCgpzbG90X2luZGV4GAEgASgFEhgKEHJvbGVfcmVzdHJpY3Rpb24YAiAB",
             "KAkSDgoGbG9ja2VkGAMgASgIEgsKA2JvdBgEIAEoCBITCgtpbnZpdGVfb25s",
             "eRgFIAEoCCJ9ChFQcm90b0dhbWVJbnN0YW5jZRIOCgZzeXNfaWQYASABKAkS",
-            "EAoIcGFydHlfaWQYAiABKAkSDAoEc2VlZBgDIAEoAxINCgVzdGF0ZRgEIAEo",
+            "EAoIcGFydHlfaWQYAiABKAkSDAoEc2VlZBgDIAEoBRINCgVzdGF0ZRgEIAEo",
             "BRISCgpzdGFydGVkX2F0GAUgASgDEhUKDXJlZ2lzdGVyZWRfYXQYFCABKAMi",
             "bgoUUHJvdG9HYW1lUGFydGljaXBhbnQSEgoKcGFydHlfc2xvdBgBIAEoBRIT",
             "Cgtib3RfY29udHJvbBgCIAEoCBItCgdsb2Fkb3V0GAMgASgLMhwuaWRlbnRp",
@@ -1275,9 +1275,9 @@ namespace Mobius.Proto.Multi {
 
     /// <summary>Field number for the "seed" field.</summary>
     public const int SeedFieldNumber = 3;
-    private long seed_;
+    private int seed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Seed {
+    public int Seed {
       get { return seed_; }
       set {
         seed_ = value;
@@ -1344,7 +1344,7 @@ namespace Mobius.Proto.Multi {
       int hash = 1;
       if (SysId.Length != 0) hash ^= SysId.GetHashCode();
       if (PartyId.Length != 0) hash ^= PartyId.GetHashCode();
-      if (Seed != 0L) hash ^= Seed.GetHashCode();
+      if (Seed != 0) hash ^= Seed.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (StartedAt != 0L) hash ^= StartedAt.GetHashCode();
       if (RegisteredAt != 0L) hash ^= RegisteredAt.GetHashCode();
@@ -1372,9 +1372,9 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(18);
         output.WriteString(PartyId);
       }
-      if (Seed != 0L) {
+      if (Seed != 0) {
         output.WriteRawTag(24);
-        output.WriteInt64(Seed);
+        output.WriteInt32(Seed);
       }
       if (State != 0) {
         output.WriteRawTag(32);
@@ -1405,9 +1405,9 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(18);
         output.WriteString(PartyId);
       }
-      if (Seed != 0L) {
+      if (Seed != 0) {
         output.WriteRawTag(24);
-        output.WriteInt64(Seed);
+        output.WriteInt32(Seed);
       }
       if (State != 0) {
         output.WriteRawTag(32);
@@ -1436,8 +1436,8 @@ namespace Mobius.Proto.Multi {
       if (PartyId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PartyId);
       }
-      if (Seed != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Seed);
+      if (Seed != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Seed);
       }
       if (State != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(State);
@@ -1465,7 +1465,7 @@ namespace Mobius.Proto.Multi {
       if (other.PartyId.Length != 0) {
         PartyId = other.PartyId;
       }
-      if (other.Seed != 0L) {
+      if (other.Seed != 0) {
         Seed = other.Seed;
       }
       if (other.State != 0) {
@@ -1500,7 +1500,7 @@ namespace Mobius.Proto.Multi {
             break;
           }
           case 24: {
-            Seed = input.ReadInt64();
+            Seed = input.ReadInt32();
             break;
           }
           case 32: {
@@ -1538,7 +1538,7 @@ namespace Mobius.Proto.Multi {
             break;
           }
           case 24: {
-            Seed = input.ReadInt64();
+            Seed = input.ReadInt32();
             break;
           }
           case 32: {

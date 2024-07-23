@@ -45,7 +45,7 @@ message ProtoLobbyPlayerSlotRestriction {
 message ProtoGameInstance {
   string sys_id = 1;
   string party_id = 2;
-  int64 seed = 3;
+  int32 seed = 3;
   int32 state = 4;
   int64 started_at = 5;
   int64 registered_at = 20;
