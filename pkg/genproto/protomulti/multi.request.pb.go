@@ -23,24 +23,25 @@ const (
 type MultiRequestType int32
 
 const (
-	MultiRequestType_REQUEST_TYPE_NONE   MultiRequestType = 0
-	MultiRequestType_CREATE_SESSION      MultiRequestType = 100
-	MultiRequestType_END_SESSION         MultiRequestType = 200
-	MultiRequestType_SEARCH_LOBBY        MultiRequestType = 300
-	MultiRequestType_CREATE_LOBBY        MultiRequestType = 400
-	MultiRequestType_JOIN_LOBBY          MultiRequestType = 500
-	MultiRequestType_READY_LOBBY         MultiRequestType = 600
-	MultiRequestType_WATCH_LOBBY         MultiRequestType = 700
-	MultiRequestType_DISCARD_LOBBY       MultiRequestType = 800
-	MultiRequestType_CANCEL_LOBBY        MultiRequestType = 900
-	MultiRequestType_UNREADY_LOBBY       MultiRequestType = 1000
-	MultiRequestType_SEARCH_PLAYER       MultiRequestType = 1100
-	MultiRequestType_SEND_STAMP          MultiRequestType = 1200
-	MultiRequestType_START_LOBBY         MultiRequestType = 1300
-	MultiRequestType_GET_GAME            MultiRequestType = 1400
-	MultiRequestType_GAME_ENQUEUE_ACTION MultiRequestType = 1500
-	MultiRequestType_GAME_DEQUEUE_ACTION MultiRequestType = 1600
-	MultiRequestType_GAME_LOCK_ACTIONS   MultiRequestType = 1700
+	MultiRequestType_REQUEST_TYPE_NONE        MultiRequestType = 0
+	MultiRequestType_CREATE_SESSION           MultiRequestType = 100
+	MultiRequestType_END_SESSION              MultiRequestType = 200
+	MultiRequestType_SEARCH_LOBBY             MultiRequestType = 300
+	MultiRequestType_CREATE_LOBBY             MultiRequestType = 400
+	MultiRequestType_JOIN_LOBBY               MultiRequestType = 500
+	MultiRequestType_READY_LOBBY              MultiRequestType = 600
+	MultiRequestType_WATCH_LOBBY              MultiRequestType = 700
+	MultiRequestType_DISCARD_LOBBY            MultiRequestType = 800
+	MultiRequestType_CANCEL_LOBBY             MultiRequestType = 900
+	MultiRequestType_UNREADY_LOBBY            MultiRequestType = 1000
+	MultiRequestType_SEARCH_PLAYER            MultiRequestType = 1100
+	MultiRequestType_SEND_STAMP               MultiRequestType = 1200
+	MultiRequestType_START_LOBBY              MultiRequestType = 1300
+	MultiRequestType_GET_GAME                 MultiRequestType = 1400
+	MultiRequestType_GAME_PLAYER_READY_ACTION MultiRequestType = 1450
+	MultiRequestType_GAME_ENQUEUE_ACTION      MultiRequestType = 1500
+	MultiRequestType_GAME_DEQUEUE_ACTION      MultiRequestType = 1600
+	MultiRequestType_GAME_LOCK_ACTIONS        MultiRequestType = 1700
 )
 
 // Enum value maps for MultiRequestType.
@@ -61,29 +62,31 @@ var (
 		1200: "SEND_STAMP",
 		1300: "START_LOBBY",
 		1400: "GET_GAME",
+		1450: "GAME_PLAYER_READY_ACTION",
 		1500: "GAME_ENQUEUE_ACTION",
 		1600: "GAME_DEQUEUE_ACTION",
 		1700: "GAME_LOCK_ACTIONS",
 	}
 	MultiRequestType_value = map[string]int32{
-		"REQUEST_TYPE_NONE":   0,
-		"CREATE_SESSION":      100,
-		"END_SESSION":         200,
-		"SEARCH_LOBBY":        300,
-		"CREATE_LOBBY":        400,
-		"JOIN_LOBBY":          500,
-		"READY_LOBBY":         600,
-		"WATCH_LOBBY":         700,
-		"DISCARD_LOBBY":       800,
-		"CANCEL_LOBBY":        900,
-		"UNREADY_LOBBY":       1000,
-		"SEARCH_PLAYER":       1100,
-		"SEND_STAMP":          1200,
-		"START_LOBBY":         1300,
-		"GET_GAME":            1400,
-		"GAME_ENQUEUE_ACTION": 1500,
-		"GAME_DEQUEUE_ACTION": 1600,
-		"GAME_LOCK_ACTIONS":   1700,
+		"REQUEST_TYPE_NONE":        0,
+		"CREATE_SESSION":           100,
+		"END_SESSION":              200,
+		"SEARCH_LOBBY":             300,
+		"CREATE_LOBBY":             400,
+		"JOIN_LOBBY":               500,
+		"READY_LOBBY":              600,
+		"WATCH_LOBBY":              700,
+		"DISCARD_LOBBY":            800,
+		"CANCEL_LOBBY":             900,
+		"UNREADY_LOBBY":            1000,
+		"SEARCH_PLAYER":            1100,
+		"SEND_STAMP":               1200,
+		"START_LOBBY":              1300,
+		"GET_GAME":                 1400,
+		"GAME_PLAYER_READY_ACTION": 1450,
+		"GAME_ENQUEUE_ACTION":      1500,
+		"GAME_DEQUEUE_ACTION":      1600,
+		"GAME_LOCK_ACTIONS":        1700,
 	}
 )
 
@@ -161,6 +164,44 @@ func (x *GetGameRequest) GetGameId() string {
 	return ""
 }
 
+type GamePlayerReadyActionRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *GamePlayerReadyActionRequest) Reset() {
+	*x = GamePlayerReadyActionRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protomulti_multi_request_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GamePlayerReadyActionRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerReadyActionRequest) ProtoMessage() {}
+
+func (x *GamePlayerReadyActionRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_request_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerReadyActionRequest.ProtoReflect.Descriptor instead.
+func (*GamePlayerReadyActionRequest) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{1}
+}
+
 type GameEnqueueActionRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -175,7 +216,7 @@ type GameEnqueueActionRequest struct {
 func (x *GameEnqueueActionRequest) Reset() {
 	*x = GameEnqueueActionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[1]
+		mi := &file_protomulti_multi_request_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -188,7 +229,7 @@ func (x *GameEnqueueActionRequest) String() string {
 func (*GameEnqueueActionRequest) ProtoMessage() {}
 
 func (x *GameEnqueueActionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[1]
+	mi := &file_protomulti_multi_request_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -201,7 +242,7 @@ func (x *GameEnqueueActionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameEnqueueActionRequest.ProtoReflect.Descriptor instead.
 func (*GameEnqueueActionRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{1}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *GameEnqueueActionRequest) GetAction() GamePlayerActionType {
@@ -241,7 +282,7 @@ type GameDequeueActionRequest struct {
 func (x *GameDequeueActionRequest) Reset() {
 	*x = GameDequeueActionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[2]
+		mi := &file_protomulti_multi_request_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -254,7 +295,7 @@ func (x *GameDequeueActionRequest) String() string {
 func (*GameDequeueActionRequest) ProtoMessage() {}
 
 func (x *GameDequeueActionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[2]
+	mi := &file_protomulti_multi_request_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -267,7 +308,7 @@ func (x *GameDequeueActionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameDequeueActionRequest.ProtoReflect.Descriptor instead.
 func (*GameDequeueActionRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{2}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{3}
 }
 
 type GameLockActionRequest struct {
@@ -279,7 +320,7 @@ type GameLockActionRequest struct {
 func (x *GameLockActionRequest) Reset() {
 	*x = GameLockActionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[3]
+		mi := &file_protomulti_multi_request_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -292,7 +333,7 @@ func (x *GameLockActionRequest) String() string {
 func (*GameLockActionRequest) ProtoMessage() {}
 
 func (x *GameLockActionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[3]
+	mi := &file_protomulti_multi_request_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -305,7 +346,7 @@ func (x *GameLockActionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameLockActionRequest.ProtoReflect.Descriptor instead.
 func (*GameLockActionRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{3}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{4}
 }
 
 type CreateSessionRequest struct {
@@ -320,7 +361,7 @@ type CreateSessionRequest struct {
 func (x *CreateSessionRequest) Reset() {
 	*x = CreateSessionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[4]
+		mi := &file_protomulti_multi_request_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -333,7 +374,7 @@ func (x *CreateSessionRequest) String() string {
 func (*CreateSessionRequest) ProtoMessage() {}
 
 func (x *CreateSessionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[4]
+	mi := &file_protomulti_multi_request_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -346,7 +387,7 @@ func (x *CreateSessionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateSessionRequest.ProtoReflect.Descriptor instead.
 func (*CreateSessionRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{4}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CreateSessionRequest) GetPlayerId() string {
@@ -375,7 +416,7 @@ type EndSessionRequest struct {
 func (x *EndSessionRequest) Reset() {
 	*x = EndSessionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[5]
+		mi := &file_protomulti_multi_request_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -388,7 +429,7 @@ func (x *EndSessionRequest) String() string {
 func (*EndSessionRequest) ProtoMessage() {}
 
 func (x *EndSessionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[5]
+	mi := &file_protomulti_multi_request_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -401,7 +442,7 @@ func (x *EndSessionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EndSessionRequest.ProtoReflect.Descriptor instead.
 func (*EndSessionRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{5}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *EndSessionRequest) GetPlayerId() string {
@@ -434,7 +475,7 @@ type SearchLobbyRequest struct {
 func (x *SearchLobbyRequest) Reset() {
 	*x = SearchLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[6]
+		mi := &file_protomulti_multi_request_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -447,7 +488,7 @@ func (x *SearchLobbyRequest) String() string {
 func (*SearchLobbyRequest) ProtoMessage() {}
 
 func (x *SearchLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[6]
+	mi := &file_protomulti_multi_request_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -460,7 +501,7 @@ func (x *SearchLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchLobbyRequest.ProtoReflect.Descriptor instead.
 func (*SearchLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{6}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *SearchLobbyRequest) GetDeckIndex() int32 {
@@ -516,7 +557,7 @@ type WatchLobbyRequest struct {
 func (x *WatchLobbyRequest) Reset() {
 	*x = WatchLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[7]
+		mi := &file_protomulti_multi_request_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -529,7 +570,7 @@ func (x *WatchLobbyRequest) String() string {
 func (*WatchLobbyRequest) ProtoMessage() {}
 
 func (x *WatchLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[7]
+	mi := &file_protomulti_multi_request_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -542,7 +583,7 @@ func (x *WatchLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WatchLobbyRequest.ProtoReflect.Descriptor instead.
 func (*WatchLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{7}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *WatchLobbyRequest) GetLobbyId() string {
@@ -561,7 +602,7 @@ type UnwatchLobbyRequest struct {
 func (x *UnwatchLobbyRequest) Reset() {
 	*x = UnwatchLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[8]
+		mi := &file_protomulti_multi_request_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -574,7 +615,7 @@ func (x *UnwatchLobbyRequest) String() string {
 func (*UnwatchLobbyRequest) ProtoMessage() {}
 
 func (x *UnwatchLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[8]
+	mi := &file_protomulti_multi_request_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -587,7 +628,7 @@ func (x *UnwatchLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnwatchLobbyRequest.ProtoReflect.Descriptor instead.
 func (*UnwatchLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{8}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{9}
 }
 
 type CreateLobbyRequest struct {
@@ -605,7 +646,7 @@ type CreateLobbyRequest struct {
 func (x *CreateLobbyRequest) Reset() {
 	*x = CreateLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[9]
+		mi := &file_protomulti_multi_request_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -618,7 +659,7 @@ func (x *CreateLobbyRequest) String() string {
 func (*CreateLobbyRequest) ProtoMessage() {}
 
 func (x *CreateLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[9]
+	mi := &file_protomulti_multi_request_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -631,7 +672,7 @@ func (x *CreateLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateLobbyRequest.ProtoReflect.Descriptor instead.
 func (*CreateLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{9}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *CreateLobbyRequest) GetDeckIndex() int32 {
@@ -684,7 +725,7 @@ type JoinLobbyRequest struct {
 func (x *JoinLobbyRequest) Reset() {
 	*x = JoinLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[10]
+		mi := &file_protomulti_multi_request_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -697,7 +738,7 @@ func (x *JoinLobbyRequest) String() string {
 func (*JoinLobbyRequest) ProtoMessage() {}
 
 func (x *JoinLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[10]
+	mi := &file_protomulti_multi_request_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -710,7 +751,7 @@ func (x *JoinLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use JoinLobbyRequest.ProtoReflect.Descriptor instead.
 func (*JoinLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{10}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *JoinLobbyRequest) GetLobbyId() string {
@@ -757,7 +798,7 @@ type LeaveLobbyRequest struct {
 func (x *LeaveLobbyRequest) Reset() {
 	*x = LeaveLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[11]
+		mi := &file_protomulti_multi_request_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -770,7 +811,7 @@ func (x *LeaveLobbyRequest) String() string {
 func (*LeaveLobbyRequest) ProtoMessage() {}
 
 func (x *LeaveLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[11]
+	mi := &file_protomulti_multi_request_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -783,7 +824,7 @@ func (x *LeaveLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LeaveLobbyRequest.ProtoReflect.Descriptor instead.
 func (*LeaveLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{11}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{12}
 }
 
 type StartLobbyRequest struct {
@@ -795,7 +836,7 @@ type StartLobbyRequest struct {
 func (x *StartLobbyRequest) Reset() {
 	*x = StartLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[12]
+		mi := &file_protomulti_multi_request_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -808,7 +849,7 @@ func (x *StartLobbyRequest) String() string {
 func (*StartLobbyRequest) ProtoMessage() {}
 
 func (x *StartLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[12]
+	mi := &file_protomulti_multi_request_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -821,7 +862,7 @@ func (x *StartLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StartLobbyRequest.ProtoReflect.Descriptor instead.
 func (*StartLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{12}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{13}
 }
 
 type ReadyLobbyRequest struct {
@@ -836,7 +877,7 @@ type ReadyLobbyRequest struct {
 func (x *ReadyLobbyRequest) Reset() {
 	*x = ReadyLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[13]
+		mi := &file_protomulti_multi_request_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -849,7 +890,7 @@ func (x *ReadyLobbyRequest) String() string {
 func (*ReadyLobbyRequest) ProtoMessage() {}
 
 func (x *ReadyLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[13]
+	mi := &file_protomulti_multi_request_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -862,7 +903,7 @@ func (x *ReadyLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadyLobbyRequest.ProtoReflect.Descriptor instead.
 func (*ReadyLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{13}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *ReadyLobbyRequest) GetLobbyId() string {
@@ -890,7 +931,7 @@ type UnreadyLobbyRequest struct {
 func (x *UnreadyLobbyRequest) Reset() {
 	*x = UnreadyLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[14]
+		mi := &file_protomulti_multi_request_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -903,7 +944,7 @@ func (x *UnreadyLobbyRequest) String() string {
 func (*UnreadyLobbyRequest) ProtoMessage() {}
 
 func (x *UnreadyLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[14]
+	mi := &file_protomulti_multi_request_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -916,7 +957,7 @@ func (x *UnreadyLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnreadyLobbyRequest.ProtoReflect.Descriptor instead.
 func (*UnreadyLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{14}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *UnreadyLobbyRequest) GetLobbyId() string {
@@ -935,7 +976,7 @@ type CancelLobbyRequest struct {
 func (x *CancelLobbyRequest) Reset() {
 	*x = CancelLobbyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[15]
+		mi := &file_protomulti_multi_request_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -948,7 +989,7 @@ func (x *CancelLobbyRequest) String() string {
 func (*CancelLobbyRequest) ProtoMessage() {}
 
 func (x *CancelLobbyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[15]
+	mi := &file_protomulti_multi_request_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -961,7 +1002,7 @@ func (x *CancelLobbyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CancelLobbyRequest.ProtoReflect.Descriptor instead.
 func (*CancelLobbyRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{15}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{16}
 }
 
 type SendStampRequest struct {
@@ -975,7 +1016,7 @@ type SendStampRequest struct {
 func (x *SendStampRequest) Reset() {
 	*x = SendStampRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_request_proto_msgTypes[16]
+		mi := &file_protomulti_multi_request_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -988,7 +1029,7 @@ func (x *SendStampRequest) String() string {
 func (*SendStampRequest) ProtoMessage() {}
 
 func (x *SendStampRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_request_proto_msgTypes[16]
+	mi := &file_protomulti_multi_request_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1001,7 +1042,7 @@ func (x *SendStampRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendStampRequest.ProtoReflect.Descriptor instead.
 func (*SendStampRequest) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{16}
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *SendStampRequest) GetStampId() string {
@@ -1020,7 +1061,9 @@ var file_protomulti_multi_request_proto_rawDesc = []byte{
 	0x6c, 0x74, 0x69, 0x2f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22,
 	0x29, 0x0a, 0x0e, 0x47, 0x65, 0x74, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x12, 0x17, 0x0a, 0x07, 0x67, 0x61, 0x6d, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x06, 0x67, 0x61, 0x6d, 0x65, 0x49, 0x64, 0x22, 0xa5, 0x01, 0x0a, 0x18, 0x47,
+	0x28, 0x09, 0x52, 0x06, 0x67, 0x61, 0x6d, 0x65, 0x49, 0x64, 0x22, 0x1e, 0x0a, 0x1c, 0x47, 0x61,
+	0x6d, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x61, 0x64, 0x79, 0x41, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0xa5, 0x01, 0x0a, 0x18, 0x47,
 	0x61, 0x6d, 0x65, 0x45, 0x6e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x33, 0x0a, 0x06, 0x61, 0x63, 0x74, 0x69, 0x6f,
 	0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x1b, 0x2e, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0x2e,
@@ -1104,7 +1147,7 @@ var file_protomulti_multi_request_proto_rawDesc = []byte{
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x2d, 0x0a, 0x10, 0x53, 0x65, 0x6e, 0x64, 0x53, 0x74, 0x61,
 	0x6d, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x19, 0x0a, 0x08, 0x73, 0x74, 0x61,
 	0x6d, 0x70, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x73, 0x74, 0x61,
-	0x6d, 0x70, 0x49, 0x64, 0x2a, 0xf7, 0x02, 0x0a, 0x10, 0x4d, 0x75, 0x6c, 0x74, 0x69, 0x52, 0x65,
+	0x6d, 0x70, 0x49, 0x64, 0x2a, 0x96, 0x03, 0x0a, 0x10, 0x4d, 0x75, 0x6c, 0x74, 0x69, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x54, 0x79, 0x70, 0x65, 0x12, 0x15, 0x0a, 0x11, 0x52, 0x45, 0x51,
 	0x55, 0x45, 0x53, 0x54, 0x5f, 0x54, 0x59, 0x50, 0x45, 0x5f, 0x4e, 0x4f, 0x4e, 0x45, 0x10, 0x00,
 	0x12, 0x12, 0x0a, 0x0e, 0x43, 0x52, 0x45, 0x41, 0x54, 0x45, 0x5f, 0x53, 0x45, 0x53, 0x53, 0x49,
@@ -1123,17 +1166,19 @@ var file_protomulti_multi_request_proto_rawDesc = []byte{
 	0x12, 0x0f, 0x0a, 0x0a, 0x53, 0x45, 0x4e, 0x44, 0x5f, 0x53, 0x54, 0x41, 0x4d, 0x50, 0x10, 0xb0,
 	0x09, 0x12, 0x10, 0x0a, 0x0b, 0x53, 0x54, 0x41, 0x52, 0x54, 0x5f, 0x4c, 0x4f, 0x42, 0x42, 0x59,
 	0x10, 0x94, 0x0a, 0x12, 0x0d, 0x0a, 0x08, 0x47, 0x45, 0x54, 0x5f, 0x47, 0x41, 0x4d, 0x45, 0x10,
-	0xf8, 0x0a, 0x12, 0x18, 0x0a, 0x13, 0x47, 0x41, 0x4d, 0x45, 0x5f, 0x45, 0x4e, 0x51, 0x55, 0x45,
-	0x55, 0x45, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0xdc, 0x0b, 0x12, 0x18, 0x0a, 0x13,
-	0x47, 0x41, 0x4d, 0x45, 0x5f, 0x44, 0x45, 0x51, 0x55, 0x45, 0x55, 0x45, 0x5f, 0x41, 0x43, 0x54,
-	0x49, 0x4f, 0x4e, 0x10, 0xc0, 0x0c, 0x12, 0x16, 0x0a, 0x11, 0x47, 0x41, 0x4d, 0x45, 0x5f, 0x4c,
-	0x4f, 0x43, 0x4b, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x53, 0x10, 0xa4, 0x0d, 0x42, 0x4d,
-	0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73,
-	0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d,
-	0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d, 0x6f, 0x62, 0x69, 0x75,
-	0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74, 0x69, 0x62, 0x06, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0xf8, 0x0a, 0x12, 0x1d, 0x0a, 0x18, 0x47, 0x41, 0x4d, 0x45, 0x5f, 0x50, 0x4c, 0x41, 0x59, 0x45,
+	0x52, 0x5f, 0x52, 0x45, 0x41, 0x44, 0x59, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0xaa,
+	0x0b, 0x12, 0x18, 0x0a, 0x13, 0x47, 0x41, 0x4d, 0x45, 0x5f, 0x45, 0x4e, 0x51, 0x55, 0x45, 0x55,
+	0x45, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x10, 0xdc, 0x0b, 0x12, 0x18, 0x0a, 0x13, 0x47,
+	0x41, 0x4d, 0x45, 0x5f, 0x44, 0x45, 0x51, 0x55, 0x45, 0x55, 0x45, 0x5f, 0x41, 0x43, 0x54, 0x49,
+	0x4f, 0x4e, 0x10, 0xc0, 0x0c, 0x12, 0x16, 0x0a, 0x11, 0x47, 0x41, 0x4d, 0x45, 0x5f, 0x4c, 0x4f,
+	0x43, 0x4b, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x53, 0x10, 0xa4, 0x0d, 0x42, 0x4d, 0x5a,
+	0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74,
+	0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f,
+	0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73,
+	0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74, 0x69, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1149,32 +1194,33 @@ func file_protomulti_multi_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 17)
+var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
 var file_protomulti_multi_request_proto_goTypes = []interface{}{
 	(MultiRequestType)(0),                   // 0: multi.MultiRequestType
 	(*GetGameRequest)(nil),                  // 1: multi.GetGameRequest
-	(*GameEnqueueActionRequest)(nil),        // 2: multi.GameEnqueueActionRequest
-	(*GameDequeueActionRequest)(nil),        // 3: multi.GameDequeueActionRequest
-	(*GameLockActionRequest)(nil),           // 4: multi.GameLockActionRequest
-	(*CreateSessionRequest)(nil),            // 5: multi.CreateSessionRequest
-	(*EndSessionRequest)(nil),               // 6: multi.EndSessionRequest
-	(*SearchLobbyRequest)(nil),              // 7: multi.SearchLobbyRequest
-	(*WatchLobbyRequest)(nil),               // 8: multi.WatchLobbyRequest
-	(*UnwatchLobbyRequest)(nil),             // 9: multi.UnwatchLobbyRequest
-	(*CreateLobbyRequest)(nil),              // 10: multi.CreateLobbyRequest
-	(*JoinLobbyRequest)(nil),                // 11: multi.JoinLobbyRequest
-	(*LeaveLobbyRequest)(nil),               // 12: multi.LeaveLobbyRequest
-	(*StartLobbyRequest)(nil),               // 13: multi.StartLobbyRequest
-	(*ReadyLobbyRequest)(nil),               // 14: multi.ReadyLobbyRequest
-	(*UnreadyLobbyRequest)(nil),             // 15: multi.UnreadyLobbyRequest
-	(*CancelLobbyRequest)(nil),              // 16: multi.CancelLobbyRequest
-	(*SendStampRequest)(nil),                // 17: multi.SendStampRequest
-	(GamePlayerActionType)(0),               // 18: multi.GamePlayerActionType
-	(*ProtoLobbyPlayerSlotRestriction)(nil), // 19: multi.ProtoLobbyPlayerSlotRestriction
+	(*GamePlayerReadyActionRequest)(nil),    // 2: multi.GamePlayerReadyActionRequest
+	(*GameEnqueueActionRequest)(nil),        // 3: multi.GameEnqueueActionRequest
+	(*GameDequeueActionRequest)(nil),        // 4: multi.GameDequeueActionRequest
+	(*GameLockActionRequest)(nil),           // 5: multi.GameLockActionRequest
+	(*CreateSessionRequest)(nil),            // 6: multi.CreateSessionRequest
+	(*EndSessionRequest)(nil),               // 7: multi.EndSessionRequest
+	(*SearchLobbyRequest)(nil),              // 8: multi.SearchLobbyRequest
+	(*WatchLobbyRequest)(nil),               // 9: multi.WatchLobbyRequest
+	(*UnwatchLobbyRequest)(nil),             // 10: multi.UnwatchLobbyRequest
+	(*CreateLobbyRequest)(nil),              // 11: multi.CreateLobbyRequest
+	(*JoinLobbyRequest)(nil),                // 12: multi.JoinLobbyRequest
+	(*LeaveLobbyRequest)(nil),               // 13: multi.LeaveLobbyRequest
+	(*StartLobbyRequest)(nil),               // 14: multi.StartLobbyRequest
+	(*ReadyLobbyRequest)(nil),               // 15: multi.ReadyLobbyRequest
+	(*UnreadyLobbyRequest)(nil),             // 16: multi.UnreadyLobbyRequest
+	(*CancelLobbyRequest)(nil),              // 17: multi.CancelLobbyRequest
+	(*SendStampRequest)(nil),                // 18: multi.SendStampRequest
+	(GamePlayerActionType)(0),               // 19: multi.GamePlayerActionType
+	(*ProtoLobbyPlayerSlotRestriction)(nil), // 20: multi.ProtoLobbyPlayerSlotRestriction
 }
 var file_protomulti_multi_request_proto_depIdxs = []int32{
-	18, // 0: multi.GameEnqueueActionRequest.action:type_name -> multi.GamePlayerActionType
-	19, // 1: multi.CreateLobbyRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	19, // 0: multi.GameEnqueueActionRequest.action:type_name -> multi.GamePlayerActionType
+	20, // 1: multi.CreateLobbyRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
 	2,  // [2:2] is the sub-list for method output_type
 	2,  // [2:2] is the sub-list for method input_type
 	2,  // [2:2] is the sub-list for extension type_name
@@ -1202,7 +1248,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GameEnqueueActionRequest); i {
+			switch v := v.(*GamePlayerReadyActionRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1214,7 +1260,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GameDequeueActionRequest); i {
+			switch v := v.(*GameEnqueueActionRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1226,7 +1272,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GameLockActionRequest); i {
+			switch v := v.(*GameDequeueActionRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1238,7 +1284,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateSessionRequest); i {
+			switch v := v.(*GameLockActionRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1250,7 +1296,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EndSessionRequest); i {
+			switch v := v.(*CreateSessionRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1262,7 +1308,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SearchLobbyRequest); i {
+			switch v := v.(*EndSessionRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1274,7 +1320,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*WatchLobbyRequest); i {
+			switch v := v.(*SearchLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1286,7 +1332,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UnwatchLobbyRequest); i {
+			switch v := v.(*WatchLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1298,7 +1344,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateLobbyRequest); i {
+			switch v := v.(*UnwatchLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1310,7 +1356,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JoinLobbyRequest); i {
+			switch v := v.(*CreateLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1322,7 +1368,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LeaveLobbyRequest); i {
+			switch v := v.(*JoinLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1334,7 +1380,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StartLobbyRequest); i {
+			switch v := v.(*LeaveLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1346,7 +1392,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReadyLobbyRequest); i {
+			switch v := v.(*StartLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1358,7 +1404,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UnreadyLobbyRequest); i {
+			switch v := v.(*ReadyLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1370,7 +1416,7 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CancelLobbyRequest); i {
+			switch v := v.(*UnreadyLobbyRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1382,6 +1428,18 @@ func file_protomulti_multi_request_proto_init() {
 			}
 		}
 		file_protomulti_multi_request_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CancelLobbyRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protomulti_multi_request_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendStampRequest); i {
 			case 0:
 				return &v.state
@@ -1400,7 +1458,7 @@ func file_protomulti_multi_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protomulti_multi_request_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   17,
+			NumMessages:   18,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
