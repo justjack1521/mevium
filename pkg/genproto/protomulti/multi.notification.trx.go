@@ -181,3 +181,15 @@ func NewGameReadyNotification(bytes []byte) (*GameReadyNotification, error) {
 func (x *GameReadyNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameActionQueueConfirmNotification(bytes []byte) (*GameActionQueueConfirmNotification, error) {
+	req := &GameActionQueueConfirmNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameActionQueueConfirmNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
