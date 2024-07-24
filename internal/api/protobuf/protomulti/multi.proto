@@ -48,7 +48,15 @@ message ProtoGameInstance {
   int32 seed = 3;
   int32 state = 4;
   int64 started_at = 5;
+  ProtoGameInstanceOptions options = 19;
   int64 registered_at = 20;
+}
+
+message ProtoGameInstanceOptions {
+  int32 minimum_player_level = 1;
+  int64 max_run_time = 2;
+  int64 player_turn_duration = 3;
+  repeated ProtoLobbyPlayerSlotRestriction restrictions = 4;
 }
 
 message ProtoGameParticipant {

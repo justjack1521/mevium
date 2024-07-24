@@ -37,21 +37,26 @@ namespace Mobius.Proto.Multi {
             "dXRJZGVudGl0eSKBAQofUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlv",
             "bhISCgpzbG90X2luZGV4GAEgASgFEhgKEHJvbGVfcmVzdHJpY3Rpb24YAiAB",
             "KAkSDgoGbG9ja2VkGAMgASgIEgsKA2JvdBgEIAEoCBITCgtpbnZpdGVfb25s",
-            "eRgFIAEoCCJ9ChFQcm90b0dhbWVJbnN0YW5jZRIOCgZzeXNfaWQYASABKAkS",
-            "EAoIcGFydHlfaWQYAiABKAkSDAoEc2VlZBgDIAEoBRINCgVzdGF0ZRgEIAEo",
-            "BRISCgpzdGFydGVkX2F0GAUgASgDEhUKDXJlZ2lzdGVyZWRfYXQYFCABKAMi",
-            "bgoUUHJvdG9HYW1lUGFydGljaXBhbnQSEgoKcGFydHlfc2xvdBgBIAEoBRIT",
-            "Cgtib3RfY29udHJvbBgCIAEoCBItCgdsb2Fkb3V0GAMgASgLMhwuaWRlbnRp",
-            "dHkuUHJvdG9QbGF5ZXJMb2Fkb3V0IlgKGlByb3RvR2FtZVBsYXllckFjdGlv",
-            "blF1ZXVlEhEKCXBsYXllcl9pZBgBIAEoCRInCgdhY3Rpb25zGAMgAygLMhYu",
-            "bXVsdGkuUHJvdG9HYW1lQWN0aW9uInYKD1Byb3RvR2FtZUFjdGlvbhIrCgZh",
-            "Y3Rpb24YASABKA4yGy5tdWx0aS5HYW1lUGxheWVyQWN0aW9uVHlwZRIOCgZ0",
-            "YXJnZXQYAiABKAUSEgoKc2xvdF9pbmRleBgDIAEoBRISCgplbGVtZW50X2lk",
-            "GAQgASgJKmsKFEdhbWVQbGF5ZXJBY3Rpb25UeXBlEhsKF1BMQVlFUl9BQ1RJ",
-            "T05fVFlQRV9OT05FEAASEQoNTk9STUFMX0FUVEFDSxABEhAKDEFCSUxJVFlf",
-            "Q0FTVBACEhEKDUVMRU1FTlRfRFJJVkUQA0JNWjZnaXRodWIuY29tL2p1c3Rq",
-            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2Jp",
-            "dXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "eRgFIAEoCCKvAQoRUHJvdG9HYW1lSW5zdGFuY2USDgoGc3lzX2lkGAEgASgJ",
+            "EhAKCHBhcnR5X2lkGAIgASgJEgwKBHNlZWQYAyABKAUSDQoFc3RhdGUYBCAB",
+            "KAUSEgoKc3RhcnRlZF9hdBgFIAEoAxIwCgdvcHRpb25zGBMgASgLMh8ubXVs",
+            "dGkuUHJvdG9HYW1lSW5zdGFuY2VPcHRpb25zEhUKDXJlZ2lzdGVyZWRfYXQY",
+            "FCABKAMiqgEKGFByb3RvR2FtZUluc3RhbmNlT3B0aW9ucxIcChRtaW5pbXVt",
+            "X3BsYXllcl9sZXZlbBgBIAEoBRIUCgxtYXhfcnVuX3RpbWUYAiABKAMSHAoU",
+            "cGxheWVyX3R1cm5fZHVyYXRpb24YAyABKAMSPAoMcmVzdHJpY3Rpb25zGAQg",
+            "AygLMiYubXVsdGkuUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlvbiJu",
+            "ChRQcm90b0dhbWVQYXJ0aWNpcGFudBISCgpwYXJ0eV9zbG90GAEgASgFEhMK",
+            "C2JvdF9jb250cm9sGAIgASgIEi0KB2xvYWRvdXQYAyABKAsyHC5pZGVudGl0",
+            "eS5Qcm90b1BsYXllckxvYWRvdXQiWAoaUHJvdG9HYW1lUGxheWVyQWN0aW9u",
+            "UXVldWUSEQoJcGxheWVyX2lkGAEgASgJEicKB2FjdGlvbnMYAyADKAsyFi5t",
+            "dWx0aS5Qcm90b0dhbWVBY3Rpb24idgoPUHJvdG9HYW1lQWN0aW9uEisKBmFj",
+            "dGlvbhgBIAEoDjIbLm11bHRpLkdhbWVQbGF5ZXJBY3Rpb25UeXBlEg4KBnRh",
+            "cmdldBgCIAEoBRISCgpzbG90X2luZGV4GAMgASgFEhIKCmVsZW1lbnRfaWQY",
+            "BCABKAkqawoUR2FtZVBsYXllckFjdGlvblR5cGUSGwoXUExBWUVSX0FDVElP",
+            "Tl9UWVBFX05PTkUQABIRCg1OT1JNQUxfQVRUQUNLEAESEAoMQUJJTElUWV9D",
+            "QVNUEAISEQoNRUxFTUVOVF9EUklWRRADQk1aNmdpdGh1Yi5jb20vanVzdGph",
+            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1",
+            "cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,7 +64,8 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser, new[]{ "SlotIndex", "Ready", "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser, new[]{ "SlotIndex", "RoleRestriction", "Locked", "Bot", "InviteOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstance), global::Mobius.Proto.Multi.ProtoGameInstance.Parser, new[]{ "SysId", "PartyId", "Seed", "State", "StartedAt", "RegisteredAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstance), global::Mobius.Proto.Multi.ProtoGameInstance.Parser, new[]{ "SysId", "PartyId", "Seed", "State", "StartedAt", "Options", "RegisteredAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstanceOptions), global::Mobius.Proto.Multi.ProtoGameInstanceOptions.Parser, new[]{ "MinimumPlayerLevel", "MaxRunTime", "PlayerTurnDuration", "Restrictions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameParticipant), global::Mobius.Proto.Multi.ProtoGameParticipant.Parser, new[]{ "PartySlot", "BotControl", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGamePlayerActionQueue), global::Mobius.Proto.Multi.ProtoGamePlayerActionQueue.Parser, new[]{ "PlayerId", "Actions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameAction), global::Mobius.Proto.Multi.ProtoGameAction.Parser, new[]{ "Action", "Target", "SlotIndex", "ElementId" }, null, null, null, null)
@@ -1249,6 +1255,7 @@ namespace Mobius.Proto.Multi {
       seed_ = other.seed_;
       state_ = other.state_;
       startedAt_ = other.startedAt_;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       registeredAt_ = other.registeredAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1313,6 +1320,17 @@ namespace Mobius.Proto.Multi {
       }
     }
 
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 19;
+    private global::Mobius.Proto.Multi.ProtoGameInstanceOptions options_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Multi.ProtoGameInstanceOptions Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
     /// <summary>Field number for the "registered_at" field.</summary>
     public const int RegisteredAtFieldNumber = 20;
     private long registeredAt_;
@@ -1342,6 +1360,7 @@ namespace Mobius.Proto.Multi {
       if (Seed != other.Seed) return false;
       if (State != other.State) return false;
       if (StartedAt != other.StartedAt) return false;
+      if (!object.Equals(Options, other.Options)) return false;
       if (RegisteredAt != other.RegisteredAt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1354,6 +1373,7 @@ namespace Mobius.Proto.Multi {
       if (Seed != 0) hash ^= Seed.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (StartedAt != 0L) hash ^= StartedAt.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
       if (RegisteredAt != 0L) hash ^= RegisteredAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1391,6 +1411,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(40);
         output.WriteInt64(StartedAt);
       }
+      if (options_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(Options);
+      }
       if (RegisteredAt != 0L) {
         output.WriteRawTag(160, 1);
         output.WriteInt64(RegisteredAt);
@@ -1424,6 +1448,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(40);
         output.WriteInt64(StartedAt);
       }
+      if (options_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(Options);
+      }
       if (RegisteredAt != 0L) {
         output.WriteRawTag(160, 1);
         output.WriteInt64(RegisteredAt);
@@ -1451,6 +1479,9 @@ namespace Mobius.Proto.Multi {
       }
       if (StartedAt != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartedAt);
+      }
+      if (options_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
       if (RegisteredAt != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(RegisteredAt);
@@ -1480,6 +1511,12 @@ namespace Mobius.Proto.Multi {
       }
       if (other.StartedAt != 0L) {
         StartedAt = other.StartedAt;
+      }
+      if (other.options_ != null) {
+        if (options_ == null) {
+          Options = new global::Mobius.Proto.Multi.ProtoGameInstanceOptions();
+        }
+        Options.MergeFrom(other.Options);
       }
       if (other.RegisteredAt != 0L) {
         RegisteredAt = other.RegisteredAt;
@@ -1516,6 +1553,13 @@ namespace Mobius.Proto.Multi {
           }
           case 40: {
             StartedAt = input.ReadInt64();
+            break;
+          }
+          case 154: {
+            if (options_ == null) {
+              Options = new global::Mobius.Proto.Multi.ProtoGameInstanceOptions();
+            }
+            input.ReadMessage(Options);
             break;
           }
           case 160: {
@@ -1556,8 +1600,284 @@ namespace Mobius.Proto.Multi {
             StartedAt = input.ReadInt64();
             break;
           }
+          case 154: {
+            if (options_ == null) {
+              Options = new global::Mobius.Proto.Multi.ProtoGameInstanceOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
           case 160: {
             RegisteredAt = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoGameInstanceOptions : pb::IMessage<ProtoGameInstanceOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoGameInstanceOptions> _parser = new pb::MessageParser<ProtoGameInstanceOptions>(() => new ProtoGameInstanceOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoGameInstanceOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameInstanceOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameInstanceOptions(ProtoGameInstanceOptions other) : this() {
+      minimumPlayerLevel_ = other.minimumPlayerLevel_;
+      maxRunTime_ = other.maxRunTime_;
+      playerTurnDuration_ = other.playerTurnDuration_;
+      restrictions_ = other.restrictions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameInstanceOptions Clone() {
+      return new ProtoGameInstanceOptions(this);
+    }
+
+    /// <summary>Field number for the "minimum_player_level" field.</summary>
+    public const int MinimumPlayerLevelFieldNumber = 1;
+    private int minimumPlayerLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MinimumPlayerLevel {
+      get { return minimumPlayerLevel_; }
+      set {
+        minimumPlayerLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_run_time" field.</summary>
+    public const int MaxRunTimeFieldNumber = 2;
+    private long maxRunTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long MaxRunTime {
+      get { return maxRunTime_; }
+      set {
+        maxRunTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_turn_duration" field.</summary>
+    public const int PlayerTurnDurationFieldNumber = 3;
+    private long playerTurnDuration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long PlayerTurnDuration {
+      get { return playerTurnDuration_; }
+      set {
+        playerTurnDuration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "restrictions" field.</summary>
+    public const int RestrictionsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction> _repeated_restrictions_codec
+        = pb::FieldCodec.ForMessage(34, global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction> restrictions_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction> Restrictions {
+      get { return restrictions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoGameInstanceOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoGameInstanceOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MinimumPlayerLevel != other.MinimumPlayerLevel) return false;
+      if (MaxRunTime != other.MaxRunTime) return false;
+      if (PlayerTurnDuration != other.PlayerTurnDuration) return false;
+      if(!restrictions_.Equals(other.restrictions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MinimumPlayerLevel != 0) hash ^= MinimumPlayerLevel.GetHashCode();
+      if (MaxRunTime != 0L) hash ^= MaxRunTime.GetHashCode();
+      if (PlayerTurnDuration != 0L) hash ^= PlayerTurnDuration.GetHashCode();
+      hash ^= restrictions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MinimumPlayerLevel != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MinimumPlayerLevel);
+      }
+      if (MaxRunTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MaxRunTime);
+      }
+      if (PlayerTurnDuration != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(PlayerTurnDuration);
+      }
+      restrictions_.WriteTo(output, _repeated_restrictions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MinimumPlayerLevel != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MinimumPlayerLevel);
+      }
+      if (MaxRunTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MaxRunTime);
+      }
+      if (PlayerTurnDuration != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(PlayerTurnDuration);
+      }
+      restrictions_.WriteTo(ref output, _repeated_restrictions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MinimumPlayerLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinimumPlayerLevel);
+      }
+      if (MaxRunTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxRunTime);
+      }
+      if (PlayerTurnDuration != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayerTurnDuration);
+      }
+      size += restrictions_.CalculateSize(_repeated_restrictions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoGameInstanceOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MinimumPlayerLevel != 0) {
+        MinimumPlayerLevel = other.MinimumPlayerLevel;
+      }
+      if (other.MaxRunTime != 0L) {
+        MaxRunTime = other.MaxRunTime;
+      }
+      if (other.PlayerTurnDuration != 0L) {
+        PlayerTurnDuration = other.PlayerTurnDuration;
+      }
+      restrictions_.Add(other.restrictions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MinimumPlayerLevel = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            MaxRunTime = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            PlayerTurnDuration = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            restrictions_.AddEntriesFrom(input, _repeated_restrictions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MinimumPlayerLevel = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            MaxRunTime = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            PlayerTurnDuration = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            restrictions_.AddEntriesFrom(ref input, _repeated_restrictions_codec);
             break;
           }
         }
@@ -1579,7 +1899,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1832,7 +2152,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2029,7 +2349,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
