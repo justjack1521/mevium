@@ -59,7 +59,6 @@ message ProtoGameParticipant {
 
 message ProtoGamePlayerActionQueue {
   string player_id = 1;
-  int32 action_order = 2;
   repeated ProtoGameAction actions = 3;
 }
 

@@ -60,13 +60,14 @@ namespace Mobius.Proto.Multi {
             "UkVBRFkQrAISGAoTUEFSVElDSVBBTlRfVU5SRUFEWRCQAxIPCgpTVEFNUF9T",
             "RU5EEPQDEhwKF1BBUlRJQ0lQQU5UX0RFQ0tfQ0hBTkdFENgEEhEKDExPQkJZ",
             "X0NBTkNFTBC8BRIQCgtMT0JCWV9TVEFSVBCgBhIQCgtMT0JCWV9SRUFEWRCE",
-            "ByrfAQoZTXVsdGlHYW1lTm90aWZpY2F0aW9uVHlwZRIUChBHQU1FX05PVElG",
+            "Byr/AQoZTXVsdGlHYW1lTm90aWZpY2F0aW9uVHlwZRIUChBHQU1FX05PVElG",
             "WV9OT05FEAASFQoRR0FNRV9OT1RJRllfU1RBUlQQZBIWChFHQU1FX05PVElG",
             "WV9SRUFEWRDIARIdChhHQU1FX05PVElGWV9QTEFZRVJfUkVBRFkQ+gESHwoa",
             "R0FNRV9OT1RJRllfRU5RVUVVRV9BQ1RJT04Q3AsSHwoaR0FNRV9OT1RJRllf",
             "REVRVUVVRV9BQ1RJT04QwAwSHAoXR0FNRV9OT1RJRllfTE9DS19BQ1RJT04Q",
-            "pA1CTVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5w",
-            "cm90by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "pA0SHgoZR0FNRV9OT1RJRllfUVVFVUVfQ09ORklSTRCIDkJNWjZnaXRodWIu",
+            "Y29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVs",
+            "dGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -113,6 +114,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("GAME_NOTIFY_ENQUEUE_ACTION")] GameNotifyEnqueueAction = 1500,
     [pbr::OriginalName("GAME_NOTIFY_DEQUEUE_ACTION")] GameNotifyDequeueAction = 1600,
     [pbr::OriginalName("GAME_NOTIFY_LOCK_ACTION")] GameNotifyLockAction = 1700,
+    [pbr::OriginalName("GAME_NOTIFY_QUEUE_CONFIRM")] GameNotifyQueueConfirm = 1800,
   }
 
   #endregion

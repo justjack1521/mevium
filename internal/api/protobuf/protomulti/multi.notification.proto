@@ -76,6 +76,7 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_ENQUEUE_ACTION = 1500;
   GAME_NOTIFY_DEQUEUE_ACTION = 1600;
   GAME_NOTIFY_LOCK_ACTION = 1700;
+  GAME_NOTIFY_QUEUE_CONFIRM = 1800;
 }
 
 message GameStartNotification {
