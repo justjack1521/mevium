@@ -56,3 +56,16 @@ message ProtoGameParticipant {
   bool bot_control = 2;
   identity.ProtoPlayerLoadout loadout = 3;
 }
+
+message ProtoGamePlayerActionQueue {
+  string player_id = 1;
+  int32 action_order = 2;
+  repeated ProtoGameAction actions = 3;
+}
+
+message ProtoGameAction {
+  GamePlayerActionType action = 1;
+  int32 target = 2;
+  int32 slot_index = 3;
+  string element_id = 4;
+}

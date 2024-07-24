@@ -110,3 +110,7 @@ message GameLockActionNotification {
   int32 player_index = 2;
   int32 action_lock_index = 3;
 }
+
+message GameActionQueueConfirmNotification {
+  repeated ProtoGamePlayerActionQueue player_action_queue = 1;
+}

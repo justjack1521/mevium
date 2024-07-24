@@ -507,6 +507,140 @@ func (x *ProtoGameParticipant) GetLoadout() *protoidentity.ProtoPlayerLoadout {
 	return nil
 }
 
+type ProtoGamePlayerActionQueue struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerId    string             `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	ActionOrder int32              `protobuf:"varint,2,opt,name=action_order,json=actionOrder,proto3" json:"action_order,omitempty"`
+	Actions     []*ProtoGameAction `protobuf:"bytes,3,rep,name=actions,proto3" json:"actions,omitempty"`
+}
+
+func (x *ProtoGamePlayerActionQueue) Reset() {
+	*x = ProtoGamePlayerActionQueue{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protomulti_multi_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProtoGamePlayerActionQueue) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoGamePlayerActionQueue) ProtoMessage() {}
+
+func (x *ProtoGamePlayerActionQueue) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoGamePlayerActionQueue.ProtoReflect.Descriptor instead.
+func (*ProtoGamePlayerActionQueue) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *ProtoGamePlayerActionQueue) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *ProtoGamePlayerActionQueue) GetActionOrder() int32 {
+	if x != nil {
+		return x.ActionOrder
+	}
+	return 0
+}
+
+func (x *ProtoGamePlayerActionQueue) GetActions() []*ProtoGameAction {
+	if x != nil {
+		return x.Actions
+	}
+	return nil
+}
+
+type ProtoGameAction struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Action    GamePlayerActionType `protobuf:"varint,1,opt,name=action,proto3,enum=multi.GamePlayerActionType" json:"action,omitempty"`
+	Target    int32                `protobuf:"varint,2,opt,name=target,proto3" json:"target,omitempty"`
+	SlotIndex int32                `protobuf:"varint,3,opt,name=slot_index,json=slotIndex,proto3" json:"slot_index,omitempty"`
+	ElementId string               `protobuf:"bytes,4,opt,name=element_id,json=elementId,proto3" json:"element_id,omitempty"`
+}
+
+func (x *ProtoGameAction) Reset() {
+	*x = ProtoGameAction{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protomulti_multi_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProtoGameAction) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoGameAction) ProtoMessage() {}
+
+func (x *ProtoGameAction) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoGameAction.ProtoReflect.Descriptor instead.
+func (*ProtoGameAction) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *ProtoGameAction) GetAction() GamePlayerActionType {
+	if x != nil {
+		return x.Action
+	}
+	return GamePlayerActionType_PLAYER_ACTION_TYPE_NONE
+}
+
+func (x *ProtoGameAction) GetTarget() int32 {
+	if x != nil {
+		return x.Target
+	}
+	return 0
+}
+
+func (x *ProtoGameAction) GetSlotIndex() int32 {
+	if x != nil {
+		return x.SlotIndex
+	}
+	return 0
+}
+
+func (x *ProtoGameAction) GetElementId() string {
+	if x != nil {
+		return x.ElementId
+	}
+	return ""
+}
+
 var File_protomulti_multi_proto protoreflect.FileDescriptor
 
 var file_protomulti_multi_proto_rawDesc = []byte{
@@ -578,7 +712,26 @@ var file_protomulti_multi_proto_rawDesc = []byte{
 	0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x69,
 	0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x6c, 0x61,
 	0x79, 0x65, 0x72, 0x4c, 0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x52, 0x07, 0x6c, 0x6f, 0x61, 0x64,
-	0x6f, 0x75, 0x74, 0x2a, 0x6b, 0x0a, 0x14, 0x47, 0x61, 0x6d, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65,
+	0x6f, 0x75, 0x74, 0x22, 0x8e, 0x01, 0x0a, 0x1a, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x47, 0x61, 0x6d,
+	0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x51, 0x75, 0x65,
+	0x75, 0x65, 0x12, 0x1b, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12,
+	0x21, 0x0a, 0x0c, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0b, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x4f, 0x72, 0x64,
+	0x65, 0x72, 0x12, 0x30, 0x0a, 0x07, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x03, 0x20,
+	0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0x2e, 0x50, 0x72, 0x6f, 0x74,
+	0x6f, 0x47, 0x61, 0x6d, 0x65, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x07, 0x61, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x22, 0x9c, 0x01, 0x0a, 0x0f, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x47, 0x61,
+	0x6d, 0x65, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x33, 0x0a, 0x06, 0x61, 0x63, 0x74, 0x69,
+	0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x1b, 0x2e, 0x6d, 0x75, 0x6c, 0x74, 0x69,
+	0x2e, 0x47, 0x61, 0x6d, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x41, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x54, 0x79, 0x70, 0x65, 0x52, 0x06, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x16, 0x0a,
+	0x06, 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x74,
+	0x61, 0x72, 0x67, 0x65, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x73, 0x6c, 0x6f, 0x74, 0x5f, 0x69, 0x6e,
+	0x64, 0x65, 0x78, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x09, 0x73, 0x6c, 0x6f, 0x74, 0x49,
+	0x6e, 0x64, 0x65, 0x78, 0x12, 0x1d, 0x0a, 0x0a, 0x65, 0x6c, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x5f,
+	0x69, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x65, 0x6c, 0x65, 0x6d, 0x65, 0x6e,
+	0x74, 0x49, 0x64, 0x2a, 0x6b, 0x0a, 0x14, 0x47, 0x61, 0x6d, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65,
 	0x72, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x1b, 0x0a, 0x17, 0x50,
 	0x4c, 0x41, 0x59, 0x45, 0x52, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x4f, 0x4e, 0x5f, 0x54, 0x59, 0x50,
 	0x45, 0x5f, 0x4e, 0x4f, 0x4e, 0x45, 0x10, 0x00, 0x12, 0x11, 0x0a, 0x0d, 0x4e, 0x4f, 0x52, 0x4d,
@@ -606,7 +759,7 @@ func file_protomulti_multi_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_protomulti_multi_proto_goTypes = []interface{}{
 	(GamePlayerActionType)(0),                        // 0: multi.GamePlayerActionType
 	(*ProtoLobbySummary)(nil),                        // 1: multi.ProtoLobbySummary
@@ -615,21 +768,25 @@ var file_protomulti_multi_proto_goTypes = []interface{}{
 	(*ProtoLobbyPlayerSlotRestriction)(nil),          // 4: multi.ProtoLobbyPlayerSlotRestriction
 	(*ProtoGameInstance)(nil),                        // 5: multi.ProtoGameInstance
 	(*ProtoGameParticipant)(nil),                     // 6: multi.ProtoGameParticipant
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 7: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 8: identity.ProtoPlayerLoadoutIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),         // 9: identity.ProtoPlayerLoadout
+	(*ProtoGamePlayerActionQueue)(nil),               // 7: multi.ProtoGamePlayerActionQueue
+	(*ProtoGameAction)(nil),                          // 8: multi.ProtoGameAction
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 9: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 10: identity.ProtoPlayerLoadoutIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),         // 11: identity.ProtoPlayerLoadout
 }
 var file_protomulti_multi_proto_depIdxs = []int32{
-	2, // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
-	3, // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
-	7, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
-	8, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	9, // 4: multi.ProtoGameParticipant.loadout:type_name -> identity.ProtoPlayerLoadout
-	5, // [5:5] is the sub-list for method output_type
-	5, // [5:5] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	2,  // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
+	3,  // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
+	9,  // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
+	10, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	11, // 4: multi.ProtoGameParticipant.loadout:type_name -> identity.ProtoPlayerLoadout
+	8,  // 5: multi.ProtoGamePlayerActionQueue.actions:type_name -> multi.ProtoGameAction
+	0,  // 6: multi.ProtoGameAction.action:type_name -> multi.GamePlayerActionType
+	7,  // [7:7] is the sub-list for method output_type
+	7,  // [7:7] is the sub-list for method input_type
+	7,  // [7:7] is the sub-list for extension type_name
+	7,  // [7:7] is the sub-list for extension extendee
+	0,  // [0:7] is the sub-list for field type_name
 }
 
 func init() { file_protomulti_multi_proto_init() }
@@ -710,6 +867,30 @@ func file_protomulti_multi_proto_init() {
 				return nil
 			}
 		}
+		file_protomulti_multi_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProtoGamePlayerActionQueue); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protomulti_multi_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProtoGameAction); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -717,7 +898,7 @@ func file_protomulti_multi_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protomulti_multi_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   6,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
