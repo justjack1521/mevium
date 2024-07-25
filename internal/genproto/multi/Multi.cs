@@ -41,22 +41,23 @@ namespace Mobius.Proto.Multi {
             "EhAKCHBhcnR5X2lkGAIgASgJEgwKBHNlZWQYAyABKAUSDQoFc3RhdGUYBCAB",
             "KAUSEgoKc3RhcnRlZF9hdBgFIAEoAxIwCgdvcHRpb25zGBMgASgLMh8ubXVs",
             "dGkuUHJvdG9HYW1lSW5zdGFuY2VPcHRpb25zEhUKDXJlZ2lzdGVyZWRfYXQY",
-            "FCABKAMiqgEKGFByb3RvR2FtZUluc3RhbmNlT3B0aW9ucxIcChRtaW5pbXVt",
+            "FCABKAMixAEKGFByb3RvR2FtZUluc3RhbmNlT3B0aW9ucxIcChRtaW5pbXVt",
             "X3BsYXllcl9sZXZlbBgBIAEoBRIUCgxtYXhfcnVuX3RpbWUYAiABKAMSHAoU",
-            "cGxheWVyX3R1cm5fZHVyYXRpb24YAyABKAMSPAoMcmVzdHJpY3Rpb25zGAQg",
-            "AygLMiYubXVsdGkuUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlvbiJu",
-            "ChRQcm90b0dhbWVQYXJ0aWNpcGFudBISCgpwYXJ0eV9zbG90GAEgASgFEhMK",
-            "C2JvdF9jb250cm9sGAIgASgIEi0KB2xvYWRvdXQYAyABKAsyHC5pZGVudGl0",
-            "eS5Qcm90b1BsYXllckxvYWRvdXQiWAoaUHJvdG9HYW1lUGxheWVyQWN0aW9u",
-            "UXVldWUSEQoJcGxheWVyX2lkGAEgASgJEicKB2FjdGlvbnMYAyADKAsyFi5t",
-            "dWx0aS5Qcm90b0dhbWVBY3Rpb24idgoPUHJvdG9HYW1lQWN0aW9uEisKBmFj",
-            "dGlvbhgBIAEoDjIbLm11bHRpLkdhbWVQbGF5ZXJBY3Rpb25UeXBlEg4KBnRh",
-            "cmdldBgCIAEoBRISCgpzbG90X2luZGV4GAMgASgFEhIKCmVsZW1lbnRfaWQY",
-            "BCABKAkqawoUR2FtZVBsYXllckFjdGlvblR5cGUSGwoXUExBWUVSX0FDVElP",
-            "Tl9UWVBFX05PTkUQABIRCg1OT1JNQUxfQVRUQUNLEAESEAoMQUJJTElUWV9D",
-            "QVNUEAISEQoNRUxFTUVOVF9EUklWRRADQk1aNmdpdGh1Yi5jb20vanVzdGph",
-            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1",
-            "cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
+            "cGxheWVyX3R1cm5fZHVyYXRpb24YAyABKAMSGAoQbWF4X3BsYXllcl9jb3Vu",
+            "dBgEIAEoBRI8CgxyZXN0cmljdGlvbnMYFCADKAsyJi5tdWx0aS5Qcm90b0xv",
+            "YmJ5UGxheWVyU2xvdFJlc3RyaWN0aW9uIm4KFFByb3RvR2FtZVBhcnRpY2lw",
+            "YW50EhIKCnBhcnR5X3Nsb3QYASABKAUSEwoLYm90X2NvbnRyb2wYAiABKAgS",
+            "LQoHbG9hZG91dBgDIAEoCzIcLmlkZW50aXR5LlByb3RvUGxheWVyTG9hZG91",
+            "dCJYChpQcm90b0dhbWVQbGF5ZXJBY3Rpb25RdWV1ZRIRCglwbGF5ZXJfaWQY",
+            "ASABKAkSJwoHYWN0aW9ucxgDIAMoCzIWLm11bHRpLlByb3RvR2FtZUFjdGlv",
+            "biJ2Cg9Qcm90b0dhbWVBY3Rpb24SKwoGYWN0aW9uGAEgASgOMhsubXVsdGku",
+            "R2FtZVBsYXllckFjdGlvblR5cGUSDgoGdGFyZ2V0GAIgASgFEhIKCnNsb3Rf",
+            "aW5kZXgYAyABKAUSEgoKZWxlbWVudF9pZBgEIAEoCSprChRHYW1lUGxheWVy",
+            "QWN0aW9uVHlwZRIbChdQTEFZRVJfQUNUSU9OX1RZUEVfTk9ORRAAEhEKDU5P",
+            "Uk1BTF9BVFRBQ0sQARIQCgxBQklMSVRZX0NBU1QQAhIRCg1FTEVNRU5UX0RS",
+            "SVZFEANCTVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
+            "ZW5wcm90by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +66,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser, new[]{ "SlotIndex", "RoleRestriction", "Locked", "Bot", "InviteOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstance), global::Mobius.Proto.Multi.ProtoGameInstance.Parser, new[]{ "SysId", "PartyId", "Seed", "State", "StartedAt", "Options", "RegisteredAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstanceOptions), global::Mobius.Proto.Multi.ProtoGameInstanceOptions.Parser, new[]{ "MinimumPlayerLevel", "MaxRunTime", "PlayerTurnDuration", "Restrictions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstanceOptions), global::Mobius.Proto.Multi.ProtoGameInstanceOptions.Parser, new[]{ "MinimumPlayerLevel", "MaxRunTime", "PlayerTurnDuration", "MaxPlayerCount", "Restrictions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameParticipant), global::Mobius.Proto.Multi.ProtoGameParticipant.Parser, new[]{ "PartySlot", "BotControl", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGamePlayerActionQueue), global::Mobius.Proto.Multi.ProtoGamePlayerActionQueue.Parser, new[]{ "PlayerId", "Actions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameAction), global::Mobius.Proto.Multi.ProtoGameAction.Parser, new[]{ "Action", "Target", "SlotIndex", "ElementId" }, null, null, null, null)
@@ -1650,6 +1651,7 @@ namespace Mobius.Proto.Multi {
       minimumPlayerLevel_ = other.minimumPlayerLevel_;
       maxRunTime_ = other.maxRunTime_;
       playerTurnDuration_ = other.playerTurnDuration_;
+      maxPlayerCount_ = other.maxPlayerCount_;
       restrictions_ = other.restrictions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1692,10 +1694,21 @@ namespace Mobius.Proto.Multi {
       }
     }
 
+    /// <summary>Field number for the "max_player_count" field.</summary>
+    public const int MaxPlayerCountFieldNumber = 4;
+    private int maxPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerCount {
+      get { return maxPlayerCount_; }
+      set {
+        maxPlayerCount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "restrictions" field.</summary>
-    public const int RestrictionsFieldNumber = 4;
+    public const int RestrictionsFieldNumber = 20;
     private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction> _repeated_restrictions_codec
-        = pb::FieldCodec.ForMessage(34, global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser);
+        = pb::FieldCodec.ForMessage(162, global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser);
     private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction> restrictions_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction> Restrictions {
@@ -1718,6 +1731,7 @@ namespace Mobius.Proto.Multi {
       if (MinimumPlayerLevel != other.MinimumPlayerLevel) return false;
       if (MaxRunTime != other.MaxRunTime) return false;
       if (PlayerTurnDuration != other.PlayerTurnDuration) return false;
+      if (MaxPlayerCount != other.MaxPlayerCount) return false;
       if(!restrictions_.Equals(other.restrictions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1728,6 +1742,7 @@ namespace Mobius.Proto.Multi {
       if (MinimumPlayerLevel != 0) hash ^= MinimumPlayerLevel.GetHashCode();
       if (MaxRunTime != 0L) hash ^= MaxRunTime.GetHashCode();
       if (PlayerTurnDuration != 0L) hash ^= PlayerTurnDuration.GetHashCode();
+      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
       hash ^= restrictions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1757,6 +1772,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(24);
         output.WriteInt64(PlayerTurnDuration);
       }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxPlayerCount);
+      }
       restrictions_.WriteTo(output, _repeated_restrictions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1779,6 +1798,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(24);
         output.WriteInt64(PlayerTurnDuration);
       }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxPlayerCount);
+      }
       restrictions_.WriteTo(ref output, _repeated_restrictions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1797,6 +1820,9 @@ namespace Mobius.Proto.Multi {
       }
       if (PlayerTurnDuration != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayerTurnDuration);
+      }
+      if (MaxPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
       }
       size += restrictions_.CalculateSize(_repeated_restrictions_codec);
       if (_unknownFields != null) {
@@ -1818,6 +1844,9 @@ namespace Mobius.Proto.Multi {
       }
       if (other.PlayerTurnDuration != 0L) {
         PlayerTurnDuration = other.PlayerTurnDuration;
+      }
+      if (other.MaxPlayerCount != 0) {
+        MaxPlayerCount = other.MaxPlayerCount;
       }
       restrictions_.Add(other.restrictions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1846,7 +1875,11 @@ namespace Mobius.Proto.Multi {
             PlayerTurnDuration = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 32: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 162: {
             restrictions_.AddEntriesFrom(input, _repeated_restrictions_codec);
             break;
           }
@@ -1876,7 +1909,11 @@ namespace Mobius.Proto.Multi {
             PlayerTurnDuration = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 32: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 162: {
             restrictions_.AddEntriesFrom(ref input, _repeated_restrictions_codec);
             break;
           }
