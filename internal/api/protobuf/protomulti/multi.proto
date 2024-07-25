@@ -61,9 +61,11 @@ message ProtoGameInstanceOptions {
 }
 
 message ProtoGameParticipant {
-  int32 party_slot = 1;
-  bool bot_control = 2;
-  identity.ProtoPlayerLoadout loadout = 3;
+  string user_id = 1;
+  string player_id = 2;
+  int32 party_slot = 3;
+  bool bot_control = 4;
+  identity.ProtoPlayerLoadout loadout = 5;
 }
 
 message ProtoGamePlayerActionQueue {
