@@ -59,14 +59,12 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 
 	opts = append(opts, options...)
 
-	actual, err := rabbitmq.NewConsumer(
-		conn,
-		consumer.standardConsumption(),
-		string(queue),
-		opts...,
-	)
-
+	actual, err := rabbitmq.NewConsumer(conn, string(queue), opts...)
 	if err != nil {
+		panic(err)
+	}
+
+	if err := actual.Run(consumer.standardConsumption()); err != nil {
 		panic(err)
 	}
 
