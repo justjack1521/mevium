@@ -2,6 +2,7 @@ package rabbitmv
 
 import (
 	"context"
+	"fmt"
 	"github.com/justjack1521/mevrpc"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	uuid "github.com/satori/go.uuid"
@@ -61,10 +62,12 @@ func NewStandardConsumer(conn *rabbitmq.Conn, queue Queue, key RoutingKey, excha
 
 	actual, err := rabbitmq.NewConsumer(conn, string(queue), opts...)
 	if err != nil {
+		fmt.Println(err)
 		panic(err)
 	}
 
 	if err := actual.Run(consumer.standardConsumption()); err != nil {
+		fmt.Println(err)
 		panic(err)
 	}
 
