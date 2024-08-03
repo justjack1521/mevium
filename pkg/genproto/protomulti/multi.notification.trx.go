@@ -170,6 +170,18 @@ func (x *GamePlayerReadyNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewGamePlayerRemoveNotification(bytes []byte) (*GamePlayerRemoveNotification, error) {
+	req := &GamePlayerRemoveNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerRemoveNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewGameReadyNotification(bytes []byte) (*GameReadyNotification, error) {
 	req := &GameReadyNotification{}
 	if err := proto.Unmarshal(bytes, req); err != nil {

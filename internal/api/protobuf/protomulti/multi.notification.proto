@@ -73,6 +73,7 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_START = 100;
   GAME_NOTIFY_READY = 200;
   GAME_NOTIFY_PLAYER_READY = 250;
+  GAME_NOTIFY_PLAYER_REMOVE = 275;
   GAME_NOTIFY_ENQUEUE_ACTION = 1500;
   GAME_NOTIFY_DEQUEUE_ACTION = 1600;
   GAME_NOTIFY_LOCK_ACTION = 1700;
@@ -114,4 +115,9 @@ message GameLockActionNotification {
 
 message GameActionQueueConfirmNotification {
   repeated ProtoGamePlayerActionQueue player_action_queue = 1;
+}
+
+message GamePlayerRemoveNotification {
+  string game_id = 1;
+  int32 player_index = 2;
 }
