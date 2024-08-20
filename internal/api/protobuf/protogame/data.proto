@@ -97,6 +97,7 @@ message ProtoBattleData {
   float exp_bonus = 5;
   ProtoPlayerStamina stamina = 6;
   ProtoPlayerDeckCollection decks = 7;
+  map<string,uint64> enemies_defeated = 8;
   optional ProtoBattleStartData start_data = 10;
   optional ProtoLastBattleResults results = 20;
 }
