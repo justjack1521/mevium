@@ -42,5 +42,6 @@ service MeviusGameService {
   rpc AbilityShopPurchase(game.AbilityShopPurchaseRequest) returns (game.AbilityShopPurchaseResponse) {}
   rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
   rpc AbilityCardSummon(game.AbilityCardSummonRequest) returns (game.AbilityCardSummonResponse) {}
+  rpc ExecuteDialogue(game.ExecuteDialogueRequest) returns (game.ExecuteDialogueResponse) {}
 }
 

@@ -53,6 +53,7 @@ const (
 	MeviusGameService_AbilityShopPurchase_FullMethodName    = "/service.MeviusGameService/AbilityShopPurchase"
 	MeviusGameService_CompleteRegion_FullMethodName         = "/service.MeviusGameService/CompleteRegion"
 	MeviusGameService_AbilityCardSummon_FullMethodName      = "/service.MeviusGameService/AbilityCardSummon"
+	MeviusGameService_ExecuteDialogue_FullMethodName        = "/service.MeviusGameService/ExecuteDialogue"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -93,6 +94,7 @@ type MeviusGameServiceClient interface {
 	AbilityShopPurchase(ctx context.Context, in *protogame.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(ctx context.Context, in *protogame.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protogame.CompleteRegionMapResponse, error)
 	AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error)
+	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -400,6 +402,15 @@ func (c *meviusGameServiceClient) AbilityCardSummon(ctx context.Context, in *pro
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error) {
+	out := new(protogame.ExecuteDialogueResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ExecuteDialogue_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -438,6 +449,7 @@ type MeviusGameServiceServer interface {
 	AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error)
 	AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error)
+	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -542,6 +554,9 @@ func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *pro
 }
 func (UnimplementedMeviusGameServiceServer) AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AbilityCardSummon not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ExecuteDialogue not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1149,6 +1164,24 @@ func _MeviusGameService_AbilityCardSummon_Handler(srv interface{}, ctx context.C
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_ExecuteDialogue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.ExecuteDialogueRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ExecuteDialogue(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ExecuteDialogue_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ExecuteDialogue(ctx, req.(*protogame.ExecuteDialogueRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1287,6 +1320,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AbilityCardSummon",
 			Handler:    _MeviusGameService_AbilityCardSummon_Handler,
+		},
+		{
+			MethodName: "ExecuteDialogue",
+			Handler:    _MeviusGameService_ExecuteDialogue_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

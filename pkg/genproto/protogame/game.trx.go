@@ -268,7 +268,19 @@ func NewAbilityCardSummonRequest(bytes []byte) (*AbilityCardSummonRequest, error
 	return req, nil
 }
 
+func NewExecuteDialogueRequest(bytes []byte) (*ExecuteDialogueRequest, error) {
+	req := &ExecuteDialogueRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *AbilityCardSummonResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *AbilityShopPurchaseResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
@@ -293,10 +305,6 @@ func (x *CreateProfileResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *CardAugmentResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func (x *SkillPanelUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
@@ -336,6 +344,14 @@ func (x *ClaimDailyMissionResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *ClaimLoginCampaignResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ConfirmDailyMissionResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *DeleteAllMailboxItemResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -344,11 +360,11 @@ func (x *DeckEditAllResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func (x *ClaimLoginCampaignResponse) MarshallBinary() ([]byte, error) {
+func (x *ExecuteDialogueResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func (x *ConfirmDailyMissionResponse) MarshallBinary() ([]byte, error) {
+func (x *ExpandAbilityCardSlotResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
@@ -360,15 +376,11 @@ func (x *FetchPlayerDataResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func (x *StaminaRestoreResponse) MarshallBinary() ([]byte, error) {
+func (x *ItemShopCardPurchaseResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func (x *ExpandAbilityCardSlotResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
+func (x *ItemShopItemPurchaseResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
@@ -380,18 +392,18 @@ func (x *ProcessRegionNodeEventResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func (x *StaminaRestoreResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *SkillPanelUnlockResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *UpdateProfileResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func (x *ItemShopItemPurchaseResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func (x *AbilityShopPurchaseResponse) MarshallBinary() ([]byte, error) {
-	return proto.Marshal(x)
-}
-
-func (x *ItemShopCardPurchaseResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

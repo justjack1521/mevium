@@ -201,3 +201,7 @@ message CompleteRegionMapResponse {
 message AbilityCardSummonResponse {
   repeated game.ProtoAbilityCardSummonDrawResult results = 1;
 }
+
+message ExecuteDialogueResponse {
+
+}
