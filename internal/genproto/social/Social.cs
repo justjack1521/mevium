@@ -30,21 +30,22 @@ namespace Mobius.Proto.Social {
             "ZXJfbGV2ZWwYAyABKAUSEQoJaXNfcGxheWVyGAQgASgIIo4BChVQcm90b1Bs",
             "YXllclNvY2lhbEluZm8SLgoLcGxheWVyX2luZm8YASABKAsyGS5wcmVzZW5j",
             "ZS5Qcm90b1BsYXllckluZm8SEwoLbGFzdF9vbmxpbmUYAiABKAMSFQoNcmVn",
-            "aW9uX21hcF9pZBgDIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgEIAEoBSLi",
-            "AQoPUHJvdG9QbGF5ZXJJbmZvEhEKCXBsYXllcl9pZBgBIAEoCRITCgtwbGF5",
+            "aW9uX21hcF9pZBgDIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgEIAEoBSKl",
+            "AgoPUHJvdG9QbGF5ZXJJbmZvEhEKCXBsYXllcl9pZBgBIAEoCRITCgtwbGF5",
             "ZXJfbmFtZRgCIAEoCRIWCg5wbGF5ZXJfY29tbWVudBgDIAEoCRIUCgxwbGF5",
-            "ZXJfbGV2ZWwYBCABKAUSEwoLam9iX2NhcmRfaWQYBiABKAkSFQoNc3ViX2pv",
-            "Yl9pbmRleBgHIAEoBRIUCgxjb21wYW5pb25faWQYCCABKAkSNwoLcmVudGFs",
-            "X2NhcmQYCSABKAsyIi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkSWRlbnRp",
-            "dHlCT1o3Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5w",
-            "cm90by9wcm90b3NvY2lhbKoCE01vYml1cy5Qcm90by5Tb2NpYWxiBnByb3Rv",
-            "Mw=="));
+            "ZXJfbGV2ZWwYBCABKAUSFAoMY29tcGFuaW9uX2lkGAUgASgJEhMKC2pvYl9j",
+            "YXJkX2lkGAYgASgJEhUKDXN1Yl9qb2JfaW5kZXgYByABKAUSEwoLY3Jvd25f",
+            "bGV2ZWwYCCABKAUSEQoJd2VhcG9uX2lkGAkgASgJEhkKEXN1Yl93ZWFwb25f",
+            "dW5sb2NrGAogASgFEjcKC3JlbnRhbF9jYXJkGAsgASgLMiIuaWRlbnRpdHku",
+            "UHJvdG9BYmlsaXR5Q2FyZElkZW50aXR5Qk9aN2dpdGh1Yi5jb20vanVzdGph",
+            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9zb2NpYWyqAhNNb2Jp",
+            "dXMuUHJvdG8uU29jaWFsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerIdentity), global::Mobius.Proto.Social.ProtoPlayerIdentity.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "IsPlayer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerSocialInfo), global::Mobius.Proto.Social.ProtoPlayerSocialInfo.Parser, new[]{ "PlayerInfo", "LastOnline", "RegionMapId", "RegionNodeIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerInfo), global::Mobius.Proto.Social.ProtoPlayerInfo.Parser, new[]{ "PlayerId", "PlayerName", "PlayerComment", "PlayerLevel", "JobCardId", "SubJobIndex", "CompanionId", "RentalCard" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerInfo), global::Mobius.Proto.Social.ProtoPlayerInfo.Parser, new[]{ "PlayerId", "PlayerName", "PlayerComment", "PlayerLevel", "CompanionId", "JobCardId", "SubJobIndex", "CrownLevel", "WeaponId", "SubWeaponUnlock", "RentalCard" }, null, null, null, null)
           }));
     }
     #endregion
@@ -653,9 +654,12 @@ namespace Mobius.Proto.Social {
       playerName_ = other.playerName_;
       playerComment_ = other.playerComment_;
       playerLevel_ = other.playerLevel_;
+      companionId_ = other.companionId_;
       jobCardId_ = other.jobCardId_;
       subJobIndex_ = other.subJobIndex_;
-      companionId_ = other.companionId_;
+      crownLevel_ = other.crownLevel_;
+      weaponId_ = other.weaponId_;
+      subWeaponUnlock_ = other.subWeaponUnlock_;
       rentalCard_ = other.rentalCard_ != null ? other.rentalCard_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -709,6 +713,17 @@ namespace Mobius.Proto.Social {
       }
     }
 
+    /// <summary>Field number for the "companion_id" field.</summary>
+    public const int CompanionIdFieldNumber = 5;
+    private string companionId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CompanionId {
+      get { return companionId_; }
+      set {
+        companionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "job_card_id" field.</summary>
     public const int JobCardIdFieldNumber = 6;
     private string jobCardId_ = "";
@@ -731,19 +746,41 @@ namespace Mobius.Proto.Social {
       }
     }
 
-    /// <summary>Field number for the "companion_id" field.</summary>
-    public const int CompanionIdFieldNumber = 8;
-    private string companionId_ = "";
+    /// <summary>Field number for the "crown_level" field.</summary>
+    public const int CrownLevelFieldNumber = 8;
+    private int crownLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CompanionId {
-      get { return companionId_; }
+    public int CrownLevel {
+      get { return crownLevel_; }
       set {
-        companionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        crownLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "weapon_id" field.</summary>
+    public const int WeaponIdFieldNumber = 9;
+    private string weaponId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WeaponId {
+      get { return weaponId_; }
+      set {
+        weaponId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sub_weapon_unlock" field.</summary>
+    public const int SubWeaponUnlockFieldNumber = 10;
+    private int subWeaponUnlock_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SubWeaponUnlock {
+      get { return subWeaponUnlock_; }
+      set {
+        subWeaponUnlock_ = value;
       }
     }
 
     /// <summary>Field number for the "rental_card" field.</summary>
-    public const int RentalCardFieldNumber = 9;
+    public const int RentalCardFieldNumber = 11;
     private global::Mobius.Proto.Identity.ProtoAbilityCardIdentity rentalCard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Mobius.Proto.Identity.ProtoAbilityCardIdentity RentalCard {
@@ -770,9 +807,12 @@ namespace Mobius.Proto.Social {
       if (PlayerName != other.PlayerName) return false;
       if (PlayerComment != other.PlayerComment) return false;
       if (PlayerLevel != other.PlayerLevel) return false;
+      if (CompanionId != other.CompanionId) return false;
       if (JobCardId != other.JobCardId) return false;
       if (SubJobIndex != other.SubJobIndex) return false;
-      if (CompanionId != other.CompanionId) return false;
+      if (CrownLevel != other.CrownLevel) return false;
+      if (WeaponId != other.WeaponId) return false;
+      if (SubWeaponUnlock != other.SubWeaponUnlock) return false;
       if (!object.Equals(RentalCard, other.RentalCard)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -784,9 +824,12 @@ namespace Mobius.Proto.Social {
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (PlayerComment.Length != 0) hash ^= PlayerComment.GetHashCode();
       if (PlayerLevel != 0) hash ^= PlayerLevel.GetHashCode();
+      if (CompanionId.Length != 0) hash ^= CompanionId.GetHashCode();
       if (JobCardId.Length != 0) hash ^= JobCardId.GetHashCode();
       if (SubJobIndex != 0) hash ^= SubJobIndex.GetHashCode();
-      if (CompanionId.Length != 0) hash ^= CompanionId.GetHashCode();
+      if (CrownLevel != 0) hash ^= CrownLevel.GetHashCode();
+      if (WeaponId.Length != 0) hash ^= WeaponId.GetHashCode();
+      if (SubWeaponUnlock != 0) hash ^= SubWeaponUnlock.GetHashCode();
       if (rentalCard_ != null) hash ^= RentalCard.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -820,6 +863,10 @@ namespace Mobius.Proto.Social {
         output.WriteRawTag(32);
         output.WriteInt32(PlayerLevel);
       }
+      if (CompanionId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CompanionId);
+      }
       if (JobCardId.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(JobCardId);
@@ -828,12 +875,20 @@ namespace Mobius.Proto.Social {
         output.WriteRawTag(56);
         output.WriteInt32(SubJobIndex);
       }
-      if (CompanionId.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(CompanionId);
+      if (CrownLevel != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(CrownLevel);
+      }
+      if (WeaponId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(WeaponId);
+      }
+      if (SubWeaponUnlock != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(SubWeaponUnlock);
       }
       if (rentalCard_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteMessage(RentalCard);
       }
       if (_unknownFields != null) {
@@ -861,6 +916,10 @@ namespace Mobius.Proto.Social {
         output.WriteRawTag(32);
         output.WriteInt32(PlayerLevel);
       }
+      if (CompanionId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CompanionId);
+      }
       if (JobCardId.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(JobCardId);
@@ -869,12 +928,20 @@ namespace Mobius.Proto.Social {
         output.WriteRawTag(56);
         output.WriteInt32(SubJobIndex);
       }
-      if (CompanionId.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(CompanionId);
+      if (CrownLevel != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(CrownLevel);
+      }
+      if (WeaponId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(WeaponId);
+      }
+      if (SubWeaponUnlock != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(SubWeaponUnlock);
       }
       if (rentalCard_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteMessage(RentalCard);
       }
       if (_unknownFields != null) {
@@ -898,14 +965,23 @@ namespace Mobius.Proto.Social {
       if (PlayerLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerLevel);
       }
+      if (CompanionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanionId);
+      }
       if (JobCardId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JobCardId);
       }
       if (SubJobIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubJobIndex);
       }
-      if (CompanionId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanionId);
+      if (CrownLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CrownLevel);
+      }
+      if (WeaponId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WeaponId);
+      }
+      if (SubWeaponUnlock != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SubWeaponUnlock);
       }
       if (rentalCard_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RentalCard);
@@ -933,14 +1009,23 @@ namespace Mobius.Proto.Social {
       if (other.PlayerLevel != 0) {
         PlayerLevel = other.PlayerLevel;
       }
+      if (other.CompanionId.Length != 0) {
+        CompanionId = other.CompanionId;
+      }
       if (other.JobCardId.Length != 0) {
         JobCardId = other.JobCardId;
       }
       if (other.SubJobIndex != 0) {
         SubJobIndex = other.SubJobIndex;
       }
-      if (other.CompanionId.Length != 0) {
-        CompanionId = other.CompanionId;
+      if (other.CrownLevel != 0) {
+        CrownLevel = other.CrownLevel;
+      }
+      if (other.WeaponId.Length != 0) {
+        WeaponId = other.WeaponId;
+      }
+      if (other.SubWeaponUnlock != 0) {
+        SubWeaponUnlock = other.SubWeaponUnlock;
       }
       if (other.rentalCard_ != null) {
         if (rentalCard_ == null) {
@@ -978,6 +1063,10 @@ namespace Mobius.Proto.Social {
             PlayerLevel = input.ReadInt32();
             break;
           }
+          case 42: {
+            CompanionId = input.ReadString();
+            break;
+          }
           case 50: {
             JobCardId = input.ReadString();
             break;
@@ -986,11 +1075,19 @@ namespace Mobius.Proto.Social {
             SubJobIndex = input.ReadInt32();
             break;
           }
-          case 66: {
-            CompanionId = input.ReadString();
+          case 64: {
+            CrownLevel = input.ReadInt32();
             break;
           }
           case 74: {
+            WeaponId = input.ReadString();
+            break;
+          }
+          case 80: {
+            SubWeaponUnlock = input.ReadInt32();
+            break;
+          }
+          case 90: {
             if (rentalCard_ == null) {
               RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
             }
@@ -1027,6 +1124,10 @@ namespace Mobius.Proto.Social {
             PlayerLevel = input.ReadInt32();
             break;
           }
+          case 42: {
+            CompanionId = input.ReadString();
+            break;
+          }
           case 50: {
             JobCardId = input.ReadString();
             break;
@@ -1035,11 +1136,19 @@ namespace Mobius.Proto.Social {
             SubJobIndex = input.ReadInt32();
             break;
           }
-          case 66: {
-            CompanionId = input.ReadString();
+          case 64: {
+            CrownLevel = input.ReadInt32();
             break;
           }
           case 74: {
+            WeaponId = input.ReadString();
+            break;
+          }
+          case 80: {
+            SubWeaponUnlock = input.ReadInt32();
+            break;
+          }
+          case 90: {
             if (rentalCard_ == null) {
               RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
             }
