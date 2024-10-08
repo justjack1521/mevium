@@ -24,31 +24,28 @@ namespace Mobius.Proto {
     static CommonReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chhwcm90b2NvbW1vbi9jb21tb24ucHJvdG8SBmNvbW1vbiI2Cg1SZXF1ZXN0",
-            "SGVhZGVyEhEKCWNsaWVudF9pZBgBIAEoCRISCgpjb21tYW5kX2lkGAIgASgJ",
-            "IsABCg5SZXNwb25zZUhlYWRlchIRCgljbGllbnRfaWQYASABKAkSFQoNY29u",
-            "bmVjdGlvbl9pZBgCIAEoCRISCgpjb21tYW5kX2lkGAMgASgJEiMKB3NlcnZp",
-            "Y2UYBCABKA4yEi5jb21tb24uU2VydmljZUtleRIRCglvcGVyYXRpb24YBSAB",
-            "KAUSDQoFZXJyb3IYBiABKAgSEgoKZXJyb3JfY29kZRgHIAEoBRIVCg1lcnJv",
-            "cl9tZXNzYWdlGAggASgJInoKC0Jhc2VSZXF1ZXN0EiUKBmhlYWRlchgBIAEo",
-            "CzIVLmNvbW1vbi5SZXF1ZXN0SGVhZGVyEiMKB3NlcnZpY2UYAiABKA4yEi5j",
-            "b21tb24uU2VydmljZUtleRIRCglvcGVyYXRpb24YAyABKAUSDAoEZGF0YRgE",
-            "IAEoDCJACghSZXNwb25zZRImCgZoZWFkZXIYASABKAsyFi5jb21tb24uUmVz",
-            "cG9uc2VIZWFkZXISDAoEZGF0YRgCIAEoDCI9ChBBcHBsaWNhdGlvbkVycm9y",
-            "EhIKCmVycm9yX2NvZGUYASABKAUSFQoNZXJyb3JfbWVzc2FnZRgCIAEoCSJP",
-            "CgxOb3RpZmljYXRpb24SIwoHc2VydmljZRgBIAEoDjISLmNvbW1vbi5TZXJ2",
-            "aWNlS2V5EgwKBHR5cGUYAiABKAUSDAoEZGF0YRgDIAEoDCpYCgpTZXJ2aWNl",
-            "S2V5EgkKBUVNUFRZEAASCAoER0FNRRBkEgsKBlNPQ0lBTBDIARIMCgdSQU5L",
-            "SU5HEKwCEg4KCUNIQUxMRU5HRRCQAxIKCgVNVUxUSRD0A0JIWjdnaXRodWIu",
-            "Y29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvY29t",
-            "bW9uqgIMTW9iaXVzLlByb3RvYgZwcm90bzM="));
+            "Chhwcm90b2NvbW1vbi9jb21tb24ucHJvdG8SBmNvbW1vbiI6Cg5SZXNwb25z",
+            "ZUhlYWRlchIRCgljbGllbnRfaWQYASABKAkSFQoNY29ubmVjdGlvbl9pZBgC",
+            "IAEoCSJnCgtCYXNlUmVxdWVzdBISCgpjb21tYW5kX2lkGAEgASgJEiMKB3Nl",
+            "cnZpY2UYAiABKA4yEi5jb21tb24uU2VydmljZUtleRIRCglvcGVyYXRpb24Y",
+            "AyABKAUSDAoEZGF0YRgEIAEoDCKeAQoIUmVzcG9uc2USEgoKY29tbWFuZF9p",
+            "ZBgBIAEoCRIjCgdzZXJ2aWNlGAIgASgOMhIuY29tbW9uLlNlcnZpY2VLZXkS",
+            "EQoJb3BlcmF0aW9uGAMgASgFEgwKBGRhdGEYBCABKAwSDQoFZXJyb3IYBSAB",
+            "KAgSEgoKZXJyb3JfY29kZRgGIAEoBRIVCg1lcnJvcl9tZXNzYWdlGAcgASgJ",
+            "Ij0KEEFwcGxpY2F0aW9uRXJyb3ISEgoKZXJyb3JfY29kZRgBIAEoBRIVCg1l",
+            "cnJvcl9tZXNzYWdlGAIgASgJIk8KDE5vdGlmaWNhdGlvbhIjCgdzZXJ2aWNl",
+            "GAEgASgOMhIuY29tbW9uLlNlcnZpY2VLZXkSDAoEdHlwZRgCIAEoBRIMCgRk",
+            "YXRhGAMgASgMKlgKClNlcnZpY2VLZXkSCQoFRU1QVFkQABIICgRHQU1FEGQS",
+            "CwoGU09DSUFMEMgBEgwKB1JBTktJTkcQrAISDgoJQ0hBTExFTkdFEJADEgoK",
+            "BU1VTFRJEPQDQkhaN2dpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
+            "a2cvZ2VucHJvdG8vcHJvdG9jb21tb26qAgxNb2JpdXMuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.ServiceKey), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.RequestHeader), global::Mobius.Proto.RequestHeader.Parser, new[]{ "ClientId", "CommandId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.ResponseHeader), global::Mobius.Proto.ResponseHeader.Parser, new[]{ "ClientId", "ConnectionId", "CommandId", "Service", "Operation", "Error", "ErrorCode", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.BaseRequest), global::Mobius.Proto.BaseRequest.Parser, new[]{ "Header", "Service", "Operation", "Data" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Response), global::Mobius.Proto.Response.Parser, new[]{ "Header", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.ResponseHeader), global::Mobius.Proto.ResponseHeader.Parser, new[]{ "ClientId", "ConnectionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.BaseRequest), global::Mobius.Proto.BaseRequest.Parser, new[]{ "CommandId", "Service", "Operation", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Response), global::Mobius.Proto.Response.Parser, new[]{ "CommandId", "Service", "Operation", "Data", "Error", "ErrorCode", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.ApplicationError), global::Mobius.Proto.ApplicationError.Parser, new[]{ "ErrorCode", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Notification), global::Mobius.Proto.Notification.Parser, new[]{ "Service", "Type", "Data" }, null, null, null, null)
           }));
@@ -69,214 +66,6 @@ namespace Mobius.Proto {
   #endregion
 
   #region Messages
-  public sealed partial class RequestHeader : pb::IMessage<RequestHeader>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<RequestHeader> _parser = new pb::MessageParser<RequestHeader>(() => new RequestHeader());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RequestHeader> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestHeader() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestHeader(RequestHeader other) : this() {
-      clientId_ = other.clientId_;
-      commandId_ = other.commandId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestHeader Clone() {
-      return new RequestHeader(this);
-    }
-
-    /// <summary>Field number for the "client_id" field.</summary>
-    public const int ClientIdFieldNumber = 1;
-    private string clientId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ClientId {
-      get { return clientId_; }
-      set {
-        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "command_id" field.</summary>
-    public const int CommandIdFieldNumber = 2;
-    private string commandId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CommandId {
-      get { return commandId_; }
-      set {
-        commandId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as RequestHeader);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestHeader other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (ClientId != other.ClientId) return false;
-      if (CommandId != other.CommandId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
-      if (CommandId.Length != 0) hash ^= CommandId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (ClientId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ClientId);
-      }
-      if (CommandId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(CommandId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ClientId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ClientId);
-      }
-      if (CommandId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(CommandId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (ClientId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
-      }
-      if (CommandId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CommandId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestHeader other) {
-      if (other == null) {
-        return;
-      }
-      if (other.ClientId.Length != 0) {
-        ClientId = other.ClientId;
-      }
-      if (other.CommandId.Length != 0) {
-        CommandId = other.CommandId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            ClientId = input.ReadString();
-            break;
-          }
-          case 18: {
-            CommandId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            ClientId = input.ReadString();
-            break;
-          }
-          case 18: {
-            CommandId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class ResponseHeader : pb::IMessage<ResponseHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -289,7 +78,7 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -308,12 +97,6 @@ namespace Mobius.Proto {
     public ResponseHeader(ResponseHeader other) : this() {
       clientId_ = other.clientId_;
       connectionId_ = other.connectionId_;
-      commandId_ = other.commandId_;
-      service_ = other.service_;
-      operation_ = other.operation_;
-      error_ = other.error_;
-      errorCode_ = other.errorCode_;
-      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -344,72 +127,6 @@ namespace Mobius.Proto {
       }
     }
 
-    /// <summary>Field number for the "command_id" field.</summary>
-    public const int CommandIdFieldNumber = 3;
-    private string commandId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CommandId {
-      get { return commandId_; }
-      set {
-        commandId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "service" field.</summary>
-    public const int ServiceFieldNumber = 4;
-    private global::Mobius.Proto.ServiceKey service_ = global::Mobius.Proto.ServiceKey.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.ServiceKey Service {
-      get { return service_; }
-      set {
-        service_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "operation" field.</summary>
-    public const int OperationFieldNumber = 5;
-    private int operation_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Operation {
-      get { return operation_; }
-      set {
-        operation_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "error" field.</summary>
-    public const int ErrorFieldNumber = 6;
-    private bool error_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Error {
-      get { return error_; }
-      set {
-        error_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "error_code" field.</summary>
-    public const int ErrorCodeFieldNumber = 7;
-    private int errorCode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int ErrorCode {
-      get { return errorCode_; }
-      set {
-        errorCode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "error_message" field.</summary>
-    public const int ErrorMessageFieldNumber = 8;
-    private string errorMessage_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ErrorMessage {
-      get { return errorMessage_; }
-      set {
-        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ResponseHeader);
@@ -425,12 +142,6 @@ namespace Mobius.Proto {
       }
       if (ClientId != other.ClientId) return false;
       if (ConnectionId != other.ConnectionId) return false;
-      if (CommandId != other.CommandId) return false;
-      if (Service != other.Service) return false;
-      if (Operation != other.Operation) return false;
-      if (Error != other.Error) return false;
-      if (ErrorCode != other.ErrorCode) return false;
-      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -439,12 +150,6 @@ namespace Mobius.Proto {
       int hash = 1;
       if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
       if (ConnectionId.Length != 0) hash ^= ConnectionId.GetHashCode();
-      if (CommandId.Length != 0) hash ^= CommandId.GetHashCode();
-      if (Service != global::Mobius.Proto.ServiceKey.Empty) hash ^= Service.GetHashCode();
-      if (Operation != 0) hash ^= Operation.GetHashCode();
-      if (Error != false) hash ^= Error.GetHashCode();
-      if (ErrorCode != 0) hash ^= ErrorCode.GetHashCode();
-      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -469,30 +174,6 @@ namespace Mobius.Proto {
         output.WriteRawTag(18);
         output.WriteString(ConnectionId);
       }
-      if (CommandId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(CommandId);
-      }
-      if (Service != global::Mobius.Proto.ServiceKey.Empty) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Service);
-      }
-      if (Operation != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(Operation);
-      }
-      if (Error != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(Error);
-      }
-      if (ErrorCode != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(ErrorCode);
-      }
-      if (ErrorMessage.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(ErrorMessage);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -510,30 +191,6 @@ namespace Mobius.Proto {
         output.WriteRawTag(18);
         output.WriteString(ConnectionId);
       }
-      if (CommandId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(CommandId);
-      }
-      if (Service != global::Mobius.Proto.ServiceKey.Empty) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Service);
-      }
-      if (Operation != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(Operation);
-      }
-      if (Error != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(Error);
-      }
-      if (ErrorCode != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(ErrorCode);
-      }
-      if (ErrorMessage.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(ErrorMessage);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -548,24 +205,6 @@ namespace Mobius.Proto {
       }
       if (ConnectionId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectionId);
-      }
-      if (CommandId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CommandId);
-      }
-      if (Service != global::Mobius.Proto.ServiceKey.Empty) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Service);
-      }
-      if (Operation != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Operation);
-      }
-      if (Error != false) {
-        size += 1 + 1;
-      }
-      if (ErrorCode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ErrorCode);
-      }
-      if (ErrorMessage.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -583,24 +222,6 @@ namespace Mobius.Proto {
       }
       if (other.ConnectionId.Length != 0) {
         ConnectionId = other.ConnectionId;
-      }
-      if (other.CommandId.Length != 0) {
-        CommandId = other.CommandId;
-      }
-      if (other.Service != global::Mobius.Proto.ServiceKey.Empty) {
-        Service = other.Service;
-      }
-      if (other.Operation != 0) {
-        Operation = other.Operation;
-      }
-      if (other.Error != false) {
-        Error = other.Error;
-      }
-      if (other.ErrorCode != 0) {
-        ErrorCode = other.ErrorCode;
-      }
-      if (other.ErrorMessage.Length != 0) {
-        ErrorMessage = other.ErrorMessage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -622,30 +243,6 @@ namespace Mobius.Proto {
           }
           case 18: {
             ConnectionId = input.ReadString();
-            break;
-          }
-          case 26: {
-            CommandId = input.ReadString();
-            break;
-          }
-          case 32: {
-            Service = (global::Mobius.Proto.ServiceKey) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            Operation = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            Error = input.ReadBool();
-            break;
-          }
-          case 56: {
-            ErrorCode = input.ReadInt32();
-            break;
-          }
-          case 66: {
-            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -670,30 +267,6 @@ namespace Mobius.Proto {
             ConnectionId = input.ReadString();
             break;
           }
-          case 26: {
-            CommandId = input.ReadString();
-            break;
-          }
-          case 32: {
-            Service = (global::Mobius.Proto.ServiceKey) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            Operation = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            Error = input.ReadBool();
-            break;
-          }
-          case 56: {
-            ErrorCode = input.ReadInt32();
-            break;
-          }
-          case 66: {
-            ErrorMessage = input.ReadString();
-            break;
-          }
         }
       }
     }
@@ -713,7 +286,7 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -730,7 +303,7 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BaseRequest(BaseRequest other) : this() {
-      header_ = other.header_ != null ? other.header_.Clone() : null;
+      commandId_ = other.commandId_;
       service_ = other.service_;
       operation_ = other.operation_;
       data_ = other.data_;
@@ -742,14 +315,14 @@ namespace Mobius.Proto {
       return new BaseRequest(this);
     }
 
-    /// <summary>Field number for the "header" field.</summary>
-    public const int HeaderFieldNumber = 1;
-    private global::Mobius.Proto.RequestHeader header_;
+    /// <summary>Field number for the "command_id" field.</summary>
+    public const int CommandIdFieldNumber = 1;
+    private string commandId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.RequestHeader Header {
-      get { return header_; }
+    public string CommandId {
+      get { return commandId_; }
       set {
-        header_ = value;
+        commandId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -799,7 +372,7 @@ namespace Mobius.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Header, other.Header)) return false;
+      if (CommandId != other.CommandId) return false;
       if (Service != other.Service) return false;
       if (Operation != other.Operation) return false;
       if (Data != other.Data) return false;
@@ -809,7 +382,7 @@ namespace Mobius.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (header_ != null) hash ^= Header.GetHashCode();
+      if (CommandId.Length != 0) hash ^= CommandId.GetHashCode();
       if (Service != global::Mobius.Proto.ServiceKey.Empty) hash ^= Service.GetHashCode();
       if (Operation != 0) hash ^= Operation.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -829,9 +402,9 @@ namespace Mobius.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (header_ != null) {
+      if (CommandId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Header);
+        output.WriteString(CommandId);
       }
       if (Service != global::Mobius.Proto.ServiceKey.Empty) {
         output.WriteRawTag(16);
@@ -854,9 +427,9 @@ namespace Mobius.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (header_ != null) {
+      if (CommandId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Header);
+        output.WriteString(CommandId);
       }
       if (Service != global::Mobius.Proto.ServiceKey.Empty) {
         output.WriteRawTag(16);
@@ -879,8 +452,8 @@ namespace Mobius.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (header_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      if (CommandId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CommandId);
       }
       if (Service != global::Mobius.Proto.ServiceKey.Empty) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Service);
@@ -902,11 +475,8 @@ namespace Mobius.Proto {
       if (other == null) {
         return;
       }
-      if (other.header_ != null) {
-        if (header_ == null) {
-          Header = new global::Mobius.Proto.RequestHeader();
-        }
-        Header.MergeFrom(other.Header);
+      if (other.CommandId.Length != 0) {
+        CommandId = other.CommandId;
       }
       if (other.Service != global::Mobius.Proto.ServiceKey.Empty) {
         Service = other.Service;
@@ -932,10 +502,7 @@ namespace Mobius.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (header_ == null) {
-              Header = new global::Mobius.Proto.RequestHeader();
-            }
-            input.ReadMessage(Header);
+            CommandId = input.ReadString();
             break;
           }
           case 16: {
@@ -965,10 +532,7 @@ namespace Mobius.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (header_ == null) {
-              Header = new global::Mobius.Proto.RequestHeader();
-            }
-            input.ReadMessage(Header);
+            CommandId = input.ReadString();
             break;
           }
           case 16: {
@@ -1002,7 +566,7 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1019,8 +583,13 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Response(Response other) : this() {
-      header_ = other.header_ != null ? other.header_.Clone() : null;
+      commandId_ = other.commandId_;
+      service_ = other.service_;
+      operation_ = other.operation_;
       data_ = other.data_;
+      error_ = other.error_;
+      errorCode_ = other.errorCode_;
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1029,25 +598,80 @@ namespace Mobius.Proto {
       return new Response(this);
     }
 
-    /// <summary>Field number for the "header" field.</summary>
-    public const int HeaderFieldNumber = 1;
-    private global::Mobius.Proto.ResponseHeader header_;
+    /// <summary>Field number for the "command_id" field.</summary>
+    public const int CommandIdFieldNumber = 1;
+    private string commandId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.ResponseHeader Header {
-      get { return header_; }
+    public string CommandId {
+      get { return commandId_; }
       set {
-        header_ = value;
+        commandId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 2;
+    private global::Mobius.Proto.ServiceKey service_ = global::Mobius.Proto.ServiceKey.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.ServiceKey Service {
+      get { return service_; }
+      set {
+        service_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "operation" field.</summary>
+    public const int OperationFieldNumber = 3;
+    private int operation_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Operation {
+      get { return operation_; }
+      set {
+        operation_ = value;
       }
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 2;
+    public const int DataFieldNumber = 4;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
       get { return data_; }
       set {
         data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 5;
+    private bool error_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_code" field.</summary>
+    public const int ErrorCodeFieldNumber = 6;
+    private int errorCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ErrorCode {
+      get { return errorCode_; }
+      set {
+        errorCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 7;
+    private string errorMessage_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1064,16 +688,26 @@ namespace Mobius.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Header, other.Header)) return false;
+      if (CommandId != other.CommandId) return false;
+      if (Service != other.Service) return false;
+      if (Operation != other.Operation) return false;
       if (Data != other.Data) return false;
+      if (Error != other.Error) return false;
+      if (ErrorCode != other.ErrorCode) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (header_ != null) hash ^= Header.GetHashCode();
+      if (CommandId.Length != 0) hash ^= CommandId.GetHashCode();
+      if (Service != global::Mobius.Proto.ServiceKey.Empty) hash ^= Service.GetHashCode();
+      if (Operation != 0) hash ^= Operation.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (Error != false) hash ^= Error.GetHashCode();
+      if (ErrorCode != 0) hash ^= ErrorCode.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1090,13 +724,33 @@ namespace Mobius.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (header_ != null) {
+      if (CommandId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Header);
+        output.WriteString(CommandId);
+      }
+      if (Service != global::Mobius.Proto.ServiceKey.Empty) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Service);
+      }
+      if (Operation != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Operation);
       }
       if (Data.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteBytes(Data);
+      }
+      if (Error != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Error);
+      }
+      if (ErrorCode != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ErrorCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ErrorMessage);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1107,13 +761,33 @@ namespace Mobius.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (header_ != null) {
+      if (CommandId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Header);
+        output.WriteString(CommandId);
+      }
+      if (Service != global::Mobius.Proto.ServiceKey.Empty) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Service);
+      }
+      if (Operation != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Operation);
       }
       if (Data.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteBytes(Data);
+      }
+      if (Error != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Error);
+      }
+      if (ErrorCode != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ErrorCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ErrorMessage);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1124,11 +798,26 @@ namespace Mobius.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (header_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      if (CommandId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CommandId);
+      }
+      if (Service != global::Mobius.Proto.ServiceKey.Empty) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Service);
+      }
+      if (Operation != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Operation);
       }
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (Error != false) {
+        size += 1 + 1;
+      }
+      if (ErrorCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ErrorCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1141,14 +830,26 @@ namespace Mobius.Proto {
       if (other == null) {
         return;
       }
-      if (other.header_ != null) {
-        if (header_ == null) {
-          Header = new global::Mobius.Proto.ResponseHeader();
-        }
-        Header.MergeFrom(other.Header);
+      if (other.CommandId.Length != 0) {
+        CommandId = other.CommandId;
+      }
+      if (other.Service != global::Mobius.Proto.ServiceKey.Empty) {
+        Service = other.Service;
+      }
+      if (other.Operation != 0) {
+        Operation = other.Operation;
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
+      }
+      if (other.Error != false) {
+        Error = other.Error;
+      }
+      if (other.ErrorCode != 0) {
+        ErrorCode = other.ErrorCode;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1165,14 +866,31 @@ namespace Mobius.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (header_ == null) {
-              Header = new global::Mobius.Proto.ResponseHeader();
-            }
-            input.ReadMessage(Header);
+            CommandId = input.ReadString();
             break;
           }
-          case 18: {
+          case 16: {
+            Service = (global::Mobius.Proto.ServiceKey) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Operation = input.ReadInt32();
+            break;
+          }
+          case 34: {
             Data = input.ReadBytes();
+            break;
+          }
+          case 40: {
+            Error = input.ReadBool();
+            break;
+          }
+          case 48: {
+            ErrorCode = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -1190,14 +908,31 @@ namespace Mobius.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (header_ == null) {
-              Header = new global::Mobius.Proto.ResponseHeader();
-            }
-            input.ReadMessage(Header);
+            CommandId = input.ReadString();
             break;
           }
-          case 18: {
+          case 16: {
+            Service = (global::Mobius.Proto.ServiceKey) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Operation = input.ReadInt32();
+            break;
+          }
+          case 34: {
             Data = input.ReadBytes();
+            break;
+          }
+          case 40: {
+            Error = input.ReadBool();
+            break;
+          }
+          case 48: {
+            ErrorCode = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -1219,7 +954,7 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1427,7 +1162,7 @@ namespace Mobius.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Mobius.Proto.CommonReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
