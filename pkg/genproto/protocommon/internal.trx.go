@@ -51,3 +51,15 @@ func NewUserCreatedMessage(bytes []byte) (*UserCreated, error) {
 func (x *UserCreated) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewUserDeletedMessage(bytes []byte) (*UserDeleted, error) {
+	req := &UserDeleted{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *UserDeleted) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

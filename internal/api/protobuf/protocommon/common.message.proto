@@ -24,3 +24,7 @@ message UserCreated {
   string player_id = 2;
   string customer_id = 3;
 }
+
+message UserDeleted {
+  string user_id = 1;
+}
