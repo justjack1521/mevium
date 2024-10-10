@@ -49,3 +49,15 @@ func NewPlayerProfileCreatedMessage(bytes []byte) (*PlayerProfileCreatedMessage,
 func (x *PlayerProfileCreatedMessage) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewPlayerProfileDeletedMessage(bytes []byte) (*PlayerProfileDeletedMessage, error) {
+	req := &PlayerProfileDeletedMessage{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *PlayerProfileDeletedMessage) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
