@@ -150,13 +150,25 @@ message ProtoCardProgressData {
   bool extra_skill_unlock = 6;
 }
 
-message ProtoDailyMissionInstance {
-  string id = 1;
+message ProtoMission {
+  string reference_id = 1;
+  int32 primary_definition = 2;
+  int32 secondary_definition = 3;
+  int32 required = 4;
+}
+
+message ProtoMissionInstance {
+  ProtoMission mission = 1;
   int32 progress = 2;
   bool confirmed = 3;
   bool claimed = 4;
-  int64 received_at = 5;
-  repeated ProtoItemValuePair item_rewards = 6;
+}
+
+message ProtoDailyMissionInstance {
+  string id = 1;
+  ProtoMissionInstance instance = 2;
+  int64 received_at = 3;
+  repeated ProtoItemValuePair item_rewards = 4;
 }
 
 message BattleItemDrop {
@@ -445,11 +457,9 @@ message ProtoRegionEventData {
 
 message ProtoRegionMissionInstance {
   string mission_id = 1;
-  int32 definition_value = 2;
-  int32 required = 3;
-  int32 progress = 4;
-  bool apply_to_node = 5;
-  int32 node_index = 6;
+  ProtoMissionInstance instance = 2;
+  bool apply_to_node = 3;
+  int32 node_index = 4;
 }
 
 message ProtoSkillPanelGroups {
@@ -494,16 +504,25 @@ message ProtoWeaponInstance {
 }
 
 message ProtoBattleStatistics {
-  int32 total_score                     =   1;
-  int32 battle_turns                    =   2;
-  int32 orb_draws                       =   3;
-  int32 abilities_used                  =   4;
-  int32 total_hp_regen                  =   5;
-  int32 total_damage_taken              =   6;
-  int32 enemies_broken                  =   8;
-  map<string, int32> element_orb_draws  =   11;
-  map<string, int32> element_orb_usage  =   12;
-  repeated ProtoEnemyDeathStatistic enemy_defeats = 14;
+  int32 total_score                                 =   1;
+  int32 battle_turns                                =   2;
+  int32 abilities_used                              =   4;
+  int32 total_hp_regen                              =   5;
+  int32 total_damage_taken                          =   6;
+  int32 enemies_broken                              =   8;
+  repeated ElementUsageStatistic element_orb_draws  =   11;
+  repeated ElementUsageStatistic element_orb_usage  =   12;
+  repeated ProtoEnemyDeathStatistic enemy_defeats   =   14;
+}
+
+message ElementUsageStatistic {
+  string element_id = 1;
+  string count = 2;
+}
+
+message ElementDrawStatistic {
+  string element_id = 1;
+  string count = 2;
 }
 
 message ProtoEnemyDeathStatistic {
