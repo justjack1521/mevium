@@ -249,32 +249,29 @@ namespace Mobius.Proto.Game {
             "ZV9ib29zdBgKIAEoBRJECg5hdXRvX2FiaWxpdGllcxgLIAMoCzIsLmdhbWUu",
             "UHJvdG9XZWFwb25JbnN0YW5jZS5BdXRvQWJpbGl0aWVzRW50cnkSEgoKY3Jl",
             "YXRlZF9hdBgMIAEoAxo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgFOgI4ASKiBgoVUHJvdG9CYXR0bGVTdGF0aXN0",
+            "ASgJEg0KBXZhbHVlGAIgASgFOgI4ASL6AwoVUHJvdG9CYXR0bGVTdGF0aXN0",
             "aWNzEhMKC3RvdGFsX3Njb3JlGAEgASgFEhQKDGJhdHRsZV90dXJucxgCIAEo",
             "BRIRCglvcmJfZHJhd3MYAyABKAUSFgoOYWJpbGl0aWVzX3VzZWQYBCABKAUS",
             "FgoOdG90YWxfaHBfcmVnZW4YBSABKAUSGgoSdG90YWxfZGFtYWdlX3Rha2Vu",
-            "GAYgASgFEhgKEGVuZW1pZXNfZGVmZWF0ZWQYByABKAUSFgoOZW5lbWllc19i",
-            "cm9rZW4YCCABKAUSHwoXZW5lbWllc19kZWZlYXRfd2Vha25lc3MYCSABKAUS",
-            "JQodZW5lbWllc19kZWZlYXRfc2luZ2xlX2FiaWxpdHkYCiABKAUSSwoRZWxl",
-            "bWVudF9vcmJfZHJhd3MYCyADKAsyMC5nYW1lLlByb3RvQmF0dGxlU3RhdGlz",
-            "dGljcy5FbGVtZW50T3JiRHJhd3NFbnRyeRJLChFlbGVtZW50X29yYl91c2Fn",
-            "ZRgMIAMoCzIwLmdhbWUuUHJvdG9CYXR0bGVTdGF0aXN0aWNzLkVsZW1lbnRP",
-            "cmJVc2FnZUVudHJ5EkkKEGpvYl90eXBlX2RlZmVhdHMYDSADKAsyLy5nYW1l",
-            "LlByb3RvQmF0dGxlU3RhdGlzdGljcy5Kb2JUeXBlRGVmZWF0c0VudHJ5EkQK",
-            "DWVuZW15X2RlZmVhdHMYDiADKAsyLS5nYW1lLlByb3RvQmF0dGxlU3RhdGlz",
-            "dGljcy5FbmVteURlZmVhdHNFbnRyeRo2ChRFbGVtZW50T3JiRHJhd3NFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBGjYKFEVsZW1lbnRP",
-            "cmJVc2FnZUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEa",
-            "NQoTSm9iVHlwZURlZmVhdHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAU6AjgBGjMKEUVuZW15RGVmZWF0c0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoBToCOAEiYQogUHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRy",
-            "YXdSZXN1bHQSMAoIaW5zdGFuY2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0",
-            "eUNhcmRJbnN0YW5jZRILCgNuZXcYAiABKAgqdAoPUmVmZXJlbmNlU291cmNl",
-            "EggKBE5PTkUQABIQCgxBQklMSVRZX0NBUkQQARIICgRJVEVNEAISDAoISk9C",
-            "X0NBUkQQAxIKCgZXRUFQT04QBBITCg9GQUlSWV9DT01QQU5JT04QBRIMCghN",
-            "UF9TVEFNUBAGQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
-            "a2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnBy",
-            "b3RvMw=="));
+            "GAYgASgFEhYKDmVuZW1pZXNfYnJva2VuGAggASgFEksKEWVsZW1lbnRfb3Ji",
+            "X2RyYXdzGAsgAygLMjAuZ2FtZS5Qcm90b0JhdHRsZVN0YXRpc3RpY3MuRWxl",
+            "bWVudE9yYkRyYXdzRW50cnkSSwoRZWxlbWVudF9vcmJfdXNhZ2UYDCADKAsy",
+            "MC5nYW1lLlByb3RvQmF0dGxlU3RhdGlzdGljcy5FbGVtZW50T3JiVXNhZ2VF",
+            "bnRyeRI1Cg1lbmVteV9kZWZlYXRzGA4gAygLMh4uZ2FtZS5Qcm90b0VuZW15",
+            "RGVhdGhTdGF0aXN0aWMaNgoURWxlbWVudE9yYkRyYXdzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ARo2ChRFbGVtZW50T3JiVXNhZ2VF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBIq4BChhQcm90",
+            "b0VuZW15RGVhdGhTdGF0aXN0aWMSEAoIZmllbmRfaWQYASABKAkSEgoKZWxl",
+            "bWVudF9pZBgCIAEoCRITCgtqb2JfdHlwZV9pZBgDIAEoCRIVCg1mcm9tX3dl",
+            "YWtuZXNzGAQgASgIEhMKC2Zyb21fbm9ybWFsGAUgASgIEhUKDWZyb21fdWx0",
+            "aW1hdGUYBiABKAgSFAoMYWN0aW9uX2NvdW50GAcgASgFImEKIFByb3RvQWJp",
+            "bGl0eUNhcmRTdW1tb25EcmF3UmVzdWx0EjAKCGluc3RhbmNlGAEgASgLMh4u",
+            "Z2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2USCwoDbmV3GAIgASgIKnQK",
+            "D1JlZmVyZW5jZVNvdXJjZRIICgROT05FEAASEAoMQUJJTElUWV9DQVJEEAES",
+            "CAoESVRFTRACEgwKCEpPQl9DQVJEEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllf",
+            "Q09NUEFOSU9OEAUSDAoITVBfU1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3Rq",
+            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1",
+            "cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -334,7 +331,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSkillPanel), global::Mobius.Proto.Game.ProtoSkillPanel.Parser, new[]{ "Index", "Unlocked", "Completed", "CapItem" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponInventory), global::Mobius.Proto.Game.ProtoWeaponInventory.Parser, new[]{ "WeaponList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponInstance), global::Mobius.Proto.Game.ProtoWeaponInstance.Parser, new[]{ "BaseWeaponId", "SubWeaponUnlock", "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities", "CreatedAt" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStatistics), global::Mobius.Proto.Game.ProtoBattleStatistics.Parser, new[]{ "TotalScore", "BattleTurns", "OrbDraws", "AbilitiesUsed", "TotalHpRegen", "TotalDamageTaken", "EnemiesDefeated", "EnemiesBroken", "EnemiesDefeatWeakness", "EnemiesDefeatSingleAbility", "ElementOrbDraws", "ElementOrbUsage", "JobTypeDefeats", "EnemyDefeats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStatistics), global::Mobius.Proto.Game.ProtoBattleStatistics.Parser, new[]{ "TotalScore", "BattleTurns", "OrbDraws", "AbilitiesUsed", "TotalHpRegen", "TotalDamageTaken", "EnemiesBroken", "ElementOrbDraws", "ElementOrbUsage", "EnemyDefeats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoEnemyDeathStatistic), global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser, new[]{ "FiendId", "ElementId", "JobTypeId", "FromWeakness", "FromNormal", "FromUltimate", "ActionCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "New" }, null, null, null, null)
           }));
     }
@@ -17822,13 +17820,9 @@ namespace Mobius.Proto.Game {
       abilitiesUsed_ = other.abilitiesUsed_;
       totalHpRegen_ = other.totalHpRegen_;
       totalDamageTaken_ = other.totalDamageTaken_;
-      enemiesDefeated_ = other.enemiesDefeated_;
       enemiesBroken_ = other.enemiesBroken_;
-      enemiesDefeatWeakness_ = other.enemiesDefeatWeakness_;
-      enemiesDefeatSingleAbility_ = other.enemiesDefeatSingleAbility_;
       elementOrbDraws_ = other.elementOrbDraws_.Clone();
       elementOrbUsage_ = other.elementOrbUsage_.Clone();
-      jobTypeDefeats_ = other.jobTypeDefeats_.Clone();
       enemyDefeats_ = other.enemyDefeats_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -17904,17 +17898,6 @@ namespace Mobius.Proto.Game {
       }
     }
 
-    /// <summary>Field number for the "enemies_defeated" field.</summary>
-    public const int EnemiesDefeatedFieldNumber = 7;
-    private int enemiesDefeated_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int EnemiesDefeated {
-      get { return enemiesDefeated_; }
-      set {
-        enemiesDefeated_ = value;
-      }
-    }
-
     /// <summary>Field number for the "enemies_broken" field.</summary>
     public const int EnemiesBrokenFieldNumber = 8;
     private int enemiesBroken_;
@@ -17923,28 +17906,6 @@ namespace Mobius.Proto.Game {
       get { return enemiesBroken_; }
       set {
         enemiesBroken_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "enemies_defeat_weakness" field.</summary>
-    public const int EnemiesDefeatWeaknessFieldNumber = 9;
-    private int enemiesDefeatWeakness_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int EnemiesDefeatWeakness {
-      get { return enemiesDefeatWeakness_; }
-      set {
-        enemiesDefeatWeakness_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "enemies_defeat_single_ability" field.</summary>
-    public const int EnemiesDefeatSingleAbilityFieldNumber = 10;
-    private int enemiesDefeatSingleAbility_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int EnemiesDefeatSingleAbility {
-      get { return enemiesDefeatSingleAbility_; }
-      set {
-        enemiesDefeatSingleAbility_ = value;
       }
     }
 
@@ -17968,23 +17929,13 @@ namespace Mobius.Proto.Game {
       get { return elementOrbUsage_; }
     }
 
-    /// <summary>Field number for the "job_type_defeats" field.</summary>
-    public const int JobTypeDefeatsFieldNumber = 13;
-    private static readonly pbc::MapField<string, int>.Codec _map_jobTypeDefeats_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 106);
-    private readonly pbc::MapField<string, int> jobTypeDefeats_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, int> JobTypeDefeats {
-      get { return jobTypeDefeats_; }
-    }
-
     /// <summary>Field number for the "enemy_defeats" field.</summary>
     public const int EnemyDefeatsFieldNumber = 14;
-    private static readonly pbc::MapField<string, int>.Codec _map_enemyDefeats_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 114);
-    private readonly pbc::MapField<string, int> enemyDefeats_ = new pbc::MapField<string, int>();
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoEnemyDeathStatistic> _repeated_enemyDefeats_codec
+        = pb::FieldCodec.ForMessage(114, global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoEnemyDeathStatistic> enemyDefeats_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoEnemyDeathStatistic>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, int> EnemyDefeats {
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoEnemyDeathStatistic> EnemyDefeats {
       get { return enemyDefeats_; }
     }
 
@@ -18007,14 +17958,10 @@ namespace Mobius.Proto.Game {
       if (AbilitiesUsed != other.AbilitiesUsed) return false;
       if (TotalHpRegen != other.TotalHpRegen) return false;
       if (TotalDamageTaken != other.TotalDamageTaken) return false;
-      if (EnemiesDefeated != other.EnemiesDefeated) return false;
       if (EnemiesBroken != other.EnemiesBroken) return false;
-      if (EnemiesDefeatWeakness != other.EnemiesDefeatWeakness) return false;
-      if (EnemiesDefeatSingleAbility != other.EnemiesDefeatSingleAbility) return false;
       if (!ElementOrbDraws.Equals(other.ElementOrbDraws)) return false;
       if (!ElementOrbUsage.Equals(other.ElementOrbUsage)) return false;
-      if (!JobTypeDefeats.Equals(other.JobTypeDefeats)) return false;
-      if (!EnemyDefeats.Equals(other.EnemyDefeats)) return false;
+      if(!enemyDefeats_.Equals(other.enemyDefeats_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -18027,14 +17974,10 @@ namespace Mobius.Proto.Game {
       if (AbilitiesUsed != 0) hash ^= AbilitiesUsed.GetHashCode();
       if (TotalHpRegen != 0) hash ^= TotalHpRegen.GetHashCode();
       if (TotalDamageTaken != 0) hash ^= TotalDamageTaken.GetHashCode();
-      if (EnemiesDefeated != 0) hash ^= EnemiesDefeated.GetHashCode();
       if (EnemiesBroken != 0) hash ^= EnemiesBroken.GetHashCode();
-      if (EnemiesDefeatWeakness != 0) hash ^= EnemiesDefeatWeakness.GetHashCode();
-      if (EnemiesDefeatSingleAbility != 0) hash ^= EnemiesDefeatSingleAbility.GetHashCode();
       hash ^= ElementOrbDraws.GetHashCode();
       hash ^= ElementOrbUsage.GetHashCode();
-      hash ^= JobTypeDefeats.GetHashCode();
-      hash ^= EnemyDefeats.GetHashCode();
+      hash ^= enemyDefeats_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -18075,26 +18018,13 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(48);
         output.WriteInt32(TotalDamageTaken);
       }
-      if (EnemiesDefeated != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(EnemiesDefeated);
-      }
       if (EnemiesBroken != 0) {
         output.WriteRawTag(64);
         output.WriteInt32(EnemiesBroken);
       }
-      if (EnemiesDefeatWeakness != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(EnemiesDefeatWeakness);
-      }
-      if (EnemiesDefeatSingleAbility != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(EnemiesDefeatSingleAbility);
-      }
       elementOrbDraws_.WriteTo(output, _map_elementOrbDraws_codec);
       elementOrbUsage_.WriteTo(output, _map_elementOrbUsage_codec);
-      jobTypeDefeats_.WriteTo(output, _map_jobTypeDefeats_codec);
-      enemyDefeats_.WriteTo(output, _map_enemyDefeats_codec);
+      enemyDefeats_.WriteTo(output, _repeated_enemyDefeats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -18128,26 +18058,13 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(48);
         output.WriteInt32(TotalDamageTaken);
       }
-      if (EnemiesDefeated != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(EnemiesDefeated);
-      }
       if (EnemiesBroken != 0) {
         output.WriteRawTag(64);
         output.WriteInt32(EnemiesBroken);
       }
-      if (EnemiesDefeatWeakness != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(EnemiesDefeatWeakness);
-      }
-      if (EnemiesDefeatSingleAbility != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(EnemiesDefeatSingleAbility);
-      }
       elementOrbDraws_.WriteTo(ref output, _map_elementOrbDraws_codec);
       elementOrbUsage_.WriteTo(ref output, _map_elementOrbUsage_codec);
-      jobTypeDefeats_.WriteTo(ref output, _map_jobTypeDefeats_codec);
-      enemyDefeats_.WriteTo(ref output, _map_enemyDefeats_codec);
+      enemyDefeats_.WriteTo(ref output, _repeated_enemyDefeats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -18175,22 +18092,12 @@ namespace Mobius.Proto.Game {
       if (TotalDamageTaken != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalDamageTaken);
       }
-      if (EnemiesDefeated != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EnemiesDefeated);
-      }
       if (EnemiesBroken != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(EnemiesBroken);
       }
-      if (EnemiesDefeatWeakness != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EnemiesDefeatWeakness);
-      }
-      if (EnemiesDefeatSingleAbility != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EnemiesDefeatSingleAbility);
-      }
       size += elementOrbDraws_.CalculateSize(_map_elementOrbDraws_codec);
       size += elementOrbUsage_.CalculateSize(_map_elementOrbUsage_codec);
-      size += jobTypeDefeats_.CalculateSize(_map_jobTypeDefeats_codec);
-      size += enemyDefeats_.CalculateSize(_map_enemyDefeats_codec);
+      size += enemyDefeats_.CalculateSize(_repeated_enemyDefeats_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -18220,21 +18127,11 @@ namespace Mobius.Proto.Game {
       if (other.TotalDamageTaken != 0) {
         TotalDamageTaken = other.TotalDamageTaken;
       }
-      if (other.EnemiesDefeated != 0) {
-        EnemiesDefeated = other.EnemiesDefeated;
-      }
       if (other.EnemiesBroken != 0) {
         EnemiesBroken = other.EnemiesBroken;
       }
-      if (other.EnemiesDefeatWeakness != 0) {
-        EnemiesDefeatWeakness = other.EnemiesDefeatWeakness;
-      }
-      if (other.EnemiesDefeatSingleAbility != 0) {
-        EnemiesDefeatSingleAbility = other.EnemiesDefeatSingleAbility;
-      }
       elementOrbDraws_.Add(other.elementOrbDraws_);
       elementOrbUsage_.Add(other.elementOrbUsage_);
-      jobTypeDefeats_.Add(other.jobTypeDefeats_);
       enemyDefeats_.Add(other.enemyDefeats_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -18274,20 +18171,8 @@ namespace Mobius.Proto.Game {
             TotalDamageTaken = input.ReadInt32();
             break;
           }
-          case 56: {
-            EnemiesDefeated = input.ReadInt32();
-            break;
-          }
           case 64: {
             EnemiesBroken = input.ReadInt32();
-            break;
-          }
-          case 72: {
-            EnemiesDefeatWeakness = input.ReadInt32();
-            break;
-          }
-          case 80: {
-            EnemiesDefeatSingleAbility = input.ReadInt32();
             break;
           }
           case 90: {
@@ -18298,12 +18183,8 @@ namespace Mobius.Proto.Game {
             elementOrbUsage_.AddEntriesFrom(input, _map_elementOrbUsage_codec);
             break;
           }
-          case 106: {
-            jobTypeDefeats_.AddEntriesFrom(input, _map_jobTypeDefeats_codec);
-            break;
-          }
           case 114: {
-            enemyDefeats_.AddEntriesFrom(input, _map_enemyDefeats_codec);
+            enemyDefeats_.AddEntriesFrom(input, _repeated_enemyDefeats_codec);
             break;
           }
         }
@@ -18344,20 +18225,8 @@ namespace Mobius.Proto.Game {
             TotalDamageTaken = input.ReadInt32();
             break;
           }
-          case 56: {
-            EnemiesDefeated = input.ReadInt32();
-            break;
-          }
           case 64: {
             EnemiesBroken = input.ReadInt32();
-            break;
-          }
-          case 72: {
-            EnemiesDefeatWeakness = input.ReadInt32();
-            break;
-          }
-          case 80: {
-            EnemiesDefeatSingleAbility = input.ReadInt32();
             break;
           }
           case 90: {
@@ -18368,12 +18237,396 @@ namespace Mobius.Proto.Game {
             elementOrbUsage_.AddEntriesFrom(ref input, _map_elementOrbUsage_codec);
             break;
           }
-          case 106: {
-            jobTypeDefeats_.AddEntriesFrom(ref input, _map_jobTypeDefeats_codec);
+          case 114: {
+            enemyDefeats_.AddEntriesFrom(ref input, _repeated_enemyDefeats_codec);
             break;
           }
-          case 114: {
-            enemyDefeats_.AddEntriesFrom(ref input, _map_enemyDefeats_codec);
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoEnemyDeathStatistic : pb::IMessage<ProtoEnemyDeathStatistic>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoEnemyDeathStatistic> _parser = new pb::MessageParser<ProtoEnemyDeathStatistic>(() => new ProtoEnemyDeathStatistic());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoEnemyDeathStatistic> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[57]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEnemyDeathStatistic() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEnemyDeathStatistic(ProtoEnemyDeathStatistic other) : this() {
+      fiendId_ = other.fiendId_;
+      elementId_ = other.elementId_;
+      jobTypeId_ = other.jobTypeId_;
+      fromWeakness_ = other.fromWeakness_;
+      fromNormal_ = other.fromNormal_;
+      fromUltimate_ = other.fromUltimate_;
+      actionCount_ = other.actionCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEnemyDeathStatistic Clone() {
+      return new ProtoEnemyDeathStatistic(this);
+    }
+
+    /// <summary>Field number for the "fiend_id" field.</summary>
+    public const int FiendIdFieldNumber = 1;
+    private string fiendId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FiendId {
+      get { return fiendId_; }
+      set {
+        fiendId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "element_id" field.</summary>
+    public const int ElementIdFieldNumber = 2;
+    private string elementId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ElementId {
+      get { return elementId_; }
+      set {
+        elementId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "job_type_id" field.</summary>
+    public const int JobTypeIdFieldNumber = 3;
+    private string jobTypeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string JobTypeId {
+      get { return jobTypeId_; }
+      set {
+        jobTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "from_weakness" field.</summary>
+    public const int FromWeaknessFieldNumber = 4;
+    private bool fromWeakness_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool FromWeakness {
+      get { return fromWeakness_; }
+      set {
+        fromWeakness_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "from_normal" field.</summary>
+    public const int FromNormalFieldNumber = 5;
+    private bool fromNormal_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool FromNormal {
+      get { return fromNormal_; }
+      set {
+        fromNormal_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "from_ultimate" field.</summary>
+    public const int FromUltimateFieldNumber = 6;
+    private bool fromUltimate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool FromUltimate {
+      get { return fromUltimate_; }
+      set {
+        fromUltimate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "action_count" field.</summary>
+    public const int ActionCountFieldNumber = 7;
+    private int actionCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ActionCount {
+      get { return actionCount_; }
+      set {
+        actionCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoEnemyDeathStatistic);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoEnemyDeathStatistic other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FiendId != other.FiendId) return false;
+      if (ElementId != other.ElementId) return false;
+      if (JobTypeId != other.JobTypeId) return false;
+      if (FromWeakness != other.FromWeakness) return false;
+      if (FromNormal != other.FromNormal) return false;
+      if (FromUltimate != other.FromUltimate) return false;
+      if (ActionCount != other.ActionCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FiendId.Length != 0) hash ^= FiendId.GetHashCode();
+      if (ElementId.Length != 0) hash ^= ElementId.GetHashCode();
+      if (JobTypeId.Length != 0) hash ^= JobTypeId.GetHashCode();
+      if (FromWeakness != false) hash ^= FromWeakness.GetHashCode();
+      if (FromNormal != false) hash ^= FromNormal.GetHashCode();
+      if (FromUltimate != false) hash ^= FromUltimate.GetHashCode();
+      if (ActionCount != 0) hash ^= ActionCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FiendId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FiendId);
+      }
+      if (ElementId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ElementId);
+      }
+      if (JobTypeId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(JobTypeId);
+      }
+      if (FromWeakness != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(FromWeakness);
+      }
+      if (FromNormal != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(FromNormal);
+      }
+      if (FromUltimate != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(FromUltimate);
+      }
+      if (ActionCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(ActionCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FiendId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FiendId);
+      }
+      if (ElementId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ElementId);
+      }
+      if (JobTypeId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(JobTypeId);
+      }
+      if (FromWeakness != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(FromWeakness);
+      }
+      if (FromNormal != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(FromNormal);
+      }
+      if (FromUltimate != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(FromUltimate);
+      }
+      if (ActionCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(ActionCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (FiendId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FiendId);
+      }
+      if (ElementId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ElementId);
+      }
+      if (JobTypeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(JobTypeId);
+      }
+      if (FromWeakness != false) {
+        size += 1 + 1;
+      }
+      if (FromNormal != false) {
+        size += 1 + 1;
+      }
+      if (FromUltimate != false) {
+        size += 1 + 1;
+      }
+      if (ActionCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ActionCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoEnemyDeathStatistic other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FiendId.Length != 0) {
+        FiendId = other.FiendId;
+      }
+      if (other.ElementId.Length != 0) {
+        ElementId = other.ElementId;
+      }
+      if (other.JobTypeId.Length != 0) {
+        JobTypeId = other.JobTypeId;
+      }
+      if (other.FromWeakness != false) {
+        FromWeakness = other.FromWeakness;
+      }
+      if (other.FromNormal != false) {
+        FromNormal = other.FromNormal;
+      }
+      if (other.FromUltimate != false) {
+        FromUltimate = other.FromUltimate;
+      }
+      if (other.ActionCount != 0) {
+        ActionCount = other.ActionCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FiendId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ElementId = input.ReadString();
+            break;
+          }
+          case 26: {
+            JobTypeId = input.ReadString();
+            break;
+          }
+          case 32: {
+            FromWeakness = input.ReadBool();
+            break;
+          }
+          case 40: {
+            FromNormal = input.ReadBool();
+            break;
+          }
+          case 48: {
+            FromUltimate = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ActionCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FiendId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ElementId = input.ReadString();
+            break;
+          }
+          case 26: {
+            JobTypeId = input.ReadString();
+            break;
+          }
+          case 32: {
+            FromWeakness = input.ReadBool();
+            break;
+          }
+          case 40: {
+            FromNormal = input.ReadBool();
+            break;
+          }
+          case 48: {
+            FromUltimate = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ActionCount = input.ReadInt32();
             break;
           }
         }
@@ -18395,7 +18648,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[57]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
