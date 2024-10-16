@@ -517,12 +517,7 @@ message ProtoBattleStatistics {
 
 message ElementUsageStatistic {
   string element_id = 1;
-  string count = 2;
-}
-
-message ElementDrawStatistic {
-  string element_id = 1;
-  string count = 2;
+  int32 count = 2;
 }
 
 message ProtoEnemyDeathStatistic {
