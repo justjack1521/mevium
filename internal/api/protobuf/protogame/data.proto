@@ -507,6 +507,7 @@ message ProtoBattleStatistics {
   map<string, int32> element_orb_draws  =   11;
   map<string, int32> element_orb_usage  =   12;
   map<string, int32> job_type_defeats   =   13;
+  map<string, int32> enemy_defeats      =   14;
 }
 
 message ProtoAbilityCardSummonDrawResult {

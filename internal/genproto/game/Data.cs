@@ -249,7 +249,7 @@ namespace Mobius.Proto.Game {
             "ZV9ib29zdBgKIAEoBRJECg5hdXRvX2FiaWxpdGllcxgLIAMoCzIsLmdhbWUu",
             "UHJvdG9XZWFwb25JbnN0YW5jZS5BdXRvQWJpbGl0aWVzRW50cnkSEgoKY3Jl",
             "YXRlZF9hdBgMIAEoAxo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgFOgI4ASKnBQoVUHJvdG9CYXR0bGVTdGF0aXN0",
+            "ASgJEg0KBXZhbHVlGAIgASgFOgI4ASKiBgoVUHJvdG9CYXR0bGVTdGF0aXN0",
             "aWNzEhMKC3RvdGFsX3Njb3JlGAEgASgFEhQKDGJhdHRsZV90dXJucxgCIAEo",
             "BRIRCglvcmJfZHJhd3MYAyABKAUSFgoOYWJpbGl0aWVzX3VzZWQYBCABKAUS",
             "FgoOdG90YWxfaHBfcmVnZW4YBSABKAUSGgoSdG90YWxfZGFtYWdlX3Rha2Vu",
@@ -260,18 +260,21 @@ namespace Mobius.Proto.Game {
             "dGljcy5FbGVtZW50T3JiRHJhd3NFbnRyeRJLChFlbGVtZW50X29yYl91c2Fn",
             "ZRgMIAMoCzIwLmdhbWUuUHJvdG9CYXR0bGVTdGF0aXN0aWNzLkVsZW1lbnRP",
             "cmJVc2FnZUVudHJ5EkkKEGpvYl90eXBlX2RlZmVhdHMYDSADKAsyLy5nYW1l",
-            "LlByb3RvQmF0dGxlU3RhdGlzdGljcy5Kb2JUeXBlRGVmZWF0c0VudHJ5GjYK",
-            "FEVsZW1lbnRPcmJEcmF3c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoBToCOAEaNgoURWxlbWVudE9yYlVzYWdlRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgFOgI4ARo1ChNKb2JUeXBlRGVmZWF0c0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEiYQogUHJvdG9BYmlsaXR5",
-            "Q2FyZFN1bW1vbkRyYXdSZXN1bHQSMAoIaW5zdGFuY2UYASABKAsyHi5nYW1l",
-            "LlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRILCgNuZXcYAiABKAgqdAoPUmVm",
-            "ZXJlbmNlU291cmNlEggKBE5PTkUQABIQCgxBQklMSVRZX0NBUkQQARIICgRJ",
-            "VEVNEAISDAoISk9CX0NBUkQQAxIKCgZXRUFQT04QBBITCg9GQUlSWV9DT01Q",
-            "QU5JT04QBRIMCghNUF9TVEFNUBAGQktaNWdpdGh1Yi5jb20vanVzdGphY2sx",
-            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlBy",
-            "b3RvLkdhbWViBnByb3RvMw=="));
+            "LlByb3RvQmF0dGxlU3RhdGlzdGljcy5Kb2JUeXBlRGVmZWF0c0VudHJ5EkQK",
+            "DWVuZW15X2RlZmVhdHMYDiADKAsyLS5nYW1lLlByb3RvQmF0dGxlU3RhdGlz",
+            "dGljcy5FbmVteURlZmVhdHNFbnRyeRo2ChRFbGVtZW50T3JiRHJhd3NFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBGjYKFEVsZW1lbnRP",
+            "cmJVc2FnZUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEa",
+            "NQoTSm9iVHlwZURlZmVhdHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAU6AjgBGjMKEUVuZW15RGVmZWF0c0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoBToCOAEiYQogUHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRy",
+            "YXdSZXN1bHQSMAoIaW5zdGFuY2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0",
+            "eUNhcmRJbnN0YW5jZRILCgNuZXcYAiABKAgqdAoPUmVmZXJlbmNlU291cmNl",
+            "EggKBE5PTkUQABIQCgxBQklMSVRZX0NBUkQQARIICgRJVEVNEAISDAoISk9C",
+            "X0NBUkQQAxIKCgZXRUFQT04QBBITCg9GQUlSWV9DT01QQU5JT04QBRIMCghN",
+            "UF9TVEFNUBAGQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
+            "a2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -331,7 +334,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSkillPanel), global::Mobius.Proto.Game.ProtoSkillPanel.Parser, new[]{ "Index", "Unlocked", "Completed", "CapItem" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponInventory), global::Mobius.Proto.Game.ProtoWeaponInventory.Parser, new[]{ "WeaponList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponInstance), global::Mobius.Proto.Game.ProtoWeaponInstance.Parser, new[]{ "BaseWeaponId", "SubWeaponUnlock", "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities", "CreatedAt" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStatistics), global::Mobius.Proto.Game.ProtoBattleStatistics.Parser, new[]{ "TotalScore", "BattleTurns", "OrbDraws", "AbilitiesUsed", "TotalHpRegen", "TotalDamageTaken", "EnemiesDefeated", "EnemiesBroken", "EnemiesDefeatWeakness", "EnemiesDefeatSingleAbility", "ElementOrbDraws", "ElementOrbUsage", "JobTypeDefeats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStatistics), global::Mobius.Proto.Game.ProtoBattleStatistics.Parser, new[]{ "TotalScore", "BattleTurns", "OrbDraws", "AbilitiesUsed", "TotalHpRegen", "TotalDamageTaken", "EnemiesDefeated", "EnemiesBroken", "EnemiesDefeatWeakness", "EnemiesDefeatSingleAbility", "ElementOrbDraws", "ElementOrbUsage", "JobTypeDefeats", "EnemyDefeats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "New" }, null, null, null, null)
           }));
     }
@@ -17826,6 +17829,7 @@ namespace Mobius.Proto.Game {
       elementOrbDraws_ = other.elementOrbDraws_.Clone();
       elementOrbUsage_ = other.elementOrbUsage_.Clone();
       jobTypeDefeats_ = other.jobTypeDefeats_.Clone();
+      enemyDefeats_ = other.enemyDefeats_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -17974,6 +17978,16 @@ namespace Mobius.Proto.Game {
       get { return jobTypeDefeats_; }
     }
 
+    /// <summary>Field number for the "enemy_defeats" field.</summary>
+    public const int EnemyDefeatsFieldNumber = 14;
+    private static readonly pbc::MapField<string, int>.Codec _map_enemyDefeats_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 114);
+    private readonly pbc::MapField<string, int> enemyDefeats_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, int> EnemyDefeats {
+      get { return enemyDefeats_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoBattleStatistics);
@@ -18000,6 +18014,7 @@ namespace Mobius.Proto.Game {
       if (!ElementOrbDraws.Equals(other.ElementOrbDraws)) return false;
       if (!ElementOrbUsage.Equals(other.ElementOrbUsage)) return false;
       if (!JobTypeDefeats.Equals(other.JobTypeDefeats)) return false;
+      if (!EnemyDefeats.Equals(other.EnemyDefeats)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -18019,6 +18034,7 @@ namespace Mobius.Proto.Game {
       hash ^= ElementOrbDraws.GetHashCode();
       hash ^= ElementOrbUsage.GetHashCode();
       hash ^= JobTypeDefeats.GetHashCode();
+      hash ^= EnemyDefeats.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -18078,6 +18094,7 @@ namespace Mobius.Proto.Game {
       elementOrbDraws_.WriteTo(output, _map_elementOrbDraws_codec);
       elementOrbUsage_.WriteTo(output, _map_elementOrbUsage_codec);
       jobTypeDefeats_.WriteTo(output, _map_jobTypeDefeats_codec);
+      enemyDefeats_.WriteTo(output, _map_enemyDefeats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -18130,6 +18147,7 @@ namespace Mobius.Proto.Game {
       elementOrbDraws_.WriteTo(ref output, _map_elementOrbDraws_codec);
       elementOrbUsage_.WriteTo(ref output, _map_elementOrbUsage_codec);
       jobTypeDefeats_.WriteTo(ref output, _map_jobTypeDefeats_codec);
+      enemyDefeats_.WriteTo(ref output, _map_enemyDefeats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -18172,6 +18190,7 @@ namespace Mobius.Proto.Game {
       size += elementOrbDraws_.CalculateSize(_map_elementOrbDraws_codec);
       size += elementOrbUsage_.CalculateSize(_map_elementOrbUsage_codec);
       size += jobTypeDefeats_.CalculateSize(_map_jobTypeDefeats_codec);
+      size += enemyDefeats_.CalculateSize(_map_enemyDefeats_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -18216,6 +18235,7 @@ namespace Mobius.Proto.Game {
       elementOrbDraws_.Add(other.elementOrbDraws_);
       elementOrbUsage_.Add(other.elementOrbUsage_);
       jobTypeDefeats_.Add(other.jobTypeDefeats_);
+      enemyDefeats_.Add(other.enemyDefeats_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -18282,6 +18302,10 @@ namespace Mobius.Proto.Game {
             jobTypeDefeats_.AddEntriesFrom(input, _map_jobTypeDefeats_codec);
             break;
           }
+          case 114: {
+            enemyDefeats_.AddEntriesFrom(input, _map_enemyDefeats_codec);
+            break;
+          }
         }
       }
     #endif
@@ -18346,6 +18370,10 @@ namespace Mobius.Proto.Game {
           }
           case 106: {
             jobTypeDefeats_.AddEntriesFrom(ref input, _map_jobTypeDefeats_codec);
+            break;
+          }
+          case 114: {
+            enemyDefeats_.AddEntriesFrom(ref input, _map_enemyDefeats_codec);
             break;
           }
         }
