@@ -199,7 +199,8 @@ message CompleteRegionMapResponse {
 }
 
 message AbilityCardSummonResponse {
-  repeated game.ProtoAbilityCardSummonDrawResult results = 1;
+  repeated game.ProtoAbilityCardSummonDrawResult ability_card_results = 1;
+  repeated game.ProtoJobCardSummonDrawResult job_card_results = 2;
 }
 
 message ExecuteDialogueResponse {

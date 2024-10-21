@@ -266,14 +266,16 @@ namespace Mobius.Proto.Game {
             "b3RvRW5lbXlEZWF0aFN0YXRpc3RpYxIQCghmaWVuZF9pZBgBIAEoCRISCgpl",
             "bGVtZW50X2lkGAIgASgJEhMKC2pvYl90eXBlX2lkGAMgASgJEhUKDWZyb21f",
             "d2Vha25lc3MYBCABKAgSEwoLZnJvbV9ub3JtYWwYBSABKAgSFQoNZnJvbV91",
-            "bHRpbWF0ZRgGIAEoCBIUCgxhY3Rpb25fY291bnQYByABKAUiYQogUHJvdG9B",
+            "bHRpbWF0ZRgGIAEoCBIUCgxhY3Rpb25fY291bnQYByABKAUidQogUHJvdG9B",
             "YmlsaXR5Q2FyZFN1bW1vbkRyYXdSZXN1bHQSMAoIaW5zdGFuY2UYASABKAsy",
-            "Hi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRILCgNuZXcYAiABKAgq",
-            "dAoPUmVmZXJlbmNlU291cmNlEggKBE5PTkUQABIQCgxBQklMSVRZX0NBUkQQ",
-            "ARIICgRJVEVNEAISDAoISk9CX0NBUkQQAxIKCgZXRUFQT04QBBITCg9GQUlS",
-            "WV9DT01QQU5JT04QBRIMCghNUF9TVEFNUBAGQktaNWdpdGh1Yi5jb20vanVz",
-            "dGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9i",
-            "aXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
+            "Hi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRINCgVpbmRleBgCIAEo",
+            "BRIQCghuZXdfY2FyZBgDIAEoCCJbChxQcm90b0pvYkNhcmRTdW1tb25EcmF3",
+            "UmVzdWx0EiwKCGluc3RhbmNlGAEgASgLMhouZ2FtZS5Qcm90b0pvYkNhcmRJ",
+            "bnN0YW5jZRINCgVpbmRleBgCIAEoBSp0Cg9SZWZlcmVuY2VTb3VyY2USCAoE",
+            "Tk9ORRAAEhAKDEFCSUxJVFlfQ0FSRBABEggKBElURU0QAhIMCghKT0JfQ0FS",
+            "RBADEgoKBldFQVBPThAEEhMKD0ZBSVJZX0NPTVBBTklPThAFEgwKCE1QX1NU",
+            "QU1QEAZCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
+            "ZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -338,7 +340,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStatistics), global::Mobius.Proto.Game.ProtoBattleStatistics.Parser, new[]{ "TotalScore", "BattleTurns", "AbilitiesUsed", "TotalHpRegen", "TotalDamageTaken", "EnemiesBroken", "ElementOrbDraws", "ElementOrbUsage", "EnemyDefeats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ElementUsageStatistic), global::Mobius.Proto.Game.ElementUsageStatistic.Parser, new[]{ "ElementId", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoEnemyDeathStatistic), global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser, new[]{ "FiendId", "ElementId", "JobTypeId", "FromWeakness", "FromNormal", "FromUltimate", "ActionCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "New" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "Index", "NewCard" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult), global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult.Parser, new[]{ "Instance", "Index" }, null, null, null, null)
           }));
     }
     #endregion
@@ -19286,7 +19289,8 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoAbilityCardSummonDrawResult(ProtoAbilityCardSummonDrawResult other) : this() {
       instance_ = other.instance_ != null ? other.instance_.Clone() : null;
-      new_ = other.new_;
+      index_ = other.index_;
+      newCard_ = other.newCard_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -19306,14 +19310,25 @@ namespace Mobius.Proto.Game {
       }
     }
 
-    /// <summary>Field number for the "new" field.</summary>
-    public const int NewFieldNumber = 2;
-    private bool new_;
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 2;
+    private int index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool New {
-      get { return new_; }
+    public int Index {
+      get { return index_; }
       set {
-        new_ = value;
+        index_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "new_card" field.</summary>
+    public const int NewCardFieldNumber = 3;
+    private bool newCard_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool NewCard {
+      get { return newCard_; }
+      set {
+        newCard_ = value;
       }
     }
 
@@ -19331,7 +19346,8 @@ namespace Mobius.Proto.Game {
         return true;
       }
       if (!object.Equals(Instance, other.Instance)) return false;
-      if (New != other.New) return false;
+      if (Index != other.Index) return false;
+      if (NewCard != other.NewCard) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -19339,7 +19355,8 @@ namespace Mobius.Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       if (instance_ != null) hash ^= Instance.GetHashCode();
-      if (New != false) hash ^= New.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (NewCard != false) hash ^= NewCard.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -19360,9 +19377,13 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(Instance);
       }
-      if (New != false) {
+      if (Index != 0) {
         output.WriteRawTag(16);
-        output.WriteBool(New);
+        output.WriteInt32(Index);
+      }
+      if (NewCard != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(NewCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -19377,9 +19398,13 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(Instance);
       }
-      if (New != false) {
+      if (Index != 0) {
         output.WriteRawTag(16);
-        output.WriteBool(New);
+        output.WriteInt32(Index);
+      }
+      if (NewCard != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(NewCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -19393,7 +19418,10 @@ namespace Mobius.Proto.Game {
       if (instance_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Instance);
       }
-      if (New != false) {
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (NewCard != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -19413,8 +19441,11 @@ namespace Mobius.Proto.Game {
         }
         Instance.MergeFrom(other.Instance);
       }
-      if (other.New != false) {
-        New = other.New;
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      if (other.NewCard != false) {
+        NewCard = other.NewCard;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -19438,7 +19469,11 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 16: {
-            New = input.ReadBool();
+            Index = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            NewCard = input.ReadBool();
             break;
           }
         }
@@ -19463,7 +19498,228 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 16: {
-            New = input.ReadBool();
+            Index = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            NewCard = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoJobCardSummonDrawResult : pb::IMessage<ProtoJobCardSummonDrawResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoJobCardSummonDrawResult> _parser = new pb::MessageParser<ProtoJobCardSummonDrawResult>(() => new ProtoJobCardSummonDrawResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoJobCardSummonDrawResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[62]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoJobCardSummonDrawResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoJobCardSummonDrawResult(ProtoJobCardSummonDrawResult other) : this() {
+      instance_ = other.instance_ != null ? other.instance_.Clone() : null;
+      index_ = other.index_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoJobCardSummonDrawResult Clone() {
+      return new ProtoJobCardSummonDrawResult(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private global::Mobius.Proto.Game.ProtoJobCardInstance instance_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Game.ProtoJobCardInstance Instance {
+      get { return instance_; }
+      set {
+        instance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 2;
+    private int index_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoJobCardSummonDrawResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoJobCardSummonDrawResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Instance, other.Instance)) return false;
+      if (Index != other.Index) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (instance_ != null) hash ^= Instance.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (instance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Instance);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (instance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Instance);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (instance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Instance);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoJobCardSummonDrawResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.instance_ != null) {
+        if (instance_ == null) {
+          Instance = new global::Mobius.Proto.Game.ProtoJobCardInstance();
+        }
+        Instance.MergeFrom(other.Instance);
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (instance_ == null) {
+              Instance = new global::Mobius.Proto.Game.ProtoJobCardInstance();
+            }
+            input.ReadMessage(Instance);
+            break;
+          }
+          case 16: {
+            Index = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (instance_ == null) {
+              Instance = new global::Mobius.Proto.Game.ProtoJobCardInstance();
+            }
+            input.ReadMessage(Instance);
+            break;
+          }
+          case 16: {
+            Index = input.ReadInt32();
             break;
           }
         }

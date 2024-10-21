@@ -532,5 +532,11 @@ message ProtoEnemyDeathStatistic {
 
 message ProtoAbilityCardSummonDrawResult {
   ProtoAbilityCardInstance instance = 1;
-  bool new = 2;
+  int32 index = 2;
+  bool new_card = 3;
+}
+
+message ProtoJobCardSummonDrawResult {
+  ProtoJobCardInstance instance = 1;
+  int32 index = 2;
 }
