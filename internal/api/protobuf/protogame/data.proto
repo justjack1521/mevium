@@ -534,6 +534,7 @@ message ProtoAbilityCardSummonDrawResult {
   ProtoAbilityCardInstance instance = 1;
   int32 index = 2;
   bool new_card = 3;
+  bool upgrade_card = 4;
 }
 
 message ProtoJobCardSummonDrawResult {
