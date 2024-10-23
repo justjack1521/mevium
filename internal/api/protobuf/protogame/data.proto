@@ -515,6 +515,12 @@ message ProtoBattleStatistics {
   repeated ElementUsageStatistic element_orb_draws  =   11;
   repeated ElementUsageStatistic element_orb_usage  =   12;
   repeated ProtoEnemyDeathStatistic enemy_defeats   =   14;
+  repeated AbilityCardUsageStatistic ability_card_usage = 15;
+}
+
+message AbilityCardUsageStatistic {
+  string instance_id = 1;
+  int32 count = 2;
 }
 
 message ElementUsageStatistic {
