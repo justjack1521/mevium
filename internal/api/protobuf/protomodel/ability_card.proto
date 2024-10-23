@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomodel";
+
+message AbilityCard {
+  string sys_id = 1;
+  bool active = 2;
+  int32 card_number = 3;
+  bool in_shop = 4;
+  BaseAbilityCard base_ability_card = 5;
+  AugmentConfig augment_config = 6;
+}
+
+message BaseAbilityCard {
+  string sys_id = 1;
+  bool active = 2;
+  string name = 3;
+  bool fiend_card = 4;
+  string skill_seed_one = 5;
+  string skill_seed_two = 6;
+  string skill_seed_split = 7;
+  int32 seed_fusion_boost = 8;
+  string ability = 9;
+  string element = 10;
+  string category = 11;
+}
+
+message AugmentConfig {
+  string sys_id = 1;
+  string base_sys_id = 2;
+  string next_augment_id = 3;
+  bool active = 4;
+  int32 star_level = 5;
+  int32 initial_max_card_level = 6;
+  int32 skill_seed_max = 7;
+  int32 skill_seed_weight = 8;
+  int32 extra_skill_unlock_max = 9;
+  int32 auto_ability_max = 10;
+  int32 fusion_cost = 11;
+  int32 fusion_exp = 12;
+  int32 sale_tickets = 13;
+  int32 augment_cost = 14;
+  int32 max_ability_level = 15;
+  int32 sale_gold = 16;
+}
