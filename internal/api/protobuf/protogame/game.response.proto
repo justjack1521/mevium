@@ -61,6 +61,7 @@ message CardFusionResponse {
   repeated string inventory_cards_removed = 7;
   repeated string bank_cards_removed = 8;
   game.ProtoItemValuePair fusion_cost = 9;
+  int32 extra_skill_unlocks = 10;
 }
 
 message CardBoostFusionResponse {
