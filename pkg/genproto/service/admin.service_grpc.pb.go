@@ -20,7 +20,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusAdminService_GrantItem_FullMethodName = "/service.MeviusAdminService/GrantItem"
+	MeviusAdminService_GrantItem_FullMethodName        = "/service.MeviusAdminService/GrantItem"
+	MeviusAdminService_CreateSkillPanel_FullMethodName = "/service.MeviusAdminService/CreateSkillPanel"
 )
 
 // MeviusAdminServiceClient is the client API for MeviusAdminService service.
@@ -28,6 +29,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusAdminServiceClient interface {
 	GrantItem(ctx context.Context, in *protoadmin.GrantItemRequest, opts ...grpc.CallOption) (*protoadmin.GrantItemResponse, error)
+	CreateSkillPanel(ctx context.Context, in *protoadmin.CreateSkillPanelRequest, opts ...grpc.CallOption) (*protoadmin.CreateSkillPanelResponse, error)
 }
 
 type meviusAdminServiceClient struct {
@@ -47,11 +49,21 @@ func (c *meviusAdminServiceClient) GrantItem(ctx context.Context, in *protoadmin
 	return out, nil
 }
 
+func (c *meviusAdminServiceClient) CreateSkillPanel(ctx context.Context, in *protoadmin.CreateSkillPanelRequest, opts ...grpc.CallOption) (*protoadmin.CreateSkillPanelResponse, error) {
+	out := new(protoadmin.CreateSkillPanelResponse)
+	err := c.cc.Invoke(ctx, MeviusAdminService_CreateSkillPanel_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusAdminServiceServer is the server API for MeviusAdminService service.
 // All implementations should embed UnimplementedMeviusAdminServiceServer
 // for forward compatibility
 type MeviusAdminServiceServer interface {
 	GrantItem(context.Context, *protoadmin.GrantItemRequest) (*protoadmin.GrantItemResponse, error)
+	CreateSkillPanel(context.Context, *protoadmin.CreateSkillPanelRequest) (*protoadmin.CreateSkillPanelResponse, error)
 }
 
 // UnimplementedMeviusAdminServiceServer should be embedded to have forward compatible implementations.
@@ -60,6 +72,9 @@ type UnimplementedMeviusAdminServiceServer struct {
 
 func (UnimplementedMeviusAdminServiceServer) GrantItem(context.Context, *protoadmin.GrantItemRequest) (*protoadmin.GrantItemResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GrantItem not implemented")
+}
+func (UnimplementedMeviusAdminServiceServer) CreateSkillPanel(context.Context, *protoadmin.CreateSkillPanelRequest) (*protoadmin.CreateSkillPanelResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateSkillPanel not implemented")
 }
 
 // UnsafeMeviusAdminServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -91,6 +106,24 @@ func _MeviusAdminService_GrantItem_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusAdminService_CreateSkillPanel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoadmin.CreateSkillPanelRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusAdminServiceServer).CreateSkillPanel(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusAdminService_CreateSkillPanel_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusAdminServiceServer).CreateSkillPanel(ctx, req.(*protoadmin.CreateSkillPanelRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusAdminService_ServiceDesc is the grpc.ServiceDesc for MeviusAdminService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -101,6 +134,10 @@ var MeviusAdminService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GrantItem",
 			Handler:    _MeviusAdminService_GrantItem_Handler,
+		},
+		{
+			MethodName: "CreateSkillPanel",
+			Handler:    _MeviusAdminService_CreateSkillPanel_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
