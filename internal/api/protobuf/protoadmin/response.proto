@@ -7,3 +7,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoadmin";
 message GrantItemResponse {
 
 }
+
+message CreateSkillPanelResponse {
+
+}
