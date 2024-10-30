@@ -9,5 +9,5 @@ message GrantItemResponse {
 }
 
 message CreateSkillPanelResponse {
-
+  bool created = 1;
 }
