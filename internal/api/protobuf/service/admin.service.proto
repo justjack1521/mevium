@@ -9,5 +9,6 @@ import "protoadmin/response.proto";
 
 service MeviusAdminService {
   rpc GrantItem(admin.GrantItemRequest) returns (admin.GrantItemResponse) {}
+  rpc CreateBaseJobCard(admin.CreateBaseJobCardRequest) returns (admin.CreateBaseJobCardResponse) {}
   rpc CreateSkillPanel(admin.CreateSkillPanelRequest) returns (admin.CreateSkillPanelResponse) {}
 }

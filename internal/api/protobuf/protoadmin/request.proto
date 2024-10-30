@@ -21,3 +21,10 @@ message CreateSkillPanelRequest {
   int32 value = 6;
   repeated game.ProtoItemValuePair cost_items = 7;
 }
+
+message CreateBaseJobCardRequest {
+  string sys_id = 1;
+  string job_number = 2;
+  string job_name = 3;
+  string type_id = 4;
+}
