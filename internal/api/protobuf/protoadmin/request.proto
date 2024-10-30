@@ -24,7 +24,8 @@ message CreateSkillPanelRequest {
 
 message CreateBaseJobCardRequest {
   string sys_id = 1;
-  string job_number = 2;
-  string job_name = 3;
-  string type_id = 4;
+  bool active = 2;
+  string job_number = 3;
+  string job_name = 4;
+  string type_id = 5;
 }
