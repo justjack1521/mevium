@@ -47,22 +47,24 @@ namespace Mobius.Proto.Multi {
             "EhMKC2Zyb21faW52aXRlGAYgASgIIj8KF1BhcnRpY2lwYW50UmVhZHlSZXF1",
             "ZXN0EhAKCGxvYmJ5X2lkGAIgASgJEhIKCmRlY2tfaW5kZXgYBCABKAUiLQoZ",
             "UGFydGljaXBhbnRVbnJlYWR5UmVxdWVzdBIQCghsb2JieV9pZBgCIAEoCSIZ",
-            "ChdQYXJ0aWNpcGFudExlYXZlUmVxdWVzdCIYChZQYXJ0aWNpcGFudEZpbmRS",
-            "ZXF1ZXN0IisKF1BhcnRpY2lwYW50V2F0Y2hSZXF1ZXN0EhAKCGxvYmJ5X2lk",
-            "GAIgASgJIhsKGVBhcnRpY2lwYW50VW53YXRjaFJlcXVlc3Qq7wMKEE11bHRp",
-            "UmVxdWVzdFR5cGUSFQoRUkVRVUVTVF9UWVBFX05PTkUQABISCg5TRVNTSU9O",
-            "X0NSRUFURRBkEhAKC1NFU1NJT05fRU5EEMgBEhEKDExPQkJZX1NFQVJDSBCs",
-            "AhIRCgxMT0JCWV9DUkVBVEUQkAMSEQoMTE9CQllfQ0FOQ0VMEPQDEhAKC0xP",
-            "QkJZX1JFQURZENgEEhAKC0xPQkJZX1NUQVJUELwFEhAKC0xPQkJZX1NUQU1Q",
-            "EKAGEhUKEFBBUlRJQ0lQQU5UX0pPSU4Q6AcSFgoRUEFSVElDSVBBTlRfUkVB",
-            "RFkQzAgSGAoTUEFSVElDSVBBTlRfVU5SRUFEWRCwCRIWChFQQVJUSUNJUEFO",
-            "VF9MRUFWRRCUChIWChFQQVJUSUNJUEFOVF9XQVRDSBD4ChIYChNQQVJUSUNJ",
-            "UEFOVF9VTldBVENIENwLEhUKEFBBUlRJQ0lQQU5UX0ZJTkQQhAcSEgoNUExB",
-            "WUVSX1NFQVJDSBDQDxINCghHRVRfR0FNRRC4FxIWChFHQU1FX1JFQURZX1BM",
-            "QVlFUhCcGBIYChNHQU1FX0VOUVVFVUVfQUNUSU9OEIAZEhgKE0dBTUVfREVR",
-            "VUVVRV9BQ1RJT04Q5BkSFgoRR0FNRV9MT0NLX0FDVElPTlMQyBpCTVo2Z2l0",
-            "aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90",
-            "b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "ChdQYXJ0aWNpcGFudExlYXZlUmVxdWVzdCJTChZQYXJ0aWNpcGFudEZpbmRS",
+            "ZXF1ZXN0EhAKCHF1ZXN0X2lkGAEgASgJEhIKCmRlY2tfaW5kZXgYAiABKAUS",
+            "EwoLdXNlX3N0YW1pbmEYAyABKAgiKwoXUGFydGljaXBhbnRXYXRjaFJlcXVl",
+            "c3QSEAoIbG9iYnlfaWQYAiABKAkiGwoZUGFydGljaXBhbnRVbndhdGNoUmVx",
+            "dWVzdCrvAwoQTXVsdGlSZXF1ZXN0VHlwZRIVChFSRVFVRVNUX1RZUEVfTk9O",
+            "RRAAEhIKDlNFU1NJT05fQ1JFQVRFEGQSEAoLU0VTU0lPTl9FTkQQyAESEQoM",
+            "TE9CQllfU0VBUkNIEKwCEhEKDExPQkJZX0NSRUFURRCQAxIRCgxMT0JCWV9D",
+            "QU5DRUwQ9AMSEAoLTE9CQllfUkVBRFkQ2AQSEAoLTE9CQllfU1RBUlQQvAUS",
+            "EAoLTE9CQllfU1RBTVAQoAYSFQoQUEFSVElDSVBBTlRfSk9JThDoBxIWChFQ",
+            "QVJUSUNJUEFOVF9SRUFEWRDMCBIYChNQQVJUSUNJUEFOVF9VTlJFQURZELAJ",
+            "EhYKEVBBUlRJQ0lQQU5UX0xFQVZFEJQKEhYKEVBBUlRJQ0lQQU5UX1dBVENI",
+            "EPgKEhgKE1BBUlRJQ0lQQU5UX1VOV0FUQ0gQ3AsSFQoQUEFSVElDSVBBTlRf",
+            "RklORBCEBxISCg1QTEFZRVJfU0VBUkNIENAPEg0KCEdFVF9HQU1FELgXEhYK",
+            "EUdBTUVfUkVBRFlfUExBWUVSEJwYEhgKE0dBTUVfRU5RVUVVRV9BQ1RJT04Q",
+            "gBkSGAoTR0FNRV9ERVFVRVVFX0FDVElPThDkGRIWChFHQU1FX0xPQ0tfQUNU",
+            "SU9OUxDIGkJNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtn",
+            "L2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +85,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantReadyRequest), global::Mobius.Proto.Multi.ParticipantReadyRequest.Parser, new[]{ "LobbyId", "DeckIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantUnreadyRequest), global::Mobius.Proto.Multi.ParticipantUnreadyRequest.Parser, new[]{ "LobbyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantLeaveRequest), global::Mobius.Proto.Multi.ParticipantLeaveRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantFindRequest), global::Mobius.Proto.Multi.ParticipantFindRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantFindRequest), global::Mobius.Proto.Multi.ParticipantFindRequest.Parser, new[]{ "QuestId", "DeckIndex", "UseStamina" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantWatchRequest), global::Mobius.Proto.Multi.ParticipantWatchRequest.Parser, new[]{ "LobbyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantUnwatchRequest), global::Mobius.Proto.Multi.ParticipantUnwatchRequest.Parser, null, null, null, null, null)
           }));
@@ -3375,12 +3377,48 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ParticipantFindRequest(ParticipantFindRequest other) : this() {
+      questId_ = other.questId_;
+      deckIndex_ = other.deckIndex_;
+      useStamina_ = other.useStamina_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ParticipantFindRequest Clone() {
       return new ParticipantFindRequest(this);
+    }
+
+    /// <summary>Field number for the "quest_id" field.</summary>
+    public const int QuestIdFieldNumber = 1;
+    private string questId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string QuestId {
+      get { return questId_; }
+      set {
+        questId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "deck_index" field.</summary>
+    public const int DeckIndexFieldNumber = 2;
+    private int deckIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DeckIndex {
+      get { return deckIndex_; }
+      set {
+        deckIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "use_stamina" field.</summary>
+    public const int UseStaminaFieldNumber = 3;
+    private bool useStamina_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool UseStamina {
+      get { return useStamina_; }
+      set {
+        useStamina_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3396,12 +3434,18 @@ namespace Mobius.Proto.Multi {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (QuestId != other.QuestId) return false;
+      if (DeckIndex != other.DeckIndex) return false;
+      if (UseStamina != other.UseStamina) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (QuestId.Length != 0) hash ^= QuestId.GetHashCode();
+      if (DeckIndex != 0) hash ^= DeckIndex.GetHashCode();
+      if (UseStamina != false) hash ^= UseStamina.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3418,6 +3462,18 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (QuestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(QuestId);
+      }
+      if (DeckIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(DeckIndex);
+      }
+      if (UseStamina != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UseStamina);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3427,6 +3483,18 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (QuestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(QuestId);
+      }
+      if (DeckIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(DeckIndex);
+      }
+      if (UseStamina != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UseStamina);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3436,6 +3504,15 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (QuestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(QuestId);
+      }
+      if (DeckIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeckIndex);
+      }
+      if (UseStamina != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3446,6 +3523,15 @@ namespace Mobius.Proto.Multi {
     public void MergeFrom(ParticipantFindRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.QuestId.Length != 0) {
+        QuestId = other.QuestId;
+      }
+      if (other.DeckIndex != 0) {
+        DeckIndex = other.DeckIndex;
+      }
+      if (other.UseStamina != false) {
+        UseStamina = other.UseStamina;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3461,6 +3547,18 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            QuestId = input.ReadString();
+            break;
+          }
+          case 16: {
+            DeckIndex = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            UseStamina = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3475,6 +3573,18 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            QuestId = input.ReadString();
+            break;
+          }
+          case 16: {
+            DeckIndex = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            UseStamina = input.ReadBool();
+            break;
+          }
         }
       }
     }
