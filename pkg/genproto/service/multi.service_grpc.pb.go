@@ -49,7 +49,7 @@ type MeviusMultiServiceClient interface {
 	SessionEnd(ctx context.Context, in *protomulti.SessionEndRequest, opts ...grpc.CallOption) (*protomulti.SessionEndResponse, error)
 	LobbyCreate(ctx context.Context, in *protomulti.LobbyCreateRequest, opts ...grpc.CallOption) (*protomulti.LobbyCreateResponse, error)
 	LobbyCancel(ctx context.Context, in *protomulti.LobbyCancelRequest, opts ...grpc.CallOption) (*protomulti.LobbyCancelResponse, error)
-	LobbyReady(ctx context.Context, in *protomulti.LobbyStartRequest, opts ...grpc.CallOption) (*protomulti.LobbyStartResponse, error)
+	LobbyReady(ctx context.Context, in *protomulti.LobbyReadyRequest, opts ...grpc.CallOption) (*protomulti.LobbyReadyResponse, error)
 	LobbyStart(ctx context.Context, in *protomulti.LobbyStartRequest, opts ...grpc.CallOption) (*protomulti.LobbyStartResponse, error)
 	LobbyStamp(ctx context.Context, in *protomulti.LobbyStampRequest, opts ...grpc.CallOption) (*protomulti.LobbyStampResponse, error)
 	LobbySearch(ctx context.Context, in *protomulti.LobbySearchRequest, opts ...grpc.CallOption) (*protomulti.LobbySearchResponse, error)
@@ -110,8 +110,8 @@ func (c *meviusMultiServiceClient) LobbyCancel(ctx context.Context, in *protomul
 	return out, nil
 }
 
-func (c *meviusMultiServiceClient) LobbyReady(ctx context.Context, in *protomulti.LobbyStartRequest, opts ...grpc.CallOption) (*protomulti.LobbyStartResponse, error) {
-	out := new(protomulti.LobbyStartResponse)
+func (c *meviusMultiServiceClient) LobbyReady(ctx context.Context, in *protomulti.LobbyReadyRequest, opts ...grpc.CallOption) (*protomulti.LobbyReadyResponse, error) {
+	out := new(protomulti.LobbyReadyResponse)
 	err := c.cc.Invoke(ctx, MeviusMultiService_LobbyReady_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -253,7 +253,7 @@ type MeviusMultiServiceServer interface {
 	SessionEnd(context.Context, *protomulti.SessionEndRequest) (*protomulti.SessionEndResponse, error)
 	LobbyCreate(context.Context, *protomulti.LobbyCreateRequest) (*protomulti.LobbyCreateResponse, error)
 	LobbyCancel(context.Context, *protomulti.LobbyCancelRequest) (*protomulti.LobbyCancelResponse, error)
-	LobbyReady(context.Context, *protomulti.LobbyStartRequest) (*protomulti.LobbyStartResponse, error)
+	LobbyReady(context.Context, *protomulti.LobbyReadyRequest) (*protomulti.LobbyReadyResponse, error)
 	LobbyStart(context.Context, *protomulti.LobbyStartRequest) (*protomulti.LobbyStartResponse, error)
 	LobbyStamp(context.Context, *protomulti.LobbyStampRequest) (*protomulti.LobbyStampResponse, error)
 	LobbySearch(context.Context, *protomulti.LobbySearchRequest) (*protomulti.LobbySearchResponse, error)
@@ -286,7 +286,7 @@ func (UnimplementedMeviusMultiServiceServer) LobbyCreate(context.Context, *proto
 func (UnimplementedMeviusMultiServiceServer) LobbyCancel(context.Context, *protomulti.LobbyCancelRequest) (*protomulti.LobbyCancelResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LobbyCancel not implemented")
 }
-func (UnimplementedMeviusMultiServiceServer) LobbyReady(context.Context, *protomulti.LobbyStartRequest) (*protomulti.LobbyStartResponse, error) {
+func (UnimplementedMeviusMultiServiceServer) LobbyReady(context.Context, *protomulti.LobbyReadyRequest) (*protomulti.LobbyReadyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LobbyReady not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) LobbyStart(context.Context, *protomulti.LobbyStartRequest) (*protomulti.LobbyStartResponse, error) {
@@ -416,7 +416,7 @@ func _MeviusMultiService_LobbyCancel_Handler(srv interface{}, ctx context.Contex
 }
 
 func _MeviusMultiService_LobbyReady_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomulti.LobbyStartRequest)
+	in := new(protomulti.LobbyReadyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -428,7 +428,7 @@ func _MeviusMultiService_LobbyReady_Handler(srv interface{}, ctx context.Context
 		FullMethod: MeviusMultiService_LobbyReady_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusMultiServiceServer).LobbyReady(ctx, req.(*protomulti.LobbyStartRequest))
+		return srv.(MeviusMultiServiceServer).LobbyReady(ctx, req.(*protomulti.LobbyReadyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
