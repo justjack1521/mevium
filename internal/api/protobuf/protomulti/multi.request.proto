@@ -51,17 +51,39 @@ message GameLockActionRequest {
 
 }
 
-message CreateSessionRequest {
+message SessionCreateRequest {
   string player_id = 1;
   string mode_identifier = 2;
 }
 
-message EndSessionRequest {
+message SessionEndRequest {
   string player_id = 2;
   string mode_identifier = 3;
 }
 
-message SearchLobbyRequest {
+message LobbyCreateRequest {
+  int32 deck_index = 2;
+  string quest_id = 3;
+  string comment = 4;
+  int32 min_player_level = 5;
+  repeated ProtoLobbyPlayerSlotRestriction restrictions = 6;
+}
+
+message LobbyCancelRequest {
+}
+
+message LobbyReadyRequest {
+
+}
+
+message LobbyStartRequest {
+}
+
+message LobbyStampRequest {
+  string stamp_id = 1;
+}
+
+message LobbySearchRequest {
   int32 deck_index = 2;
   string mode_identifier = 3;
   repeated int32 levels = 4;
@@ -70,22 +92,7 @@ message SearchLobbyRequest {
   string party_id = 7;
 }
 
-message WatchLobbyRequest {
-  string lobby_id = 2;
-}
-
-message UnwatchLobbyRequest {
-}
-
-message CreateLobbyRequest {
-  int32 deck_index = 2;
-  string quest_id = 3;
-  string comment = 4;
-  int32 min_player_level = 5;
-  repeated ProtoLobbyPlayerSlotRestriction restrictions = 6;
-}
-
-message JoinLobbyRequest {
+message ParticipantJoinRequest {
   string lobby_id = 2;
   int32 slot_index = 3;
   int32 deck_index = 4;
@@ -93,26 +100,22 @@ message JoinLobbyRequest {
   bool from_invite = 6;
 }
 
-message LeaveLobbyRequest {
-
-}
-
-message StartLobbyRequest {
-
-}
-
-message ReadyLobbyRequest {
+message ParticipantReadyRequest {
   string lobby_id = 2;
   int32 deck_index = 4;
 }
 
-message UnreadyLobbyRequest {
+message ParticipantUnreadyRequest {
   string lobby_id = 2;
 }
 
-message CancelLobbyRequest {
+message ParticipantLeaveRequest {
+
 }
 
-message SendStampRequest {
-  string stamp_id = 1;
+message ParticipantWatchRequest {
+  string lobby_id = 2;
+}
+
+message ParticipantUnwatchRequest {
 }

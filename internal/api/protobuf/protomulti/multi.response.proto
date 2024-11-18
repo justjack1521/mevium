@@ -28,54 +28,58 @@ message GameLockActionResponse {
 
 }
 
-message CreateSessionResponse {
+message SessionCreateResponse {
 }
 
-message EndSessionResponse {
-
-}
-
-message SearchLobbyResponse {
-  repeated ProtoLobbySummary lobbies = 1;
-}
-
-message WatchLobbyResponse {
+message SessionEndResponse {
 
 }
 
-message UnwatchLobbyResponse {
-
-}
-
-message CreateLobbyResponse {
+message LobbyCreateResponse {
   string lobby_id = 1;
   string party_id = 2;
 }
 
-message JoinLobbyResponse {
+message LobbyCancelResponse {
 
 }
 
-message LeaveLobbyResponse {
+message LobbyReadyResponse {
 
 }
 
-message ReadyLobbyResponse {
+message LobbyStartResponse {
 
 }
 
-message UnreadyLobbyResponse {
+message LobbyStampResponse {
 
 }
 
-message CancelLobbyResponse {
+message LobbySearchResponse {
+  repeated ProtoLobbySummary lobbies = 1;
+}
+
+message ParticipantJoinResponse {
 
 }
 
-message SendStampResponse {
+message ParticipantLeaveResponse {
 
 }
 
-message StartLobbyResponse {
-  
+message ParticipantWatchResponse {
+
+}
+
+message ParticipantUnwatchResponse {
+
+}
+
+message ParticipantReadyResponse {
+
+}
+
+message ParticipantUnreadyResponse {
+
 }

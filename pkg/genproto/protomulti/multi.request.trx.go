@@ -2,159 +2,159 @@ package protomulti
 
 import "google.golang.org/protobuf/proto"
 
-func NewCreateSessionRequest(bytes []byte) (*CreateSessionRequest, error) {
-	req := &CreateSessionRequest{}
+func NewSessionCreateRequest(bytes []byte) (*SessionCreateRequest, error) {
+	req := &SessionCreateRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *CreateSessionResponse) MarshallBinary() ([]byte, error) {
+func (x *SessionCreateResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewEndSessionRequest(bytes []byte) (*EndSessionRequest, error) {
-	req := &EndSessionRequest{}
+func NewSessionEndRequest(bytes []byte) (*SessionEndRequest, error) {
+	req := &SessionEndRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *EndSessionResponse) MarshallBinary() ([]byte, error) {
+func (x *SessionEndResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewSearchLobbyRequest(bytes []byte) (*SearchLobbyRequest, error) {
-	req := &SearchLobbyRequest{}
+func NewLobbySearchRequest(bytes []byte) (*LobbySearchRequest, error) {
+	req := &LobbySearchRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *SearchLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *LobbySearchResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewStartLobbyRequest(bytes []byte) (*StartLobbyRequest, error) {
-	req := &StartLobbyRequest{}
+func NewLobbyStartRequest(bytes []byte) (*LobbyStartRequest, error) {
+	req := &LobbyStartRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *StartLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *LobbyStartResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewWatchLobbyRequest(bytes []byte) (*WatchLobbyRequest, error) {
-	req := &WatchLobbyRequest{}
+func NewParticipantWatchRequest(bytes []byte) (*ParticipantWatchRequest, error) {
+	req := &ParticipantWatchRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *WatchLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *ParticipantWatchResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewUnwatchLobbyRequest(bytes []byte) (*UnwatchLobbyRequest, error) {
-	req := &UnwatchLobbyRequest{}
+func NewParticipantUnwatchRequest(bytes []byte) (*ParticipantUnwatchRequest, error) {
+	req := &ParticipantUnwatchRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *UnwatchLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *ParticipantUnwatchResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewCreateLobbyRequest(bytes []byte) (*CreateLobbyRequest, error) {
-	req := &CreateLobbyRequest{}
+func NewLobbyCreateRequest(bytes []byte) (*LobbyCreateRequest, error) {
+	req := &LobbyCreateRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *CreateLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *LobbyCreateResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewCancelLobbyRequest(bytes []byte) (*CancelLobbyRequest, error) {
-	req := &CancelLobbyRequest{}
+func NewLobbyCancelRequest(bytes []byte) (*LobbyCancelRequest, error) {
+	req := &LobbyCancelRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *CancelLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *LobbyCancelResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewJoinLobbyRequest(bytes []byte) (*JoinLobbyRequest, error) {
-	req := &JoinLobbyRequest{}
+func NewParticipantJoinRequest(bytes []byte) (*ParticipantJoinRequest, error) {
+	req := &ParticipantJoinRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *JoinLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *ParticipantJoinResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewLeaveLobbyRequest(bytes []byte) (*LeaveLobbyRequest, error) {
-	req := &LeaveLobbyRequest{}
+func NewParticipantLeaveRequest(bytes []byte) (*ParticipantLeaveRequest, error) {
+	req := &ParticipantLeaveRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *LeaveLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *ParticipantLeaveResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewReadyLobbyRequest(bytes []byte) (*ReadyLobbyRequest, error) {
-	req := &ReadyLobbyRequest{}
+func NewParticipantReadyRequest(bytes []byte) (*ParticipantReadyRequest, error) {
+	req := &ParticipantReadyRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *ReadyLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *ParticipantReadyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewUnreadyLobbyRequest(bytes []byte) (*UnreadyLobbyRequest, error) {
-	req := &UnreadyLobbyRequest{}
+func NewParticipantUnreadyRequest(bytes []byte) (*ParticipantUnreadyRequest, error) {
+	req := &ParticipantUnreadyRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *UnreadyLobbyResponse) MarshallBinary() ([]byte, error) {
+func (x *ParticipantUnreadyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
-func NewSendStampRequest(bytes []byte) (*SendStampRequest, error) {
-	req := &SendStampRequest{}
+func NewLobbyStampRequest(bytes []byte) (*LobbyStampRequest, error) {
+	req := &LobbyStampRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
 		return nil, err
 	}
 	return req, nil
 }
 
-func (x *SendStampResponse) MarshallBinary() ([]byte, error) {
+func (x *LobbyStampResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 

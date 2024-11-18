@@ -9,19 +9,23 @@ import "protomulti/multi.request.proto";
 import "protomulti/multi.response.proto";
 
 service MeviusMultiService {
-  rpc CreateSession(multi.CreateSessionRequest) returns (multi.CreateSessionResponse) {}
-  rpc EndSession(multi.EndSessionRequest) returns (multi.EndSessionResponse) {}
-  rpc SearchLobby(multi.SearchLobbyRequest) returns (multi.SearchLobbyResponse) {}
-  rpc WatchLobby(multi.WatchLobbyRequest) returns (multi.WatchLobbyResponse) {}
-  rpc UnwatchLobby(multi.UnwatchLobbyRequest) returns (multi.UnwatchLobbyResponse) {}
-  rpc CreateLobby (multi.CreateLobbyRequest) returns (multi.CreateLobbyResponse) {}
-  rpc CancelLobby(multi.CancelLobbyRequest) returns (multi.CancelLobbyResponse) {}
-  rpc StartLobby(multi.StartLobbyRequest) returns (multi.StartLobbyResponse) {}
-  rpc JoinLobby(multi.JoinLobbyRequest) returns (multi.JoinLobbyResponse) {}
-  rpc LeaveLobby(multi.LeaveLobbyRequest) returns (multi.LeaveLobbyResponse) {}
-  rpc ReadyLobby(multi.ReadyLobbyRequest) returns (multi.ReadyLobbyResponse) {}
-  rpc UnreadyLobby(multi.UnreadyLobbyRequest) returns (multi.UnreadyLobbyResponse) {}
-  rpc SendStamp(multi.SendStampRequest) returns (multi.SendStampResponse) {}
+  rpc SessionCreate(multi.SessionCreateRequest) returns (multi.SessionCreateResponse) {}
+  rpc SessionEnd(multi.SessionEndRequest) returns (multi.SessionEndResponse) {}
+
+  rpc LobbyCreate (multi.LobbyCreateRequest) returns (multi.LobbyCreateResponse) {}
+  rpc LobbyCancel(multi.LobbyCancelRequest) returns (multi.LobbyCancelResponse) {}
+  rpc LobbyReady(multi.LobbyStartRequest) returns (multi.LobbyStartResponse) {}
+  rpc LobbyStart(multi.LobbyStartRequest) returns (multi.LobbyStartResponse) {}
+  rpc LobbyStamp(multi.LobbyStampRequest) returns (multi.LobbyStampResponse) {}
+  rpc LobbySearch(multi.LobbySearchRequest) returns (multi.LobbySearchResponse) {}
+
+  rpc ParticipantJoin(multi.ParticipantJoinRequest) returns (multi.ParticipantJoinResponse) {}
+  rpc ParticipantLeave(multi.ParticipantLeaveRequest) returns (multi.ParticipantLeaveResponse) {}
+  rpc ParticipantReady(multi.ParticipantReadyRequest) returns (multi.ParticipantReadyResponse) {}
+  rpc ParticipantUnready(multi.ParticipantUnreadyRequest) returns (multi.ParticipantUnreadyResponse) {}
+
+  rpc ParticipantWatch(multi.ParticipantWatchRequest) returns (multi.ParticipantWatchResponse) {}
+  rpc ParticipantUnwatch(multi.ParticipantUnwatchRequest) returns (multi.ParticipantUnwatchResponse) {}
 
   rpc GetGame(multi.GetGameRequest) returns (multi.GetGameResponse) {}
   rpc ReadyPlayer(multi.GameReadyPlayerRequest) returns (multi.GameReadyPlayerResponse) {}
