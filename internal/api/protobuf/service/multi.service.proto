@@ -23,7 +23,7 @@ service MeviusMultiService {
   rpc ParticipantLeave(multi.ParticipantLeaveRequest) returns (multi.ParticipantLeaveResponse) {}
   rpc ParticipantReady(multi.ParticipantReadyRequest) returns (multi.ParticipantReadyResponse) {}
   rpc ParticipantUnready(multi.ParticipantUnreadyRequest) returns (multi.ParticipantUnreadyResponse) {}
-  rpc ParticipantFindResponse(multi.ParticipantFindRequest) returns (multi.ParticipantFindResponse) {}
+  rpc ParticipantFind(multi.ParticipantFindRequest) returns (multi.ParticipantFindResponse) {}
 
   rpc ParticipantWatch(multi.ParticipantWatchRequest) returns (multi.ParticipantWatchResponse) {}
   rpc ParticipantUnwatch(multi.ParticipantUnwatchRequest) returns (multi.ParticipantUnwatchResponse) {}
