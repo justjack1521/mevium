@@ -146,6 +146,18 @@ func (x *ParticipantUnreadyResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewLobbyReadyRequest(bytes []byte) (*LobbyReadyRequest, error) {
+	req := &LobbyReadyRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *LobbyReadyResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewLobbyStampRequest(bytes []byte) (*LobbyStampRequest, error) {
 	req := &LobbyStampRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
