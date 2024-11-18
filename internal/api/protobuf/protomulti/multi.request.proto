@@ -24,6 +24,7 @@ enum MultiRequestType {
   PARTICIPANT_LEAVE = 1300;
   PARTICIPANT_WATCH = 1400;
   PARTICIPANT_UNWATCH = 1500;
+  PARTICIPANT_FIND = 900;
 
   PLAYER_SEARCH = 2000;
   GET_GAME = 3000;
@@ -113,6 +114,10 @@ message ParticipantUnreadyRequest {
 }
 
 message ParticipantLeaveRequest {
+
+}
+
+message ParticipantFindRequest {
 
 }
 

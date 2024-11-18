@@ -747,6 +747,44 @@ func (*ParticipantReadyResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{17}
 }
 
+type ParticipantFindResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ParticipantFindResponse) Reset() {
+	*x = ParticipantFindResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protomulti_multi_response_proto_msgTypes[18]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ParticipantFindResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ParticipantFindResponse) ProtoMessage() {}
+
+func (x *ParticipantFindResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[18]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ParticipantFindResponse.ProtoReflect.Descriptor instead.
+func (*ParticipantFindResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{18}
+}
+
 type ParticipantUnreadyResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -756,7 +794,7 @@ type ParticipantUnreadyResponse struct {
 func (x *ParticipantUnreadyResponse) Reset() {
 	*x = ParticipantUnreadyResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protomulti_multi_response_proto_msgTypes[18]
+		mi := &file_protomulti_multi_response_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -769,7 +807,7 @@ func (x *ParticipantUnreadyResponse) String() string {
 func (*ParticipantUnreadyResponse) ProtoMessage() {}
 
 func (x *ParticipantUnreadyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[18]
+	mi := &file_protomulti_multi_response_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -782,7 +820,7 @@ func (x *ParticipantUnreadyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantUnreadyResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantUnreadyResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{18}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{19}
 }
 
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
@@ -834,14 +872,16 @@ var file_protomulti_multi_response_proto_rawDesc = []byte{
 	0x0a, 0x1a, 0x50, 0x61, 0x72, 0x74, 0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x55, 0x6e, 0x77,
 	0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1a, 0x0a, 0x18,
 	0x50, 0x61, 0x72, 0x74, 0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x52, 0x65, 0x61, 0x64, 0x79,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1c, 0x0a, 0x1a, 0x50, 0x61, 0x72, 0x74,
-	0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x55, 0x6e, 0x72, 0x65, 0x61, 0x64, 0x79, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
-	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32,
-	0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69,
-	0xaa, 0x02, 0x12, 0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
-	0x4d, 0x75, 0x6c, 0x74, 0x69, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x19, 0x0a, 0x17, 0x50, 0x61, 0x72, 0x74,
+	0x69, 0x63, 0x69, 0x70, 0x61, 0x6e, 0x74, 0x46, 0x69, 0x6e, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x1c, 0x0a, 0x1a, 0x50, 0x61, 0x72, 0x74, 0x69, 0x63, 0x69, 0x70, 0x61,
+	0x6e, 0x74, 0x55, 0x6e, 0x72, 0x65, 0x61, 0x64, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x42, 0x4d, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
+	0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76,
+	0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x6d, 0x75, 0x6c, 0x74, 0x69, 0xaa, 0x02, 0x12, 0x4d, 0x6f,
+	0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4d, 0x75, 0x6c, 0x74, 0x69,
+	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -856,7 +896,7 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_response_proto_rawDescData
 }
 
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
 var file_protomulti_multi_response_proto_goTypes = []interface{}{
 	(*GetGameResponse)(nil),            // 0: multi.GetGameResponse
 	(*GameReadyPlayerResponse)(nil),    // 1: multi.GameReadyPlayerResponse
@@ -876,15 +916,16 @@ var file_protomulti_multi_response_proto_goTypes = []interface{}{
 	(*ParticipantWatchResponse)(nil),   // 15: multi.ParticipantWatchResponse
 	(*ParticipantUnwatchResponse)(nil), // 16: multi.ParticipantUnwatchResponse
 	(*ParticipantReadyResponse)(nil),   // 17: multi.ParticipantReadyResponse
-	(*ParticipantUnreadyResponse)(nil), // 18: multi.ParticipantUnreadyResponse
-	(*ProtoGameInstance)(nil),          // 19: multi.ProtoGameInstance
-	(*ProtoGameParticipant)(nil),       // 20: multi.ProtoGameParticipant
-	(*ProtoLobbySummary)(nil),          // 21: multi.ProtoLobbySummary
+	(*ParticipantFindResponse)(nil),    // 18: multi.ParticipantFindResponse
+	(*ParticipantUnreadyResponse)(nil), // 19: multi.ParticipantUnreadyResponse
+	(*ProtoGameInstance)(nil),          // 20: multi.ProtoGameInstance
+	(*ProtoGameParticipant)(nil),       // 21: multi.ProtoGameParticipant
+	(*ProtoLobbySummary)(nil),          // 22: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	19, // 0: multi.GetGameResponse.game_data:type_name -> multi.ProtoGameInstance
-	20, // 1: multi.GetGameResponse.participants:type_name -> multi.ProtoGameParticipant
-	21, // 2: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	20, // 0: multi.GetGameResponse.game_data:type_name -> multi.ProtoGameInstance
+	21, // 1: multi.GetGameResponse.participants:type_name -> multi.ProtoGameParticipant
+	22, // 2: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
 	3,  // [3:3] is the sub-list for method output_type
 	3,  // [3:3] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
@@ -1116,6 +1157,18 @@ func file_protomulti_multi_response_proto_init() {
 			}
 		}
 		file_protomulti_multi_response_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ParticipantFindResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protomulti_multi_response_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ParticipantUnreadyResponse); i {
 			case 0:
 				return &v.state
@@ -1134,7 +1187,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protomulti_multi_response_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   19,
+			NumMessages:   20,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

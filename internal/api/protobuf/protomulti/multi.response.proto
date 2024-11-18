@@ -80,6 +80,10 @@ message ParticipantReadyResponse {
 
 }
 
+message ParticipantFindResponse {
+
+}
+
 message ParticipantUnreadyResponse {
 
 }
