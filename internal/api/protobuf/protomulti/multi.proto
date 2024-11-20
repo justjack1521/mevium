@@ -17,10 +17,11 @@ enum GamePlayerActionType {
 message ProtoLobbySummary {
   string instance_id = 1;
   string quest_id = 2;
-  string comment = 3;
-  int32 minimum_player_level = 4;
-  int32 registered_at = 5;
-  repeated ProtoLobbyPlayerSlot players = 6;
+  string party_id = 3;
+  string comment = 4;
+  int32 minimum_player_level = 5;
+  int32 registered_at = 6;
+  repeated ProtoLobbyPlayerSlot players = 7;
 }
 
 message ProtoLobbyPlayerSlot {
