@@ -71,7 +71,7 @@ message ProtoGamePartySummary {
   string party_id = 2;
   int32 index = 3;
   string party_name = 4;
-  repeated ProtoGamePlayer participants = 5;
+  repeated ProtoGamePlayer players = 5;
 }
 
 message ProtoGamePlayer {
