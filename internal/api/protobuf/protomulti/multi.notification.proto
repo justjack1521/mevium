@@ -26,6 +26,7 @@ message LobbyCancelNotification {
 
 message LobbyStartNotification {
   string lobby_id = 1;
+  string game_id = 2;
 }
 
 message LobbyReadyNotification {
