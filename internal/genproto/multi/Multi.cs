@@ -25,48 +25,49 @@ namespace Mobius.Proto.Multi {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZwcm90b211bHRpL211bHRpLnByb3RvEgVtdWx0aRoacHJvdG9pZGVudGl0",
-            "eS9wbGF5ZXIucHJvdG8irgEKEVByb3RvTG9iYnlTdW1tYXJ5EhMKC2luc3Rh",
-            "bmNlX2lkGAEgASgJEhAKCHF1ZXN0X2lkGAIgASgJEg8KB2NvbW1lbnQYAyAB",
-            "KAkSHAoUbWluaW11bV9wbGF5ZXJfbGV2ZWwYBCABKAUSFQoNcmVnaXN0ZXJl",
-            "ZF9hdBgFIAEoBRIsCgdwbGF5ZXJzGAYgAygLMhsubXVsdGkuUHJvdG9Mb2Ji",
-            "eVBsYXllclNsb3QiYgoUUHJvdG9Mb2JieVBsYXllclNsb3QSEgoKc2xvdF9p",
-            "bmRleBgCIAEoBRINCgVyZWFkeRgDIAEoCBInCgZwbGF5ZXIYBCABKAsyFy5t",
-            "dWx0aS5Qcm90b0xvYmJ5UGxheWVyInoKEFByb3RvTG9iYnlQbGF5ZXISLwoI",
-            "aWRlbnRpdHkYASABKAsyHS5pZGVudGl0eS5Qcm90b1BsYXllcklkZW50aXR5",
-            "EjUKB2xvYWRvdXQYAiABKAsyJC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRv",
-            "dXRJZGVudGl0eSKBAQofUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlv",
-            "bhISCgpzbG90X2luZGV4GAEgASgFEhgKEHJvbGVfcmVzdHJpY3Rpb24YAiAB",
-            "KAkSDgoGbG9ja2VkGAMgASgIEgsKA2JvdBgEIAEoCBITCgtpbnZpdGVfb25s",
-            "eRgFIAEoCCKwAQoRUHJvdG9HYW1lSW5zdGFuY2USDgoGc3lzX2lkGAEgASgJ",
-            "EhEKCWxvYmJ5X2lkcxgCIAMoCRIMCgRzZWVkGAMgASgFEg0KBXN0YXRlGAQg",
-            "ASgFEhIKCnN0YXJ0ZWRfYXQYBSABKAMSMAoHb3B0aW9ucxgTIAEoCzIfLm11",
-            "bHRpLlByb3RvR2FtZUluc3RhbmNlT3B0aW9ucxIVCg1yZWdpc3RlcmVkX2F0",
-            "GBQgASgDIsQBChhQcm90b0dhbWVJbnN0YW5jZU9wdGlvbnMSHAoUbWluaW11",
-            "bV9wbGF5ZXJfbGV2ZWwYASABKAUSFAoMbWF4X3J1bl90aW1lGAIgASgDEhwK",
-            "FHBsYXllcl90dXJuX2R1cmF0aW9uGAMgASgDEhgKEG1heF9wbGF5ZXJfY291",
-            "bnQYBCABKAUSPAoMcmVzdHJpY3Rpb25zGBQgAygLMiYubXVsdGkuUHJvdG9M",
-            "b2JieVBsYXllclNsb3RSZXN0cmljdGlvbiJfChBQcm90b0dhbWVTdW1tYXJ5",
-            "Eg4KBnN5c19pZBgBIAEoCRIMCgRzZWVkGAIgASgFEi0KB3BhcnRpZXMYAyAD",
-            "KAsyHC5tdWx0aS5Qcm90b0dhbWVQYXJ0eVN1bW1hcnkihQEKFVByb3RvR2Ft",
-            "ZVBhcnR5U3VtbWFyeRIOCgZzeXNfaWQYASABKAkSEAoIcGFydHlfaWQYAiAB",
-            "KAkSDQoFaW5kZXgYAyABKAUSEgoKcGFydHlfbmFtZRgEIAEoCRInCgdwbGF5",
-            "ZXJzGAUgAygLMhYubXVsdGkuUHJvdG9HYW1lUGxheWVyIo0BCg9Qcm90b0dh",
-            "bWVQbGF5ZXISDwoHdXNlcl9pZBgBIAEoCRIRCglwbGF5ZXJfaWQYAiABKAkS",
-            "EgoKcGFydHlfc2xvdBgDIAEoBRITCgtib3RfY29udHJvbBgEIAEoCBItCgds",
-            "b2Fkb3V0GAUgASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0IlgK",
-            "GlByb3RvR2FtZVBsYXllckFjdGlvblF1ZXVlEhEKCXBsYXllcl9pZBgBIAEo",
-            "CRInCgdhY3Rpb25zGAMgAygLMhYubXVsdGkuUHJvdG9HYW1lQWN0aW9uInYK",
-            "D1Byb3RvR2FtZUFjdGlvbhIrCgZhY3Rpb24YASABKA4yGy5tdWx0aS5HYW1l",
-            "UGxheWVyQWN0aW9uVHlwZRIOCgZ0YXJnZXQYAiABKAUSEgoKc2xvdF9pbmRl",
-            "eBgDIAEoBRISCgplbGVtZW50X2lkGAQgASgJKmsKFEdhbWVQbGF5ZXJBY3Rp",
-            "b25UeXBlEhsKF1BMQVlFUl9BQ1RJT05fVFlQRV9OT05FEAASEQoNTk9STUFM",
-            "X0FUVEFDSxABEhAKDEFCSUxJVFlfQ0FTVBACEhEKDUVMRU1FTlRfRFJJVkUQ",
-            "A0JNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
-            "b3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "eS9wbGF5ZXIucHJvdG8iwAEKEVByb3RvTG9iYnlTdW1tYXJ5EhMKC2luc3Rh",
+            "bmNlX2lkGAEgASgJEhAKCHF1ZXN0X2lkGAIgASgJEhAKCHBhcnR5X2lkGAMg",
+            "ASgJEg8KB2NvbW1lbnQYBCABKAkSHAoUbWluaW11bV9wbGF5ZXJfbGV2ZWwY",
+            "BSABKAUSFQoNcmVnaXN0ZXJlZF9hdBgGIAEoBRIsCgdwbGF5ZXJzGAcgAygL",
+            "MhsubXVsdGkuUHJvdG9Mb2JieVBsYXllclNsb3QiYgoUUHJvdG9Mb2JieVBs",
+            "YXllclNsb3QSEgoKc2xvdF9pbmRleBgCIAEoBRINCgVyZWFkeRgDIAEoCBIn",
+            "CgZwbGF5ZXIYBCABKAsyFy5tdWx0aS5Qcm90b0xvYmJ5UGxheWVyInoKEFBy",
+            "b3RvTG9iYnlQbGF5ZXISLwoIaWRlbnRpdHkYASABKAsyHS5pZGVudGl0eS5Q",
+            "cm90b1BsYXllcklkZW50aXR5EjUKB2xvYWRvdXQYAiABKAsyJC5pZGVudGl0",
+            "eS5Qcm90b1BsYXllckxvYWRvdXRJZGVudGl0eSKBAQofUHJvdG9Mb2JieVBs",
+            "YXllclNsb3RSZXN0cmljdGlvbhISCgpzbG90X2luZGV4GAEgASgFEhgKEHJv",
+            "bGVfcmVzdHJpY3Rpb24YAiABKAkSDgoGbG9ja2VkGAMgASgIEgsKA2JvdBgE",
+            "IAEoCBITCgtpbnZpdGVfb25seRgFIAEoCCKwAQoRUHJvdG9HYW1lSW5zdGFu",
+            "Y2USDgoGc3lzX2lkGAEgASgJEhEKCWxvYmJ5X2lkcxgCIAMoCRIMCgRzZWVk",
+            "GAMgASgFEg0KBXN0YXRlGAQgASgFEhIKCnN0YXJ0ZWRfYXQYBSABKAMSMAoH",
+            "b3B0aW9ucxgTIAEoCzIfLm11bHRpLlByb3RvR2FtZUluc3RhbmNlT3B0aW9u",
+            "cxIVCg1yZWdpc3RlcmVkX2F0GBQgASgDIsQBChhQcm90b0dhbWVJbnN0YW5j",
+            "ZU9wdGlvbnMSHAoUbWluaW11bV9wbGF5ZXJfbGV2ZWwYASABKAUSFAoMbWF4",
+            "X3J1bl90aW1lGAIgASgDEhwKFHBsYXllcl90dXJuX2R1cmF0aW9uGAMgASgD",
+            "EhgKEG1heF9wbGF5ZXJfY291bnQYBCABKAUSPAoMcmVzdHJpY3Rpb25zGBQg",
+            "AygLMiYubXVsdGkuUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlvbiJf",
+            "ChBQcm90b0dhbWVTdW1tYXJ5Eg4KBnN5c19pZBgBIAEoCRIMCgRzZWVkGAIg",
+            "ASgFEi0KB3BhcnRpZXMYAyADKAsyHC5tdWx0aS5Qcm90b0dhbWVQYXJ0eVN1",
+            "bW1hcnkihQEKFVByb3RvR2FtZVBhcnR5U3VtbWFyeRIOCgZzeXNfaWQYASAB",
+            "KAkSEAoIcGFydHlfaWQYAiABKAkSDQoFaW5kZXgYAyABKAUSEgoKcGFydHlf",
+            "bmFtZRgEIAEoCRInCgdwbGF5ZXJzGAUgAygLMhYubXVsdGkuUHJvdG9HYW1l",
+            "UGxheWVyIo0BCg9Qcm90b0dhbWVQbGF5ZXISDwoHdXNlcl9pZBgBIAEoCRIR",
+            "CglwbGF5ZXJfaWQYAiABKAkSEgoKcGFydHlfc2xvdBgDIAEoBRITCgtib3Rf",
+            "Y29udHJvbBgEIAEoCBItCgdsb2Fkb3V0GAUgASgLMhwuaWRlbnRpdHkuUHJv",
+            "dG9QbGF5ZXJMb2Fkb3V0IlgKGlByb3RvR2FtZVBsYXllckFjdGlvblF1ZXVl",
+            "EhEKCXBsYXllcl9pZBgBIAEoCRInCgdhY3Rpb25zGAMgAygLMhYubXVsdGku",
+            "UHJvdG9HYW1lQWN0aW9uInYKD1Byb3RvR2FtZUFjdGlvbhIrCgZhY3Rpb24Y",
+            "ASABKA4yGy5tdWx0aS5HYW1lUGxheWVyQWN0aW9uVHlwZRIOCgZ0YXJnZXQY",
+            "AiABKAUSEgoKc2xvdF9pbmRleBgDIAEoBRISCgplbGVtZW50X2lkGAQgASgJ",
+            "KmsKFEdhbWVQbGF5ZXJBY3Rpb25UeXBlEhsKF1BMQVlFUl9BQ1RJT05fVFlQ",
+            "RV9OT05FEAASEQoNTk9STUFMX0FUVEFDSxABEhAKDEFCSUxJVFlfQ0FTVBAC",
+            "EhEKDUVMRU1FTlRfRFJJVkUQA0JNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUy",
+            "MS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJv",
+            "dG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbySummary), global::Mobius.Proto.Multi.ProtoLobbySummary.Parser, new[]{ "InstanceId", "QuestId", "Comment", "MinimumPlayerLevel", "RegisteredAt", "Players" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbySummary), global::Mobius.Proto.Multi.ProtoLobbySummary.Parser, new[]{ "InstanceId", "QuestId", "PartyId", "Comment", "MinimumPlayerLevel", "RegisteredAt", "Players" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser, new[]{ "SlotIndex", "Ready", "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser, new[]{ "SlotIndex", "RoleRestriction", "Locked", "Bot", "InviteOnly" }, null, null, null, null),
@@ -124,6 +125,7 @@ namespace Mobius.Proto.Multi {
     public ProtoLobbySummary(ProtoLobbySummary other) : this() {
       instanceId_ = other.instanceId_;
       questId_ = other.questId_;
+      partyId_ = other.partyId_;
       comment_ = other.comment_;
       minimumPlayerLevel_ = other.minimumPlayerLevel_;
       registeredAt_ = other.registeredAt_;
@@ -158,8 +160,19 @@ namespace Mobius.Proto.Multi {
       }
     }
 
+    /// <summary>Field number for the "party_id" field.</summary>
+    public const int PartyIdFieldNumber = 3;
+    private string partyId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PartyId {
+      get { return partyId_; }
+      set {
+        partyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "comment" field.</summary>
-    public const int CommentFieldNumber = 3;
+    public const int CommentFieldNumber = 4;
     private string comment_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Comment {
@@ -170,7 +183,7 @@ namespace Mobius.Proto.Multi {
     }
 
     /// <summary>Field number for the "minimum_player_level" field.</summary>
-    public const int MinimumPlayerLevelFieldNumber = 4;
+    public const int MinimumPlayerLevelFieldNumber = 5;
     private int minimumPlayerLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MinimumPlayerLevel {
@@ -181,7 +194,7 @@ namespace Mobius.Proto.Multi {
     }
 
     /// <summary>Field number for the "registered_at" field.</summary>
-    public const int RegisteredAtFieldNumber = 5;
+    public const int RegisteredAtFieldNumber = 6;
     private int registeredAt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int RegisteredAt {
@@ -192,9 +205,9 @@ namespace Mobius.Proto.Multi {
     }
 
     /// <summary>Field number for the "players" field.</summary>
-    public const int PlayersFieldNumber = 6;
+    public const int PlayersFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot> _repeated_players_codec
-        = pb::FieldCodec.ForMessage(50, global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser);
+        = pb::FieldCodec.ForMessage(58, global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser);
     private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot> players_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot> Players {
@@ -216,6 +229,7 @@ namespace Mobius.Proto.Multi {
       }
       if (InstanceId != other.InstanceId) return false;
       if (QuestId != other.QuestId) return false;
+      if (PartyId != other.PartyId) return false;
       if (Comment != other.Comment) return false;
       if (MinimumPlayerLevel != other.MinimumPlayerLevel) return false;
       if (RegisteredAt != other.RegisteredAt) return false;
@@ -228,6 +242,7 @@ namespace Mobius.Proto.Multi {
       int hash = 1;
       if (InstanceId.Length != 0) hash ^= InstanceId.GetHashCode();
       if (QuestId.Length != 0) hash ^= QuestId.GetHashCode();
+      if (PartyId.Length != 0) hash ^= PartyId.GetHashCode();
       if (Comment.Length != 0) hash ^= Comment.GetHashCode();
       if (MinimumPlayerLevel != 0) hash ^= MinimumPlayerLevel.GetHashCode();
       if (RegisteredAt != 0) hash ^= RegisteredAt.GetHashCode();
@@ -256,16 +271,20 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(18);
         output.WriteString(QuestId);
       }
-      if (Comment.Length != 0) {
+      if (PartyId.Length != 0) {
         output.WriteRawTag(26);
+        output.WriteString(PartyId);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(34);
         output.WriteString(Comment);
       }
       if (MinimumPlayerLevel != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteInt32(MinimumPlayerLevel);
       }
       if (RegisteredAt != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(RegisteredAt);
       }
       players_.WriteTo(output, _repeated_players_codec);
@@ -286,16 +305,20 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(18);
         output.WriteString(QuestId);
       }
-      if (Comment.Length != 0) {
+      if (PartyId.Length != 0) {
         output.WriteRawTag(26);
+        output.WriteString(PartyId);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(34);
         output.WriteString(Comment);
       }
       if (MinimumPlayerLevel != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteInt32(MinimumPlayerLevel);
       }
       if (RegisteredAt != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(RegisteredAt);
       }
       players_.WriteTo(ref output, _repeated_players_codec);
@@ -313,6 +336,9 @@ namespace Mobius.Proto.Multi {
       }
       if (QuestId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QuestId);
+      }
+      if (PartyId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PartyId);
       }
       if (Comment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Comment);
@@ -340,6 +366,9 @@ namespace Mobius.Proto.Multi {
       }
       if (other.QuestId.Length != 0) {
         QuestId = other.QuestId;
+      }
+      if (other.PartyId.Length != 0) {
+        PartyId = other.PartyId;
       }
       if (other.Comment.Length != 0) {
         Comment = other.Comment;
@@ -374,18 +403,22 @@ namespace Mobius.Proto.Multi {
             break;
           }
           case 26: {
+            PartyId = input.ReadString();
+            break;
+          }
+          case 34: {
             Comment = input.ReadString();
             break;
           }
-          case 32: {
+          case 40: {
             MinimumPlayerLevel = input.ReadInt32();
             break;
           }
-          case 40: {
+          case 48: {
             RegisteredAt = input.ReadInt32();
             break;
           }
-          case 50: {
+          case 58: {
             players_.AddEntriesFrom(input, _repeated_players_codec);
             break;
           }
@@ -412,18 +445,22 @@ namespace Mobius.Proto.Multi {
             break;
           }
           case 26: {
+            PartyId = input.ReadString();
+            break;
+          }
+          case 34: {
             Comment = input.ReadString();
             break;
           }
-          case 32: {
+          case 40: {
             MinimumPlayerLevel = input.ReadInt32();
             break;
           }
-          case 40: {
+          case 48: {
             RegisteredAt = input.ReadInt32();
             break;
           }
-          case 50: {
+          case 58: {
             players_.AddEntriesFrom(ref input, _repeated_players_codec);
             break;
           }
