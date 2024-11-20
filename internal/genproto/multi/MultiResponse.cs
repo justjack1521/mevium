@@ -32,16 +32,16 @@ namespace Mobius.Proto.Multi {
             "Y2tBY3Rpb25SZXNwb25zZSIXChVTZXNzaW9uQ3JlYXRlUmVzcG9uc2UiFAoS",
             "U2Vzc2lvbkVuZFJlc3BvbnNlIjkKE0xvYmJ5Q3JlYXRlUmVzcG9uc2USEAoI",
             "bG9iYnlfaWQYASABKAkSEAoIcGFydHlfaWQYAiABKAkiFQoTTG9iYnlDYW5j",
-            "ZWxSZXNwb25zZSIUChJMb2JieVJlYWR5UmVzcG9uc2UiFAoSTG9iYnlTdGFy",
-            "dFJlc3BvbnNlIhQKEkxvYmJ5U3RhbXBSZXNwb25zZSJAChNMb2JieVNlYXJj",
-            "aFJlc3BvbnNlEikKB2xvYmJpZXMYASADKAsyGC5tdWx0aS5Qcm90b0xvYmJ5",
-            "U3VtbWFyeSIZChdQYXJ0aWNpcGFudEpvaW5SZXNwb25zZSIaChhQYXJ0aWNp",
-            "cGFudExlYXZlUmVzcG9uc2UiGgoYUGFydGljaXBhbnRXYXRjaFJlc3BvbnNl",
-            "IhwKGlBhcnRpY2lwYW50VW53YXRjaFJlc3BvbnNlIhoKGFBhcnRpY2lwYW50",
-            "UmVhZHlSZXNwb25zZSIZChdQYXJ0aWNpcGFudEZpbmRSZXNwb25zZSIcChpQ",
-            "YXJ0aWNpcGFudFVucmVhZHlSZXNwb25zZUJNWjZnaXRodWIuY29tL2p1c3Rq",
-            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2Jp",
-            "dXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "ZWxSZXNwb25zZSIUChJMb2JieVJlYWR5UmVzcG9uc2UiJQoSTG9iYnlTdGFy",
+            "dFJlc3BvbnNlEg8KB2dhbWVfaWQYASABKAkiFAoSTG9iYnlTdGFtcFJlc3Bv",
+            "bnNlIkAKE0xvYmJ5U2VhcmNoUmVzcG9uc2USKQoHbG9iYmllcxgBIAMoCzIY",
+            "Lm11bHRpLlByb3RvTG9iYnlTdW1tYXJ5IhkKF1BhcnRpY2lwYW50Sm9pblJl",
+            "c3BvbnNlIhoKGFBhcnRpY2lwYW50TGVhdmVSZXNwb25zZSIaChhQYXJ0aWNp",
+            "cGFudFdhdGNoUmVzcG9uc2UiHAoaUGFydGljaXBhbnRVbndhdGNoUmVzcG9u",
+            "c2UiGgoYUGFydGljaXBhbnRSZWFkeVJlc3BvbnNlIhkKF1BhcnRpY2lwYW50",
+            "RmluZFJlc3BvbnNlIhwKGlBhcnRpY2lwYW50VW5yZWFkeVJlc3BvbnNlQk1a",
+            "NmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
+            "cHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -55,7 +55,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyCreateResponse), global::Mobius.Proto.Multi.LobbyCreateResponse.Parser, new[]{ "LobbyId", "PartyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyCancelResponse), global::Mobius.Proto.Multi.LobbyCancelResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyReadyResponse), global::Mobius.Proto.Multi.LobbyReadyResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyStartResponse), global::Mobius.Proto.Multi.LobbyStartResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyStartResponse), global::Mobius.Proto.Multi.LobbyStartResponse.Parser, new[]{ "GameId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyStampResponse), global::Mobius.Proto.Multi.LobbyStampResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbySearchResponse), global::Mobius.Proto.Multi.LobbySearchResponse.Parser, new[]{ "Lobbies" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantJoinResponse), global::Mobius.Proto.Multi.ParticipantJoinResponse.Parser, null, null, null, null, null),
@@ -1577,12 +1577,24 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LobbyStartResponse(LobbyStartResponse other) : this() {
+      gameId_ = other.gameId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LobbyStartResponse Clone() {
       return new LobbyStartResponse(this);
+    }
+
+    /// <summary>Field number for the "game_id" field.</summary>
+    public const int GameIdFieldNumber = 1;
+    private string gameId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string GameId {
+      get { return gameId_; }
+      set {
+        gameId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1598,12 +1610,14 @@ namespace Mobius.Proto.Multi {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (GameId != other.GameId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (GameId.Length != 0) hash ^= GameId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1620,6 +1634,10 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (GameId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1629,6 +1647,10 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GameId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1638,6 +1660,9 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (GameId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GameId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1648,6 +1673,9 @@ namespace Mobius.Proto.Multi {
     public void MergeFrom(LobbyStartResponse other) {
       if (other == null) {
         return;
+      }
+      if (other.GameId.Length != 0) {
+        GameId = other.GameId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1663,6 +1691,10 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            GameId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1677,6 +1709,10 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            GameId = input.ReadString();
+            break;
+          }
         }
       }
     }
