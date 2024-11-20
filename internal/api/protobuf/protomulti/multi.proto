@@ -60,7 +60,21 @@ message ProtoGameInstanceOptions {
   repeated ProtoLobbyPlayerSlotRestriction restrictions = 20;
 }
 
-message ProtoGameParticipant {
+message ProtoGameSummary {
+  string sys_id = 1;
+  int32 seed = 2;
+  repeated ProtoGamePartySummary parties = 3;
+}
+
+message ProtoGamePartySummary {
+  string sys_id = 1;
+  string party_id = 2;
+  int32 index = 3;
+  string party_name = 4;
+  repeated ProtoGamePlayer participants = 5;
+}
+
+message ProtoGamePlayer {
   string user_id = 1;
   string player_id = 2;
   int32 party_slot = 3;

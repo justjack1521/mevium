@@ -25,28 +25,27 @@ namespace Mobius.Proto.Multi {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9wcm90b211bHRpL211bHRpLnJlc3BvbnNlLnByb3RvEgVtdWx0aRoWcHJv",
-            "dG9tdWx0aS9tdWx0aS5wcm90byJxCg9HZXRHYW1lUmVzcG9uc2USKwoJZ2Ft",
-            "ZV9kYXRhGAEgASgLMhgubXVsdGkuUHJvdG9HYW1lSW5zdGFuY2USMQoMcGFy",
-            "dGljaXBhbnRzGAIgAygLMhsubXVsdGkuUHJvdG9HYW1lUGFydGljaXBhbnQi",
-            "GQoXR2FtZVJlYWR5UGxheWVyUmVzcG9uc2UiGwoZR2FtZUVucXVldWVBY3Rp",
-            "b25SZXNwb25zZSIbChlHYW1lRGVxdWV1ZUFjdGlvblJlc3BvbnNlIhgKFkdh",
-            "bWVMb2NrQWN0aW9uUmVzcG9uc2UiFwoVU2Vzc2lvbkNyZWF0ZVJlc3BvbnNl",
-            "IhQKElNlc3Npb25FbmRSZXNwb25zZSI5ChNMb2JieUNyZWF0ZVJlc3BvbnNl",
-            "EhAKCGxvYmJ5X2lkGAEgASgJEhAKCHBhcnR5X2lkGAIgASgJIhUKE0xvYmJ5",
-            "Q2FuY2VsUmVzcG9uc2UiFAoSTG9iYnlSZWFkeVJlc3BvbnNlIhQKEkxvYmJ5",
-            "U3RhcnRSZXNwb25zZSIUChJMb2JieVN0YW1wUmVzcG9uc2UiQAoTTG9iYnlT",
-            "ZWFyY2hSZXNwb25zZRIpCgdsb2JiaWVzGAEgAygLMhgubXVsdGkuUHJvdG9M",
-            "b2JieVN1bW1hcnkiGQoXUGFydGljaXBhbnRKb2luUmVzcG9uc2UiGgoYUGFy",
-            "dGljaXBhbnRMZWF2ZVJlc3BvbnNlIhoKGFBhcnRpY2lwYW50V2F0Y2hSZXNw",
-            "b25zZSIcChpQYXJ0aWNpcGFudFVud2F0Y2hSZXNwb25zZSIaChhQYXJ0aWNp",
-            "cGFudFJlYWR5UmVzcG9uc2UiGQoXUGFydGljaXBhbnRGaW5kUmVzcG9uc2Ui",
-            "HAoaUGFydGljaXBhbnRVbnJlYWR5UmVzcG9uc2VCTVo2Z2l0aHViLmNvbS9q",
-            "dXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b211bHRpqgIS",
-            "TW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "dG9tdWx0aS9tdWx0aS5wcm90byJACg9HZXRHYW1lUmVzcG9uc2USLQoMZ2Ft",
+            "ZV9zdW1tYXJ5GAEgASgLMhcubXVsdGkuUHJvdG9HYW1lU3VtbWFyeSIZChdH",
+            "YW1lUmVhZHlQbGF5ZXJSZXNwb25zZSIbChlHYW1lRW5xdWV1ZUFjdGlvblJl",
+            "c3BvbnNlIhsKGUdhbWVEZXF1ZXVlQWN0aW9uUmVzcG9uc2UiGAoWR2FtZUxv",
+            "Y2tBY3Rpb25SZXNwb25zZSIXChVTZXNzaW9uQ3JlYXRlUmVzcG9uc2UiFAoS",
+            "U2Vzc2lvbkVuZFJlc3BvbnNlIjkKE0xvYmJ5Q3JlYXRlUmVzcG9uc2USEAoI",
+            "bG9iYnlfaWQYASABKAkSEAoIcGFydHlfaWQYAiABKAkiFQoTTG9iYnlDYW5j",
+            "ZWxSZXNwb25zZSIUChJMb2JieVJlYWR5UmVzcG9uc2UiFAoSTG9iYnlTdGFy",
+            "dFJlc3BvbnNlIhQKEkxvYmJ5U3RhbXBSZXNwb25zZSJAChNMb2JieVNlYXJj",
+            "aFJlc3BvbnNlEikKB2xvYmJpZXMYASADKAsyGC5tdWx0aS5Qcm90b0xvYmJ5",
+            "U3VtbWFyeSIZChdQYXJ0aWNpcGFudEpvaW5SZXNwb25zZSIaChhQYXJ0aWNp",
+            "cGFudExlYXZlUmVzcG9uc2UiGgoYUGFydGljaXBhbnRXYXRjaFJlc3BvbnNl",
+            "IhwKGlBhcnRpY2lwYW50VW53YXRjaFJlc3BvbnNlIhoKGFBhcnRpY2lwYW50",
+            "UmVhZHlSZXNwb25zZSIZChdQYXJ0aWNpcGFudEZpbmRSZXNwb25zZSIcChpQ",
+            "YXJ0aWNpcGFudFVucmVhZHlSZXNwb25zZUJNWjZnaXRodWIuY29tL2p1c3Rq",
+            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2Jp",
+            "dXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GetGameResponse), global::Mobius.Proto.Multi.GetGameResponse.Parser, new[]{ "GameData", "Participants" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GetGameResponse), global::Mobius.Proto.Multi.GetGameResponse.Parser, new[]{ "GameSummary" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyPlayerResponse), global::Mobius.Proto.Multi.GameReadyPlayerResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionResponse), global::Mobius.Proto.Multi.GameEnqueueActionResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameDequeueActionResponse), global::Mobius.Proto.Multi.GameDequeueActionResponse.Parser, null, null, null, null, null),
@@ -101,8 +100,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetGameResponse(GetGameResponse other) : this() {
-      gameData_ = other.gameData_ != null ? other.gameData_.Clone() : null;
-      participants_ = other.participants_.Clone();
+      gameSummary_ = other.gameSummary_ != null ? other.gameSummary_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -111,25 +109,15 @@ namespace Mobius.Proto.Multi {
       return new GetGameResponse(this);
     }
 
-    /// <summary>Field number for the "game_data" field.</summary>
-    public const int GameDataFieldNumber = 1;
-    private global::Mobius.Proto.Multi.ProtoGameInstance gameData_;
+    /// <summary>Field number for the "game_summary" field.</summary>
+    public const int GameSummaryFieldNumber = 1;
+    private global::Mobius.Proto.Multi.ProtoGameSummary gameSummary_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Multi.ProtoGameInstance GameData {
-      get { return gameData_; }
+    public global::Mobius.Proto.Multi.ProtoGameSummary GameSummary {
+      get { return gameSummary_; }
       set {
-        gameData_ = value;
+        gameSummary_ = value;
       }
-    }
-
-    /// <summary>Field number for the "participants" field.</summary>
-    public const int ParticipantsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoGameParticipant> _repeated_participants_codec
-        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Multi.ProtoGameParticipant.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameParticipant> participants_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameParticipant>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameParticipant> Participants {
-      get { return participants_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,16 +133,14 @@ namespace Mobius.Proto.Multi {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GameData, other.GameData)) return false;
-      if(!participants_.Equals(other.participants_)) return false;
+      if (!object.Equals(GameSummary, other.GameSummary)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (gameData_ != null) hash ^= GameData.GetHashCode();
-      hash ^= participants_.GetHashCode();
+      if (gameSummary_ != null) hash ^= GameSummary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,11 +157,10 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gameData_ != null) {
+      if (gameSummary_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(GameData);
+        output.WriteMessage(GameSummary);
       }
-      participants_.WriteTo(output, _repeated_participants_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,11 +170,10 @@ namespace Mobius.Proto.Multi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gameData_ != null) {
+      if (gameSummary_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(GameData);
+        output.WriteMessage(GameSummary);
       }
-      participants_.WriteTo(ref output, _repeated_participants_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -199,10 +183,9 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (gameData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameData);
+      if (gameSummary_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameSummary);
       }
-      size += participants_.CalculateSize(_repeated_participants_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -214,13 +197,12 @@ namespace Mobius.Proto.Multi {
       if (other == null) {
         return;
       }
-      if (other.gameData_ != null) {
-        if (gameData_ == null) {
-          GameData = new global::Mobius.Proto.Multi.ProtoGameInstance();
+      if (other.gameSummary_ != null) {
+        if (gameSummary_ == null) {
+          GameSummary = new global::Mobius.Proto.Multi.ProtoGameSummary();
         }
-        GameData.MergeFrom(other.GameData);
+        GameSummary.MergeFrom(other.GameSummary);
       }
-      participants_.Add(other.participants_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -236,14 +218,10 @@ namespace Mobius.Proto.Multi {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (gameData_ == null) {
-              GameData = new global::Mobius.Proto.Multi.ProtoGameInstance();
+            if (gameSummary_ == null) {
+              GameSummary = new global::Mobius.Proto.Multi.ProtoGameSummary();
             }
-            input.ReadMessage(GameData);
-            break;
-          }
-          case 18: {
-            participants_.AddEntriesFrom(input, _repeated_participants_codec);
+            input.ReadMessage(GameSummary);
             break;
           }
         }
@@ -261,14 +239,10 @@ namespace Mobius.Proto.Multi {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (gameData_ == null) {
-              GameData = new global::Mobius.Proto.Multi.ProtoGameInstance();
+            if (gameSummary_ == null) {
+              GameSummary = new global::Mobius.Proto.Multi.ProtoGameSummary();
             }
-            input.ReadMessage(GameData);
-            break;
-          }
-          case 18: {
-            participants_.AddEntriesFrom(ref input, _repeated_participants_codec);
+            input.ReadMessage(GameSummary);
             break;
           }
         }

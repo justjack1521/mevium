@@ -8,8 +8,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomulti";
 import "protomulti/multi.proto";
 
 message GetGameResponse {
-  ProtoGameInstance game_data = 1;
-  repeated ProtoGameParticipant participants = 2;
+  ProtoGameSummary game_summary = 1;
 }
 
 message GameReadyPlayerResponse {
