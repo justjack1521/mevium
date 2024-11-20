@@ -37,32 +37,32 @@ namespace Mobius.Proto.Multi {
             "dXRJZGVudGl0eSKBAQofUHJvdG9Mb2JieVBsYXllclNsb3RSZXN0cmljdGlv",
             "bhISCgpzbG90X2luZGV4GAEgASgFEhgKEHJvbGVfcmVzdHJpY3Rpb24YAiAB",
             "KAkSDgoGbG9ja2VkGAMgASgIEgsKA2JvdBgEIAEoCBITCgtpbnZpdGVfb25s",
-            "eRgFIAEoCCKvAQoRUHJvdG9HYW1lSW5zdGFuY2USDgoGc3lzX2lkGAEgASgJ",
-            "EhAKCHBhcnR5X2lkGAIgASgJEgwKBHNlZWQYAyABKAUSDQoFc3RhdGUYBCAB",
-            "KAUSEgoKc3RhcnRlZF9hdBgFIAEoAxIwCgdvcHRpb25zGBMgASgLMh8ubXVs",
-            "dGkuUHJvdG9HYW1lSW5zdGFuY2VPcHRpb25zEhUKDXJlZ2lzdGVyZWRfYXQY",
-            "FCABKAMixAEKGFByb3RvR2FtZUluc3RhbmNlT3B0aW9ucxIcChRtaW5pbXVt",
-            "X3BsYXllcl9sZXZlbBgBIAEoBRIUCgxtYXhfcnVuX3RpbWUYAiABKAMSHAoU",
-            "cGxheWVyX3R1cm5fZHVyYXRpb24YAyABKAMSGAoQbWF4X3BsYXllcl9jb3Vu",
-            "dBgEIAEoBRI8CgxyZXN0cmljdGlvbnMYFCADKAsyJi5tdWx0aS5Qcm90b0xv",
-            "YmJ5UGxheWVyU2xvdFJlc3RyaWN0aW9uIl8KEFByb3RvR2FtZVN1bW1hcnkS",
-            "DgoGc3lzX2lkGAEgASgJEgwKBHNlZWQYAiABKAUSLQoHcGFydGllcxgDIAMo",
-            "CzIcLm11bHRpLlByb3RvR2FtZVBhcnR5U3VtbWFyeSKFAQoVUHJvdG9HYW1l",
-            "UGFydHlTdW1tYXJ5Eg4KBnN5c19pZBgBIAEoCRIQCghwYXJ0eV9pZBgCIAEo",
-            "CRINCgVpbmRleBgDIAEoBRISCgpwYXJ0eV9uYW1lGAQgASgJEicKB3BsYXll",
-            "cnMYBSADKAsyFi5tdWx0aS5Qcm90b0dhbWVQbGF5ZXIijQEKD1Byb3RvR2Ft",
-            "ZVBsYXllchIPCgd1c2VyX2lkGAEgASgJEhEKCXBsYXllcl9pZBgCIAEoCRIS",
-            "CgpwYXJ0eV9zbG90GAMgASgFEhMKC2JvdF9jb250cm9sGAQgASgIEi0KB2xv",
-            "YWRvdXQYBSABKAsyHC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRvdXQiWAoa",
-            "UHJvdG9HYW1lUGxheWVyQWN0aW9uUXVldWUSEQoJcGxheWVyX2lkGAEgASgJ",
-            "EicKB2FjdGlvbnMYAyADKAsyFi5tdWx0aS5Qcm90b0dhbWVBY3Rpb24idgoP",
-            "UHJvdG9HYW1lQWN0aW9uEisKBmFjdGlvbhgBIAEoDjIbLm11bHRpLkdhbWVQ",
-            "bGF5ZXJBY3Rpb25UeXBlEg4KBnRhcmdldBgCIAEoBRISCgpzbG90X2luZGV4",
-            "GAMgASgFEhIKCmVsZW1lbnRfaWQYBCABKAkqawoUR2FtZVBsYXllckFjdGlv",
-            "blR5cGUSGwoXUExBWUVSX0FDVElPTl9UWVBFX05PTkUQABIRCg1OT1JNQUxf",
-            "QVRUQUNLEAESEAoMQUJJTElUWV9DQVNUEAISEQoNRUxFTUVOVF9EUklWRRAD",
-            "Qk1aNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJv",
-            "dG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
+            "eRgFIAEoCCKwAQoRUHJvdG9HYW1lSW5zdGFuY2USDgoGc3lzX2lkGAEgASgJ",
+            "EhEKCWxvYmJ5X2lkcxgCIAMoCRIMCgRzZWVkGAMgASgFEg0KBXN0YXRlGAQg",
+            "ASgFEhIKCnN0YXJ0ZWRfYXQYBSABKAMSMAoHb3B0aW9ucxgTIAEoCzIfLm11",
+            "bHRpLlByb3RvR2FtZUluc3RhbmNlT3B0aW9ucxIVCg1yZWdpc3RlcmVkX2F0",
+            "GBQgASgDIsQBChhQcm90b0dhbWVJbnN0YW5jZU9wdGlvbnMSHAoUbWluaW11",
+            "bV9wbGF5ZXJfbGV2ZWwYASABKAUSFAoMbWF4X3J1bl90aW1lGAIgASgDEhwK",
+            "FHBsYXllcl90dXJuX2R1cmF0aW9uGAMgASgDEhgKEG1heF9wbGF5ZXJfY291",
+            "bnQYBCABKAUSPAoMcmVzdHJpY3Rpb25zGBQgAygLMiYubXVsdGkuUHJvdG9M",
+            "b2JieVBsYXllclNsb3RSZXN0cmljdGlvbiJfChBQcm90b0dhbWVTdW1tYXJ5",
+            "Eg4KBnN5c19pZBgBIAEoCRIMCgRzZWVkGAIgASgFEi0KB3BhcnRpZXMYAyAD",
+            "KAsyHC5tdWx0aS5Qcm90b0dhbWVQYXJ0eVN1bW1hcnkihQEKFVByb3RvR2Ft",
+            "ZVBhcnR5U3VtbWFyeRIOCgZzeXNfaWQYASABKAkSEAoIcGFydHlfaWQYAiAB",
+            "KAkSDQoFaW5kZXgYAyABKAUSEgoKcGFydHlfbmFtZRgEIAEoCRInCgdwbGF5",
+            "ZXJzGAUgAygLMhYubXVsdGkuUHJvdG9HYW1lUGxheWVyIo0BCg9Qcm90b0dh",
+            "bWVQbGF5ZXISDwoHdXNlcl9pZBgBIAEoCRIRCglwbGF5ZXJfaWQYAiABKAkS",
+            "EgoKcGFydHlfc2xvdBgDIAEoBRITCgtib3RfY29udHJvbBgEIAEoCBItCgds",
+            "b2Fkb3V0GAUgASgLMhwuaWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0IlgK",
+            "GlByb3RvR2FtZVBsYXllckFjdGlvblF1ZXVlEhEKCXBsYXllcl9pZBgBIAEo",
+            "CRInCgdhY3Rpb25zGAMgAygLMhYubXVsdGkuUHJvdG9HYW1lQWN0aW9uInYK",
+            "D1Byb3RvR2FtZUFjdGlvbhIrCgZhY3Rpb24YASABKA4yGy5tdWx0aS5HYW1l",
+            "UGxheWVyQWN0aW9uVHlwZRIOCgZ0YXJnZXQYAiABKAUSEgoKc2xvdF9pbmRl",
+            "eBgDIAEoBRISCgplbGVtZW50X2lkGAQgASgJKmsKFEdhbWVQbGF5ZXJBY3Rp",
+            "b25UeXBlEhsKF1BMQVlFUl9BQ1RJT05fVFlQRV9OT05FEAASEQoNTk9STUFM",
+            "X0FUVEFDSxABEhAKDEFCSUxJVFlfQ0FTVBACEhEKDUVMRU1FTlRfRFJJVkUQ",
+            "A0JNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
+            "b3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,7 +70,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser, new[]{ "SlotIndex", "Ready", "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlotRestriction.Parser, new[]{ "SlotIndex", "RoleRestriction", "Locked", "Bot", "InviteOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstance), global::Mobius.Proto.Multi.ProtoGameInstance.Parser, new[]{ "SysId", "PartyId", "Seed", "State", "StartedAt", "Options", "RegisteredAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstance), global::Mobius.Proto.Multi.ProtoGameInstance.Parser, new[]{ "SysId", "LobbyIds", "Seed", "State", "StartedAt", "Options", "RegisteredAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameInstanceOptions), global::Mobius.Proto.Multi.ProtoGameInstanceOptions.Parser, new[]{ "MinimumPlayerLevel", "MaxRunTime", "PlayerTurnDuration", "MaxPlayerCount", "Restrictions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameSummary), global::Mobius.Proto.Multi.ProtoGameSummary.Parser, new[]{ "SysId", "Seed", "Parties" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGamePartySummary), global::Mobius.Proto.Multi.ProtoGamePartySummary.Parser, new[]{ "SysId", "PartyId", "Index", "PartyName", "Players" }, null, null, null, null),
@@ -1259,7 +1259,7 @@ namespace Mobius.Proto.Multi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoGameInstance(ProtoGameInstance other) : this() {
       sysId_ = other.sysId_;
-      partyId_ = other.partyId_;
+      lobbyIds_ = other.lobbyIds_.Clone();
       seed_ = other.seed_;
       state_ = other.state_;
       startedAt_ = other.startedAt_;
@@ -1284,15 +1284,14 @@ namespace Mobius.Proto.Multi {
       }
     }
 
-    /// <summary>Field number for the "party_id" field.</summary>
-    public const int PartyIdFieldNumber = 2;
-    private string partyId_ = "";
+    /// <summary>Field number for the "lobby_ids" field.</summary>
+    public const int LobbyIdsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_lobbyIds_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> lobbyIds_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PartyId {
-      get { return partyId_; }
-      set {
-        partyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public pbc::RepeatedField<string> LobbyIds {
+      get { return lobbyIds_; }
     }
 
     /// <summary>Field number for the "seed" field.</summary>
@@ -1364,7 +1363,7 @@ namespace Mobius.Proto.Multi {
         return true;
       }
       if (SysId != other.SysId) return false;
-      if (PartyId != other.PartyId) return false;
+      if(!lobbyIds_.Equals(other.lobbyIds_)) return false;
       if (Seed != other.Seed) return false;
       if (State != other.State) return false;
       if (StartedAt != other.StartedAt) return false;
@@ -1377,7 +1376,7 @@ namespace Mobius.Proto.Multi {
     public override int GetHashCode() {
       int hash = 1;
       if (SysId.Length != 0) hash ^= SysId.GetHashCode();
-      if (PartyId.Length != 0) hash ^= PartyId.GetHashCode();
+      hash ^= lobbyIds_.GetHashCode();
       if (Seed != 0) hash ^= Seed.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (StartedAt != 0L) hash ^= StartedAt.GetHashCode();
@@ -1403,10 +1402,7 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(10);
         output.WriteString(SysId);
       }
-      if (PartyId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PartyId);
-      }
+      lobbyIds_.WriteTo(output, _repeated_lobbyIds_codec);
       if (Seed != 0) {
         output.WriteRawTag(24);
         output.WriteInt32(Seed);
@@ -1440,10 +1436,7 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(10);
         output.WriteString(SysId);
       }
-      if (PartyId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PartyId);
-      }
+      lobbyIds_.WriteTo(ref output, _repeated_lobbyIds_codec);
       if (Seed != 0) {
         output.WriteRawTag(24);
         output.WriteInt32(Seed);
@@ -1476,9 +1469,7 @@ namespace Mobius.Proto.Multi {
       if (SysId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SysId);
       }
-      if (PartyId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PartyId);
-      }
+      size += lobbyIds_.CalculateSize(_repeated_lobbyIds_codec);
       if (Seed != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Seed);
       }
@@ -1508,9 +1499,7 @@ namespace Mobius.Proto.Multi {
       if (other.SysId.Length != 0) {
         SysId = other.SysId;
       }
-      if (other.PartyId.Length != 0) {
-        PartyId = other.PartyId;
-      }
+      lobbyIds_.Add(other.lobbyIds_);
       if (other.Seed != 0) {
         Seed = other.Seed;
       }
@@ -1548,7 +1537,7 @@ namespace Mobius.Proto.Multi {
             break;
           }
           case 18: {
-            PartyId = input.ReadString();
+            lobbyIds_.AddEntriesFrom(input, _repeated_lobbyIds_codec);
             break;
           }
           case 24: {
@@ -1593,7 +1582,7 @@ namespace Mobius.Proto.Multi {
             break;
           }
           case 18: {
-            PartyId = input.ReadString();
+            lobbyIds_.AddEntriesFrom(ref input, _repeated_lobbyIds_codec);
             break;
           }
           case 24: {
