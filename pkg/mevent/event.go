@@ -4,12 +4,15 @@ import (
 	"context"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	uuid "github.com/satori/go.uuid"
-	"github.com/sirupsen/logrus"
+	"log/slog"
 )
+
+type SloggerEvent interface {
+	ToSlogFields() []slog.Attr
+}
 
 type Event interface {
 	Name() string
-	ToLogFields() logrus.Fields
 }
 
 type ClientEvent interface {
@@ -38,7 +41,7 @@ type Handler interface {
 
 type Publisher struct {
 	handlers map[string][]Handler
-	logger   *logrus.Logger
+	logger   *slog.Logger
 }
 
 func NewPublisher(options ...EventPublisherConfiguration) *Publisher {
@@ -59,7 +62,11 @@ func (e *Publisher) Subscribe(handler Handler, events ...Event) {
 
 func (e *Publisher) Notify(event Event) {
 	if e.logger != nil {
-		e.logger.WithFields(event.ToLogFields()).Info("Event Published")
+		if slogger, ok := event.(SloggerEvent); ok {
+			e.logger.With(slog.Group(event.Name(), slogger.ToSlogFields())).Info("event published")
+		} else {
+			e.logger.With(slog.Group(event.Name())).Info("event published")
+		}
 	}
 	for _, handler := range e.handlers[event.Name()] {
 		handler.Notify(event)
@@ -68,7 +75,7 @@ func (e *Publisher) Notify(event Event) {
 
 type EventPublisherConfiguration func(e *Publisher)
 
-func PublisherWithLogger(logger *logrus.Logger) EventPublisherConfiguration {
+func PublisherWithLogger(logger *slog.Logger) EventPublisherConfiguration {
 	return func(e *Publisher) {
 		e.logger = logger
 	}
