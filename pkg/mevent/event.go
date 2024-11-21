@@ -65,7 +65,7 @@ func (e *Publisher) Notify(event Event) {
 		if slogger, ok := event.(SloggerEvent); ok {
 			e.logger.With(slog.Group(event.Name(), slogger.ToSlogFields())).Info("event published")
 		} else {
-			e.logger.With(slog.Group(event.Name())).Info("event published")
+			e.logger.With(slog.String("event.name", event.Name())).Info("event published")
 		}
 	}
 	for _, handler := range e.handlers[event.Name()] {
