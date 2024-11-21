@@ -83,6 +83,11 @@ message ProtoGamePlayer {
   identity.ProtoPlayerLoadout loadout = 5;
 }
 
+message ProtoGamePartyActionQueue {
+  int32 party_index = 1;
+  repeated ProtoGamePlayerActionQueue player_action_queue = 2;
+}
+
 message ProtoGamePlayerActionQueue {
   string player_id = 1;
   repeated ProtoGameAction actions = 3;

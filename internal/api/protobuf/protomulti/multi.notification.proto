@@ -115,7 +115,7 @@ message GameLockActionNotification {
 }
 
 message GameActionQueueConfirmNotification {
-  repeated ProtoGamePlayerActionQueue player_action_queue = 1;
+  repeated ProtoGamePartyActionQueue party_action_queues = 1;
 }
 
 message GamePlayerRemoveNotification {
