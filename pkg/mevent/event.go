@@ -2,6 +2,7 @@ package mevent
 
 import (
 	"context"
+	"fmt"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	uuid "github.com/satori/go.uuid"
 	"log/slog"
@@ -67,6 +68,8 @@ func (e *Publisher) Notify(event Event) {
 		} else {
 			e.logger.With(slog.String("event.name", event.Name())).Info("event published")
 		}
+	} else {
+		fmt.Println(fmt.Sprintf("event published: %s", event.Name()))
 	}
 	for _, handler := range e.handlers[event.Name()] {
 		handler.Notify(event)
