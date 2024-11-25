@@ -278,7 +278,7 @@ namespace Mobius.Proto.Game {
             "IlsKHFByb3RvSm9iQ2FyZFN1bW1vbkRyYXdSZXN1bHQSLAoIaW5zdGFuY2UY",
             "ASABKAsyGi5nYW1lLlByb3RvSm9iQ2FyZEluc3RhbmNlEg0KBWluZGV4GAIg",
             "ASgFKnQKD1JlZmVyZW5jZVNvdXJjZRIICgROT05FEAASEAoMQUJJTElUWV9D",
-            "QVJEEAESCAoESVRFTRACEgwKCEpPQl9DQVJEEAMSCgoGV0VBUE9OEAQSEwoP",
+            "QVJEEAESDAoISk9CX0NBUkQQAhIICgRJVEVNEAMSCgoGV0VBUE9OEAQSEwoP",
             "RkFJUllfQ09NUEFOSU9OEAUSDAoITVBfU1RBTVAQBkJLWjVnaXRodWIuY29t",
             "L2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoC",
             "EU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
@@ -358,8 +358,8 @@ namespace Mobius.Proto.Game {
   public enum ReferenceSource {
     [pbr::OriginalName("NONE")] None = 0,
     [pbr::OriginalName("ABILITY_CARD")] AbilityCard = 1,
-    [pbr::OriginalName("ITEM")] Item = 2,
-    [pbr::OriginalName("JOB_CARD")] JobCard = 3,
+    [pbr::OriginalName("JOB_CARD")] JobCard = 2,
+    [pbr::OriginalName("ITEM")] Item = 3,
     [pbr::OriginalName("WEAPON")] Weapon = 4,
     [pbr::OriginalName("FAIRY_COMPANION")] FairyCompanion = 5,
     [pbr::OriginalName("MP_STAMP")] MpStamp = 6,

@@ -10,8 +10,8 @@ import "protoidentity/player.proto";
 enum ReferenceSource {
   NONE = 0;
   ABILITY_CARD = 1;
-  ITEM = 2;
-  JOB_CARD = 3;
+  JOB_CARD = 2;
+  ITEM = 3;
   WEAPON = 4;
   FAIRY_COMPANION = 5;
   MP_STAMP = 6;
