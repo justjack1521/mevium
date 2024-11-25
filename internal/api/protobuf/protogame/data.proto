@@ -56,6 +56,7 @@ message ProtoBaseCardHistoryInstance {
   string base_card_id = 1;
   int32 highest_star_level = 2;
   string highest_ability_card_id = 3;
+  string highest_augment_config_id = 4;
 }
 
 message ProtoAbilityCardHistoryInstance {
