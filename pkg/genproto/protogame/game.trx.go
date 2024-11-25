@@ -116,6 +116,14 @@ func NewClaimMailBoxItemRequest(bytes []byte) (*ClaimMailBoxItemRequest, error) 
 	return req, nil
 }
 
+func NewClaimAllMailBoxItemRequest(bytes []byte) (*ClaimAllMailBoxItemRequest, error) {
+	req := &ClaimAllMailBoxItemRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewClaimEventRankingRequest(bytes []byte) (*ClaimEventRankingRequest, error) {
 	req := &ClaimEventRankingRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -325,6 +333,10 @@ func (x *CardSaleResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *ClaimMailBoxItemResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ClaimAllMailBoxItemResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
