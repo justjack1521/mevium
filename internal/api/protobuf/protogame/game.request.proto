@@ -167,6 +167,7 @@ message DeckEditRequest {
 message DeckEditAllRequest {
   repeated DeckEditRequest Requests = 1;
   bool MPDeck = 2;
+  int32 current_deck_index = 3;
 }
 
 message FetchPlayerDataRequest {
