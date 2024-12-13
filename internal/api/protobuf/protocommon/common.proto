@@ -42,6 +42,11 @@ message ApplicationError {
   string  error_message  =  2;
 }
 
+message PlayerNotification {
+  string player_id = 1;
+  Notification notification = 2;
+}
+
 message Notification {
   common.ServiceKey service = 1;
   int32 type = 2;
