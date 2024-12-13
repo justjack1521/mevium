@@ -23,3 +23,15 @@ func NewNotification(bytes []byte) (*Notification, error) {
 func (x *Notification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewPlayerNotification(bytes []byte) (*PlayerNotification, error) {
+	req := &PlayerNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *PlayerNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
