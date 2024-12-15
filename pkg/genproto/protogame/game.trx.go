@@ -284,6 +284,14 @@ func NewExecuteDialogueRequest(bytes []byte) (*ExecuteDialogueRequest, error) {
 	return req, nil
 }
 
+func NewClaimItemDistillerRequest(bytes []byte) (*ClaimItemDistillerRequest, error) {
+	req := &ClaimItemDistillerRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *AbilityCardSummonResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -337,6 +345,10 @@ func (x *ClaimMailBoxItemResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *ClaimAllMailBoxItemResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ClaimItemDistillerResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 

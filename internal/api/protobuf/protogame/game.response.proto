@@ -208,3 +208,8 @@ message AbilityCardSummonResponse {
 message ExecuteDialogueResponse {
 
 }
+
+message ClaimItemDistillerResponse {
+  int32 received = 1;
+  int64 dec_time = 2;
+}

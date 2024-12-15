@@ -46,6 +46,7 @@ enum GameRequestType {
   COMPLETE_REGION_MAP = 3700;
   SUMMON_ABILITY_CARD = 3800;
   EXECUTE_DIALOGUE = 3900;
+  CLAIM_ITEM_DISTILLER = 4000;
 }
 
 enum TeleportRequestType {
@@ -247,4 +248,8 @@ message AbilityCardSummonRequest {
 
 message ExecuteDialogueRequest {
   string sys_id = 1;
+}
+
+message ClaimItemDistillerRequest {
+  string item_id = 1;
 }

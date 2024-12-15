@@ -43,5 +43,6 @@ service MeviusGameService {
   rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
   rpc AbilityCardSummon(game.AbilityCardSummonRequest) returns (game.AbilityCardSummonResponse) {}
   rpc ExecuteDialogue(game.ExecuteDialogueRequest) returns (game.ExecuteDialogueResponse) {}
+  rpc ClaimItemDistiller(game.ClaimItemDistillerRequest) returns (game.ClaimItemDistillerResponse) {}
 }
 
