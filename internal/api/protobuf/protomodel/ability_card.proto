@@ -25,6 +25,7 @@ message BaseAbilityCard {
   string ability = 9;
   string element = 10;
   string category = 11;
+  bool fast_learner = 12;
 }
 
 message AugmentConfig {
