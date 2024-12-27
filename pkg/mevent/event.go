@@ -64,10 +64,11 @@ func (e *Publisher) Subscribe(handler Handler, events ...Event) {
 func (e *Publisher) Notify(event Event) {
 	if e.logger != nil {
 		if slogger, ok := event.(SloggerEvent); ok {
-			var attrs = make([]slog.Attr, 0)
-			attrs = append(attrs, slog.String("event.name", event.Name()))
-			attrs = append(attrs, slogger.ToSlogFields()...)
-			e.logger.With(attrs).Info("event published")
+			var logger = e.logger.With(slog.String("event.name", event.Name()))
+			for _, attr := range slogger.ToSlogFields() {
+				logger.With(attr.Key, attr.Value)
+			}
+			logger.Info("event published")
 		} else {
 			e.logger.With(slog.String("event.name", event.Name())).Info("event published")
 		}
