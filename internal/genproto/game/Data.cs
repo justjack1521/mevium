@@ -278,13 +278,14 @@ namespace Mobius.Proto.Game {
             "CiBQcm90b0FiaWxpdHlDYXJkU3VtbW9uRHJhd1Jlc3VsdBIwCghpbnN0YW5j",
             "ZRgBIAEoCzIeLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlEg0KBWlu",
             "ZGV4GAIgASgFEhAKCG5ld19jYXJkGAMgASgIEhQKDHVwZ3JhZGVfY2FyZBgE",
-            "IAEoCCJbChxQcm90b0pvYkNhcmRTdW1tb25EcmF3UmVzdWx0EiwKCGluc3Rh",
-            "bmNlGAEgASgLMhouZ2FtZS5Qcm90b0pvYkNhcmRJbnN0YW5jZRINCgVpbmRl",
-            "eBgCIAEoBSp0Cg9SZWZlcmVuY2VTb3VyY2USCAoETk9ORRAAEhAKDEFCSUxJ",
-            "VFlfQ0FSRBABEgwKCEpPQl9DQVJEEAISCAoESVRFTRADEgoKBldFQVBPThAE",
-            "EhMKD0ZBSVJZX0NPTVBBTklPThAFEgwKCE1QX1NUQU1QEAZCS1o1Z2l0aHVi",
-            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
-            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "IAEoCCKUAQocUHJvdG9Kb2JDYXJkU3VtbW9uRHJhd1Jlc3VsdBIsCghpbnN0",
+            "YW5jZRgBIAEoCzIaLmdhbWUuUHJvdG9Kb2JDYXJkSW5zdGFuY2USNwoSc2tp",
+            "bGxfcGFuZWxfZ3JvdXBzGAIgASgLMhsuZ2FtZS5Qcm90b1NraWxsUGFuZWxH",
+            "cm91cHMSDQoFaW5kZXgYAyABKAUqdAoPUmVmZXJlbmNlU291cmNlEggKBE5P",
+            "TkUQABIQCgxBQklMSVRZX0NBUkQQARIMCghKT0JfQ0FSRBACEggKBElURU0Q",
+            "AxIKCgZXRUFQT04QBBITCg9GQUlSWV9DT01QQU5JT04QBRIMCghNUF9TVEFN",
+            "UBAGQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2Vu",
+            "cHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -352,7 +353,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ElementUsageStatistic), global::Mobius.Proto.Game.ElementUsageStatistic.Parser, new[]{ "ElementId", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoEnemyDeathStatistic), global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser, new[]{ "FiendId", "ElementId", "JobTypeId", "FromWeakness", "FromNormal", "FromUltimate", "ActionCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "Index", "NewCard", "UpgradeCard" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult), global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult.Parser, new[]{ "Instance", "Index" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult), global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult.Parser, new[]{ "Instance", "SkillPanelGroups", "Index" }, null, null, null, null)
           }));
     }
     #endregion
@@ -20199,6 +20200,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoJobCardSummonDrawResult(ProtoJobCardSummonDrawResult other) : this() {
       instance_ = other.instance_ != null ? other.instance_.Clone() : null;
+      skillPanelGroups_ = other.skillPanelGroups_ != null ? other.skillPanelGroups_.Clone() : null;
       index_ = other.index_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -20219,8 +20221,19 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "skill_panel_groups" field.</summary>
+    public const int SkillPanelGroupsFieldNumber = 2;
+    private global::Mobius.Proto.Game.ProtoSkillPanelGroups skillPanelGroups_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Game.ProtoSkillPanelGroups SkillPanelGroups {
+      get { return skillPanelGroups_; }
+      set {
+        skillPanelGroups_ = value;
+      }
+    }
+
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 2;
+    public const int IndexFieldNumber = 3;
     private int index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Index {
@@ -20244,6 +20257,7 @@ namespace Mobius.Proto.Game {
         return true;
       }
       if (!object.Equals(Instance, other.Instance)) return false;
+      if (!object.Equals(SkillPanelGroups, other.SkillPanelGroups)) return false;
       if (Index != other.Index) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -20252,6 +20266,7 @@ namespace Mobius.Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       if (instance_ != null) hash ^= Instance.GetHashCode();
+      if (skillPanelGroups_ != null) hash ^= SkillPanelGroups.GetHashCode();
       if (Index != 0) hash ^= Index.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -20273,8 +20288,12 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(Instance);
       }
+      if (skillPanelGroups_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SkillPanelGroups);
+      }
       if (Index != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(Index);
       }
       if (_unknownFields != null) {
@@ -20290,8 +20309,12 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(10);
         output.WriteMessage(Instance);
       }
+      if (skillPanelGroups_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SkillPanelGroups);
+      }
       if (Index != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(Index);
       }
       if (_unknownFields != null) {
@@ -20305,6 +20328,9 @@ namespace Mobius.Proto.Game {
       int size = 0;
       if (instance_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Instance);
+      }
+      if (skillPanelGroups_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SkillPanelGroups);
       }
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
@@ -20325,6 +20351,12 @@ namespace Mobius.Proto.Game {
           Instance = new global::Mobius.Proto.Game.ProtoJobCardInstance();
         }
         Instance.MergeFrom(other.Instance);
+      }
+      if (other.skillPanelGroups_ != null) {
+        if (skillPanelGroups_ == null) {
+          SkillPanelGroups = new global::Mobius.Proto.Game.ProtoSkillPanelGroups();
+        }
+        SkillPanelGroups.MergeFrom(other.SkillPanelGroups);
       }
       if (other.Index != 0) {
         Index = other.Index;
@@ -20350,7 +20382,14 @@ namespace Mobius.Proto.Game {
             input.ReadMessage(Instance);
             break;
           }
-          case 16: {
+          case 18: {
+            if (skillPanelGroups_ == null) {
+              SkillPanelGroups = new global::Mobius.Proto.Game.ProtoSkillPanelGroups();
+            }
+            input.ReadMessage(SkillPanelGroups);
+            break;
+          }
+          case 24: {
             Index = input.ReadInt32();
             break;
           }
@@ -20375,7 +20414,14 @@ namespace Mobius.Proto.Game {
             input.ReadMessage(Instance);
             break;
           }
-          case 16: {
+          case 18: {
+            if (skillPanelGroups_ == null) {
+              SkillPanelGroups = new global::Mobius.Proto.Game.ProtoSkillPanelGroups();
+            }
+            input.ReadMessage(SkillPanelGroups);
+            break;
+          }
+          case 24: {
             Index = input.ReadInt32();
             break;
           }

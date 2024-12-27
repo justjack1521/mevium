@@ -555,5 +555,6 @@ message ProtoAbilityCardSummonDrawResult {
 
 message ProtoJobCardSummonDrawResult {
   ProtoJobCardInstance instance = 1;
-  int32 index = 2;
+  ProtoSkillPanelGroups skill_panel_groups = 2;
+  int32 index = 3;
 }
