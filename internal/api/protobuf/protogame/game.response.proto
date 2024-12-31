@@ -126,7 +126,7 @@ message FirstDailyLoginResponse {
   game.ProtoDailyMissionInstance daily_mission = 2;
   game.ProtoLoginCampaignInstance standard_login_bonus = 3;
   game.ProtoLoginCampaignInstance special_login_bonus = 4;
-  game.ProtoMailBoxItem login_rewards = 5;
+  repeated game.ProtoMailBoxItem login_rewards = 5;
   int32 rental_count = 6;
   bool rental_claim = 7;
 }

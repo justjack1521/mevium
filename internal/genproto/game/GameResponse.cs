@@ -79,7 +79,7 @@ namespace Mobius.Proto.Game {
             "FHN0YW5kYXJkX2xvZ2luX2JvbnVzGAMgASgLMiAuZ2FtZS5Qcm90b0xvZ2lu",
             "Q2FtcGFpZ25JbnN0YW5jZRI9ChNzcGVjaWFsX2xvZ2luX2JvbnVzGAQgASgL",
             "MiAuZ2FtZS5Qcm90b0xvZ2luQ2FtcGFpZ25JbnN0YW5jZRItCg1sb2dpbl9y",
-            "ZXdhcmRzGAUgASgLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtEhQKDHJlbnRh",
+            "ZXdhcmRzGAUgAygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtEhQKDHJlbnRh",
             "bF9jb3VudBgGIAEoBRIUCgxyZW50YWxfY2xhaW0YByABKAgiYAoSRmlsdGVy",
             "U29ydFJlc3BvbnNlEgwKBFZpZXcYASABKAUSDQoFSW5kZXgYAiABKAUSLQoK",
             "RmlsdGVyU29ydBgDIAEoCzIZLmdhbWUuUHJvdG9DYXJkRmlsdGVyU29ydCIt",
@@ -4619,7 +4619,7 @@ namespace Mobius.Proto.Game {
       dailyMission_ = other.dailyMission_ != null ? other.dailyMission_.Clone() : null;
       standardLoginBonus_ = other.standardLoginBonus_ != null ? other.standardLoginBonus_.Clone() : null;
       specialLoginBonus_ = other.specialLoginBonus_ != null ? other.specialLoginBonus_.Clone() : null;
-      loginRewards_ = other.loginRewards_ != null ? other.loginRewards_.Clone() : null;
+      loginRewards_ = other.loginRewards_.Clone();
       rentalCount_ = other.rentalCount_;
       rentalClaim_ = other.rentalClaim_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4676,13 +4676,12 @@ namespace Mobius.Proto.Game {
 
     /// <summary>Field number for the "login_rewards" field.</summary>
     public const int LoginRewardsFieldNumber = 5;
-    private global::Mobius.Proto.Game.ProtoMailBoxItem loginRewards_;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoMailBoxItem> _repeated_loginRewards_codec
+        = pb::FieldCodec.ForMessage(42, global::Mobius.Proto.Game.ProtoMailBoxItem.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMailBoxItem> loginRewards_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMailBoxItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Game.ProtoMailBoxItem LoginRewards {
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMailBoxItem> LoginRewards {
       get { return loginRewards_; }
-      set {
-        loginRewards_ = value;
-      }
     }
 
     /// <summary>Field number for the "rental_count" field.</summary>
@@ -4724,7 +4723,7 @@ namespace Mobius.Proto.Game {
       if (!object.Equals(DailyMission, other.DailyMission)) return false;
       if (!object.Equals(StandardLoginBonus, other.StandardLoginBonus)) return false;
       if (!object.Equals(SpecialLoginBonus, other.SpecialLoginBonus)) return false;
-      if (!object.Equals(LoginRewards, other.LoginRewards)) return false;
+      if(!loginRewards_.Equals(other.loginRewards_)) return false;
       if (RentalCount != other.RentalCount) return false;
       if (RentalClaim != other.RentalClaim) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4737,7 +4736,7 @@ namespace Mobius.Proto.Game {
       if (dailyMission_ != null) hash ^= DailyMission.GetHashCode();
       if (standardLoginBonus_ != null) hash ^= StandardLoginBonus.GetHashCode();
       if (specialLoginBonus_ != null) hash ^= SpecialLoginBonus.GetHashCode();
-      if (loginRewards_ != null) hash ^= LoginRewards.GetHashCode();
+      hash ^= loginRewards_.GetHashCode();
       if (RentalCount != 0) hash ^= RentalCount.GetHashCode();
       if (RentalClaim != false) hash ^= RentalClaim.GetHashCode();
       if (_unknownFields != null) {
@@ -4772,10 +4771,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(34);
         output.WriteMessage(SpecialLoginBonus);
       }
-      if (loginRewards_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(LoginRewards);
-      }
+      loginRewards_.WriteTo(output, _repeated_loginRewards_codec);
       if (RentalCount != 0) {
         output.WriteRawTag(48);
         output.WriteInt32(RentalCount);
@@ -4809,10 +4805,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(34);
         output.WriteMessage(SpecialLoginBonus);
       }
-      if (loginRewards_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(LoginRewards);
-      }
+      loginRewards_.WriteTo(ref output, _repeated_loginRewards_codec);
       if (RentalCount != 0) {
         output.WriteRawTag(48);
         output.WriteInt32(RentalCount);
@@ -4842,9 +4835,7 @@ namespace Mobius.Proto.Game {
       if (specialLoginBonus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SpecialLoginBonus);
       }
-      if (loginRewards_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoginRewards);
-      }
+      size += loginRewards_.CalculateSize(_repeated_loginRewards_codec);
       if (RentalCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RentalCount);
       }
@@ -4883,12 +4874,7 @@ namespace Mobius.Proto.Game {
         }
         SpecialLoginBonus.MergeFrom(other.SpecialLoginBonus);
       }
-      if (other.loginRewards_ != null) {
-        if (loginRewards_ == null) {
-          LoginRewards = new global::Mobius.Proto.Game.ProtoMailBoxItem();
-        }
-        LoginRewards.MergeFrom(other.LoginRewards);
-      }
+      loginRewards_.Add(other.loginRewards_);
       if (other.RentalCount != 0) {
         RentalCount = other.RentalCount;
       }
@@ -4935,10 +4921,7 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 42: {
-            if (loginRewards_ == null) {
-              LoginRewards = new global::Mobius.Proto.Game.ProtoMailBoxItem();
-            }
-            input.ReadMessage(LoginRewards);
+            loginRewards_.AddEntriesFrom(input, _repeated_loginRewards_codec);
             break;
           }
           case 48: {
@@ -4989,10 +4972,7 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 42: {
-            if (loginRewards_ == null) {
-              LoginRewards = new global::Mobius.Proto.Game.ProtoMailBoxItem();
-            }
-            input.ReadMessage(LoginRewards);
+            loginRewards_.AddEntriesFrom(ref input, _repeated_loginRewards_codec);
             break;
           }
           case 48: {
