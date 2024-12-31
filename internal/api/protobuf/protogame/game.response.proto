@@ -85,11 +85,11 @@ message ClaimLoginCampaignResponse {
 }
 
 message ClaimMailBoxItemResponse {
-  game.ProtoMailBoxItem claim = 1;
+  game.ProtoMailboxClaimResult claim = 1;
 }
 
 message ClaimAllMailBoxItemResponse {
- repeated game.ProtoMailBoxItem claims = 1;
+ repeated game.ProtoMailboxClaimResult claims = 1;
 }
 
 message DeleteAllMailboxItemResponse {
