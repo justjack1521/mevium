@@ -97,7 +97,8 @@ message CardFilterSortSetRequest {
 }
 
 message CardAutoSellRequest {
-  int32 card_index = 1;
+  string card = 1;
+  bool value = 2;
 }
 
 message CardFusionRequest {

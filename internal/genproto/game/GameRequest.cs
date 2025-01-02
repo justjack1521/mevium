@@ -39,77 +39,78 @@ namespace Mobius.Proto.Game {
             "c3QSDAoEVmlldxgBIAEoBRINCgVJbmRleBgCIAEoBRIRCglDYXJkVHlwZXMY",
             "AyADKAUSFAoMQ2FyZEVsZW1lbnRzGAQgAygFEhYKDlNwZWNpYWxGaWx0ZXJz",
             "GAUgAygFEhUKDVNvcnRTZWxlY3RvcnMYBiADKAUSFgoOU29ydERlc2NlbmRp",
-            "bmcYByABKAgiKQoTQ2FyZEF1dG9TZWxsUmVxdWVzdBISCgpjYXJkX2luZGV4",
-            "GAEgASgFIlMKEUNhcmRGdXNpb25SZXF1ZXN0EhEKCWJhc2VfY2FyZBgBIAEo",
-            "BRIXCg9pbnZlbnRvcnlfY2FyZHMYAiADKAUSEgoKYmFua19jYXJkcxgDIAMo",
-            "BSI5ChZDYXJkQm9vc3RGdXNpb25SZXF1ZXN0EgwKBGNhcmQYASABKAUSEQoJ",
-            "bWF4X2Jvb3N0GAIgASgIIjoKD0NhcmRTYWxlUmVxdWVzdBINCgVjYXJkcxgB",
-            "IAMoBRIYChBpbnZlbnRvcnlfc291cmNlGAIgASgFIj4KE0NhcmRUcmFuc2Zl",
-            "clJlcXVlc3QSDQoFY2FyZHMYASADKAUSGAoQaW52ZW50b3J5X3NvdXJjZRgC",
-            "IAEoBSIrChRDcmVhdGVQcm9maWxlUmVxdWVzdBITCgtwbGF5ZXJfbmFtZRgB",
-            "IAEoCSI0ChhDbGFpbUV2ZW50UmFua2luZ1JlcXVlc3QSCgoCaWQYASABKAkS",
-            "DAoEY29kZRgCIAEoCSIwChlDbGFpbUxvZ2luQ2FtcGFpZ25SZXF1ZXN0EhMK",
-            "C2NhbXBhaWduX2lkGAEgASgJIiUKF0NsYWltTWFpbEJveEl0ZW1SZXF1ZXN0",
-            "EgoKAmlkGAEgASgJIhoKGENsYWltRGFpbHlNaXNzaW9uUmVxdWVzdCIcChpD",
-            "bGFpbUFsbE1haWxCb3hJdGVtUmVxdWVzdCIdChtEZWxldGVBbGxNYWlsYm94",
-            "SXRlbVJlcXVlc3QiHgocQ2xhaW1SZW50YWxDYXJkUmV3YXJkUmVxdWVzdCIc",
-            "ChpDb25maXJtRGFpbHlNaXNzaW9uUmVxdWVzdCLkAQoPRGVja0VkaXRSZXF1",
-            "ZXN0Eg0KBUluZGV4GAEgASgFEhQKDEpvYkNhcmRJbmRleBgCIAEoBRIXCg9K",
-            "b2JDYXJkU3ViSW5kZXgYAyABKAUSEwoLV2VhcG9uSW5kZXgYBCABKAUSFwoP",
-            "U3ViSm9iQ2FyZEluZGV4GAUgASgFEhoKElN1YkpvYkNhcmRTdWJJbmRleBgG",
-            "IAEoBRIWCg5TdWJXZWFwb25JbmRleBgHIAEoBRIWCg5BYmlsaXR5Q2FyZElE",
-            "cxgIIAMoCRIZChFTdWJBYmlsaXR5Q2FyZElEcxgJIAMoCSJpChJEZWNrRWRp",
-            "dEFsbFJlcXVlc3QSJwoIUmVxdWVzdHMYASADKAsyFS5nYW1lLkRlY2tFZGl0",
-            "UmVxdWVzdBIOCgZNUERlY2sYAiABKAgSGgoSY3VycmVudF9kZWNrX2luZGV4",
-            "GAMgASgFIhgKFkZldGNoUGxheWVyRGF0YVJlcXVlc3QiGAoWRmlyc3REYWls",
-            "eUxvZ2luUmVxdWVzdCJEChlQcm9jZXNzUmVnaW9uRXZlbnRSZXF1ZXN0EhUK",
-            "DXJlZ2lvbl9tYXBfaWQYASABKAkSEAoIZXZlbnRfaWQYAiABKAkiSAodUHJv",
-            "Y2Vzc1JlZ2lvbk5vZGVFdmVudFJlcXVlc3QSFQoNcmVnaW9uX21hcF9pZBgB",
-            "IAEoCRIQCghldmVudF9pZBgCIAEoCSKCAQoXU2tpbGxQYW5lbFVubG9ja1Jl",
-            "cXVlc3QSFgoOam9iX2NhcmRfaW5kZXgYASABKAUSEwoLZ3JvdXBfaW5kZXgY",
-            "AiABKAUSEgoKcGFnZV9pbmRleBgDIAEoBRITCgtwYW5lbF9pbmRleBgEIAEo",
-            "BRIRCglhbHRlcm5hdGUYBSABKAgiLQoVU3RhbWluYVJlc3RvcmVSZXF1ZXN0",
-            "EhQKDG11bHRpX3BsYXllchgBIAEoCCJpCg9UZWxlcG9ydFJlcXVlc3QSEgoK",
-            "cmVnaW9uX21hcBgBIAEoCRIXCg9yZWdpb25fbWFwX25vZGUYAiABKAUSKQoG",
-            "c291cmNlGAMgASgOMhkuZ2FtZS5UZWxlcG9ydFJlcXVlc3RUeXBlIl0KFFVw",
-            "ZGF0ZVByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASABKAkSDwoHY29tbWVudBgC",
-            "IAEoCRITCgtyZW50YWxfY2FyZBgDIAEoBRIRCgljb21wYW5pb24YBCABKAUi",
-            "PgocRXhwYW5kQWJpbGl0eUNhcmRTbG90UmVxdWVzdBIOCgZzb3VyY2UYASAB",
-            "KAUSDgoGYW1vdW50GAIgASgFIncKG0l0ZW1TaG9wSXRlbVB1cmNoYXNlUmVx",
-            "dWVzdBIUCgxyZWNlaXZlX2l0ZW0YASABKAkSGAoQcmVjZWl2ZV9xdWFudGl0",
-            "eRgCIAEoBRIRCgljb3N0X2l0ZW0YAyABKAkSFQoNY29zdF9xdWFudGl0eRgE",
-            "IAEoBSJ3ChtJdGVtU2hvcENhcmRQdXJjaGFzZVJlcXVlc3QSFAoMcmVjZWl2",
-            "ZV9jYXJkGAEgASgJEhgKEHJlY2VpdmVfcXVhbnRpdHkYAiABKAUSEQoJY29z",
-            "dF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRpdHkYBCABKAUiQgoaQWJpbGl0",
-            "eVNob3BQdXJjaGFzZVJlcXVlc3QSFwoPYWJpbGl0eV9jYXJkX2lkGAEgASgJ",
-            "EgsKA21heBgCIAEoCCIxChhDb21wbGV0ZVJlZ2lvbk1hcFJlcXVlc3QSFQoN",
-            "cmVnaW9uX21hcF9pZBgBIAEoCSItChhBYmlsaXR5Q2FyZFN1bW1vblJlcXVl",
-            "c3QSEQoJYmFubmVyX2lkGAEgASgJIigKFkV4ZWN1dGVEaWFsb2d1ZVJlcXVl",
-            "c3QSDgoGc3lzX2lkGAEgASgJIiwKGUNsYWltSXRlbURpc3RpbGxlclJlcXVl",
-            "c3QSDwoHaXRlbV9pZBgBIAEoCSrwBgoPR2FtZVJlcXVlc3RUeXBlEggKBEJB",
-            "U0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVfUFJPRklMRRCsAhIT",
-            "Cg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQkAMSFQoQQ0FSRF9G",
-            "SUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDYBBIQCgtTS0lMTF9Q",
-            "QU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19FRElUX0FMTBCEBxIN",
-            "CghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9FVkVOVBDMCBIeChlQ",
-            "Uk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJBVFRMRV9SRVZJVkUQ",
-            "sAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJUk1fREFJTFlfTUlT",
-            "U0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQNEhIKDUNMQUlNX01B",
-            "SUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQug4SEQoMQkFUVExFX1NU",
-            "QVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoRRVhQQU5EX0NBUkRfU0xP",
-            "VFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FSRF9GVVNJT05fQk9PU1QQ",
-            "mBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJUlNUX0RBSUxZX0xPR0lO",
-            "EOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQTEhcKEkRFTEVURV9BTExf",
-            "TUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVXQVJEEPAVEhIKDVBVUkNI",
-            "QVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCcGBIaChVBQklMSVRZX1NI",
-            "T1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5UEOQZEhgKE0NMQUlNX0RB",
-            "SUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVHSU9OX01BUBD0HBIYChNT",
-            "VU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNVVEVfRElBTE9HVUUQvB4S",
-            "GQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoOQ0FSRF9BVVRPX1NFTEwQ",
-            "hCAqWAoTVGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JU",
-            "EAASCQoFTE9HSU4QARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExF",
-            "EARCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5w",
-            "cm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "bmcYByABKAgiMgoTQ2FyZEF1dG9TZWxsUmVxdWVzdBIMCgRjYXJkGAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgIIlMKEUNhcmRGdXNpb25SZXF1ZXN0EhEKCWJhc2Vf",
+            "Y2FyZBgBIAEoBRIXCg9pbnZlbnRvcnlfY2FyZHMYAiADKAUSEgoKYmFua19j",
+            "YXJkcxgDIAMoBSI5ChZDYXJkQm9vc3RGdXNpb25SZXF1ZXN0EgwKBGNhcmQY",
+            "ASABKAUSEQoJbWF4X2Jvb3N0GAIgASgIIjoKD0NhcmRTYWxlUmVxdWVzdBIN",
+            "CgVjYXJkcxgBIAMoBRIYChBpbnZlbnRvcnlfc291cmNlGAIgASgFIj4KE0Nh",
+            "cmRUcmFuc2ZlclJlcXVlc3QSDQoFY2FyZHMYASADKAUSGAoQaW52ZW50b3J5",
+            "X3NvdXJjZRgCIAEoBSIrChRDcmVhdGVQcm9maWxlUmVxdWVzdBITCgtwbGF5",
+            "ZXJfbmFtZRgBIAEoCSI0ChhDbGFpbUV2ZW50UmFua2luZ1JlcXVlc3QSCgoC",
+            "aWQYASABKAkSDAoEY29kZRgCIAEoCSIwChlDbGFpbUxvZ2luQ2FtcGFpZ25S",
+            "ZXF1ZXN0EhMKC2NhbXBhaWduX2lkGAEgASgJIiUKF0NsYWltTWFpbEJveEl0",
+            "ZW1SZXF1ZXN0EgoKAmlkGAEgASgJIhoKGENsYWltRGFpbHlNaXNzaW9uUmVx",
+            "dWVzdCIcChpDbGFpbUFsbE1haWxCb3hJdGVtUmVxdWVzdCIdChtEZWxldGVB",
+            "bGxNYWlsYm94SXRlbVJlcXVlc3QiHgocQ2xhaW1SZW50YWxDYXJkUmV3YXJk",
+            "UmVxdWVzdCIcChpDb25maXJtRGFpbHlNaXNzaW9uUmVxdWVzdCLkAQoPRGVj",
+            "a0VkaXRSZXF1ZXN0Eg0KBUluZGV4GAEgASgFEhQKDEpvYkNhcmRJbmRleBgC",
+            "IAEoBRIXCg9Kb2JDYXJkU3ViSW5kZXgYAyABKAUSEwoLV2VhcG9uSW5kZXgY",
+            "BCABKAUSFwoPU3ViSm9iQ2FyZEluZGV4GAUgASgFEhoKElN1YkpvYkNhcmRT",
+            "dWJJbmRleBgGIAEoBRIWCg5TdWJXZWFwb25JbmRleBgHIAEoBRIWCg5BYmls",
+            "aXR5Q2FyZElEcxgIIAMoCRIZChFTdWJBYmlsaXR5Q2FyZElEcxgJIAMoCSJp",
+            "ChJEZWNrRWRpdEFsbFJlcXVlc3QSJwoIUmVxdWVzdHMYASADKAsyFS5nYW1l",
+            "LkRlY2tFZGl0UmVxdWVzdBIOCgZNUERlY2sYAiABKAgSGgoSY3VycmVudF9k",
+            "ZWNrX2luZGV4GAMgASgFIhgKFkZldGNoUGxheWVyRGF0YVJlcXVlc3QiGAoW",
+            "Rmlyc3REYWlseUxvZ2luUmVxdWVzdCJEChlQcm9jZXNzUmVnaW9uRXZlbnRS",
+            "ZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQYASABKAkSEAoIZXZlbnRfaWQYAiAB",
+            "KAkiSAodUHJvY2Vzc1JlZ2lvbk5vZGVFdmVudFJlcXVlc3QSFQoNcmVnaW9u",
+            "X21hcF9pZBgBIAEoCRIQCghldmVudF9pZBgCIAEoCSKCAQoXU2tpbGxQYW5l",
+            "bFVubG9ja1JlcXVlc3QSFgoOam9iX2NhcmRfaW5kZXgYASABKAUSEwoLZ3Jv",
+            "dXBfaW5kZXgYAiABKAUSEgoKcGFnZV9pbmRleBgDIAEoBRITCgtwYW5lbF9p",
+            "bmRleBgEIAEoBRIRCglhbHRlcm5hdGUYBSABKAgiLQoVU3RhbWluYVJlc3Rv",
+            "cmVSZXF1ZXN0EhQKDG11bHRpX3BsYXllchgBIAEoCCJpCg9UZWxlcG9ydFJl",
+            "cXVlc3QSEgoKcmVnaW9uX21hcBgBIAEoCRIXCg9yZWdpb25fbWFwX25vZGUY",
+            "AiABKAUSKQoGc291cmNlGAMgASgOMhkuZ2FtZS5UZWxlcG9ydFJlcXVlc3RU",
+            "eXBlIl0KFFVwZGF0ZVByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASABKAkSDwoH",
+            "Y29tbWVudBgCIAEoCRITCgtyZW50YWxfY2FyZBgDIAEoBRIRCgljb21wYW5p",
+            "b24YBCABKAUiPgocRXhwYW5kQWJpbGl0eUNhcmRTbG90UmVxdWVzdBIOCgZz",
+            "b3VyY2UYASABKAUSDgoGYW1vdW50GAIgASgFIncKG0l0ZW1TaG9wSXRlbVB1",
+            "cmNoYXNlUmVxdWVzdBIUCgxyZWNlaXZlX2l0ZW0YASABKAkSGAoQcmVjZWl2",
+            "ZV9xdWFudGl0eRgCIAEoBRIRCgljb3N0X2l0ZW0YAyABKAkSFQoNY29zdF9x",
+            "dWFudGl0eRgEIAEoBSJ3ChtJdGVtU2hvcENhcmRQdXJjaGFzZVJlcXVlc3QS",
+            "FAoMcmVjZWl2ZV9jYXJkGAEgASgJEhgKEHJlY2VpdmVfcXVhbnRpdHkYAiAB",
+            "KAUSEQoJY29zdF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRpdHkYBCABKAUi",
+            "QgoaQWJpbGl0eVNob3BQdXJjaGFzZVJlcXVlc3QSFwoPYWJpbGl0eV9jYXJk",
+            "X2lkGAEgASgJEgsKA21heBgCIAEoCCIxChhDb21wbGV0ZVJlZ2lvbk1hcFJl",
+            "cXVlc3QSFQoNcmVnaW9uX21hcF9pZBgBIAEoCSItChhBYmlsaXR5Q2FyZFN1",
+            "bW1vblJlcXVlc3QSEQoJYmFubmVyX2lkGAEgASgJIigKFkV4ZWN1dGVEaWFs",
+            "b2d1ZVJlcXVlc3QSDgoGc3lzX2lkGAEgASgJIiwKGUNsYWltSXRlbURpc3Rp",
+            "bGxlclJlcXVlc3QSDwoHaXRlbV9pZBgBIAEoCSrwBgoPR2FtZVJlcXVlc3RU",
+            "eXBlEggKBEJBU0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVfUFJP",
+            "RklMRRCsAhITCg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQkAMS",
+            "FQoQQ0FSRF9GSUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDYBBIQ",
+            "CgtTS0lMTF9QQU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19FRElU",
+            "X0FMTBCEBxINCghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9FVkVO",
+            "VBDMCBIeChlQUk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJBVFRM",
+            "RV9SRVZJVkUQsAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJUk1f",
+            "REFJTFlfTUlTU0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQNEhIK",
+            "DUNMQUlNX01BSUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQug4SEQoM",
+            "QkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoRRVhQQU5E",
+            "X0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FSRF9GVVNJ",
+            "T05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJUlNUX0RB",
+            "SUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQTEhcKEkRF",
+            "TEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVXQVJEEPAV",
+            "EhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCcGBIaChVB",
+            "QklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5UEOQZEhgK",
+            "E0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVHSU9OX01B",
+            "UBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNVVEVfRElB",
+            "TE9HVUUQvB4SGQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoOQ0FSRF9B",
+            "VVRPX1NFTEwQhCAqWAoTVGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJTlZBTElE",
+            "X1RFTEVQT1JUEAASCQoFTE9HSU4QARIJCgVXT1JMRBACEgkKBUZJRUxEEAMS",
+            "CgoGQkFUVExFEARCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVt",
+            "L3BrZy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,7 +120,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardAugmentRequest), global::Mobius.Proto.Game.CardAugmentRequest.Parser, new[]{ "TargetCardIndex", "InventoryMaterials", "BankMaterials" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFavouriteRequest), global::Mobius.Proto.Game.CardFavouriteRequest.Parser, new[]{ "Card", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFilterSortSetRequest), global::Mobius.Proto.Game.CardFilterSortSetRequest.Parser, new[]{ "View", "Index", "CardTypes", "CardElements", "SpecialFilters", "SortSelectors", "SortDescending" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardAutoSellRequest), global::Mobius.Proto.Game.CardAutoSellRequest.Parser, new[]{ "CardIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardAutoSellRequest), global::Mobius.Proto.Game.CardAutoSellRequest.Parser, new[]{ "Card", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFusionRequest), global::Mobius.Proto.Game.CardFusionRequest.Parser, new[]{ "BaseCard", "InventoryCards", "BankCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardBoostFusionRequest), global::Mobius.Proto.Game.CardBoostFusionRequest.Parser, new[]{ "Card", "MaxBoost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardSaleRequest), global::Mobius.Proto.Game.CardSaleRequest.Parser, new[]{ "Cards", "InventorySource" }, null, null, null, null),
@@ -1703,7 +1704,8 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CardAutoSellRequest(CardAutoSellRequest other) : this() {
-      cardIndex_ = other.cardIndex_;
+      card_ = other.card_;
+      value_ = other.value_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1712,14 +1714,25 @@ namespace Mobius.Proto.Game {
       return new CardAutoSellRequest(this);
     }
 
-    /// <summary>Field number for the "card_index" field.</summary>
-    public const int CardIndexFieldNumber = 1;
-    private int cardIndex_;
+    /// <summary>Field number for the "card" field.</summary>
+    public const int CardFieldNumber = 1;
+    private string card_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CardIndex {
-      get { return cardIndex_; }
+    public string Card {
+      get { return card_; }
       set {
-        cardIndex_ = value;
+        card_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private bool value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Value {
+      get { return value_; }
+      set {
+        value_ = value;
       }
     }
 
@@ -1736,14 +1749,16 @@ namespace Mobius.Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CardIndex != other.CardIndex) return false;
+      if (Card != other.Card) return false;
+      if (Value != other.Value) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (CardIndex != 0) hash ^= CardIndex.GetHashCode();
+      if (Card.Length != 0) hash ^= Card.GetHashCode();
+      if (Value != false) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1760,9 +1775,13 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CardIndex != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CardIndex);
+      if (Card.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Card);
+      }
+      if (Value != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1773,9 +1792,13 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CardIndex != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CardIndex);
+      if (Card.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Card);
+      }
+      if (Value != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1786,8 +1809,11 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (CardIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CardIndex);
+      if (Card.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Card);
+      }
+      if (Value != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1800,8 +1826,11 @@ namespace Mobius.Proto.Game {
       if (other == null) {
         return;
       }
-      if (other.CardIndex != 0) {
-        CardIndex = other.CardIndex;
+      if (other.Card.Length != 0) {
+        Card = other.Card;
+      }
+      if (other.Value != false) {
+        Value = other.Value;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1817,8 +1846,12 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CardIndex = input.ReadInt32();
+          case 10: {
+            Card = input.ReadString();
+            break;
+          }
+          case 16: {
+            Value = input.ReadBool();
             break;
           }
         }
@@ -1835,8 +1868,12 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            CardIndex = input.ReadInt32();
+          case 10: {
+            Card = input.ReadString();
+            break;
+          }
+          case 16: {
+            Value = input.ReadBool();
             break;
           }
         }
