@@ -47,6 +47,7 @@ enum GameRequestType {
   SUMMON_ABILITY_CARD = 3800;
   EXECUTE_DIALOGUE = 3900;
   CLAIM_ITEM_DISTILLER = 4000;
+  CARD_AUTO_SELL = 4100;
 }
 
 enum TeleportRequestType {
@@ -93,6 +94,10 @@ message CardFilterSortSetRequest {
   repeated  int32  SpecialFilters   =  5;
   repeated  int32  SortSelectors    =  6;
   bool             SortDescending   =  7;
+}
+
+message CardAutoSellRequest {
+  int32 card_index = 1;
 }
 
 message CardFusionRequest {

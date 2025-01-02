@@ -28,6 +28,7 @@ const (
 	MeviusGameService_CardFusion_FullMethodName             = "/service.MeviusGameService/CardFusion"
 	MeviusGameService_CardBoostFusion_FullMethodName        = "/service.MeviusGameService/CardBoostFusion"
 	MeviusGameService_CardSale_FullMethodName               = "/service.MeviusGameService/CardSale"
+	MeviusGameService_CardAutoSell_FullMethodName           = "/service.MeviusGameService/CardAutoSell"
 	MeviusGameService_CardTransfer_FullMethodName           = "/service.MeviusGameService/CardTransfer"
 	MeviusGameService_CreateProfile_FullMethodName          = "/service.MeviusGameService/CreateProfile"
 	MeviusGameService_ClaimEventRanking_FullMethodName      = "/service.MeviusGameService/ClaimEventRanking"
@@ -70,6 +71,7 @@ type MeviusGameServiceClient interface {
 	CardFusion(ctx context.Context, in *protogame.CardFusionRequest, opts ...grpc.CallOption) (*protogame.CardFusionResponse, error)
 	CardBoostFusion(ctx context.Context, in *protogame.CardBoostFusionRequest, opts ...grpc.CallOption) (*protogame.CardBoostFusionResponse, error)
 	CardSale(ctx context.Context, in *protogame.CardSaleRequest, opts ...grpc.CallOption) (*protogame.CardSaleResponse, error)
+	CardAutoSell(ctx context.Context, in *protogame.CardAutoSellRequest, opts ...grpc.CallOption) (*protogame.CardAutoSellResponse, error)
 	CardTransfer(ctx context.Context, in *protogame.CardTransferRequest, opts ...grpc.CallOption) (*protogame.CardTransferResponse, error)
 	CreateProfile(ctx context.Context, in *protogame.CreateProfileRequest, opts ...grpc.CallOption) (*protogame.CreateProfileResponse, error)
 	ClaimEventRanking(ctx context.Context, in *protogame.ClaimEventRankingRequest, opts ...grpc.CallOption) (*protogame.ClaimEventRankingResponse, error)
@@ -173,6 +175,15 @@ func (c *meviusGameServiceClient) CardBoostFusion(ctx context.Context, in *proto
 func (c *meviusGameServiceClient) CardSale(ctx context.Context, in *protogame.CardSaleRequest, opts ...grpc.CallOption) (*protogame.CardSaleResponse, error) {
 	out := new(protogame.CardSaleResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_CardSale_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) CardAutoSell(ctx context.Context, in *protogame.CardAutoSellRequest, opts ...grpc.CallOption) (*protogame.CardAutoSellResponse, error) {
+	out := new(protogame.CardAutoSellResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_CardAutoSell_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -435,6 +446,7 @@ type MeviusGameServiceServer interface {
 	CardFusion(context.Context, *protogame.CardFusionRequest) (*protogame.CardFusionResponse, error)
 	CardBoostFusion(context.Context, *protogame.CardBoostFusionRequest) (*protogame.CardBoostFusionResponse, error)
 	CardSale(context.Context, *protogame.CardSaleRequest) (*protogame.CardSaleResponse, error)
+	CardAutoSell(context.Context, *protogame.CardAutoSellRequest) (*protogame.CardAutoSellResponse, error)
 	CardTransfer(context.Context, *protogame.CardTransferRequest) (*protogame.CardTransferResponse, error)
 	CreateProfile(context.Context, *protogame.CreateProfileRequest) (*protogame.CreateProfileResponse, error)
 	ClaimEventRanking(context.Context, *protogame.ClaimEventRankingRequest) (*protogame.ClaimEventRankingResponse, error)
@@ -491,6 +503,9 @@ func (UnimplementedMeviusGameServiceServer) CardBoostFusion(context.Context, *pr
 }
 func (UnimplementedMeviusGameServiceServer) CardSale(context.Context, *protogame.CardSaleRequest) (*protogame.CardSaleResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardSale not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) CardAutoSell(context.Context, *protogame.CardAutoSellRequest) (*protogame.CardAutoSellResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CardAutoSell not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) CardTransfer(context.Context, *protogame.CardTransferRequest) (*protogame.CardTransferResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CardTransfer not implemented")
@@ -725,6 +740,24 @@ func _MeviusGameService_CardSale_Handler(srv interface{}, ctx context.Context, d
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusGameServiceServer).CardSale(ctx, req.(*protogame.CardSaleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_CardAutoSell_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.CardAutoSellRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).CardAutoSell(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_CardAutoSell_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).CardAutoSell(ctx, req.(*protogame.CardAutoSellRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1253,6 +1286,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CardSale",
 			Handler:    _MeviusGameService_CardSale_Handler,
+		},
+		{
+			MethodName: "CardAutoSell",
+			Handler:    _MeviusGameService_CardAutoSell_Handler,
 		},
 		{
 			MethodName: "CardTransfer",

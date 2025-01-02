@@ -17,6 +17,7 @@ service MeviusGameService {
   rpc CardFusion(game.CardFusionRequest) returns (game.CardFusionResponse) {}
   rpc CardBoostFusion(game.CardBoostFusionRequest) returns (game.CardBoostFusionResponse) {}
   rpc CardSale(game.CardSaleRequest) returns (game.CardSaleResponse) {}
+  rpc CardAutoSell(game.CardAutoSellRequest) returns (game.CardAutoSellResponse) {}
   rpc CardTransfer(game.CardTransferRequest) returns (game.CardTransferResponse) {}
   rpc CreateProfile(game.CreateProfileRequest) returns (game.CreateProfileResponse) {}
   rpc ClaimEventRanking(game.ClaimEventRankingRequest) returns (game.ClaimEventRankingResponse) {}

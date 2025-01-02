@@ -292,6 +292,18 @@ func NewClaimItemDistillerRequest(bytes []byte) (*ClaimItemDistillerRequest, err
 	return req, nil
 }
 
+func NewCardAutoSellRequest(bytes []byte) (*CardAutoSellRequest, error) {
+	req := &CardAutoSellRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *CardAutoSellResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *AbilityCardSummonResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

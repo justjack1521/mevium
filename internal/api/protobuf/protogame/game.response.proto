@@ -37,6 +37,11 @@ message CreateProfileResponse {
   bytes game_data = 1;
 }
 
+message CardAutoSellResponse {
+  string card_id = 1;
+  bool auto_sell = 2;
+}
+
 message CardAugmentResponse {
   string target_instance_id = 1;
   string new_ability_card_id = 2;
