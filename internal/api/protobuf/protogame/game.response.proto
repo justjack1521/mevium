@@ -172,6 +172,7 @@ message TeleportResponse {
   repeated game.ProtoRegionNodeEvent node_events = 4;
   optional game.ProtoRegionMapInstance current_map_data = 5;
   repeated game.ProtoItemValuePair cost_items = 6;
+  int32 unavailable_reason = 7;
 }
 
 message ProcessRegionEventResponse {
