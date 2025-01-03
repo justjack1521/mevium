@@ -300,6 +300,18 @@ func NewCardAutoSellRequest(bytes []byte) (*CardAutoSellRequest, error) {
 	return req, nil
 }
 
+func NewRegionMapUnlockRequest(bytes []byte) (*RegionMapUnlockRequest, error) {
+	req := &RegionMapUnlockRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *RegionMapUnlockResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *CardAutoSellResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

@@ -171,8 +171,7 @@ message TeleportResponse {
   repeated game.ProtoRegionEvent region_events = 3;
   repeated game.ProtoRegionNodeEvent node_events = 4;
   optional game.ProtoRegionMapInstance current_map_data = 5;
-  repeated game.ProtoItemValuePair cost_items = 6;
-  int32 unavailable_reason = 7;
+  int32 unavailable_reason = 6;
 }
 
 message ProcessRegionEventResponse {
@@ -219,4 +218,9 @@ message ExecuteDialogueResponse {
 message ClaimItemDistillerResponse {
   int32 received = 1;
   int64 dec_time = 2;
+}
+
+message RegionMapUnlockResponse {
+  int64 unlock_time = 1;
+  repeated ProtoItemValuePair cost_items = 2;
 }

@@ -48,6 +48,7 @@ enum GameRequestType {
   EXECUTE_DIALOGUE = 3900;
   CLAIM_ITEM_DISTILLER = 4000;
   CARD_AUTO_SELL = 4100;
+  UNLOCK_REGION_MAP = 4200;
 }
 
 enum TeleportRequestType {
@@ -258,4 +259,8 @@ message ExecuteDialogueRequest {
 
 message ClaimItemDistillerRequest {
   string item_id = 1;
+}
+
+message RegionMapUnlockRequest {
+  string map_id = 1;
 }
