@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/gin-gonic/gin v1.9.0
 	github.com/go-redis/redis/v8 v8.11.5
+	github.com/justjack1521/mevrpc v0.0.0-20240506141248-edf429b4403e
 	github.com/newrelic/go-agent/v3 v3.21.1
 	github.com/satori/go.uuid v1.2.0
 	github.com/sirupsen/logrus v1.9.2
@@ -32,7 +33,6 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/justjack1521/mevrpc v0.0.0-20240506141248-edf429b4403e // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
