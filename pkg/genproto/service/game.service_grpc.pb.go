@@ -97,7 +97,7 @@ type MeviusGameServiceClient interface {
 	PurchaseCard(ctx context.Context, in *protogame.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(ctx context.Context, in *protogame.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(ctx context.Context, in *protogame.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protogame.CompleteRegionMapResponse, error)
-	UnlockRegion(ctx context.Context, in *protogame.SkillPanelUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error)
+	UnlockRegion(ctx context.Context, in *protogame.RegionMapUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error)
 	AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error)
@@ -408,7 +408,7 @@ func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protog
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) UnlockRegion(ctx context.Context, in *protogame.SkillPanelUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error) {
+func (c *meviusGameServiceClient) UnlockRegion(ctx context.Context, in *protogame.RegionMapUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error) {
 	out := new(protogame.RegionMapUnlockResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_UnlockRegion_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -482,7 +482,7 @@ type MeviusGameServiceServer interface {
 	PurchaseCard(context.Context, *protogame.ItemShopCardPurchaseRequest) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error)
 	CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error)
-	UnlockRegion(context.Context, *protogame.SkillPanelUnlockRequest) (*protogame.RegionMapUnlockResponse, error)
+	UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error)
 	AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error)
@@ -591,7 +591,7 @@ func (UnimplementedMeviusGameServiceServer) AbilityShopPurchase(context.Context,
 func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CompleteRegion not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) UnlockRegion(context.Context, *protogame.SkillPanelUnlockRequest) (*protogame.RegionMapUnlockResponse, error) {
+func (UnimplementedMeviusGameServiceServer) UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnlockRegion not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error) {
@@ -1210,7 +1210,7 @@ func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Cont
 }
 
 func _MeviusGameService_UnlockRegion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protogame.SkillPanelUnlockRequest)
+	in := new(protogame.RegionMapUnlockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1222,7 +1222,7 @@ func _MeviusGameService_UnlockRegion_Handler(srv interface{}, ctx context.Contex
 		FullMethod: MeviusGameService_UnlockRegion_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).UnlockRegion(ctx, req.(*protogame.SkillPanelUnlockRequest))
+		return srv.(MeviusGameServiceServer).UnlockRegion(ctx, req.(*protogame.RegionMapUnlockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
