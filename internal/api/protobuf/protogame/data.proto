@@ -395,6 +395,7 @@ message ProtoRegionMapHeader {
   int32 completed_count = 3;
   int32 current_node_index = 4;
   bool visited = 5;
+  int64 unlock_time = 6;
 }
 
 message ProtoRegionMapInstance {
@@ -416,6 +417,7 @@ message ProtoRegionMapInstance {
   repeated ProtoRegionMissionInstance mission_data = 13;
 
   repeated ProtoRegionDialogueData dialogue_data = 14;
+  int64 unlock_time = 15;
 
 }
 
