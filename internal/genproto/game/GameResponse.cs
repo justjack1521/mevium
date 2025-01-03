@@ -99,37 +99,38 @@ namespace Mobius.Proto.Game {
             "ZXNwb25zZS5BdXRvQWJpbGl0aWVzQWRkZWRFbnRyeRIcChRjcm93bl9sZXZl",
             "bF9pbmNyZWFzZRgKIAEoCBozChFXZWFwb25VbmxvY2tFbnRyeRILCgNrZXkY",
             "ASABKAkSDQoFdmFsdWUYAiABKAU6AjgBGjkKF0F1dG9BYmlsaXRpZXNBZGRl",
-            "ZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEi8QEKEFRl",
+            "ZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEinwIKEFRl",
             "bGVwb3J0UmVzcG9uc2USEgoKcmVnaW9uX21hcBgBIAEoCRIXCg9yZWdpb25f",
             "bWFwX25vZGUYAiABKAUSLQoNcmVnaW9uX2V2ZW50cxgDIAMoCzIWLmdhbWUu",
             "UHJvdG9SZWdpb25FdmVudBIvCgtub2RlX2V2ZW50cxgEIAMoCzIaLmdhbWUu",
             "UHJvdG9SZWdpb25Ob2RlRXZlbnQSOwoQY3VycmVudF9tYXBfZGF0YRgFIAEo",
-            "CzIcLmdhbWUuUHJvdG9SZWdpb25NYXBJbnN0YW5jZUgAiAEBQhMKEV9jdXJy",
-            "ZW50X21hcF9kYXRhIi0KGlByb2Nlc3NSZWdpb25FdmVudFJlc3BvbnNlEg8K",
-            "B3BlcnNpc3QYASABKAgiMQoeUHJvY2Vzc1JlZ2lvbk5vZGVFdmVudFJlc3Bv",
-            "bnNlEg8KB3BlcnNpc3QYASABKAgiTAodRXhwYW5kQWJpbGl0eUNhcmRTbG90",
-            "UmVzcG9uc2USKwoJY29zdF9pdGVtGAEgASgLMhguZ2FtZS5Qcm90b0l0ZW1W",
-            "YWx1ZVBhaXIiHgocSXRlbVNob3BJdGVtUHVyY2hhc2VSZXNwb25zZSJVChxJ",
-            "dGVtU2hvcENhcmRQdXJjaGFzZVJlc3BvbnNlEjUKDWFiaWxpdHlfY2FyZHMY",
-            "ASADKAsyHi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZSKJAQobQWJp",
-            "bGl0eVNob3BQdXJjaGFzZVJlc3BvbnNlEj0KFWFiaWxpdHlfY2FyZF9pbnN0",
-            "YW5jZRgBIAEoCzIeLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlEisK",
-            "CWNvc3RfaXRlbRgCIAEoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIvYB",
-            "ChlDb21wbGV0ZVJlZ2lvbk1hcFJlc3BvbnNlEhUKDXJlZ2lvbl9tYXBfaWQY",
-            "ASABKAkSLQoNcmVnaW9uX2V2ZW50cxgDIAMoCzIWLmdhbWUuUHJvdG9SZWdp",
-            "b25FdmVudBJXChVhdWdtZW50X2xldmVsX3Jld2FyZHMYBCADKAsyOC5nYW1l",
-            "LkNvbXBsZXRlUmVnaW9uTWFwUmVzcG9uc2UuQXVnbWVudExldmVsUmV3YXJk",
-            "c0VudHJ5GjoKGEF1Z21lbnRMZXZlbFJld2FyZHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAU6AjgBIs0BChlBYmlsaXR5Q2FyZFN1bW1vblJl",
-            "c3BvbnNlEkQKFGFiaWxpdHlfY2FyZF9yZXN1bHRzGAEgAygLMiYuZ2FtZS5Q",
-            "cm90b0FiaWxpdHlDYXJkU3VtbW9uRHJhd1Jlc3VsdBI8ChBqb2JfY2FyZF9y",
-            "ZXN1bHRzGAIgAygLMiIuZ2FtZS5Qcm90b0pvYkNhcmRTdW1tb25EcmF3UmVz",
-            "dWx0EiwKCmNvc3RfaXRlbXMYAyADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVl",
-            "UGFpciIZChdFeGVjdXRlRGlhbG9ndWVSZXNwb25zZSJAChpDbGFpbUl0ZW1E",
-            "aXN0aWxsZXJSZXNwb25zZRIQCghyZWNlaXZlZBgBIAEoBRIQCghkZWNfdGlt",
-            "ZRgCIAEoA0JLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtn",
-            "L2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90",
-            "bzM="));
+            "CzIcLmdhbWUuUHJvdG9SZWdpb25NYXBJbnN0YW5jZUgAiAEBEiwKCmNvc3Rf",
+            "aXRlbXMYBiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpckITChFfY3Vy",
+            "cmVudF9tYXBfZGF0YSItChpQcm9jZXNzUmVnaW9uRXZlbnRSZXNwb25zZRIP",
+            "CgdwZXJzaXN0GAEgASgIIjEKHlByb2Nlc3NSZWdpb25Ob2RlRXZlbnRSZXNw",
+            "b25zZRIPCgdwZXJzaXN0GAEgASgIIkwKHUV4cGFuZEFiaWxpdHlDYXJkU2xv",
+            "dFJlc3BvbnNlEisKCWNvc3RfaXRlbRgBIAEoCzIYLmdhbWUuUHJvdG9JdGVt",
+            "VmFsdWVQYWlyIh4KHEl0ZW1TaG9wSXRlbVB1cmNoYXNlUmVzcG9uc2UiVQoc",
+            "SXRlbVNob3BDYXJkUHVyY2hhc2VSZXNwb25zZRI1Cg1hYmlsaXR5X2NhcmRz",
+            "GAEgAygLMh4uZ2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2UiiQEKG0Fi",
+            "aWxpdHlTaG9wUHVyY2hhc2VSZXNwb25zZRI9ChVhYmlsaXR5X2NhcmRfaW5z",
+            "dGFuY2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRIr",
+            "Cgljb3N0X2l0ZW0YAiABKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciL2",
+            "AQoZQ29tcGxldGVSZWdpb25NYXBSZXNwb25zZRIVCg1yZWdpb25fbWFwX2lk",
+            "GAEgASgJEi0KDXJlZ2lvbl9ldmVudHMYAyADKAsyFi5nYW1lLlByb3RvUmVn",
+            "aW9uRXZlbnQSVwoVYXVnbWVudF9sZXZlbF9yZXdhcmRzGAQgAygLMjguZ2Ft",
+            "ZS5Db21wbGV0ZVJlZ2lvbk1hcFJlc3BvbnNlLkF1Z21lbnRMZXZlbFJld2Fy",
+            "ZHNFbnRyeRo6ChhBdWdtZW50TGV2ZWxSZXdhcmRzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgFOgI4ASLNAQoZQWJpbGl0eUNhcmRTdW1tb25S",
+            "ZXNwb25zZRJEChRhYmlsaXR5X2NhcmRfcmVzdWx0cxgBIAMoCzImLmdhbWUu",
+            "UHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRyYXdSZXN1bHQSPAoQam9iX2NhcmRf",
+            "cmVzdWx0cxgCIAMoCzIiLmdhbWUuUHJvdG9Kb2JDYXJkU3VtbW9uRHJhd1Jl",
+            "c3VsdBIsCgpjb3N0X2l0ZW1zGAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1",
+            "ZVBhaXIiGQoXRXhlY3V0ZURpYWxvZ3VlUmVzcG9uc2UiQAoaQ2xhaW1JdGVt",
+            "RGlzdGlsbGVyUmVzcG9uc2USEAoIcmVjZWl2ZWQYASABKAUSEAoIZGVjX3Rp",
+            "bWUYAiABKANCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3Br",
+            "Zy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -159,7 +160,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.UpdateProfileResponse), global::Mobius.Proto.Game.UpdateProfileResponse.Parser, new[]{ "CompanionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaRestoreResponse), global::Mobius.Proto.Game.StaminaRestoreResponse.Parser, new[]{ "ItemId", "ItemAmount", "RestoreAmount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.SkillPanelUnlockResponse), global::Mobius.Proto.Game.SkillPanelUnlockResponse.Parser, new[]{ "ItemsRemoved", "HpStatIncrease", "AttackStatIncrease", "BreakPowerStatIncrease", "MagicStatIncrease", "SubJobUnlockIncrease", "UltimateBoostIncrease", "WeaponUnlock", "AutoAbilitiesAdded", "CrownLevelIncrease" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.TeleportResponse), global::Mobius.Proto.Game.TeleportResponse.Parser, new[]{ "RegionMap", "RegionMapNode", "RegionEvents", "NodeEvents", "CurrentMapData" }, new[]{ "CurrentMapData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.TeleportResponse), global::Mobius.Proto.Game.TeleportResponse.Parser, new[]{ "RegionMap", "RegionMapNode", "RegionEvents", "NodeEvents", "CurrentMapData", "CostItems" }, new[]{ "CurrentMapData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProcessRegionEventResponse), global::Mobius.Proto.Game.ProcessRegionEventResponse.Parser, new[]{ "Persist" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProcessRegionNodeEventResponse), global::Mobius.Proto.Game.ProcessRegionNodeEventResponse.Parser, new[]{ "Persist" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ExpandAbilityCardSlotResponse), global::Mobius.Proto.Game.ExpandAbilityCardSlotResponse.Parser, new[]{ "CostItem" }, null, null, null, null),
@@ -6367,6 +6368,7 @@ namespace Mobius.Proto.Game {
       regionEvents_ = other.regionEvents_.Clone();
       nodeEvents_ = other.nodeEvents_.Clone();
       currentMapData_ = other.currentMapData_ != null ? other.currentMapData_.Clone() : null;
+      costItems_ = other.costItems_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6428,6 +6430,16 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "cost_items" field.</summary>
+    public const int CostItemsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoItemValuePair> _repeated_costItems_codec
+        = pb::FieldCodec.ForMessage(50, global::Mobius.Proto.Game.ProtoItemValuePair.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> costItems_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> CostItems {
+      get { return costItems_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TeleportResponse);
@@ -6446,6 +6458,7 @@ namespace Mobius.Proto.Game {
       if(!regionEvents_.Equals(other.regionEvents_)) return false;
       if(!nodeEvents_.Equals(other.nodeEvents_)) return false;
       if (!object.Equals(CurrentMapData, other.CurrentMapData)) return false;
+      if(!costItems_.Equals(other.costItems_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6457,6 +6470,7 @@ namespace Mobius.Proto.Game {
       hash ^= regionEvents_.GetHashCode();
       hash ^= nodeEvents_.GetHashCode();
       if (currentMapData_ != null) hash ^= CurrentMapData.GetHashCode();
+      hash ^= costItems_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6487,6 +6501,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(42);
         output.WriteMessage(CurrentMapData);
       }
+      costItems_.WriteTo(output, _repeated_costItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6510,6 +6525,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(42);
         output.WriteMessage(CurrentMapData);
       }
+      costItems_.WriteTo(ref output, _repeated_costItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6530,6 +6546,7 @@ namespace Mobius.Proto.Game {
       if (currentMapData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentMapData);
       }
+      size += costItems_.CalculateSize(_repeated_costItems_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6555,6 +6572,7 @@ namespace Mobius.Proto.Game {
         }
         CurrentMapData.MergeFrom(other.CurrentMapData);
       }
+      costItems_.Add(other.costItems_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6592,6 +6610,10 @@ namespace Mobius.Proto.Game {
             input.ReadMessage(CurrentMapData);
             break;
           }
+          case 50: {
+            costItems_.AddEntriesFrom(input, _repeated_costItems_codec);
+            break;
+          }
         }
       }
     #endif
@@ -6627,6 +6649,10 @@ namespace Mobius.Proto.Game {
               CurrentMapData = new global::Mobius.Proto.Game.ProtoRegionMapInstance();
             }
             input.ReadMessage(CurrentMapData);
+            break;
+          }
+          case 50: {
+            costItems_.AddEntriesFrom(ref input, _repeated_costItems_codec);
             break;
           }
         }

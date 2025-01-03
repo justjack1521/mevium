@@ -171,6 +171,7 @@ message TeleportResponse {
   repeated game.ProtoRegionEvent region_events = 3;
   repeated game.ProtoRegionNodeEvent node_events = 4;
   optional game.ProtoRegionMapInstance current_map_data = 5;
+  repeated game.ProtoItemValuePair cost_items = 6;
 }
 
 message ProcessRegionEventResponse {
