@@ -131,6 +131,8 @@ message ProtoBattleStartData {
   string rental_player_id = 17;
   identity.ProtoAbilityCardIdentity rental_card = 18;
 
+  bool revive_used = 19;
+
   int64 created_at = 20;
 }
 
