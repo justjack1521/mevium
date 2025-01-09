@@ -9,6 +9,7 @@ message BattleCompleteMessage {
   uint64 score = 4;
   string region_id = 5;
   int32 node_index = 6;
+  bool revive = 7;
 }
 
 message PlayerProfileCreatedMessage {
