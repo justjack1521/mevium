@@ -434,6 +434,7 @@ message ProtoRegionNodeData {
   bool completed = 4;
   uint64 completed_count = 5;
   bool opened = 6;
+  int32 wave_index = 7;
 }
 
 message ProtoRegionLockData {
