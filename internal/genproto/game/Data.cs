@@ -80,7 +80,7 @@ namespace Mobius.Proto.Game {
             "Z2FtZS5Qcm90b0JhdHRsZVN0YXJ0RGF0YUgAiAEBEjIKB3Jlc3VsdHMYFCAB",
             "KAsyHC5nYW1lLlByb3RvTGFzdEJhdHRsZVJlc3VsdHNIAYgBARo2ChRFbmVt",
             "aWVzRGVmZWF0ZWRFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAQ6",
-            "AjgBQg0KC19zdGFydF9kYXRhQgoKCF9yZXN1bHRzIqIFChRQcm90b0JhdHRs",
+            "AjgBQg0KC19zdGFydF9kYXRhQgoKCF9yZXN1bHRzItUFChRQcm90b0JhdHRs",
             "ZVN0YXJ0RGF0YRIVCg1yZWdpb25fbWFwX2lkGAEgASgJEhYKDnJlZ2lvbl9u",
             "b2RlX2lkGAIgASgJEhkKEXJlZ2lvbl9ub2RlX2luZGV4GAMgASgFEhcKD25v",
             "ZGVfd2F2ZV9pbmRleBgVIAEoBRISCgpkZWNrX2luZGV4GAQgASgFEhEKCWhh",
@@ -95,210 +95,213 @@ namespace Mobius.Proto.Game {
             "ZXNzX2RhdGEYECADKAsyGy5nYW1lLlByb3RvQ2FyZFByb2dyZXNzRGF0YRIY",
             "ChByZW50YWxfcGxheWVyX2lkGBEgASgJEjcKC3JlbnRhbF9jYXJkGBIgASgL",
             "MiIuaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZElkZW50aXR5EhMKC3Jldml2",
-            "ZV91c2VkGBMgASgIEhIKCmNyZWF0ZWRfYXQYFCABKAMikQEKF1Byb3RvQmF0",
-            "dGxlUHJvZ3Jlc3NEYXRhEhQKDHBsYXllcl9sZXZlbBgBIAEoBRIRCgl0b3Rh",
-            "bF9leHAYAiABKAQSEQoJYWNjdW1fZXhwGAMgASgEEhEKCWV4cF9ib251cxgE",
-            "IAEoAhISCgpkZWNrX2NvdW50GAUgASgFEhMKC21heF9zdGFtaW5hGAYgASgF",
-            "ItkBChVQcm90b0NhcmRQcm9ncmVzc0RhdGESEwoLaW5zdGFuY2VfaWQYASAB",
-            "KAkSEgoKc2xvdF9pbmRleBgCIAEoBRINCgVsZXZlbBgDIAEoBRIRCgl0b3Rh",
-            "bF9leHAYBCABKAQSEQoJYWNjdW1fZXhwGAUgASgEEhoKEmV4dHJhX3NraWxs",
-            "X3VubG9jaxgGIAEoCBImCh5leHRyYV9za2lsbF91bmxvY2tfcmVxdWlyZW1l",
-            "bnQYByABKAUSHgoWZXh0cmFfc2tpbGxfcHJvZ3Jlc3NlZBgIIAEoCCJwCgxQ",
-            "cm90b01pc3Npb24SFAoMcmVmZXJlbmNlX2lkGAEgASgJEhoKEnByaW1hcnlf",
-            "ZGVmaW5pdGlvbhgCIAEoBRIcChRzZWNvbmRhcnlfZGVmaW5pdGlvbhgDIAEo",
-            "BRIQCghyZXF1aXJlZBgEIAEoBSJxChRQcm90b01pc3Npb25JbnN0YW5jZRIj",
-            "CgdtaXNzaW9uGAEgASgLMhIuZ2FtZS5Qcm90b01pc3Npb24SEAoIcHJvZ3Jl",
-            "c3MYAiABKAUSEQoJY29uZmlybWVkGAMgASgIEg8KB2NsYWltZWQYBCABKAgi",
-            "mgEKGVByb3RvRGFpbHlNaXNzaW9uSW5zdGFuY2USCgoCaWQYASABKAkSLAoI",
-            "aW5zdGFuY2UYAiABKAsyGi5nYW1lLlByb3RvTWlzc2lvbkluc3RhbmNlEhMK",
-            "C3JlY2VpdmVkX2F0GAMgASgDEi4KDGl0ZW1fcmV3YXJkcxgEIAMoCzIYLmdh",
-            "bWUuUHJvdG9JdGVtVmFsdWVQYWlyImEKDkJhdHRsZUl0ZW1Ecm9wEiUKA2tl",
-            "eRgBIAEoCzIYLmdhbWUuQmF0dGxlRHJvcFRhYmxlS2V5EigKBGRyb3AYAiAB",
-            "KAsyGi5nYW1lLkJhdHRsZUl0ZW1Ecm9wUmVzdWx0ImEKDkJhdHRsZUNhcmRE",
-            "cm9wEiUKA2tleRgBIAEoCzIYLmdhbWUuQmF0dGxlRHJvcFRhYmxlS2V5EigK",
-            "BGRyb3AYAiABKAsyGi5nYW1lLkJhdHRsZUNhcmREcm9wUmVzdWx0IjsKEkJh",
-            "dHRsZURyb3BUYWJsZUtleRIQCghmaWVuZF9pZBgBIAEoCRITCgtmaWVuZF9p",
-            "bmRleBgCIAEoBSI5ChRCYXR0bGVJdGVtRHJvcFJlc3VsdBIPCgdpdGVtX2lk",
-            "GAEgASgJEhAKCHF1YW50aXR5GAIgASgFIjkKFEJhdHRsZUNhcmREcm9wUmVz",
-            "dWx0Eg8KB2NhcmRfaWQYASABKAkSEAoIbmV3X2NhcmQYAiABKAgiTwoWUHJv",
-            "dG9DYXJkRmlsdGVyU29ydFNldBIMCgR2aWV3GAEgASgFEicKBHNldHMYAiAD",
-            "KAsyGS5nYW1lLlByb3RvQ2FyZEZpbHRlclNvcnQimwEKE1Byb3RvQ2FyZEZp",
-            "bHRlclNvcnQSDQoFaW5kZXgYASABKAUSEgoKY2FyZF90eXBlcxgCIAMoBRIX",
-            "Cg9jYXJkX2NhdGVnb3JpZXMYAyADKAUSFwoPc3BlY2lhbF9maWx0ZXJzGAQg",
-            "AygFEhYKDnNvcnRfc2VsZWN0b3JzGAUgAygFEhcKD3NvcnRfZGVzY2VuZGlu",
-            "ZxgGIAEoCCJtChpQcm90b0xvZ2luQ2FtcGFpZ25JbnN0YW5jZRIKCgJpZBgB",
-            "IAEoCRIPCgdjbGFpbWVkGAIgAygIEhgKEGxhc3RfY2xhaW1faW5kZXgYAyAB",
-            "KAUSGAoQbGFzdF9jbGFpbV9hZGRlZBgEIAEoAyJxChdQcm90b0ZhaXJ5Q29t",
-            "cGFuaW9uRGF0YRIfChdjdXJyZW50X2NvbXBhbmlvbl9pbmRleBgBIAEoBRI1",
-            "CglpbnZlbnRvcnkYAiABKAsyIi5nYW1lLlByb3RvRmFpcnlDb21wYW5pb25J",
-            "bnZlbnRvcnkiWQocUHJvdG9GYWlyeUNvbXBhbmlvbkludmVudG9yeRI5Cg5j",
-            "b21wYW5pb25fbGlzdBgCIAMoCzIhLmdhbWUuUHJvdG9GYWlyeUNvbXBhbmlv",
-            "bkluc3RhbmNlIlwKG1Byb3RvRmFpcnlDb21wYW5pb25JbnN0YW5jZRIOCgZz",
-            "eXNfaWQYASABKAkSGQoRYmFzZV9jb21wYW5pb25faWQYAiABKAkSEgoKY3Jl",
-            "YXRlZF9hdBgDIAEoAyLvAQoNUHJvdG9JdGVtRGF0YRIrCglpbnZlbnRvcnkY",
-            "ASABKAsyGC5nYW1lLlByb3RvSXRlbUludmVudG9yeRI2CgpsaW1pdF9kYXRh",
-            "GAIgAygLMiIuZ2FtZS5Qcm90b0l0ZW1EYXRhLkxpbWl0RGF0YUVudHJ5EiwK",
-            "CmRpc3RpbGxlcnMYAyADKAsyGC5nYW1lLlByb3RvSXRlbURpc3RpbGxlchpL",
-            "Cg5MaW1pdERhdGFFbnRyeRILCgNrZXkYASABKAkSKAoFdmFsdWUYAiABKAsy",
-            "GS5nYW1lLlByb3RvSXRlbURyb3BSZWNvcmQ6AjgBIjcKElByb3RvSXRlbURp",
-            "c3RpbGxlchIPCgdpdGVtX2lkGAEgASgJEhAKCGRlY190aW1lGAIgASgDIjEK",
-            "E1Byb3RvSXRlbURyb3BSZWNvcmQSCwoDa2V5GAEgASgFEg0KBWNvdW50GAIg",
-            "ASgFIkAKElByb3RvSXRlbUludmVudG9yeRIqCglpdGVtX2xpc3QYASADKAsy",
-            "Fy5nYW1lLlByb3RvSXRlbUluc3RhbmNlIloKEVByb3RvSXRlbUluc3RhbmNl",
-            "Eg4KBnN5c19pZBgBIAEoCRIQCghxdWFudGl0eRgCIAEoBRIPCgdpdGVtX2lk",
-            "GAMgASgJEhIKCmNyZWF0ZWRfYXQYBCABKAMiNAoSUHJvdG9JdGVtVmFsdWVQ",
-            "YWlyEg8KB2l0ZW1faWQYASABKAkSDQoFdmFsdWUYAiABKAUi9gEKEFByb3Rv",
-            "Sm9iQ2FyZERhdGESJQoEam9icxgBIAEoCzIXLmdhbWUuUHJvdG9Kb2JJbnZl",
-            "bnRvcnkSKwoHd2VhcG9ucxgCIAEoCzIaLmdhbWUuUHJvdG9XZWFwb25JbnZl",
-            "bnRvcnkSPQoMc2tpbGxfcGFuZWxzGAMgAygLMicuZ2FtZS5Qcm90b0pvYkNh",
-            "cmREYXRhLlNraWxsUGFuZWxzRW50cnkaTwoQU2tpbGxQYW5lbHNFbnRyeRIL",
-            "CgNrZXkYASABKAkSKgoFdmFsdWUYAiABKAsyGy5nYW1lLlByb3RvU2tpbGxQ",
-            "YW5lbEdyb3VwczoCOAEiQQoRUHJvdG9Kb2JJbnZlbnRvcnkSLAoIam9iX2xp",
-            "c3QYASADKAsyGi5nYW1lLlByb3RvSm9iQ2FyZEluc3RhbmNlIqoEChRQcm90",
-            "b0pvYkNhcmRJbnN0YW5jZRIOCgZzeXNfaWQYASABKAkSFgoOc3ViX2pvYl91",
-            "bmxvY2sYAiABKAUSGAoQb3Zlcl9ib29zdF9sZXZlbBgDIAEoBRI4ChNza2ls",
-            "bF9wYW5lbF91bmxvY2tzGAQgASgLMhsuZ2FtZS5Qcm90b1NraWxsUGFuZWxH",
-            "cm91cHMSEwoLYmFzZV9qb2JfaWQYBSABKAkSEgoKY3JlYXRlZF9hdBgGIAEo",
-            "AxIVCg13ZWFwb25fdW5sb2NrGAcgASgFEhMKC2hwX3N0YXRfbW9kGAggASgF",
-            "EhcKD2F0dGFja19zdGF0X21vZBgJIAEoBRIWCg5icmVha19zdGF0X21vZBgK",
-            "IAEoBRIWCg5tYWdpY19zdGF0X21vZBgLIAEoBRIWCg5zcGVlZF9zdGF0X21v",
-            "ZBgMIAEoBRIYChBkZWZlbnNlX3N0YXRfbW9kGA4gASgFEhwKFGNyaXRfY2hh",
-            "bmNlX3N0YXRfbW9kGA8gASgFEhYKDnVsdGltYXRlX2Jvb3N0GBIgASgFEkUK",
-            "DmF1dG9fYWJpbGl0aWVzGBMgAygLMi0uZ2FtZS5Qcm90b0pvYkNhcmRJbnN0",
-            "YW5jZS5BdXRvQWJpbGl0aWVzRW50cnkSEwoLY3Jvd25fbGV2ZWwYFCABKAUa",
-            "NAoSQXV0b0FiaWxpdGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoBToCOAEi1QMKFlByb3RvTGFzdEJhdHRsZVJlc3VsdHMSFQoNcmVnaW9u",
-            "X21hcF9pZBgBIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgCIAEoBRINCgVz",
-            "Y29yZRgDIAEoBBIRCgl0b3RhbF9leHAYBCABKAUSHAoUc2VlZF9hcmVhX211",
-            "bHRpcGxpZXIYBSABKAISHgoWc2VlZF9iYXR0bGVfbXVsdGlwbGllchgGIAEo",
-            "AhI0Cg1wcm9ncmVzc19kYXRhGAcgASgLMh0uZ2FtZS5Qcm90b0JhdHRsZVBy",
-            "b2dyZXNzRGF0YRI3ChJjYXJkX3Byb2dyZXNzX2RhdGEYCCADKAsyGy5nYW1l",
-            "LlByb3RvQ2FyZFByb2dyZXNzRGF0YRIyCgxpdGVtX3Jld2FyZHMYCSADKAsy",
-            "HC5nYW1lLlRhZ2dlZEJhdHRsZUl0ZW1SZXdhcmQSMgoMY2FyZF9yZXdhcmRz",
-            "GAogAygLMhwuZ2FtZS5UYWdnZWRCYXR0bGVDYXJkUmV3YXJkEjIKDnBlbmRp",
-            "bmdfZXZlbnRzGAsgAygLMhouZ2FtZS5Qcm90b1JlZ2lvbk5vZGVFdmVudBIe",
-            "ChZkYWlseV9taXNzaW9uX3Byb2dyZXNzGAwgASgFIkgKFlRhZ2dlZEJhdHRs",
-            "ZUl0ZW1SZXdhcmQSDwoHaXRlbV9pZBgBIAEoCRIQCghxdWFudGl0eRgCIAEo",
-            "BRILCgN0YWcYAyABKAUiZQoWVGFnZ2VkQmF0dGxlQ2FyZFJld2FyZBITCgtp",
-            "bnN0YW5jZV9pZBgBIAEoCRIXCg9hYmlsaXR5X2NhcmRfaWQYAiABKAkSEAoI",
-            "bmV3X2NhcmQYAyABKAgSCwoDdGFnGAQgASgFIkgKDFByb3RvTWFpbEJveBIl",
-            "CgVpdGVtcxgBIAMoCzIWLmdhbWUuUHJvdG9NYWlsQm94SXRlbRIRCgltYXhf",
-            "aXRlbXMYAiABKAUimAEKEFByb3RvTWFpbEJveEl0ZW0SCgoCaWQYASABKAkS",
-            "FAoMcmVmZXJlbmNlX2lkGAIgASgJEiUKBnNvdXJjZRgDIAEoDjIVLmdhbWUu",
-            "UmVmZXJlbmNlU291cmNlEhAKCHF1YW50aXR5GAQgASgFEhMKC3JlY2VpdmVk",
-            "X2F0GAUgASgDEhQKDGNsYWltX3NvdXJjZRgGIAEoCSJdChlQcm90b1BsYXll",
-            "ckRlY2tDb2xsZWN0aW9uEhoKEmN1cnJlbnRfZGVja19pbmRleBgBIAEoBRIk",
-            "CgVkZWNrcxgCIAMoCzIVLmdhbWUuUHJvdG9QbGF5ZXJEZWNrIrcCCg9Qcm90",
-            "b1BsYXllckRlY2sSFgoOam9iX2NhcmRfaW5kZXgYASABKAUSGgoSc3ViX2pv",
-            "Yl9jYXJkX2luZGV4GAIgASgFEjUKEmFiaWxpdHlfY2FyZF9zbG90cxgDIAMo",
-            "CzIZLmdhbWUuUHJvdG9QbGF5ZXJEZWNrU2xvdBI5ChZzdWJfYWJpbGl0eV9j",
-            "YXJkX3Nsb3RzGAQgAygLMhkuZ2FtZS5Qcm90b1BsYXllckRlY2tTbG90EhQK",
-            "DHdlYXBvbl9pbmRleBgFIAEoBRIYChBzdWJfd2VhcG9uX2luZGV4GAYgASgF",
-            "EhIKCmRlY2tfaW5kZXgYByABKAUSGgoSam9iX2NhcmRfc3ViX2luZGV4GAgg",
-            "ASgFEh4KFnN1Yl9qb2JfY2FyZF9zdWJfaW5kZXgYCSABKAUiQgoTUHJvdG9Q",
-            "bGF5ZXJEZWNrU2xvdBIXCg9hYmlsaXR5X2NhcmRfaWQYASABKAkSEgoKc2xv",
-            "dF9pbmRleBgCIAEoBSKjAQoSUHJvdG9QbGF5ZXJTdGFtaW5hEhcKD2N1cnJl",
-            "bnRfc3RhbWluYRgBIAEoDRITCgttYXhfc3RhbWluYRgCIAEoDRITCgtzdGFt",
-            "aW5hX2RlYxgDIAEoBBIaChJjdXJyZW50X21wX3N0YW1pbmEYBCABKA0SFgoO",
-            "bWF4X21wX3N0YW1pbmEYBSABKA0SFgoObXBfc3RhbWluYV9kZWMYBiABKAQi",
-            "XwoSUHJvdG9SZWdpb25NYXBEYXRhEhYKDmN1cnJlbnRfbWFwX2lkGAEgASgJ",
-            "EjEKC3JlZ2lvbl9tYXBzGAIgAygLMhwuZ2FtZS5Qcm90b1JlZ2lvbk1hcElu",
-            "c3RhbmNlIngKFVByb3RvUmVnaW9uSGVhZGVyRGF0YRIWCg5jdXJyZW50X21h",
-            "cF9pZBgBIAEoCRIaChJjdXJyZW50X25vZGVfaW5kZXgYAiABKAUSKwoHaGVh",
-            "ZGVycxgDIAMoCzIaLmdhbWUuUHJvdG9SZWdpb25NYXBIZWFkZXIikgEKFFBy",
-            "b3RvUmVnaW9uTWFwSGVhZGVyEg4KBm1hcF9pZBgBIAEoCRIPCgdjbGVhcmVk",
-            "GAIgASgIEhcKD2NvbXBsZXRlZF9jb3VudBgDIAEoBRIaChJjdXJyZW50X25v",
-            "ZGVfaW5kZXgYBCABKAUSDwoHdmlzaXRlZBgFIAEoCBITCgt1bmxvY2tfdGlt",
-            "ZRgGIAEoAyK/BQoWUHJvdG9SZWdpb25NYXBJbnN0YW5jZRIOCgZtYXBfaWQY",
-            "ASABKAkSLAoJbm9kZV9kYXRhGAIgAygLMhkuZ2FtZS5Qcm90b1JlZ2lvbk5v",
-            "ZGVEYXRhEhoKEmN1cnJlbnRfbm9kZV9pbmRleBgDIAEoBRIsCglsb2NrX2Rh",
-            "dGEYBCADKAsyGS5nYW1lLlByb3RvUmVnaW9uTG9ja0RhdGESGAoQZW5lbWll",
-            "c19kZWZlYXRlZBgFIAEoBBISCgpoaWdoX3Njb3JlGAYgASgEEkoKEGpvYl90",
-            "eXBlX2RlZmVhdHMYByADKAsyMC5nYW1lLlByb3RvUmVnaW9uTWFwSW5zdGFu",
-            "Y2UuSm9iVHlwZURlZmVhdHNFbnRyeRIyCg5wZW5kaW5nX2V2ZW50cxgIIAMo",
-            "CzIaLmdhbWUuUHJvdG9SZWdpb25Ob2RlRXZlbnQSNAoQcGVyc2lzdGVkX2V2",
-            "ZW50cxgJIAMoCzIaLmdhbWUuUHJvdG9SZWdpb25Ob2RlRXZlbnQSDwoHdmlz",
-            "aXRlZBgKIAEoCBI1ChVwZW5kaW5nX3JlZ2lvbl9ldmVudHMYCyADKAsyFi5n",
-            "YW1lLlByb3RvUmVnaW9uRXZlbnQSNwoXcGVyc2lzdGVkX3JlZ2lvbl9ldmVu",
-            "dHMYDCADKAsyFi5nYW1lLlByb3RvUmVnaW9uRXZlbnQSNgoMbWlzc2lvbl9k",
-            "YXRhGA0gAygLMiAuZ2FtZS5Qcm90b1JlZ2lvbk1pc3Npb25JbnN0YW5jZRI0",
-            "Cg1kaWFsb2d1ZV9kYXRhGA4gAygLMh0uZ2FtZS5Qcm90b1JlZ2lvbkRpYWxv",
-            "Z3VlRGF0YRITCgt1bmxvY2tfdGltZRgPIAEoAxo1ChNKb2JUeXBlRGVmZWF0",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBDoCOAEiKQoXUHJv",
-            "dG9SZWdpb25EaWFsb2d1ZURhdGESDgoGc3lzX2lkGAEgASgJIpcBChNQcm90",
-            "b1JlZ2lvbk5vZGVEYXRhEg8KB25vZGVfaWQYASABKAkSDwoHdmlzaWJsZRgC",
-            "IAEoCBIOCgZsb2NrZWQYAyABKAgSEQoJY29tcGxldGVkGAQgASgIEhcKD2Nv",
-            "bXBsZXRlZF9jb3VudBgFIAEoBBIOCgZvcGVuZWQYBiABKAgSEgoKd2F2ZV9p",
-            "bmRleBgHIAEoBSJoChNQcm90b1JlZ2lvbkxvY2tEYXRhEg8KB2xvY2tfaWQY",
-            "ASABKAkSFgoOcGFyZW50X25vZGVfaWQYAiABKAkSFgoOdGFyZ2V0X25vZGVf",
-            "aWQYAyABKAkSEAoIdW5sb2NrZWQYBCABKAgihgEKEFByb3RvUmVnaW9uRXZl",
-            "bnQSDgoGc3lzX2lkGAEgASgJEhUKDXJlZ2lvbl9tYXBfaWQYAiABKAkSGAoQ",
-            "ZGVmaW5pdGlvbl92YWx1ZRgDIAEoBRIOCgZ0YXJnZXQYBCABKAUSDQoFb3Jk",
-            "ZXIYBSABKAUSEgoKcmVwZWF0YWJsZRgGIAEoCCKeAQoUUHJvdG9SZWdpb25O",
-            "b2RlRXZlbnQSDgoGc3lzX2lkGAEgASgJEhUKDXJlZ2lvbl9tYXBfaWQYAiAB",
-            "KAkSEgoKbm9kZV9pbmRleBgDIAEoBRIYChBkZWZpbml0aW9uX3ZhbHVlGAQg",
-            "ASgFEg4KBnRhcmdldBgFIAEoBRINCgVvcmRlchgGIAEoBRISCgpyZXBlYXRh",
-            "YmxlGAcgASgIImsKFFByb3RvUmVnaW9uRXZlbnREYXRhEhQKDHNvdXJjZV9p",
-            "bmRleBgBIAEoBRIUCgx0YXJnZXRfaW5kZXgYAiABKAUSGAoQZGVmaW5pdGlv",
-            "bl92YWx1ZRgDIAEoBRINCgVvcmRlchgEIAEoBSKJAQoaUHJvdG9SZWdpb25N",
-            "aXNzaW9uSW5zdGFuY2USEgoKbWlzc2lvbl9pZBgBIAEoCRIsCghpbnN0YW5j",
-            "ZRgCIAEoCzIaLmdhbWUuUHJvdG9NaXNzaW9uSW5zdGFuY2USFQoNYXBwbHlf",
-            "dG9fbm9kZRgDIAEoCBISCgpub2RlX2luZGV4GAQgASgFImAKFVByb3RvU2tp",
-            "bGxQYW5lbEdyb3VwcxIuCgtwYW5lbF9wYWdlcxgBIAMoCzIZLmdhbWUuUHJv",
-            "dG9Ta2lsbFBhbmVsUGFnZRIXCg9jb21wbGV0ZWRfY291bnQYAiABKAUihwEK",
-            "E1Byb3RvU2tpbGxQYW5lbFBhZ2USDQoFaW5kZXgYASABKAUSDwoHdmlzaWJs",
-            "ZRgCIAEoCBIQCgh1bmxvY2tlZBgDIAEoCBIRCgljb21wbGV0ZWQYBCABKAgS",
-            "KwoMc2tpbGxfcGFuZWxzGAUgAygLMhUuZ2FtZS5Qcm90b1NraWxsUGFuZWwi",
-            "VwoPUHJvdG9Ta2lsbFBhbmVsEg0KBWluZGV4GAEgASgFEhAKCHVubG9ja2Vk",
-            "GAIgASgIEhEKCWNvbXBsZXRlZBgDIAEoCBIQCghjYXBfaXRlbRgEIAEoCCJG",
-            "ChRQcm90b1dlYXBvbkludmVudG9yeRIuCgt3ZWFwb25fbGlzdBgBIAMoCzIZ",
-            "LmdhbWUuUHJvdG9XZWFwb25JbnN0YW5jZSKeAwoTUHJvdG9XZWFwb25JbnN0",
-            "YW5jZRIWCg5iYXNlX3dlYXBvbl9pZBgBIAEoCRIZChFzdWJfd2VhcG9uX3Vu",
-            "bG9jaxgCIAEoBRITCgtocF9zdGF0X21vZBgDIAEoBRIXCg9hdHRhY2tfc3Rh",
-            "dF9tb2QYBCABKAUSFgoOYnJlYWtfc3RhdF9tb2QYBSABKAUSFgoObWFnaWNf",
-            "c3RhdF9tb2QYBiABKAUSFgoOc3BlZWRfc3RhdF9tb2QYByABKAUSGAoQZGVm",
-            "ZW5zZV9zdGF0X21vZBgIIAEoBRIcChRjcml0X2NoYW5jZV9zdGF0X21vZBgJ",
-            "IAEoBRIWCg51bHRpbWF0ZV9ib29zdBgKIAEoBRJECg5hdXRvX2FiaWxpdGll",
-            "cxgLIAMoCzIsLmdhbWUuUHJvdG9XZWFwb25JbnN0YW5jZS5BdXRvQWJpbGl0",
-            "aWVzRW50cnkSEgoKY3JlYXRlZF9hdBgMIAEoAxo0ChJBdXRvQWJpbGl0aWVz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASKKAwoVUHJv",
-            "dG9CYXR0bGVTdGF0aXN0aWNzEhMKC3RvdGFsX3Njb3JlGAEgASgFEhQKDGJh",
-            "dHRsZV90dXJucxgCIAEoBRIWCg5hYmlsaXRpZXNfdXNlZBgEIAEoBRIWCg50",
-            "b3RhbF9ocF9yZWdlbhgFIAEoBRIaChJ0b3RhbF9kYW1hZ2VfdGFrZW4YBiAB",
-            "KAUSFgoOZW5lbWllc19icm9rZW4YCCABKAUSNgoRZWxlbWVudF9vcmJfZHJh",
-            "d3MYCyADKAsyGy5nYW1lLkVsZW1lbnRVc2FnZVN0YXRpc3RpYxI2ChFlbGVt",
-            "ZW50X29yYl91c2FnZRgMIAMoCzIbLmdhbWUuRWxlbWVudFVzYWdlU3RhdGlz",
-            "dGljEjUKDWVuZW15X2RlZmVhdHMYDiADKAsyHi5nYW1lLlByb3RvRW5lbXlE",
-            "ZWF0aFN0YXRpc3RpYxI7ChJhYmlsaXR5X2NhcmRfdXNhZ2UYDyADKAsyHy5n",
-            "YW1lLkFiaWxpdHlDYXJkVXNhZ2VTdGF0aXN0aWMiPwoZQWJpbGl0eUNhcmRV",
-            "c2FnZVN0YXRpc3RpYxITCgtpbnN0YW5jZV9pZBgBIAEoCRINCgVjb3VudBgC",
-            "IAEoBSI6ChVFbGVtZW50VXNhZ2VTdGF0aXN0aWMSEgoKZWxlbWVudF9pZBgB",
-            "IAEoCRINCgVjb3VudBgCIAEoBSKuAQoYUHJvdG9FbmVteURlYXRoU3RhdGlz",
-            "dGljEhAKCGZpZW5kX2lkGAEgASgJEhIKCmVsZW1lbnRfaWQYAiABKAkSEwoL",
-            "am9iX3R5cGVfaWQYAyABKAkSFQoNZnJvbV93ZWFrbmVzcxgEIAEoCBITCgtm",
-            "cm9tX25vcm1hbBgFIAEoCBIVCg1mcm9tX3VsdGltYXRlGAYgASgIEhQKDGFj",
-            "dGlvbl9jb3VudBgHIAEoBSKLAQogUHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRy",
-            "YXdSZXN1bHQSMAoIaW5zdGFuY2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0",
-            "eUNhcmRJbnN0YW5jZRINCgVpbmRleBgCIAEoBRIQCghuZXdfY2FyZBgDIAEo",
-            "CBIUCgx1cGdyYWRlX2NhcmQYBCABKAgilAEKHFByb3RvSm9iQ2FyZFN1bW1v",
-            "bkRyYXdSZXN1bHQSLAoIaW5zdGFuY2UYASABKAsyGi5nYW1lLlByb3RvSm9i",
+            "ZV91c2VkGBMgASgIEhIKCmNyZWF0ZWRfYXQYFCABKAMSMQoMZmllbmRfc3Bh",
+            "d25zGBYgAygLMhsuZ2FtZS5Qcm90b0JhdHRsZUZpZW5kU3Bhd24iRgoVUHJv",
+            "dG9CYXR0bGVGaWVuZFNwYXduEhYKDnJlcGxhY2VzX2ZpZW5kGAEgASgJEhUK",
+            "DXJlcGxhY2VzX3dpdGgYAiABKAkikQEKF1Byb3RvQmF0dGxlUHJvZ3Jlc3NE",
+            "YXRhEhQKDHBsYXllcl9sZXZlbBgBIAEoBRIRCgl0b3RhbF9leHAYAiABKAQS",
+            "EQoJYWNjdW1fZXhwGAMgASgEEhEKCWV4cF9ib251cxgEIAEoAhISCgpkZWNr",
+            "X2NvdW50GAUgASgFEhMKC21heF9zdGFtaW5hGAYgASgFItkBChVQcm90b0Nh",
+            "cmRQcm9ncmVzc0RhdGESEwoLaW5zdGFuY2VfaWQYASABKAkSEgoKc2xvdF9p",
+            "bmRleBgCIAEoBRINCgVsZXZlbBgDIAEoBRIRCgl0b3RhbF9leHAYBCABKAQS",
+            "EQoJYWNjdW1fZXhwGAUgASgEEhoKEmV4dHJhX3NraWxsX3VubG9jaxgGIAEo",
+            "CBImCh5leHRyYV9za2lsbF91bmxvY2tfcmVxdWlyZW1lbnQYByABKAUSHgoW",
+            "ZXh0cmFfc2tpbGxfcHJvZ3Jlc3NlZBgIIAEoCCJwCgxQcm90b01pc3Npb24S",
+            "FAoMcmVmZXJlbmNlX2lkGAEgASgJEhoKEnByaW1hcnlfZGVmaW5pdGlvbhgC",
+            "IAEoBRIcChRzZWNvbmRhcnlfZGVmaW5pdGlvbhgDIAEoBRIQCghyZXF1aXJl",
+            "ZBgEIAEoBSJxChRQcm90b01pc3Npb25JbnN0YW5jZRIjCgdtaXNzaW9uGAEg",
+            "ASgLMhIuZ2FtZS5Qcm90b01pc3Npb24SEAoIcHJvZ3Jlc3MYAiABKAUSEQoJ",
+            "Y29uZmlybWVkGAMgASgIEg8KB2NsYWltZWQYBCABKAgimgEKGVByb3RvRGFp",
+            "bHlNaXNzaW9uSW5zdGFuY2USCgoCaWQYASABKAkSLAoIaW5zdGFuY2UYAiAB",
+            "KAsyGi5nYW1lLlByb3RvTWlzc2lvbkluc3RhbmNlEhMKC3JlY2VpdmVkX2F0",
+            "GAMgASgDEi4KDGl0ZW1fcmV3YXJkcxgEIAMoCzIYLmdhbWUuUHJvdG9JdGVt",
+            "VmFsdWVQYWlyImEKDkJhdHRsZUl0ZW1Ecm9wEiUKA2tleRgBIAEoCzIYLmdh",
+            "bWUuQmF0dGxlRHJvcFRhYmxlS2V5EigKBGRyb3AYAiABKAsyGi5nYW1lLkJh",
+            "dHRsZUl0ZW1Ecm9wUmVzdWx0ImEKDkJhdHRsZUNhcmREcm9wEiUKA2tleRgB",
+            "IAEoCzIYLmdhbWUuQmF0dGxlRHJvcFRhYmxlS2V5EigKBGRyb3AYAiABKAsy",
+            "Gi5nYW1lLkJhdHRsZUNhcmREcm9wUmVzdWx0IjsKEkJhdHRsZURyb3BUYWJs",
+            "ZUtleRIQCghmaWVuZF9pZBgBIAEoCRITCgtmaWVuZF9pbmRleBgCIAEoBSI5",
+            "ChRCYXR0bGVJdGVtRHJvcFJlc3VsdBIPCgdpdGVtX2lkGAEgASgJEhAKCHF1",
+            "YW50aXR5GAIgASgFIjkKFEJhdHRsZUNhcmREcm9wUmVzdWx0Eg8KB2NhcmRf",
+            "aWQYASABKAkSEAoIbmV3X2NhcmQYAiABKAgiTwoWUHJvdG9DYXJkRmlsdGVy",
+            "U29ydFNldBIMCgR2aWV3GAEgASgFEicKBHNldHMYAiADKAsyGS5nYW1lLlBy",
+            "b3RvQ2FyZEZpbHRlclNvcnQimwEKE1Byb3RvQ2FyZEZpbHRlclNvcnQSDQoF",
+            "aW5kZXgYASABKAUSEgoKY2FyZF90eXBlcxgCIAMoBRIXCg9jYXJkX2NhdGVn",
+            "b3JpZXMYAyADKAUSFwoPc3BlY2lhbF9maWx0ZXJzGAQgAygFEhYKDnNvcnRf",
+            "c2VsZWN0b3JzGAUgAygFEhcKD3NvcnRfZGVzY2VuZGluZxgGIAEoCCJtChpQ",
+            "cm90b0xvZ2luQ2FtcGFpZ25JbnN0YW5jZRIKCgJpZBgBIAEoCRIPCgdjbGFp",
+            "bWVkGAIgAygIEhgKEGxhc3RfY2xhaW1faW5kZXgYAyABKAUSGAoQbGFzdF9j",
+            "bGFpbV9hZGRlZBgEIAEoAyJxChdQcm90b0ZhaXJ5Q29tcGFuaW9uRGF0YRIf",
+            "ChdjdXJyZW50X2NvbXBhbmlvbl9pbmRleBgBIAEoBRI1CglpbnZlbnRvcnkY",
+            "AiABKAsyIi5nYW1lLlByb3RvRmFpcnlDb21wYW5pb25JbnZlbnRvcnkiWQoc",
+            "UHJvdG9GYWlyeUNvbXBhbmlvbkludmVudG9yeRI5Cg5jb21wYW5pb25fbGlz",
+            "dBgCIAMoCzIhLmdhbWUuUHJvdG9GYWlyeUNvbXBhbmlvbkluc3RhbmNlIlwK",
+            "G1Byb3RvRmFpcnlDb21wYW5pb25JbnN0YW5jZRIOCgZzeXNfaWQYASABKAkS",
+            "GQoRYmFzZV9jb21wYW5pb25faWQYAiABKAkSEgoKY3JlYXRlZF9hdBgDIAEo",
+            "AyLvAQoNUHJvdG9JdGVtRGF0YRIrCglpbnZlbnRvcnkYASABKAsyGC5nYW1l",
+            "LlByb3RvSXRlbUludmVudG9yeRI2CgpsaW1pdF9kYXRhGAIgAygLMiIuZ2Ft",
+            "ZS5Qcm90b0l0ZW1EYXRhLkxpbWl0RGF0YUVudHJ5EiwKCmRpc3RpbGxlcnMY",
+            "AyADKAsyGC5nYW1lLlByb3RvSXRlbURpc3RpbGxlchpLCg5MaW1pdERhdGFF",
+            "bnRyeRILCgNrZXkYASABKAkSKAoFdmFsdWUYAiABKAsyGS5nYW1lLlByb3Rv",
+            "SXRlbURyb3BSZWNvcmQ6AjgBIjcKElByb3RvSXRlbURpc3RpbGxlchIPCgdp",
+            "dGVtX2lkGAEgASgJEhAKCGRlY190aW1lGAIgASgDIjEKE1Byb3RvSXRlbURy",
+            "b3BSZWNvcmQSCwoDa2V5GAEgASgFEg0KBWNvdW50GAIgASgFIkAKElByb3Rv",
+            "SXRlbUludmVudG9yeRIqCglpdGVtX2xpc3QYASADKAsyFy5nYW1lLlByb3Rv",
+            "SXRlbUluc3RhbmNlIloKEVByb3RvSXRlbUluc3RhbmNlEg4KBnN5c19pZBgB",
+            "IAEoCRIQCghxdWFudGl0eRgCIAEoBRIPCgdpdGVtX2lkGAMgASgJEhIKCmNy",
+            "ZWF0ZWRfYXQYBCABKAMiNAoSUHJvdG9JdGVtVmFsdWVQYWlyEg8KB2l0ZW1f",
+            "aWQYASABKAkSDQoFdmFsdWUYAiABKAUi9gEKEFByb3RvSm9iQ2FyZERhdGES",
+            "JQoEam9icxgBIAEoCzIXLmdhbWUuUHJvdG9Kb2JJbnZlbnRvcnkSKwoHd2Vh",
+            "cG9ucxgCIAEoCzIaLmdhbWUuUHJvdG9XZWFwb25JbnZlbnRvcnkSPQoMc2tp",
+            "bGxfcGFuZWxzGAMgAygLMicuZ2FtZS5Qcm90b0pvYkNhcmREYXRhLlNraWxs",
+            "UGFuZWxzRW50cnkaTwoQU2tpbGxQYW5lbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "KgoFdmFsdWUYAiABKAsyGy5nYW1lLlByb3RvU2tpbGxQYW5lbEdyb3VwczoC",
+            "OAEiQQoRUHJvdG9Kb2JJbnZlbnRvcnkSLAoIam9iX2xpc3QYASADKAsyGi5n",
+            "YW1lLlByb3RvSm9iQ2FyZEluc3RhbmNlIqoEChRQcm90b0pvYkNhcmRJbnN0",
+            "YW5jZRIOCgZzeXNfaWQYASABKAkSFgoOc3ViX2pvYl91bmxvY2sYAiABKAUS",
+            "GAoQb3Zlcl9ib29zdF9sZXZlbBgDIAEoBRI4ChNza2lsbF9wYW5lbF91bmxv",
+            "Y2tzGAQgASgLMhsuZ2FtZS5Qcm90b1NraWxsUGFuZWxHcm91cHMSEwoLYmFz",
+            "ZV9qb2JfaWQYBSABKAkSEgoKY3JlYXRlZF9hdBgGIAEoAxIVCg13ZWFwb25f",
+            "dW5sb2NrGAcgASgFEhMKC2hwX3N0YXRfbW9kGAggASgFEhcKD2F0dGFja19z",
+            "dGF0X21vZBgJIAEoBRIWCg5icmVha19zdGF0X21vZBgKIAEoBRIWCg5tYWdp",
+            "Y19zdGF0X21vZBgLIAEoBRIWCg5zcGVlZF9zdGF0X21vZBgMIAEoBRIYChBk",
+            "ZWZlbnNlX3N0YXRfbW9kGA4gASgFEhwKFGNyaXRfY2hhbmNlX3N0YXRfbW9k",
+            "GA8gASgFEhYKDnVsdGltYXRlX2Jvb3N0GBIgASgFEkUKDmF1dG9fYWJpbGl0",
+            "aWVzGBMgAygLMi0uZ2FtZS5Qcm90b0pvYkNhcmRJbnN0YW5jZS5BdXRvQWJp",
+            "bGl0aWVzRW50cnkSEwoLY3Jvd25fbGV2ZWwYFCABKAUaNAoSQXV0b0FiaWxp",
+            "dGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEi1QMK",
+            "FlByb3RvTGFzdEJhdHRsZVJlc3VsdHMSFQoNcmVnaW9uX21hcF9pZBgBIAEo",
+            "CRIZChFyZWdpb25fbm9kZV9pbmRleBgCIAEoBRINCgVzY29yZRgDIAEoBBIR",
+            "Cgl0b3RhbF9leHAYBCABKAUSHAoUc2VlZF9hcmVhX211bHRpcGxpZXIYBSAB",
+            "KAISHgoWc2VlZF9iYXR0bGVfbXVsdGlwbGllchgGIAEoAhI0Cg1wcm9ncmVz",
+            "c19kYXRhGAcgASgLMh0uZ2FtZS5Qcm90b0JhdHRsZVByb2dyZXNzRGF0YRI3",
+            "ChJjYXJkX3Byb2dyZXNzX2RhdGEYCCADKAsyGy5nYW1lLlByb3RvQ2FyZFBy",
+            "b2dyZXNzRGF0YRIyCgxpdGVtX3Jld2FyZHMYCSADKAsyHC5nYW1lLlRhZ2dl",
+            "ZEJhdHRsZUl0ZW1SZXdhcmQSMgoMY2FyZF9yZXdhcmRzGAogAygLMhwuZ2Ft",
+            "ZS5UYWdnZWRCYXR0bGVDYXJkUmV3YXJkEjIKDnBlbmRpbmdfZXZlbnRzGAsg",
+            "AygLMhouZ2FtZS5Qcm90b1JlZ2lvbk5vZGVFdmVudBIeChZkYWlseV9taXNz",
+            "aW9uX3Byb2dyZXNzGAwgASgFIkgKFlRhZ2dlZEJhdHRsZUl0ZW1SZXdhcmQS",
+            "DwoHaXRlbV9pZBgBIAEoCRIQCghxdWFudGl0eRgCIAEoBRILCgN0YWcYAyAB",
+            "KAUiZQoWVGFnZ2VkQmF0dGxlQ2FyZFJld2FyZBITCgtpbnN0YW5jZV9pZBgB",
+            "IAEoCRIXCg9hYmlsaXR5X2NhcmRfaWQYAiABKAkSEAoIbmV3X2NhcmQYAyAB",
+            "KAgSCwoDdGFnGAQgASgFIkgKDFByb3RvTWFpbEJveBIlCgVpdGVtcxgBIAMo",
+            "CzIWLmdhbWUuUHJvdG9NYWlsQm94SXRlbRIRCgltYXhfaXRlbXMYAiABKAUi",
+            "mAEKEFByb3RvTWFpbEJveEl0ZW0SCgoCaWQYASABKAkSFAoMcmVmZXJlbmNl",
+            "X2lkGAIgASgJEiUKBnNvdXJjZRgDIAEoDjIVLmdhbWUuUmVmZXJlbmNlU291",
+            "cmNlEhAKCHF1YW50aXR5GAQgASgFEhMKC3JlY2VpdmVkX2F0GAUgASgDEhQK",
+            "DGNsYWltX3NvdXJjZRgGIAEoCSJdChlQcm90b1BsYXllckRlY2tDb2xsZWN0",
+            "aW9uEhoKEmN1cnJlbnRfZGVja19pbmRleBgBIAEoBRIkCgVkZWNrcxgCIAMo",
+            "CzIVLmdhbWUuUHJvdG9QbGF5ZXJEZWNrIrcCCg9Qcm90b1BsYXllckRlY2sS",
+            "FgoOam9iX2NhcmRfaW5kZXgYASABKAUSGgoSc3ViX2pvYl9jYXJkX2luZGV4",
+            "GAIgASgFEjUKEmFiaWxpdHlfY2FyZF9zbG90cxgDIAMoCzIZLmdhbWUuUHJv",
+            "dG9QbGF5ZXJEZWNrU2xvdBI5ChZzdWJfYWJpbGl0eV9jYXJkX3Nsb3RzGAQg",
+            "AygLMhkuZ2FtZS5Qcm90b1BsYXllckRlY2tTbG90EhQKDHdlYXBvbl9pbmRl",
+            "eBgFIAEoBRIYChBzdWJfd2VhcG9uX2luZGV4GAYgASgFEhIKCmRlY2tfaW5k",
+            "ZXgYByABKAUSGgoSam9iX2NhcmRfc3ViX2luZGV4GAggASgFEh4KFnN1Yl9q",
+            "b2JfY2FyZF9zdWJfaW5kZXgYCSABKAUiQgoTUHJvdG9QbGF5ZXJEZWNrU2xv",
+            "dBIXCg9hYmlsaXR5X2NhcmRfaWQYASABKAkSEgoKc2xvdF9pbmRleBgCIAEo",
+            "BSKjAQoSUHJvdG9QbGF5ZXJTdGFtaW5hEhcKD2N1cnJlbnRfc3RhbWluYRgB",
+            "IAEoDRITCgttYXhfc3RhbWluYRgCIAEoDRITCgtzdGFtaW5hX2RlYxgDIAEo",
+            "BBIaChJjdXJyZW50X21wX3N0YW1pbmEYBCABKA0SFgoObWF4X21wX3N0YW1p",
+            "bmEYBSABKA0SFgoObXBfc3RhbWluYV9kZWMYBiABKAQiXwoSUHJvdG9SZWdp",
+            "b25NYXBEYXRhEhYKDmN1cnJlbnRfbWFwX2lkGAEgASgJEjEKC3JlZ2lvbl9t",
+            "YXBzGAIgAygLMhwuZ2FtZS5Qcm90b1JlZ2lvbk1hcEluc3RhbmNlIngKFVBy",
+            "b3RvUmVnaW9uSGVhZGVyRGF0YRIWCg5jdXJyZW50X21hcF9pZBgBIAEoCRIa",
+            "ChJjdXJyZW50X25vZGVfaW5kZXgYAiABKAUSKwoHaGVhZGVycxgDIAMoCzIa",
+            "LmdhbWUuUHJvdG9SZWdpb25NYXBIZWFkZXIikgEKFFByb3RvUmVnaW9uTWFw",
+            "SGVhZGVyEg4KBm1hcF9pZBgBIAEoCRIPCgdjbGVhcmVkGAIgASgIEhcKD2Nv",
+            "bXBsZXRlZF9jb3VudBgDIAEoBRIaChJjdXJyZW50X25vZGVfaW5kZXgYBCAB",
+            "KAUSDwoHdmlzaXRlZBgFIAEoCBITCgt1bmxvY2tfdGltZRgGIAEoAyK/BQoW",
+            "UHJvdG9SZWdpb25NYXBJbnN0YW5jZRIOCgZtYXBfaWQYASABKAkSLAoJbm9k",
+            "ZV9kYXRhGAIgAygLMhkuZ2FtZS5Qcm90b1JlZ2lvbk5vZGVEYXRhEhoKEmN1",
+            "cnJlbnRfbm9kZV9pbmRleBgDIAEoBRIsCglsb2NrX2RhdGEYBCADKAsyGS5n",
+            "YW1lLlByb3RvUmVnaW9uTG9ja0RhdGESGAoQZW5lbWllc19kZWZlYXRlZBgF",
+            "IAEoBBISCgpoaWdoX3Njb3JlGAYgASgEEkoKEGpvYl90eXBlX2RlZmVhdHMY",
+            "ByADKAsyMC5nYW1lLlByb3RvUmVnaW9uTWFwSW5zdGFuY2UuSm9iVHlwZURl",
+            "ZmVhdHNFbnRyeRIyCg5wZW5kaW5nX2V2ZW50cxgIIAMoCzIaLmdhbWUuUHJv",
+            "dG9SZWdpb25Ob2RlRXZlbnQSNAoQcGVyc2lzdGVkX2V2ZW50cxgJIAMoCzIa",
+            "LmdhbWUuUHJvdG9SZWdpb25Ob2RlRXZlbnQSDwoHdmlzaXRlZBgKIAEoCBI1",
+            "ChVwZW5kaW5nX3JlZ2lvbl9ldmVudHMYCyADKAsyFi5nYW1lLlByb3RvUmVn",
+            "aW9uRXZlbnQSNwoXcGVyc2lzdGVkX3JlZ2lvbl9ldmVudHMYDCADKAsyFi5n",
+            "YW1lLlByb3RvUmVnaW9uRXZlbnQSNgoMbWlzc2lvbl9kYXRhGA0gAygLMiAu",
+            "Z2FtZS5Qcm90b1JlZ2lvbk1pc3Npb25JbnN0YW5jZRI0Cg1kaWFsb2d1ZV9k",
+            "YXRhGA4gAygLMh0uZ2FtZS5Qcm90b1JlZ2lvbkRpYWxvZ3VlRGF0YRITCgt1",
+            "bmxvY2tfdGltZRgPIAEoAxo1ChNKb2JUeXBlRGVmZWF0c0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoBDoCOAEiKQoXUHJvdG9SZWdpb25EaWFs",
+            "b2d1ZURhdGESDgoGc3lzX2lkGAEgASgJIpcBChNQcm90b1JlZ2lvbk5vZGVE",
+            "YXRhEg8KB25vZGVfaWQYASABKAkSDwoHdmlzaWJsZRgCIAEoCBIOCgZsb2Nr",
+            "ZWQYAyABKAgSEQoJY29tcGxldGVkGAQgASgIEhcKD2NvbXBsZXRlZF9jb3Vu",
+            "dBgFIAEoBBIOCgZvcGVuZWQYBiABKAgSEgoKd2F2ZV9pbmRleBgHIAEoBSJo",
+            "ChNQcm90b1JlZ2lvbkxvY2tEYXRhEg8KB2xvY2tfaWQYASABKAkSFgoOcGFy",
+            "ZW50X25vZGVfaWQYAiABKAkSFgoOdGFyZ2V0X25vZGVfaWQYAyABKAkSEAoI",
+            "dW5sb2NrZWQYBCABKAgihgEKEFByb3RvUmVnaW9uRXZlbnQSDgoGc3lzX2lk",
+            "GAEgASgJEhUKDXJlZ2lvbl9tYXBfaWQYAiABKAkSGAoQZGVmaW5pdGlvbl92",
+            "YWx1ZRgDIAEoBRIOCgZ0YXJnZXQYBCABKAUSDQoFb3JkZXIYBSABKAUSEgoK",
+            "cmVwZWF0YWJsZRgGIAEoCCKeAQoUUHJvdG9SZWdpb25Ob2RlRXZlbnQSDgoG",
+            "c3lzX2lkGAEgASgJEhUKDXJlZ2lvbl9tYXBfaWQYAiABKAkSEgoKbm9kZV9p",
+            "bmRleBgDIAEoBRIYChBkZWZpbml0aW9uX3ZhbHVlGAQgASgFEg4KBnRhcmdl",
+            "dBgFIAEoBRINCgVvcmRlchgGIAEoBRISCgpyZXBlYXRhYmxlGAcgASgIImsK",
+            "FFByb3RvUmVnaW9uRXZlbnREYXRhEhQKDHNvdXJjZV9pbmRleBgBIAEoBRIU",
+            "Cgx0YXJnZXRfaW5kZXgYAiABKAUSGAoQZGVmaW5pdGlvbl92YWx1ZRgDIAEo",
+            "BRINCgVvcmRlchgEIAEoBSKJAQoaUHJvdG9SZWdpb25NaXNzaW9uSW5zdGFu",
+            "Y2USEgoKbWlzc2lvbl9pZBgBIAEoCRIsCghpbnN0YW5jZRgCIAEoCzIaLmdh",
+            "bWUuUHJvdG9NaXNzaW9uSW5zdGFuY2USFQoNYXBwbHlfdG9fbm9kZRgDIAEo",
+            "CBISCgpub2RlX2luZGV4GAQgASgFImAKFVByb3RvU2tpbGxQYW5lbEdyb3Vw",
+            "cxIuCgtwYW5lbF9wYWdlcxgBIAMoCzIZLmdhbWUuUHJvdG9Ta2lsbFBhbmVs",
+            "UGFnZRIXCg9jb21wbGV0ZWRfY291bnQYAiABKAUihwEKE1Byb3RvU2tpbGxQ",
+            "YW5lbFBhZ2USDQoFaW5kZXgYASABKAUSDwoHdmlzaWJsZRgCIAEoCBIQCgh1",
+            "bmxvY2tlZBgDIAEoCBIRCgljb21wbGV0ZWQYBCABKAgSKwoMc2tpbGxfcGFu",
+            "ZWxzGAUgAygLMhUuZ2FtZS5Qcm90b1NraWxsUGFuZWwiVwoPUHJvdG9Ta2ls",
+            "bFBhbmVsEg0KBWluZGV4GAEgASgFEhAKCHVubG9ja2VkGAIgASgIEhEKCWNv",
+            "bXBsZXRlZBgDIAEoCBIQCghjYXBfaXRlbRgEIAEoCCJGChRQcm90b1dlYXBv",
+            "bkludmVudG9yeRIuCgt3ZWFwb25fbGlzdBgBIAMoCzIZLmdhbWUuUHJvdG9X",
+            "ZWFwb25JbnN0YW5jZSKeAwoTUHJvdG9XZWFwb25JbnN0YW5jZRIWCg5iYXNl",
+            "X3dlYXBvbl9pZBgBIAEoCRIZChFzdWJfd2VhcG9uX3VubG9jaxgCIAEoBRIT",
+            "CgtocF9zdGF0X21vZBgDIAEoBRIXCg9hdHRhY2tfc3RhdF9tb2QYBCABKAUS",
+            "FgoOYnJlYWtfc3RhdF9tb2QYBSABKAUSFgoObWFnaWNfc3RhdF9tb2QYBiAB",
+            "KAUSFgoOc3BlZWRfc3RhdF9tb2QYByABKAUSGAoQZGVmZW5zZV9zdGF0X21v",
+            "ZBgIIAEoBRIcChRjcml0X2NoYW5jZV9zdGF0X21vZBgJIAEoBRIWCg51bHRp",
+            "bWF0ZV9ib29zdBgKIAEoBRJECg5hdXRvX2FiaWxpdGllcxgLIAMoCzIsLmdh",
+            "bWUuUHJvdG9XZWFwb25JbnN0YW5jZS5BdXRvQWJpbGl0aWVzRW50cnkSEgoK",
+            "Y3JlYXRlZF9hdBgMIAEoAxo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASKKAwoVUHJvdG9CYXR0bGVTdGF0",
+            "aXN0aWNzEhMKC3RvdGFsX3Njb3JlGAEgASgFEhQKDGJhdHRsZV90dXJucxgC",
+            "IAEoBRIWCg5hYmlsaXRpZXNfdXNlZBgEIAEoBRIWCg50b3RhbF9ocF9yZWdl",
+            "bhgFIAEoBRIaChJ0b3RhbF9kYW1hZ2VfdGFrZW4YBiABKAUSFgoOZW5lbWll",
+            "c19icm9rZW4YCCABKAUSNgoRZWxlbWVudF9vcmJfZHJhd3MYCyADKAsyGy5n",
+            "YW1lLkVsZW1lbnRVc2FnZVN0YXRpc3RpYxI2ChFlbGVtZW50X29yYl91c2Fn",
+            "ZRgMIAMoCzIbLmdhbWUuRWxlbWVudFVzYWdlU3RhdGlzdGljEjUKDWVuZW15",
+            "X2RlZmVhdHMYDiADKAsyHi5nYW1lLlByb3RvRW5lbXlEZWF0aFN0YXRpc3Rp",
+            "YxI7ChJhYmlsaXR5X2NhcmRfdXNhZ2UYDyADKAsyHy5nYW1lLkFiaWxpdHlD",
+            "YXJkVXNhZ2VTdGF0aXN0aWMiPwoZQWJpbGl0eUNhcmRVc2FnZVN0YXRpc3Rp",
+            "YxITCgtpbnN0YW5jZV9pZBgBIAEoCRINCgVjb3VudBgCIAEoBSI6ChVFbGVt",
+            "ZW50VXNhZ2VTdGF0aXN0aWMSEgoKZWxlbWVudF9pZBgBIAEoCRINCgVjb3Vu",
+            "dBgCIAEoBSKuAQoYUHJvdG9FbmVteURlYXRoU3RhdGlzdGljEhAKCGZpZW5k",
+            "X2lkGAEgASgJEhIKCmVsZW1lbnRfaWQYAiABKAkSEwoLam9iX3R5cGVfaWQY",
+            "AyABKAkSFQoNZnJvbV93ZWFrbmVzcxgEIAEoCBITCgtmcm9tX25vcm1hbBgF",
+            "IAEoCBIVCg1mcm9tX3VsdGltYXRlGAYgASgIEhQKDGFjdGlvbl9jb3VudBgH",
+            "IAEoBSKLAQogUHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRyYXdSZXN1bHQSMAoI",
+            "aW5zdGFuY2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5j",
+            "ZRINCgVpbmRleBgCIAEoBRIQCghuZXdfY2FyZBgDIAEoCBIUCgx1cGdyYWRl",
+            "X2NhcmQYBCABKAgilAEKHFByb3RvSm9iQ2FyZFN1bW1vbkRyYXdSZXN1bHQS",
+            "LAoIaW5zdGFuY2UYASABKAsyGi5nYW1lLlByb3RvSm9iQ2FyZEluc3RhbmNl",
+            "EjcKEnNraWxsX3BhbmVsX2dyb3VwcxgCIAEoCzIbLmdhbWUuUHJvdG9Ta2ls",
+            "bFBhbmVsR3JvdXBzEg0KBWluZGV4GAMgASgFIq0BChdQcm90b01haWxib3hD",
+            "bGFpbVJlc3VsdBIoCgRpdGVtGAEgASgLMhouZ2FtZS5Qcm90b0l0ZW1DbGFp",
+            "bVJlc3VsdBI3CgxhYmlsaXR5X2NhcmQYAiABKAsyIS5nYW1lLlByb3RvQWJp",
+            "bGl0eUNhcmRDbGFpbVJlc3VsdBIvCghqb2JfY2FyZBgDIAEoCzIdLmdhbWUu",
+            "UHJvdG9Kb2JDYXJkQ2xhaW1SZXN1bHQiOQoUUHJvdG9JdGVtQ2xhaW1SZXN1",
+            "bHQSDwoHaXRlbV9pZBgBIAEoCRIQCghxdWFudGl0eRgCIAEoBSJPChtQcm90",
+            "b0FiaWxpdHlDYXJkQ2xhaW1SZXN1bHQSMAoIaW5zdGFuY2UYASABKAsyHi5n",
+            "YW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZSKAAQoXUHJvdG9Kb2JDYXJk",
+            "Q2xhaW1SZXN1bHQSLAoIaW5zdGFuY2UYASABKAsyGi5nYW1lLlByb3RvSm9i",
             "Q2FyZEluc3RhbmNlEjcKEnNraWxsX3BhbmVsX2dyb3VwcxgCIAEoCzIbLmdh",
-            "bWUuUHJvdG9Ta2lsbFBhbmVsR3JvdXBzEg0KBWluZGV4GAMgASgFIq0BChdQ",
-            "cm90b01haWxib3hDbGFpbVJlc3VsdBIoCgRpdGVtGAEgASgLMhouZ2FtZS5Q",
-            "cm90b0l0ZW1DbGFpbVJlc3VsdBI3CgxhYmlsaXR5X2NhcmQYAiABKAsyIS5n",
-            "YW1lLlByb3RvQWJpbGl0eUNhcmRDbGFpbVJlc3VsdBIvCghqb2JfY2FyZBgD",
-            "IAEoCzIdLmdhbWUuUHJvdG9Kb2JDYXJkQ2xhaW1SZXN1bHQiOQoUUHJvdG9J",
-            "dGVtQ2xhaW1SZXN1bHQSDwoHaXRlbV9pZBgBIAEoCRIQCghxdWFudGl0eRgC",
-            "IAEoBSJPChtQcm90b0FiaWxpdHlDYXJkQ2xhaW1SZXN1bHQSMAoIaW5zdGFu",
-            "Y2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZSKAAQoX",
-            "UHJvdG9Kb2JDYXJkQ2xhaW1SZXN1bHQSLAoIaW5zdGFuY2UYASABKAsyGi5n",
-            "YW1lLlByb3RvSm9iQ2FyZEluc3RhbmNlEjcKEnNraWxsX3BhbmVsX2dyb3Vw",
-            "cxgCIAEoCzIbLmdhbWUuUHJvdG9Ta2lsbFBhbmVsR3JvdXBzKnQKD1JlZmVy",
-            "ZW5jZVNvdXJjZRIICgROT05FEAASEAoMQUJJTElUWV9DQVJEEAESDAoISk9C",
-            "X0NBUkQQAhIICgRJVEVNEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllfQ09NUEFO",
-            "SU9OEAUSDAoITVBfU1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUy",
-            "MS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90",
-            "by5HYW1lYgZwcm90bzM="));
+            "bWUuUHJvdG9Ta2lsbFBhbmVsR3JvdXBzKnQKD1JlZmVyZW5jZVNvdXJjZRII",
+            "CgROT05FEAASEAoMQUJJTElUWV9DQVJEEAESDAoISk9CX0NBUkQQAhIICgRJ",
+            "VEVNEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllfQ09NUEFOSU9OEAUSDAoITVBf",
+            "U1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtn",
+            "L2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -310,7 +313,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardInventory), global::Mobius.Proto.Game.ProtoAbilityCardInventory.Parser, new[]{ "MaxSlots", "CardList", "Source" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardInstance), global::Mobius.Proto.Game.ProtoAbilityCardInstance.Parser, new[]{ "SysId", "AbilityCardId", "AugmentConfigId", "AccumExp", "TotalAccumExp", "CardLevel", "AbilityLevel", "SeedUnlock", "ExtraSkillUnlock", "OverBoostLevel", "AutoAbilities", "CardLock", "Source", "CreatedAt", "BaseConfigId", "ExtraSkillProgress" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleData), global::Mobius.Proto.Game.ProtoBattleData.Parser, new[]{ "PlayerLevel", "PlayMode", "TotalExp", "AccumExp", "ExpBonus", "Stamina", "Decks", "EnemiesDefeated", "StartData", "Results" }, new[]{ "StartData", "Results" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStartData), global::Mobius.Proto.Game.ProtoBattleStartData.Parser, new[]{ "RegionMapId", "RegionNodeId", "RegionNodeIndex", "NodeWaveIndex", "DeckIndex", "HardMode", "Completed", "TotalExp", "GoldReward", "PlayerExperienceBonus", "AddExperienceBonus", "AreaSeedMultiplier", "AbilitySeedMultiplier", "ItemDropTable", "CardDropTable", "ProgressData", "CardProgressData", "RentalPlayerId", "RentalCard", "ReviveUsed", "CreatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStartData), global::Mobius.Proto.Game.ProtoBattleStartData.Parser, new[]{ "RegionMapId", "RegionNodeId", "RegionNodeIndex", "NodeWaveIndex", "DeckIndex", "HardMode", "Completed", "TotalExp", "GoldReward", "PlayerExperienceBonus", "AddExperienceBonus", "AreaSeedMultiplier", "AbilitySeedMultiplier", "ItemDropTable", "CardDropTable", "ProgressData", "CardProgressData", "RentalPlayerId", "RentalCard", "ReviveUsed", "CreatedAt", "FiendSpawns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleFiendSpawn), global::Mobius.Proto.Game.ProtoBattleFiendSpawn.Parser, new[]{ "ReplacesFiend", "ReplacesWith" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleProgressData), global::Mobius.Proto.Game.ProtoBattleProgressData.Parser, new[]{ "PlayerLevel", "TotalExp", "AccumExp", "ExpBonus", "DeckCount", "MaxStamina" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoCardProgressData), global::Mobius.Proto.Game.ProtoCardProgressData.Parser, new[]{ "InstanceId", "SlotIndex", "Level", "TotalExp", "AccumExp", "ExtraSkillUnlock", "ExtraSkillUnlockRequirement", "ExtraSkillProgressed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMission), global::Mobius.Proto.Game.ProtoMission.Parser, new[]{ "ReferenceId", "PrimaryDefinition", "SecondaryDefinition", "Required" }, null, null, null, null),
@@ -3627,6 +3631,7 @@ namespace Mobius.Proto.Game {
       rentalCard_ = other.rentalCard_ != null ? other.rentalCard_.Clone() : null;
       reviveUsed_ = other.reviveUsed_;
       createdAt_ = other.createdAt_;
+      fiendSpawns_ = other.fiendSpawns_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3863,6 +3868,16 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "fiend_spawns" field.</summary>
+    public const int FiendSpawnsFieldNumber = 22;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoBattleFiendSpawn> _repeated_fiendSpawns_codec
+        = pb::FieldCodec.ForMessage(178, global::Mobius.Proto.Game.ProtoBattleFiendSpawn.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoBattleFiendSpawn> fiendSpawns_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoBattleFiendSpawn>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoBattleFiendSpawn> FiendSpawns {
+      get { return fiendSpawns_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoBattleStartData);
@@ -3897,6 +3912,7 @@ namespace Mobius.Proto.Game {
       if (!object.Equals(RentalCard, other.RentalCard)) return false;
       if (ReviveUsed != other.ReviveUsed) return false;
       if (CreatedAt != other.CreatedAt) return false;
+      if(!fiendSpawns_.Equals(other.fiendSpawns_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3924,6 +3940,7 @@ namespace Mobius.Proto.Game {
       if (rentalCard_ != null) hash ^= RentalCard.GetHashCode();
       if (ReviveUsed != false) hash ^= ReviveUsed.GetHashCode();
       if (CreatedAt != 0L) hash ^= CreatedAt.GetHashCode();
+      hash ^= fiendSpawns_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4015,6 +4032,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(168, 1);
         output.WriteInt32(NodeWaveIndex);
       }
+      fiendSpawns_.WriteTo(output, _repeated_fiendSpawns_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4099,6 +4117,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(168, 1);
         output.WriteInt32(NodeWaveIndex);
       }
+      fiendSpawns_.WriteTo(ref output, _repeated_fiendSpawns_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4165,6 +4184,7 @@ namespace Mobius.Proto.Game {
       if (CreatedAt != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(CreatedAt);
       }
+      size += fiendSpawns_.CalculateSize(_repeated_fiendSpawns_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4239,6 +4259,7 @@ namespace Mobius.Proto.Game {
       if (other.CreatedAt != 0L) {
         CreatedAt = other.CreatedAt;
       }
+      fiendSpawns_.Add(other.fiendSpawns_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4341,6 +4362,10 @@ namespace Mobius.Proto.Game {
           }
           case 168: {
             NodeWaveIndex = input.ReadInt32();
+            break;
+          }
+          case 178: {
+            fiendSpawns_.AddEntriesFrom(input, _repeated_fiendSpawns_codec);
             break;
           }
         }
@@ -4447,6 +4472,218 @@ namespace Mobius.Proto.Game {
             NodeWaveIndex = input.ReadInt32();
             break;
           }
+          case 178: {
+            fiendSpawns_.AddEntriesFrom(ref input, _repeated_fiendSpawns_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoBattleFiendSpawn : pb::IMessage<ProtoBattleFiendSpawn>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoBattleFiendSpawn> _parser = new pb::MessageParser<ProtoBattleFiendSpawn>(() => new ProtoBattleFiendSpawn());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoBattleFiendSpawn> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoBattleFiendSpawn() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoBattleFiendSpawn(ProtoBattleFiendSpawn other) : this() {
+      replacesFiend_ = other.replacesFiend_;
+      replacesWith_ = other.replacesWith_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoBattleFiendSpawn Clone() {
+      return new ProtoBattleFiendSpawn(this);
+    }
+
+    /// <summary>Field number for the "replaces_fiend" field.</summary>
+    public const int ReplacesFiendFieldNumber = 1;
+    private string replacesFiend_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ReplacesFiend {
+      get { return replacesFiend_; }
+      set {
+        replacesFiend_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "replaces_with" field.</summary>
+    public const int ReplacesWithFieldNumber = 2;
+    private string replacesWith_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ReplacesWith {
+      get { return replacesWith_; }
+      set {
+        replacesWith_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoBattleFiendSpawn);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoBattleFiendSpawn other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ReplacesFiend != other.ReplacesFiend) return false;
+      if (ReplacesWith != other.ReplacesWith) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ReplacesFiend.Length != 0) hash ^= ReplacesFiend.GetHashCode();
+      if (ReplacesWith.Length != 0) hash ^= ReplacesWith.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ReplacesFiend.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ReplacesFiend);
+      }
+      if (ReplacesWith.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ReplacesWith);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ReplacesFiend.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ReplacesFiend);
+      }
+      if (ReplacesWith.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ReplacesWith);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ReplacesFiend.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReplacesFiend);
+      }
+      if (ReplacesWith.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReplacesWith);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoBattleFiendSpawn other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ReplacesFiend.Length != 0) {
+        ReplacesFiend = other.ReplacesFiend;
+      }
+      if (other.ReplacesWith.Length != 0) {
+        ReplacesWith = other.ReplacesWith;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ReplacesFiend = input.ReadString();
+            break;
+          }
+          case 18: {
+            ReplacesWith = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ReplacesFiend = input.ReadString();
+            break;
+          }
+          case 18: {
+            ReplacesWith = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4466,7 +4703,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4818,7 +5055,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5242,7 +5479,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5522,7 +5759,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5811,7 +6048,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6089,7 +6326,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6315,7 +6552,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6541,7 +6778,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6749,7 +6986,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6957,7 +7194,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7165,7 +7402,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7362,7 +7599,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7678,7 +7915,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7949,7 +8186,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8166,7 +8403,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8327,7 +8564,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8571,7 +8808,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8802,7 +9039,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9010,7 +9247,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9218,7 +9455,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9379,7 +9616,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9659,7 +9896,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9867,7 +10104,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10118,7 +10355,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10279,7 +10516,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11025,7 +11262,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11558,7 +11795,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11802,7 +12039,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12082,7 +12319,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12279,7 +12516,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12631,7 +12868,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12828,7 +13065,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13266,7 +13503,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13474,7 +13711,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13826,7 +14063,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14023,7 +14260,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14256,7 +14493,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14608,7 +14845,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15185,7 +15422,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15357,7 +15594,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15745,7 +15982,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16025,7 +16262,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16377,7 +16614,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[51]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16765,7 +17002,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[52]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17045,7 +17282,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[53]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17334,7 +17571,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[54]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17531,7 +17768,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[55]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17836,7 +18073,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[56]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18116,7 +18353,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[57]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18277,7 +18514,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[58]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18834,7 +19071,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[59]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19286,7 +19523,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[60]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[61]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19494,7 +19731,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[61]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19702,7 +19939,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[62]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20090,7 +20327,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[63]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20379,7 +20616,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[64]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20641,7 +20878,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[65]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20912,7 +21149,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[66]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21120,7 +21357,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[67]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21301,7 +21538,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[68]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[69]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

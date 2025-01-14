@@ -133,9 +133,15 @@ message ProtoBattleStartData {
   identity.ProtoAbilityCardIdentity rental_card = 18;
 
   bool revive_used = 19;
-
   int64 created_at = 20;
 
+  repeated ProtoBattleFiendSpawn fiend_spawns = 22;
+
+}
+
+message ProtoBattleFiendSpawn {
+  string replaces_fiend = 1;
+  string replaces_with = 2;
 }
 
 message ProtoBattleProgressData {
