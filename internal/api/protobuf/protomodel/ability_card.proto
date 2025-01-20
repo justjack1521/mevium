@@ -11,6 +11,8 @@ message AbilityCard {
   bool in_shop = 4;
   BaseAbilityCard base_ability_card = 5;
   AugmentConfig augment_config = 6;
+  int32 fusion_exp_override = 7;
+  int32 sale_gold_override = 8;
 }
 
 message BaseAbilityCard {
