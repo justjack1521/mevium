@@ -443,6 +443,7 @@ message ProtoRegionNodeData {
   uint64 completed_count = 5;
   bool opened = 6;
   int32 wave_index = 7;
+  bool foothold = 8;
 }
 
 message ProtoRegionLockData {
