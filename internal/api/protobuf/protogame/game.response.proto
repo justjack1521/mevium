@@ -212,7 +212,7 @@ message AbilityCardSummonResponse {
 }
 
 message ExecuteDialogueResponse {
-
+  repeated game.ProtoRegionNodeEvent node_events = 1;
 }
 
 message ClaimItemDistillerResponse {

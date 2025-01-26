@@ -125,13 +125,14 @@ namespace Mobius.Proto.Game {
             "X2NhcmRfcmVzdWx0cxgBIAMoCzImLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZFN1",
             "bW1vbkRyYXdSZXN1bHQSPAoQam9iX2NhcmRfcmVzdWx0cxgCIAMoCzIiLmdh",
             "bWUuUHJvdG9Kb2JDYXJkU3VtbW9uRHJhd1Jlc3VsdBIsCgpjb3N0X2l0ZW1z",
-            "GAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiGQoXRXhlY3V0ZURp",
-            "YWxvZ3VlUmVzcG9uc2UiQAoaQ2xhaW1JdGVtRGlzdGlsbGVyUmVzcG9uc2US",
-            "EAoIcmVjZWl2ZWQYASABKAUSEAoIZGVjX3RpbWUYAiABKAMiXAoXUmVnaW9u",
-            "TWFwVW5sb2NrUmVzcG9uc2USEwoLdW5sb2NrX3RpbWUYASABKAMSLAoKY29z",
-            "dF9pdGVtcxgCIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyQktaNWdp",
-            "dGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJv",
-            "dG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
+            "GAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiSgoXRXhlY3V0ZURp",
+            "YWxvZ3VlUmVzcG9uc2USLwoLbm9kZV9ldmVudHMYASADKAsyGi5nYW1lLlBy",
+            "b3RvUmVnaW9uTm9kZUV2ZW50IkAKGkNsYWltSXRlbURpc3RpbGxlclJlc3Bv",
+            "bnNlEhAKCHJlY2VpdmVkGAEgASgFEhAKCGRlY190aW1lGAIgASgDIlwKF1Jl",
+            "Z2lvbk1hcFVubG9ja1Jlc3BvbnNlEhMKC3VubG9ja190aW1lGAEgASgDEiwK",
+            "CmNvc3RfaXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpckJL",
+            "WjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3Rv",
+            "L3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -170,7 +171,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityShopPurchaseResponse), global::Mobius.Proto.Game.AbilityShopPurchaseResponse.Parser, new[]{ "AbilityCardInstance", "CostItem" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CompleteRegionMapResponse), global::Mobius.Proto.Game.CompleteRegionMapResponse.Parser, new[]{ "RegionMapId", "RegionEvents", "AugmentLevelRewards" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonResponse), global::Mobius.Proto.Game.AbilityCardSummonResponse.Parser, new[]{ "AbilityCardResults", "JobCardResults", "CostItems" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ExecuteDialogueResponse), global::Mobius.Proto.Game.ExecuteDialogueResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ExecuteDialogueResponse), global::Mobius.Proto.Game.ExecuteDialogueResponse.Parser, new[]{ "NodeEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimItemDistillerResponse), global::Mobius.Proto.Game.ClaimItemDistillerResponse.Parser, new[]{ "Received", "DecTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapUnlockResponse), global::Mobius.Proto.Game.RegionMapUnlockResponse.Parser, new[]{ "UnlockTime", "CostItems" }, null, null, null, null)
           }));
@@ -8185,12 +8186,23 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExecuteDialogueResponse(ExecuteDialogueResponse other) : this() {
+      nodeEvents_ = other.nodeEvents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExecuteDialogueResponse Clone() {
       return new ExecuteDialogueResponse(this);
+    }
+
+    /// <summary>Field number for the "node_events" field.</summary>
+    public const int NodeEventsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoRegionNodeEvent> _repeated_nodeEvents_codec
+        = pb::FieldCodec.ForMessage(10, global::Mobius.Proto.Game.ProtoRegionNodeEvent.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionNodeEvent> nodeEvents_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionNodeEvent>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionNodeEvent> NodeEvents {
+      get { return nodeEvents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8206,12 +8218,14 @@ namespace Mobius.Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!nodeEvents_.Equals(other.nodeEvents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= nodeEvents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8228,6 +8242,7 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      nodeEvents_.WriteTo(output, _repeated_nodeEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8237,6 +8252,7 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodeEvents_.WriteTo(ref output, _repeated_nodeEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8246,6 +8262,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      size += nodeEvents_.CalculateSize(_repeated_nodeEvents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8257,6 +8274,7 @@ namespace Mobius.Proto.Game {
       if (other == null) {
         return;
       }
+      nodeEvents_.Add(other.nodeEvents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8271,6 +8289,10 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            nodeEvents_.AddEntriesFrom(input, _repeated_nodeEvents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -8285,6 +8307,10 @@ namespace Mobius.Proto.Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            nodeEvents_.AddEntriesFrom(ref input, _repeated_nodeEvents_codec);
+            break;
+          }
         }
       }
     }
