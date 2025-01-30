@@ -326,6 +326,7 @@ message ProtoLastBattleResults {
   repeated ProtoRegionNodeEvent pending_events = 11;
 
   int32 daily_mission_progress = 12;
+  int32 achievement_unlock = 13;
 
 }
 
