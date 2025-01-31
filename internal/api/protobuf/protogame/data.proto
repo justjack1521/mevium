@@ -436,7 +436,7 @@ message ProtoRegionMapInstance {
 
 message ProtoRegionProgressData {
   repeated ProtoRegionDialogueData dialogues = 1;
-  repeated ProtoRegionDungeonData dungeons = 3;
+  repeated ProtoRegionDungeonData dungeons = 2;
 }
 
 message ProtoRegionDialogueData {

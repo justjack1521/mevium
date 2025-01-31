@@ -231,7 +231,7 @@ namespace Mobius.Proto.Game {
             "YXRhGjUKE0pvYlR5cGVEZWZlYXRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
             "bHVlGAIgASgEOgI4ASJ7ChdQcm90b1JlZ2lvblByb2dyZXNzRGF0YRIwCglk",
             "aWFsb2d1ZXMYASADKAsyHS5nYW1lLlByb3RvUmVnaW9uRGlhbG9ndWVEYXRh",
-            "Ei4KCGR1bmdlb25zGAMgAygLMhwuZ2FtZS5Qcm90b1JlZ2lvbkR1bmdlb25E",
+            "Ei4KCGR1bmdlb25zGAIgAygLMhwuZ2FtZS5Qcm90b1JlZ2lvbkR1bmdlb25E",
             "YXRhIikKF1Byb3RvUmVnaW9uRGlhbG9ndWVEYXRhEg4KBnN5c19pZBgBIAEo",
             "CSI5ChZQcm90b1JlZ2lvbkR1bmdlb25EYXRhEg4KBnN5c19pZBgBIAEoCRIP",
             "CgdjbGFpbWVkGAIgASgIIqkBChNQcm90b1JlZ2lvbk5vZGVEYXRhEg8KB25v",
@@ -15553,9 +15553,9 @@ namespace Mobius.Proto.Game {
     }
 
     /// <summary>Field number for the "dungeons" field.</summary>
-    public const int DungeonsFieldNumber = 3;
+    public const int DungeonsFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoRegionDungeonData> _repeated_dungeons_codec
-        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Game.ProtoRegionDungeonData.Parser);
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Game.ProtoRegionDungeonData.Parser);
     private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionDungeonData> dungeons_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionDungeonData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionDungeonData> Dungeons {
@@ -15656,7 +15656,7 @@ namespace Mobius.Proto.Game {
             dialogues_.AddEntriesFrom(input, _repeated_dialogues_codec);
             break;
           }
-          case 26: {
+          case 18: {
             dungeons_.AddEntriesFrom(input, _repeated_dungeons_codec);
             break;
           }
@@ -15678,7 +15678,7 @@ namespace Mobius.Proto.Game {
             dialogues_.AddEntriesFrom(ref input, _repeated_dialogues_codec);
             break;
           }
-          case 26: {
+          case 18: {
             dungeons_.AddEntriesFrom(ref input, _repeated_dungeons_codec);
             break;
           }
