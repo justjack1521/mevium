@@ -578,7 +578,8 @@ message ProtoJobCardSummonDrawResult {
 message ProtoMailboxClaimResult {
     ProtoItemClaimResult item = 1;
     ProtoAbilityCardClaimResult ability_card = 2;
-    ProtoJobCardClaimResult job_card =3;
+    ProtoJobCardClaimResult job_card = 3;
+    ProtoWeaponClaimResult weapon = 4;
 }
 
 message ProtoItemClaimResult {
@@ -593,4 +594,8 @@ message ProtoAbilityCardClaimResult {
 message ProtoJobCardClaimResult {
   ProtoJobCardInstance instance = 1;
   ProtoSkillPanelGroups skill_panel_groups = 2;
+}
+
+message ProtoWeaponClaimResult {
+  ProtoWeaponInstance weapon = 1;
 }
