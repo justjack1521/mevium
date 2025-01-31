@@ -224,3 +224,8 @@ message RegionMapUnlockResponse {
   int64 unlock_time = 1;
   repeated ProtoItemValuePair cost_items = 2;
 }
+
+message ClaimDungeonResponse {
+  string id = 1;
+  repeated ProtoItemValuePair reward_items = 2;
+}

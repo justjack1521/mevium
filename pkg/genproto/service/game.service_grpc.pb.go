@@ -57,6 +57,7 @@ const (
 	MeviusGameService_AbilityCardSummon_FullMethodName      = "/service.MeviusGameService/AbilityCardSummon"
 	MeviusGameService_ExecuteDialogue_FullMethodName        = "/service.MeviusGameService/ExecuteDialogue"
 	MeviusGameService_ClaimItemDistiller_FullMethodName     = "/service.MeviusGameService/ClaimItemDistiller"
+	MeviusGameService_ClaimDungeon_FullMethodName           = "/service.MeviusGameService/ClaimDungeon"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -101,6 +102,7 @@ type MeviusGameServiceClient interface {
 	AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error)
+	ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -444,6 +446,15 @@ func (c *meviusGameServiceClient) ClaimItemDistiller(ctx context.Context, in *pr
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error) {
+	out := new(protogame.ClaimDungeonResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ClaimDungeon_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -486,6 +497,7 @@ type MeviusGameServiceServer interface {
 	AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error)
+	ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -602,6 +614,9 @@ func (UnimplementedMeviusGameServiceServer) ExecuteDialogue(context.Context, *pr
 }
 func (UnimplementedMeviusGameServiceServer) ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClaimItemDistiller not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimDungeon not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1281,6 +1296,24 @@ func _MeviusGameService_ClaimItemDistiller_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_ClaimDungeon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.ClaimDungeonRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ClaimDungeon(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ClaimDungeon_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ClaimDungeon(ctx, req.(*protogame.ClaimDungeonRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1435,6 +1468,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ClaimItemDistiller",
 			Handler:    _MeviusGameService_ClaimItemDistiller_Handler,
+		},
+		{
+			MethodName: "ClaimDungeon",
+			Handler:    _MeviusGameService_ClaimDungeon_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

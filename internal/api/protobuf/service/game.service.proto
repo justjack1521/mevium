@@ -46,5 +46,6 @@ service MeviusGameService {
   rpc AbilityCardSummon(game.AbilityCardSummonRequest) returns (game.AbilityCardSummonResponse) {}
   rpc ExecuteDialogue(game.ExecuteDialogueRequest) returns (game.ExecuteDialogueResponse) {}
   rpc ClaimItemDistiller(game.ClaimItemDistillerRequest) returns (game.ClaimItemDistillerResponse) {}
+  rpc ClaimDungeon(game.ClaimDungeonRequest) returns (game.ClaimDungeonResponse) {}
 }
 

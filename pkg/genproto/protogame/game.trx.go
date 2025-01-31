@@ -308,6 +308,18 @@ func NewRegionMapUnlockRequest(bytes []byte) (*RegionMapUnlockRequest, error) {
 	return req, nil
 }
 
+func NewClaimDungeonRequest(bytes []byte) (*ClaimDungeonRequest, error) {
+	req := &ClaimDungeonRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *ClaimDungeonResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *RegionMapUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
