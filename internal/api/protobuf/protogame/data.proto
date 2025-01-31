@@ -430,10 +430,27 @@ message ProtoRegionMapInstance {
   repeated ProtoRegionDialogueData dialogue_data = 14;
   int64 unlock_time = 15;
 
+  ProtoRegionProgressData progress = 16;
+
+}
+
+message ProtoRegionProgressData {
+  repeated ProtoRegionDialogueData dialogues = 1;
+  repeated ProtoRegionTalkEventData talk_events = 2;
+  repeated ProtoRegionDungeonData dungeons = 3;
 }
 
 message ProtoRegionDialogueData {
   string sys_id = 1;
+}
+
+message ProtoRegionTalkEventData {
+  string sys_id = 1;
+}
+
+message ProtoRegionDungeonData {
+  string sys_id = 1;
+  bool claimed = 2;
 }
 
 message ProtoRegionNodeData {
