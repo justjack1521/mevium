@@ -52,12 +52,12 @@ const (
 	MeviusGameService_PurchaseItem_FullMethodName           = "/service.MeviusGameService/PurchaseItem"
 	MeviusGameService_PurchaseCard_FullMethodName           = "/service.MeviusGameService/PurchaseCard"
 	MeviusGameService_AbilityShopPurchase_FullMethodName    = "/service.MeviusGameService/AbilityShopPurchase"
-	MeviusGameService_CompleteRegion_FullMethodName         = "/service.MeviusGameService/CompleteRegion"
+	MeviusGameService_ClaimRegion_FullMethodName            = "/service.MeviusGameService/ClaimRegion"
+	MeviusGameService_ClaimDungeon_FullMethodName           = "/service.MeviusGameService/ClaimDungeon"
 	MeviusGameService_UnlockRegion_FullMethodName           = "/service.MeviusGameService/UnlockRegion"
 	MeviusGameService_AbilityCardSummon_FullMethodName      = "/service.MeviusGameService/AbilityCardSummon"
 	MeviusGameService_ExecuteDialogue_FullMethodName        = "/service.MeviusGameService/ExecuteDialogue"
 	MeviusGameService_ClaimItemDistiller_FullMethodName     = "/service.MeviusGameService/ClaimItemDistiller"
-	MeviusGameService_ClaimDungeon_FullMethodName           = "/service.MeviusGameService/ClaimDungeon"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -97,12 +97,12 @@ type MeviusGameServiceClient interface {
 	PurchaseItem(ctx context.Context, in *protogame.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopItemPurchaseResponse, error)
 	PurchaseCard(ctx context.Context, in *protogame.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(ctx context.Context, in *protogame.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protogame.AbilityShopPurchaseResponse, error)
-	CompleteRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error)
+	ClaimRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error)
+	ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error)
 	UnlockRegion(ctx context.Context, in *protogame.RegionMapUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error)
 	AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error)
-	ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -401,9 +401,18 @@ func (c *meviusGameServiceClient) AbilityShopPurchase(ctx context.Context, in *p
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error) {
+func (c *meviusGameServiceClient) ClaimRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error) {
 	out := new(protogame.ClaimRegionMapResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_CompleteRegion_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, MeviusGameService_ClaimRegion_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error) {
+	out := new(protogame.ClaimDungeonResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ClaimDungeon_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -440,15 +449,6 @@ func (c *meviusGameServiceClient) ExecuteDialogue(ctx context.Context, in *proto
 func (c *meviusGameServiceClient) ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error) {
 	out := new(protogame.ClaimItemDistillerResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_ClaimItemDistiller_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *meviusGameServiceClient) ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error) {
-	out := new(protogame.ClaimDungeonResponse)
-	err := c.cc.Invoke(ctx, MeviusGameService_ClaimDungeon_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -492,12 +492,12 @@ type MeviusGameServiceServer interface {
 	PurchaseItem(context.Context, *protogame.ItemShopItemPurchaseRequest) (*protogame.ItemShopItemPurchaseResponse, error)
 	PurchaseCard(context.Context, *protogame.ItemShopCardPurchaseRequest) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error)
-	CompleteRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error)
+	ClaimRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error)
+	ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error)
 	UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error)
 	AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error)
-	ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -600,8 +600,11 @@ func (UnimplementedMeviusGameServiceServer) PurchaseCard(context.Context, *proto
 func (UnimplementedMeviusGameServiceServer) AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AbilityShopPurchase not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CompleteRegion not implemented")
+func (UnimplementedMeviusGameServiceServer) ClaimRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimRegion not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimDungeon not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnlockRegion not implemented")
@@ -614,9 +617,6 @@ func (UnimplementedMeviusGameServiceServer) ExecuteDialogue(context.Context, *pr
 }
 func (UnimplementedMeviusGameServiceServer) ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClaimItemDistiller not implemented")
-}
-func (UnimplementedMeviusGameServiceServer) ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ClaimDungeon not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1206,20 +1206,38 @@ func _MeviusGameService_AbilityShopPurchase_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _MeviusGameService_ClaimRegion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protogame.ClaimRegionMapRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).CompleteRegion(ctx, in)
+		return srv.(MeviusGameServiceServer).ClaimRegion(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusGameService_CompleteRegion_FullMethodName,
+		FullMethod: MeviusGameService_ClaimRegion_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).CompleteRegion(ctx, req.(*protogame.ClaimRegionMapRequest))
+		return srv.(MeviusGameServiceServer).ClaimRegion(ctx, req.(*protogame.ClaimRegionMapRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_ClaimDungeon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.ClaimDungeonRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ClaimDungeon(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ClaimDungeon_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ClaimDungeon(ctx, req.(*protogame.ClaimDungeonRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1292,24 +1310,6 @@ func _MeviusGameService_ClaimItemDistiller_Handler(srv interface{}, ctx context.
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusGameServiceServer).ClaimItemDistiller(ctx, req.(*protogame.ClaimItemDistillerRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _MeviusGameService_ClaimDungeon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protogame.ClaimDungeonRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MeviusGameServiceServer).ClaimDungeon(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: MeviusGameService_ClaimDungeon_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).ClaimDungeon(ctx, req.(*protogame.ClaimDungeonRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1450,8 +1450,12 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _MeviusGameService_AbilityShopPurchase_Handler,
 		},
 		{
-			MethodName: "CompleteRegion",
-			Handler:    _MeviusGameService_CompleteRegion_Handler,
+			MethodName: "ClaimRegion",
+			Handler:    _MeviusGameService_ClaimRegion_Handler,
+		},
+		{
+			MethodName: "ClaimDungeon",
+			Handler:    _MeviusGameService_ClaimDungeon_Handler,
 		},
 		{
 			MethodName: "UnlockRegion",
@@ -1468,10 +1472,6 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ClaimItemDistiller",
 			Handler:    _MeviusGameService_ClaimItemDistiller_Handler,
-		},
-		{
-			MethodName: "ClaimDungeon",
-			Handler:    _MeviusGameService_ClaimDungeon_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
