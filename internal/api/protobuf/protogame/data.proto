@@ -437,6 +437,9 @@ message ProtoRegionMapInstance {
 message ProtoRegionProgressData {
   repeated ProtoRegionDialogueData dialogues = 1;
   repeated ProtoRegionDungeonData dungeons = 2;
+  bool cleared = 3;
+  bool completed = 4;
+  bool clear_claimed = 5;
 }
 
 message ProtoRegionDialogueData {

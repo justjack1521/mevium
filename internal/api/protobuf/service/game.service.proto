@@ -41,7 +41,7 @@ service MeviusGameService {
   rpc PurchaseItem(game.ItemShopItemPurchaseRequest) returns (game.ItemShopItemPurchaseResponse) {}
   rpc PurchaseCard(game.ItemShopCardPurchaseRequest) returns (game.ItemShopCardPurchaseResponse) {}
   rpc AbilityShopPurchase(game.AbilityShopPurchaseRequest) returns (game.AbilityShopPurchaseResponse) {}
-  rpc CompleteRegion(game.CompleteRegionMapRequest) returns (game.CompleteRegionMapResponse) {}
+  rpc CompleteRegion(game.ClaimRegionMapRequest) returns (game.ClaimRegionMapResponse) {}
   rpc UnlockRegion(game.RegionMapUnlockRequest) returns (game.RegionMapUnlockResponse) {}
   rpc AbilityCardSummon(game.AbilityCardSummonRequest) returns (game.AbilityCardSummonResponse) {}
   rpc ExecuteDialogue(game.ExecuteDialogueRequest) returns (game.ExecuteDialogueResponse) {}

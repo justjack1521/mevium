@@ -246,7 +246,7 @@ message AbilityShopPurchaseRequest {
   bool max = 2;
 }
 
-message CompleteRegionMapRequest {
+message ClaimRegionMapRequest {
   string region_map_id = 1;
 }
 

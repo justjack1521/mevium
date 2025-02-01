@@ -97,7 +97,7 @@ type MeviusGameServiceClient interface {
 	PurchaseItem(ctx context.Context, in *protogame.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopItemPurchaseResponse, error)
 	PurchaseCard(ctx context.Context, in *protogame.ItemShopCardPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(ctx context.Context, in *protogame.AbilityShopPurchaseRequest, opts ...grpc.CallOption) (*protogame.AbilityShopPurchaseResponse, error)
-	CompleteRegion(ctx context.Context, in *protogame.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protogame.CompleteRegionMapResponse, error)
+	CompleteRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error)
 	UnlockRegion(ctx context.Context, in *protogame.RegionMapUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error)
 	AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
@@ -401,8 +401,8 @@ func (c *meviusGameServiceClient) AbilityShopPurchase(ctx context.Context, in *p
 	return out, nil
 }
 
-func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protogame.CompleteRegionMapRequest, opts ...grpc.CallOption) (*protogame.CompleteRegionMapResponse, error) {
-	out := new(protogame.CompleteRegionMapResponse)
+func (c *meviusGameServiceClient) CompleteRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error) {
+	out := new(protogame.ClaimRegionMapResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_CompleteRegion_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -492,7 +492,7 @@ type MeviusGameServiceServer interface {
 	PurchaseItem(context.Context, *protogame.ItemShopItemPurchaseRequest) (*protogame.ItemShopItemPurchaseResponse, error)
 	PurchaseCard(context.Context, *protogame.ItemShopCardPurchaseRequest) (*protogame.ItemShopCardPurchaseResponse, error)
 	AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error)
-	CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error)
+	CompleteRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error)
 	UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error)
 	AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
@@ -600,7 +600,7 @@ func (UnimplementedMeviusGameServiceServer) PurchaseCard(context.Context, *proto
 func (UnimplementedMeviusGameServiceServer) AbilityShopPurchase(context.Context, *protogame.AbilityShopPurchaseRequest) (*protogame.AbilityShopPurchaseResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AbilityShopPurchase not implemented")
 }
-func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protogame.CompleteRegionMapRequest) (*protogame.CompleteRegionMapResponse, error) {
+func (UnimplementedMeviusGameServiceServer) CompleteRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CompleteRegion not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error) {
@@ -1207,7 +1207,7 @@ func _MeviusGameService_AbilityShopPurchase_Handler(srv interface{}, ctx context
 }
 
 func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protogame.CompleteRegionMapRequest)
+	in := new(protogame.ClaimRegionMapRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -1219,7 +1219,7 @@ func _MeviusGameService_CompleteRegion_Handler(srv interface{}, ctx context.Cont
 		FullMethod: MeviusGameService_CompleteRegion_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusGameServiceServer).CompleteRegion(ctx, req.(*protogame.CompleteRegionMapRequest))
+		return srv.(MeviusGameServiceServer).CompleteRegion(ctx, req.(*protogame.ClaimRegionMapRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

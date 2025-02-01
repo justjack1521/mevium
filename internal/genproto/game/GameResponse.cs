@@ -115,26 +115,26 @@ namespace Mobius.Proto.Game {
             "b0FiaWxpdHlDYXJkSW5zdGFuY2UiiQEKG0FiaWxpdHlTaG9wUHVyY2hhc2VS",
             "ZXNwb25zZRI9ChVhYmlsaXR5X2NhcmRfaW5zdGFuY2UYASABKAsyHi5nYW1l",
             "LlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRIrCgljb3N0X2l0ZW0YAiABKAsy",
-            "GC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciL2AQoZQ29tcGxldGVSZWdpb25N",
-            "YXBSZXNwb25zZRIVCg1yZWdpb25fbWFwX2lkGAEgASgJEi0KDXJlZ2lvbl9l",
-            "dmVudHMYAyADKAsyFi5nYW1lLlByb3RvUmVnaW9uRXZlbnQSVwoVYXVnbWVu",
-            "dF9sZXZlbF9yZXdhcmRzGAQgAygLMjguZ2FtZS5Db21wbGV0ZVJlZ2lvbk1h",
-            "cFJlc3BvbnNlLkF1Z21lbnRMZXZlbFJld2FyZHNFbnRyeRo6ChhBdWdtZW50",
-            "TGV2ZWxSZXdhcmRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgF",
-            "OgI4ASLNAQoZQWJpbGl0eUNhcmRTdW1tb25SZXNwb25zZRJEChRhYmlsaXR5",
-            "X2NhcmRfcmVzdWx0cxgBIAMoCzImLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZFN1",
-            "bW1vbkRyYXdSZXN1bHQSPAoQam9iX2NhcmRfcmVzdWx0cxgCIAMoCzIiLmdh",
-            "bWUuUHJvdG9Kb2JDYXJkU3VtbW9uRHJhd1Jlc3VsdBIsCgpjb3N0X2l0ZW1z",
-            "GAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiSgoXRXhlY3V0ZURp",
-            "YWxvZ3VlUmVzcG9uc2USLwoLbm9kZV9ldmVudHMYASADKAsyGi5nYW1lLlBy",
-            "b3RvUmVnaW9uTm9kZUV2ZW50IkAKGkNsYWltSXRlbURpc3RpbGxlclJlc3Bv",
-            "bnNlEhAKCHJlY2VpdmVkGAEgASgFEhAKCGRlY190aW1lGAIgASgDIlwKF1Jl",
-            "Z2lvbk1hcFVubG9ja1Jlc3BvbnNlEhMKC3VubG9ja190aW1lGAEgASgDEiwK",
-            "CmNvc3RfaXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciJS",
-            "ChRDbGFpbUR1bmdlb25SZXNwb25zZRIKCgJpZBgBIAEoCRIuCgxyZXdhcmRf",
-            "aXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpckJLWjVnaXRo",
-            "dWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3Rv",
-            "Z2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
+            "GC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciLwAQoWQ2xhaW1SZWdpb25NYXBS",
+            "ZXNwb25zZRIVCg1yZWdpb25fbWFwX2lkGAEgASgJEi0KDXJlZ2lvbl9ldmVu",
+            "dHMYAyADKAsyFi5nYW1lLlByb3RvUmVnaW9uRXZlbnQSVAoVYXVnbWVudF9s",
+            "ZXZlbF9yZXdhcmRzGAQgAygLMjUuZ2FtZS5DbGFpbVJlZ2lvbk1hcFJlc3Bv",
+            "bnNlLkF1Z21lbnRMZXZlbFJld2FyZHNFbnRyeRo6ChhBdWdtZW50TGV2ZWxS",
+            "ZXdhcmRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASLN",
+            "AQoZQWJpbGl0eUNhcmRTdW1tb25SZXNwb25zZRJEChRhYmlsaXR5X2NhcmRf",
+            "cmVzdWx0cxgBIAMoCzImLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRy",
+            "YXdSZXN1bHQSPAoQam9iX2NhcmRfcmVzdWx0cxgCIAMoCzIiLmdhbWUuUHJv",
+            "dG9Kb2JDYXJkU3VtbW9uRHJhd1Jlc3VsdBIsCgpjb3N0X2l0ZW1zGAMgAygL",
+            "MhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiSgoXRXhlY3V0ZURpYWxvZ3Vl",
+            "UmVzcG9uc2USLwoLbm9kZV9ldmVudHMYASADKAsyGi5nYW1lLlByb3RvUmVn",
+            "aW9uTm9kZUV2ZW50IkAKGkNsYWltSXRlbURpc3RpbGxlclJlc3BvbnNlEhAK",
+            "CHJlY2VpdmVkGAEgASgFEhAKCGRlY190aW1lGAIgASgDIlwKF1JlZ2lvbk1h",
+            "cFVubG9ja1Jlc3BvbnNlEhMKC3VubG9ja190aW1lGAEgASgDEiwKCmNvc3Rf",
+            "aXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciJSChRDbGFp",
+            "bUR1bmdlb25SZXNwb25zZRIKCgJpZBgBIAEoCRIuCgxyZXdhcmRfaXRlbXMY",
+            "AiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpckJLWjVnaXRodWIuY29t",
+            "L2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoC",
+            "EU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -171,7 +171,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopItemPurchaseResponse), global::Mobius.Proto.Game.ItemShopItemPurchaseResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopCardPurchaseResponse), global::Mobius.Proto.Game.ItemShopCardPurchaseResponse.Parser, new[]{ "AbilityCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityShopPurchaseResponse), global::Mobius.Proto.Game.AbilityShopPurchaseResponse.Parser, new[]{ "AbilityCardInstance", "CostItem" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CompleteRegionMapResponse), global::Mobius.Proto.Game.CompleteRegionMapResponse.Parser, new[]{ "RegionMapId", "RegionEvents", "AugmentLevelRewards" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimRegionMapResponse), global::Mobius.Proto.Game.ClaimRegionMapResponse.Parser, new[]{ "RegionMapId", "RegionEvents", "AugmentLevelRewards" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonResponse), global::Mobius.Proto.Game.AbilityCardSummonResponse.Parser, new[]{ "AbilityCardResults", "JobCardResults", "CostItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ExecuteDialogueResponse), global::Mobius.Proto.Game.ExecuteDialogueResponse.Parser, new[]{ "NodeEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimItemDistillerResponse), global::Mobius.Proto.Game.ClaimItemDistillerResponse.Parser, new[]{ "Received", "DecTime" }, null, null, null, null),
@@ -7727,15 +7727,15 @@ namespace Mobius.Proto.Game {
 
   }
 
-  public sealed partial class CompleteRegionMapResponse : pb::IMessage<CompleteRegionMapResponse>
+  public sealed partial class ClaimRegionMapResponse : pb::IMessage<ClaimRegionMapResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CompleteRegionMapResponse> _parser = new pb::MessageParser<CompleteRegionMapResponse>(() => new CompleteRegionMapResponse());
+    private static readonly pb::MessageParser<ClaimRegionMapResponse> _parser = new pb::MessageParser<ClaimRegionMapResponse>(() => new ClaimRegionMapResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CompleteRegionMapResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<ClaimRegionMapResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -7748,14 +7748,14 @@ namespace Mobius.Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CompleteRegionMapResponse() {
+    public ClaimRegionMapResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CompleteRegionMapResponse(CompleteRegionMapResponse other) : this() {
+    public ClaimRegionMapResponse(ClaimRegionMapResponse other) : this() {
       regionMapId_ = other.regionMapId_;
       regionEvents_ = other.regionEvents_.Clone();
       augmentLevelRewards_ = other.augmentLevelRewards_.Clone();
@@ -7763,8 +7763,8 @@ namespace Mobius.Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CompleteRegionMapResponse Clone() {
-      return new CompleteRegionMapResponse(this);
+    public ClaimRegionMapResponse Clone() {
+      return new ClaimRegionMapResponse(this);
     }
 
     /// <summary>Field number for the "region_map_id" field.</summary>
@@ -7800,11 +7800,11 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as CompleteRegionMapResponse);
+      return Equals(other as ClaimRegionMapResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CompleteRegionMapResponse other) {
+    public bool Equals(ClaimRegionMapResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -7881,7 +7881,7 @@ namespace Mobius.Proto.Game {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CompleteRegionMapResponse other) {
+    public void MergeFrom(ClaimRegionMapResponse other) {
       if (other == null) {
         return;
       }
