@@ -50,6 +50,7 @@ enum GameRequestType {
   CARD_AUTO_SELL = 4100;
   UNLOCK_REGION_MAP = 4200;
   CLAIM_DUNGEON = 4300;
+  UNLOCK_REGION_NODE = 4400;
 }
 
 enum TeleportRequestType {
