@@ -44,6 +44,7 @@ service MeviusGameService {
   rpc ClaimRegion(game.ClaimRegionMapRequest) returns (game.ClaimRegionMapResponse) {}
   rpc ClaimDungeon(game.ClaimDungeonRequest) returns (game.ClaimDungeonResponse) {}
   rpc UnlockRegion(game.RegionMapUnlockRequest) returns (game.RegionMapUnlockResponse) {}
+  rpc UnlockRegionNode(game.RegionMapNodeUnlockRequest) returns (game.RegionMapNodeUnlockResponse) {}
   rpc AbilityCardSummon(game.AbilityCardSummonRequest) returns (game.AbilityCardSummonResponse) {}
   rpc ExecuteDialogue(game.ExecuteDialogueRequest) returns (game.ExecuteDialogueResponse) {}
   rpc ClaimItemDistiller(game.ClaimItemDistillerRequest) returns (game.ClaimItemDistillerResponse) {}

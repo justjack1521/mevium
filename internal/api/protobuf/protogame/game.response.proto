@@ -229,3 +229,8 @@ message ClaimDungeonResponse {
   string id = 1;
   repeated ProtoItemValuePair reward_items = 2;
 }
+
+message RegionMapNodeUnlockResponse {
+  string unlocked_node = 1;
+  repeated ProtoItemValuePair items_removed = 2;
+}

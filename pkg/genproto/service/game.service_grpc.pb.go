@@ -55,6 +55,7 @@ const (
 	MeviusGameService_ClaimRegion_FullMethodName            = "/service.MeviusGameService/ClaimRegion"
 	MeviusGameService_ClaimDungeon_FullMethodName           = "/service.MeviusGameService/ClaimDungeon"
 	MeviusGameService_UnlockRegion_FullMethodName           = "/service.MeviusGameService/UnlockRegion"
+	MeviusGameService_UnlockRegionNode_FullMethodName       = "/service.MeviusGameService/UnlockRegionNode"
 	MeviusGameService_AbilityCardSummon_FullMethodName      = "/service.MeviusGameService/AbilityCardSummon"
 	MeviusGameService_ExecuteDialogue_FullMethodName        = "/service.MeviusGameService/ExecuteDialogue"
 	MeviusGameService_ClaimItemDistiller_FullMethodName     = "/service.MeviusGameService/ClaimItemDistiller"
@@ -100,6 +101,7 @@ type MeviusGameServiceClient interface {
 	ClaimRegion(ctx context.Context, in *protogame.ClaimRegionMapRequest, opts ...grpc.CallOption) (*protogame.ClaimRegionMapResponse, error)
 	ClaimDungeon(ctx context.Context, in *protogame.ClaimDungeonRequest, opts ...grpc.CallOption) (*protogame.ClaimDungeonResponse, error)
 	UnlockRegion(ctx context.Context, in *protogame.RegionMapUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapUnlockResponse, error)
+	UnlockRegionNode(ctx context.Context, in *protogame.RegionMapNodeUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapNodeUnlockResponse, error)
 	AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error)
@@ -428,6 +430,15 @@ func (c *meviusGameServiceClient) UnlockRegion(ctx context.Context, in *protogam
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) UnlockRegionNode(ctx context.Context, in *protogame.RegionMapNodeUnlockRequest, opts ...grpc.CallOption) (*protogame.RegionMapNodeUnlockResponse, error) {
+	out := new(protogame.RegionMapNodeUnlockResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_UnlockRegionNode_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusGameServiceClient) AbilityCardSummon(ctx context.Context, in *protogame.AbilityCardSummonRequest, opts ...grpc.CallOption) (*protogame.AbilityCardSummonResponse, error) {
 	out := new(protogame.AbilityCardSummonResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_AbilityCardSummon_FullMethodName, in, out, opts...)
@@ -495,6 +506,7 @@ type MeviusGameServiceServer interface {
 	ClaimRegion(context.Context, *protogame.ClaimRegionMapRequest) (*protogame.ClaimRegionMapResponse, error)
 	ClaimDungeon(context.Context, *protogame.ClaimDungeonRequest) (*protogame.ClaimDungeonResponse, error)
 	UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error)
+	UnlockRegionNode(context.Context, *protogame.RegionMapNodeUnlockRequest) (*protogame.RegionMapNodeUnlockResponse, error)
 	AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error)
 	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error)
@@ -608,6 +620,9 @@ func (UnimplementedMeviusGameServiceServer) ClaimDungeon(context.Context, *proto
 }
 func (UnimplementedMeviusGameServiceServer) UnlockRegion(context.Context, *protogame.RegionMapUnlockRequest) (*protogame.RegionMapUnlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnlockRegion not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) UnlockRegionNode(context.Context, *protogame.RegionMapNodeUnlockRequest) (*protogame.RegionMapNodeUnlockResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UnlockRegionNode not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) AbilityCardSummon(context.Context, *protogame.AbilityCardSummonRequest) (*protogame.AbilityCardSummonResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AbilityCardSummon not implemented")
@@ -1260,6 +1275,24 @@ func _MeviusGameService_UnlockRegion_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_UnlockRegionNode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.RegionMapNodeUnlockRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).UnlockRegionNode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_UnlockRegionNode_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).UnlockRegionNode(ctx, req.(*protogame.RegionMapNodeUnlockRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusGameService_AbilityCardSummon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protogame.AbilityCardSummonRequest)
 	if err := dec(in); err != nil {
@@ -1460,6 +1493,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UnlockRegion",
 			Handler:    _MeviusGameService_UnlockRegion_Handler,
+		},
+		{
+			MethodName: "UnlockRegionNode",
+			Handler:    _MeviusGameService_UnlockRegionNode_Handler,
 		},
 		{
 			MethodName: "AbilityCardSummon",

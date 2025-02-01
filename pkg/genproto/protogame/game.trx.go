@@ -284,6 +284,14 @@ func NewExecuteDialogueRequest(bytes []byte) (*ExecuteDialogueRequest, error) {
 	return req, nil
 }
 
+func NewRegionMapNodeUnlockRequest(bytes []byte) (*RegionMapNodeUnlockRequest, error) {
+	req := &RegionMapNodeUnlockRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewClaimItemDistillerRequest(bytes []byte) (*ClaimItemDistillerRequest, error) {
 	req := &ClaimItemDistillerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -314,6 +322,10 @@ func NewClaimDungeonRequest(bytes []byte) (*ClaimDungeonRequest, error) {
 		return nil, err
 	}
 	return req, nil
+}
+
+func (x *RegionMapNodeUnlockResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
 }
 
 func (x *ClaimDungeonResponse) MarshallBinary() ([]byte, error) {

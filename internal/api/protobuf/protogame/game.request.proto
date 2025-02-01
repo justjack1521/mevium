@@ -266,6 +266,10 @@ message RegionMapUnlockRequest {
   string map_id = 1;
 }
 
+message RegionMapNodeUnlockRequest {
+  string lock_id = 1;
+}
+
 message ClaimDungeonRequest {
   string id = 1;
 }
