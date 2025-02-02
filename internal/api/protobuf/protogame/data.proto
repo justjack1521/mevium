@@ -450,6 +450,8 @@ message ProtoRegionDialogueData {
 message ProtoRegionDungeonData {
   string sys_id = 1;
   bool claimed = 2;
+  int32 clear_count = 3;
+  bool cleared = 4;
 }
 
 message ProtoRegionNodeData {
