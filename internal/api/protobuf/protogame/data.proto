@@ -428,10 +428,9 @@ message ProtoRegionMapInstance {
 
   repeated ProtoRegionMissionInstance mission_data = 13;
 
-  repeated ProtoRegionDialogueData dialogue_data = 14;
-  int64 unlock_time = 15;
+  int64 unlock_time = 14;
 
-  ProtoRegionProgressData progress = 16;
+  ProtoRegionProgressData progress = 15;
 
 }
 
