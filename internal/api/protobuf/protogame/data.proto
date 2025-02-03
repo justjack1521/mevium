@@ -444,6 +444,7 @@ message ProtoRegionProgressData {
 
 message ProtoRegionDialogueData {
   string sys_id = 1;
+  bool pending = 2;
 }
 
 message ProtoRegionDungeonData {
