@@ -417,7 +417,6 @@ message ProtoRegionMapInstance {
   repeated ProtoRegionLockData lock_data = 4;
   uint64 enemies_defeated = 5;
   uint64 high_score = 6;
-  map <string, uint64> job_type_defeats = 7;
   repeated ProtoRegionNodeEvent pending_events = 8;
   repeated ProtoRegionNodeEvent persisted_events = 9;
 
