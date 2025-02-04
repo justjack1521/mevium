@@ -13,6 +13,7 @@ message AbilityCard {
   AugmentConfig augment_config = 6;
   int32 fusion_exp_override = 7;
   int32 sale_gold_override = 8;
+  string override_ability = 9;
 }
 
 message BaseAbilityCard {
