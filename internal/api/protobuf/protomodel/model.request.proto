@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomodel";
+
+import "protomodel/ability_card.proto";
+
+message ValidateModelResponse {
+
+}
+
+message ValidateBaseCardRequest {
+  BaseAbilityCard base_card = 1;
+}
