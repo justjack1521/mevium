@@ -20,14 +20,14 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusModelService_ValidateBaseCard_FullMethodName = "/service.MeviusModelService/ValidateBaseCard"
+	MeviusModelService_ValidateAbilityCard_FullMethodName = "/service.MeviusModelService/ValidateAbilityCard"
 )
 
 // MeviusModelServiceClient is the client API for MeviusModelService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusModelServiceClient interface {
-	ValidateBaseCard(ctx context.Context, in *protomodel.ValidateBaseCardRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error)
+	ValidateAbilityCard(ctx context.Context, in *protomodel.ValidateAbilityCardRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error)
 }
 
 type meviusModelServiceClient struct {
@@ -38,9 +38,9 @@ func NewMeviusModelServiceClient(cc grpc.ClientConnInterface) MeviusModelService
 	return &meviusModelServiceClient{cc}
 }
 
-func (c *meviusModelServiceClient) ValidateBaseCard(ctx context.Context, in *protomodel.ValidateBaseCardRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error) {
+func (c *meviusModelServiceClient) ValidateAbilityCard(ctx context.Context, in *protomodel.ValidateAbilityCardRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error) {
 	out := new(protomodel.ValidateModelResponse)
-	err := c.cc.Invoke(ctx, MeviusModelService_ValidateBaseCard_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, MeviusModelService_ValidateAbilityCard_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -51,15 +51,15 @@ func (c *meviusModelServiceClient) ValidateBaseCard(ctx context.Context, in *pro
 // All implementations should embed UnimplementedMeviusModelServiceServer
 // for forward compatibility
 type MeviusModelServiceServer interface {
-	ValidateBaseCard(context.Context, *protomodel.ValidateBaseCardRequest) (*protomodel.ValidateModelResponse, error)
+	ValidateAbilityCard(context.Context, *protomodel.ValidateAbilityCardRequest) (*protomodel.ValidateModelResponse, error)
 }
 
 // UnimplementedMeviusModelServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedMeviusModelServiceServer struct {
 }
 
-func (UnimplementedMeviusModelServiceServer) ValidateBaseCard(context.Context, *protomodel.ValidateBaseCardRequest) (*protomodel.ValidateModelResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ValidateBaseCard not implemented")
+func (UnimplementedMeviusModelServiceServer) ValidateAbilityCard(context.Context, *protomodel.ValidateAbilityCardRequest) (*protomodel.ValidateModelResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ValidateAbilityCard not implemented")
 }
 
 // UnsafeMeviusModelServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -73,20 +73,20 @@ func RegisterMeviusModelServiceServer(s grpc.ServiceRegistrar, srv MeviusModelSe
 	s.RegisterService(&MeviusModelService_ServiceDesc, srv)
 }
 
-func _MeviusModelService_ValidateBaseCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protomodel.ValidateBaseCardRequest)
+func _MeviusModelService_ValidateAbilityCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomodel.ValidateAbilityCardRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MeviusModelServiceServer).ValidateBaseCard(ctx, in)
+		return srv.(MeviusModelServiceServer).ValidateAbilityCard(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MeviusModelService_ValidateBaseCard_FullMethodName,
+		FullMethod: MeviusModelService_ValidateAbilityCard_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusModelServiceServer).ValidateBaseCard(ctx, req.(*protomodel.ValidateBaseCardRequest))
+		return srv.(MeviusModelServiceServer).ValidateAbilityCard(ctx, req.(*protomodel.ValidateAbilityCardRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -99,8 +99,8 @@ var MeviusModelService_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*MeviusModelServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "ValidateBaseCard",
-			Handler:    _MeviusModelService_ValidateBaseCard_Handler,
+			MethodName: "ValidateAbilityCard",
+			Handler:    _MeviusModelService_ValidateAbilityCard_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

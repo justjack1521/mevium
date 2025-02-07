@@ -10,6 +10,6 @@ message ValidateModelResponse {
 
 }
 
-message ValidateBaseCardRequest {
-  BaseAbilityCard base_card = 1;
+message ValidateAbilityCardRequest {
+  AbilityCard ability_card = 1;
 }
