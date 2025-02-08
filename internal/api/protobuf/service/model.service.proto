@@ -8,4 +8,5 @@ import "protomodel/model.request.proto";
 
 service MeviusModelService {
   rpc ValidateAbilityCard(model.ValidateAbilityCardRequest) returns (model.ValidateModelResponse) {}
+  rpc ValidateBaseItem(model.ValidateBaseItemRequest) returns (model.ValidateModelResponse) {}
 }

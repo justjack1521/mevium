@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomodel";
+
+message BaseItem {
+  string sys_id = 1;
+  bool active = 2;
+  string name = 3;
+  int32 maximum = 4;
+  int32 monthly_maximum = 5;
+}

@@ -21,6 +21,7 @@ const _ = grpc.SupportPackageIsVersion7
 
 const (
 	MeviusModelService_ValidateAbilityCard_FullMethodName = "/service.MeviusModelService/ValidateAbilityCard"
+	MeviusModelService_ValidateBaseItem_FullMethodName    = "/service.MeviusModelService/ValidateBaseItem"
 )
 
 // MeviusModelServiceClient is the client API for MeviusModelService service.
@@ -28,6 +29,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MeviusModelServiceClient interface {
 	ValidateAbilityCard(ctx context.Context, in *protomodel.ValidateAbilityCardRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error)
+	ValidateBaseItem(ctx context.Context, in *protomodel.ValidateBaseItemRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error)
 }
 
 type meviusModelServiceClient struct {
@@ -47,11 +49,21 @@ func (c *meviusModelServiceClient) ValidateAbilityCard(ctx context.Context, in *
 	return out, nil
 }
 
+func (c *meviusModelServiceClient) ValidateBaseItem(ctx context.Context, in *protomodel.ValidateBaseItemRequest, opts ...grpc.CallOption) (*protomodel.ValidateModelResponse, error) {
+	out := new(protomodel.ValidateModelResponse)
+	err := c.cc.Invoke(ctx, MeviusModelService_ValidateBaseItem_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusModelServiceServer is the server API for MeviusModelService service.
 // All implementations should embed UnimplementedMeviusModelServiceServer
 // for forward compatibility
 type MeviusModelServiceServer interface {
 	ValidateAbilityCard(context.Context, *protomodel.ValidateAbilityCardRequest) (*protomodel.ValidateModelResponse, error)
+	ValidateBaseItem(context.Context, *protomodel.ValidateBaseItemRequest) (*protomodel.ValidateModelResponse, error)
 }
 
 // UnimplementedMeviusModelServiceServer should be embedded to have forward compatible implementations.
@@ -60,6 +72,9 @@ type UnimplementedMeviusModelServiceServer struct {
 
 func (UnimplementedMeviusModelServiceServer) ValidateAbilityCard(context.Context, *protomodel.ValidateAbilityCardRequest) (*protomodel.ValidateModelResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ValidateAbilityCard not implemented")
+}
+func (UnimplementedMeviusModelServiceServer) ValidateBaseItem(context.Context, *protomodel.ValidateBaseItemRequest) (*protomodel.ValidateModelResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ValidateBaseItem not implemented")
 }
 
 // UnsafeMeviusModelServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -91,6 +106,24 @@ func _MeviusModelService_ValidateAbilityCard_Handler(srv interface{}, ctx contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusModelService_ValidateBaseItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomodel.ValidateBaseItemRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusModelServiceServer).ValidateBaseItem(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusModelService_ValidateBaseItem_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusModelServiceServer).ValidateBaseItem(ctx, req.(*protomodel.ValidateBaseItemRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusModelService_ServiceDesc is the grpc.ServiceDesc for MeviusModelService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -101,6 +134,10 @@ var MeviusModelService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ValidateAbilityCard",
 			Handler:    _MeviusModelService_ValidateAbilityCard_Handler,
+		},
+		{
+			MethodName: "ValidateBaseItem",
+			Handler:    _MeviusModelService_ValidateBaseItem_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

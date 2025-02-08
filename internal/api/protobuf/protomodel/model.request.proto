@@ -4,6 +4,7 @@ package model;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomodel";
 
+import "protomodel/item.proto";
 import "protomodel/ability_card.proto";
 
 message ValidateModelResponse {
@@ -12,4 +13,8 @@ message ValidateModelResponse {
 
 message ValidateAbilityCardRequest {
   AbilityCard ability_card = 1;
+}
+
+message ValidateBaseItemRequest {
+  BaseItem item = 1;
 }
