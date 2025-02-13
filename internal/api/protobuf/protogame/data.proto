@@ -462,6 +462,7 @@ message ProtoRegionNodeData {
   bool opened = 6;
   int32 wave_index = 7;
   bool foothold = 8;
+  int64 seed = 9;
 }
 
 message ProtoRegionLockData {
@@ -615,4 +616,19 @@ message ProtoJobCardClaimResult {
 
 message ProtoWeaponClaimResult {
   ProtoWeaponInstance weapon = 1;
+}
+
+message ProtoBattleSelection {
+  repeated ProtoBattleWave waves = 1;
+}
+
+message ProtoBattleWave {
+  int32 index = 1;
+  repeated ProtoBattleWaveGroup groups = 2;
+}
+
+message ProtoBattleWaveGroup {
+  int32 index = 1;
+  int32 count = 2;
+  string fiend_id = 3;
 }

@@ -31,6 +31,7 @@ message BattleStartResponse {
   game.ProtoBattleStartData BattleStartData = 1;
   uint32 stamina_decreased = 2;
   uint64 stamina_dec = 3;
+  game.ProtoBattleSelection battle_selection = 4;
 }
 
 message CreateProfileResponse {
