@@ -307,17 +307,17 @@ namespace Mobius.Proto.Game {
             "c3VsdBIsCghpbnN0YW5jZRgBIAEoCzIaLmdhbWUuUHJvdG9Kb2JDYXJkSW5z",
             "dGFuY2USNwoSc2tpbGxfcGFuZWxfZ3JvdXBzGAIgASgLMhsuZ2FtZS5Qcm90",
             "b1NraWxsUGFuZWxHcm91cHMiQwoWUHJvdG9XZWFwb25DbGFpbVJlc3VsdBIp",
-            "CgZ3ZWFwb24YASABKAsyGS5nYW1lLlByb3RvV2VhcG9uSW5zdGFuY2UiPAoU",
+            "CgZ3ZWFwb24YASABKAsyGS5nYW1lLlByb3RvV2VhcG9uSW5zdGFuY2UiSgoU",
             "UHJvdG9CYXR0bGVTZWxlY3Rpb24SJAoFd2F2ZXMYASADKAsyFS5nYW1lLlBy",
-            "b3RvQmF0dGxlV2F2ZSJMCg9Qcm90b0JhdHRsZVdhdmUSDQoFaW5kZXgYASAB",
-            "KAUSKgoGZ3JvdXBzGAIgAygLMhouZ2FtZS5Qcm90b0JhdHRsZVdhdmVHcm91",
-            "cCJGChRQcm90b0JhdHRsZVdhdmVHcm91cBINCgVpbmRleBgBIAEoBRINCgVj",
-            "b3VudBgCIAEoBRIQCghmaWVuZF9pZBgDIAEoCSp0Cg9SZWZlcmVuY2VTb3Vy",
-            "Y2USCAoETk9ORRAAEhAKDEFCSUxJVFlfQ0FSRBABEgwKCEpPQl9DQVJEEAIS",
-            "CAoESVRFTRADEgoKBldFQVBPThAEEhMKD0ZBSVJZX0NPTVBBTklPThAFEgwK",
-            "CE1QX1NUQU1QEAZCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVt",
-            "L3BrZy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIG",
-            "cHJvdG8z"));
+            "b3RvQmF0dGxlV2F2ZRIMCgRzZWVkGAIgASgDIkwKD1Byb3RvQmF0dGxlV2F2",
+            "ZRINCgVpbmRleBgBIAEoBRIqCgZncm91cHMYAiADKAsyGi5nYW1lLlByb3Rv",
+            "QmF0dGxlV2F2ZUdyb3VwIkYKFFByb3RvQmF0dGxlV2F2ZUdyb3VwEg0KBWlu",
+            "ZGV4GAEgASgFEg0KBWNvdW50GAIgASgFEhAKCGZpZW5kX2lkGAMgASgJKnQK",
+            "D1JlZmVyZW5jZVNvdXJjZRIICgROT05FEAASEAoMQUJJTElUWV9DQVJEEAES",
+            "DAoISk9CX0NBUkQQAhIICgRJVEVNEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllf",
+            "Q09NUEFOSU9OEAUSDAoITVBfU1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3Rq",
+            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1",
+            "cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -394,7 +394,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardClaimResult), global::Mobius.Proto.Game.ProtoAbilityCardClaimResult.Parser, new[]{ "Instance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardClaimResult), global::Mobius.Proto.Game.ProtoJobCardClaimResult.Parser, new[]{ "Instance", "SkillPanelGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponClaimResult), global::Mobius.Proto.Game.ProtoWeaponClaimResult.Parser, new[]{ "Weapon" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleSelection), global::Mobius.Proto.Game.ProtoBattleSelection.Parser, new[]{ "Waves" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleSelection), global::Mobius.Proto.Game.ProtoBattleSelection.Parser, new[]{ "Waves", "Seed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWave), global::Mobius.Proto.Game.ProtoBattleWave.Parser, new[]{ "Index", "Groups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWaveGroup), global::Mobius.Proto.Game.ProtoBattleWaveGroup.Parser, new[]{ "Index", "Count", "FiendId" }, null, null, null, null)
           }));
@@ -22804,6 +22804,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoBattleSelection(ProtoBattleSelection other) : this() {
       waves_ = other.waves_.Clone();
+      seed_ = other.seed_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -22822,6 +22823,17 @@ namespace Mobius.Proto.Game {
       get { return waves_; }
     }
 
+    /// <summary>Field number for the "seed" field.</summary>
+    public const int SeedFieldNumber = 2;
+    private long seed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Seed {
+      get { return seed_; }
+      set {
+        seed_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoBattleSelection);
@@ -22836,6 +22848,7 @@ namespace Mobius.Proto.Game {
         return true;
       }
       if(!waves_.Equals(other.waves_)) return false;
+      if (Seed != other.Seed) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -22843,6 +22856,7 @@ namespace Mobius.Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= waves_.GetHashCode();
+      if (Seed != 0L) hash ^= Seed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -22860,6 +22874,10 @@ namespace Mobius.Proto.Game {
       output.WriteRawMessage(this);
     #else
       waves_.WriteTo(output, _repeated_waves_codec);
+      if (Seed != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Seed);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -22870,6 +22888,10 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       waves_.WriteTo(ref output, _repeated_waves_codec);
+      if (Seed != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Seed);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -22880,6 +22902,9 @@ namespace Mobius.Proto.Game {
     public int CalculateSize() {
       int size = 0;
       size += waves_.CalculateSize(_repeated_waves_codec);
+      if (Seed != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Seed);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -22892,6 +22917,9 @@ namespace Mobius.Proto.Game {
         return;
       }
       waves_.Add(other.waves_);
+      if (other.Seed != 0L) {
+        Seed = other.Seed;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -22910,6 +22938,10 @@ namespace Mobius.Proto.Game {
             waves_.AddEntriesFrom(input, _repeated_waves_codec);
             break;
           }
+          case 16: {
+            Seed = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -22926,6 +22958,10 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             waves_.AddEntriesFrom(ref input, _repeated_waves_codec);
+            break;
+          }
+          case 16: {
+            Seed = input.ReadInt64();
             break;
           }
         }
