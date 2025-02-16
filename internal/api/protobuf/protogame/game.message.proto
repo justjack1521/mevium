@@ -10,6 +10,7 @@ message BattleCompleteMessage {
   string region_id = 5;
   int32 node_index = 6;
   bool revive = 7;
+  int32 deck_index = 8;
 }
 
 message PlayerProfileCreatedMessage {
