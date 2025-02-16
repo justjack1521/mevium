@@ -26,19 +26,20 @@ namespace Mobius.Proto.Identity {
           string.Concat(
             "CiRwcm90b2lkZW50aXR5L2lkZW50aXR5LnJlcXVlc3QucHJvdG8SCGlkZW50",
             "aXR5IjMKHkdldFNpbmdsZVBsYXllcklkZW50aXR5UmVxdWVzdBIRCglwbGF5",
-            "ZXJfaWQYASABKAkiOgolR2V0U2luZ2xlUGxheWVyTG9hZG91dElkZW50aXR5",
-            "UmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkiRgodR2V0U2luZ2xlUGxheWVy",
-            "TG9hZG91dFJlcXVlc3QSEQoJcGxheWVyX2lkGAEgASgJEhIKCmRlY2tfaW5k",
-            "ZXgYAiABKAUiRQocR2V0TXVsdGlQbGF5ZXJMb2Fkb3V0UmVxdWVzdBIRCglw",
-            "bGF5ZXJfaWQYASABKAkSEgoKZGVja19pbmRleBgCIAEoBSIpChRHZXRSZW50",
-            "YWxDYXJkUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAlCU1o5Z2l0aHViLmNv",
-            "bS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2lkZW50",
-            "aXR5qgIVTW9iaXVzLlByb3RvLklkZW50aXR5YgZwcm90bzM="));
+            "ZXJfaWQYASABKAkiTgolR2V0U2luZ2xlUGxheWVyTG9hZG91dElkZW50aXR5",
+            "UmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEgoKZGVja19pbmRleBgCIAEo",
+            "BSJGCh1HZXRTaW5nbGVQbGF5ZXJMb2Fkb3V0UmVxdWVzdBIRCglwbGF5ZXJf",
+            "aWQYASABKAkSEgoKZGVja19pbmRleBgCIAEoBSJFChxHZXRNdWx0aVBsYXll",
+            "ckxvYWRvdXRSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRISCgpkZWNrX2lu",
+            "ZGV4GAIgASgFIikKFEdldFJlbnRhbENhcmRSZXF1ZXN0EhEKCXBsYXllcl9p",
+            "ZBgBIAEoCUJTWjlnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtn",
+            "L2dlbnByb3RvL3Byb3RvaWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRlbnRp",
+            "dHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerIdentityRequest), global::Mobius.Proto.Identity.GetSinglePlayerIdentityRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerLoadoutIdentityRequest), global::Mobius.Proto.Identity.GetSinglePlayerLoadoutIdentityRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerLoadoutIdentityRequest), global::Mobius.Proto.Identity.GetSinglePlayerLoadoutIdentityRequest.Parser, new[]{ "PlayerId", "DeckIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetSinglePlayerLoadoutRequest), global::Mobius.Proto.Identity.GetSinglePlayerLoadoutRequest.Parser, new[]{ "PlayerId", "DeckIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetMultiPlayerLoadoutRequest), global::Mobius.Proto.Identity.GetMultiPlayerLoadoutRequest.Parser, new[]{ "PlayerId", "DeckIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.GetRentalCardRequest), global::Mobius.Proto.Identity.GetRentalCardRequest.Parser, new[]{ "PlayerId" }, null, null, null, null)
@@ -250,6 +251,7 @@ namespace Mobius.Proto.Identity {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSinglePlayerLoadoutIdentityRequest(GetSinglePlayerLoadoutIdentityRequest other) : this() {
       playerId_ = other.playerId_;
+      deckIndex_ = other.deckIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -269,6 +271,17 @@ namespace Mobius.Proto.Identity {
       }
     }
 
+    /// <summary>Field number for the "deck_index" field.</summary>
+    public const int DeckIndexFieldNumber = 2;
+    private int deckIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DeckIndex {
+      get { return deckIndex_; }
+      set {
+        deckIndex_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetSinglePlayerLoadoutIdentityRequest);
@@ -283,6 +296,7 @@ namespace Mobius.Proto.Identity {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
+      if (DeckIndex != other.DeckIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -290,6 +304,7 @@ namespace Mobius.Proto.Identity {
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
+      if (DeckIndex != 0) hash ^= DeckIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -310,6 +325,10 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(10);
         output.WriteString(PlayerId);
       }
+      if (DeckIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(DeckIndex);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -323,6 +342,10 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(10);
         output.WriteString(PlayerId);
       }
+      if (DeckIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(DeckIndex);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -334,6 +357,9 @@ namespace Mobius.Proto.Identity {
       int size = 0;
       if (PlayerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      }
+      if (DeckIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeckIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -348,6 +374,9 @@ namespace Mobius.Proto.Identity {
       }
       if (other.PlayerId.Length != 0) {
         PlayerId = other.PlayerId;
+      }
+      if (other.DeckIndex != 0) {
+        DeckIndex = other.DeckIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -367,6 +396,10 @@ namespace Mobius.Proto.Identity {
             PlayerId = input.ReadString();
             break;
           }
+          case 16: {
+            DeckIndex = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -383,6 +416,10 @@ namespace Mobius.Proto.Identity {
             break;
           case 10: {
             PlayerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            DeckIndex = input.ReadInt32();
             break;
           }
         }
