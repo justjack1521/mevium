@@ -235,3 +235,8 @@ message RegionMapNodeUnlockResponse {
   string unlocked_node = 1;
   repeated ProtoItemValuePair items_removed = 2;
 }
+
+message PurchaseCompanionResponse {
+  string id = 1;
+  game.ProtoItemValuePair cost_item = 2;
+}

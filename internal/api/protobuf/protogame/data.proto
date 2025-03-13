@@ -234,6 +234,7 @@ message ProtoLoginCampaignInstance {
 message ProtoFairyCompanionData {
   int32 current_companion_index = 1;
   ProtoFairyCompanionInventory inventory = 2;
+  string last_primary_companion = 3;
 }
 
 message ProtoFairyCompanionInventory {

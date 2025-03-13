@@ -136,9 +136,10 @@ namespace Mobius.Proto.Game {
             "YXJkX2l0ZW1zGAIgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiZQob",
             "UmVnaW9uTWFwTm9kZVVubG9ja1Jlc3BvbnNlEhUKDXVubG9ja2VkX25vZGUY",
             "ASABKAkSLwoNaXRlbXNfcmVtb3ZlZBgCIAMoCzIYLmdhbWUuUHJvdG9JdGVt",
-            "VmFsdWVQYWlyQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
-            "a2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnBy",
-            "b3RvMw=="));
+            "VmFsdWVQYWlyIlQKGVB1cmNoYXNlQ29tcGFuaW9uUmVzcG9uc2USCgoCaWQY",
+            "ASABKAkSKwoJY29zdF9pdGVtGAIgASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1",
+            "ZVBhaXJCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
+            "ZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -181,7 +182,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimItemDistillerResponse), global::Mobius.Proto.Game.ClaimItemDistillerResponse.Parser, new[]{ "Received", "DecTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapUnlockResponse), global::Mobius.Proto.Game.RegionMapUnlockResponse.Parser, new[]{ "UnlockTime", "CostItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimDungeonResponse), global::Mobius.Proto.Game.ClaimDungeonResponse.Parser, new[]{ "Id", "RewardItems" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapNodeUnlockResponse), global::Mobius.Proto.Game.RegionMapNodeUnlockResponse.Parser, new[]{ "UnlockedNode", "ItemsRemoved" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapNodeUnlockResponse), global::Mobius.Proto.Game.RegionMapNodeUnlockResponse.Parser, new[]{ "UnlockedNode", "ItemsRemoved" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseCompanionResponse), global::Mobius.Proto.Game.PurchaseCompanionResponse.Parser, new[]{ "Id", "CostItem" }, null, null, null, null)
           }));
     }
     #endregion
@@ -9161,6 +9163,223 @@ namespace Mobius.Proto.Game {
           }
           case 18: {
             itemsRemoved_.AddEntriesFrom(ref input, _repeated_itemsRemoved_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class PurchaseCompanionResponse : pb::IMessage<PurchaseCompanionResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PurchaseCompanionResponse> _parser = new pb::MessageParser<PurchaseCompanionResponse>(() => new PurchaseCompanionResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PurchaseCompanionResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameResponseReflection.Descriptor.MessageTypes[40]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PurchaseCompanionResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PurchaseCompanionResponse(PurchaseCompanionResponse other) : this() {
+      id_ = other.id_;
+      costItem_ = other.costItem_ != null ? other.costItem_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PurchaseCompanionResponse Clone() {
+      return new PurchaseCompanionResponse(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cost_item" field.</summary>
+    public const int CostItemFieldNumber = 2;
+    private global::Mobius.Proto.Game.ProtoItemValuePair costItem_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Game.ProtoItemValuePair CostItem {
+      get { return costItem_; }
+      set {
+        costItem_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PurchaseCompanionResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PurchaseCompanionResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (!object.Equals(CostItem, other.CostItem)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (costItem_ != null) hash ^= CostItem.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (costItem_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CostItem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (costItem_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CostItem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (costItem_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostItem);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PurchaseCompanionResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.costItem_ != null) {
+        if (costItem_ == null) {
+          CostItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
+        }
+        CostItem.MergeFrom(other.CostItem);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (costItem_ == null) {
+              CostItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
+            }
+            input.ReadMessage(CostItem);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (costItem_ == null) {
+              CostItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
+            }
+            input.ReadMessage(CostItem);
             break;
           }
         }

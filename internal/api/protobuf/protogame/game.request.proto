@@ -51,6 +51,7 @@ enum GameRequestType {
   UNLOCK_REGION_MAP = 4200;
   CLAIM_DUNGEON = 4300;
   UNLOCK_REGION_NODE = 4400;
+  PURCHASE_COMPANION = 4500;
 }
 
 enum TeleportRequestType {
@@ -272,5 +273,9 @@ message RegionMapNodeUnlockRequest {
 }
 
 message ClaimDungeonRequest {
+  string id = 1;
+}
+
+message PurchaseCompanionRequest {
   string id = 1;
 }

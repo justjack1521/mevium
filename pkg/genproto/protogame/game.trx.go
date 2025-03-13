@@ -292,6 +292,14 @@ func NewRegionMapNodeUnlockRequest(bytes []byte) (*RegionMapNodeUnlockRequest, e
 	return req, nil
 }
 
+func NewPurchaseCompanionRequest(bytes []byte) (*PurchaseCompanionRequest, error) {
+	req := &PurchaseCompanionRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewClaimItemDistillerRequest(bytes []byte) (*ClaimItemDistillerRequest, error) {
 	req := &ClaimItemDistillerRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -477,5 +485,9 @@ func (x *TeleportResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *UpdateProfileResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *PurchaseCompanionResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
