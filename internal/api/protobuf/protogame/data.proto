@@ -436,6 +436,7 @@ message ProtoRegionMapInstance {
   int64 unlock_time = 14;
 
   ProtoRegionProgressData progress = 15;
+  ProtoWanderingFiendData wandering_fiends = 16;
 
 }
 
@@ -445,6 +446,17 @@ message ProtoRegionProgressData {
   bool cleared = 3;
   bool completed = 4;
   bool clear_claimed = 5;
+}
+
+message ProtoWanderingFiendData {
+  repeated ProtoWanderingFiendInstance fiends = 1;
+}
+
+message ProtoWanderingFiendInstance {
+  string sys_id = 1;
+  bool started = 2;
+  bool released = 3;
+  int32 node_index = 4;
 }
 
 message ProtoRegionDialogueData {
