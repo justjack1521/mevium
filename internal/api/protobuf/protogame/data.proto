@@ -362,6 +362,7 @@ message ProtoMailBoxItem {
   int32 quantity = 4;
   int64 received_at = 5;
   string claim_source = 6;
+  bool confirmed = 7;
 }
 
 message ProtoPlayerDeckCollection {
