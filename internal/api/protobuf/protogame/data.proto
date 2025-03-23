@@ -137,6 +137,8 @@ message ProtoBattleStartData {
 
   repeated ProtoBattleFiendSpawn fiend_spawns = 22;
 
+  ProtoBattleSelection selection_results = 23;
+
 }
 
 message ProtoBattleFiendSpawn {
