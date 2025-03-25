@@ -319,15 +319,16 @@ namespace Mobius.Proto.Game {
             "Z2FtZS5Qcm90b1NraWxsUGFuZWxHcm91cHMiQwoWUHJvdG9XZWFwb25DbGFp",
             "bVJlc3VsdBIpCgZ3ZWFwb24YASABKAsyGS5nYW1lLlByb3RvV2VhcG9uSW5z",
             "dGFuY2UiSgoUUHJvdG9CYXR0bGVTZWxlY3Rpb24SJAoFd2F2ZXMYASADKAsy",
-            "FS5nYW1lLlByb3RvQmF0dGxlV2F2ZRIMCgRzZWVkGAIgASgDIkwKD1Byb3Rv",
+            "FS5nYW1lLlByb3RvQmF0dGxlV2F2ZRIMCgRzZWVkGAIgASgDImQKD1Byb3Rv",
             "QmF0dGxlV2F2ZRINCgVpbmRleBgBIAEoBRIqCgZncm91cHMYAiADKAsyGi5n",
-            "YW1lLlByb3RvQmF0dGxlV2F2ZUdyb3VwIkYKFFByb3RvQmF0dGxlV2F2ZUdy",
-            "b3VwEg0KBWluZGV4GAEgASgFEg0KBWNvdW50GAIgASgFEhAKCGZpZW5kX2lk",
-            "GAMgASgJKnQKD1JlZmVyZW5jZVNvdXJjZRIICgROT05FEAASEAoMQUJJTElU",
-            "WV9DQVJEEAESDAoISk9CX0NBUkQQAhIICgRJVEVNEAMSCgoGV0VBUE9OEAQS",
-            "EwoPRkFJUllfQ09NUEFOSU9OEAUSDAoITVBfU1RBTVAQBkJLWjVnaXRodWIu",
-            "Y29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2Ft",
-            "ZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
+            "YW1lLlByb3RvQmF0dGxlV2F2ZUdyb3VwEhYKDmxldmVsX292ZXJyaWRlGAMg",
+            "ASgFIkYKFFByb3RvQmF0dGxlV2F2ZUdyb3VwEg0KBWluZGV4GAEgASgFEg0K",
+            "BWNvdW50GAIgASgFEhAKCGZpZW5kX2lkGAMgASgJKnQKD1JlZmVyZW5jZVNv",
+            "dXJjZRIICgROT05FEAASEAoMQUJJTElUWV9DQVJEEAESDAoISk9CX0NBUkQQ",
+            "AhIICgRJVEVNEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllfQ09NUEFOSU9OEAUS",
+            "DAoITVBfU1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZp",
+            "dW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1l",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -408,7 +409,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardClaimResult), global::Mobius.Proto.Game.ProtoJobCardClaimResult.Parser, new[]{ "Instance", "SkillPanelGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponClaimResult), global::Mobius.Proto.Game.ProtoWeaponClaimResult.Parser, new[]{ "Weapon" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleSelection), global::Mobius.Proto.Game.ProtoBattleSelection.Parser, new[]{ "Waves", "Seed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWave), global::Mobius.Proto.Game.ProtoBattleWave.Parser, new[]{ "Index", "Groups" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWave), global::Mobius.Proto.Game.ProtoBattleWave.Parser, new[]{ "Index", "Groups", "LevelOverride" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWaveGroup), global::Mobius.Proto.Game.ProtoBattleWaveGroup.Parser, new[]{ "Index", "Count", "FiendId" }, null, null, null, null)
           }));
     }
@@ -23815,6 +23816,7 @@ namespace Mobius.Proto.Game {
     public ProtoBattleWave(ProtoBattleWave other) : this() {
       index_ = other.index_;
       groups_ = other.groups_.Clone();
+      levelOverride_ = other.levelOverride_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -23844,6 +23846,17 @@ namespace Mobius.Proto.Game {
       get { return groups_; }
     }
 
+    /// <summary>Field number for the "level_override" field.</summary>
+    public const int LevelOverrideFieldNumber = 3;
+    private int levelOverride_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int LevelOverride {
+      get { return levelOverride_; }
+      set {
+        levelOverride_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoBattleWave);
@@ -23859,6 +23872,7 @@ namespace Mobius.Proto.Game {
       }
       if (Index != other.Index) return false;
       if(!groups_.Equals(other.groups_)) return false;
+      if (LevelOverride != other.LevelOverride) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -23867,6 +23881,7 @@ namespace Mobius.Proto.Game {
       int hash = 1;
       if (Index != 0) hash ^= Index.GetHashCode();
       hash ^= groups_.GetHashCode();
+      if (LevelOverride != 0) hash ^= LevelOverride.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -23888,6 +23903,10 @@ namespace Mobius.Proto.Game {
         output.WriteInt32(Index);
       }
       groups_.WriteTo(output, _repeated_groups_codec);
+      if (LevelOverride != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LevelOverride);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -23902,6 +23921,10 @@ namespace Mobius.Proto.Game {
         output.WriteInt32(Index);
       }
       groups_.WriteTo(ref output, _repeated_groups_codec);
+      if (LevelOverride != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LevelOverride);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -23915,6 +23938,9 @@ namespace Mobius.Proto.Game {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
       }
       size += groups_.CalculateSize(_repeated_groups_codec);
+      if (LevelOverride != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LevelOverride);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -23930,6 +23956,9 @@ namespace Mobius.Proto.Game {
         Index = other.Index;
       }
       groups_.Add(other.groups_);
+      if (other.LevelOverride != 0) {
+        LevelOverride = other.LevelOverride;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -23952,6 +23981,10 @@ namespace Mobius.Proto.Game {
             groups_.AddEntriesFrom(input, _repeated_groups_codec);
             break;
           }
+          case 24: {
+            LevelOverride = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -23972,6 +24005,10 @@ namespace Mobius.Proto.Game {
           }
           case 18: {
             groups_.AddEntriesFrom(ref input, _repeated_groups_codec);
+            break;
+          }
+          case 24: {
+            LevelOverride = input.ReadInt32();
             break;
           }
         }

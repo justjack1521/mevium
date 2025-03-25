@@ -647,6 +647,7 @@ message ProtoBattleSelection {
 message ProtoBattleWave {
   int32 index = 1;
   repeated ProtoBattleWaveGroup groups = 2;
+  int32 level_override = 3;
 }
 
 message ProtoBattleWaveGroup {
