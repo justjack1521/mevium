@@ -253,6 +253,7 @@ message ProtoItemData {
   ProtoItemInventory inventory = 1;
   map<string, ProtoItemDropRecord> limit_data = 2;
   repeated ProtoItemDistiller distillers = 3;
+  repeated ProtoGiftBoxData gift_boxes = 4;
 }
 
 message ProtoItemDistiller {
@@ -267,6 +268,12 @@ message ProtoItemDropRecord {
 
 message ProtoItemInventory {
   repeated ProtoItemInstance item_list = 1;
+}
+
+message ProtoGiftBoxData {
+  string id = 1;
+  int64 purchased_at = 2;
+  int32 purchase_count = 3;
 }
 
 message ProtoItemInstance {
