@@ -49,5 +49,6 @@ service MeviusGameService {
   rpc ExecuteDialogue(game.ExecuteDialogueRequest) returns (game.ExecuteDialogueResponse) {}
   rpc ClaimItemDistiller(game.ClaimItemDistillerRequest) returns (game.ClaimItemDistillerResponse) {}
   rpc PurchaseCompanion(game.PurchaseCompanionRequest) returns (game.PurchaseCompanionResponse) {}
+  rpc PurchaseGiftBox(game.PurchaseGiftBoxRequest) returns (game.PurchaseGiftBoxResponse) {}
 }
 

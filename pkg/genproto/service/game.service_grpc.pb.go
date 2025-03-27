@@ -60,6 +60,7 @@ const (
 	MeviusGameService_ExecuteDialogue_FullMethodName        = "/service.MeviusGameService/ExecuteDialogue"
 	MeviusGameService_ClaimItemDistiller_FullMethodName     = "/service.MeviusGameService/ClaimItemDistiller"
 	MeviusGameService_PurchaseCompanion_FullMethodName      = "/service.MeviusGameService/PurchaseCompanion"
+	MeviusGameService_PurchaseGiftBox_FullMethodName        = "/service.MeviusGameService/PurchaseGiftBox"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -107,6 +108,7 @@ type MeviusGameServiceClient interface {
 	ExecuteDialogue(ctx context.Context, in *protogame.ExecuteDialogueRequest, opts ...grpc.CallOption) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error)
 	PurchaseCompanion(ctx context.Context, in *protogame.PurchaseCompanionRequest, opts ...grpc.CallOption) (*protogame.PurchaseCompanionResponse, error)
+	PurchaseGiftBox(ctx context.Context, in *protogame.PurchaseGiftBoxRequest, opts ...grpc.CallOption) (*protogame.PurchaseGiftBoxResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -477,6 +479,15 @@ func (c *meviusGameServiceClient) PurchaseCompanion(ctx context.Context, in *pro
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) PurchaseGiftBox(ctx context.Context, in *protogame.PurchaseGiftBoxRequest, opts ...grpc.CallOption) (*protogame.PurchaseGiftBoxResponse, error) {
+	out := new(protogame.PurchaseGiftBoxResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_PurchaseGiftBox_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -522,6 +533,7 @@ type MeviusGameServiceServer interface {
 	ExecuteDialogue(context.Context, *protogame.ExecuteDialogueRequest) (*protogame.ExecuteDialogueResponse, error)
 	ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error)
 	PurchaseCompanion(context.Context, *protogame.PurchaseCompanionRequest) (*protogame.PurchaseCompanionResponse, error)
+	PurchaseGiftBox(context.Context, *protogame.PurchaseGiftBoxRequest) (*protogame.PurchaseGiftBoxResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -647,6 +659,9 @@ func (UnimplementedMeviusGameServiceServer) ClaimItemDistiller(context.Context, 
 }
 func (UnimplementedMeviusGameServiceServer) PurchaseCompanion(context.Context, *protogame.PurchaseCompanionRequest) (*protogame.PurchaseCompanionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurchaseCompanion not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) PurchaseGiftBox(context.Context, *protogame.PurchaseGiftBoxRequest) (*protogame.PurchaseGiftBoxResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PurchaseGiftBox not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1380,6 +1395,24 @@ func _MeviusGameService_PurchaseCompanion_Handler(srv interface{}, ctx context.C
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_PurchaseGiftBox_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.PurchaseGiftBoxRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).PurchaseGiftBox(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_PurchaseGiftBox_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).PurchaseGiftBox(ctx, req.(*protogame.PurchaseGiftBoxRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1546,6 +1579,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PurchaseCompanion",
 			Handler:    _MeviusGameService_PurchaseCompanion_Handler,
+		},
+		{
+			MethodName: "PurchaseGiftBox",
+			Handler:    _MeviusGameService_PurchaseGiftBox_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

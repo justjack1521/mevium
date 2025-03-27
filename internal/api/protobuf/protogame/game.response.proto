@@ -239,3 +239,8 @@ message PurchaseCompanionResponse {
   string id = 1;
   game.ProtoItemValuePair cost_item = 2;
 }
+
+message PurchaseGiftBoxResponse {
+  string id = 1;
+  game.ProtoItemValuePair cost_item = 2;
+}

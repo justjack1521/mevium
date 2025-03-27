@@ -332,6 +332,14 @@ func NewClaimDungeonRequest(bytes []byte) (*ClaimDungeonRequest, error) {
 	return req, nil
 }
 
+func NewPurchaseGiftBoxRequest(bytes []byte) (*PurchaseGiftBoxRequest, error) {
+	req := &PurchaseGiftBoxRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *RegionMapNodeUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -489,5 +497,9 @@ func (x *UpdateProfileResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *PurchaseCompanionResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *PurchaseGiftBoxResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
