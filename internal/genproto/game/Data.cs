@@ -302,40 +302,41 @@ namespace Mobius.Proto.Game {
             "ZFVzYWdlU3RhdGlzdGljIj8KGUFiaWxpdHlDYXJkVXNhZ2VTdGF0aXN0aWMS",
             "EwoLaW5zdGFuY2VfaWQYASABKAkSDQoFY291bnQYAiABKAUiOgoVRWxlbWVu",
             "dFVzYWdlU3RhdGlzdGljEhIKCmVsZW1lbnRfaWQYASABKAkSDQoFY291bnQY",
-            "AiABKAUirgEKGFByb3RvRW5lbXlEZWF0aFN0YXRpc3RpYxIQCghmaWVuZF9p",
+            "AiABKAUi1wEKGFByb3RvRW5lbXlEZWF0aFN0YXRpc3RpYxIQCghmaWVuZF9p",
             "ZBgBIAEoCRISCgplbGVtZW50X2lkGAIgASgJEhMKC2pvYl90eXBlX2lkGAMg",
             "ASgJEhUKDWZyb21fd2Vha25lc3MYBCABKAgSEwoLZnJvbV9ub3JtYWwYBSAB",
             "KAgSFQoNZnJvbV91bHRpbWF0ZRgGIAEoCBIUCgxhY3Rpb25fY291bnQYByAB",
-            "KAUiiwEKIFByb3RvQWJpbGl0eUNhcmRTdW1tb25EcmF3UmVzdWx0EjAKCGlu",
-            "c3RhbmNlGAEgASgLMh4uZ2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2US",
-            "DQoFaW5kZXgYAiABKAUSEAoIbmV3X2NhcmQYAyABKAgSFAoMdXBncmFkZV9j",
-            "YXJkGAQgASgIIpQBChxQcm90b0pvYkNhcmRTdW1tb25EcmF3UmVzdWx0EiwK",
-            "CGluc3RhbmNlGAEgASgLMhouZ2FtZS5Qcm90b0pvYkNhcmRJbnN0YW5jZRI3",
-            "ChJza2lsbF9wYW5lbF9ncm91cHMYAiABKAsyGy5nYW1lLlByb3RvU2tpbGxQ",
-            "YW5lbEdyb3VwcxINCgVpbmRleBgDIAEoBSLbAQoXUHJvdG9NYWlsYm94Q2xh",
-            "aW1SZXN1bHQSKAoEaXRlbRgBIAEoCzIaLmdhbWUuUHJvdG9JdGVtQ2xhaW1S",
-            "ZXN1bHQSNwoMYWJpbGl0eV9jYXJkGAIgASgLMiEuZ2FtZS5Qcm90b0FiaWxp",
-            "dHlDYXJkQ2xhaW1SZXN1bHQSLwoIam9iX2NhcmQYAyABKAsyHS5nYW1lLlBy",
-            "b3RvSm9iQ2FyZENsYWltUmVzdWx0EiwKBndlYXBvbhgEIAEoCzIcLmdhbWUu",
-            "UHJvdG9XZWFwb25DbGFpbVJlc3VsdCI5ChRQcm90b0l0ZW1DbGFpbVJlc3Vs",
-            "dBIPCgdpdGVtX2lkGAEgASgJEhAKCHF1YW50aXR5GAIgASgFIk8KG1Byb3Rv",
-            "QWJpbGl0eUNhcmRDbGFpbVJlc3VsdBIwCghpbnN0YW5jZRgBIAEoCzIeLmdh",
-            "bWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlIoABChdQcm90b0pvYkNhcmRD",
-            "bGFpbVJlc3VsdBIsCghpbnN0YW5jZRgBIAEoCzIaLmdhbWUuUHJvdG9Kb2JD",
-            "YXJkSW5zdGFuY2USNwoSc2tpbGxfcGFuZWxfZ3JvdXBzGAIgASgLMhsuZ2Ft",
-            "ZS5Qcm90b1NraWxsUGFuZWxHcm91cHMiQwoWUHJvdG9XZWFwb25DbGFpbVJl",
-            "c3VsdBIpCgZ3ZWFwb24YASABKAsyGS5nYW1lLlByb3RvV2VhcG9uSW5zdGFu",
-            "Y2UiSgoUUHJvdG9CYXR0bGVTZWxlY3Rpb24SJAoFd2F2ZXMYASADKAsyFS5n",
-            "YW1lLlByb3RvQmF0dGxlV2F2ZRIMCgRzZWVkGAIgASgDImQKD1Byb3RvQmF0",
-            "dGxlV2F2ZRINCgVpbmRleBgBIAEoBRIqCgZncm91cHMYAiADKAsyGi5nYW1l",
-            "LlByb3RvQmF0dGxlV2F2ZUdyb3VwEhYKDmxldmVsX292ZXJyaWRlGAMgASgF",
-            "IkYKFFByb3RvQmF0dGxlV2F2ZUdyb3VwEg0KBWluZGV4GAEgASgFEg0KBWNv",
-            "dW50GAIgASgFEhAKCGZpZW5kX2lkGAMgASgJKnQKD1JlZmVyZW5jZVNvdXJj",
-            "ZRIICgROT05FEAASEAoMQUJJTElUWV9DQVJEEAESDAoISk9CX0NBUkQQAhII",
-            "CgRJVEVNEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllfQ09NUEFOSU9OEAUSDAoI",
-            "TVBfU1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0v",
-            "cGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZw",
-            "cm90bzM="));
+            "KAUSEgoKd2F2ZV9pbmRleBgIIAEoBRITCgtmaWVuZF9pbmRleBgJIAEoBSKL",
+            "AQogUHJvdG9BYmlsaXR5Q2FyZFN1bW1vbkRyYXdSZXN1bHQSMAoIaW5zdGFu",
+            "Y2UYASABKAsyHi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRINCgVp",
+            "bmRleBgCIAEoBRIQCghuZXdfY2FyZBgDIAEoCBIUCgx1cGdyYWRlX2NhcmQY",
+            "BCABKAgilAEKHFByb3RvSm9iQ2FyZFN1bW1vbkRyYXdSZXN1bHQSLAoIaW5z",
+            "dGFuY2UYASABKAsyGi5nYW1lLlByb3RvSm9iQ2FyZEluc3RhbmNlEjcKEnNr",
+            "aWxsX3BhbmVsX2dyb3VwcxgCIAEoCzIbLmdhbWUuUHJvdG9Ta2lsbFBhbmVs",
+            "R3JvdXBzEg0KBWluZGV4GAMgASgFItsBChdQcm90b01haWxib3hDbGFpbVJl",
+            "c3VsdBIoCgRpdGVtGAEgASgLMhouZ2FtZS5Qcm90b0l0ZW1DbGFpbVJlc3Vs",
+            "dBI3CgxhYmlsaXR5X2NhcmQYAiABKAsyIS5nYW1lLlByb3RvQWJpbGl0eUNh",
+            "cmRDbGFpbVJlc3VsdBIvCghqb2JfY2FyZBgDIAEoCzIdLmdhbWUuUHJvdG9K",
+            "b2JDYXJkQ2xhaW1SZXN1bHQSLAoGd2VhcG9uGAQgASgLMhwuZ2FtZS5Qcm90",
+            "b1dlYXBvbkNsYWltUmVzdWx0IjkKFFByb3RvSXRlbUNsYWltUmVzdWx0Eg8K",
+            "B2l0ZW1faWQYASABKAkSEAoIcXVhbnRpdHkYAiABKAUiTwobUHJvdG9BYmls",
+            "aXR5Q2FyZENsYWltUmVzdWx0EjAKCGluc3RhbmNlGAEgASgLMh4uZ2FtZS5Q",
+            "cm90b0FiaWxpdHlDYXJkSW5zdGFuY2UigAEKF1Byb3RvSm9iQ2FyZENsYWlt",
+            "UmVzdWx0EiwKCGluc3RhbmNlGAEgASgLMhouZ2FtZS5Qcm90b0pvYkNhcmRJ",
+            "bnN0YW5jZRI3ChJza2lsbF9wYW5lbF9ncm91cHMYAiABKAsyGy5nYW1lLlBy",
+            "b3RvU2tpbGxQYW5lbEdyb3VwcyJDChZQcm90b1dlYXBvbkNsYWltUmVzdWx0",
+            "EikKBndlYXBvbhgBIAEoCzIZLmdhbWUuUHJvdG9XZWFwb25JbnN0YW5jZSJK",
+            "ChRQcm90b0JhdHRsZVNlbGVjdGlvbhIkCgV3YXZlcxgBIAMoCzIVLmdhbWUu",
+            "UHJvdG9CYXR0bGVXYXZlEgwKBHNlZWQYAiABKAMiZAoPUHJvdG9CYXR0bGVX",
+            "YXZlEg0KBWluZGV4GAEgASgFEioKBmdyb3VwcxgCIAMoCzIaLmdhbWUuUHJv",
+            "dG9CYXR0bGVXYXZlR3JvdXASFgoObGV2ZWxfb3ZlcnJpZGUYAyABKAUiRgoU",
+            "UHJvdG9CYXR0bGVXYXZlR3JvdXASDQoFaW5kZXgYASABKAUSDQoFY291bnQY",
+            "AiABKAUSEAoIZmllbmRfaWQYAyABKAkqdAoPUmVmZXJlbmNlU291cmNlEggK",
+            "BE5PTkUQABIQCgxBQklMSVRZX0NBUkQQARIMCghKT0JfQ0FSRBACEggKBElU",
+            "RU0QAxIKCgZXRUFQT04QBBITCg9GQUlSWV9DT01QQU5JT04QBRIMCghNUF9T",
+            "VEFNUBAGQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cv",
+            "Z2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -408,7 +409,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleStatistics), global::Mobius.Proto.Game.ProtoBattleStatistics.Parser, new[]{ "TotalScore", "BattleTurns", "AbilitiesUsed", "TotalHpRegen", "TotalDamageTaken", "EnemiesBroken", "ElementOrbDraws", "ElementOrbUsage", "EnemyDefeats", "AbilityCardUsage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardUsageStatistic), global::Mobius.Proto.Game.AbilityCardUsageStatistic.Parser, new[]{ "InstanceId", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ElementUsageStatistic), global::Mobius.Proto.Game.ElementUsageStatistic.Parser, new[]{ "ElementId", "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoEnemyDeathStatistic), global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser, new[]{ "FiendId", "ElementId", "JobTypeId", "FromWeakness", "FromNormal", "FromUltimate", "ActionCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoEnemyDeathStatistic), global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser, new[]{ "FiendId", "ElementId", "JobTypeId", "FromWeakness", "FromNormal", "FromUltimate", "ActionCount", "WaveIndex", "FiendIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "Index", "NewCard", "UpgradeCard" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult), global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult.Parser, new[]{ "Instance", "SkillPanelGroups", "Index" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMailboxClaimResult), global::Mobius.Proto.Game.ProtoMailboxClaimResult.Parser, new[]{ "Item", "AbilityCard", "JobCard", "Weapon" }, null, null, null, null),
@@ -21911,6 +21912,8 @@ namespace Mobius.Proto.Game {
       fromNormal_ = other.fromNormal_;
       fromUltimate_ = other.fromUltimate_;
       actionCount_ = other.actionCount_;
+      waveIndex_ = other.waveIndex_;
+      fiendIndex_ = other.fiendIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -21996,6 +21999,28 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "wave_index" field.</summary>
+    public const int WaveIndexFieldNumber = 8;
+    private int waveIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int WaveIndex {
+      get { return waveIndex_; }
+      set {
+        waveIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fiend_index" field.</summary>
+    public const int FiendIndexFieldNumber = 9;
+    private int fiendIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int FiendIndex {
+      get { return fiendIndex_; }
+      set {
+        fiendIndex_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoEnemyDeathStatistic);
@@ -22016,6 +22041,8 @@ namespace Mobius.Proto.Game {
       if (FromNormal != other.FromNormal) return false;
       if (FromUltimate != other.FromUltimate) return false;
       if (ActionCount != other.ActionCount) return false;
+      if (WaveIndex != other.WaveIndex) return false;
+      if (FiendIndex != other.FiendIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -22029,6 +22056,8 @@ namespace Mobius.Proto.Game {
       if (FromNormal != false) hash ^= FromNormal.GetHashCode();
       if (FromUltimate != false) hash ^= FromUltimate.GetHashCode();
       if (ActionCount != 0) hash ^= ActionCount.GetHashCode();
+      if (WaveIndex != 0) hash ^= WaveIndex.GetHashCode();
+      if (FiendIndex != 0) hash ^= FiendIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -22073,6 +22102,14 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(56);
         output.WriteInt32(ActionCount);
       }
+      if (WaveIndex != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(WaveIndex);
+      }
+      if (FiendIndex != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(FiendIndex);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -22110,6 +22147,14 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(56);
         output.WriteInt32(ActionCount);
       }
+      if (WaveIndex != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(WaveIndex);
+      }
+      if (FiendIndex != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(FiendIndex);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -22139,6 +22184,12 @@ namespace Mobius.Proto.Game {
       }
       if (ActionCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ActionCount);
+      }
+      if (WaveIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(WaveIndex);
+      }
+      if (FiendIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FiendIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -22171,6 +22222,12 @@ namespace Mobius.Proto.Game {
       }
       if (other.ActionCount != 0) {
         ActionCount = other.ActionCount;
+      }
+      if (other.WaveIndex != 0) {
+        WaveIndex = other.WaveIndex;
+      }
+      if (other.FiendIndex != 0) {
+        FiendIndex = other.FiendIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -22214,6 +22271,14 @@ namespace Mobius.Proto.Game {
             ActionCount = input.ReadInt32();
             break;
           }
+          case 64: {
+            WaveIndex = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            FiendIndex = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -22254,6 +22319,14 @@ namespace Mobius.Proto.Game {
           }
           case 56: {
             ActionCount = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            WaveIndex = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            FiendIndex = input.ReadInt32();
             break;
           }
         }

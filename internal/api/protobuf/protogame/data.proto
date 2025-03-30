@@ -608,6 +608,8 @@ message ProtoEnemyDeathStatistic {
   bool from_normal = 5;
   bool from_ultimate = 6;
   int32 action_count = 7;
+  int32 wave_index = 8;
+  int32 fiend_index = 9;
 }
 
 message ProtoAbilityCardSummonDrawResult {
