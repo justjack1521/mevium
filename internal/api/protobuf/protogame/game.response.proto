@@ -243,4 +243,5 @@ message PurchaseCompanionResponse {
 message PurchaseGiftBoxResponse {
   game.ProtoGiftBoxInstance instance = 1;
   game.ProtoItemValuePair cost_item = 2;
+  game.ProtoMailBoxItem inbox_claims = 3;
 }
