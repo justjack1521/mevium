@@ -522,6 +522,7 @@ message ProtoRegionNodeEvent {
   int32 order = 6;
   bool repeatable = 7;
   int32 target_index = 8;
+  int32 group_index = 9;
 }
 
 message ProtoRegionEventData {
