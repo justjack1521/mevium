@@ -139,7 +139,7 @@ namespace Mobius.Proto.Game {
             "b3N0X2l0ZW0YAiABKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciKiAQoX",
             "UHVyY2hhc2VHaWZ0Qm94UmVzcG9uc2USLAoIaW5zdGFuY2UYASABKAsyGi5n",
             "YW1lLlByb3RvR2lmdEJveEluc3RhbmNlEisKCWNvc3RfaXRlbRgCIAEoCzIY",
-            "LmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyEiwKDGluYm94X2NsYWltcxgDIAEo",
+            "LmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyEiwKDGluYm94X2NsYWltcxgDIAMo",
             "CzIWLmdhbWUuUHJvdG9NYWlsQm94SXRlbUJLWjVnaXRodWIuY29tL2p1c3Rq",
             "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1",
             "cy5Qcm90by5HYW1lYgZwcm90bzM="));
@@ -9379,7 +9379,7 @@ namespace Mobius.Proto.Game {
     public PurchaseGiftBoxResponse(PurchaseGiftBoxResponse other) : this() {
       instance_ = other.instance_ != null ? other.instance_.Clone() : null;
       costItem_ = other.costItem_ != null ? other.costItem_.Clone() : null;
-      inboxClaims_ = other.inboxClaims_ != null ? other.inboxClaims_.Clone() : null;
+      inboxClaims_ = other.inboxClaims_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9412,13 +9412,12 @@ namespace Mobius.Proto.Game {
 
     /// <summary>Field number for the "inbox_claims" field.</summary>
     public const int InboxClaimsFieldNumber = 3;
-    private global::Mobius.Proto.Game.ProtoMailBoxItem inboxClaims_;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoMailBoxItem> _repeated_inboxClaims_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Game.ProtoMailBoxItem.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMailBoxItem> inboxClaims_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMailBoxItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Game.ProtoMailBoxItem InboxClaims {
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMailBoxItem> InboxClaims {
       get { return inboxClaims_; }
-      set {
-        inboxClaims_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9436,7 +9435,7 @@ namespace Mobius.Proto.Game {
       }
       if (!object.Equals(Instance, other.Instance)) return false;
       if (!object.Equals(CostItem, other.CostItem)) return false;
-      if (!object.Equals(InboxClaims, other.InboxClaims)) return false;
+      if(!inboxClaims_.Equals(other.inboxClaims_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9445,7 +9444,7 @@ namespace Mobius.Proto.Game {
       int hash = 1;
       if (instance_ != null) hash ^= Instance.GetHashCode();
       if (costItem_ != null) hash ^= CostItem.GetHashCode();
-      if (inboxClaims_ != null) hash ^= InboxClaims.GetHashCode();
+      hash ^= inboxClaims_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9470,10 +9469,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(18);
         output.WriteMessage(CostItem);
       }
-      if (inboxClaims_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(InboxClaims);
-      }
+      inboxClaims_.WriteTo(output, _repeated_inboxClaims_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9491,10 +9487,7 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(18);
         output.WriteMessage(CostItem);
       }
-      if (inboxClaims_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(InboxClaims);
-      }
+      inboxClaims_.WriteTo(ref output, _repeated_inboxClaims_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9510,9 +9503,7 @@ namespace Mobius.Proto.Game {
       if (costItem_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostItem);
       }
-      if (inboxClaims_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InboxClaims);
-      }
+      size += inboxClaims_.CalculateSize(_repeated_inboxClaims_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9536,12 +9527,7 @@ namespace Mobius.Proto.Game {
         }
         CostItem.MergeFrom(other.CostItem);
       }
-      if (other.inboxClaims_ != null) {
-        if (inboxClaims_ == null) {
-          InboxClaims = new global::Mobius.Proto.Game.ProtoMailBoxItem();
-        }
-        InboxClaims.MergeFrom(other.InboxClaims);
-      }
+      inboxClaims_.Add(other.inboxClaims_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9571,10 +9557,7 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 26: {
-            if (inboxClaims_ == null) {
-              InboxClaims = new global::Mobius.Proto.Game.ProtoMailBoxItem();
-            }
-            input.ReadMessage(InboxClaims);
+            inboxClaims_.AddEntriesFrom(input, _repeated_inboxClaims_codec);
             break;
           }
         }
@@ -9606,10 +9589,7 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 26: {
-            if (inboxClaims_ == null) {
-              InboxClaims = new global::Mobius.Proto.Game.ProtoMailBoxItem();
-            }
-            input.ReadMessage(InboxClaims);
+            inboxClaims_.AddEntriesFrom(ref input, _repeated_inboxClaims_codec);
             break;
           }
         }
