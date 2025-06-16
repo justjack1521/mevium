@@ -404,8 +404,8 @@ message ProtoPlayerStamina {
   uint32 current_stamina = 1;
   uint32 max_stamina = 2;
   uint64 stamina_dec = 3;
+  uint32 stamina_bank = 4;
 
-  uint32 current_mp_stamina = 4;
   uint32 max_mp_stamina = 5;
   uint64 mp_stamina_dec = 6;
 }
