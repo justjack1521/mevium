@@ -91,35 +91,36 @@ namespace Mobius.Proto.Game {
             "UmVxdWVzdBIPCgdsb2NrX2lkGAEgASgJIiEKE0NsYWltRHVuZ2VvblJlcXVl",
             "c3QSCgoCaWQYASABKAkiJgoYUHVyY2hhc2VDb21wYW5pb25SZXF1ZXN0EgoK",
             "AmlkGAEgASgJIiQKFlB1cmNoYXNlR2lmdEJveFJlcXVlc3QSCgoCaWQYASAB",
-            "KAkiIwoVU3RhbWluYURlcG9zaXRSZXF1ZXN0EgoKAm1wGAEgASgIIiMKFVN0",
-            "YW1pbmFDb252ZXJ0UmVxdWVzdBIKCgJtcBgBIAEoCCqSCAoPR2FtZVJlcXVl",
-            "c3RUeXBlEggKBEJBU0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVf",
-            "UFJPRklMRRCsAhITCg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQ",
-            "kAMSFQoQQ0FSRF9GSUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDY",
-            "BBIQCgtTS0lMTF9QQU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19F",
-            "RElUX0FMTBCEBxINCghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9F",
-            "VkVOVBDMCBIeChlQUk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJB",
-            "VFRMRV9SRVZJVkUQsAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJ",
-            "Uk1fREFJTFlfTUlTU0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQN",
-            "EhIKDUNMQUlNX01BSUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQug4S",
-            "EQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoRRVhQ",
-            "QU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FSRF9G",
-            "VVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJUlNU",
-            "X0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQTEhcK",
-            "EkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVXQVJE",
-            "EPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCcGBIa",
-            "ChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5UEOQZ",
-            "EhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVHSU9O",
-            "X01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNVVEVf",
-            "RElBTE9HVUUQvB4SGQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoOQ0FS",
-            "RF9BVVRPX1NFTEwQhCASFgoRVU5MT0NLX1JFR0lPTl9NQVAQ6CASEgoNQ0xB",
-            "SU1fRFVOR0VPThDMIRIXChJVTkxPQ0tfUkVHSU9OX05PREUQsCISFwoSUFVS",
-            "Q0hBU0VfQ09NUEFOSU9OEJQjEhYKEVBVUkNIQVNFX0dJRlRfQk9YEPgjEhQK",
-            "D1NUQU1JTkFfREVQT1NJVBDcJBIUCg9TVEFNSU5BX0NPTlZFUlQQwCUqWAoT",
-            "VGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JUEAASCQoF",
-            "TE9HSU4QARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExFEARCS1o1",
-            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
-            "cm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "KAkiMwoVU3RhbWluYURlcG9zaXRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEoBRIK",
+            "CgJtcBgCIAEoCCIjChVTdGFtaW5hQ29udmVydFJlcXVlc3QSCgoCbXAYASAB",
+            "KAgqkggKD0dhbWVSZXF1ZXN0VHlwZRIICgRCQVNFEAASEAoLR0VUX1BST0ZJ",
+            "TEUQyAESEwoOQ1JFQVRFX1BST0ZJTEUQrAISEwoOVVBEQVRFX1BST0ZJTEUQ",
+            "3gISDgoJQ0FSRF9TQUxFEJADEhUKEENBUkRfRklMVEVSX1NPUlQQ9AMSEwoO",
+            "Q0FSRF9GQVZPVVJJVEUQ2AQSEAoLU0tJTExfUEFORUwQvAUSDgoJREVDS19F",
+            "RElUEKAGEhIKDURFQ0tfRURJVF9BTEwQhAcSDQoIVEVMRVBPUlQQ6AcSGQoU",
+            "UFJPQ0VTU19SRUdJT05fRVZFTlQQzAgSHgoZUFJPQ0VTU19SRUdJT05fTk9E",
+            "RV9FVkVOVBD+CBISCg1CQVRUTEVfUkVWSVZFELAJEhQKD0JBVFRMRV9DT01Q",
+            "TEVURRCUChIaChVDT05GSVJNX0RBSUxZX01JU1NJT04QwAwSGAoTQ0xBSU1f",
+            "RVZFTlRfUkFOS0lORxCkDRISCg1DTEFJTV9NQUlMQk9YEIgOEhYKEUNMQUlN",
+            "X0FMTF9NQUlMQk9YELoOEhEKDEJBVFRMRV9TVEFSVBDsDhISCg1DQVJEX1RS",
+            "QU5TRkVSENAPEhYKEUVYUEFORF9DQVJEX1NMT1RTEIIQEhAKC0NBUkRfRlVT",
+            "SU9OELQQEhYKEUNBUkRfRlVTSU9OX0JPT1NUEJgREhQKD1NUQU1JTkFfUkVT",
+            "VE9SRRD8ERIWChFGSVJTVF9EQUlMWV9MT0dJThDgEhIZChRDTEFJTV9MT0dJ",
+            "Tl9DQU1QQUlHThDEExIXChJERUxFVEVfQUxMX01BSUxCT1gQjBUSGAoTQ0xB",
+            "SU1fUkVOVEFMX1JFV0FSRBDwFRISCg1QVVJDSEFTRV9JVEVNELgXEhIKDVBV",
+            "UkNIQVNFX0NBUkQQnBgSGgoVQUJJTElUWV9TSE9QX1BVUkNIQVNFEIAZEhEK",
+            "DENBUkRfQVVHTUVOVBDkGRIYChNDTEFJTV9EQUlMWV9NSVNTSU9OEMgaEhgK",
+            "E0NPTVBMRVRFX1JFR0lPTl9NQVAQ9BwSGAoTU1VNTU9OX0FCSUxJVFlfQ0FS",
+            "RBDYHRIVChBFWEVDVVRFX0RJQUxPR1VFELweEhkKFENMQUlNX0lURU1fRElT",
+            "VElMTEVSEKAfEhMKDkNBUkRfQVVUT19TRUxMEIQgEhYKEVVOTE9DS19SRUdJ",
+            "T05fTUFQEOggEhIKDUNMQUlNX0RVTkdFT04QzCESFwoSVU5MT0NLX1JFR0lP",
+            "Tl9OT0RFELAiEhcKElBVUkNIQVNFX0NPTVBBTklPThCUIxIWChFQVVJDSEFT",
+            "RV9HSUZUX0JPWBD4IxIUCg9TVEFNSU5BX0RFUE9TSVQQ3CQSFAoPU1RBTUlO",
+            "QV9DT05WRVJUEMAlKlgKE1RlbGVwb3J0UmVxdWVzdFR5cGUSFAoQSU5WQUxJ",
+            "RF9URUxFUE9SVBAAEgkKBUxPR0lOEAESCQoFV09STEQQAhIJCgVGSUVMRBAD",
+            "EgoKBkJBVFRMRRAEQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1",
+            "bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdhbWVi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,7 +167,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimDungeonRequest), global::Mobius.Proto.Game.ClaimDungeonRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseCompanionRequest), global::Mobius.Proto.Game.PurchaseCompanionRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseGiftBoxRequest), global::Mobius.Proto.Game.PurchaseGiftBoxRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositRequest), global::Mobius.Proto.Game.StaminaDepositRequest.Parser, new[]{ "Mp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositRequest), global::Mobius.Proto.Game.StaminaDepositRequest.Parser, new[]{ "Amount", "Mp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertRequest), global::Mobius.Proto.Game.StaminaConvertRequest.Parser, new[]{ "Mp" }, null, null, null, null)
           }));
     }
@@ -9066,6 +9067,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StaminaDepositRequest(StaminaDepositRequest other) : this() {
+      amount_ = other.amount_;
       mp_ = other.mp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -9075,8 +9077,19 @@ namespace Mobius.Proto.Game {
       return new StaminaDepositRequest(this);
     }
 
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 1;
+    private int amount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Amount {
+      get { return amount_; }
+      set {
+        amount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "mp" field.</summary>
-    public const int MpFieldNumber = 1;
+    public const int MpFieldNumber = 2;
     private bool mp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Mp {
@@ -9099,6 +9112,7 @@ namespace Mobius.Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Amount != other.Amount) return false;
       if (Mp != other.Mp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -9106,6 +9120,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Amount != 0) hash ^= Amount.GetHashCode();
       if (Mp != false) hash ^= Mp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9123,8 +9138,12 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Mp != false) {
+      if (Amount != 0) {
         output.WriteRawTag(8);
+        output.WriteInt32(Amount);
+      }
+      if (Mp != false) {
+        output.WriteRawTag(16);
         output.WriteBool(Mp);
       }
       if (_unknownFields != null) {
@@ -9136,8 +9155,12 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Mp != false) {
+      if (Amount != 0) {
         output.WriteRawTag(8);
+        output.WriteInt32(Amount);
+      }
+      if (Mp != false) {
+        output.WriteRawTag(16);
         output.WriteBool(Mp);
       }
       if (_unknownFields != null) {
@@ -9149,6 +9172,9 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Amount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Amount);
+      }
       if (Mp != false) {
         size += 1 + 1;
       }
@@ -9162,6 +9188,9 @@ namespace Mobius.Proto.Game {
     public void MergeFrom(StaminaDepositRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.Amount != 0) {
+        Amount = other.Amount;
       }
       if (other.Mp != false) {
         Mp = other.Mp;
@@ -9181,6 +9210,10 @@ namespace Mobius.Proto.Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
+            Amount = input.ReadInt32();
+            break;
+          }
+          case 16: {
             Mp = input.ReadBool();
             break;
           }
@@ -9199,6 +9232,10 @@ namespace Mobius.Proto.Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
+            Amount = input.ReadInt32();
+            break;
+          }
+          case 16: {
             Mp = input.ReadBool();
             break;
           }
