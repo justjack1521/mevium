@@ -245,3 +245,15 @@ message PurchaseGiftBoxResponse {
   game.ProtoItemValuePair cost_item = 2;
   repeated game.ProtoMailBoxItem inbox_claims = 3;
 }
+
+message StaminaDepositResponse {
+  int32 stamina_current = 1;
+  uint64 stamina_dec = 2;
+  int32 stamina_bank = 3;
+}
+
+message StaminaConvertResponse {
+  int32 stamina_bank = 1;
+  game.ProtoItemValuePair receive_item = 2;
+  game.ProtoItemValuePair cost_item = 3;
+}

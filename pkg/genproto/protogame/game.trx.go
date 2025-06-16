@@ -340,6 +340,22 @@ func NewPurchaseGiftBoxRequest(bytes []byte) (*PurchaseGiftBoxRequest, error) {
 	return req, nil
 }
 
+func NewStaminaDepositRequest(bytes []byte) (*StaminaDepositRequest, error) {
+	req := &StaminaDepositRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func NewStaminaConvertRequest(bytes []byte) (*StaminaConvertRequest, error) {
+	req := &StaminaConvertRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *RegionMapNodeUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -501,5 +517,12 @@ func (x *PurchaseCompanionResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *PurchaseGiftBoxResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *StaminaDepositResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+func (x *StaminaConvertResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

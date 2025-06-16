@@ -91,33 +91,35 @@ namespace Mobius.Proto.Game {
             "UmVxdWVzdBIPCgdsb2NrX2lkGAEgASgJIiEKE0NsYWltRHVuZ2VvblJlcXVl",
             "c3QSCgoCaWQYASABKAkiJgoYUHVyY2hhc2VDb21wYW5pb25SZXF1ZXN0EgoK",
             "AmlkGAEgASgJIiQKFlB1cmNoYXNlR2lmdEJveFJlcXVlc3QSCgoCaWQYASAB",
-            "KAkq5gcKD0dhbWVSZXF1ZXN0VHlwZRIICgRCQVNFEAASEAoLR0VUX1BST0ZJ",
-            "TEUQyAESEwoOQ1JFQVRFX1BST0ZJTEUQrAISEwoOVVBEQVRFX1BST0ZJTEUQ",
-            "3gISDgoJQ0FSRF9TQUxFEJADEhUKEENBUkRfRklMVEVSX1NPUlQQ9AMSEwoO",
-            "Q0FSRF9GQVZPVVJJVEUQ2AQSEAoLU0tJTExfUEFORUwQvAUSDgoJREVDS19F",
-            "RElUEKAGEhIKDURFQ0tfRURJVF9BTEwQhAcSDQoIVEVMRVBPUlQQ6AcSGQoU",
-            "UFJPQ0VTU19SRUdJT05fRVZFTlQQzAgSHgoZUFJPQ0VTU19SRUdJT05fTk9E",
-            "RV9FVkVOVBD+CBISCg1CQVRUTEVfUkVWSVZFELAJEhQKD0JBVFRMRV9DT01Q",
-            "TEVURRCUChIaChVDT05GSVJNX0RBSUxZX01JU1NJT04QwAwSGAoTQ0xBSU1f",
-            "RVZFTlRfUkFOS0lORxCkDRISCg1DTEFJTV9NQUlMQk9YEIgOEhYKEUNMQUlN",
-            "X0FMTF9NQUlMQk9YELoOEhEKDEJBVFRMRV9TVEFSVBDsDhISCg1DQVJEX1RS",
-            "QU5TRkVSENAPEhYKEUVYUEFORF9DQVJEX1NMT1RTEIIQEhAKC0NBUkRfRlVT",
-            "SU9OELQQEhYKEUNBUkRfRlVTSU9OX0JPT1NUEJgREhQKD1NUQU1JTkFfUkVT",
-            "VE9SRRD8ERIWChFGSVJTVF9EQUlMWV9MT0dJThDgEhIZChRDTEFJTV9MT0dJ",
-            "Tl9DQU1QQUlHThDEExIXChJERUxFVEVfQUxMX01BSUxCT1gQjBUSGAoTQ0xB",
-            "SU1fUkVOVEFMX1JFV0FSRBDwFRISCg1QVVJDSEFTRV9JVEVNELgXEhIKDVBV",
-            "UkNIQVNFX0NBUkQQnBgSGgoVQUJJTElUWV9TSE9QX1BVUkNIQVNFEIAZEhEK",
-            "DENBUkRfQVVHTUVOVBDkGRIYChNDTEFJTV9EQUlMWV9NSVNTSU9OEMgaEhgK",
-            "E0NPTVBMRVRFX1JFR0lPTl9NQVAQ9BwSGAoTU1VNTU9OX0FCSUxJVFlfQ0FS",
-            "RBDYHRIVChBFWEVDVVRFX0RJQUxPR1VFELweEhkKFENMQUlNX0lURU1fRElT",
-            "VElMTEVSEKAfEhMKDkNBUkRfQVVUT19TRUxMEIQgEhYKEVVOTE9DS19SRUdJ",
-            "T05fTUFQEOggEhIKDUNMQUlNX0RVTkdFT04QzCESFwoSVU5MT0NLX1JFR0lP",
-            "Tl9OT0RFELAiEhcKElBVUkNIQVNFX0NPTVBBTklPThCUIxIWChFQVVJDSEFT",
-            "RV9HSUZUX0JPWBD4IypYChNUZWxlcG9ydFJlcXVlc3RUeXBlEhQKEElOVkFM",
-            "SURfVEVMRVBPUlQQABIJCgVMT0dJThABEgkKBVdPUkxEEAISCQoFRklFTEQQ",
-            "AxIKCgZCQVRUTEUQBEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZp",
-            "dW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1l",
-            "YgZwcm90bzM="));
+            "KAkiIwoVU3RhbWluYURlcG9zaXRSZXF1ZXN0EgoKAm1wGAEgASgIIiMKFVN0",
+            "YW1pbmFDb252ZXJ0UmVxdWVzdBIKCgJtcBgBIAEoCCqSCAoPR2FtZVJlcXVl",
+            "c3RUeXBlEggKBEJBU0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVf",
+            "UFJPRklMRRCsAhITCg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQ",
+            "kAMSFQoQQ0FSRF9GSUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDY",
+            "BBIQCgtTS0lMTF9QQU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19F",
+            "RElUX0FMTBCEBxINCghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9F",
+            "VkVOVBDMCBIeChlQUk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJB",
+            "VFRMRV9SRVZJVkUQsAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJ",
+            "Uk1fREFJTFlfTUlTU0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQN",
+            "EhIKDUNMQUlNX01BSUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQug4S",
+            "EQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoRRVhQ",
+            "QU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FSRF9G",
+            "VVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJUlNU",
+            "X0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQTEhcK",
+            "EkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVXQVJE",
+            "EPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCcGBIa",
+            "ChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5UEOQZ",
+            "EhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVHSU9O",
+            "X01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNVVEVf",
+            "RElBTE9HVUUQvB4SGQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoOQ0FS",
+            "RF9BVVRPX1NFTEwQhCASFgoRVU5MT0NLX1JFR0lPTl9NQVAQ6CASEgoNQ0xB",
+            "SU1fRFVOR0VPThDMIRIXChJVTkxPQ0tfUkVHSU9OX05PREUQsCISFwoSUFVS",
+            "Q0hBU0VfQ09NUEFOSU9OEJQjEhYKEVBVUkNIQVNFX0dJRlRfQk9YEPgjEhQK",
+            "D1NUQU1JTkFfREVQT1NJVBDcJBIUCg9TVEFNSU5BX0NPTlZFUlQQwCUqWAoT",
+            "VGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JUEAASCQoF",
+            "TE9HSU4QARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExFEARCS1o1",
+            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
+            "cm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -163,7 +165,9 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapNodeUnlockRequest), global::Mobius.Proto.Game.RegionMapNodeUnlockRequest.Parser, new[]{ "LockId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimDungeonRequest), global::Mobius.Proto.Game.ClaimDungeonRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseCompanionRequest), global::Mobius.Proto.Game.PurchaseCompanionRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseGiftBoxRequest), global::Mobius.Proto.Game.PurchaseGiftBoxRequest.Parser, new[]{ "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseGiftBoxRequest), global::Mobius.Proto.Game.PurchaseGiftBoxRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositRequest), global::Mobius.Proto.Game.StaminaDepositRequest.Parser, new[]{ "Mp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertRequest), global::Mobius.Proto.Game.StaminaConvertRequest.Parser, new[]{ "Mp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -215,6 +219,8 @@ namespace Mobius.Proto.Game {
     [pbr::OriginalName("UNLOCK_REGION_NODE")] UnlockRegionNode = 4400,
     [pbr::OriginalName("PURCHASE_COMPANION")] PurchaseCompanion = 4500,
     [pbr::OriginalName("PURCHASE_GIFT_BOX")] PurchaseGiftBox = 4600,
+    [pbr::OriginalName("STAMINA_DEPOSIT")] StaminaDeposit = 4700,
+    [pbr::OriginalName("STAMINA_CONVERT")] StaminaConvert = 4800,
   }
 
   public enum TeleportRequestType {
@@ -9022,6 +9028,350 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class StaminaDepositRequest : pb::IMessage<StaminaDepositRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StaminaDepositRequest> _parser = new pb::MessageParser<StaminaDepositRequest>(() => new StaminaDepositRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StaminaDepositRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameRequestReflection.Descriptor.MessageTypes[43]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StaminaDepositRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StaminaDepositRequest(StaminaDepositRequest other) : this() {
+      mp_ = other.mp_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StaminaDepositRequest Clone() {
+      return new StaminaDepositRequest(this);
+    }
+
+    /// <summary>Field number for the "mp" field.</summary>
+    public const int MpFieldNumber = 1;
+    private bool mp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Mp {
+      get { return mp_; }
+      set {
+        mp_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StaminaDepositRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StaminaDepositRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mp != other.Mp) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mp != false) hash ^= Mp.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mp != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Mp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mp != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Mp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mp != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StaminaDepositRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mp != false) {
+        Mp = other.Mp;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Mp = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Mp = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class StaminaConvertRequest : pb::IMessage<StaminaConvertRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StaminaConvertRequest> _parser = new pb::MessageParser<StaminaConvertRequest>(() => new StaminaConvertRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StaminaConvertRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameRequestReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StaminaConvertRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StaminaConvertRequest(StaminaConvertRequest other) : this() {
+      mp_ = other.mp_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StaminaConvertRequest Clone() {
+      return new StaminaConvertRequest(this);
+    }
+
+    /// <summary>Field number for the "mp" field.</summary>
+    public const int MpFieldNumber = 1;
+    private bool mp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Mp {
+      get { return mp_; }
+      set {
+        mp_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StaminaConvertRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StaminaConvertRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mp != other.Mp) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mp != false) hash ^= Mp.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mp != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Mp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mp != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Mp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mp != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StaminaConvertRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mp != false) {
+        Mp = other.Mp;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Mp = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Mp = input.ReadBool();
             break;
           }
         }

@@ -50,5 +50,7 @@ service MeviusGameService {
   rpc ClaimItemDistiller(game.ClaimItemDistillerRequest) returns (game.ClaimItemDistillerResponse) {}
   rpc PurchaseCompanion(game.PurchaseCompanionRequest) returns (game.PurchaseCompanionResponse) {}
   rpc PurchaseGiftBox(game.PurchaseGiftBoxRequest) returns (game.PurchaseGiftBoxResponse) {}
+  rpc DepositStamina(game.StaminaDepositRequest) returns (game.StaminaDepositResponse) {}
+  rpc ConvertStamina(game.StaminaConvertRequest) returns (game.StaminaConvertResponse) {}
 }
 

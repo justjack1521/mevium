@@ -61,6 +61,8 @@ const (
 	MeviusGameService_ClaimItemDistiller_FullMethodName     = "/service.MeviusGameService/ClaimItemDistiller"
 	MeviusGameService_PurchaseCompanion_FullMethodName      = "/service.MeviusGameService/PurchaseCompanion"
 	MeviusGameService_PurchaseGiftBox_FullMethodName        = "/service.MeviusGameService/PurchaseGiftBox"
+	MeviusGameService_DepositStamina_FullMethodName         = "/service.MeviusGameService/DepositStamina"
+	MeviusGameService_ConvertStamina_FullMethodName         = "/service.MeviusGameService/ConvertStamina"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -109,6 +111,8 @@ type MeviusGameServiceClient interface {
 	ClaimItemDistiller(ctx context.Context, in *protogame.ClaimItemDistillerRequest, opts ...grpc.CallOption) (*protogame.ClaimItemDistillerResponse, error)
 	PurchaseCompanion(ctx context.Context, in *protogame.PurchaseCompanionRequest, opts ...grpc.CallOption) (*protogame.PurchaseCompanionResponse, error)
 	PurchaseGiftBox(ctx context.Context, in *protogame.PurchaseGiftBoxRequest, opts ...grpc.CallOption) (*protogame.PurchaseGiftBoxResponse, error)
+	DepositStamina(ctx context.Context, in *protogame.StaminaDepositRequest, opts ...grpc.CallOption) (*protogame.StaminaDepositResponse, error)
+	ConvertStamina(ctx context.Context, in *protogame.StaminaConvertRequest, opts ...grpc.CallOption) (*protogame.StaminaConvertResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -488,6 +492,24 @@ func (c *meviusGameServiceClient) PurchaseGiftBox(ctx context.Context, in *proto
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) DepositStamina(ctx context.Context, in *protogame.StaminaDepositRequest, opts ...grpc.CallOption) (*protogame.StaminaDepositResponse, error) {
+	out := new(protogame.StaminaDepositResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_DepositStamina_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusGameServiceClient) ConvertStamina(ctx context.Context, in *protogame.StaminaConvertRequest, opts ...grpc.CallOption) (*protogame.StaminaConvertResponse, error) {
+	out := new(protogame.StaminaConvertResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ConvertStamina_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -534,6 +556,8 @@ type MeviusGameServiceServer interface {
 	ClaimItemDistiller(context.Context, *protogame.ClaimItemDistillerRequest) (*protogame.ClaimItemDistillerResponse, error)
 	PurchaseCompanion(context.Context, *protogame.PurchaseCompanionRequest) (*protogame.PurchaseCompanionResponse, error)
 	PurchaseGiftBox(context.Context, *protogame.PurchaseGiftBoxRequest) (*protogame.PurchaseGiftBoxResponse, error)
+	DepositStamina(context.Context, *protogame.StaminaDepositRequest) (*protogame.StaminaDepositResponse, error)
+	ConvertStamina(context.Context, *protogame.StaminaConvertRequest) (*protogame.StaminaConvertResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -662,6 +686,12 @@ func (UnimplementedMeviusGameServiceServer) PurchaseCompanion(context.Context, *
 }
 func (UnimplementedMeviusGameServiceServer) PurchaseGiftBox(context.Context, *protogame.PurchaseGiftBoxRequest) (*protogame.PurchaseGiftBoxResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurchaseGiftBox not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) DepositStamina(context.Context, *protogame.StaminaDepositRequest) (*protogame.StaminaDepositResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DepositStamina not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ConvertStamina(context.Context, *protogame.StaminaConvertRequest) (*protogame.StaminaConvertResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ConvertStamina not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1413,6 +1443,42 @@ func _MeviusGameService_PurchaseGiftBox_Handler(srv interface{}, ctx context.Con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_DepositStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.StaminaDepositRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).DepositStamina(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_DepositStamina_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).DepositStamina(ctx, req.(*protogame.StaminaDepositRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusGameService_ConvertStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.StaminaConvertRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ConvertStamina(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ConvertStamina_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ConvertStamina(ctx, req.(*protogame.StaminaConvertRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1583,6 +1649,14 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PurchaseGiftBox",
 			Handler:    _MeviusGameService_PurchaseGiftBox_Handler,
+		},
+		{
+			MethodName: "DepositStamina",
+			Handler:    _MeviusGameService_DepositStamina_Handler,
+		},
+		{
+			MethodName: "ConvertStamina",
+			Handler:    _MeviusGameService_ConvertStamina_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

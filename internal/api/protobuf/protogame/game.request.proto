@@ -53,6 +53,8 @@ enum GameRequestType {
   UNLOCK_REGION_NODE = 4400;
   PURCHASE_COMPANION = 4500;
   PURCHASE_GIFT_BOX = 4600;
+  STAMINA_DEPOSIT = 4700;
+  STAMINA_CONVERT = 4800;
 }
 
 enum TeleportRequestType {
@@ -283,4 +285,12 @@ message PurchaseCompanionRequest {
 
 message PurchaseGiftBoxRequest {
   string id = 1;
+}
+
+message StaminaDepositRequest {
+  bool mp = 1;
+}
+
+message StaminaConvertRequest {
+  bool mp = 1;
 }
