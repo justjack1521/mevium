@@ -85,70 +85,69 @@ namespace Mobius.Proto.Game {
             "bnQYBiABKAUSFAoMcmVudGFsX2NsYWltGAcgASgIImAKEkZpbHRlclNvcnRS",
             "ZXNwb25zZRIMCgRWaWV3GAEgASgFEg0KBUluZGV4GAIgASgFEi0KCkZpbHRl",
             "clNvcnQYAyABKAsyGS5nYW1lLlByb3RvQ2FyZEZpbHRlclNvcnQiLQoVVXBk",
-            "YXRlUHJvZmlsZVJlc3BvbnNlEhQKDGNvbXBhbmlvbl9pZBgBIAEoCSJWChZT",
+            "YXRlUHJvZmlsZVJlc3BvbnNlEhQKDGNvbXBhbmlvbl9pZBgBIAEoCSJsChZT",
             "dGFtaW5hUmVzdG9yZVJlc3BvbnNlEg8KB2l0ZW1faWQYASABKAkSEwoLaXRl",
-            "bV9hbW91bnQYAiABKAUSFgoOcmVzdG9yZV9hbW91bnQYAyABKAUisgQKGFNr",
-            "aWxsUGFuZWxVbmxvY2tSZXNwb25zZRIvCg1pdGVtc19yZW1vdmVkGAEgAygL",
-            "MhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXISGAoQaHBfc3RhdF9pbmNyZWFz",
-            "ZRgCIAEoBRIcChRhdHRhY2tfc3RhdF9pbmNyZWFzZRgDIAEoBRIhChlicmVh",
-            "a19wb3dlcl9zdGF0X2luY3JlYXNlGAQgASgFEhsKE21hZ2ljX3N0YXRfaW5j",
-            "cmVhc2UYBSABKAUSHwoXc3ViX2pvYl91bmxvY2tfaW5jcmVhc2UYBiABKAUS",
-            "HwoXdWx0aW1hdGVfYm9vc3RfaW5jcmVhc2UYByABKAUSRwoNd2VhcG9uX3Vu",
-            "bG9jaxgIIAMoCzIwLmdhbWUuU2tpbGxQYW5lbFVubG9ja1Jlc3BvbnNlLldl",
-            "YXBvblVubG9ja0VudHJ5ElQKFGF1dG9fYWJpbGl0aWVzX2FkZGVkGAkgAygL",
-            "MjYuZ2FtZS5Ta2lsbFBhbmVsVW5sb2NrUmVzcG9uc2UuQXV0b0FiaWxpdGll",
-            "c0FkZGVkRW50cnkSHAoUY3Jvd25fbGV2ZWxfaW5jcmVhc2UYCiABKAgaMwoR",
-            "V2VhcG9uVW5sb2NrRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgF",
-            "OgI4ARo5ChdBdXRvQWJpbGl0aWVzQWRkZWRFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAU6AjgBIo0CChBUZWxlcG9ydFJlc3BvbnNlEhIKCnJl",
-            "Z2lvbl9tYXAYASABKAkSFwoPcmVnaW9uX21hcF9ub2RlGAIgASgFEi0KDXJl",
-            "Z2lvbl9ldmVudHMYAyADKAsyFi5nYW1lLlByb3RvUmVnaW9uRXZlbnQSLwoL",
-            "bm9kZV9ldmVudHMYBCADKAsyGi5nYW1lLlByb3RvUmVnaW9uTm9kZUV2ZW50",
-            "EjsKEGN1cnJlbnRfbWFwX2RhdGEYBSABKAsyHC5nYW1lLlByb3RvUmVnaW9u",
-            "TWFwSW5zdGFuY2VIAIgBARIaChJ1bmF2YWlsYWJsZV9yZWFzb24YBiABKAVC",
-            "EwoRX2N1cnJlbnRfbWFwX2RhdGEiLQoaUHJvY2Vzc1JlZ2lvbkV2ZW50UmVz",
-            "cG9uc2USDwoHcGVyc2lzdBgBIAEoCCIxCh5Qcm9jZXNzUmVnaW9uTm9kZUV2",
-            "ZW50UmVzcG9uc2USDwoHcGVyc2lzdBgBIAEoCCJMCh1FeHBhbmRBYmlsaXR5",
-            "Q2FyZFNsb3RSZXNwb25zZRIrCgljb3N0X2l0ZW0YASABKAsyGC5nYW1lLlBy",
-            "b3RvSXRlbVZhbHVlUGFpciIeChxJdGVtU2hvcEl0ZW1QdXJjaGFzZVJlc3Bv",
-            "bnNlIlUKHEl0ZW1TaG9wQ2FyZFB1cmNoYXNlUmVzcG9uc2USNQoNYWJpbGl0",
-            "eV9jYXJkcxgBIAMoCzIeLmdhbWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNl",
-            "IokBChtBYmlsaXR5U2hvcFB1cmNoYXNlUmVzcG9uc2USPQoVYWJpbGl0eV9j",
-            "YXJkX2luc3RhbmNlGAEgASgLMh4uZ2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5z",
-            "dGFuY2USKwoJY29zdF9pdGVtGAIgASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1",
-            "ZVBhaXIi8AEKFkNsYWltUmVnaW9uTWFwUmVzcG9uc2USFQoNcmVnaW9uX21h",
-            "cF9pZBgBIAEoCRItCg1yZWdpb25fZXZlbnRzGAMgAygLMhYuZ2FtZS5Qcm90",
-            "b1JlZ2lvbkV2ZW50ElQKFWF1Z21lbnRfbGV2ZWxfcmV3YXJkcxgEIAMoCzI1",
-            "LmdhbWUuQ2xhaW1SZWdpb25NYXBSZXNwb25zZS5BdWdtZW50TGV2ZWxSZXdh",
-            "cmRzRW50cnkaOgoYQXVnbWVudExldmVsUmV3YXJkc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoBToCOAEizQEKGUFiaWxpdHlDYXJkU3VtbW9u",
-            "UmVzcG9uc2USRAoUYWJpbGl0eV9jYXJkX3Jlc3VsdHMYASADKAsyJi5nYW1l",
-            "LlByb3RvQWJpbGl0eUNhcmRTdW1tb25EcmF3UmVzdWx0EjwKEGpvYl9jYXJk",
-            "X3Jlc3VsdHMYAiADKAsyIi5nYW1lLlByb3RvSm9iQ2FyZFN1bW1vbkRyYXdS",
-            "ZXN1bHQSLAoKY29zdF9pdGVtcxgDIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFs",
-            "dWVQYWlyIkoKF0V4ZWN1dGVEaWFsb2d1ZVJlc3BvbnNlEi8KC25vZGVfZXZl",
-            "bnRzGAEgAygLMhouZ2FtZS5Qcm90b1JlZ2lvbk5vZGVFdmVudCJAChpDbGFp",
-            "bUl0ZW1EaXN0aWxsZXJSZXNwb25zZRIQCghyZWNlaXZlZBgBIAEoBRIQCghk",
-            "ZWNfdGltZRgCIAEoAyJcChdSZWdpb25NYXBVbmxvY2tSZXNwb25zZRITCgt1",
-            "bmxvY2tfdGltZRgBIAEoAxIsCgpjb3N0X2l0ZW1zGAIgAygLMhguZ2FtZS5Q",
-            "cm90b0l0ZW1WYWx1ZVBhaXIiUgoUQ2xhaW1EdW5nZW9uUmVzcG9uc2USCgoC",
-            "aWQYASABKAkSLgoMcmV3YXJkX2l0ZW1zGAIgAygLMhguZ2FtZS5Qcm90b0l0",
-            "ZW1WYWx1ZVBhaXIiZQobUmVnaW9uTWFwTm9kZVVubG9ja1Jlc3BvbnNlEhUK",
-            "DXVubG9ja2VkX25vZGUYASABKAkSLwoNaXRlbXNfcmVtb3ZlZBgCIAMoCzIY",
-            "LmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIlQKGVB1cmNoYXNlQ29tcGFuaW9u",
-            "UmVzcG9uc2USCgoCaWQYASABKAkSKwoJY29zdF9pdGVtGAIgASgLMhguZ2Ft",
-            "ZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiogEKF1B1cmNoYXNlR2lmdEJveFJlc3Bv",
-            "bnNlEiwKCGluc3RhbmNlGAEgASgLMhouZ2FtZS5Qcm90b0dpZnRCb3hJbnN0",
-            "YW5jZRIrCgljb3N0X2l0ZW0YAiABKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVl",
-            "UGFpchIsCgxpbmJveF9jbGFpbXMYAyADKAsyFi5nYW1lLlByb3RvTWFpbEJv",
-            "eEl0ZW0iXAoWU3RhbWluYURlcG9zaXRSZXNwb25zZRIXCg9zdGFtaW5hX2N1",
-            "cnJlbnQYASABKAUSEwoLc3RhbWluYV9kZWMYAiABKAQSFAoMc3RhbWluYV9i",
-            "YW5rGAMgASgFIosBChZTdGFtaW5hQ29udmVydFJlc3BvbnNlEhQKDHN0YW1p",
-            "bmFfYmFuaxgBIAEoBRIuCgxyZWNlaXZlX2l0ZW0YAiABKAsyGC5nYW1lLlBy",
-            "b3RvSXRlbVZhbHVlUGFpchIrCgljb3N0X2l0ZW0YAyABKAsyGC5nYW1lLlBy",
-            "b3RvSXRlbVZhbHVlUGFpckJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9t",
-            "ZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5H",
-            "YW1lYgZwcm90bzM="));
+            "bV9hbW91bnQYAiABKAUSFwoPY3VycmVudF9zdGFtaW5hGAMgASgFEhMKC3N0",
+            "YW1pbmFfZGVjGAQgASgEIrIEChhTa2lsbFBhbmVsVW5sb2NrUmVzcG9uc2US",
+            "LwoNaXRlbXNfcmVtb3ZlZBgBIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQ",
+            "YWlyEhgKEGhwX3N0YXRfaW5jcmVhc2UYAiABKAUSHAoUYXR0YWNrX3N0YXRf",
+            "aW5jcmVhc2UYAyABKAUSIQoZYnJlYWtfcG93ZXJfc3RhdF9pbmNyZWFzZRgE",
+            "IAEoBRIbChNtYWdpY19zdGF0X2luY3JlYXNlGAUgASgFEh8KF3N1Yl9qb2Jf",
+            "dW5sb2NrX2luY3JlYXNlGAYgASgFEh8KF3VsdGltYXRlX2Jvb3N0X2luY3Jl",
+            "YXNlGAcgASgFEkcKDXdlYXBvbl91bmxvY2sYCCADKAsyMC5nYW1lLlNraWxs",
+            "UGFuZWxVbmxvY2tSZXNwb25zZS5XZWFwb25VbmxvY2tFbnRyeRJUChRhdXRv",
+            "X2FiaWxpdGllc19hZGRlZBgJIAMoCzI2LmdhbWUuU2tpbGxQYW5lbFVubG9j",
+            "a1Jlc3BvbnNlLkF1dG9BYmlsaXRpZXNBZGRlZEVudHJ5EhwKFGNyb3duX2xl",
+            "dmVsX2luY3JlYXNlGAogASgIGjMKEVdlYXBvblVubG9ja0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaOQoXQXV0b0FiaWxpdGllc0Fk",
+            "ZGVkRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ASKNAgoQ",
+            "VGVsZXBvcnRSZXNwb25zZRISCgpyZWdpb25fbWFwGAEgASgJEhcKD3JlZ2lv",
+            "bl9tYXBfbm9kZRgCIAEoBRItCg1yZWdpb25fZXZlbnRzGAMgAygLMhYuZ2Ft",
+            "ZS5Qcm90b1JlZ2lvbkV2ZW50Ei8KC25vZGVfZXZlbnRzGAQgAygLMhouZ2Ft",
+            "ZS5Qcm90b1JlZ2lvbk5vZGVFdmVudBI7ChBjdXJyZW50X21hcF9kYXRhGAUg",
+            "ASgLMhwuZ2FtZS5Qcm90b1JlZ2lvbk1hcEluc3RhbmNlSACIAQESGgoSdW5h",
+            "dmFpbGFibGVfcmVhc29uGAYgASgFQhMKEV9jdXJyZW50X21hcF9kYXRhIi0K",
+            "GlByb2Nlc3NSZWdpb25FdmVudFJlc3BvbnNlEg8KB3BlcnNpc3QYASABKAgi",
+            "MQoeUHJvY2Vzc1JlZ2lvbk5vZGVFdmVudFJlc3BvbnNlEg8KB3BlcnNpc3QY",
+            "ASABKAgiTAodRXhwYW5kQWJpbGl0eUNhcmRTbG90UmVzcG9uc2USKwoJY29z",
+            "dF9pdGVtGAEgASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiHgocSXRl",
+            "bVNob3BJdGVtUHVyY2hhc2VSZXNwb25zZSJVChxJdGVtU2hvcENhcmRQdXJj",
+            "aGFzZVJlc3BvbnNlEjUKDWFiaWxpdHlfY2FyZHMYASADKAsyHi5nYW1lLlBy",
+            "b3RvQWJpbGl0eUNhcmRJbnN0YW5jZSKJAQobQWJpbGl0eVNob3BQdXJjaGFz",
+            "ZVJlc3BvbnNlEj0KFWFiaWxpdHlfY2FyZF9pbnN0YW5jZRgBIAEoCzIeLmdh",
+            "bWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlEisKCWNvc3RfaXRlbRgCIAEo",
+            "CzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIvABChZDbGFpbVJlZ2lvbk1h",
+            "cFJlc3BvbnNlEhUKDXJlZ2lvbl9tYXBfaWQYASABKAkSLQoNcmVnaW9uX2V2",
+            "ZW50cxgDIAMoCzIWLmdhbWUuUHJvdG9SZWdpb25FdmVudBJUChVhdWdtZW50",
+            "X2xldmVsX3Jld2FyZHMYBCADKAsyNS5nYW1lLkNsYWltUmVnaW9uTWFwUmVz",
+            "cG9uc2UuQXVnbWVudExldmVsUmV3YXJkc0VudHJ5GjoKGEF1Z21lbnRMZXZl",
+            "bFJld2FyZHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgB",
+            "Is0BChlBYmlsaXR5Q2FyZFN1bW1vblJlc3BvbnNlEkQKFGFiaWxpdHlfY2Fy",
+            "ZF9yZXN1bHRzGAEgAygLMiYuZ2FtZS5Qcm90b0FiaWxpdHlDYXJkU3VtbW9u",
+            "RHJhd1Jlc3VsdBI8ChBqb2JfY2FyZF9yZXN1bHRzGAIgAygLMiIuZ2FtZS5Q",
+            "cm90b0pvYkNhcmRTdW1tb25EcmF3UmVzdWx0EiwKCmNvc3RfaXRlbXMYAyAD",
+            "KAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpciJKChdFeGVjdXRlRGlhbG9n",
+            "dWVSZXNwb25zZRIvCgtub2RlX2V2ZW50cxgBIAMoCzIaLmdhbWUuUHJvdG9S",
+            "ZWdpb25Ob2RlRXZlbnQiQAoaQ2xhaW1JdGVtRGlzdGlsbGVyUmVzcG9uc2US",
+            "EAoIcmVjZWl2ZWQYASABKAUSEAoIZGVjX3RpbWUYAiABKAMiXAoXUmVnaW9u",
+            "TWFwVW5sb2NrUmVzcG9uc2USEwoLdW5sb2NrX3RpbWUYASABKAMSLAoKY29z",
+            "dF9pdGVtcxgCIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIlIKFENs",
+            "YWltRHVuZ2VvblJlc3BvbnNlEgoKAmlkGAEgASgJEi4KDHJld2FyZF9pdGVt",
+            "cxgCIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyImUKG1JlZ2lvbk1h",
+            "cE5vZGVVbmxvY2tSZXNwb25zZRIVCg11bmxvY2tlZF9ub2RlGAEgASgJEi8K",
+            "DWl0ZW1zX3JlbW92ZWQYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFp",
+            "ciJUChlQdXJjaGFzZUNvbXBhbmlvblJlc3BvbnNlEgoKAmlkGAEgASgJEisK",
+            "CWNvc3RfaXRlbRgCIAEoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyIqIB",
+            "ChdQdXJjaGFzZUdpZnRCb3hSZXNwb25zZRIsCghpbnN0YW5jZRgBIAEoCzIa",
+            "LmdhbWUuUHJvdG9HaWZ0Qm94SW5zdGFuY2USKwoJY29zdF9pdGVtGAIgASgL",
+            "MhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXISLAoMaW5ib3hfY2xhaW1zGAMg",
+            "AygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtIlwKFlN0YW1pbmFEZXBvc2l0",
+            "UmVzcG9uc2USFwoPc3RhbWluYV9jdXJyZW50GAEgASgFEhMKC3N0YW1pbmFf",
+            "ZGVjGAIgASgEEhQKDHN0YW1pbmFfYmFuaxgDIAEoBSJcChZTdGFtaW5hQ29u",
+            "dmVydFJlc3BvbnNlEhcKD3N0YW1pbmFfY3VycmVudBgBIAEoBRITCgtzdGFt",
+            "aW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAVCS1o1Z2l0aHVi",
+            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
+            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -176,7 +175,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.FirstDailyLoginResponse), global::Mobius.Proto.Game.FirstDailyLoginResponse.Parser, new[]{ "LoginBonusReceived", "DailyMission", "StandardLoginBonus", "SpecialLoginBonus", "LoginRewards", "RentalCount", "RentalClaim" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.FilterSortResponse), global::Mobius.Proto.Game.FilterSortResponse.Parser, new[]{ "View", "Index", "FilterSort" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.UpdateProfileResponse), global::Mobius.Proto.Game.UpdateProfileResponse.Parser, new[]{ "CompanionId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaRestoreResponse), global::Mobius.Proto.Game.StaminaRestoreResponse.Parser, new[]{ "ItemId", "ItemAmount", "RestoreAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaRestoreResponse), global::Mobius.Proto.Game.StaminaRestoreResponse.Parser, new[]{ "ItemId", "ItemAmount", "CurrentStamina", "StaminaDec" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.SkillPanelUnlockResponse), global::Mobius.Proto.Game.SkillPanelUnlockResponse.Parser, new[]{ "ItemsRemoved", "HpStatIncrease", "AttackStatIncrease", "BreakPowerStatIncrease", "MagicStatIncrease", "SubJobUnlockIncrease", "UltimateBoostIncrease", "WeaponUnlock", "AutoAbilitiesAdded", "CrownLevelIncrease" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.TeleportResponse), global::Mobius.Proto.Game.TeleportResponse.Parser, new[]{ "RegionMap", "RegionMapNode", "RegionEvents", "NodeEvents", "CurrentMapData", "UnavailableReason" }, new[]{ "CurrentMapData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProcessRegionEventResponse), global::Mobius.Proto.Game.ProcessRegionEventResponse.Parser, new[]{ "Persist" }, null, null, null, null),
@@ -195,7 +194,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseCompanionResponse), global::Mobius.Proto.Game.PurchaseCompanionResponse.Parser, new[]{ "Id", "CostItem" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseGiftBoxResponse), global::Mobius.Proto.Game.PurchaseGiftBoxResponse.Parser, new[]{ "Instance", "CostItem", "InboxClaims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositResponse), global::Mobius.Proto.Game.StaminaDepositResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertResponse), global::Mobius.Proto.Game.StaminaConvertResponse.Parser, new[]{ "StaminaBank", "ReceiveItem", "CostItem" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertResponse), global::Mobius.Proto.Game.StaminaConvertResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5719,7 +5718,8 @@ namespace Mobius.Proto.Game {
     public StaminaRestoreResponse(StaminaRestoreResponse other) : this() {
       itemId_ = other.itemId_;
       itemAmount_ = other.itemAmount_;
-      restoreAmount_ = other.restoreAmount_;
+      currentStamina_ = other.currentStamina_;
+      staminaDec_ = other.staminaDec_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5750,14 +5750,25 @@ namespace Mobius.Proto.Game {
       }
     }
 
-    /// <summary>Field number for the "restore_amount" field.</summary>
-    public const int RestoreAmountFieldNumber = 3;
-    private int restoreAmount_;
+    /// <summary>Field number for the "current_stamina" field.</summary>
+    public const int CurrentStaminaFieldNumber = 3;
+    private int currentStamina_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int RestoreAmount {
-      get { return restoreAmount_; }
+    public int CurrentStamina {
+      get { return currentStamina_; }
       set {
-        restoreAmount_ = value;
+        currentStamina_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stamina_dec" field.</summary>
+    public const int StaminaDecFieldNumber = 4;
+    private ulong staminaDec_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong StaminaDec {
+      get { return staminaDec_; }
+      set {
+        staminaDec_ = value;
       }
     }
 
@@ -5776,7 +5787,8 @@ namespace Mobius.Proto.Game {
       }
       if (ItemId != other.ItemId) return false;
       if (ItemAmount != other.ItemAmount) return false;
-      if (RestoreAmount != other.RestoreAmount) return false;
+      if (CurrentStamina != other.CurrentStamina) return false;
+      if (StaminaDec != other.StaminaDec) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5785,7 +5797,8 @@ namespace Mobius.Proto.Game {
       int hash = 1;
       if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
       if (ItemAmount != 0) hash ^= ItemAmount.GetHashCode();
-      if (RestoreAmount != 0) hash ^= RestoreAmount.GetHashCode();
+      if (CurrentStamina != 0) hash ^= CurrentStamina.GetHashCode();
+      if (StaminaDec != 0UL) hash ^= StaminaDec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5810,9 +5823,13 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(16);
         output.WriteInt32(ItemAmount);
       }
-      if (RestoreAmount != 0) {
+      if (CurrentStamina != 0) {
         output.WriteRawTag(24);
-        output.WriteInt32(RestoreAmount);
+        output.WriteInt32(CurrentStamina);
+      }
+      if (StaminaDec != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(StaminaDec);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5831,9 +5848,13 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(16);
         output.WriteInt32(ItemAmount);
       }
-      if (RestoreAmount != 0) {
+      if (CurrentStamina != 0) {
         output.WriteRawTag(24);
-        output.WriteInt32(RestoreAmount);
+        output.WriteInt32(CurrentStamina);
+      }
+      if (StaminaDec != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(StaminaDec);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5850,8 +5871,11 @@ namespace Mobius.Proto.Game {
       if (ItemAmount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ItemAmount);
       }
-      if (RestoreAmount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RestoreAmount);
+      if (CurrentStamina != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrentStamina);
+      }
+      if (StaminaDec != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StaminaDec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5870,8 +5894,11 @@ namespace Mobius.Proto.Game {
       if (other.ItemAmount != 0) {
         ItemAmount = other.ItemAmount;
       }
-      if (other.RestoreAmount != 0) {
-        RestoreAmount = other.RestoreAmount;
+      if (other.CurrentStamina != 0) {
+        CurrentStamina = other.CurrentStamina;
+      }
+      if (other.StaminaDec != 0UL) {
+        StaminaDec = other.StaminaDec;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5896,7 +5923,11 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 24: {
-            RestoreAmount = input.ReadInt32();
+            CurrentStamina = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            StaminaDec = input.ReadUInt64();
             break;
           }
         }
@@ -5922,7 +5953,11 @@ namespace Mobius.Proto.Game {
             break;
           }
           case 24: {
-            RestoreAmount = input.ReadInt32();
+            CurrentStamina = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            StaminaDec = input.ReadUInt64();
             break;
           }
         }
@@ -9916,9 +9951,9 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StaminaConvertResponse(StaminaConvertResponse other) : this() {
+      staminaCurrent_ = other.staminaCurrent_;
+      staminaDec_ = other.staminaDec_;
       staminaBank_ = other.staminaBank_;
-      receiveItem_ = other.receiveItem_ != null ? other.receiveItem_.Clone() : null;
-      costItem_ = other.costItem_ != null ? other.costItem_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9927,36 +9962,36 @@ namespace Mobius.Proto.Game {
       return new StaminaConvertResponse(this);
     }
 
+    /// <summary>Field number for the "stamina_current" field.</summary>
+    public const int StaminaCurrentFieldNumber = 1;
+    private int staminaCurrent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StaminaCurrent {
+      get { return staminaCurrent_; }
+      set {
+        staminaCurrent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stamina_dec" field.</summary>
+    public const int StaminaDecFieldNumber = 2;
+    private ulong staminaDec_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong StaminaDec {
+      get { return staminaDec_; }
+      set {
+        staminaDec_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stamina_bank" field.</summary>
-    public const int StaminaBankFieldNumber = 1;
+    public const int StaminaBankFieldNumber = 3;
     private int staminaBank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int StaminaBank {
       get { return staminaBank_; }
       set {
         staminaBank_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "receive_item" field.</summary>
-    public const int ReceiveItemFieldNumber = 2;
-    private global::Mobius.Proto.Game.ProtoItemValuePair receiveItem_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Game.ProtoItemValuePair ReceiveItem {
-      get { return receiveItem_; }
-      set {
-        receiveItem_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cost_item" field.</summary>
-    public const int CostItemFieldNumber = 3;
-    private global::Mobius.Proto.Game.ProtoItemValuePair costItem_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Game.ProtoItemValuePair CostItem {
-      get { return costItem_; }
-      set {
-        costItem_ = value;
       }
     }
 
@@ -9973,18 +10008,18 @@ namespace Mobius.Proto.Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (StaminaCurrent != other.StaminaCurrent) return false;
+      if (StaminaDec != other.StaminaDec) return false;
       if (StaminaBank != other.StaminaBank) return false;
-      if (!object.Equals(ReceiveItem, other.ReceiveItem)) return false;
-      if (!object.Equals(CostItem, other.CostItem)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (StaminaCurrent != 0) hash ^= StaminaCurrent.GetHashCode();
+      if (StaminaDec != 0UL) hash ^= StaminaDec.GetHashCode();
       if (StaminaBank != 0) hash ^= StaminaBank.GetHashCode();
-      if (receiveItem_ != null) hash ^= ReceiveItem.GetHashCode();
-      if (costItem_ != null) hash ^= CostItem.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10001,17 +10036,17 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StaminaBank != 0) {
+      if (StaminaCurrent != 0) {
         output.WriteRawTag(8);
+        output.WriteInt32(StaminaCurrent);
+      }
+      if (StaminaDec != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(StaminaDec);
+      }
+      if (StaminaBank != 0) {
+        output.WriteRawTag(24);
         output.WriteInt32(StaminaBank);
-      }
-      if (receiveItem_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(ReceiveItem);
-      }
-      if (costItem_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CostItem);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -10022,17 +10057,17 @@ namespace Mobius.Proto.Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StaminaBank != 0) {
+      if (StaminaCurrent != 0) {
         output.WriteRawTag(8);
+        output.WriteInt32(StaminaCurrent);
+      }
+      if (StaminaDec != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(StaminaDec);
+      }
+      if (StaminaBank != 0) {
+        output.WriteRawTag(24);
         output.WriteInt32(StaminaBank);
-      }
-      if (receiveItem_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(ReceiveItem);
-      }
-      if (costItem_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CostItem);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -10043,14 +10078,14 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (StaminaCurrent != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StaminaCurrent);
+      }
+      if (StaminaDec != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StaminaDec);
+      }
       if (StaminaBank != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(StaminaBank);
-      }
-      if (receiveItem_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReceiveItem);
-      }
-      if (costItem_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostItem);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10063,20 +10098,14 @@ namespace Mobius.Proto.Game {
       if (other == null) {
         return;
       }
+      if (other.StaminaCurrent != 0) {
+        StaminaCurrent = other.StaminaCurrent;
+      }
+      if (other.StaminaDec != 0UL) {
+        StaminaDec = other.StaminaDec;
+      }
       if (other.StaminaBank != 0) {
         StaminaBank = other.StaminaBank;
-      }
-      if (other.receiveItem_ != null) {
-        if (receiveItem_ == null) {
-          ReceiveItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
-        }
-        ReceiveItem.MergeFrom(other.ReceiveItem);
-      }
-      if (other.costItem_ != null) {
-        if (costItem_ == null) {
-          CostItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
-        }
-        CostItem.MergeFrom(other.CostItem);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10093,21 +10122,15 @@ namespace Mobius.Proto.Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
+            StaminaCurrent = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            StaminaDec = input.ReadUInt64();
+            break;
+          }
+          case 24: {
             StaminaBank = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            if (receiveItem_ == null) {
-              ReceiveItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
-            }
-            input.ReadMessage(ReceiveItem);
-            break;
-          }
-          case 26: {
-            if (costItem_ == null) {
-              CostItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
-            }
-            input.ReadMessage(CostItem);
             break;
           }
         }
@@ -10125,21 +10148,15 @@ namespace Mobius.Proto.Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
+            StaminaCurrent = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            StaminaDec = input.ReadUInt64();
+            break;
+          }
+          case 24: {
             StaminaBank = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            if (receiveItem_ == null) {
-              ReceiveItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
-            }
-            input.ReadMessage(ReceiveItem);
-            break;
-          }
-          case 26: {
-            if (costItem_ == null) {
-              CostItem = new global::Mobius.Proto.Game.ProtoItemValuePair();
-            }
-            input.ReadMessage(CostItem);
             break;
           }
         }
