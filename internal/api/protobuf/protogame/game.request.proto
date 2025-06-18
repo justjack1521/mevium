@@ -293,5 +293,6 @@ message StaminaDepositRequest {
 }
 
 message StaminaConvertRequest {
-  bool mp = 1;
+  int32 amount = 1;
+  bool mp = 2;
 }
