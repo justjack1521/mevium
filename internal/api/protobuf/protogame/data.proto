@@ -495,6 +495,7 @@ message ProtoRegionNodeData {
   int32 wave_index = 7;
   bool foothold = 8;
   int64 seed = 9;
+  map<int32, bool> flags = 10;
 }
 
 message ProtoRegionLockData {
