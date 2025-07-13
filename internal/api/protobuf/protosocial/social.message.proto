@@ -25,3 +25,9 @@ message PlayerCommentUpdateMessage {
   string player_id = 1;
   string comment = 2;
 }
+
+message PlayerNameUpdateMessage {
+  string player_id = 1;
+  string previous = 2;
+  string current = 3;
+}
