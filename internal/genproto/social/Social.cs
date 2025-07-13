@@ -27,24 +27,25 @@ namespace Mobius.Proto.Social {
             "Chhwcm90b3NvY2lhbC9zb2NpYWwucHJvdG8SCHByZXNlbmNlGhpwcm90b2lk",
             "ZW50aXR5L3BsYXllci5wcm90byJmChNQcm90b1BsYXllcklkZW50aXR5EhEK",
             "CXBsYXllcl9pZBgBIAEoCRITCgtwbGF5ZXJfbmFtZRgCIAEoCRIUCgxwbGF5",
-            "ZXJfbGV2ZWwYAyABKAUSEQoJaXNfcGxheWVyGAQgASgIIo4BChVQcm90b1Bs",
+            "ZXJfbGV2ZWwYAyABKAUSEQoJaXNfcGxheWVyGAQgASgIIqYBChVQcm90b1Bs",
             "YXllclNvY2lhbEluZm8SLgoLcGxheWVyX2luZm8YASABKAsyGS5wcmVzZW5j",
             "ZS5Qcm90b1BsYXllckluZm8SEwoLbGFzdF9vbmxpbmUYAiABKAMSFQoNcmVn",
-            "aW9uX21hcF9pZBgDIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgEIAEoBSKl",
-            "AgoPUHJvdG9QbGF5ZXJJbmZvEhEKCXBsYXllcl9pZBgBIAEoCRITCgtwbGF5",
-            "ZXJfbmFtZRgCIAEoCRIWCg5wbGF5ZXJfY29tbWVudBgDIAEoCRIUCgxwbGF5",
-            "ZXJfbGV2ZWwYBCABKAUSFAoMY29tcGFuaW9uX2lkGAUgASgJEhMKC2pvYl9j",
-            "YXJkX2lkGAYgASgJEhUKDXN1Yl9qb2JfaW5kZXgYByABKAUSEwoLY3Jvd25f",
-            "bGV2ZWwYCCABKAUSEQoJd2VhcG9uX2lkGAkgASgJEhkKEXN1Yl93ZWFwb25f",
-            "dW5sb2NrGAogASgFEjcKC3JlbnRhbF9jYXJkGAsgASgLMiIuaWRlbnRpdHku",
-            "UHJvdG9BYmlsaXR5Q2FyZElkZW50aXR5Qk9aN2dpdGh1Yi5jb20vanVzdGph",
-            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9zb2NpYWyqAhNNb2Jp",
-            "dXMuUHJvdG8uU29jaWFsYgZwcm90bzM="));
+            "aW9uX21hcF9pZBgDIAEoCRIZChFyZWdpb25fbm9kZV9pbmRleBgEIAEoBRIW",
+            "Cg5mb2xsb3dlcl9jb3VudBgFIAEoBSKlAgoPUHJvdG9QbGF5ZXJJbmZvEhEK",
+            "CXBsYXllcl9pZBgBIAEoCRITCgtwbGF5ZXJfbmFtZRgCIAEoCRIWCg5wbGF5",
+            "ZXJfY29tbWVudBgDIAEoCRIUCgxwbGF5ZXJfbGV2ZWwYBCABKAUSFAoMY29t",
+            "cGFuaW9uX2lkGAUgASgJEhMKC2pvYl9jYXJkX2lkGAYgASgJEhUKDXN1Yl9q",
+            "b2JfaW5kZXgYByABKAUSEwoLY3Jvd25fbGV2ZWwYCCABKAUSEQoJd2VhcG9u",
+            "X2lkGAkgASgJEhkKEXN1Yl93ZWFwb25fdW5sb2NrGAogASgFEjcKC3JlbnRh",
+            "bF9jYXJkGAsgASgLMiIuaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZElkZW50",
+            "aXR5Qk9aN2dpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2Vu",
+            "cHJvdG8vcHJvdG9zb2NpYWyqAhNNb2JpdXMuUHJvdG8uU29jaWFsYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerIdentity), global::Mobius.Proto.Social.ProtoPlayerIdentity.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "IsPlayer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerSocialInfo), global::Mobius.Proto.Social.ProtoPlayerSocialInfo.Parser, new[]{ "PlayerInfo", "LastOnline", "RegionMapId", "RegionNodeIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerSocialInfo), global::Mobius.Proto.Social.ProtoPlayerSocialInfo.Parser, new[]{ "PlayerInfo", "LastOnline", "RegionMapId", "RegionNodeIndex", "FollowerCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.ProtoPlayerInfo), global::Mobius.Proto.Social.ProtoPlayerInfo.Parser, new[]{ "PlayerId", "PlayerName", "PlayerComment", "PlayerLevel", "CompanionId", "JobCardId", "SubJobIndex", "CrownLevel", "WeaponId", "SubWeaponUnlock", "RentalCard" }, null, null, null, null)
           }));
     }
@@ -365,6 +366,7 @@ namespace Mobius.Proto.Social {
       lastOnline_ = other.lastOnline_;
       regionMapId_ = other.regionMapId_;
       regionNodeIndex_ = other.regionNodeIndex_;
+      followerCount_ = other.followerCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -417,6 +419,17 @@ namespace Mobius.Proto.Social {
       }
     }
 
+    /// <summary>Field number for the "follower_count" field.</summary>
+    public const int FollowerCountFieldNumber = 5;
+    private int followerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int FollowerCount {
+      get { return followerCount_; }
+      set {
+        followerCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoPlayerSocialInfo);
@@ -434,6 +447,7 @@ namespace Mobius.Proto.Social {
       if (LastOnline != other.LastOnline) return false;
       if (RegionMapId != other.RegionMapId) return false;
       if (RegionNodeIndex != other.RegionNodeIndex) return false;
+      if (FollowerCount != other.FollowerCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -444,6 +458,7 @@ namespace Mobius.Proto.Social {
       if (LastOnline != 0L) hash ^= LastOnline.GetHashCode();
       if (RegionMapId.Length != 0) hash ^= RegionMapId.GetHashCode();
       if (RegionNodeIndex != 0) hash ^= RegionNodeIndex.GetHashCode();
+      if (FollowerCount != 0) hash ^= FollowerCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -476,6 +491,10 @@ namespace Mobius.Proto.Social {
         output.WriteRawTag(32);
         output.WriteInt32(RegionNodeIndex);
       }
+      if (FollowerCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(FollowerCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -501,6 +520,10 @@ namespace Mobius.Proto.Social {
         output.WriteRawTag(32);
         output.WriteInt32(RegionNodeIndex);
       }
+      if (FollowerCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(FollowerCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -521,6 +544,9 @@ namespace Mobius.Proto.Social {
       }
       if (RegionNodeIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RegionNodeIndex);
+      }
+      if (FollowerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FollowerCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -547,6 +573,9 @@ namespace Mobius.Proto.Social {
       }
       if (other.RegionNodeIndex != 0) {
         RegionNodeIndex = other.RegionNodeIndex;
+      }
+      if (other.FollowerCount != 0) {
+        FollowerCount = other.FollowerCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -581,6 +610,10 @@ namespace Mobius.Proto.Social {
             RegionNodeIndex = input.ReadInt32();
             break;
           }
+          case 40: {
+            FollowerCount = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -612,6 +645,10 @@ namespace Mobius.Proto.Social {
           }
           case 32: {
             RegionNodeIndex = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            FollowerCount = input.ReadInt32();
             break;
           }
         }

@@ -19,6 +19,7 @@ message ProtoPlayerSocialInfo {
   int64 last_online = 2;
   string region_map_id = 3;
   int32 region_node_index = 4;
+  int32 follower_count = 5;
 }
 
 message ProtoPlayerInfo {
