@@ -49,3 +49,15 @@ func NewPlayerCommentUpdateMessage(bytes []byte) (*PlayerCommentUpdateMessage, e
 func (x *PlayerCommentUpdateMessage) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewPlayerNameUpdateMessage(bytes []byte) (*PlayerNameUpdateMessage, error) {
+	req := &PlayerNameUpdateMessage{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *PlayerNameUpdateMessage) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
