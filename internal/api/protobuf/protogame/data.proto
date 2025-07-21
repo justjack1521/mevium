@@ -460,6 +460,7 @@ message ProtoRegionProgressData {
   bool cleared = 3;
   bool completed = 4;
   bool clear_claimed = 5;
+  repeated ProtoRegionArenaData arenas = 6;
 }
 
 message ProtoWanderingFiendData {
@@ -483,6 +484,14 @@ message ProtoRegionDungeonData {
   bool claimed = 2;
   int32 clear_count = 3;
   bool cleared = 4;
+}
+
+message ProtoRegionArenaData {
+  string sys_id = 1;
+  int64 seed = 2;
+  int32 bracket_number = 3;
+  int32 completed_count = 4;
+  repeated int32 participants = 5;
 }
 
 message ProtoRegionNodeData {

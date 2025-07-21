@@ -55,6 +55,7 @@ enum GameRequestType {
   PURCHASE_GIFT_BOX = 4600;
   STAMINA_DEPOSIT = 4700;
   STAMINA_CONVERT = 4800;
+  ARENA_START = 4900;
 }
 
 enum TeleportRequestType {
@@ -295,4 +296,8 @@ message StaminaDepositRequest {
 message StaminaConvertRequest {
   int32 amount = 1;
   bool mp = 2;
+}
+
+message ArenaStartRequest {
+  string id = 1;
 }

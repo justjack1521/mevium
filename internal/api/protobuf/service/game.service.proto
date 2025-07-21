@@ -52,5 +52,6 @@ service MeviusGameService {
   rpc PurchaseGiftBox(game.PurchaseGiftBoxRequest) returns (game.PurchaseGiftBoxResponse) {}
   rpc DepositStamina(game.StaminaDepositRequest) returns (game.StaminaDepositResponse) {}
   rpc ConvertStamina(game.StaminaConvertRequest) returns (game.StaminaConvertResponse) {}
+  rpc StartArena(game.ArenaStartRequest) returns (game.ArenaStartResponse) {}
 }
 

@@ -356,6 +356,14 @@ func NewStaminaConvertRequest(bytes []byte) (*StaminaConvertRequest, error) {
 	return req, nil
 }
 
+func NewArenaStartRequest(bytes []byte) (*ArenaStartRequest, error) {
+	req := &ArenaStartRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *RegionMapNodeUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -524,5 +532,9 @@ func (x *StaminaDepositResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 func (x *StaminaConvertResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ArenaStartResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

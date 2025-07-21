@@ -145,9 +145,12 @@ namespace Mobius.Proto.Game {
             "UmVzcG9uc2USFwoPc3RhbWluYV9jdXJyZW50GAEgASgFEhMKC3N0YW1pbmFf",
             "ZGVjGAIgASgEEhQKDHN0YW1pbmFfYmFuaxgDIAEoBSJcChZTdGFtaW5hQ29u",
             "dmVydFJlc3BvbnNlEhcKD3N0YW1pbmFfY3VycmVudBgBIAEoBRITCgtzdGFt",
-            "aW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAVCS1o1Z2l0aHVi",
-            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
-            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "aW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAUidAoSQXJlbmFT",
+            "dGFydFJlc3BvbnNlEjIKDmFyZW5hX2luc3RhbmNlGAEgASgLMhouZ2FtZS5Q",
+            "cm90b1JlZ2lvbkFyZW5hRGF0YRIqCgZldmVudHMYAiADKAsyGi5nYW1lLlBy",
+            "b3RvUmVnaW9uTm9kZUV2ZW50QktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
+            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3Rv",
+            "LkdhbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -194,7 +197,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseCompanionResponse), global::Mobius.Proto.Game.PurchaseCompanionResponse.Parser, new[]{ "Id", "CostItem" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseGiftBoxResponse), global::Mobius.Proto.Game.PurchaseGiftBoxResponse.Parser, new[]{ "Instance", "CostItem", "InboxClaims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositResponse), global::Mobius.Proto.Game.StaminaDepositResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertResponse), global::Mobius.Proto.Game.StaminaConvertResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertResponse), global::Mobius.Proto.Game.StaminaConvertResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaStartResponse), global::Mobius.Proto.Game.ArenaStartResponse.Parser, new[]{ "ArenaInstance", "Events" }, null, null, null, null)
           }));
     }
     #endregion
@@ -10157,6 +10161,212 @@ namespace Mobius.Proto.Game {
           }
           case 24: {
             StaminaBank = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ArenaStartResponse : pb::IMessage<ArenaStartResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ArenaStartResponse> _parser = new pb::MessageParser<ArenaStartResponse>(() => new ArenaStartResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ArenaStartResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameResponseReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ArenaStartResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ArenaStartResponse(ArenaStartResponse other) : this() {
+      arenaInstance_ = other.arenaInstance_ != null ? other.arenaInstance_.Clone() : null;
+      events_ = other.events_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ArenaStartResponse Clone() {
+      return new ArenaStartResponse(this);
+    }
+
+    /// <summary>Field number for the "arena_instance" field.</summary>
+    public const int ArenaInstanceFieldNumber = 1;
+    private global::Mobius.Proto.Game.ProtoRegionArenaData arenaInstance_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Game.ProtoRegionArenaData ArenaInstance {
+      get { return arenaInstance_; }
+      set {
+        arenaInstance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "events" field.</summary>
+    public const int EventsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoRegionNodeEvent> _repeated_events_codec
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Game.ProtoRegionNodeEvent.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionNodeEvent> events_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionNodeEvent>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoRegionNodeEvent> Events {
+      get { return events_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ArenaStartResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ArenaStartResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ArenaInstance, other.ArenaInstance)) return false;
+      if(!events_.Equals(other.events_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (arenaInstance_ != null) hash ^= ArenaInstance.GetHashCode();
+      hash ^= events_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (arenaInstance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ArenaInstance);
+      }
+      events_.WriteTo(output, _repeated_events_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (arenaInstance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ArenaInstance);
+      }
+      events_.WriteTo(ref output, _repeated_events_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (arenaInstance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArenaInstance);
+      }
+      size += events_.CalculateSize(_repeated_events_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ArenaStartResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.arenaInstance_ != null) {
+        if (arenaInstance_ == null) {
+          ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaData();
+        }
+        ArenaInstance.MergeFrom(other.ArenaInstance);
+      }
+      events_.Add(other.events_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (arenaInstance_ == null) {
+              ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaData();
+            }
+            input.ReadMessage(ArenaInstance);
+            break;
+          }
+          case 18: {
+            events_.AddEntriesFrom(input, _repeated_events_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (arenaInstance_ == null) {
+              ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaData();
+            }
+            input.ReadMessage(ArenaInstance);
+            break;
+          }
+          case 18: {
+            events_.AddEntriesFrom(ref input, _repeated_events_codec);
             break;
           }
         }
