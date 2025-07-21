@@ -264,4 +264,6 @@ message StaminaConvertResponse {
 message ArenaStartResponse {
   game.ProtoRegionArenaData arena_instance = 1;
   repeated game.ProtoRegionNodeEvent events = 2;
+  int32 stamina_current = 3;
+  uint64 stamina_dec = 4;
 }

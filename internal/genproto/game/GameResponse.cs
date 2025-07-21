@@ -145,12 +145,13 @@ namespace Mobius.Proto.Game {
             "UmVzcG9uc2USFwoPc3RhbWluYV9jdXJyZW50GAEgASgFEhMKC3N0YW1pbmFf",
             "ZGVjGAIgASgEEhQKDHN0YW1pbmFfYmFuaxgDIAEoBSJcChZTdGFtaW5hQ29u",
             "dmVydFJlc3BvbnNlEhcKD3N0YW1pbmFfY3VycmVudBgBIAEoBRITCgtzdGFt",
-            "aW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAUidAoSQXJlbmFT",
-            "dGFydFJlc3BvbnNlEjIKDmFyZW5hX2luc3RhbmNlGAEgASgLMhouZ2FtZS5Q",
-            "cm90b1JlZ2lvbkFyZW5hRGF0YRIqCgZldmVudHMYAiADKAsyGi5nYW1lLlBy",
-            "b3RvUmVnaW9uTm9kZUV2ZW50QktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
-            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3Rv",
-            "LkdhbWViBnByb3RvMw=="));
+            "aW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAUiogEKEkFyZW5h",
+            "U3RhcnRSZXNwb25zZRIyCg5hcmVuYV9pbnN0YW5jZRgBIAEoCzIaLmdhbWUu",
+            "UHJvdG9SZWdpb25BcmVuYURhdGESKgoGZXZlbnRzGAIgAygLMhouZ2FtZS5Q",
+            "cm90b1JlZ2lvbk5vZGVFdmVudBIXCg9zdGFtaW5hX2N1cnJlbnQYAyABKAUS",
+            "EwoLc3RhbWluYV9kZWMYBCABKARCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1",
+            "MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJv",
+            "dG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -198,7 +199,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseGiftBoxResponse), global::Mobius.Proto.Game.PurchaseGiftBoxResponse.Parser, new[]{ "Instance", "CostItem", "InboxClaims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositResponse), global::Mobius.Proto.Game.StaminaDepositResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertResponse), global::Mobius.Proto.Game.StaminaConvertResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaStartResponse), global::Mobius.Proto.Game.ArenaStartResponse.Parser, new[]{ "ArenaInstance", "Events" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaStartResponse), global::Mobius.Proto.Game.ArenaStartResponse.Parser, new[]{ "ArenaInstance", "Events", "StaminaCurrent", "StaminaDec" }, null, null, null, null)
           }));
     }
     #endregion
@@ -10201,6 +10202,8 @@ namespace Mobius.Proto.Game {
     public ArenaStartResponse(ArenaStartResponse other) : this() {
       arenaInstance_ = other.arenaInstance_ != null ? other.arenaInstance_.Clone() : null;
       events_ = other.events_.Clone();
+      staminaCurrent_ = other.staminaCurrent_;
+      staminaDec_ = other.staminaDec_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10230,6 +10233,28 @@ namespace Mobius.Proto.Game {
       get { return events_; }
     }
 
+    /// <summary>Field number for the "stamina_current" field.</summary>
+    public const int StaminaCurrentFieldNumber = 3;
+    private int staminaCurrent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StaminaCurrent {
+      get { return staminaCurrent_; }
+      set {
+        staminaCurrent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stamina_dec" field.</summary>
+    public const int StaminaDecFieldNumber = 4;
+    private ulong staminaDec_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong StaminaDec {
+      get { return staminaDec_; }
+      set {
+        staminaDec_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ArenaStartResponse);
@@ -10245,6 +10270,8 @@ namespace Mobius.Proto.Game {
       }
       if (!object.Equals(ArenaInstance, other.ArenaInstance)) return false;
       if(!events_.Equals(other.events_)) return false;
+      if (StaminaCurrent != other.StaminaCurrent) return false;
+      if (StaminaDec != other.StaminaDec) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10253,6 +10280,8 @@ namespace Mobius.Proto.Game {
       int hash = 1;
       if (arenaInstance_ != null) hash ^= ArenaInstance.GetHashCode();
       hash ^= events_.GetHashCode();
+      if (StaminaCurrent != 0) hash ^= StaminaCurrent.GetHashCode();
+      if (StaminaDec != 0UL) hash ^= StaminaDec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10274,6 +10303,14 @@ namespace Mobius.Proto.Game {
         output.WriteMessage(ArenaInstance);
       }
       events_.WriteTo(output, _repeated_events_codec);
+      if (StaminaCurrent != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StaminaCurrent);
+      }
+      if (StaminaDec != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(StaminaDec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10288,6 +10325,14 @@ namespace Mobius.Proto.Game {
         output.WriteMessage(ArenaInstance);
       }
       events_.WriteTo(ref output, _repeated_events_codec);
+      if (StaminaCurrent != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StaminaCurrent);
+      }
+      if (StaminaDec != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(StaminaDec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10301,6 +10346,12 @@ namespace Mobius.Proto.Game {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArenaInstance);
       }
       size += events_.CalculateSize(_repeated_events_codec);
+      if (StaminaCurrent != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StaminaCurrent);
+      }
+      if (StaminaDec != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StaminaDec);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10319,6 +10370,12 @@ namespace Mobius.Proto.Game {
         ArenaInstance.MergeFrom(other.ArenaInstance);
       }
       events_.Add(other.events_);
+      if (other.StaminaCurrent != 0) {
+        StaminaCurrent = other.StaminaCurrent;
+      }
+      if (other.StaminaDec != 0UL) {
+        StaminaDec = other.StaminaDec;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10344,6 +10401,14 @@ namespace Mobius.Proto.Game {
             events_.AddEntriesFrom(input, _repeated_events_codec);
             break;
           }
+          case 24: {
+            StaminaCurrent = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            StaminaDec = input.ReadUInt64();
+            break;
+          }
         }
       }
     #endif
@@ -10367,6 +10432,14 @@ namespace Mobius.Proto.Game {
           }
           case 18: {
             events_.AddEntriesFrom(ref input, _repeated_events_codec);
+            break;
+          }
+          case 24: {
+            StaminaCurrent = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            StaminaDec = input.ReadUInt64();
             break;
           }
         }
