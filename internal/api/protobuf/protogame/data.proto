@@ -492,6 +492,8 @@ message ProtoRegionArenaData {
   int32 bracket_number = 3;
   int32 completed_count = 4;
   repeated int32 participants = 5;
+  bool Unlocked = 6;
+  bool Entered = 7;
 }
 
 message ProtoRegionNodeData {
