@@ -139,6 +139,8 @@ message ProtoBattleStartData {
 
   ProtoBattleSelection selection_results = 23;
 
+  string arena_id = 24;
+
 }
 
 message ProtoBattleFiendSpawn {
