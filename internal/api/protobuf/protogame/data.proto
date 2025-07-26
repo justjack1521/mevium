@@ -157,6 +157,13 @@ message ProtoBattleProgressData {
   int32 max_stamina = 6;
 }
 
+message ArenaProgressData {
+  string id = 1;
+  int32 bracket_number = 2;
+  int32 completed_count = 3;
+  repeated int32 participants = 4;
+}
+
 message ProtoCardProgressData {
   string instance_id = 1;
   int32 slot_index = 2;
@@ -345,6 +352,7 @@ message ProtoLastBattleResults {
   int32 achievement_unlock = 13;
   map<string, int32> region_mission_progress = 14;
   map<string, int32> wandering_fiend_movements = 16;
+  ArenaProgressData arena_progress_data = 17;
 
 }
 
@@ -494,8 +502,8 @@ message ProtoRegionArenaData {
   int32 bracket_number = 3;
   int32 completed_count = 4;
   repeated int32 participants = 5;
-  bool Unlocked = 6;
-  bool Entered = 7;
+  bool unlocked = 6;
+  bool entered = 7;
 }
 
 message ProtoRegionNodeData {
