@@ -160,8 +160,7 @@ message ProtoBattleProgressData {
 message ArenaProgressData {
   string id = 1;
   int32 bracket_number = 2;
-  int32 completed_count = 3;
-  repeated int32 participants = 4;
+  repeated int32 participants = 3;
 }
 
 message ProtoCardProgressData {
