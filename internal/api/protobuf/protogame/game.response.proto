@@ -175,6 +175,7 @@ message TeleportResponse {
   repeated game.ProtoRegionNodeEvent node_events = 4;
   optional game.ProtoRegionMapInstance current_map_data = 5;
   int32 unavailable_reason = 6;
+  repeated string arena_resets = 7;
 }
 
 message ProcessRegionEventResponse {
