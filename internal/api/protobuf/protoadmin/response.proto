@@ -5,7 +5,6 @@ package admin;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoadmin";
 
 message GrantItemResponse {
-
 }
 
 message CreateSkillPanelResponse {
@@ -14,4 +13,8 @@ message CreateSkillPanelResponse {
 
 message CreateBaseJobCardResponse {
   bool created = 1;
+}
+
+message CreateAugmentMaterialsResponse {
+
 }

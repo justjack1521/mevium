@@ -29,3 +29,8 @@ message CreateBaseJobCardRequest {
   string job_name = 4;
   string type_id = 5;
 }
+
+message CreateAugmentMaterialRequest {
+  string ability_card_id = 1;
+  map<string, int32> materials = 2;
+}

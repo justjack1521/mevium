@@ -20,9 +20,10 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusAdminService_GrantItem_FullMethodName         = "/service.MeviusAdminService/GrantItem"
-	MeviusAdminService_CreateBaseJobCard_FullMethodName = "/service.MeviusAdminService/CreateBaseJobCard"
-	MeviusAdminService_CreateSkillPanel_FullMethodName  = "/service.MeviusAdminService/CreateSkillPanel"
+	MeviusAdminService_GrantItem_FullMethodName              = "/service.MeviusAdminService/GrantItem"
+	MeviusAdminService_CreateBaseJobCard_FullMethodName      = "/service.MeviusAdminService/CreateBaseJobCard"
+	MeviusAdminService_CreateSkillPanel_FullMethodName       = "/service.MeviusAdminService/CreateSkillPanel"
+	MeviusAdminService_CreateAugmentMaterials_FullMethodName = "/service.MeviusAdminService/CreateAugmentMaterials"
 )
 
 // MeviusAdminServiceClient is the client API for MeviusAdminService service.
@@ -32,6 +33,7 @@ type MeviusAdminServiceClient interface {
 	GrantItem(ctx context.Context, in *protoadmin.GrantItemRequest, opts ...grpc.CallOption) (*protoadmin.GrantItemResponse, error)
 	CreateBaseJobCard(ctx context.Context, in *protoadmin.CreateBaseJobCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateBaseJobCardResponse, error)
 	CreateSkillPanel(ctx context.Context, in *protoadmin.CreateSkillPanelRequest, opts ...grpc.CallOption) (*protoadmin.CreateSkillPanelResponse, error)
+	CreateAugmentMaterials(ctx context.Context, in *protoadmin.CreateAugmentMaterialRequest, opts ...grpc.CallOption) (*protoadmin.CreateAugmentMaterialsResponse, error)
 }
 
 type meviusAdminServiceClient struct {
@@ -69,6 +71,15 @@ func (c *meviusAdminServiceClient) CreateSkillPanel(ctx context.Context, in *pro
 	return out, nil
 }
 
+func (c *meviusAdminServiceClient) CreateAugmentMaterials(ctx context.Context, in *protoadmin.CreateAugmentMaterialRequest, opts ...grpc.CallOption) (*protoadmin.CreateAugmentMaterialsResponse, error) {
+	out := new(protoadmin.CreateAugmentMaterialsResponse)
+	err := c.cc.Invoke(ctx, MeviusAdminService_CreateAugmentMaterials_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusAdminServiceServer is the server API for MeviusAdminService service.
 // All implementations should embed UnimplementedMeviusAdminServiceServer
 // for forward compatibility
@@ -76,6 +87,7 @@ type MeviusAdminServiceServer interface {
 	GrantItem(context.Context, *protoadmin.GrantItemRequest) (*protoadmin.GrantItemResponse, error)
 	CreateBaseJobCard(context.Context, *protoadmin.CreateBaseJobCardRequest) (*protoadmin.CreateBaseJobCardResponse, error)
 	CreateSkillPanel(context.Context, *protoadmin.CreateSkillPanelRequest) (*protoadmin.CreateSkillPanelResponse, error)
+	CreateAugmentMaterials(context.Context, *protoadmin.CreateAugmentMaterialRequest) (*protoadmin.CreateAugmentMaterialsResponse, error)
 }
 
 // UnimplementedMeviusAdminServiceServer should be embedded to have forward compatible implementations.
@@ -90,6 +102,9 @@ func (UnimplementedMeviusAdminServiceServer) CreateBaseJobCard(context.Context, 
 }
 func (UnimplementedMeviusAdminServiceServer) CreateSkillPanel(context.Context, *protoadmin.CreateSkillPanelRequest) (*protoadmin.CreateSkillPanelResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateSkillPanel not implemented")
+}
+func (UnimplementedMeviusAdminServiceServer) CreateAugmentMaterials(context.Context, *protoadmin.CreateAugmentMaterialRequest) (*protoadmin.CreateAugmentMaterialsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateAugmentMaterials not implemented")
 }
 
 // UnsafeMeviusAdminServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -157,6 +172,24 @@ func _MeviusAdminService_CreateSkillPanel_Handler(srv interface{}, ctx context.C
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusAdminService_CreateAugmentMaterials_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoadmin.CreateAugmentMaterialRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusAdminServiceServer).CreateAugmentMaterials(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusAdminService_CreateAugmentMaterials_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusAdminServiceServer).CreateAugmentMaterials(ctx, req.(*protoadmin.CreateAugmentMaterialRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusAdminService_ServiceDesc is the grpc.ServiceDesc for MeviusAdminService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -175,6 +208,10 @@ var MeviusAdminService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateSkillPanel",
 			Handler:    _MeviusAdminService_CreateSkillPanel_Handler,
+		},
+		{
+			MethodName: "CreateAugmentMaterials",
+			Handler:    _MeviusAdminService_CreateAugmentMaterials_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
