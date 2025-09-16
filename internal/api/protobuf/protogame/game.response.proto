@@ -166,6 +166,7 @@ message SkillPanelUnlockResponse {
   map<string, int32> weapon_unlock = 8;
   map<string, int32> auto_abilities_added = 9;
   bool crown_level_increase = 10;
+  int32 speed_stat_increase = 11;
 }
 
 message TeleportResponse {
