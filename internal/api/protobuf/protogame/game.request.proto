@@ -56,6 +56,7 @@ enum GameRequestType {
   STAMINA_DEPOSIT = 4700;
   STAMINA_CONVERT = 4800;
   ARENA_START = 4900;
+  ARENA_CLAIM = 5000;
 }
 
 enum TeleportRequestType {
@@ -299,5 +300,9 @@ message StaminaConvertRequest {
 }
 
 message ArenaStartRequest {
+  string id = 1;
+}
+
+message ArenaClaimRequest {
   string id = 1;
 }

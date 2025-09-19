@@ -269,3 +269,8 @@ message ArenaStartResponse {
   int32 stamina_current = 3;
   uint64 stamina_dec = 4;
 }
+
+message ArenaClaimResponse {
+  string id = 1;
+  repeated game.ProtoItemValuePair reward_items = 2;
+}

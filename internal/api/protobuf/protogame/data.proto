@@ -503,6 +503,7 @@ message ProtoRegionArenaData {
   repeated int32 participants = 5;
   bool unlocked = 6;
   bool entered = 7;
+  bool claimed = 8;
 }
 
 message ProtoRegionNodeData {

@@ -64,6 +64,7 @@ const (
 	MeviusGameService_DepositStamina_FullMethodName         = "/service.MeviusGameService/DepositStamina"
 	MeviusGameService_ConvertStamina_FullMethodName         = "/service.MeviusGameService/ConvertStamina"
 	MeviusGameService_StartArena_FullMethodName             = "/service.MeviusGameService/StartArena"
+	MeviusGameService_ClaimArena_FullMethodName             = "/service.MeviusGameService/ClaimArena"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -115,6 +116,7 @@ type MeviusGameServiceClient interface {
 	DepositStamina(ctx context.Context, in *protogame.StaminaDepositRequest, opts ...grpc.CallOption) (*protogame.StaminaDepositResponse, error)
 	ConvertStamina(ctx context.Context, in *protogame.StaminaConvertRequest, opts ...grpc.CallOption) (*protogame.StaminaConvertResponse, error)
 	StartArena(ctx context.Context, in *protogame.ArenaStartRequest, opts ...grpc.CallOption) (*protogame.ArenaStartResponse, error)
+	ClaimArena(ctx context.Context, in *protogame.ArenaClaimRequest, opts ...grpc.CallOption) (*protogame.ArenaClaimResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -521,6 +523,15 @@ func (c *meviusGameServiceClient) StartArena(ctx context.Context, in *protogame.
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) ClaimArena(ctx context.Context, in *protogame.ArenaClaimRequest, opts ...grpc.CallOption) (*protogame.ArenaClaimResponse, error) {
+	out := new(protogame.ArenaClaimResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ClaimArena_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -570,6 +581,7 @@ type MeviusGameServiceServer interface {
 	DepositStamina(context.Context, *protogame.StaminaDepositRequest) (*protogame.StaminaDepositResponse, error)
 	ConvertStamina(context.Context, *protogame.StaminaConvertRequest) (*protogame.StaminaConvertResponse, error)
 	StartArena(context.Context, *protogame.ArenaStartRequest) (*protogame.ArenaStartResponse, error)
+	ClaimArena(context.Context, *protogame.ArenaClaimRequest) (*protogame.ArenaClaimResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -707,6 +719,9 @@ func (UnimplementedMeviusGameServiceServer) ConvertStamina(context.Context, *pro
 }
 func (UnimplementedMeviusGameServiceServer) StartArena(context.Context, *protogame.ArenaStartRequest) (*protogame.ArenaStartResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method StartArena not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ClaimArena(context.Context, *protogame.ArenaClaimRequest) (*protogame.ArenaClaimResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimArena not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1512,6 +1527,24 @@ func _MeviusGameService_StartArena_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_ClaimArena_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.ArenaClaimRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ClaimArena(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ClaimArena_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ClaimArena(ctx, req.(*protogame.ArenaClaimRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1694,6 +1727,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "StartArena",
 			Handler:    _MeviusGameService_StartArena_Handler,
+		},
+		{
+			MethodName: "ClaimArena",
+			Handler:    _MeviusGameService_ClaimArena_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
