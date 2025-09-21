@@ -150,11 +150,11 @@ namespace Mobius.Proto.Game {
             "EkFyZW5hU3RhcnRSZXNwb25zZRIyCg5hcmVuYV9pbnN0YW5jZRgBIAEoCzIa",
             "LmdhbWUuUHJvdG9SZWdpb25BcmVuYURhdGESKgoGZXZlbnRzGAIgAygLMhou",
             "Z2FtZS5Qcm90b1JlZ2lvbk5vZGVFdmVudBIXCg9zdGFtaW5hX2N1cnJlbnQY",
-            "AyABKAUSEwoLc3RhbWluYV9kZWMYBCABKAQiUAoSQXJlbmFDbGFpbVJlc3Bv",
+            "AyABKAUSEwoLc3RhbWluYV9kZWMYBCABKAQiYgoSQXJlbmFDbGFpbVJlc3Bv",
             "bnNlEgoKAmlkGAEgASgJEi4KDHJld2FyZF9pdGVtcxgCIAMoCzIYLmdhbWUu",
-            "UHJvdG9JdGVtVmFsdWVQYWlyQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
-            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3Rv",
-            "LkdhbWViBnByb3RvMw=="));
+            "UHJvdG9JdGVtVmFsdWVQYWlyEhAKCHVubG9ja2VkGAMgASgIQktaNWdpdGh1",
+            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9n",
+            "YW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -203,7 +203,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositResponse), global::Mobius.Proto.Game.StaminaDepositResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertResponse), global::Mobius.Proto.Game.StaminaConvertResponse.Parser, new[]{ "StaminaCurrent", "StaminaDec", "StaminaBank" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaStartResponse), global::Mobius.Proto.Game.ArenaStartResponse.Parser, new[]{ "ArenaInstance", "Events", "StaminaCurrent", "StaminaDec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimResponse), global::Mobius.Proto.Game.ArenaClaimResponse.Parser, new[]{ "Id", "RewardItems" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimResponse), global::Mobius.Proto.Game.ArenaClaimResponse.Parser, new[]{ "Id", "RewardItems", "Unlocked" }, null, null, null, null)
           }));
     }
     #endregion
@@ -10545,6 +10545,7 @@ namespace Mobius.Proto.Game {
     public ArenaClaimResponse(ArenaClaimResponse other) : this() {
       id_ = other.id_;
       rewardItems_ = other.rewardItems_.Clone();
+      unlocked_ = other.unlocked_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10574,6 +10575,17 @@ namespace Mobius.Proto.Game {
       get { return rewardItems_; }
     }
 
+    /// <summary>Field number for the "unlocked" field.</summary>
+    public const int UnlockedFieldNumber = 3;
+    private bool unlocked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Unlocked {
+      get { return unlocked_; }
+      set {
+        unlocked_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ArenaClaimResponse);
@@ -10589,6 +10601,7 @@ namespace Mobius.Proto.Game {
       }
       if (Id != other.Id) return false;
       if(!rewardItems_.Equals(other.rewardItems_)) return false;
+      if (Unlocked != other.Unlocked) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10597,6 +10610,7 @@ namespace Mobius.Proto.Game {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       hash ^= rewardItems_.GetHashCode();
+      if (Unlocked != false) hash ^= Unlocked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10618,6 +10632,10 @@ namespace Mobius.Proto.Game {
         output.WriteString(Id);
       }
       rewardItems_.WriteTo(output, _repeated_rewardItems_codec);
+      if (Unlocked != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Unlocked);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10632,6 +10650,10 @@ namespace Mobius.Proto.Game {
         output.WriteString(Id);
       }
       rewardItems_.WriteTo(ref output, _repeated_rewardItems_codec);
+      if (Unlocked != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Unlocked);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10645,6 +10667,9 @@ namespace Mobius.Proto.Game {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       size += rewardItems_.CalculateSize(_repeated_rewardItems_codec);
+      if (Unlocked != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10660,6 +10685,9 @@ namespace Mobius.Proto.Game {
         Id = other.Id;
       }
       rewardItems_.Add(other.rewardItems_);
+      if (other.Unlocked != false) {
+        Unlocked = other.Unlocked;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10682,6 +10710,10 @@ namespace Mobius.Proto.Game {
             rewardItems_.AddEntriesFrom(input, _repeated_rewardItems_codec);
             break;
           }
+          case 24: {
+            Unlocked = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -10702,6 +10734,10 @@ namespace Mobius.Proto.Game {
           }
           case 18: {
             rewardItems_.AddEntriesFrom(ref input, _repeated_rewardItems_codec);
+            break;
+          }
+          case 24: {
+            Unlocked = input.ReadBool();
             break;
           }
         }

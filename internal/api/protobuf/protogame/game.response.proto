@@ -273,4 +273,5 @@ message ArenaStartResponse {
 message ArenaClaimResponse {
   string id = 1;
   repeated game.ProtoItemValuePair reward_items = 2;
+  bool unlocked = 3;
 }
