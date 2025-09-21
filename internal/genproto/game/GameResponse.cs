@@ -146,15 +146,15 @@ namespace Mobius.Proto.Game {
             "ZXBvc2l0UmVzcG9uc2USFwoPc3RhbWluYV9jdXJyZW50GAEgASgFEhMKC3N0",
             "YW1pbmFfZGVjGAIgASgEEhQKDHN0YW1pbmFfYmFuaxgDIAEoBSJcChZTdGFt",
             "aW5hQ29udmVydFJlc3BvbnNlEhcKD3N0YW1pbmFfY3VycmVudBgBIAEoBRIT",
-            "CgtzdGFtaW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAUiogEK",
-            "EkFyZW5hU3RhcnRSZXNwb25zZRIyCg5hcmVuYV9pbnN0YW5jZRgBIAEoCzIa",
-            "LmdhbWUuUHJvdG9SZWdpb25BcmVuYURhdGESKgoGZXZlbnRzGAIgAygLMhou",
-            "Z2FtZS5Qcm90b1JlZ2lvbk5vZGVFdmVudBIXCg9zdGFtaW5hX2N1cnJlbnQY",
-            "AyABKAUSEwoLc3RhbWluYV9kZWMYBCABKAQiYgoSQXJlbmFDbGFpbVJlc3Bv",
-            "bnNlEgoKAmlkGAEgASgJEi4KDHJld2FyZF9pdGVtcxgCIAMoCzIYLmdhbWUu",
-            "UHJvdG9JdGVtVmFsdWVQYWlyEhAKCHVubG9ja2VkGAMgASgIQktaNWdpdGh1",
-            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9n",
-            "YW1lqgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
+            "CgtzdGFtaW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsYAyABKAUipwEK",
+            "EkFyZW5hU3RhcnRSZXNwb25zZRI3Cg5hcmVuYV9pbnN0YW5jZRgBIAEoCzIf",
+            "LmdhbWUuUHJvdG9SZWdpb25BcmVuYUVudHJ5RGF0YRIqCgZldmVudHMYAiAD",
+            "KAsyGi5nYW1lLlByb3RvUmVnaW9uTm9kZUV2ZW50EhcKD3N0YW1pbmFfY3Vy",
+            "cmVudBgDIAEoBRITCgtzdGFtaW5hX2RlYxgEIAEoBCJiChJBcmVuYUNsYWlt",
+            "UmVzcG9uc2USCgoCaWQYASABKAkSLgoMcmV3YXJkX2l0ZW1zGAIgAygLMhgu",
+            "Z2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXISEAoIdW5sb2NrZWQYAyABKAhCS1o1",
+            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
+            "cm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -10279,9 +10279,9 @@ namespace Mobius.Proto.Game {
 
     /// <summary>Field number for the "arena_instance" field.</summary>
     public const int ArenaInstanceFieldNumber = 1;
-    private global::Mobius.Proto.Game.ProtoRegionArenaData arenaInstance_;
+    private global::Mobius.Proto.Game.ProtoRegionArenaEntryData arenaInstance_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Game.ProtoRegionArenaData ArenaInstance {
+    public global::Mobius.Proto.Game.ProtoRegionArenaEntryData ArenaInstance {
       get { return arenaInstance_; }
       set {
         arenaInstance_ = value;
@@ -10430,7 +10430,7 @@ namespace Mobius.Proto.Game {
       }
       if (other.arenaInstance_ != null) {
         if (arenaInstance_ == null) {
-          ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaData();
+          ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaEntryData();
         }
         ArenaInstance.MergeFrom(other.ArenaInstance);
       }
@@ -10457,7 +10457,7 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             if (arenaInstance_ == null) {
-              ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaData();
+              ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaEntryData();
             }
             input.ReadMessage(ArenaInstance);
             break;
@@ -10490,7 +10490,7 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             if (arenaInstance_ == null) {
-              ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaData();
+              ArenaInstance = new global::Mobius.Proto.Game.ProtoRegionArenaEntryData();
             }
             input.ReadMessage(ArenaInstance);
             break;
