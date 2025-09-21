@@ -499,11 +499,18 @@ message ProtoRegionArenaData {
   string sys_id = 1;
   int64 seed = 2;
   int32 bracket_number = 3;
-  int32 completed_count = 4;
-  repeated int32 participants = 5;
   bool unlocked = 6;
   bool entered = 7;
   bool claimed = 8;
+  int32 current_index = 9;
+  repeated ProtoRegionArenaEntryData entries = 10;
+}
+
+message ProtoRegionArenaEntryData {
+  string sys_id = 1;
+  int32 completed_count = 2;
+  repeated int32 participants = 3;
+  bool unlocked = 4;
 }
 
 message ProtoRegionNodeData {
