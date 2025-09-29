@@ -504,6 +504,7 @@ message ProtoRegionArenaData {
   bool claimed = 8;
   int32 current_index = 9;
   repeated ProtoRegionArenaEntryData entries = 10;
+  bool completed = 11;
 }
 
 message ProtoRegionArenaEntryData {
