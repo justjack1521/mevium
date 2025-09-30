@@ -269,7 +269,7 @@ message ArenaStartResponse {
   int32 stamina_current = 3;
   uint64 stamina_dec = 4;
   string arena_id = 5;
-  int32 arena_entry_index = 6;
+  string arena_entry_id = 6;
 }
 
 message ArenaClaimResponse {

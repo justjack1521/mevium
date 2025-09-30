@@ -261,9 +261,9 @@ namespace Mobius.Proto.Game {
             "BRIPCgdjbGVhcmVkGAQgASgIItwBChRQcm90b1JlZ2lvbkFyZW5hRGF0YRIO",
             "CgZzeXNfaWQYASABKAkSDAoEc2VlZBgCIAEoAxIWCg5icmFja2V0X251bWJl",
             "chgDIAEoBRIQCgh1bmxvY2tlZBgGIAEoCBIPCgdlbnRlcmVkGAcgASgIEg8K",
-            "B2NsYWltZWQYCCABKAgSFQoNY3VycmVudF9pbmRleBgJIAEoBRIwCgdlbnRy",
-            "aWVzGAogAygLMh8uZ2FtZS5Qcm90b1JlZ2lvbkFyZW5hRW50cnlEYXRhEhEK",
-            "CWNvbXBsZXRlZBgLIAEoCCJsChlQcm90b1JlZ2lvbkFyZW5hRW50cnlEYXRh",
+            "B2NsYWltZWQYCCABKAgSMAoHZW50cmllcxgKIAMoCzIfLmdhbWUuUHJvdG9S",
+            "ZWdpb25BcmVuYUVudHJ5RGF0YRIRCgljb21wbGV0ZWQYCyABKAgSFQoNY3Vy",
+            "cmVudF9lbnRyeRgMIAEoCSJsChlQcm90b1JlZ2lvbkFyZW5hRW50cnlEYXRh",
             "Eg4KBnN5c19pZBgBIAEoCRIXCg9jb21wbGV0ZWRfY291bnQYAiABKAUSFAoM",
             "cGFydGljaXBhbnRzGAMgAygFEhAKCHVubG9ja2VkGAQgASgIIpoCChNQcm90",
             "b1JlZ2lvbk5vZGVEYXRhEg8KB25vZGVfaWQYASABKAkSDwoHdmlzaWJsZRgC",
@@ -411,7 +411,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWanderingFiendInstance), global::Mobius.Proto.Game.ProtoWanderingFiendInstance.Parser, new[]{ "SysId", "Started", "Released", "NodeIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionDialogueData), global::Mobius.Proto.Game.ProtoRegionDialogueData.Parser, new[]{ "SysId", "Pending" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionDungeonData), global::Mobius.Proto.Game.ProtoRegionDungeonData.Parser, new[]{ "SysId", "Claimed", "ClearCount", "Cleared" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionArenaData), global::Mobius.Proto.Game.ProtoRegionArenaData.Parser, new[]{ "SysId", "Seed", "BracketNumber", "Unlocked", "Entered", "Claimed", "CurrentIndex", "Entries", "Completed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionArenaData), global::Mobius.Proto.Game.ProtoRegionArenaData.Parser, new[]{ "SysId", "Seed", "BracketNumber", "Unlocked", "Entered", "Claimed", "Entries", "Completed", "CurrentEntry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionArenaEntryData), global::Mobius.Proto.Game.ProtoRegionArenaEntryData.Parser, new[]{ "SysId", "CompletedCount", "Participants", "Unlocked" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionNodeData), global::Mobius.Proto.Game.ProtoRegionNodeData.Parser, new[]{ "NodeId", "Visible", "Locked", "Completed", "CompletedCount", "Opened", "WaveIndex", "Foothold", "Seed", "Flags" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoRegionLockData), global::Mobius.Proto.Game.ProtoRegionLockData.Parser, new[]{ "LockId", "ParentNodeId", "TargetNodeId", "Unlocked" }, null, null, null, null),
@@ -17889,9 +17889,9 @@ namespace Mobius.Proto.Game {
       unlocked_ = other.unlocked_;
       entered_ = other.entered_;
       claimed_ = other.claimed_;
-      currentIndex_ = other.currentIndex_;
       entries_ = other.entries_.Clone();
       completed_ = other.completed_;
+      currentEntry_ = other.currentEntry_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -17966,17 +17966,6 @@ namespace Mobius.Proto.Game {
       }
     }
 
-    /// <summary>Field number for the "current_index" field.</summary>
-    public const int CurrentIndexFieldNumber = 9;
-    private int currentIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CurrentIndex {
-      get { return currentIndex_; }
-      set {
-        currentIndex_ = value;
-      }
-    }
-
     /// <summary>Field number for the "entries" field.</summary>
     public const int EntriesFieldNumber = 10;
     private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoRegionArenaEntryData> _repeated_entries_codec
@@ -17995,6 +17984,17 @@ namespace Mobius.Proto.Game {
       get { return completed_; }
       set {
         completed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "current_entry" field.</summary>
+    public const int CurrentEntryFieldNumber = 12;
+    private string currentEntry_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CurrentEntry {
+      get { return currentEntry_; }
+      set {
+        currentEntry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -18017,9 +18017,9 @@ namespace Mobius.Proto.Game {
       if (Unlocked != other.Unlocked) return false;
       if (Entered != other.Entered) return false;
       if (Claimed != other.Claimed) return false;
-      if (CurrentIndex != other.CurrentIndex) return false;
       if(!entries_.Equals(other.entries_)) return false;
       if (Completed != other.Completed) return false;
+      if (CurrentEntry != other.CurrentEntry) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -18032,9 +18032,9 @@ namespace Mobius.Proto.Game {
       if (Unlocked != false) hash ^= Unlocked.GetHashCode();
       if (Entered != false) hash ^= Entered.GetHashCode();
       if (Claimed != false) hash ^= Claimed.GetHashCode();
-      if (CurrentIndex != 0) hash ^= CurrentIndex.GetHashCode();
       hash ^= entries_.GetHashCode();
       if (Completed != false) hash ^= Completed.GetHashCode();
+      if (CurrentEntry.Length != 0) hash ^= CurrentEntry.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -18075,14 +18075,14 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(64);
         output.WriteBool(Claimed);
       }
-      if (CurrentIndex != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(CurrentIndex);
-      }
       entries_.WriteTo(output, _repeated_entries_codec);
       if (Completed != false) {
         output.WriteRawTag(88);
         output.WriteBool(Completed);
+      }
+      if (CurrentEntry.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CurrentEntry);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -18117,14 +18117,14 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(64);
         output.WriteBool(Claimed);
       }
-      if (CurrentIndex != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(CurrentIndex);
-      }
       entries_.WriteTo(ref output, _repeated_entries_codec);
       if (Completed != false) {
         output.WriteRawTag(88);
         output.WriteBool(Completed);
+      }
+      if (CurrentEntry.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CurrentEntry);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -18153,12 +18153,12 @@ namespace Mobius.Proto.Game {
       if (Claimed != false) {
         size += 1 + 1;
       }
-      if (CurrentIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrentIndex);
-      }
       size += entries_.CalculateSize(_repeated_entries_codec);
       if (Completed != false) {
         size += 1 + 1;
+      }
+      if (CurrentEntry.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrentEntry);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -18189,12 +18189,12 @@ namespace Mobius.Proto.Game {
       if (other.Claimed != false) {
         Claimed = other.Claimed;
       }
-      if (other.CurrentIndex != 0) {
-        CurrentIndex = other.CurrentIndex;
-      }
       entries_.Add(other.entries_);
       if (other.Completed != false) {
         Completed = other.Completed;
+      }
+      if (other.CurrentEntry.Length != 0) {
+        CurrentEntry = other.CurrentEntry;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -18234,16 +18234,16 @@ namespace Mobius.Proto.Game {
             Claimed = input.ReadBool();
             break;
           }
-          case 72: {
-            CurrentIndex = input.ReadInt32();
-            break;
-          }
           case 82: {
             entries_.AddEntriesFrom(input, _repeated_entries_codec);
             break;
           }
           case 88: {
             Completed = input.ReadBool();
+            break;
+          }
+          case 98: {
+            CurrentEntry = input.ReadString();
             break;
           }
         }
@@ -18284,16 +18284,16 @@ namespace Mobius.Proto.Game {
             Claimed = input.ReadBool();
             break;
           }
-          case 72: {
-            CurrentIndex = input.ReadInt32();
-            break;
-          }
           case 82: {
             entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
             break;
           }
           case 88: {
             Completed = input.ReadBool();
+            break;
+          }
+          case 98: {
+            CurrentEntry = input.ReadString();
             break;
           }
         }

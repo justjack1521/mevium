@@ -502,9 +502,9 @@ message ProtoRegionArenaData {
   bool unlocked = 6;
   bool entered = 7;
   bool claimed = 8;
-  int32 current_index = 9;
   repeated ProtoRegionArenaEntryData entries = 10;
   bool completed = 11;
+  string current_entry = 12;
 }
 
 message ProtoRegionArenaEntryData {
