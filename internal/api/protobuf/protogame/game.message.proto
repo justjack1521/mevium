@@ -11,6 +11,7 @@ message BattleCompleteMessage {
   int32 node_index = 6;
   bool revive = 7;
   int32 deck_index = 8;
+  string battle_id = 9;
 }
 
 message PlayerProfileCreatedMessage {
