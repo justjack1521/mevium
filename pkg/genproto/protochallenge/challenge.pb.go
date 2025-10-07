@@ -227,6 +227,179 @@ func (x *ProtoPlayerSocialChallengeEntry) GetIsPlayer() bool {
 	return false
 }
 
+type ProtoEventChallengeProgress struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ChallengeId string                                `protobuf:"bytes,1,opt,name=challenge_id,json=challengeId,proto3" json:"challenge_id,omitempty"`
+	Missions    []*ProtoEventChallengeMissionProgress `protobuf:"bytes,2,rep,name=missions,proto3" json:"missions,omitempty"`
+	Milestones  []*ProtoEventChallengeMilestoneClaim  `protobuf:"bytes,3,rep,name=milestones,proto3" json:"milestones,omitempty"`
+}
+
+func (x *ProtoEventChallengeProgress) Reset() {
+	*x = ProtoEventChallengeProgress{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protochallenge_challenge_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProtoEventChallengeProgress) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoEventChallengeProgress) ProtoMessage() {}
+
+func (x *ProtoEventChallengeProgress) ProtoReflect() protoreflect.Message {
+	mi := &file_protochallenge_challenge_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoEventChallengeProgress.ProtoReflect.Descriptor instead.
+func (*ProtoEventChallengeProgress) Descriptor() ([]byte, []int) {
+	return file_protochallenge_challenge_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *ProtoEventChallengeProgress) GetChallengeId() string {
+	if x != nil {
+		return x.ChallengeId
+	}
+	return ""
+}
+
+func (x *ProtoEventChallengeProgress) GetMissions() []*ProtoEventChallengeMissionProgress {
+	if x != nil {
+		return x.Missions
+	}
+	return nil
+}
+
+func (x *ProtoEventChallengeProgress) GetMilestones() []*ProtoEventChallengeMilestoneClaim {
+	if x != nil {
+		return x.Milestones
+	}
+	return nil
+}
+
+type ProtoEventChallengeMissionProgress struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MissionId string `protobuf:"bytes,1,opt,name=mission_id,json=missionId,proto3" json:"mission_id,omitempty"`
+	Total     int64  `protobuf:"varint,2,opt,name=total,proto3" json:"total,omitempty"`
+	Personal  int64  `protobuf:"varint,3,opt,name=personal,proto3" json:"personal,omitempty"`
+}
+
+func (x *ProtoEventChallengeMissionProgress) Reset() {
+	*x = ProtoEventChallengeMissionProgress{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protochallenge_challenge_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProtoEventChallengeMissionProgress) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoEventChallengeMissionProgress) ProtoMessage() {}
+
+func (x *ProtoEventChallengeMissionProgress) ProtoReflect() protoreflect.Message {
+	mi := &file_protochallenge_challenge_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoEventChallengeMissionProgress.ProtoReflect.Descriptor instead.
+func (*ProtoEventChallengeMissionProgress) Descriptor() ([]byte, []int) {
+	return file_protochallenge_challenge_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ProtoEventChallengeMissionProgress) GetMissionId() string {
+	if x != nil {
+		return x.MissionId
+	}
+	return ""
+}
+
+func (x *ProtoEventChallengeMissionProgress) GetTotal() int64 {
+	if x != nil {
+		return x.Total
+	}
+	return 0
+}
+
+func (x *ProtoEventChallengeMissionProgress) GetPersonal() int64 {
+	if x != nil {
+		return x.Personal
+	}
+	return 0
+}
+
+type ProtoEventChallengeMilestoneClaim struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MilestoneId string `protobuf:"bytes,1,opt,name=milestone_id,json=milestoneId,proto3" json:"milestone_id,omitempty"`
+}
+
+func (x *ProtoEventChallengeMilestoneClaim) Reset() {
+	*x = ProtoEventChallengeMilestoneClaim{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protochallenge_challenge_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProtoEventChallengeMilestoneClaim) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoEventChallengeMilestoneClaim) ProtoMessage() {}
+
+func (x *ProtoEventChallengeMilestoneClaim) ProtoReflect() protoreflect.Message {
+	mi := &file_protochallenge_challenge_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoEventChallengeMilestoneClaim.ProtoReflect.Descriptor instead.
+func (*ProtoEventChallengeMilestoneClaim) Descriptor() ([]byte, []int) {
+	return file_protochallenge_challenge_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *ProtoEventChallengeMilestoneClaim) GetMilestoneId() string {
+	if x != nil {
+		return x.MilestoneId
+	}
+	return ""
+}
+
 var File_protochallenge_challenge_proto protoreflect.FileDescriptor
 
 var file_protochallenge_challenge_proto_rawDesc = []byte{
@@ -275,13 +448,39 @@ var file_protochallenge_challenge_proto_rawDesc = []byte{
 	0x79, 0x65, 0x72, 0x4c, 0x6f, 0x61, 0x64, 0x6f, 0x75, 0x74, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69,
 	0x74, 0x79, 0x52, 0x0e, 0x70, 0x72, 0x69, 0x6d, 0x61, 0x72, 0x79, 0x4c, 0x6f, 0x61, 0x64, 0x6f,
 	0x75, 0x74, 0x12, 0x1b, 0x0a, 0x09, 0x69, 0x73, 0x5f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x18,
-	0x08, 0x20, 0x01, 0x28, 0x08, 0x52, 0x08, 0x69, 0x73, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42,
-	0x55, 0x5a, 0x3a, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75,
-	0x73, 0x74, 0x6a, 0x61, 0x63, 0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75,
-	0x6d, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0xaa, 0x02, 0x16,
-	0x4d, 0x6f, 0x62, 0x69, 0x75, 0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x68, 0x61,
-	0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x08, 0x20, 0x01, 0x28, 0x08, 0x52, 0x08, 0x69, 0x73, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x22,
+	0xd9, 0x01, 0x0a, 0x1b, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x68,
+	0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x50, 0x72, 0x6f, 0x67, 0x72, 0x65, 0x73, 0x73, 0x12,
+	0x21, 0x0a, 0x0c, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x5f, 0x69, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65,
+	0x49, 0x64, 0x12, 0x49, 0x0a, 0x08, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x02,
+	0x20, 0x03, 0x28, 0x0b, 0x32, 0x2d, 0x2e, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65,
+	0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x68, 0x61, 0x6c, 0x6c,
+	0x65, 0x6e, 0x67, 0x65, 0x4d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f, 0x67, 0x72,
+	0x65, 0x73, 0x73, 0x52, 0x08, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x4c, 0x0a,
+	0x0a, 0x6d, 0x69, 0x6c, 0x65, 0x73, 0x74, 0x6f, 0x6e, 0x65, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28,
+	0x0b, 0x32, 0x2c, 0x2e, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x2e, 0x50, 0x72,
+	0x6f, 0x74, 0x6f, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67,
+	0x65, 0x4d, 0x69, 0x6c, 0x65, 0x73, 0x74, 0x6f, 0x6e, 0x65, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x52,
+	0x0a, 0x6d, 0x69, 0x6c, 0x65, 0x73, 0x74, 0x6f, 0x6e, 0x65, 0x73, 0x22, 0x75, 0x0a, 0x22, 0x50,
+	0x72, 0x6f, 0x74, 0x6f, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x43, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e,
+	0x67, 0x65, 0x4d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f, 0x67, 0x72, 0x65, 0x73,
+	0x73, 0x12, 0x1d, 0x0a, 0x0a, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x5f, 0x69, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x49, 0x64,
+	0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52,
+	0x05, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x65, 0x72, 0x73, 0x6f, 0x6e,
+	0x61, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x70, 0x65, 0x72, 0x73, 0x6f, 0x6e,
+	0x61, 0x6c, 0x22, 0x46, 0x0a, 0x21, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x45, 0x76, 0x65, 0x6e, 0x74,
+	0x43, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x4d, 0x69, 0x6c, 0x65, 0x73, 0x74, 0x6f,
+	0x6e, 0x65, 0x43, 0x6c, 0x61, 0x69, 0x6d, 0x12, 0x21, 0x0a, 0x0c, 0x6d, 0x69, 0x6c, 0x65, 0x73,
+	0x74, 0x6f, 0x6e, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x6d,
+	0x69, 0x6c, 0x65, 0x73, 0x74, 0x6f, 0x6e, 0x65, 0x49, 0x64, 0x42, 0x55, 0x5a, 0x3a, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x75, 0x73, 0x74, 0x6a, 0x61, 0x63,
+	0x6b, 0x31, 0x35, 0x32, 0x31, 0x2f, 0x6d, 0x65, 0x76, 0x69, 0x75, 0x6d, 0x2f, 0x70, 0x6b, 0x67,
+	0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63,
+	0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0xaa, 0x02, 0x16, 0x4d, 0x6f, 0x62, 0x69, 0x75,
+	0x73, 0x2e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67,
+	0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -296,22 +495,27 @@ func file_protochallenge_challenge_proto_rawDescGZIP() []byte {
 	return file_protochallenge_challenge_proto_rawDescData
 }
 
-var file_protochallenge_challenge_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_protochallenge_challenge_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_protochallenge_challenge_proto_goTypes = []interface{}{
 	(*ProtoSocialChallengeInstance)(nil),             // 0: challenge.ProtoSocialChallengeInstance
 	(*ProtoPlayerSocialChallengeEntry)(nil),          // 1: challenge.ProtoPlayerSocialChallengeEntry
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 2: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 3: identity.ProtoPlayerLoadoutIdentity
+	(*ProtoEventChallengeProgress)(nil),              // 2: challenge.ProtoEventChallengeProgress
+	(*ProtoEventChallengeMissionProgress)(nil),       // 3: challenge.ProtoEventChallengeMissionProgress
+	(*ProtoEventChallengeMilestoneClaim)(nil),        // 4: challenge.ProtoEventChallengeMilestoneClaim
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 5: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 6: identity.ProtoPlayerLoadoutIdentity
 }
 var file_protochallenge_challenge_proto_depIdxs = []int32{
 	1, // 0: challenge.ProtoSocialChallengeInstance.player_entries:type_name -> challenge.ProtoPlayerSocialChallengeEntry
-	2, // 1: challenge.ProtoPlayerSocialChallengeEntry.identity:type_name -> identity.ProtoPlayerIdentity
-	3, // 2: challenge.ProtoPlayerSocialChallengeEntry.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	3, // [3:3] is the sub-list for method output_type
-	3, // [3:3] is the sub-list for method input_type
-	3, // [3:3] is the sub-list for extension type_name
-	3, // [3:3] is the sub-list for extension extendee
-	0, // [0:3] is the sub-list for field type_name
+	5, // 1: challenge.ProtoPlayerSocialChallengeEntry.identity:type_name -> identity.ProtoPlayerIdentity
+	6, // 2: challenge.ProtoPlayerSocialChallengeEntry.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	3, // 3: challenge.ProtoEventChallengeProgress.missions:type_name -> challenge.ProtoEventChallengeMissionProgress
+	4, // 4: challenge.ProtoEventChallengeProgress.milestones:type_name -> challenge.ProtoEventChallengeMilestoneClaim
+	5, // [5:5] is the sub-list for method output_type
+	5, // [5:5] is the sub-list for method input_type
+	5, // [5:5] is the sub-list for extension type_name
+	5, // [5:5] is the sub-list for extension extendee
+	0, // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_protochallenge_challenge_proto_init() }
@@ -344,6 +548,42 @@ func file_protochallenge_challenge_proto_init() {
 				return nil
 			}
 		}
+		file_protochallenge_challenge_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProtoEventChallengeProgress); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protochallenge_challenge_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProtoEventChallengeMissionProgress); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protochallenge_challenge_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProtoEventChallengeMilestoneClaim); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -351,7 +591,7 @@ func file_protochallenge_challenge_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protochallenge_challenge_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

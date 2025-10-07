@@ -30,17 +30,18 @@ namespace Mobius.Proto.Challenge {
             "CRIUCgxjaGFsbGVuZ2VfaWQYAiABKAkSFgoOY2hhbGxlbmdlX2ZsYWcYAyAB",
             "KAUiWAobSm9pblNvY2lhbENoYWxsZW5nZVJlc3BvbnNlEjkKCGluc3RhbmNl",
             "GAEgASgLMicuY2hhbGxlbmdlLlByb3RvU29jaWFsQ2hhbGxlbmdlSW5zdGFu",
-            "Y2UiWAoaR2V0UGxheWVyQ2hhbGxlbmdlUmVzcG9uc2USOgoJY2hhbGxlbmdl",
-            "GAEgASgLMicuY2hhbGxlbmdlLlByb3RvU29jaWFsQ2hhbGxlbmdlSW5zdGFu",
-            "Y2VCVVo6Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5w",
-            "cm90by9wcm90b2NoYWxsZW5nZaoCFk1vYml1cy5Qcm90by5DaGFsbGVuZ2Vi",
-            "BnByb3RvMw=="));
+            "Y2UimgEKGkdldFBsYXllckNoYWxsZW5nZVJlc3BvbnNlEjoKCWNoYWxsZW5n",
+            "ZRgBIAEoCzInLmNoYWxsZW5nZS5Qcm90b1NvY2lhbENoYWxsZW5nZUluc3Rh",
+            "bmNlEkAKEGV2ZW50X2NoYWxsZW5nZXMYAiADKAsyJi5jaGFsbGVuZ2UuUHJv",
+            "dG9FdmVudENoYWxsZW5nZVByb2dyZXNzQlVaOmdpdGh1Yi5jb20vanVzdGph",
+            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9jaGFsbGVuZ2WqAhZN",
+            "b2JpdXMuUHJvdG8uQ2hhbGxlbmdlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Challenge.ChallengeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetActivePlayerChallengeResponse), global::Mobius.Proto.Challenge.GetActivePlayerChallengeResponse.Parser, new[]{ "SysId", "ChallengeId", "ChallengeFlag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.JoinSocialChallengeResponse), global::Mobius.Proto.Challenge.JoinSocialChallengeResponse.Parser, new[]{ "Instance" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetPlayerChallengeResponse), global::Mobius.Proto.Challenge.GetPlayerChallengeResponse.Parser, new[]{ "Challenge" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.GetPlayerChallengeResponse), global::Mobius.Proto.Challenge.GetPlayerChallengeResponse.Parser, new[]{ "Challenge", "EventChallenges" }, null, null, null, null)
           }));
     }
     #endregion
@@ -502,6 +503,7 @@ namespace Mobius.Proto.Challenge {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPlayerChallengeResponse(GetPlayerChallengeResponse other) : this() {
       challenge_ = other.challenge_ != null ? other.challenge_.Clone() : null;
+      eventChallenges_ = other.eventChallenges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -521,6 +523,16 @@ namespace Mobius.Proto.Challenge {
       }
     }
 
+    /// <summary>Field number for the "event_challenges" field.</summary>
+    public const int EventChallengesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Challenge.ProtoEventChallengeProgress> _repeated_eventChallenges_codec
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Challenge.ProtoEventChallengeProgress.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeProgress> eventChallenges_ = new pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeProgress>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeProgress> EventChallenges {
+      get { return eventChallenges_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetPlayerChallengeResponse);
@@ -535,6 +547,7 @@ namespace Mobius.Proto.Challenge {
         return true;
       }
       if (!object.Equals(Challenge, other.Challenge)) return false;
+      if(!eventChallenges_.Equals(other.eventChallenges_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -542,6 +555,7 @@ namespace Mobius.Proto.Challenge {
     public override int GetHashCode() {
       int hash = 1;
       if (challenge_ != null) hash ^= Challenge.GetHashCode();
+      hash ^= eventChallenges_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -562,6 +576,7 @@ namespace Mobius.Proto.Challenge {
         output.WriteRawTag(10);
         output.WriteMessage(Challenge);
       }
+      eventChallenges_.WriteTo(output, _repeated_eventChallenges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -575,6 +590,7 @@ namespace Mobius.Proto.Challenge {
         output.WriteRawTag(10);
         output.WriteMessage(Challenge);
       }
+      eventChallenges_.WriteTo(ref output, _repeated_eventChallenges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -587,6 +603,7 @@ namespace Mobius.Proto.Challenge {
       if (challenge_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Challenge);
       }
+      size += eventChallenges_.CalculateSize(_repeated_eventChallenges_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -604,6 +621,7 @@ namespace Mobius.Proto.Challenge {
         }
         Challenge.MergeFrom(other.Challenge);
       }
+      eventChallenges_.Add(other.eventChallenges_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -625,6 +643,10 @@ namespace Mobius.Proto.Challenge {
             input.ReadMessage(Challenge);
             break;
           }
+          case 18: {
+            eventChallenges_.AddEntriesFrom(input, _repeated_eventChallenges_codec);
+            break;
+          }
         }
       }
     #endif
@@ -644,6 +666,10 @@ namespace Mobius.Proto.Challenge {
               Challenge = new global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance();
             }
             input.ReadMessage(Challenge);
+            break;
+          }
+          case 18: {
+            eventChallenges_.AddEntriesFrom(ref input, _repeated_eventChallenges_codec);
             break;
           }
         }

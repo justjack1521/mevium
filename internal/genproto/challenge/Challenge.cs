@@ -36,14 +36,25 @@ namespace Mobius.Proto.Challenge {
             "DQoFc2NvcmUYBCABKAMSDAoEcmFuaxgFIAEoAxIvCghpZGVudGl0eRgGIAEo",
             "CzIdLmlkZW50aXR5LlByb3RvUGxheWVySWRlbnRpdHkSPQoPcHJpbWFyeV9s",
             "b2Fkb3V0GAcgASgLMiQuaWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0SWRl",
-            "bnRpdHkSEQoJaXNfcGxheWVyGAggASgIQlVaOmdpdGh1Yi5jb20vanVzdGph",
-            "Y2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9jaGFsbGVuZ2WqAhZN",
-            "b2JpdXMuUHJvdG8uQ2hhbGxlbmdlYgZwcm90bzM="));
+            "bnRpdHkSEQoJaXNfcGxheWVyGAggASgIIrYBChtQcm90b0V2ZW50Q2hhbGxl",
+            "bmdlUHJvZ3Jlc3MSFAoMY2hhbGxlbmdlX2lkGAEgASgJEj8KCG1pc3Npb25z",
+            "GAIgAygLMi0uY2hhbGxlbmdlLlByb3RvRXZlbnRDaGFsbGVuZ2VNaXNzaW9u",
+            "UHJvZ3Jlc3MSQAoKbWlsZXN0b25lcxgDIAMoCzIsLmNoYWxsZW5nZS5Qcm90",
+            "b0V2ZW50Q2hhbGxlbmdlTWlsZXN0b25lQ2xhaW0iWQoiUHJvdG9FdmVudENo",
+            "YWxsZW5nZU1pc3Npb25Qcm9ncmVzcxISCgptaXNzaW9uX2lkGAEgASgJEg0K",
+            "BXRvdGFsGAIgASgDEhAKCHBlcnNvbmFsGAMgASgDIjkKIVByb3RvRXZlbnRD",
+            "aGFsbGVuZ2VNaWxlc3RvbmVDbGFpbRIUCgxtaWxlc3RvbmVfaWQYASABKAlC",
+            "VVo6Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90",
+            "by9wcm90b2NoYWxsZW5nZaoCFk1vYml1cy5Qcm90by5DaGFsbGVuZ2ViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance), global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance.Parser, new[]{ "SysId", "ChallengeId", "MissionId", "RegisterTime", "StartTime", "EndTime", "State", "PlayerEntries" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry), global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "Rank", "Identity", "PrimaryLoadout", "IsPlayer" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry), global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "Rank", "Identity", "PrimaryLoadout", "IsPlayer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeProgress), global::Mobius.Proto.Challenge.ProtoEventChallengeProgress.Parser, new[]{ "ChallengeId", "Missions", "Milestones" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress), global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress.Parser, new[]{ "MissionId", "Total", "Personal" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim), global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim.Parser, new[]{ "MilestoneId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -896,6 +907,644 @@ namespace Mobius.Proto.Challenge {
           }
           case 64: {
             IsPlayer = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoEventChallengeProgress : pb::IMessage<ProtoEventChallengeProgress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoEventChallengeProgress> _parser = new pb::MessageParser<ProtoEventChallengeProgress>(() => new ProtoEventChallengeProgress());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoEventChallengeProgress> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Challenge.ChallengeReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeProgress() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeProgress(ProtoEventChallengeProgress other) : this() {
+      challengeId_ = other.challengeId_;
+      missions_ = other.missions_.Clone();
+      milestones_ = other.milestones_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeProgress Clone() {
+      return new ProtoEventChallengeProgress(this);
+    }
+
+    /// <summary>Field number for the "challenge_id" field.</summary>
+    public const int ChallengeIdFieldNumber = 1;
+    private string challengeId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ChallengeId {
+      get { return challengeId_; }
+      set {
+        challengeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "missions" field.</summary>
+    public const int MissionsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress> _repeated_missions_codec
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress> missions_ = new pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress> Missions {
+      get { return missions_; }
+    }
+
+    /// <summary>Field number for the "milestones" field.</summary>
+    public const int MilestonesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> _repeated_milestones_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> milestones_ = new pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> Milestones {
+      get { return milestones_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoEventChallengeProgress);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoEventChallengeProgress other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ChallengeId != other.ChallengeId) return false;
+      if(!missions_.Equals(other.missions_)) return false;
+      if(!milestones_.Equals(other.milestones_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ChallengeId.Length != 0) hash ^= ChallengeId.GetHashCode();
+      hash ^= missions_.GetHashCode();
+      hash ^= milestones_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ChallengeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ChallengeId);
+      }
+      missions_.WriteTo(output, _repeated_missions_codec);
+      milestones_.WriteTo(output, _repeated_milestones_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ChallengeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ChallengeId);
+      }
+      missions_.WriteTo(ref output, _repeated_missions_codec);
+      milestones_.WriteTo(ref output, _repeated_milestones_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ChallengeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChallengeId);
+      }
+      size += missions_.CalculateSize(_repeated_missions_codec);
+      size += milestones_.CalculateSize(_repeated_milestones_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoEventChallengeProgress other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ChallengeId.Length != 0) {
+        ChallengeId = other.ChallengeId;
+      }
+      missions_.Add(other.missions_);
+      milestones_.Add(other.milestones_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ChallengeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            missions_.AddEntriesFrom(input, _repeated_missions_codec);
+            break;
+          }
+          case 26: {
+            milestones_.AddEntriesFrom(input, _repeated_milestones_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ChallengeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            missions_.AddEntriesFrom(ref input, _repeated_missions_codec);
+            break;
+          }
+          case 26: {
+            milestones_.AddEntriesFrom(ref input, _repeated_milestones_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoEventChallengeMissionProgress : pb::IMessage<ProtoEventChallengeMissionProgress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoEventChallengeMissionProgress> _parser = new pb::MessageParser<ProtoEventChallengeMissionProgress>(() => new ProtoEventChallengeMissionProgress());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoEventChallengeMissionProgress> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Challenge.ChallengeReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeMissionProgress() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeMissionProgress(ProtoEventChallengeMissionProgress other) : this() {
+      missionId_ = other.missionId_;
+      total_ = other.total_;
+      personal_ = other.personal_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeMissionProgress Clone() {
+      return new ProtoEventChallengeMissionProgress(this);
+    }
+
+    /// <summary>Field number for the "mission_id" field.</summary>
+    public const int MissionIdFieldNumber = 1;
+    private string missionId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MissionId {
+      get { return missionId_; }
+      set {
+        missionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total" field.</summary>
+    public const int TotalFieldNumber = 2;
+    private long total_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Total {
+      get { return total_; }
+      set {
+        total_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "personal" field.</summary>
+    public const int PersonalFieldNumber = 3;
+    private long personal_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Personal {
+      get { return personal_; }
+      set {
+        personal_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoEventChallengeMissionProgress);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoEventChallengeMissionProgress other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MissionId != other.MissionId) return false;
+      if (Total != other.Total) return false;
+      if (Personal != other.Personal) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MissionId.Length != 0) hash ^= MissionId.GetHashCode();
+      if (Total != 0L) hash ^= Total.GetHashCode();
+      if (Personal != 0L) hash ^= Personal.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MissionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MissionId);
+      }
+      if (Total != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Total);
+      }
+      if (Personal != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Personal);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MissionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MissionId);
+      }
+      if (Total != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Total);
+      }
+      if (Personal != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Personal);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MissionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MissionId);
+      }
+      if (Total != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Total);
+      }
+      if (Personal != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Personal);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoEventChallengeMissionProgress other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MissionId.Length != 0) {
+        MissionId = other.MissionId;
+      }
+      if (other.Total != 0L) {
+        Total = other.Total;
+      }
+      if (other.Personal != 0L) {
+        Personal = other.Personal;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MissionId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Total = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Personal = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MissionId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Total = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Personal = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoEventChallengeMilestoneClaim : pb::IMessage<ProtoEventChallengeMilestoneClaim>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoEventChallengeMilestoneClaim> _parser = new pb::MessageParser<ProtoEventChallengeMilestoneClaim>(() => new ProtoEventChallengeMilestoneClaim());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoEventChallengeMilestoneClaim> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Challenge.ChallengeReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeMilestoneClaim() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeMilestoneClaim(ProtoEventChallengeMilestoneClaim other) : this() {
+      milestoneId_ = other.milestoneId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoEventChallengeMilestoneClaim Clone() {
+      return new ProtoEventChallengeMilestoneClaim(this);
+    }
+
+    /// <summary>Field number for the "milestone_id" field.</summary>
+    public const int MilestoneIdFieldNumber = 1;
+    private string milestoneId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MilestoneId {
+      get { return milestoneId_; }
+      set {
+        milestoneId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoEventChallengeMilestoneClaim);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoEventChallengeMilestoneClaim other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MilestoneId != other.MilestoneId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MilestoneId.Length != 0) hash ^= MilestoneId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MilestoneId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MilestoneId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MilestoneId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MilestoneId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MilestoneId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MilestoneId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoEventChallengeMilestoneClaim other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MilestoneId.Length != 0) {
+        MilestoneId = other.MilestoneId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MilestoneId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MilestoneId = input.ReadString();
             break;
           }
         }

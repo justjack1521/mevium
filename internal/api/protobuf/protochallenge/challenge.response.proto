@@ -19,4 +19,5 @@ message JoinSocialChallengeResponse {
 
 message GetPlayerChallengeResponse {
   ProtoSocialChallengeInstance challenge = 1;
+  repeated ProtoEventChallengeProgress event_challenges = 2;
 }
