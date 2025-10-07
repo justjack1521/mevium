@@ -32,7 +32,7 @@ message ProtoPlayerSocialChallengeEntry {
 message ProtoEventChallengeProgress {
   string challenge_id = 1;
   repeated ProtoEventChallengeMissionProgress missions = 2;
-  repeated ProtoEventChallengeMilestoneClaim milestones = 3;
+  repeated ProtoEventChallengeMilestoneClaim claims = 3;
 }
 
 message ProtoEventChallengeMissionProgress {

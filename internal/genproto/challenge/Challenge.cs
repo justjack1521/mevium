@@ -36,23 +36,22 @@ namespace Mobius.Proto.Challenge {
             "DQoFc2NvcmUYBCABKAMSDAoEcmFuaxgFIAEoAxIvCghpZGVudGl0eRgGIAEo",
             "CzIdLmlkZW50aXR5LlByb3RvUGxheWVySWRlbnRpdHkSPQoPcHJpbWFyeV9s",
             "b2Fkb3V0GAcgASgLMiQuaWRlbnRpdHkuUHJvdG9QbGF5ZXJMb2Fkb3V0SWRl",
-            "bnRpdHkSEQoJaXNfcGxheWVyGAggASgIIrYBChtQcm90b0V2ZW50Q2hhbGxl",
+            "bnRpdHkSEQoJaXNfcGxheWVyGAggASgIIrIBChtQcm90b0V2ZW50Q2hhbGxl",
             "bmdlUHJvZ3Jlc3MSFAoMY2hhbGxlbmdlX2lkGAEgASgJEj8KCG1pc3Npb25z",
             "GAIgAygLMi0uY2hhbGxlbmdlLlByb3RvRXZlbnRDaGFsbGVuZ2VNaXNzaW9u",
-            "UHJvZ3Jlc3MSQAoKbWlsZXN0b25lcxgDIAMoCzIsLmNoYWxsZW5nZS5Qcm90",
-            "b0V2ZW50Q2hhbGxlbmdlTWlsZXN0b25lQ2xhaW0iWQoiUHJvdG9FdmVudENo",
-            "YWxsZW5nZU1pc3Npb25Qcm9ncmVzcxISCgptaXNzaW9uX2lkGAEgASgJEg0K",
-            "BXRvdGFsGAIgASgDEhAKCHBlcnNvbmFsGAMgASgDIjkKIVByb3RvRXZlbnRD",
-            "aGFsbGVuZ2VNaWxlc3RvbmVDbGFpbRIUCgxtaWxlc3RvbmVfaWQYASABKAlC",
-            "VVo6Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90",
-            "by9wcm90b2NoYWxsZW5nZaoCFk1vYml1cy5Qcm90by5DaGFsbGVuZ2ViBnBy",
-            "b3RvMw=="));
+            "UHJvZ3Jlc3MSPAoGY2xhaW1zGAMgAygLMiwuY2hhbGxlbmdlLlByb3RvRXZl",
+            "bnRDaGFsbGVuZ2VNaWxlc3RvbmVDbGFpbSJZCiJQcm90b0V2ZW50Q2hhbGxl",
+            "bmdlTWlzc2lvblByb2dyZXNzEhIKCm1pc3Npb25faWQYASABKAkSDQoFdG90",
+            "YWwYAiABKAMSEAoIcGVyc29uYWwYAyABKAMiOQohUHJvdG9FdmVudENoYWxs",
+            "ZW5nZU1pbGVzdG9uZUNsYWltEhQKDG1pbGVzdG9uZV9pZBgBIAEoCUJVWjpn",
+            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
+            "b3RvY2hhbGxlbmdlqgIWTW9iaXVzLlByb3RvLkNoYWxsZW5nZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance), global::Mobius.Proto.Challenge.ProtoSocialChallengeInstance.Parser, new[]{ "SysId", "ChallengeId", "MissionId", "RegisterTime", "StartTime", "EndTime", "State", "PlayerEntries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry), global::Mobius.Proto.Challenge.ProtoPlayerSocialChallengeEntry.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "Rank", "Identity", "PrimaryLoadout", "IsPlayer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeProgress), global::Mobius.Proto.Challenge.ProtoEventChallengeProgress.Parser, new[]{ "ChallengeId", "Missions", "Milestones" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeProgress), global::Mobius.Proto.Challenge.ProtoEventChallengeProgress.Parser, new[]{ "ChallengeId", "Missions", "Claims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress), global::Mobius.Proto.Challenge.ProtoEventChallengeMissionProgress.Parser, new[]{ "MissionId", "Total", "Personal" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim), global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim.Parser, new[]{ "MilestoneId" }, null, null, null, null)
           }));
@@ -947,7 +946,7 @@ namespace Mobius.Proto.Challenge {
     public ProtoEventChallengeProgress(ProtoEventChallengeProgress other) : this() {
       challengeId_ = other.challengeId_;
       missions_ = other.missions_.Clone();
-      milestones_ = other.milestones_.Clone();
+      claims_ = other.claims_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -977,14 +976,14 @@ namespace Mobius.Proto.Challenge {
       get { return missions_; }
     }
 
-    /// <summary>Field number for the "milestones" field.</summary>
-    public const int MilestonesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> _repeated_milestones_codec
+    /// <summary>Field number for the "claims" field.</summary>
+    public const int ClaimsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> _repeated_claims_codec
         = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> milestones_ = new pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim>();
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> claims_ = new pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> Milestones {
-      get { return milestones_; }
+    public pbc::RepeatedField<global::Mobius.Proto.Challenge.ProtoEventChallengeMilestoneClaim> Claims {
+      get { return claims_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1002,7 +1001,7 @@ namespace Mobius.Proto.Challenge {
       }
       if (ChallengeId != other.ChallengeId) return false;
       if(!missions_.Equals(other.missions_)) return false;
-      if(!milestones_.Equals(other.milestones_)) return false;
+      if(!claims_.Equals(other.claims_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1011,7 +1010,7 @@ namespace Mobius.Proto.Challenge {
       int hash = 1;
       if (ChallengeId.Length != 0) hash ^= ChallengeId.GetHashCode();
       hash ^= missions_.GetHashCode();
-      hash ^= milestones_.GetHashCode();
+      hash ^= claims_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1033,7 +1032,7 @@ namespace Mobius.Proto.Challenge {
         output.WriteString(ChallengeId);
       }
       missions_.WriteTo(output, _repeated_missions_codec);
-      milestones_.WriteTo(output, _repeated_milestones_codec);
+      claims_.WriteTo(output, _repeated_claims_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1048,7 +1047,7 @@ namespace Mobius.Proto.Challenge {
         output.WriteString(ChallengeId);
       }
       missions_.WriteTo(ref output, _repeated_missions_codec);
-      milestones_.WriteTo(ref output, _repeated_milestones_codec);
+      claims_.WriteTo(ref output, _repeated_claims_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1062,7 +1061,7 @@ namespace Mobius.Proto.Challenge {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ChallengeId);
       }
       size += missions_.CalculateSize(_repeated_missions_codec);
-      size += milestones_.CalculateSize(_repeated_milestones_codec);
+      size += claims_.CalculateSize(_repeated_claims_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1078,7 +1077,7 @@ namespace Mobius.Proto.Challenge {
         ChallengeId = other.ChallengeId;
       }
       missions_.Add(other.missions_);
-      milestones_.Add(other.milestones_);
+      claims_.Add(other.claims_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1102,7 +1101,7 @@ namespace Mobius.Proto.Challenge {
             break;
           }
           case 26: {
-            milestones_.AddEntriesFrom(input, _repeated_milestones_codec);
+            claims_.AddEntriesFrom(input, _repeated_claims_codec);
             break;
           }
         }
@@ -1128,7 +1127,7 @@ namespace Mobius.Proto.Challenge {
             break;
           }
           case 26: {
-            milestones_.AddEntriesFrom(ref input, _repeated_milestones_codec);
+            claims_.AddEntriesFrom(ref input, _repeated_claims_codec);
             break;
           }
         }
