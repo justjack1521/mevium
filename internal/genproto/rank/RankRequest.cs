@@ -41,10 +41,11 @@ namespace Mobius.Proto.Rank {
             "RXZlbnRSZXdhcmRzUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSDAoEY29k",
             "ZRgCIAEoCSJjCh1HZXRQbGF5ZXJFdmVudFJld2FyZHNSZXNwb25zZRISCgpl",
             "dmVudF9uYW1lGAEgASgJEi4KB3Jld2FyZHMYAiADKAsyHS5yYW5rLlByb3Rv",
-            "UmFua2luZ0V2ZW50UmV3YXJkKjQKD1JhbmtSZXF1ZXN0VHlwZRIICgROT05F",
-            "EAASFwoSR0VUX1JBTktJTkdfRVZFTlRTEKgUQktaNWdpdGh1Yi5jb20vanVz",
-            "dGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5rqgIRTW9i",
-            "aXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
+            "UmFua2luZ0V2ZW50UmV3YXJkIicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2",
+            "ZW50X25hbWUYASABKAkqNAoPUmFua1JlcXVlc3RUeXBlEggKBE5PTkUQABIX",
+            "ChJHRVRfUkFOS0lOR19FVkVOVFMQqBRCS1o1Z2l0aHViLmNvbS9qdXN0amFj",
+            "azE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b3JhbmuqAhFNb2JpdXMu",
+            "UHJvdG8uUmFua2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +55,8 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoResponse), global::Mobius.Proto.Rank.FetchPlayerRankingInfoResponse.Parser, new[]{ "Active", "Claims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest), global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest.Parser, new[]{ "PlayerId", "Code" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse), global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse.Parser, new[]{ "EventName", "Rewards" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse), global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse.Parser, new[]{ "EventName", "Rewards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1645,6 +1647,178 @@ namespace Mobius.Proto.Rank {
           }
           case 18: {
             rewards_.AddEntriesFrom(ref input, _repeated_rewards_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetTopRankRequest : pb::IMessage<GetTopRankRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetTopRankRequest> _parser = new pb::MessageParser<GetTopRankRequest>(() => new GetTopRankRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetTopRankRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTopRankRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTopRankRequest(GetTopRankRequest other) : this() {
+      eventName_ = other.eventName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetTopRankRequest Clone() {
+      return new GetTopRankRequest(this);
+    }
+
+    /// <summary>Field number for the "event_name" field.</summary>
+    public const int EventNameFieldNumber = 1;
+    private string eventName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string EventName {
+      get { return eventName_; }
+      set {
+        eventName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetTopRankRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetTopRankRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EventName != other.EventName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EventName.Length != 0) hash ^= EventName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EventName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EventName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetTopRankRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EventName.Length != 0) {
+        EventName = other.EventName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EventName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EventName = input.ReadString();
             break;
           }
         }

@@ -27,3 +27,7 @@ message RefreshWeeklyRankRangeResponse {
 message RefreshSpecialRankRangeResponse {
   ProtoRankingInfo rank_ranges = 1;
 }
+
+message GetTopRankResponse {
+  repeated ProtoPlayerRankSetDetails rankings = 1;
+}

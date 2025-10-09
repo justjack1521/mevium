@@ -51,3 +51,7 @@ message GetPlayerEventRewardsResponse {
   string event_name = 1;
   repeated ProtoRankingEventReward rewards = 2;
 }
+
+message GetTopRankRequest {
+  string event_name = 1;
+}

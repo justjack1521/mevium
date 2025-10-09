@@ -21,4 +21,7 @@ service MeviusRankService {
   rpc GetActivePlayerChallenge(challenge.GetActivePlayerChallengeRequest) returns (challenge.GetActivePlayerChallengeResponse) {}
   rpc GetPlayerChallenge(challenge.GetPlayerChallengeRequest) returns (challenge.GetPlayerChallengeResponse) {}
   rpc JoinSocialChallenge(challenge.JoinSocialChallengeRequest) returns (challenge.JoinSocialChallengeResponse) {}
+
+  rpc GetTopRankings(rank.GetTopRankRequest) returns (rank.GetTopRankResponse) {}
+
 }
