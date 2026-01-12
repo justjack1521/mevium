@@ -25,110 +25,113 @@ namespace Mobius.Proto.Game {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxwcm90b2dhbWUvZ2FtZS5yZXF1ZXN0LnByb3RvEgRnYW1lGhRwcm90b2dh",
-            "bWUvZGF0YS5wcm90bxoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8iVwoV",
+            "bWUvZGF0YS5wcm90bxoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8icAoV",
             "QmF0dGxlQ29tcGxldGVSZXF1ZXN0Eg0KBXNjb3JlGAEgASgEEi8KCnN0YXRp",
-            "c3RpY3MYAiABKAsyGy5nYW1lLlByb3RvQmF0dGxlU3RhdGlzdGljcyIVChNC",
-            "YXR0bGVSZXZpdmVSZXF1ZXN0Ip0BChJCYXR0bGVTdGFydFJlcXVlc3QSDQoF",
-            "aW5kZXgYASABKAUSEgoKZGVja19pbmRleBgCIAEoBRIRCgloYXJkX21vZGUY",
-            "AyABKAgSGAoQcmVudGFsX3BsYXllcl9pZBgFIAEoCRI3CgtyZW50YWxfY2Fy",
-            "ZBgGIAEoCzIiLmlkZW50aXR5LlByb3RvQWJpbGl0eUNhcmRJZGVudGl0eSJk",
-            "ChJDYXJkQXVnbWVudFJlcXVlc3QSGQoRdGFyZ2V0X2NhcmRfaW5kZXgYASAB",
-            "KAUSGwoTaW52ZW50b3J5X21hdGVyaWFscxgCIAMoBRIWCg5iYW5rX21hdGVy",
-            "aWFscxgDIAMoBSIzChRDYXJkRmF2b3VyaXRlUmVxdWVzdBIMCgRjYXJkGAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgIIqcBChhDYXJkRmlsdGVyU29ydFNldFJlcXVl",
-            "c3QSDAoEVmlldxgBIAEoBRINCgVJbmRleBgCIAEoBRIRCglDYXJkVHlwZXMY",
-            "AyADKAUSFAoMQ2FyZEVsZW1lbnRzGAQgAygFEhYKDlNwZWNpYWxGaWx0ZXJz",
-            "GAUgAygFEhUKDVNvcnRTZWxlY3RvcnMYBiADKAUSFgoOU29ydERlc2NlbmRp",
-            "bmcYByABKAgiMgoTQ2FyZEF1dG9TZWxsUmVxdWVzdBIMCgRjYXJkGAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgIIlMKEUNhcmRGdXNpb25SZXF1ZXN0EhEKCWJhc2Vf",
-            "Y2FyZBgBIAEoBRIXCg9pbnZlbnRvcnlfY2FyZHMYAiADKAUSEgoKYmFua19j",
-            "YXJkcxgDIAMoBSI5ChZDYXJkQm9vc3RGdXNpb25SZXF1ZXN0EgwKBGNhcmQY",
-            "ASABKAUSEQoJbWF4X2Jvb3N0GAIgASgIIjoKD0NhcmRTYWxlUmVxdWVzdBIN",
-            "CgVjYXJkcxgBIAMoBRIYChBpbnZlbnRvcnlfc291cmNlGAIgASgFIj4KE0Nh",
-            "cmRUcmFuc2ZlclJlcXVlc3QSDQoFY2FyZHMYASADKAUSGAoQaW52ZW50b3J5",
-            "X3NvdXJjZRgCIAEoBSIrChRDcmVhdGVQcm9maWxlUmVxdWVzdBITCgtwbGF5",
-            "ZXJfbmFtZRgBIAEoCSI0ChhDbGFpbUV2ZW50UmFua2luZ1JlcXVlc3QSCgoC",
-            "aWQYASABKAkSDAoEY29kZRgCIAEoCSIwChlDbGFpbUxvZ2luQ2FtcGFpZ25S",
-            "ZXF1ZXN0EhMKC2NhbXBhaWduX2lkGAEgASgJIiUKF0NsYWltTWFpbEJveEl0",
-            "ZW1SZXF1ZXN0EgoKAmlkGAEgASgJIhoKGENsYWltRGFpbHlNaXNzaW9uUmVx",
-            "dWVzdCIcChpDbGFpbUFsbE1haWxCb3hJdGVtUmVxdWVzdCIdChtEZWxldGVB",
-            "bGxNYWlsYm94SXRlbVJlcXVlc3QiHgocQ2xhaW1SZW50YWxDYXJkUmV3YXJk",
-            "UmVxdWVzdCIcChpDb25maXJtRGFpbHlNaXNzaW9uUmVxdWVzdCLkAQoPRGVj",
-            "a0VkaXRSZXF1ZXN0Eg0KBUluZGV4GAEgASgFEhQKDEpvYkNhcmRJbmRleBgC",
-            "IAEoBRIXCg9Kb2JDYXJkU3ViSW5kZXgYAyABKAUSEwoLV2VhcG9uSW5kZXgY",
-            "BCABKAUSFwoPU3ViSm9iQ2FyZEluZGV4GAUgASgFEhoKElN1YkpvYkNhcmRT",
-            "dWJJbmRleBgGIAEoBRIWCg5TdWJXZWFwb25JbmRleBgHIAEoBRIWCg5BYmls",
-            "aXR5Q2FyZElEcxgIIAMoCRIZChFTdWJBYmlsaXR5Q2FyZElEcxgJIAMoCSJp",
-            "ChJEZWNrRWRpdEFsbFJlcXVlc3QSJwoIUmVxdWVzdHMYASADKAsyFS5nYW1l",
-            "LkRlY2tFZGl0UmVxdWVzdBIOCgZNUERlY2sYAiABKAgSGgoSY3VycmVudF9k",
-            "ZWNrX2luZGV4GAMgASgFIhgKFkZldGNoUGxheWVyRGF0YVJlcXVlc3QiGAoW",
-            "Rmlyc3REYWlseUxvZ2luUmVxdWVzdCJEChlQcm9jZXNzUmVnaW9uRXZlbnRS",
-            "ZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQYASABKAkSEAoIZXZlbnRfaWQYAiAB",
-            "KAkiSAodUHJvY2Vzc1JlZ2lvbk5vZGVFdmVudFJlcXVlc3QSFQoNcmVnaW9u",
-            "X21hcF9pZBgBIAEoCRIQCghldmVudF9pZBgCIAEoCSKCAQoXU2tpbGxQYW5l",
-            "bFVubG9ja1JlcXVlc3QSFgoOam9iX2NhcmRfaW5kZXgYASABKAUSEwoLZ3Jv",
-            "dXBfaW5kZXgYAiABKAUSEgoKcGFnZV9pbmRleBgDIAEoBRITCgtwYW5lbF9p",
-            "bmRleBgEIAEoBRIRCglhbHRlcm5hdGUYBSABKAgiLQoVU3RhbWluYVJlc3Rv",
-            "cmVSZXF1ZXN0EhQKDG11bHRpX3BsYXllchgBIAEoCCJpCg9UZWxlcG9ydFJl",
-            "cXVlc3QSEgoKcmVnaW9uX21hcBgBIAEoCRIXCg9yZWdpb25fbWFwX25vZGUY",
-            "AiABKAUSKQoGc291cmNlGAMgASgOMhkuZ2FtZS5UZWxlcG9ydFJlcXVlc3RU",
-            "eXBlIl0KFFVwZGF0ZVByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASABKAkSDwoH",
-            "Y29tbWVudBgCIAEoCRITCgtyZW50YWxfY2FyZBgDIAEoBRIRCgljb21wYW5p",
-            "b24YBCABKAUiPgocRXhwYW5kQWJpbGl0eUNhcmRTbG90UmVxdWVzdBIOCgZz",
-            "b3VyY2UYASABKAUSDgoGYW1vdW50GAIgASgFIncKG0l0ZW1TaG9wSXRlbVB1",
-            "cmNoYXNlUmVxdWVzdBIUCgxyZWNlaXZlX2l0ZW0YASABKAkSGAoQcmVjZWl2",
-            "ZV9xdWFudGl0eRgCIAEoBRIRCgljb3N0X2l0ZW0YAyABKAkSFQoNY29zdF9x",
-            "dWFudGl0eRgEIAEoBSJ3ChtJdGVtU2hvcENhcmRQdXJjaGFzZVJlcXVlc3QS",
-            "FAoMcmVjZWl2ZV9jYXJkGAEgASgJEhgKEHJlY2VpdmVfcXVhbnRpdHkYAiAB",
-            "KAUSEQoJY29zdF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRpdHkYBCABKAUi",
-            "QgoaQWJpbGl0eVNob3BQdXJjaGFzZVJlcXVlc3QSFwoPYWJpbGl0eV9jYXJk",
-            "X2lkGAEgASgJEgsKA21heBgCIAEoCCIuChVDbGFpbVJlZ2lvbk1hcFJlcXVl",
-            "c3QSFQoNcmVnaW9uX21hcF9pZBgBIAEoCSItChhBYmlsaXR5Q2FyZFN1bW1v",
-            "blJlcXVlc3QSEQoJYmFubmVyX2lkGAEgASgJIigKFkV4ZWN1dGVEaWFsb2d1",
-            "ZVJlcXVlc3QSDgoGc3lzX2lkGAEgASgJIiwKGUNsYWltSXRlbURpc3RpbGxl",
-            "clJlcXVlc3QSDwoHaXRlbV9pZBgBIAEoCSIoChZSZWdpb25NYXBVbmxvY2tS",
-            "ZXF1ZXN0Eg4KBm1hcF9pZBgBIAEoCSItChpSZWdpb25NYXBOb2RlVW5sb2Nr",
-            "UmVxdWVzdBIPCgdsb2NrX2lkGAEgASgJIiEKE0NsYWltRHVuZ2VvblJlcXVl",
-            "c3QSCgoCaWQYASABKAkiJgoYUHVyY2hhc2VDb21wYW5pb25SZXF1ZXN0EgoK",
-            "AmlkGAEgASgJIiQKFlB1cmNoYXNlR2lmdEJveFJlcXVlc3QSCgoCaWQYASAB",
-            "KAkiMwoVU3RhbWluYURlcG9zaXRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEoBRIK",
-            "CgJtcBgCIAEoCCIzChVTdGFtaW5hQ29udmVydFJlcXVlc3QSDgoGYW1vdW50",
-            "GAEgASgFEgoKAm1wGAIgASgIIh8KEUFyZW5hU3RhcnRSZXF1ZXN0EgoKAmlk",
-            "GAEgASgJIh8KEUFyZW5hQ2xhaW1SZXF1ZXN0EgoKAmlkGAEgASgJKrYICg9H",
-            "YW1lUmVxdWVzdFR5cGUSCAoEQkFTRRAAEhAKC0dFVF9QUk9GSUxFEMgBEhMK",
-            "DkNSRUFURV9QUk9GSUxFEKwCEhMKDlVQREFURV9QUk9GSUxFEN4CEg4KCUNB",
-            "UkRfU0FMRRCQAxIVChBDQVJEX0ZJTFRFUl9TT1JUEPQDEhMKDkNBUkRfRkFW",
-            "T1VSSVRFENgEEhAKC1NLSUxMX1BBTkVMELwFEg4KCURFQ0tfRURJVBCgBhIS",
-            "Cg1ERUNLX0VESVRfQUxMEIQHEg0KCFRFTEVQT1JUEOgHEhkKFFBST0NFU1Nf",
-            "UkVHSU9OX0VWRU5UEMwIEh4KGVBST0NFU1NfUkVHSU9OX05PREVfRVZFTlQQ",
-            "/ggSEgoNQkFUVExFX1JFVklWRRCwCRIUCg9CQVRUTEVfQ09NUExFVEUQlAoS",
-            "GgoVQ09ORklSTV9EQUlMWV9NSVNTSU9OEMAMEhgKE0NMQUlNX0VWRU5UX1JB",
-            "TktJTkcQpA0SEgoNQ0xBSU1fTUFJTEJPWBCIDhIWChFDTEFJTV9BTExfTUFJ",
-            "TEJPWBC6DhIRCgxCQVRUTEVfU1RBUlQQ7A4SEgoNQ0FSRF9UUkFOU0ZFUhDQ",
-            "DxIWChFFWFBBTkRfQ0FSRF9TTE9UUxCCEBIQCgtDQVJEX0ZVU0lPThC0EBIW",
-            "ChFDQVJEX0ZVU0lPTl9CT09TVBCYERIUCg9TVEFNSU5BX1JFU1RPUkUQ/BES",
-            "FgoRRklSU1RfREFJTFlfTE9HSU4Q4BISGQoUQ0xBSU1fTE9HSU5fQ0FNUEFJ",
-            "R04QxBMSFwoSREVMRVRFX0FMTF9NQUlMQk9YEIwVEhgKE0NMQUlNX1JFTlRB",
-            "TF9SRVdBUkQQ8BUSEgoNUFVSQ0hBU0VfSVRFTRC4FxISCg1QVVJDSEFTRV9D",
-            "QVJEEJwYEhoKFUFCSUxJVFlfU0hPUF9QVVJDSEFTRRCAGRIRCgxDQVJEX0FV",
-            "R01FTlQQ5BkSGAoTQ0xBSU1fREFJTFlfTUlTU0lPThDIGhIYChNDT01QTEVU",
-            "RV9SRUdJT05fTUFQEPQcEhgKE1NVTU1PTl9BQklMSVRZX0NBUkQQ2B0SFQoQ",
-            "RVhFQ1VURV9ESUFMT0dVRRC8HhIZChRDTEFJTV9JVEVNX0RJU1RJTExFUhCg",
-            "HxITCg5DQVJEX0FVVE9fU0VMTBCEIBIWChFVTkxPQ0tfUkVHSU9OX01BUBDo",
-            "IBISCg1DTEFJTV9EVU5HRU9OEMwhEhcKElVOTE9DS19SRUdJT05fTk9ERRCw",
-            "IhIXChJQVVJDSEFTRV9DT01QQU5JT04QlCMSFgoRUFVSQ0hBU0VfR0lGVF9C",
-            "T1gQ+CMSFAoPU1RBTUlOQV9ERVBPU0lUENwkEhQKD1NUQU1JTkFfQ09OVkVS",
-            "VBDAJRIQCgtBUkVOQV9TVEFSVBCkJhIQCgtBUkVOQV9DTEFJTRCIJypYChNU",
-            "ZWxlcG9ydFJlcXVlc3RUeXBlEhQKEElOVkFMSURfVEVMRVBPUlQQABIJCgVM",
-            "T0dJThABEgkKBVdPUkxEEAISCQoFRklFTEQQAxIKCgZCQVRUTEUQBEJLWjVn",
-            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
-            "b3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
+            "c3RpY3MYAiABKAsyGy5nYW1lLlByb3RvQmF0dGxlU3RhdGlzdGljcxIXCg91",
+            "bHRpbWF0ZV9jaGFyZ2UYAyABKAQiFQoTQmF0dGxlUmV2aXZlUmVxdWVzdCKD",
+            "AgoSQmF0dGxlU3RhcnRSZXF1ZXN0Eg0KBWluZGV4GAEgASgFEhIKCmRlY2tf",
+            "aW5kZXgYAiABKAUSEQoJaGFyZF9tb2RlGAMgASgIEhgKEHJlbnRhbF9wbGF5",
+            "ZXJfaWQYBSABKAkSNwoLcmVudGFsX2NhcmQYBiABKAsyIi5pZGVudGl0eS5Q",
+            "cm90b0FiaWxpdHlDYXJkSWRlbnRpdHkSFwoPY2hhcmdlX3VsdGltYXRlGAcg",
+            "ASgIEgwKBHdhcnAYCCABKAgSGwoTYXV0b19zZWxsX25ld19jYXJkcxgJIAEo",
+            "CBIgChhhdXRvX2JhbmtfbWF0ZXJpYWxfY2FyZHMYCiABKAgiZAoSQ2FyZEF1",
+            "Z21lbnRSZXF1ZXN0EhkKEXRhcmdldF9jYXJkX2luZGV4GAEgASgFEhsKE2lu",
+            "dmVudG9yeV9tYXRlcmlhbHMYAiADKAUSFgoOYmFua19tYXRlcmlhbHMYAyAD",
+            "KAUiMwoUQ2FyZEZhdm91cml0ZVJlcXVlc3QSDAoEY2FyZBgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCCKnAQoYQ2FyZEZpbHRlclNvcnRTZXRSZXF1ZXN0EgwKBFZp",
+            "ZXcYASABKAUSDQoFSW5kZXgYAiABKAUSEQoJQ2FyZFR5cGVzGAMgAygFEhQK",
+            "DENhcmRFbGVtZW50cxgEIAMoBRIWCg5TcGVjaWFsRmlsdGVycxgFIAMoBRIV",
+            "Cg1Tb3J0U2VsZWN0b3JzGAYgAygFEhYKDlNvcnREZXNjZW5kaW5nGAcgASgI",
+            "IjIKE0NhcmRBdXRvU2VsbFJlcXVlc3QSDAoEY2FyZBgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCCJTChFDYXJkRnVzaW9uUmVxdWVzdBIRCgliYXNlX2NhcmQYASAB",
+            "KAUSFwoPaW52ZW50b3J5X2NhcmRzGAIgAygFEhIKCmJhbmtfY2FyZHMYAyAD",
+            "KAUiOQoWQ2FyZEJvb3N0RnVzaW9uUmVxdWVzdBIMCgRjYXJkGAEgASgFEhEK",
+            "CW1heF9ib29zdBgCIAEoCCI6Cg9DYXJkU2FsZVJlcXVlc3QSDQoFY2FyZHMY",
+            "ASADKAUSGAoQaW52ZW50b3J5X3NvdXJjZRgCIAEoBSI+ChNDYXJkVHJhbnNm",
+            "ZXJSZXF1ZXN0Eg0KBWNhcmRzGAEgAygFEhgKEGludmVudG9yeV9zb3VyY2UY",
+            "AiABKAUiKwoUQ3JlYXRlUHJvZmlsZVJlcXVlc3QSEwoLcGxheWVyX25hbWUY",
+            "ASABKAkiNAoYQ2xhaW1FdmVudFJhbmtpbmdSZXF1ZXN0EgoKAmlkGAEgASgJ",
+            "EgwKBGNvZGUYAiABKAkiMAoZQ2xhaW1Mb2dpbkNhbXBhaWduUmVxdWVzdBIT",
+            "CgtjYW1wYWlnbl9pZBgBIAEoCSIlChdDbGFpbU1haWxCb3hJdGVtUmVxdWVz",
+            "dBIKCgJpZBgBIAEoCSIaChhDbGFpbURhaWx5TWlzc2lvblJlcXVlc3QiHAoa",
+            "Q2xhaW1BbGxNYWlsQm94SXRlbVJlcXVlc3QiHQobRGVsZXRlQWxsTWFpbGJv",
+            "eEl0ZW1SZXF1ZXN0Ih4KHENsYWltUmVudGFsQ2FyZFJld2FyZFJlcXVlc3Qi",
+            "HAoaQ29uZmlybURhaWx5TWlzc2lvblJlcXVlc3Qi5AEKD0RlY2tFZGl0UmVx",
+            "dWVzdBINCgVJbmRleBgBIAEoBRIUCgxKb2JDYXJkSW5kZXgYAiABKAUSFwoP",
+            "Sm9iQ2FyZFN1YkluZGV4GAMgASgFEhMKC1dlYXBvbkluZGV4GAQgASgFEhcK",
+            "D1N1YkpvYkNhcmRJbmRleBgFIAEoBRIaChJTdWJKb2JDYXJkU3ViSW5kZXgY",
+            "BiABKAUSFgoOU3ViV2VhcG9uSW5kZXgYByABKAUSFgoOQWJpbGl0eUNhcmRJ",
+            "RHMYCCADKAkSGQoRU3ViQWJpbGl0eUNhcmRJRHMYCSADKAkiaQoSRGVja0Vk",
+            "aXRBbGxSZXF1ZXN0EicKCFJlcXVlc3RzGAEgAygLMhUuZ2FtZS5EZWNrRWRp",
+            "dFJlcXVlc3QSDgoGTVBEZWNrGAIgASgIEhoKEmN1cnJlbnRfZGVja19pbmRl",
+            "eBgDIAEoBSIYChZGZXRjaFBsYXllckRhdGFSZXF1ZXN0IhgKFkZpcnN0RGFp",
+            "bHlMb2dpblJlcXVlc3QiRAoZUHJvY2Vzc1JlZ2lvbkV2ZW50UmVxdWVzdBIV",
+            "Cg1yZWdpb25fbWFwX2lkGAEgASgJEhAKCGV2ZW50X2lkGAIgASgJIkgKHVBy",
+            "b2Nlc3NSZWdpb25Ob2RlRXZlbnRSZXF1ZXN0EhUKDXJlZ2lvbl9tYXBfaWQY",
+            "ASABKAkSEAoIZXZlbnRfaWQYAiABKAkiggEKF1NraWxsUGFuZWxVbmxvY2tS",
+            "ZXF1ZXN0EhYKDmpvYl9jYXJkX2luZGV4GAEgASgFEhMKC2dyb3VwX2luZGV4",
+            "GAIgASgFEhIKCnBhZ2VfaW5kZXgYAyABKAUSEwoLcGFuZWxfaW5kZXgYBCAB",
+            "KAUSEQoJYWx0ZXJuYXRlGAUgASgIIi0KFVN0YW1pbmFSZXN0b3JlUmVxdWVz",
+            "dBIUCgxtdWx0aV9wbGF5ZXIYASABKAgiaQoPVGVsZXBvcnRSZXF1ZXN0EhIK",
+            "CnJlZ2lvbl9tYXAYASABKAkSFwoPcmVnaW9uX21hcF9ub2RlGAIgASgFEikK",
+            "BnNvdXJjZRgDIAEoDjIZLmdhbWUuVGVsZXBvcnRSZXF1ZXN0VHlwZSJdChRV",
+            "cGRhdGVQcm9maWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJEg8KB2NvbW1lbnQY",
+            "AiABKAkSEwoLcmVudGFsX2NhcmQYAyABKAUSEQoJY29tcGFuaW9uGAQgASgF",
+            "Ij4KHEV4cGFuZEFiaWxpdHlDYXJkU2xvdFJlcXVlc3QSDgoGc291cmNlGAEg",
+            "ASgFEg4KBmFtb3VudBgCIAEoBSJ3ChtJdGVtU2hvcEl0ZW1QdXJjaGFzZVJl",
+            "cXVlc3QSFAoMcmVjZWl2ZV9pdGVtGAEgASgJEhgKEHJlY2VpdmVfcXVhbnRp",
+            "dHkYAiABKAUSEQoJY29zdF9pdGVtGAMgASgJEhUKDWNvc3RfcXVhbnRpdHkY",
+            "BCABKAUidwobSXRlbVNob3BDYXJkUHVyY2hhc2VSZXF1ZXN0EhQKDHJlY2Vp",
+            "dmVfY2FyZBgBIAEoCRIYChByZWNlaXZlX3F1YW50aXR5GAIgASgFEhEKCWNv",
+            "c3RfaXRlbRgDIAEoCRIVCg1jb3N0X3F1YW50aXR5GAQgASgFIkIKGkFiaWxp",
+            "dHlTaG9wUHVyY2hhc2VSZXF1ZXN0EhcKD2FiaWxpdHlfY2FyZF9pZBgBIAEo",
+            "CRILCgNtYXgYAiABKAgiLgoVQ2xhaW1SZWdpb25NYXBSZXF1ZXN0EhUKDXJl",
+            "Z2lvbl9tYXBfaWQYASABKAkiLQoYQWJpbGl0eUNhcmRTdW1tb25SZXF1ZXN0",
+            "EhEKCWJhbm5lcl9pZBgBIAEoCSIoChZFeGVjdXRlRGlhbG9ndWVSZXF1ZXN0",
+            "Eg4KBnN5c19pZBgBIAEoCSIsChlDbGFpbUl0ZW1EaXN0aWxsZXJSZXF1ZXN0",
+            "Eg8KB2l0ZW1faWQYASABKAkiKAoWUmVnaW9uTWFwVW5sb2NrUmVxdWVzdBIO",
+            "CgZtYXBfaWQYASABKAkiLQoaUmVnaW9uTWFwTm9kZVVubG9ja1JlcXVlc3QS",
+            "DwoHbG9ja19pZBgBIAEoCSIhChNDbGFpbUR1bmdlb25SZXF1ZXN0EgoKAmlk",
+            "GAEgASgJIiYKGFB1cmNoYXNlQ29tcGFuaW9uUmVxdWVzdBIKCgJpZBgBIAEo",
+            "CSIkChZQdXJjaGFzZUdpZnRCb3hSZXF1ZXN0EgoKAmlkGAEgASgJIjMKFVN0",
+            "YW1pbmFEZXBvc2l0UmVxdWVzdBIOCgZhbW91bnQYASABKAUSCgoCbXAYAiAB",
+            "KAgiMwoVU3RhbWluYUNvbnZlcnRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEoBRIK",
+            "CgJtcBgCIAEoCCIfChFBcmVuYVN0YXJ0UmVxdWVzdBIKCgJpZBgBIAEoCSIf",
+            "ChFBcmVuYUNsYWltUmVxdWVzdBIKCgJpZBgBIAEoCSq2CAoPR2FtZVJlcXVl",
+            "c3RUeXBlEggKBEJBU0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVf",
+            "UFJPRklMRRCsAhITCg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQ",
+            "kAMSFQoQQ0FSRF9GSUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDY",
+            "BBIQCgtTS0lMTF9QQU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19F",
+            "RElUX0FMTBCEBxINCghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9F",
+            "VkVOVBDMCBIeChlQUk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJB",
+            "VFRMRV9SRVZJVkUQsAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJ",
+            "Uk1fREFJTFlfTUlTU0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQN",
+            "EhIKDUNMQUlNX01BSUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQug4S",
+            "EQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoRRVhQ",
+            "QU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FSRF9G",
+            "VVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJUlNU",
+            "X0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQTEhcK",
+            "EkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVXQVJE",
+            "EPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCcGBIa",
+            "ChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5UEOQZ",
+            "EhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVHSU9O",
+            "X01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNVVEVf",
+            "RElBTE9HVUUQvB4SGQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoOQ0FS",
+            "RF9BVVRPX1NFTEwQhCASFgoRVU5MT0NLX1JFR0lPTl9NQVAQ6CASEgoNQ0xB",
+            "SU1fRFVOR0VPThDMIRIXChJVTkxPQ0tfUkVHSU9OX05PREUQsCISFwoSUFVS",
+            "Q0hBU0VfQ09NUEFOSU9OEJQjEhYKEVBVUkNIQVNFX0dJRlRfQk9YEPgjEhQK",
+            "D1NUQU1JTkFfREVQT1NJVBDcJBIUCg9TVEFNSU5BX0NPTlZFUlQQwCUSEAoL",
+            "QVJFTkFfU1RBUlQQpCYSEAoLQVJFTkFfQ0xBSU0QiCcqWAoTVGVsZXBvcnRS",
+            "ZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JUEAASCQoFTE9HSU4QARIJ",
+            "CgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExFEARCS1o1Z2l0aHViLmNv",
+            "bS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dhbWWq",
+            "AhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.BattleCompleteRequest), global::Mobius.Proto.Game.BattleCompleteRequest.Parser, new[]{ "Score", "Statistics" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.BattleCompleteRequest), global::Mobius.Proto.Game.BattleCompleteRequest.Parser, new[]{ "Score", "Statistics", "UltimateCharge" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.BattleReviveRequest), global::Mobius.Proto.Game.BattleReviveRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.BattleStartRequest), global::Mobius.Proto.Game.BattleStartRequest.Parser, new[]{ "Index", "DeckIndex", "HardMode", "RentalPlayerId", "RentalCard" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.BattleStartRequest), global::Mobius.Proto.Game.BattleStartRequest.Parser, new[]{ "Index", "DeckIndex", "HardMode", "RentalPlayerId", "RentalCard", "ChargeUltimate", "Warp", "AutoSellNewCards", "AutoBankMaterialCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardAugmentRequest), global::Mobius.Proto.Game.CardAugmentRequest.Parser, new[]{ "TargetCardIndex", "InventoryMaterials", "BankMaterials" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFavouriteRequest), global::Mobius.Proto.Game.CardFavouriteRequest.Parser, new[]{ "Card", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.CardFilterSortSetRequest), global::Mobius.Proto.Game.CardFilterSortSetRequest.Parser, new[]{ "View", "Index", "CardTypes", "CardElements", "SpecialFilters", "SortSelectors", "SortDescending" }, null, null, null, null),
@@ -272,6 +275,7 @@ namespace Mobius.Proto.Game {
     public BattleCompleteRequest(BattleCompleteRequest other) : this() {
       score_ = other.score_;
       statistics_ = other.statistics_ != null ? other.statistics_.Clone() : null;
+      ultimateCharge_ = other.ultimateCharge_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -302,6 +306,17 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "ultimate_charge" field.</summary>
+    public const int UltimateChargeFieldNumber = 3;
+    private ulong ultimateCharge_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong UltimateCharge {
+      get { return ultimateCharge_; }
+      set {
+        ultimateCharge_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BattleCompleteRequest);
@@ -317,6 +332,7 @@ namespace Mobius.Proto.Game {
       }
       if (Score != other.Score) return false;
       if (!object.Equals(Statistics, other.Statistics)) return false;
+      if (UltimateCharge != other.UltimateCharge) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -325,6 +341,7 @@ namespace Mobius.Proto.Game {
       int hash = 1;
       if (Score != 0UL) hash ^= Score.GetHashCode();
       if (statistics_ != null) hash ^= Statistics.GetHashCode();
+      if (UltimateCharge != 0UL) hash ^= UltimateCharge.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -349,6 +366,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(18);
         output.WriteMessage(Statistics);
       }
+      if (UltimateCharge != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(UltimateCharge);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -366,6 +387,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(18);
         output.WriteMessage(Statistics);
       }
+      if (UltimateCharge != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(UltimateCharge);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -380,6 +405,9 @@ namespace Mobius.Proto.Game {
       }
       if (statistics_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Statistics);
+      }
+      if (UltimateCharge != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UltimateCharge);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -400,6 +428,9 @@ namespace Mobius.Proto.Game {
           Statistics = new global::Mobius.Proto.Game.ProtoBattleStatistics();
         }
         Statistics.MergeFrom(other.Statistics);
+      }
+      if (other.UltimateCharge != 0UL) {
+        UltimateCharge = other.UltimateCharge;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -426,6 +457,10 @@ namespace Mobius.Proto.Game {
             input.ReadMessage(Statistics);
             break;
           }
+          case 24: {
+            UltimateCharge = input.ReadUInt64();
+            break;
+          }
         }
       }
     #endif
@@ -449,6 +484,10 @@ namespace Mobius.Proto.Game {
               Statistics = new global::Mobius.Proto.Game.ProtoBattleStatistics();
             }
             input.ReadMessage(Statistics);
+            break;
+          }
+          case 24: {
+            UltimateCharge = input.ReadUInt64();
             break;
           }
         }
@@ -628,6 +667,10 @@ namespace Mobius.Proto.Game {
       hardMode_ = other.hardMode_;
       rentalPlayerId_ = other.rentalPlayerId_;
       rentalCard_ = other.rentalCard_ != null ? other.rentalCard_.Clone() : null;
+      chargeUltimate_ = other.chargeUltimate_;
+      warp_ = other.warp_;
+      autoSellNewCards_ = other.autoSellNewCards_;
+      autoBankMaterialCards_ = other.autoBankMaterialCards_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -691,6 +734,50 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "charge_ultimate" field.</summary>
+    public const int ChargeUltimateFieldNumber = 7;
+    private bool chargeUltimate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ChargeUltimate {
+      get { return chargeUltimate_; }
+      set {
+        chargeUltimate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "warp" field.</summary>
+    public const int WarpFieldNumber = 8;
+    private bool warp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Warp {
+      get { return warp_; }
+      set {
+        warp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_sell_new_cards" field.</summary>
+    public const int AutoSellNewCardsFieldNumber = 9;
+    private bool autoSellNewCards_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AutoSellNewCards {
+      get { return autoSellNewCards_; }
+      set {
+        autoSellNewCards_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_bank_material_cards" field.</summary>
+    public const int AutoBankMaterialCardsFieldNumber = 10;
+    private bool autoBankMaterialCards_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AutoBankMaterialCards {
+      get { return autoBankMaterialCards_; }
+      set {
+        autoBankMaterialCards_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BattleStartRequest);
@@ -709,6 +796,10 @@ namespace Mobius.Proto.Game {
       if (HardMode != other.HardMode) return false;
       if (RentalPlayerId != other.RentalPlayerId) return false;
       if (!object.Equals(RentalCard, other.RentalCard)) return false;
+      if (ChargeUltimate != other.ChargeUltimate) return false;
+      if (Warp != other.Warp) return false;
+      if (AutoSellNewCards != other.AutoSellNewCards) return false;
+      if (AutoBankMaterialCards != other.AutoBankMaterialCards) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -720,6 +811,10 @@ namespace Mobius.Proto.Game {
       if (HardMode != false) hash ^= HardMode.GetHashCode();
       if (RentalPlayerId.Length != 0) hash ^= RentalPlayerId.GetHashCode();
       if (rentalCard_ != null) hash ^= RentalCard.GetHashCode();
+      if (ChargeUltimate != false) hash ^= ChargeUltimate.GetHashCode();
+      if (Warp != false) hash ^= Warp.GetHashCode();
+      if (AutoSellNewCards != false) hash ^= AutoSellNewCards.GetHashCode();
+      if (AutoBankMaterialCards != false) hash ^= AutoBankMaterialCards.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -756,6 +851,22 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(50);
         output.WriteMessage(RentalCard);
       }
+      if (ChargeUltimate != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(ChargeUltimate);
+      }
+      if (Warp != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Warp);
+      }
+      if (AutoSellNewCards != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(AutoSellNewCards);
+      }
+      if (AutoBankMaterialCards != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(AutoBankMaterialCards);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -785,6 +896,22 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(50);
         output.WriteMessage(RentalCard);
       }
+      if (ChargeUltimate != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(ChargeUltimate);
+      }
+      if (Warp != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Warp);
+      }
+      if (AutoSellNewCards != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(AutoSellNewCards);
+      }
+      if (AutoBankMaterialCards != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(AutoBankMaterialCards);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -808,6 +935,18 @@ namespace Mobius.Proto.Game {
       }
       if (rentalCard_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RentalCard);
+      }
+      if (ChargeUltimate != false) {
+        size += 1 + 1;
+      }
+      if (Warp != false) {
+        size += 1 + 1;
+      }
+      if (AutoSellNewCards != false) {
+        size += 1 + 1;
+      }
+      if (AutoBankMaterialCards != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -837,6 +976,18 @@ namespace Mobius.Proto.Game {
           RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
         }
         RentalCard.MergeFrom(other.RentalCard);
+      }
+      if (other.ChargeUltimate != false) {
+        ChargeUltimate = other.ChargeUltimate;
+      }
+      if (other.Warp != false) {
+        Warp = other.Warp;
+      }
+      if (other.AutoSellNewCards != false) {
+        AutoSellNewCards = other.AutoSellNewCards;
+      }
+      if (other.AutoBankMaterialCards != false) {
+        AutoBankMaterialCards = other.AutoBankMaterialCards;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -875,6 +1026,22 @@ namespace Mobius.Proto.Game {
             input.ReadMessage(RentalCard);
             break;
           }
+          case 56: {
+            ChargeUltimate = input.ReadBool();
+            break;
+          }
+          case 64: {
+            Warp = input.ReadBool();
+            break;
+          }
+          case 72: {
+            AutoSellNewCards = input.ReadBool();
+            break;
+          }
+          case 80: {
+            AutoBankMaterialCards = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -910,6 +1077,22 @@ namespace Mobius.Proto.Game {
               RentalCard = new global::Mobius.Proto.Identity.ProtoAbilityCardIdentity();
             }
             input.ReadMessage(RentalCard);
+            break;
+          }
+          case 56: {
+            ChargeUltimate = input.ReadBool();
+            break;
+          }
+          case 64: {
+            Warp = input.ReadBool();
+            break;
+          }
+          case 72: {
+            AutoSellNewCards = input.ReadBool();
+            break;
+          }
+          case 80: {
+            AutoBankMaterialCards = input.ReadBool();
             break;
           }
         }

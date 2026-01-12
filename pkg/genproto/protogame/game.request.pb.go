@@ -262,11 +262,12 @@ func (TeleportRequestType) EnumDescriptor() ([]byte, []int) {
 }
 
 type BattleCompleteRequest struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Score         uint64                 `protobuf:"varint,1,opt,name=score,proto3" json:"score,omitempty"`
-	Statistics    *ProtoBattleStatistics `protobuf:"bytes,2,opt,name=statistics,proto3" json:"statistics,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state          protoimpl.MessageState `protogen:"open.v1"`
+	Score          uint64                 `protobuf:"varint,1,opt,name=score,proto3" json:"score,omitempty"`
+	Statistics     *ProtoBattleStatistics `protobuf:"bytes,2,opt,name=statistics,proto3" json:"statistics,omitempty"`
+	UltimateCharge uint64                 `protobuf:"varint,3,opt,name=ultimate_charge,json=ultimateCharge,proto3" json:"ultimate_charge,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
 }
 
 func (x *BattleCompleteRequest) Reset() {
@@ -313,6 +314,13 @@ func (x *BattleCompleteRequest) GetStatistics() *ProtoBattleStatistics {
 	return nil
 }
 
+func (x *BattleCompleteRequest) GetUltimateCharge() uint64 {
+	if x != nil {
+		return x.UltimateCharge
+	}
+	return 0
+}
+
 type BattleReviveRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -350,14 +358,18 @@ func (*BattleReviveRequest) Descriptor() ([]byte, []int) {
 }
 
 type BattleStartRequest struct {
-	state          protoimpl.MessageState                  `protogen:"open.v1"`
-	Index          int32                                   `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
-	DeckIndex      int32                                   `protobuf:"varint,2,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
-	HardMode       bool                                    `protobuf:"varint,3,opt,name=hard_mode,json=hardMode,proto3" json:"hard_mode,omitempty"`
-	RentalPlayerId string                                  `protobuf:"bytes,5,opt,name=rental_player_id,json=rentalPlayerId,proto3" json:"rental_player_id,omitempty"`
-	RentalCard     *protoidentity.ProtoAbilityCardIdentity `protobuf:"bytes,6,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
+	state                 protoimpl.MessageState                  `protogen:"open.v1"`
+	Index                 int32                                   `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
+	DeckIndex             int32                                   `protobuf:"varint,2,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
+	HardMode              bool                                    `protobuf:"varint,3,opt,name=hard_mode,json=hardMode,proto3" json:"hard_mode,omitempty"`
+	RentalPlayerId        string                                  `protobuf:"bytes,5,opt,name=rental_player_id,json=rentalPlayerId,proto3" json:"rental_player_id,omitempty"`
+	RentalCard            *protoidentity.ProtoAbilityCardIdentity `protobuf:"bytes,6,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
+	ChargeUltimate        bool                                    `protobuf:"varint,7,opt,name=charge_ultimate,json=chargeUltimate,proto3" json:"charge_ultimate,omitempty"`
+	Warp                  bool                                    `protobuf:"varint,8,opt,name=warp,proto3" json:"warp,omitempty"`
+	AutoSellNewCards      bool                                    `protobuf:"varint,9,opt,name=auto_sell_new_cards,json=autoSellNewCards,proto3" json:"auto_sell_new_cards,omitempty"`
+	AutoBankMaterialCards bool                                    `protobuf:"varint,10,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
 }
 
 func (x *BattleStartRequest) Reset() {
@@ -423,6 +435,34 @@ func (x *BattleStartRequest) GetRentalCard() *protoidentity.ProtoAbilityCardIden
 		return x.RentalCard
 	}
 	return nil
+}
+
+func (x *BattleStartRequest) GetChargeUltimate() bool {
+	if x != nil {
+		return x.ChargeUltimate
+	}
+	return false
+}
+
+func (x *BattleStartRequest) GetWarp() bool {
+	if x != nil {
+		return x.Warp
+	}
+	return false
+}
+
+func (x *BattleStartRequest) GetAutoSellNewCards() bool {
+	if x != nil {
+		return x.AutoSellNewCards
+	}
+	return false
+}
+
+func (x *BattleStartRequest) GetAutoBankMaterialCards() bool {
+	if x != nil {
+		return x.AutoBankMaterialCards
+	}
+	return false
 }
 
 type CardAugmentRequest struct {
@@ -2685,13 +2725,14 @@ var File_protogame_game_request_proto protoreflect.FileDescriptor
 
 const file_protogame_game_request_proto_rawDesc = "" +
 	"\n" +
-	"\x1cprotogame/game.request.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x1aprotoidentity/player.proto\"j\n" +
+	"\x1cprotogame/game.request.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x1aprotoidentity/player.proto\"\x93\x01\n" +
 	"\x15BattleCompleteRequest\x12\x14\n" +
 	"\x05score\x18\x01 \x01(\x04R\x05score\x12;\n" +
 	"\n" +
 	"statistics\x18\x02 \x01(\v2\x1b.game.ProtoBattleStatisticsR\n" +
-	"statistics\"\x15\n" +
-	"\x13BattleReviveRequest\"\xd5\x01\n" +
+	"statistics\x12'\n" +
+	"\x0fultimate_charge\x18\x03 \x01(\x04R\x0eultimateCharge\"\x15\n" +
+	"\x13BattleReviveRequest\"\xfa\x02\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
 	"\n" +
@@ -2699,7 +2740,12 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\thard_mode\x18\x03 \x01(\bR\bhardMode\x12(\n" +
 	"\x10rental_player_id\x18\x05 \x01(\tR\x0erentalPlayerId\x12C\n" +
 	"\vrental_card\x18\x06 \x01(\v2\".identity.ProtoAbilityCardIdentityR\n" +
-	"rentalCard\"\x98\x01\n" +
+	"rentalCard\x12'\n" +
+	"\x0fcharge_ultimate\x18\a \x01(\bR\x0echargeUltimate\x12\x12\n" +
+	"\x04warp\x18\b \x01(\bR\x04warp\x12-\n" +
+	"\x13auto_sell_new_cards\x18\t \x01(\bR\x10autoSellNewCards\x127\n" +
+	"\x18auto_bank_material_cards\x18\n" +
+	" \x01(\bR\x15autoBankMaterialCards\"\x98\x01\n" +
 	"\x12CardAugmentRequest\x12*\n" +
 	"\x11target_card_index\x18\x01 \x01(\x05R\x0ftargetCardIndex\x12/\n" +
 	"\x13inventory_materials\x18\x02 \x03(\x05R\x12inventoryMaterials\x12%\n" +

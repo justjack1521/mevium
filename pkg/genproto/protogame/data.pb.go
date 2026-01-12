@@ -721,6 +721,7 @@ type ProtoBattleData struct {
 	Stamina         *ProtoPlayerStamina        `protobuf:"bytes,6,opt,name=stamina,proto3" json:"stamina,omitempty"`
 	Decks           *ProtoPlayerDeckCollection `protobuf:"bytes,7,opt,name=decks,proto3" json:"decks,omitempty"`
 	EnemiesDefeated map[string]uint64          `protobuf:"bytes,8,rep,name=enemies_defeated,json=enemiesDefeated,proto3" json:"enemies_defeated,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
+	UltimateCharge  uint64                     `protobuf:"varint,9,opt,name=ultimate_charge,json=ultimateCharge,proto3" json:"ultimate_charge,omitempty"`
 	StartData       *ProtoBattleStartData      `protobuf:"bytes,10,opt,name=start_data,json=startData,proto3,oneof" json:"start_data,omitempty"`
 	Results         *ProtoLastBattleResults    `protobuf:"bytes,20,opt,name=results,proto3,oneof" json:"results,omitempty"`
 	unknownFields   protoimpl.UnknownFields
@@ -811,6 +812,13 @@ func (x *ProtoBattleData) GetEnemiesDefeated() map[string]uint64 {
 		return x.EnemiesDefeated
 	}
 	return nil
+}
+
+func (x *ProtoBattleData) GetUltimateCharge() uint64 {
+	if x != nil {
+		return x.UltimateCharge
+	}
+	return 0
 }
 
 func (x *ProtoBattleData) GetStartData() *ProtoBattleStartData {
@@ -1978,7 +1986,7 @@ func (x *ProtoCardFilterSort) GetSortDescending() bool {
 type ProtoLoginCampaignInstance struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	Id             string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Claimed        map[int32]bool         `protobuf:"bytes,2,rep,name=claimed,proto3" json:"claimed,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
+	Claimed        map[int32]bool         `protobuf:"bytes,5,rep,name=claimed,proto3" json:"claimed,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	LastClaimIndex int32                  `protobuf:"varint,3,opt,name=last_claim_index,json=lastClaimIndex,proto3" json:"last_claim_index,omitempty"`
 	LastClaimAdded int64                  `protobuf:"varint,4,opt,name=last_claim_added,json=lastClaimAdded,proto3" json:"last_claim_added,omitempty"`
 	unknownFields  protoimpl.UnknownFields
@@ -6371,7 +6379,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x14extra_skill_progress\x18\x10 \x01(\x05R\x12extraSkillProgress\x1a@\n" +
 	"\x12AutoAbilitiesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\xc6\x04\n" +
+	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\xef\x04\n" +
 	"\x0fProtoBattleData\x12!\n" +
 	"\fplayer_level\x18\x01 \x01(\x05R\vplayerLevel\x12\x1b\n" +
 	"\tplay_mode\x18\x02 \x01(\tR\bplayMode\x12\x1b\n" +
@@ -6380,7 +6388,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\texp_bonus\x18\x05 \x01(\x02R\bexpBonus\x122\n" +
 	"\astamina\x18\x06 \x01(\v2\x18.game.ProtoPlayerStaminaR\astamina\x125\n" +
 	"\x05decks\x18\a \x01(\v2\x1f.game.ProtoPlayerDeckCollectionR\x05decks\x12U\n" +
-	"\x10enemies_defeated\x18\b \x03(\v2*.game.ProtoBattleData.EnemiesDefeatedEntryR\x0fenemiesDefeated\x12>\n" +
+	"\x10enemies_defeated\x18\b \x03(\v2*.game.ProtoBattleData.EnemiesDefeatedEntryR\x0fenemiesDefeated\x12'\n" +
+	"\x0fultimate_charge\x18\t \x01(\x04R\x0eultimateCharge\x12>\n" +
 	"\n" +
 	"start_data\x18\n" +
 	" \x01(\v2\x1a.game.ProtoBattleStartDataH\x00R\tstartData\x88\x01\x01\x12;\n" +
@@ -6499,7 +6508,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x0fsort_descending\x18\x06 \x01(\bR\x0esortDescending\"\x85\x02\n" +
 	"\x1aProtoLoginCampaignInstance\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12G\n" +
-	"\aclaimed\x18\x02 \x03(\v2-.game.ProtoLoginCampaignInstance.ClaimedEntryR\aclaimed\x12(\n" +
+	"\aclaimed\x18\x05 \x03(\v2-.game.ProtoLoginCampaignInstance.ClaimedEntryR\aclaimed\x12(\n" +
 	"\x10last_claim_index\x18\x03 \x01(\x05R\x0elastClaimIndex\x12(\n" +
 	"\x10last_claim_added\x18\x04 \x01(\x03R\x0elastClaimAdded\x1a:\n" +
 	"\fClaimedEntry\x12\x10\n" +

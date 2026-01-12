@@ -100,6 +100,7 @@ message ProtoBattleData {
   ProtoPlayerStamina stamina = 6;
   ProtoPlayerDeckCollection decks = 7;
   map<string,uint64> enemies_defeated = 8;
+  uint64 ultimate_charge = 9;
   optional ProtoBattleStartData start_data = 10;
   optional ProtoLastBattleResults results = 20;
 }

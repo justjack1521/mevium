@@ -33,6 +33,8 @@ message BattleStartResponse {
   game.ProtoBattleStartData BattleStartData = 1;
   uint32 stamina_decreased = 2;
   uint64 stamina_dec = 3;
+  uint64 ultimate_charge = 4;
+  repeated game.ProtoItemValuePair cost_items = 5;
 }
 
 message CreateProfileResponse {
