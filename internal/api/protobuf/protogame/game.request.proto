@@ -266,6 +266,7 @@ message ClaimRegionMapRequest {
 
 message AbilityCardSummonRequest {
   string banner_id = 1;
+  bool auto_bank_material_cards = 2;
 }
 
 message ExecuteDialogueRequest {

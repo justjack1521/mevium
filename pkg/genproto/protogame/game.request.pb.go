@@ -2202,10 +2202,11 @@ func (x *ClaimRegionMapRequest) GetRegionMapId() string {
 }
 
 type AbilityCardSummonRequest struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	BannerId      string                 `protobuf:"bytes,1,opt,name=banner_id,json=bannerId,proto3" json:"banner_id,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state                 protoimpl.MessageState `protogen:"open.v1"`
+	BannerId              string                 `protobuf:"bytes,1,opt,name=banner_id,json=bannerId,proto3" json:"banner_id,omitempty"`
+	AutoBankMaterialCards bool                   `protobuf:"varint,2,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
 }
 
 func (x *AbilityCardSummonRequest) Reset() {
@@ -2243,6 +2244,13 @@ func (x *AbilityCardSummonRequest) GetBannerId() string {
 		return x.BannerId
 	}
 	return ""
+}
+
+func (x *AbilityCardSummonRequest) GetAutoBankMaterialCards() bool {
+	if x != nil {
+		return x.AutoBankMaterialCards
+	}
+	return false
 }
 
 type ExecuteDialogueRequest struct {
@@ -2881,9 +2889,10 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardId\x12\x10\n" +
 	"\x03max\x18\x02 \x01(\bR\x03max\";\n" +
 	"\x15ClaimRegionMapRequest\x12\"\n" +
-	"\rregion_map_id\x18\x01 \x01(\tR\vregionMapId\"7\n" +
+	"\rregion_map_id\x18\x01 \x01(\tR\vregionMapId\"p\n" +
 	"\x18AbilityCardSummonRequest\x12\x1b\n" +
-	"\tbanner_id\x18\x01 \x01(\tR\bbannerId\"/\n" +
+	"\tbanner_id\x18\x01 \x01(\tR\bbannerId\x127\n" +
+	"\x18auto_bank_material_cards\x18\x02 \x01(\bR\x15autoBankMaterialCards\"/\n" +
 	"\x16ExecuteDialogueRequest\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\"4\n" +
 	"\x19ClaimItemDistillerRequest\x12\x17\n" +

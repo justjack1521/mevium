@@ -88,46 +88,47 @@ namespace Mobius.Proto.Game {
             "dF9xdWFudGl0eRgEIAEoBRIgChhhdXRvX2JhbmtfbWF0ZXJpYWxfY2FyZHMY",
             "BSABKAgiQgoaQWJpbGl0eVNob3BQdXJjaGFzZVJlcXVlc3QSFwoPYWJpbGl0",
             "eV9jYXJkX2lkGAEgASgJEgsKA21heBgCIAEoCCIuChVDbGFpbVJlZ2lvbk1h",
-            "cFJlcXVlc3QSFQoNcmVnaW9uX21hcF9pZBgBIAEoCSItChhBYmlsaXR5Q2Fy",
-            "ZFN1bW1vblJlcXVlc3QSEQoJYmFubmVyX2lkGAEgASgJIigKFkV4ZWN1dGVE",
-            "aWFsb2d1ZVJlcXVlc3QSDgoGc3lzX2lkGAEgASgJIiwKGUNsYWltSXRlbURp",
-            "c3RpbGxlclJlcXVlc3QSDwoHaXRlbV9pZBgBIAEoCSIoChZSZWdpb25NYXBV",
-            "bmxvY2tSZXF1ZXN0Eg4KBm1hcF9pZBgBIAEoCSItChpSZWdpb25NYXBOb2Rl",
-            "VW5sb2NrUmVxdWVzdBIPCgdsb2NrX2lkGAEgASgJIiEKE0NsYWltRHVuZ2Vv",
-            "blJlcXVlc3QSCgoCaWQYASABKAkiJgoYUHVyY2hhc2VDb21wYW5pb25SZXF1",
-            "ZXN0EgoKAmlkGAEgASgJIiQKFlB1cmNoYXNlR2lmdEJveFJlcXVlc3QSCgoC",
-            "aWQYASABKAkiMwoVU3RhbWluYURlcG9zaXRSZXF1ZXN0Eg4KBmFtb3VudBgB",
-            "IAEoBRIKCgJtcBgCIAEoCCIzChVTdGFtaW5hQ29udmVydFJlcXVlc3QSDgoG",
-            "YW1vdW50GAEgASgFEgoKAm1wGAIgASgIIh8KEUFyZW5hU3RhcnRSZXF1ZXN0",
-            "EgoKAmlkGAEgASgJIh8KEUFyZW5hQ2xhaW1SZXF1ZXN0EgoKAmlkGAEgASgJ",
-            "KrYICg9HYW1lUmVxdWVzdFR5cGUSCAoEQkFTRRAAEhAKC0dFVF9QUk9GSUxF",
-            "EMgBEhMKDkNSRUFURV9QUk9GSUxFEKwCEhMKDlVQREFURV9QUk9GSUxFEN4C",
-            "Eg4KCUNBUkRfU0FMRRCQAxIVChBDQVJEX0ZJTFRFUl9TT1JUEPQDEhMKDkNB",
-            "UkRfRkFWT1VSSVRFENgEEhAKC1NLSUxMX1BBTkVMELwFEg4KCURFQ0tfRURJ",
-            "VBCgBhISCg1ERUNLX0VESVRfQUxMEIQHEg0KCFRFTEVQT1JUEOgHEhkKFFBS",
-            "T0NFU1NfUkVHSU9OX0VWRU5UEMwIEh4KGVBST0NFU1NfUkVHSU9OX05PREVf",
-            "RVZFTlQQ/ggSEgoNQkFUVExFX1JFVklWRRCwCRIUCg9CQVRUTEVfQ09NUExF",
-            "VEUQlAoSGgoVQ09ORklSTV9EQUlMWV9NSVNTSU9OEMAMEhgKE0NMQUlNX0VW",
-            "RU5UX1JBTktJTkcQpA0SEgoNQ0xBSU1fTUFJTEJPWBCIDhIWChFDTEFJTV9B",
-            "TExfTUFJTEJPWBC6DhIRCgxCQVRUTEVfU1RBUlQQ7A4SEgoNQ0FSRF9UUkFO",
-            "U0ZFUhDQDxIWChFFWFBBTkRfQ0FSRF9TTE9UUxCCEBIQCgtDQVJEX0ZVU0lP",
-            "ThC0EBIWChFDQVJEX0ZVU0lPTl9CT09TVBCYERIUCg9TVEFNSU5BX1JFU1RP",
-            "UkUQ/BESFgoRRklSU1RfREFJTFlfTE9HSU4Q4BISGQoUQ0xBSU1fTE9HSU5f",
-            "Q0FNUEFJR04QxBMSFwoSREVMRVRFX0FMTF9NQUlMQk9YEIwVEhgKE0NMQUlN",
-            "X1JFTlRBTF9SRVdBUkQQ8BUSEgoNUFVSQ0hBU0VfSVRFTRC4FxISCg1QVVJD",
-            "SEFTRV9DQVJEEJwYEhoKFUFCSUxJVFlfU0hPUF9QVVJDSEFTRRCAGRIRCgxD",
-            "QVJEX0FVR01FTlQQ5BkSGAoTQ0xBSU1fREFJTFlfTUlTU0lPThDIGhIYChND",
-            "T01QTEVURV9SRUdJT05fTUFQEPQcEhgKE1NVTU1PTl9BQklMSVRZX0NBUkQQ",
-            "2B0SFQoQRVhFQ1VURV9ESUFMT0dVRRC8HhIZChRDTEFJTV9JVEVNX0RJU1RJ",
-            "TExFUhCgHxITCg5DQVJEX0FVVE9fU0VMTBCEIBIWChFVTkxPQ0tfUkVHSU9O",
-            "X01BUBDoIBISCg1DTEFJTV9EVU5HRU9OEMwhEhcKElVOTE9DS19SRUdJT05f",
-            "Tk9ERRCwIhIXChJQVVJDSEFTRV9DT01QQU5JT04QlCMSFgoRUFVSQ0hBU0Vf",
-            "R0lGVF9CT1gQ+CMSFAoPU1RBTUlOQV9ERVBPU0lUENwkEhQKD1NUQU1JTkFf",
-            "Q09OVkVSVBDAJRIQCgtBUkVOQV9TVEFSVBCkJhIQCgtBUkVOQV9DTEFJTRCI",
-            "JypYChNUZWxlcG9ydFJlcXVlc3RUeXBlEhQKEElOVkFMSURfVEVMRVBPUlQQ",
-            "ABIJCgVMT0dJThABEgkKBVdPUkxEEAISCQoFRklFTEQQAxIKCgZCQVRUTEUQ",
-            "BEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
-            "b3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
+            "cFJlcXVlc3QSFQoNcmVnaW9uX21hcF9pZBgBIAEoCSJPChhBYmlsaXR5Q2Fy",
+            "ZFN1bW1vblJlcXVlc3QSEQoJYmFubmVyX2lkGAEgASgJEiAKGGF1dG9fYmFu",
+            "a19tYXRlcmlhbF9jYXJkcxgCIAEoCCIoChZFeGVjdXRlRGlhbG9ndWVSZXF1",
+            "ZXN0Eg4KBnN5c19pZBgBIAEoCSIsChlDbGFpbUl0ZW1EaXN0aWxsZXJSZXF1",
+            "ZXN0Eg8KB2l0ZW1faWQYASABKAkiKAoWUmVnaW9uTWFwVW5sb2NrUmVxdWVz",
+            "dBIOCgZtYXBfaWQYASABKAkiLQoaUmVnaW9uTWFwTm9kZVVubG9ja1JlcXVl",
+            "c3QSDwoHbG9ja19pZBgBIAEoCSIhChNDbGFpbUR1bmdlb25SZXF1ZXN0EgoK",
+            "AmlkGAEgASgJIiYKGFB1cmNoYXNlQ29tcGFuaW9uUmVxdWVzdBIKCgJpZBgB",
+            "IAEoCSIkChZQdXJjaGFzZUdpZnRCb3hSZXF1ZXN0EgoKAmlkGAEgASgJIjMK",
+            "FVN0YW1pbmFEZXBvc2l0UmVxdWVzdBIOCgZhbW91bnQYASABKAUSCgoCbXAY",
+            "AiABKAgiMwoVU3RhbWluYUNvbnZlcnRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEo",
+            "BRIKCgJtcBgCIAEoCCIfChFBcmVuYVN0YXJ0UmVxdWVzdBIKCgJpZBgBIAEo",
+            "CSIfChFBcmVuYUNsYWltUmVxdWVzdBIKCgJpZBgBIAEoCSq2CAoPR2FtZVJl",
+            "cXVlc3RUeXBlEggKBEJBU0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVB",
+            "VEVfUFJPRklMRRCsAhITCg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NB",
+            "TEUQkAMSFQoQQ0FSRF9GSUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklU",
+            "RRDYBBIQCgtTS0lMTF9QQU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVD",
+            "S19FRElUX0FMTBCEBxINCghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lP",
+            "Tl9FVkVOVBDMCBIeChlQUk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIK",
+            "DUJBVFRMRV9SRVZJVkUQsAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNP",
+            "TkZJUk1fREFJTFlfTUlTU0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5H",
+            "EKQNEhIKDUNMQUlNX01BSUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQ",
+            "ug4SEQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoR",
+            "RVhQQU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FS",
+            "RF9GVVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJ",
+            "UlNUX0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQT",
+            "EhcKEkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVX",
+            "QVJEEPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCc",
+            "GBIaChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5U",
+            "EOQZEhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVH",
+            "SU9OX01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNV",
+            "VEVfRElBTE9HVUUQvB4SGQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoO",
+            "Q0FSRF9BVVRPX1NFTEwQhCASFgoRVU5MT0NLX1JFR0lPTl9NQVAQ6CASEgoN",
+            "Q0xBSU1fRFVOR0VPThDMIRIXChJVTkxPQ0tfUkVHSU9OX05PREUQsCISFwoS",
+            "UFVSQ0hBU0VfQ09NUEFOSU9OEJQjEhYKEVBVUkNIQVNFX0dJRlRfQk9YEPgj",
+            "EhQKD1NUQU1JTkFfREVQT1NJVBDcJBIUCg9TVEFNSU5BX0NPTlZFUlQQwCUS",
+            "EAoLQVJFTkFfU1RBUlQQpCYSEAoLQVJFTkFfQ0xBSU0QiCcqWAoTVGVsZXBv",
+            "cnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JUEAASCQoFTE9HSU4Q",
+            "ARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExFEARCS1o1Z2l0aHVi",
+            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
+            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,7 +167,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopCardPurchaseRequest), global::Mobius.Proto.Game.ItemShopCardPurchaseRequest.Parser, new[]{ "ReceiveCard", "ReceiveQuantity", "CostItem", "CostQuantity", "AutoBankMaterialCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityShopPurchaseRequest), global::Mobius.Proto.Game.AbilityShopPurchaseRequest.Parser, new[]{ "AbilityCardId", "Max" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimRegionMapRequest), global::Mobius.Proto.Game.ClaimRegionMapRequest.Parser, new[]{ "RegionMapId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonRequest), global::Mobius.Proto.Game.AbilityCardSummonRequest.Parser, new[]{ "BannerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonRequest), global::Mobius.Proto.Game.AbilityCardSummonRequest.Parser, new[]{ "BannerId", "AutoBankMaterialCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ExecuteDialogueRequest), global::Mobius.Proto.Game.ExecuteDialogueRequest.Parser, new[]{ "SysId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimItemDistillerRequest), global::Mobius.Proto.Game.ClaimItemDistillerRequest.Parser, new[]{ "ItemId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapUnlockRequest), global::Mobius.Proto.Game.RegionMapUnlockRequest.Parser, new[]{ "MapId" }, null, null, null, null),
@@ -7991,6 +7992,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AbilityCardSummonRequest(AbilityCardSummonRequest other) : this() {
       bannerId_ = other.bannerId_;
+      autoBankMaterialCards_ = other.autoBankMaterialCards_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8010,6 +8012,17 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "auto_bank_material_cards" field.</summary>
+    public const int AutoBankMaterialCardsFieldNumber = 2;
+    private bool autoBankMaterialCards_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AutoBankMaterialCards {
+      get { return autoBankMaterialCards_; }
+      set {
+        autoBankMaterialCards_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AbilityCardSummonRequest);
@@ -8024,6 +8037,7 @@ namespace Mobius.Proto.Game {
         return true;
       }
       if (BannerId != other.BannerId) return false;
+      if (AutoBankMaterialCards != other.AutoBankMaterialCards) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8031,6 +8045,7 @@ namespace Mobius.Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       if (BannerId.Length != 0) hash ^= BannerId.GetHashCode();
+      if (AutoBankMaterialCards != false) hash ^= AutoBankMaterialCards.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8051,6 +8066,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(10);
         output.WriteString(BannerId);
       }
+      if (AutoBankMaterialCards != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AutoBankMaterialCards);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8064,6 +8083,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(10);
         output.WriteString(BannerId);
       }
+      if (AutoBankMaterialCards != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AutoBankMaterialCards);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8075,6 +8098,9 @@ namespace Mobius.Proto.Game {
       int size = 0;
       if (BannerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BannerId);
+      }
+      if (AutoBankMaterialCards != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8089,6 +8115,9 @@ namespace Mobius.Proto.Game {
       }
       if (other.BannerId.Length != 0) {
         BannerId = other.BannerId;
+      }
+      if (other.AutoBankMaterialCards != false) {
+        AutoBankMaterialCards = other.AutoBankMaterialCards;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8108,6 +8137,10 @@ namespace Mobius.Proto.Game {
             BannerId = input.ReadString();
             break;
           }
+          case 16: {
+            AutoBankMaterialCards = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -8124,6 +8157,10 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             BannerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            AutoBankMaterialCards = input.ReadBool();
             break;
           }
         }
