@@ -262,12 +262,14 @@ func (TeleportRequestType) EnumDescriptor() ([]byte, []int) {
 }
 
 type BattleCompleteRequest struct {
-	state          protoimpl.MessageState `protogen:"open.v1"`
-	Score          uint64                 `protobuf:"varint,1,opt,name=score,proto3" json:"score,omitempty"`
-	Statistics     *ProtoBattleStatistics `protobuf:"bytes,2,opt,name=statistics,proto3" json:"statistics,omitempty"`
-	UltimateCharge uint64                 `protobuf:"varint,3,opt,name=ultimate_charge,json=ultimateCharge,proto3" json:"ultimate_charge,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
+	state                 protoimpl.MessageState `protogen:"open.v1"`
+	Score                 uint64                 `protobuf:"varint,1,opt,name=score,proto3" json:"score,omitempty"`
+	Statistics            *ProtoBattleStatistics `protobuf:"bytes,2,opt,name=statistics,proto3" json:"statistics,omitempty"`
+	UltimateCharge        uint64                 `protobuf:"varint,3,opt,name=ultimate_charge,json=ultimateCharge,proto3" json:"ultimate_charge,omitempty"`
+	AutoSellNewCards      bool                   `protobuf:"varint,4,opt,name=auto_sell_new_cards,json=autoSellNewCards,proto3" json:"auto_sell_new_cards,omitempty"`
+	AutoBankMaterialCards bool                   `protobuf:"varint,5,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
 }
 
 func (x *BattleCompleteRequest) Reset() {
@@ -321,6 +323,20 @@ func (x *BattleCompleteRequest) GetUltimateCharge() uint64 {
 	return 0
 }
 
+func (x *BattleCompleteRequest) GetAutoSellNewCards() bool {
+	if x != nil {
+		return x.AutoSellNewCards
+	}
+	return false
+}
+
+func (x *BattleCompleteRequest) GetAutoBankMaterialCards() bool {
+	if x != nil {
+		return x.AutoBankMaterialCards
+	}
+	return false
+}
+
 type BattleReviveRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -358,18 +374,16 @@ func (*BattleReviveRequest) Descriptor() ([]byte, []int) {
 }
 
 type BattleStartRequest struct {
-	state                 protoimpl.MessageState                  `protogen:"open.v1"`
-	Index                 int32                                   `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
-	DeckIndex             int32                                   `protobuf:"varint,2,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
-	HardMode              bool                                    `protobuf:"varint,3,opt,name=hard_mode,json=hardMode,proto3" json:"hard_mode,omitempty"`
-	RentalPlayerId        string                                  `protobuf:"bytes,5,opt,name=rental_player_id,json=rentalPlayerId,proto3" json:"rental_player_id,omitempty"`
-	RentalCard            *protoidentity.ProtoAbilityCardIdentity `protobuf:"bytes,6,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
-	ChargeUltimate        bool                                    `protobuf:"varint,7,opt,name=charge_ultimate,json=chargeUltimate,proto3" json:"charge_ultimate,omitempty"`
-	Warp                  bool                                    `protobuf:"varint,8,opt,name=warp,proto3" json:"warp,omitempty"`
-	AutoSellNewCards      bool                                    `protobuf:"varint,9,opt,name=auto_sell_new_cards,json=autoSellNewCards,proto3" json:"auto_sell_new_cards,omitempty"`
-	AutoBankMaterialCards bool                                    `protobuf:"varint,10,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
-	unknownFields         protoimpl.UnknownFields
-	sizeCache             protoimpl.SizeCache
+	state          protoimpl.MessageState                  `protogen:"open.v1"`
+	Index          int32                                   `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
+	DeckIndex      int32                                   `protobuf:"varint,2,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
+	HardMode       bool                                    `protobuf:"varint,3,opt,name=hard_mode,json=hardMode,proto3" json:"hard_mode,omitempty"`
+	RentalPlayerId string                                  `protobuf:"bytes,5,opt,name=rental_player_id,json=rentalPlayerId,proto3" json:"rental_player_id,omitempty"`
+	RentalCard     *protoidentity.ProtoAbilityCardIdentity `protobuf:"bytes,6,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
+	ChargeUltimate bool                                    `protobuf:"varint,7,opt,name=charge_ultimate,json=chargeUltimate,proto3" json:"charge_ultimate,omitempty"`
+	Warp           bool                                    `protobuf:"varint,8,opt,name=warp,proto3" json:"warp,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
 }
 
 func (x *BattleStartRequest) Reset() {
@@ -447,20 +461,6 @@ func (x *BattleStartRequest) GetChargeUltimate() bool {
 func (x *BattleStartRequest) GetWarp() bool {
 	if x != nil {
 		return x.Warp
-	}
-	return false
-}
-
-func (x *BattleStartRequest) GetAutoSellNewCards() bool {
-	if x != nil {
-		return x.AutoSellNewCards
-	}
-	return false
-}
-
-func (x *BattleStartRequest) GetAutoBankMaterialCards() bool {
-	if x != nil {
-		return x.AutoBankMaterialCards
 	}
 	return false
 }
@@ -1078,10 +1078,11 @@ func (x *ClaimLoginCampaignRequest) GetCampaignId() string {
 }
 
 type ClaimMailBoxItemRequest struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state                 protoimpl.MessageState `protogen:"open.v1"`
+	Id                    string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	AutoBankMaterialCards bool                   `protobuf:"varint,2,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
 }
 
 func (x *ClaimMailBoxItemRequest) Reset() {
@@ -1121,6 +1122,13 @@ func (x *ClaimMailBoxItemRequest) GetId() string {
 	return ""
 }
 
+func (x *ClaimMailBoxItemRequest) GetAutoBankMaterialCards() bool {
+	if x != nil {
+		return x.AutoBankMaterialCards
+	}
+	return false
+}
+
 type ClaimDailyMissionRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -1158,9 +1166,10 @@ func (*ClaimDailyMissionRequest) Descriptor() ([]byte, []int) {
 }
 
 type ClaimAllMailBoxItemRequest struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state                 protoimpl.MessageState `protogen:"open.v1"`
+	AutoBankMaterialCards bool                   `protobuf:"varint,1,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
 }
 
 func (x *ClaimAllMailBoxItemRequest) Reset() {
@@ -1191,6 +1200,13 @@ func (x *ClaimAllMailBoxItemRequest) ProtoReflect() protoreflect.Message {
 // Deprecated: Use ClaimAllMailBoxItemRequest.ProtoReflect.Descriptor instead.
 func (*ClaimAllMailBoxItemRequest) Descriptor() ([]byte, []int) {
 	return file_protogame_game_request_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *ClaimAllMailBoxItemRequest) GetAutoBankMaterialCards() bool {
+	if x != nil {
+		return x.AutoBankMaterialCards
+	}
+	return false
 }
 
 type DeleteAllMailboxItemRequest struct {
@@ -2014,13 +2030,14 @@ func (x *ItemShopItemPurchaseRequest) GetCostQuantity() int32 {
 }
 
 type ItemShopCardPurchaseRequest struct {
-	state           protoimpl.MessageState `protogen:"open.v1"`
-	ReceiveCard     string                 `protobuf:"bytes,1,opt,name=receive_card,json=receiveCard,proto3" json:"receive_card,omitempty"`
-	ReceiveQuantity int32                  `protobuf:"varint,2,opt,name=receive_quantity,json=receiveQuantity,proto3" json:"receive_quantity,omitempty"`
-	CostItem        string                 `protobuf:"bytes,3,opt,name=cost_item,json=costItem,proto3" json:"cost_item,omitempty"`
-	CostQuantity    int32                  `protobuf:"varint,4,opt,name=cost_quantity,json=costQuantity,proto3" json:"cost_quantity,omitempty"`
-	unknownFields   protoimpl.UnknownFields
-	sizeCache       protoimpl.SizeCache
+	state                 protoimpl.MessageState `protogen:"open.v1"`
+	ReceiveCard           string                 `protobuf:"bytes,1,opt,name=receive_card,json=receiveCard,proto3" json:"receive_card,omitempty"`
+	ReceiveQuantity       int32                  `protobuf:"varint,2,opt,name=receive_quantity,json=receiveQuantity,proto3" json:"receive_quantity,omitempty"`
+	CostItem              string                 `protobuf:"bytes,3,opt,name=cost_item,json=costItem,proto3" json:"cost_item,omitempty"`
+	CostQuantity          int32                  `protobuf:"varint,4,opt,name=cost_quantity,json=costQuantity,proto3" json:"cost_quantity,omitempty"`
+	AutoBankMaterialCards bool                   `protobuf:"varint,5,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
 }
 
 func (x *ItemShopCardPurchaseRequest) Reset() {
@@ -2079,6 +2096,13 @@ func (x *ItemShopCardPurchaseRequest) GetCostQuantity() int32 {
 		return x.CostQuantity
 	}
 	return 0
+}
+
+func (x *ItemShopCardPurchaseRequest) GetAutoBankMaterialCards() bool {
+	if x != nil {
+		return x.AutoBankMaterialCards
+	}
+	return false
 }
 
 type AbilityShopPurchaseRequest struct {
@@ -2725,14 +2749,16 @@ var File_protogame_game_request_proto protoreflect.FileDescriptor
 
 const file_protogame_game_request_proto_rawDesc = "" +
 	"\n" +
-	"\x1cprotogame/game.request.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x1aprotoidentity/player.proto\"\x93\x01\n" +
+	"\x1cprotogame/game.request.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x1aprotoidentity/player.proto\"\xfb\x01\n" +
 	"\x15BattleCompleteRequest\x12\x14\n" +
 	"\x05score\x18\x01 \x01(\x04R\x05score\x12;\n" +
 	"\n" +
 	"statistics\x18\x02 \x01(\v2\x1b.game.ProtoBattleStatisticsR\n" +
 	"statistics\x12'\n" +
-	"\x0fultimate_charge\x18\x03 \x01(\x04R\x0eultimateCharge\"\x15\n" +
-	"\x13BattleReviveRequest\"\xfa\x02\n" +
+	"\x0fultimate_charge\x18\x03 \x01(\x04R\x0eultimateCharge\x12-\n" +
+	"\x13auto_sell_new_cards\x18\x04 \x01(\bR\x10autoSellNewCards\x127\n" +
+	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\"\x15\n" +
+	"\x13BattleReviveRequest\"\x92\x02\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
 	"\n" +
@@ -2742,10 +2768,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\vrental_card\x18\x06 \x01(\v2\".identity.ProtoAbilityCardIdentityR\n" +
 	"rentalCard\x12'\n" +
 	"\x0fcharge_ultimate\x18\a \x01(\bR\x0echargeUltimate\x12\x12\n" +
-	"\x04warp\x18\b \x01(\bR\x04warp\x12-\n" +
-	"\x13auto_sell_new_cards\x18\t \x01(\bR\x10autoSellNewCards\x127\n" +
-	"\x18auto_bank_material_cards\x18\n" +
-	" \x01(\bR\x15autoBankMaterialCards\"\x98\x01\n" +
+	"\x04warp\x18\b \x01(\bR\x04warp\"\x98\x01\n" +
 	"\x12CardAugmentRequest\x12*\n" +
 	"\x11target_card_index\x18\x01 \x01(\x05R\x0ftargetCardIndex\x12/\n" +
 	"\x13inventory_materials\x18\x02 \x03(\x05R\x12inventoryMaterials\x12%\n" +
@@ -2786,11 +2809,13 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x04code\x18\x02 \x01(\tR\x04code\"<\n" +
 	"\x19ClaimLoginCampaignRequest\x12\x1f\n" +
 	"\vcampaign_id\x18\x01 \x01(\tR\n" +
-	"campaignId\")\n" +
+	"campaignId\"b\n" +
 	"\x17ClaimMailBoxItemRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\"\x1a\n" +
-	"\x18ClaimDailyMissionRequest\"\x1c\n" +
-	"\x1aClaimAllMailBoxItemRequest\"\x1d\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x127\n" +
+	"\x18auto_bank_material_cards\x18\x02 \x01(\bR\x15autoBankMaterialCards\"\x1a\n" +
+	"\x18ClaimDailyMissionRequest\"U\n" +
+	"\x1aClaimAllMailBoxItemRequest\x127\n" +
+	"\x18auto_bank_material_cards\x18\x01 \x01(\bR\x15autoBankMaterialCards\"\x1d\n" +
 	"\x1bDeleteAllMailboxItemRequest\"\x1e\n" +
 	"\x1cClaimRentalCardRewardRequest\"\x1c\n" +
 	"\x1aConfirmDailyMissionRequest\"\xef\x02\n" +
@@ -2845,12 +2870,13 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\freceive_item\x18\x01 \x01(\tR\vreceiveItem\x12)\n" +
 	"\x10receive_quantity\x18\x02 \x01(\x05R\x0freceiveQuantity\x12\x1b\n" +
 	"\tcost_item\x18\x03 \x01(\tR\bcostItem\x12#\n" +
-	"\rcost_quantity\x18\x04 \x01(\x05R\fcostQuantity\"\xad\x01\n" +
+	"\rcost_quantity\x18\x04 \x01(\x05R\fcostQuantity\"\xe6\x01\n" +
 	"\x1bItemShopCardPurchaseRequest\x12!\n" +
 	"\freceive_card\x18\x01 \x01(\tR\vreceiveCard\x12)\n" +
 	"\x10receive_quantity\x18\x02 \x01(\x05R\x0freceiveQuantity\x12\x1b\n" +
 	"\tcost_item\x18\x03 \x01(\tR\bcostItem\x12#\n" +
-	"\rcost_quantity\x18\x04 \x01(\x05R\fcostQuantity\"V\n" +
+	"\rcost_quantity\x18\x04 \x01(\x05R\fcostQuantity\x127\n" +
+	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\"V\n" +
 	"\x1aAbilityShopPurchaseRequest\x12&\n" +
 	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardId\x12\x10\n" +
 	"\x03max\x18\x02 \x01(\bR\x03max\";\n" +

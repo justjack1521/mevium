@@ -71,6 +71,8 @@ message BattleCompleteRequest {
   uint64 score                            =   1;
   game.ProtoBattleStatistics statistics   =   2;
   uint64 ultimate_charge = 3;
+  bool auto_sell_new_cards = 4;
+  bool auto_bank_material_cards = 5;
 }
 
 message BattleReviveRequest {
@@ -85,8 +87,6 @@ message BattleStartRequest {
   identity.ProtoAbilityCardIdentity rental_card = 6;
   bool charge_ultimate = 7;
   bool warp = 8;
-  bool auto_sell_new_cards = 9;
-  bool auto_bank_material_cards = 10;
 }
 
 message CardAugmentRequest {
@@ -151,6 +151,7 @@ message ClaimLoginCampaignRequest {
 
 message ClaimMailBoxItemRequest {
   string id = 1;
+  bool auto_bank_material_cards = 2;
 }
 
 message ClaimDailyMissionRequest {
@@ -158,7 +159,7 @@ message ClaimDailyMissionRequest {
 }
 
 message ClaimAllMailBoxItemRequest {
-
+  bool auto_bank_material_cards = 1;
 }
 
 message DeleteAllMailboxItemRequest {
@@ -251,6 +252,7 @@ message ItemShopCardPurchaseRequest {
   int32 receive_quantity = 2;
   string cost_item = 3;
   int32 cost_quantity = 4;
+  bool auto_bank_material_cards = 5;
 }
 
 message AbilityShopPurchaseRequest {
