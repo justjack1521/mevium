@@ -18,3 +18,7 @@ message CreateBaseJobCardResponse {
 message CreateAugmentMaterialsResponse {
 
 }
+
+message CreateBaseCardResponse {
+
+}

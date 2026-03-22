@@ -24,6 +24,7 @@ const (
 	MeviusAdminService_CreateBaseJobCard_FullMethodName      = "/service.MeviusAdminService/CreateBaseJobCard"
 	MeviusAdminService_CreateSkillPanel_FullMethodName       = "/service.MeviusAdminService/CreateSkillPanel"
 	MeviusAdminService_CreateAugmentMaterials_FullMethodName = "/service.MeviusAdminService/CreateAugmentMaterials"
+	MeviusAdminService_CreateBaseCard_FullMethodName         = "/service.MeviusAdminService/CreateBaseCard"
 )
 
 // MeviusAdminServiceClient is the client API for MeviusAdminService service.
@@ -34,6 +35,7 @@ type MeviusAdminServiceClient interface {
 	CreateBaseJobCard(ctx context.Context, in *protoadmin.CreateBaseJobCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateBaseJobCardResponse, error)
 	CreateSkillPanel(ctx context.Context, in *protoadmin.CreateSkillPanelRequest, opts ...grpc.CallOption) (*protoadmin.CreateSkillPanelResponse, error)
 	CreateAugmentMaterials(ctx context.Context, in *protoadmin.CreateAugmentMaterialRequest, opts ...grpc.CallOption) (*protoadmin.CreateAugmentMaterialsResponse, error)
+	CreateBaseCard(ctx context.Context, in *protoadmin.CreateBaseCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateBaseCardResponse, error)
 }
 
 type meviusAdminServiceClient struct {
@@ -80,6 +82,15 @@ func (c *meviusAdminServiceClient) CreateAugmentMaterials(ctx context.Context, i
 	return out, nil
 }
 
+func (c *meviusAdminServiceClient) CreateBaseCard(ctx context.Context, in *protoadmin.CreateBaseCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateBaseCardResponse, error) {
+	out := new(protoadmin.CreateBaseCardResponse)
+	err := c.cc.Invoke(ctx, MeviusAdminService_CreateBaseCard_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusAdminServiceServer is the server API for MeviusAdminService service.
 // All implementations should embed UnimplementedMeviusAdminServiceServer
 // for forward compatibility
@@ -88,6 +99,7 @@ type MeviusAdminServiceServer interface {
 	CreateBaseJobCard(context.Context, *protoadmin.CreateBaseJobCardRequest) (*protoadmin.CreateBaseJobCardResponse, error)
 	CreateSkillPanel(context.Context, *protoadmin.CreateSkillPanelRequest) (*protoadmin.CreateSkillPanelResponse, error)
 	CreateAugmentMaterials(context.Context, *protoadmin.CreateAugmentMaterialRequest) (*protoadmin.CreateAugmentMaterialsResponse, error)
+	CreateBaseCard(context.Context, *protoadmin.CreateBaseCardRequest) (*protoadmin.CreateBaseCardResponse, error)
 }
 
 // UnimplementedMeviusAdminServiceServer should be embedded to have forward compatible implementations.
@@ -105,6 +117,9 @@ func (UnimplementedMeviusAdminServiceServer) CreateSkillPanel(context.Context, *
 }
 func (UnimplementedMeviusAdminServiceServer) CreateAugmentMaterials(context.Context, *protoadmin.CreateAugmentMaterialRequest) (*protoadmin.CreateAugmentMaterialsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateAugmentMaterials not implemented")
+}
+func (UnimplementedMeviusAdminServiceServer) CreateBaseCard(context.Context, *protoadmin.CreateBaseCardRequest) (*protoadmin.CreateBaseCardResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateBaseCard not implemented")
 }
 
 // UnsafeMeviusAdminServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -190,6 +205,24 @@ func _MeviusAdminService_CreateAugmentMaterials_Handler(srv interface{}, ctx con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusAdminService_CreateBaseCard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoadmin.CreateBaseCardRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusAdminServiceServer).CreateBaseCard(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusAdminService_CreateBaseCard_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusAdminServiceServer).CreateBaseCard(ctx, req.(*protoadmin.CreateBaseCardRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusAdminService_ServiceDesc is the grpc.ServiceDesc for MeviusAdminService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -212,6 +245,10 @@ var MeviusAdminService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateAugmentMaterials",
 			Handler:    _MeviusAdminService_CreateAugmentMaterials_Handler,
+		},
+		{
+			MethodName: "CreateBaseCard",
+			Handler:    _MeviusAdminService_CreateBaseCard_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

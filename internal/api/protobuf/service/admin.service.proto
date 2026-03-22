@@ -12,4 +12,5 @@ service MeviusAdminService {
   rpc CreateBaseJobCard(admin.CreateBaseJobCardRequest) returns (admin.CreateBaseJobCardResponse) {}
   rpc CreateSkillPanel(admin.CreateSkillPanelRequest) returns (admin.CreateSkillPanelResponse) {}
   rpc CreateAugmentMaterials(admin.CreateAugmentMaterialRequest) returns (admin.CreateAugmentMaterialsResponse) {}
+  rpc CreateBaseCard(admin.CreateBaseCardRequest) returns (admin.CreateBaseCardResponse) {}
 }

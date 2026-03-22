@@ -3,6 +3,7 @@ syntax = "proto3";
 package admin;
 
 import "protogame/data.proto";
+import "protomodel/ability_card.proto";
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoadmin";
 
@@ -10,6 +11,10 @@ message GrantItemRequest {
   string player_id = 1;
   string item_id = 2;
   int32 quantity = 3;
+}
+
+message CreateBaseCardRequest {
+  model.BaseAbilityCard card = 1;
 }
 
 message CreateSkillPanelRequest {
