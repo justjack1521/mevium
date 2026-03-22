@@ -29,6 +29,7 @@ message BaseAbilityCard {
   string element = 10;
   string category = 11;
   bool fast_learner = 12;
+  float exp_fusion_multiplier = 13;
 }
 
 message AugmentConfig {
