@@ -369,6 +369,7 @@ message TaggedBattleCardReward {
   string ability_card_id = 2;
   bool new_card = 3;
   int32 tag = 4;
+  int32 source = 5;
 }
 
 message TaggedBattleCompanionReward {
