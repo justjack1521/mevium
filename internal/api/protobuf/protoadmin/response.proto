@@ -22,3 +22,7 @@ message CreateAugmentMaterialsResponse {
 message CreateBaseCardResponse {
 
 }
+
+message CreateAbilityCardResponse {
+
+}
