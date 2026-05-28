@@ -3900,6 +3900,7 @@ type ProtoRegionMapInstance struct {
 	UnlockTime            int64                         `protobuf:"varint,14,opt,name=unlock_time,json=unlockTime,proto3" json:"unlock_time,omitempty"`
 	Progress              *ProtoRegionProgressData      `protobuf:"bytes,15,opt,name=progress,proto3" json:"progress,omitempty"`
 	WanderingFiends       *ProtoWanderingFiendData      `protobuf:"bytes,16,opt,name=wandering_fiends,json=wanderingFiends,proto3" json:"wandering_fiends,omitempty"`
+	Towers                *ProtoTowerData               `protobuf:"bytes,17,opt,name=towers,proto3" json:"towers,omitempty"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -4035,6 +4036,13 @@ func (x *ProtoRegionMapInstance) GetProgress() *ProtoRegionProgressData {
 func (x *ProtoRegionMapInstance) GetWanderingFiends() *ProtoWanderingFiendData {
 	if x != nil {
 		return x.WanderingFiends
+	}
+	return nil
+}
+
+func (x *ProtoRegionMapInstance) GetTowers() *ProtoTowerData {
+	if x != nil {
+		return x.Towers
 	}
 	return nil
 }
@@ -6311,6 +6319,134 @@ func (x *ProtoBattleWaveGroup) GetFiendId() string {
 	return ""
 }
 
+type ProtoTowerData struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Towers        []*ProtoTowerInstance  `protobuf:"bytes,1,rep,name=towers,proto3" json:"towers,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoTowerData) Reset() {
+	*x = ProtoTowerData{}
+	mi := &file_protogame_data_proto_msgTypes[83]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoTowerData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoTowerData) ProtoMessage() {}
+
+func (x *ProtoTowerData) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_data_proto_msgTypes[83]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoTowerData.ProtoReflect.Descriptor instead.
+func (*ProtoTowerData) Descriptor() ([]byte, []int) {
+	return file_protogame_data_proto_rawDescGZIP(), []int{83}
+}
+
+func (x *ProtoTowerData) GetTowers() []*ProtoTowerInstance {
+	if x != nil {
+		return x.Towers
+	}
+	return nil
+}
+
+type ProtoTowerInstance struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	TowerId       string                 `protobuf:"bytes,1,opt,name=tower_id,json=towerId,proto3" json:"tower_id,omitempty"`
+	Level         int32                  `protobuf:"varint,2,opt,name=level,proto3" json:"level,omitempty"`
+	HighestLevel  int32                  `protobuf:"varint,3,opt,name=highest_level,json=highestLevel,proto3" json:"highest_level,omitempty"`
+	Score         uint64                 `protobuf:"varint,4,opt,name=score,proto3" json:"score,omitempty"`
+	HighestScore  uint64                 `protobuf:"varint,5,opt,name=highest_score,json=highestScore,proto3" json:"highest_score,omitempty"`
+	Updated       int64                  `protobuf:"varint,99,opt,name=updated,proto3" json:"updated,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoTowerInstance) Reset() {
+	*x = ProtoTowerInstance{}
+	mi := &file_protogame_data_proto_msgTypes[84]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoTowerInstance) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoTowerInstance) ProtoMessage() {}
+
+func (x *ProtoTowerInstance) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_data_proto_msgTypes[84]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoTowerInstance.ProtoReflect.Descriptor instead.
+func (*ProtoTowerInstance) Descriptor() ([]byte, []int) {
+	return file_protogame_data_proto_rawDescGZIP(), []int{84}
+}
+
+func (x *ProtoTowerInstance) GetTowerId() string {
+	if x != nil {
+		return x.TowerId
+	}
+	return ""
+}
+
+func (x *ProtoTowerInstance) GetLevel() int32 {
+	if x != nil {
+		return x.Level
+	}
+	return 0
+}
+
+func (x *ProtoTowerInstance) GetHighestLevel() int32 {
+	if x != nil {
+		return x.HighestLevel
+	}
+	return 0
+}
+
+func (x *ProtoTowerInstance) GetScore() uint64 {
+	if x != nil {
+		return x.Score
+	}
+	return 0
+}
+
+func (x *ProtoTowerInstance) GetHighestScore() uint64 {
+	if x != nil {
+		return x.HighestScore
+	}
+	return 0
+}
+
+func (x *ProtoTowerInstance) GetUpdated() int64 {
+	if x != nil {
+		return x.Updated
+	}
+	return 0
+}
+
 var File_protogame_data_proto protoreflect.FileDescriptor
 
 const file_protogame_data_proto_rawDesc = "" +
@@ -6692,7 +6828,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x12current_node_index\x18\x04 \x01(\x05R\x10currentNodeIndex\x12\x18\n" +
 	"\avisited\x18\x05 \x01(\bR\avisited\x12\x1f\n" +
 	"\vunlock_time\x18\x06 \x01(\x03R\n" +
-	"unlockTime\"\xc2\x06\n" +
+	"unlockTime\"\xf0\x06\n" +
 	"\x16ProtoRegionMapInstance\x12\x15\n" +
 	"\x06map_id\x18\x01 \x01(\tR\x05mapId\x126\n" +
 	"\tnode_data\x18\x02 \x03(\v2\x19.game.ProtoRegionNodeDataR\bnodeData\x12,\n" +
@@ -6711,7 +6847,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\vunlock_time\x18\x0e \x01(\x03R\n" +
 	"unlockTime\x129\n" +
 	"\bprogress\x18\x0f \x01(\v2\x1d.game.ProtoRegionProgressDataR\bprogress\x12H\n" +
-	"\x10wandering_fiends\x18\x10 \x01(\v2\x1d.game.ProtoWanderingFiendDataR\x0fwanderingFiends\"\xa1\x02\n" +
+	"\x10wandering_fiends\x18\x10 \x01(\v2\x1d.game.ProtoWanderingFiendDataR\x0fwanderingFiends\x12,\n" +
+	"\x06towers\x18\x11 \x01(\v2\x14.game.ProtoTowerDataR\x06towers\"\xa1\x02\n" +
 	"\x17ProtoRegionProgressData\x12;\n" +
 	"\tdialogues\x18\x01 \x03(\v2\x1d.game.ProtoRegionDialogueDataR\tdialogues\x128\n" +
 	"\bdungeons\x18\x02 \x03(\v2\x1c.game.ProtoRegionDungeonDataR\bdungeons\x12\x18\n" +
@@ -6916,7 +7053,16 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x14ProtoBattleWaveGroup\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x14\n" +
 	"\x05count\x18\x02 \x01(\x05R\x05count\x12\x19\n" +
-	"\bfiend_id\x18\x03 \x01(\tR\afiendId*t\n" +
+	"\bfiend_id\x18\x03 \x01(\tR\afiendId\"B\n" +
+	"\x0eProtoTowerData\x120\n" +
+	"\x06towers\x18\x01 \x03(\v2\x18.game.ProtoTowerInstanceR\x06towers\"\xbf\x01\n" +
+	"\x12ProtoTowerInstance\x12\x19\n" +
+	"\btower_id\x18\x01 \x01(\tR\atowerId\x12\x14\n" +
+	"\x05level\x18\x02 \x01(\x05R\x05level\x12#\n" +
+	"\rhighest_level\x18\x03 \x01(\x05R\fhighestLevel\x12\x14\n" +
+	"\x05score\x18\x04 \x01(\x04R\x05score\x12#\n" +
+	"\rhighest_score\x18\x05 \x01(\x04R\fhighestScore\x12\x18\n" +
+	"\aupdated\x18c \x01(\x03R\aupdated*t\n" +
 	"\x0fReferenceSource\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x10\n" +
 	"\fABILITY_CARD\x10\x01\x12\f\n" +
@@ -6940,7 +7086,7 @@ func file_protogame_data_proto_rawDescGZIP() []byte {
 }
 
 var file_protogame_data_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protogame_data_proto_msgTypes = make([]protoimpl.MessageInfo, 95)
+var file_protogame_data_proto_msgTypes = make([]protoimpl.MessageInfo, 97)
 var file_protogame_data_proto_goTypes = []any{
 	(ReferenceSource)(0),                           // 0: game.ReferenceSource
 	(*ProtoGameData)(nil),                          // 1: game.ProtoGameData
@@ -7026,19 +7172,21 @@ var file_protogame_data_proto_goTypes = []any{
 	(*ProtoBattleSelection)(nil),                   // 81: game.ProtoBattleSelection
 	(*ProtoBattleWave)(nil),                        // 82: game.ProtoBattleWave
 	(*ProtoBattleWaveGroup)(nil),                   // 83: game.ProtoBattleWaveGroup
-	nil,                                            // 84: game.ProtoGameData.PlayerProgressDataEntry
-	nil,                                            // 85: game.ProtoAbilityCardData.MaxCardLevelsEntry
-	nil,                                            // 86: game.ProtoAbilityCardInstance.AutoAbilitiesEntry
-	nil,                                            // 87: game.ProtoBattleData.EnemiesDefeatedEntry
-	nil,                                            // 88: game.ProtoLoginCampaignInstance.ClaimedEntry
-	nil,                                            // 89: game.ProtoItemData.LimitDataEntry
-	nil,                                            // 90: game.ProtoJobCardData.SkillPanelsEntry
-	nil,                                            // 91: game.ProtoJobCardInstance.AutoAbilitiesEntry
-	nil,                                            // 92: game.ProtoLastBattleResults.RegionMissionProgressEntry
-	nil,                                            // 93: game.ProtoLastBattleResults.WanderingFiendMovementsEntry
-	nil,                                            // 94: game.ProtoRegionNodeData.FlagsEntry
-	nil,                                            // 95: game.ProtoWeaponInstance.AutoAbilitiesEntry
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 96: identity.ProtoAbilityCardIdentity
+	(*ProtoTowerData)(nil),                         // 84: game.ProtoTowerData
+	(*ProtoTowerInstance)(nil),                     // 85: game.ProtoTowerInstance
+	nil,                                            // 86: game.ProtoGameData.PlayerProgressDataEntry
+	nil,                                            // 87: game.ProtoAbilityCardData.MaxCardLevelsEntry
+	nil,                                            // 88: game.ProtoAbilityCardInstance.AutoAbilitiesEntry
+	nil,                                            // 89: game.ProtoBattleData.EnemiesDefeatedEntry
+	nil,                                            // 90: game.ProtoLoginCampaignInstance.ClaimedEntry
+	nil,                                            // 91: game.ProtoItemData.LimitDataEntry
+	nil,                                            // 92: game.ProtoJobCardData.SkillPanelsEntry
+	nil,                                            // 93: game.ProtoJobCardInstance.AutoAbilitiesEntry
+	nil,                                            // 94: game.ProtoLastBattleResults.RegionMissionProgressEntry
+	nil,                                            // 95: game.ProtoLastBattleResults.WanderingFiendMovementsEntry
+	nil,                                            // 96: game.ProtoRegionNodeData.FlagsEntry
+	nil,                                            // 97: game.ProtoWeaponInstance.AutoAbilitiesEntry
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 98: identity.ProtoAbilityCardIdentity
 }
 var file_protogame_data_proto_depIdxs = []int32{
 	42,  // 0: game.ProtoGameData.mailbox:type_name -> game.ProtoMailBox
@@ -7050,25 +7198,25 @@ var file_protogame_data_proto_depIdxs = []int32{
 	8,   // 6: game.ProtoGameData.single_play_battle_data:type_name -> game.ProtoBattleData
 	8,   // 7: game.ProtoGameData.multi_play_battle_data:type_name -> game.ProtoBattleData
 	22,  // 8: game.ProtoGameData.card_filter_sort_sets:type_name -> game.ProtoCardFilterSortSet
-	84,  // 9: game.ProtoGameData.player_progress_data:type_name -> game.ProtoGameData.PlayerProgressDataEntry
+	86,  // 9: game.ProtoGameData.player_progress_data:type_name -> game.ProtoGameData.PlayerProgressDataEntry
 	6,   // 10: game.ProtoAbilityCardData.inventory:type_name -> game.ProtoAbilityCardInventory
 	6,   // 11: game.ProtoAbilityCardData.bank:type_name -> game.ProtoAbilityCardInventory
 	3,   // 12: game.ProtoAbilityCardData.history:type_name -> game.ProtoAbilityCardHistory
-	85,  // 13: game.ProtoAbilityCardData.max_card_levels:type_name -> game.ProtoAbilityCardData.MaxCardLevelsEntry
+	87,  // 13: game.ProtoAbilityCardData.max_card_levels:type_name -> game.ProtoAbilityCardData.MaxCardLevelsEntry
 	4,   // 14: game.ProtoAbilityCardHistory.base_list:type_name -> game.ProtoBaseCardHistoryInstance
 	5,   // 15: game.ProtoAbilityCardHistory.card_list:type_name -> game.ProtoAbilityCardHistoryInstance
 	7,   // 16: game.ProtoAbilityCardInventory.card_list:type_name -> game.ProtoAbilityCardInstance
-	86,  // 17: game.ProtoAbilityCardInstance.auto_abilities:type_name -> game.ProtoAbilityCardInstance.AutoAbilitiesEntry
+	88,  // 17: game.ProtoAbilityCardInstance.auto_abilities:type_name -> game.ProtoAbilityCardInstance.AutoAbilitiesEntry
 	47,  // 18: game.ProtoBattleData.stamina:type_name -> game.ProtoPlayerStamina
 	44,  // 19: game.ProtoBattleData.decks:type_name -> game.ProtoPlayerDeckCollection
-	87,  // 20: game.ProtoBattleData.enemies_defeated:type_name -> game.ProtoBattleData.EnemiesDefeatedEntry
+	89,  // 20: game.ProtoBattleData.enemies_defeated:type_name -> game.ProtoBattleData.EnemiesDefeatedEntry
 	9,   // 21: game.ProtoBattleData.start_data:type_name -> game.ProtoBattleStartData
 	38,  // 22: game.ProtoBattleData.results:type_name -> game.ProtoLastBattleResults
 	17,  // 23: game.ProtoBattleStartData.item_drop_table:type_name -> game.BattleItemDrop
 	18,  // 24: game.ProtoBattleStartData.card_drop_table:type_name -> game.BattleCardDrop
 	11,  // 25: game.ProtoBattleStartData.progress_data:type_name -> game.ProtoBattleProgressData
 	13,  // 26: game.ProtoBattleStartData.card_progress_data:type_name -> game.ProtoCardProgressData
-	96,  // 27: game.ProtoBattleStartData.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	98,  // 27: game.ProtoBattleStartData.rental_card:type_name -> identity.ProtoAbilityCardIdentity
 	10,  // 28: game.ProtoBattleStartData.fiend_spawns:type_name -> game.ProtoBattleFiendSpawn
 	81,  // 29: game.ProtoBattleStartData.selection_results:type_name -> game.ProtoBattleSelection
 	14,  // 30: game.ProtoMissionInstance.mission:type_name -> game.ProtoMission
@@ -7079,28 +7227,28 @@ var file_protogame_data_proto_depIdxs = []int32{
 	19,  // 35: game.BattleCardDrop.key:type_name -> game.BattleDropTableKey
 	21,  // 36: game.BattleCardDrop.drop:type_name -> game.BattleCardDropResult
 	23,  // 37: game.ProtoCardFilterSortSet.sets:type_name -> game.ProtoCardFilterSort
-	88,  // 38: game.ProtoLoginCampaignInstance.claimed:type_name -> game.ProtoLoginCampaignInstance.ClaimedEntry
+	90,  // 38: game.ProtoLoginCampaignInstance.claimed:type_name -> game.ProtoLoginCampaignInstance.ClaimedEntry
 	26,  // 39: game.ProtoFairyCompanionData.inventory:type_name -> game.ProtoFairyCompanionInventory
 	27,  // 40: game.ProtoFairyCompanionInventory.companion_list:type_name -> game.ProtoFairyCompanionInstance
 	31,  // 41: game.ProtoItemData.inventory:type_name -> game.ProtoItemInventory
-	89,  // 42: game.ProtoItemData.limit_data:type_name -> game.ProtoItemData.LimitDataEntry
+	91,  // 42: game.ProtoItemData.limit_data:type_name -> game.ProtoItemData.LimitDataEntry
 	29,  // 43: game.ProtoItemData.distillers:type_name -> game.ProtoItemDistiller
 	32,  // 44: game.ProtoItemData.gift_boxes:type_name -> game.ProtoGiftBoxInstance
 	33,  // 45: game.ProtoItemInventory.item_list:type_name -> game.ProtoItemInstance
 	36,  // 46: game.ProtoJobCardData.jobs:type_name -> game.ProtoJobInventory
 	68,  // 47: game.ProtoJobCardData.weapons:type_name -> game.ProtoWeaponInventory
-	90,  // 48: game.ProtoJobCardData.skill_panels:type_name -> game.ProtoJobCardData.SkillPanelsEntry
+	92,  // 48: game.ProtoJobCardData.skill_panels:type_name -> game.ProtoJobCardData.SkillPanelsEntry
 	37,  // 49: game.ProtoJobInventory.job_list:type_name -> game.ProtoJobCardInstance
 	65,  // 50: game.ProtoJobCardInstance.skill_panel_unlocks:type_name -> game.ProtoSkillPanelGroups
-	91,  // 51: game.ProtoJobCardInstance.auto_abilities:type_name -> game.ProtoJobCardInstance.AutoAbilitiesEntry
+	93,  // 51: game.ProtoJobCardInstance.auto_abilities:type_name -> game.ProtoJobCardInstance.AutoAbilitiesEntry
 	11,  // 52: game.ProtoLastBattleResults.progress_data:type_name -> game.ProtoBattleProgressData
 	13,  // 53: game.ProtoLastBattleResults.card_progress_data:type_name -> game.ProtoCardProgressData
 	39,  // 54: game.ProtoLastBattleResults.item_rewards:type_name -> game.TaggedBattleItemReward
 	40,  // 55: game.ProtoLastBattleResults.card_rewards:type_name -> game.TaggedBattleCardReward
 	41,  // 56: game.ProtoLastBattleResults.companion_rewards:type_name -> game.TaggedBattleCompanionReward
 	62,  // 57: game.ProtoLastBattleResults.pending_events:type_name -> game.ProtoRegionNodeEvent
-	92,  // 58: game.ProtoLastBattleResults.region_mission_progress:type_name -> game.ProtoLastBattleResults.RegionMissionProgressEntry
-	93,  // 59: game.ProtoLastBattleResults.wandering_fiend_movements:type_name -> game.ProtoLastBattleResults.WanderingFiendMovementsEntry
+	94,  // 58: game.ProtoLastBattleResults.region_mission_progress:type_name -> game.ProtoLastBattleResults.RegionMissionProgressEntry
+	95,  // 59: game.ProtoLastBattleResults.wandering_fiend_movements:type_name -> game.ProtoLastBattleResults.WanderingFiendMovementsEntry
 	12,  // 60: game.ProtoLastBattleResults.arena_progress_data:type_name -> game.ArenaProgressData
 	43,  // 61: game.ProtoMailBox.items:type_name -> game.ProtoMailBoxItem
 	0,   // 62: game.ProtoMailBoxItem.source:type_name -> game.ReferenceSource
@@ -7118,41 +7266,43 @@ var file_protogame_data_proto_depIdxs = []int32{
 	64,  // 74: game.ProtoRegionMapInstance.mission_data:type_name -> game.ProtoRegionMissionInstance
 	52,  // 75: game.ProtoRegionMapInstance.progress:type_name -> game.ProtoRegionProgressData
 	53,  // 76: game.ProtoRegionMapInstance.wandering_fiends:type_name -> game.ProtoWanderingFiendData
-	55,  // 77: game.ProtoRegionProgressData.dialogues:type_name -> game.ProtoRegionDialogueData
-	56,  // 78: game.ProtoRegionProgressData.dungeons:type_name -> game.ProtoRegionDungeonData
-	57,  // 79: game.ProtoRegionProgressData.arenas:type_name -> game.ProtoRegionArenaData
-	54,  // 80: game.ProtoWanderingFiendData.fiends:type_name -> game.ProtoWanderingFiendInstance
-	58,  // 81: game.ProtoRegionArenaData.entries:type_name -> game.ProtoRegionArenaEntryData
-	94,  // 82: game.ProtoRegionNodeData.flags:type_name -> game.ProtoRegionNodeData.FlagsEntry
-	15,  // 83: game.ProtoRegionMissionInstance.instance:type_name -> game.ProtoMissionInstance
-	66,  // 84: game.ProtoSkillPanelGroups.panel_pages:type_name -> game.ProtoSkillPanelPage
-	67,  // 85: game.ProtoSkillPanelPage.skill_panels:type_name -> game.ProtoSkillPanel
-	69,  // 86: game.ProtoWeaponInventory.weapon_list:type_name -> game.ProtoWeaponInstance
-	95,  // 87: game.ProtoWeaponInstance.auto_abilities:type_name -> game.ProtoWeaponInstance.AutoAbilitiesEntry
-	72,  // 88: game.ProtoBattleStatistics.element_orb_draws:type_name -> game.ElementUsageStatistic
-	72,  // 89: game.ProtoBattleStatistics.element_orb_usage:type_name -> game.ElementUsageStatistic
-	73,  // 90: game.ProtoBattleStatistics.enemy_defeats:type_name -> game.ProtoEnemyDeathStatistic
-	71,  // 91: game.ProtoBattleStatistics.ability_card_usage:type_name -> game.AbilityCardUsageStatistic
-	7,   // 92: game.ProtoAbilityCardSummonDrawResult.instance:type_name -> game.ProtoAbilityCardInstance
-	37,  // 93: game.ProtoJobCardSummonDrawResult.instance:type_name -> game.ProtoJobCardInstance
-	65,  // 94: game.ProtoJobCardSummonDrawResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
-	77,  // 95: game.ProtoMailboxClaimResult.item:type_name -> game.ProtoItemClaimResult
-	78,  // 96: game.ProtoMailboxClaimResult.ability_card:type_name -> game.ProtoAbilityCardClaimResult
-	79,  // 97: game.ProtoMailboxClaimResult.job_card:type_name -> game.ProtoJobCardClaimResult
-	80,  // 98: game.ProtoMailboxClaimResult.weapon:type_name -> game.ProtoWeaponClaimResult
-	7,   // 99: game.ProtoAbilityCardClaimResult.instance:type_name -> game.ProtoAbilityCardInstance
-	37,  // 100: game.ProtoJobCardClaimResult.instance:type_name -> game.ProtoJobCardInstance
-	65,  // 101: game.ProtoJobCardClaimResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
-	69,  // 102: game.ProtoWeaponClaimResult.weapon:type_name -> game.ProtoWeaponInstance
-	82,  // 103: game.ProtoBattleSelection.waves:type_name -> game.ProtoBattleWave
-	83,  // 104: game.ProtoBattleWave.groups:type_name -> game.ProtoBattleWaveGroup
-	30,  // 105: game.ProtoItemData.LimitDataEntry.value:type_name -> game.ProtoItemDropRecord
-	65,  // 106: game.ProtoJobCardData.SkillPanelsEntry.value:type_name -> game.ProtoSkillPanelGroups
-	107, // [107:107] is the sub-list for method output_type
-	107, // [107:107] is the sub-list for method input_type
-	107, // [107:107] is the sub-list for extension type_name
-	107, // [107:107] is the sub-list for extension extendee
-	0,   // [0:107] is the sub-list for field type_name
+	84,  // 77: game.ProtoRegionMapInstance.towers:type_name -> game.ProtoTowerData
+	55,  // 78: game.ProtoRegionProgressData.dialogues:type_name -> game.ProtoRegionDialogueData
+	56,  // 79: game.ProtoRegionProgressData.dungeons:type_name -> game.ProtoRegionDungeonData
+	57,  // 80: game.ProtoRegionProgressData.arenas:type_name -> game.ProtoRegionArenaData
+	54,  // 81: game.ProtoWanderingFiendData.fiends:type_name -> game.ProtoWanderingFiendInstance
+	58,  // 82: game.ProtoRegionArenaData.entries:type_name -> game.ProtoRegionArenaEntryData
+	96,  // 83: game.ProtoRegionNodeData.flags:type_name -> game.ProtoRegionNodeData.FlagsEntry
+	15,  // 84: game.ProtoRegionMissionInstance.instance:type_name -> game.ProtoMissionInstance
+	66,  // 85: game.ProtoSkillPanelGroups.panel_pages:type_name -> game.ProtoSkillPanelPage
+	67,  // 86: game.ProtoSkillPanelPage.skill_panels:type_name -> game.ProtoSkillPanel
+	69,  // 87: game.ProtoWeaponInventory.weapon_list:type_name -> game.ProtoWeaponInstance
+	97,  // 88: game.ProtoWeaponInstance.auto_abilities:type_name -> game.ProtoWeaponInstance.AutoAbilitiesEntry
+	72,  // 89: game.ProtoBattleStatistics.element_orb_draws:type_name -> game.ElementUsageStatistic
+	72,  // 90: game.ProtoBattleStatistics.element_orb_usage:type_name -> game.ElementUsageStatistic
+	73,  // 91: game.ProtoBattleStatistics.enemy_defeats:type_name -> game.ProtoEnemyDeathStatistic
+	71,  // 92: game.ProtoBattleStatistics.ability_card_usage:type_name -> game.AbilityCardUsageStatistic
+	7,   // 93: game.ProtoAbilityCardSummonDrawResult.instance:type_name -> game.ProtoAbilityCardInstance
+	37,  // 94: game.ProtoJobCardSummonDrawResult.instance:type_name -> game.ProtoJobCardInstance
+	65,  // 95: game.ProtoJobCardSummonDrawResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
+	77,  // 96: game.ProtoMailboxClaimResult.item:type_name -> game.ProtoItemClaimResult
+	78,  // 97: game.ProtoMailboxClaimResult.ability_card:type_name -> game.ProtoAbilityCardClaimResult
+	79,  // 98: game.ProtoMailboxClaimResult.job_card:type_name -> game.ProtoJobCardClaimResult
+	80,  // 99: game.ProtoMailboxClaimResult.weapon:type_name -> game.ProtoWeaponClaimResult
+	7,   // 100: game.ProtoAbilityCardClaimResult.instance:type_name -> game.ProtoAbilityCardInstance
+	37,  // 101: game.ProtoJobCardClaimResult.instance:type_name -> game.ProtoJobCardInstance
+	65,  // 102: game.ProtoJobCardClaimResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
+	69,  // 103: game.ProtoWeaponClaimResult.weapon:type_name -> game.ProtoWeaponInstance
+	82,  // 104: game.ProtoBattleSelection.waves:type_name -> game.ProtoBattleWave
+	83,  // 105: game.ProtoBattleWave.groups:type_name -> game.ProtoBattleWaveGroup
+	85,  // 106: game.ProtoTowerData.towers:type_name -> game.ProtoTowerInstance
+	30,  // 107: game.ProtoItemData.LimitDataEntry.value:type_name -> game.ProtoItemDropRecord
+	65,  // 108: game.ProtoJobCardData.SkillPanelsEntry.value:type_name -> game.ProtoSkillPanelGroups
+	109, // [109:109] is the sub-list for method output_type
+	109, // [109:109] is the sub-list for method input_type
+	109, // [109:109] is the sub-list for extension type_name
+	109, // [109:109] is the sub-list for extension extendee
+	0,   // [0:109] is the sub-list for field type_name
 }
 
 func init() { file_protogame_data_proto_init() }
@@ -7167,7 +7317,7 @@ func file_protogame_data_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_data_proto_rawDesc), len(file_protogame_data_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   95,
+			NumMessages:   97,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
