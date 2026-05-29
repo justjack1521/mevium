@@ -141,6 +141,7 @@ message ProtoBattleStartData {
   ProtoBattleSelection selection_results = 23;
 
   string arena_id = 24;
+  string tower_id = 26;
 
   string id = 25;
 

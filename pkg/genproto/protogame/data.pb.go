@@ -861,6 +861,7 @@ type ProtoBattleStartData struct {
 	FiendSpawns           []*ProtoBattleFiendSpawn                `protobuf:"bytes,22,rep,name=fiend_spawns,json=fiendSpawns,proto3" json:"fiend_spawns,omitempty"`
 	SelectionResults      *ProtoBattleSelection                   `protobuf:"bytes,23,opt,name=selection_results,json=selectionResults,proto3" json:"selection_results,omitempty"`
 	ArenaId               string                                  `protobuf:"bytes,24,opt,name=arena_id,json=arenaId,proto3" json:"arena_id,omitempty"`
+	TowerId               string                                  `protobuf:"bytes,26,opt,name=tower_id,json=towerId,proto3" json:"tower_id,omitempty"`
 	Id                    string                                  `protobuf:"bytes,25,opt,name=id,proto3" json:"id,omitempty"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
@@ -1060,6 +1061,13 @@ func (x *ProtoBattleStartData) GetSelectionResults() *ProtoBattleSelection {
 func (x *ProtoBattleStartData) GetArenaId() string {
 	if x != nil {
 		return x.ArenaId
+	}
+	return ""
+}
+
+func (x *ProtoBattleStartData) GetTowerId() string {
+	if x != nil {
+		return x.TowerId
 	}
 	return ""
 }
@@ -6543,7 +6551,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x04R\x05value:\x028\x01B\r\n" +
 	"\v_start_dataB\n" +
 	"\n" +
-	"\b_results\"\x8e\t\n" +
+	"\b_results\"\xa9\t\n" +
 	"\x14ProtoBattleStartData\x12\"\n" +
 	"\rregion_map_id\x18\x01 \x01(\tR\vregionMapId\x12$\n" +
 	"\x0eregion_node_id\x18\x02 \x01(\tR\fregionNodeId\x12*\n" +
@@ -6574,7 +6582,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"created_at\x18\x14 \x01(\x03R\tcreatedAt\x12>\n" +
 	"\ffiend_spawns\x18\x16 \x03(\v2\x1b.game.ProtoBattleFiendSpawnR\vfiendSpawns\x12G\n" +
 	"\x11selection_results\x18\x17 \x01(\v2\x1a.game.ProtoBattleSelectionR\x10selectionResults\x12\x19\n" +
-	"\barena_id\x18\x18 \x01(\tR\aarenaId\x12\x0e\n" +
+	"\barena_id\x18\x18 \x01(\tR\aarenaId\x12\x19\n" +
+	"\btower_id\x18\x1a \x01(\tR\atowerId\x12\x0e\n" +
 	"\x02id\x18\x19 \x01(\tR\x02id\"c\n" +
 	"\x15ProtoBattleFiendSpawn\x12%\n" +
 	"\x0ereplaces_fiend\x18\x01 \x01(\tR\rreplacesFiend\x12#\n" +
