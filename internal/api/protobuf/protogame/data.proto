@@ -103,6 +103,7 @@ message ProtoBattleData {
   uint64 ultimate_charge = 9;
   optional ProtoBattleStartData start_data = 10;
   optional ProtoLastBattleResults results = 20;
+  ProtoTowerData towers = 21;
 }
 
 message ProtoBattleStartData {
@@ -465,7 +466,6 @@ message ProtoRegionMapInstance {
 
   ProtoRegionProgressData progress = 15;
   ProtoWanderingFiendData wandering_fiends = 16;
-  ProtoTowerData towers = 17;
 
 }
 
