@@ -24,6 +24,8 @@ message ProtoPlayerRankSetDetails {
   identity.ProtoPlayerIdentity identity = 6;
   identity.ProtoPlayerLoadoutIdentity primary_loadout = 7;
   bool is_player = 8;
+  int64 primary_score = 9;
+  int64 secondary_score = 10;
 }
 
 message ProtoRankingEventClaim {
