@@ -39,13 +39,14 @@ namespace Mobius.Proto.Rank {
             "ZRgBIAMoCzIWLnJhbmsuUHJvdG9SYW5raW5nSW5mbxIsCgZjbGFpbXMYAiAD",
             "KAsyHC5yYW5rLlByb3RvUmFua2luZ0V2ZW50Q2xhaW0iPwocR2V0UGxheWVy",
             "RXZlbnRSZXdhcmRzUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSDAoEY29k",
-            "ZRgCIAEoCSJjCh1HZXRQbGF5ZXJFdmVudFJld2FyZHNSZXNwb25zZRISCgpl",
-            "dmVudF9uYW1lGAEgASgJEi4KB3Jld2FyZHMYAiADKAsyHS5yYW5rLlByb3Rv",
-            "UmFua2luZ0V2ZW50UmV3YXJkIicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2",
-            "ZW50X25hbWUYASABKAkqNAoPUmFua1JlcXVlc3RUeXBlEggKBE5PTkUQABIX",
-            "ChJHRVRfUkFOS0lOR19FVkVOVFMQqBRCS1o1Z2l0aHViLmNvbS9qdXN0amFj",
-            "azE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b3JhbmuqAhFNb2JpdXMu",
-            "UHJvdG8uUmFua2IGcHJvdG8z"));
+            "ZRgCIAEoCSKXAQodR2V0UGxheWVyRXZlbnRSZXdhcmRzUmVzcG9uc2USEgoK",
+            "ZXZlbnRfbmFtZRgBIAEoCRIuCgdyZXdhcmRzGAIgAygLMh0ucmFuay5Qcm90",
+            "b1JhbmtpbmdFdmVudFJld2FyZBIYChBpdGVtX2Ryb3BfdGFibGVzGAMgAygJ",
+            "EhgKEGNhcmRfZHJvcF90YWJsZXMYBCADKAkiJwoRR2V0VG9wUmFua1JlcXVl",
+            "c3QSEgoKZXZlbnRfbmFtZRgBIAEoCSo0Cg9SYW5rUmVxdWVzdFR5cGUSCAoE",
+            "Tk9ORRAAEhcKEkdFVF9SQU5LSU5HX0VWRU5UUxCoFEJLWjVnaXRodWIuY29t",
+            "L2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvcmFua6oC",
+            "EU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -55,7 +56,7 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoResponse), global::Mobius.Proto.Rank.FetchPlayerRankingInfoResponse.Parser, new[]{ "Active", "Claims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest), global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest.Parser, new[]{ "PlayerId", "Code" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse), global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse.Parser, new[]{ "EventName", "Rewards" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse), global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse.Parser, new[]{ "EventName", "Rewards", "ItemDropTables", "CardDropTables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null)
           }));
     }
@@ -1490,6 +1491,8 @@ namespace Mobius.Proto.Rank {
     public GetPlayerEventRewardsResponse(GetPlayerEventRewardsResponse other) : this() {
       eventName_ = other.eventName_;
       rewards_ = other.rewards_.Clone();
+      itemDropTables_ = other.itemDropTables_.Clone();
+      cardDropTables_ = other.cardDropTables_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1519,6 +1522,26 @@ namespace Mobius.Proto.Rank {
       get { return rewards_; }
     }
 
+    /// <summary>Field number for the "item_drop_tables" field.</summary>
+    public const int ItemDropTablesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_itemDropTables_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> itemDropTables_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> ItemDropTables {
+      get { return itemDropTables_; }
+    }
+
+    /// <summary>Field number for the "card_drop_tables" field.</summary>
+    public const int CardDropTablesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_cardDropTables_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> cardDropTables_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> CardDropTables {
+      get { return cardDropTables_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetPlayerEventRewardsResponse);
@@ -1534,6 +1557,8 @@ namespace Mobius.Proto.Rank {
       }
       if (EventName != other.EventName) return false;
       if(!rewards_.Equals(other.rewards_)) return false;
+      if(!itemDropTables_.Equals(other.itemDropTables_)) return false;
+      if(!cardDropTables_.Equals(other.cardDropTables_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1542,6 +1567,8 @@ namespace Mobius.Proto.Rank {
       int hash = 1;
       if (EventName.Length != 0) hash ^= EventName.GetHashCode();
       hash ^= rewards_.GetHashCode();
+      hash ^= itemDropTables_.GetHashCode();
+      hash ^= cardDropTables_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1563,6 +1590,8 @@ namespace Mobius.Proto.Rank {
         output.WriteString(EventName);
       }
       rewards_.WriteTo(output, _repeated_rewards_codec);
+      itemDropTables_.WriteTo(output, _repeated_itemDropTables_codec);
+      cardDropTables_.WriteTo(output, _repeated_cardDropTables_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1577,6 +1606,8 @@ namespace Mobius.Proto.Rank {
         output.WriteString(EventName);
       }
       rewards_.WriteTo(ref output, _repeated_rewards_codec);
+      itemDropTables_.WriteTo(ref output, _repeated_itemDropTables_codec);
+      cardDropTables_.WriteTo(ref output, _repeated_cardDropTables_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1590,6 +1621,8 @@ namespace Mobius.Proto.Rank {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
       }
       size += rewards_.CalculateSize(_repeated_rewards_codec);
+      size += itemDropTables_.CalculateSize(_repeated_itemDropTables_codec);
+      size += cardDropTables_.CalculateSize(_repeated_cardDropTables_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1605,6 +1638,8 @@ namespace Mobius.Proto.Rank {
         EventName = other.EventName;
       }
       rewards_.Add(other.rewards_);
+      itemDropTables_.Add(other.itemDropTables_);
+      cardDropTables_.Add(other.cardDropTables_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1627,6 +1662,14 @@ namespace Mobius.Proto.Rank {
             rewards_.AddEntriesFrom(input, _repeated_rewards_codec);
             break;
           }
+          case 26: {
+            itemDropTables_.AddEntriesFrom(input, _repeated_itemDropTables_codec);
+            break;
+          }
+          case 34: {
+            cardDropTables_.AddEntriesFrom(input, _repeated_cardDropTables_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1647,6 +1690,14 @@ namespace Mobius.Proto.Rank {
           }
           case 18: {
             rewards_.AddEntriesFrom(ref input, _repeated_rewards_codec);
+            break;
+          }
+          case 26: {
+            itemDropTables_.AddEntriesFrom(ref input, _repeated_itemDropTables_codec);
+            break;
+          }
+          case 34: {
+            cardDropTables_.AddEntriesFrom(ref input, _repeated_cardDropTables_codec);
             break;
           }
         }

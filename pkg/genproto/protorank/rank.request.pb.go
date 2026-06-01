@@ -413,11 +413,13 @@ func (x *GetPlayerEventRewardsRequest) GetCode() string {
 }
 
 type GetPlayerEventRewardsResponse struct {
-	state         protoimpl.MessageState     `protogen:"open.v1"`
-	EventName     string                     `protobuf:"bytes,1,opt,name=event_name,json=eventName,proto3" json:"event_name,omitempty"`
-	Rewards       []*ProtoRankingEventReward `protobuf:"bytes,2,rep,name=rewards,proto3" json:"rewards,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state          protoimpl.MessageState     `protogen:"open.v1"`
+	EventName      string                     `protobuf:"bytes,1,opt,name=event_name,json=eventName,proto3" json:"event_name,omitempty"`
+	Rewards        []*ProtoRankingEventReward `protobuf:"bytes,2,rep,name=rewards,proto3" json:"rewards,omitempty"`
+	ItemDropTables []string                   `protobuf:"bytes,3,rep,name=item_drop_tables,json=itemDropTables,proto3" json:"item_drop_tables,omitempty"`
+	CardDropTables []string                   `protobuf:"bytes,4,rep,name=card_drop_tables,json=cardDropTables,proto3" json:"card_drop_tables,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
 }
 
 func (x *GetPlayerEventRewardsResponse) Reset() {
@@ -460,6 +462,20 @@ func (x *GetPlayerEventRewardsResponse) GetEventName() string {
 func (x *GetPlayerEventRewardsResponse) GetRewards() []*ProtoRankingEventReward {
 	if x != nil {
 		return x.Rewards
+	}
+	return nil
+}
+
+func (x *GetPlayerEventRewardsResponse) GetItemDropTables() []string {
+	if x != nil {
+		return x.ItemDropTables
+	}
+	return nil
+}
+
+func (x *GetPlayerEventRewardsResponse) GetCardDropTables() []string {
+	if x != nil {
+		return x.CardDropTables
 	}
 	return nil
 }
@@ -536,11 +552,13 @@ const file_protorank_rank_request_proto_rawDesc = "" +
 	"\x06claims\x18\x02 \x03(\v2\x1c.rank.ProtoRankingEventClaimR\x06claims\"O\n" +
 	"\x1cGetPlayerEventRewardsRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x12\n" +
-	"\x04code\x18\x02 \x01(\tR\x04code\"w\n" +
+	"\x04code\x18\x02 \x01(\tR\x04code\"\xcb\x01\n" +
 	"\x1dGetPlayerEventRewardsResponse\x12\x1d\n" +
 	"\n" +
 	"event_name\x18\x01 \x01(\tR\teventName\x127\n" +
-	"\arewards\x18\x02 \x03(\v2\x1d.rank.ProtoRankingEventRewardR\arewards\"2\n" +
+	"\arewards\x18\x02 \x03(\v2\x1d.rank.ProtoRankingEventRewardR\arewards\x12(\n" +
+	"\x10item_drop_tables\x18\x03 \x03(\tR\x0eitemDropTables\x12(\n" +
+	"\x10card_drop_tables\x18\x04 \x03(\tR\x0ecardDropTables\"2\n" +
 	"\x11GetTopRankRequest\x12\x1d\n" +
 	"\n" +
 	"event_name\x18\x01 \x01(\tR\teventName*4\n" +
