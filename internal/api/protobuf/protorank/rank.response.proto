@@ -44,3 +44,7 @@ message GetPlayerEventRewardsResponse {
   repeated string item_drop_tables = 3;
   repeated string card_drop_tables = 4;
 }
+
+message RankingRegionAvailableRequest {
+  string id = 1;
+}

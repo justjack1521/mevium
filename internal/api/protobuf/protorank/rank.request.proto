@@ -44,3 +44,7 @@ message GetPlayerEventRewardsRequest {
 message GetTopRankRequest {
   string event_name = 1;
 }
+
+message RankingRegionAvailableResponse {
+  bool available = 1;
+}

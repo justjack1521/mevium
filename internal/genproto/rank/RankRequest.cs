@@ -36,10 +36,12 @@ namespace Mobius.Proto.Rank {
             "EQoJcmVnaW9uX2lkGAIgASgJIjIKHUZldGNoUGxheWVyUmFua2luZ0luZm9S",
             "ZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCSI/ChxHZXRQbGF5ZXJFdmVudFJl",
             "d2FyZHNSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIMCgRjb2RlGAIgASgJ",
-            "IicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2ZW50X25hbWUYASABKAkqNAoP",
-            "UmFua1JlcXVlc3RUeXBlEggKBE5PTkUQABIXChJHRVRfUkFOS0lOR19FVkVO",
-            "VFMQqBRCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
-            "ZW5wcm90by9wcm90b3JhbmuqAhFNb2JpdXMuUHJvdG8uUmFua2IGcHJvdG8z"));
+            "IicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2ZW50X25hbWUYASABKAkiMwoe",
+            "UmFua2luZ1JlZ2lvbkF2YWlsYWJsZVJlc3BvbnNlEhEKCWF2YWlsYWJsZRgB",
+            "IAEoCCo0Cg9SYW5rUmVxdWVzdFR5cGUSCAoETk9ORRAAEhcKEkdFVF9SQU5L",
+            "SU5HX0VWRU5UUxCoFEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZp",
+            "dW0vcGtnL2dlbnByb3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5r",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,7 +50,8 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest), global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest), global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest.Parser, new[]{ "PlayerId", "Code" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RankingRegionAvailableResponse), global::Mobius.Proto.Rank.RankingRegionAvailableResponse.Parser, new[]{ "Available" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1428,6 +1431,178 @@ namespace Mobius.Proto.Rank {
             break;
           case 10: {
             EventName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class RankingRegionAvailableResponse : pb::IMessage<RankingRegionAvailableResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RankingRegionAvailableResponse> _parser = new pb::MessageParser<RankingRegionAvailableResponse>(() => new RankingRegionAvailableResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RankingRegionAvailableResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RankingRegionAvailableResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RankingRegionAvailableResponse(RankingRegionAvailableResponse other) : this() {
+      available_ = other.available_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RankingRegionAvailableResponse Clone() {
+      return new RankingRegionAvailableResponse(this);
+    }
+
+    /// <summary>Field number for the "available" field.</summary>
+    public const int AvailableFieldNumber = 1;
+    private bool available_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Available {
+      get { return available_; }
+      set {
+        available_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RankingRegionAvailableResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RankingRegionAvailableResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Available != other.Available) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Available != false) hash ^= Available.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Available != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Available);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Available != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Available);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Available != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RankingRegionAvailableResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Available != false) {
+        Available = other.Available;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Available = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Available = input.ReadBool();
             break;
           }
         }

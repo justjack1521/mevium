@@ -404,6 +404,50 @@ func (x *GetTopRankRequest) GetEventName() string {
 	return ""
 }
 
+type RankingRegionAvailableResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Available     bool                   `protobuf:"varint,1,opt,name=available,proto3" json:"available,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *RankingRegionAvailableResponse) Reset() {
+	*x = RankingRegionAvailableResponse{}
+	mi := &file_protorank_rank_request_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RankingRegionAvailableResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RankingRegionAvailableResponse) ProtoMessage() {}
+
+func (x *RankingRegionAvailableResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protorank_rank_request_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RankingRegionAvailableResponse.ProtoReflect.Descriptor instead.
+func (*RankingRegionAvailableResponse) Descriptor() ([]byte, []int) {
+	return file_protorank_rank_request_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *RankingRegionAvailableResponse) GetAvailable() bool {
+	if x != nil {
+		return x.Available
+	}
+	return false
+}
+
 var File_protorank_rank_request_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_request_proto_rawDesc = "" +
@@ -432,7 +476,9 @@ const file_protorank_rank_request_proto_rawDesc = "" +
 	"\x04code\x18\x02 \x01(\tR\x04code\"2\n" +
 	"\x11GetTopRankRequest\x12\x1d\n" +
 	"\n" +
-	"event_name\x18\x01 \x01(\tR\teventName*4\n" +
+	"event_name\x18\x01 \x01(\tR\teventName\">\n" +
+	"\x1eRankingRegionAvailableResponse\x12\x1c\n" +
+	"\tavailable\x18\x01 \x01(\bR\tavailable*4\n" +
 	"\x0fRankRequestType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x17\n" +
 	"\x12GET_RANKING_EVENTS\x10\xa8\x14BKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
@@ -450,7 +496,7 @@ func file_protorank_rank_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protorank_rank_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protorank_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_protorank_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_protorank_rank_request_proto_goTypes = []any{
 	(RankRequestType)(0),                      // 0: rank.RankRequestType
 	(*SubmitScoreRequest)(nil),                // 1: rank.SubmitScoreRequest
@@ -459,12 +505,13 @@ var file_protorank_rank_request_proto_goTypes = []any{
 	(*FetchPlayerRankingInfoRequest)(nil),     // 4: rank.FetchPlayerRankingInfoRequest
 	(*GetPlayerEventRewardsRequest)(nil),      // 5: rank.GetPlayerEventRewardsRequest
 	(*GetTopRankRequest)(nil),                 // 6: rank.GetTopRankRequest
-	(*protoidentity.ProtoPlayerIdentity)(nil), // 7: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),  // 8: identity.ProtoPlayerLoadout
+	(*RankingRegionAvailableResponse)(nil),    // 7: rank.RankingRegionAvailableResponse
+	(*protoidentity.ProtoPlayerIdentity)(nil), // 8: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),  // 9: identity.ProtoPlayerLoadout
 }
 var file_protorank_rank_request_proto_depIdxs = []int32{
-	7, // 0: rank.SubmitScoreRequest.identity:type_name -> identity.ProtoPlayerIdentity
-	8, // 1: rank.SubmitScoreRequest.loadout:type_name -> identity.ProtoPlayerLoadout
+	8, // 0: rank.SubmitScoreRequest.identity:type_name -> identity.ProtoPlayerIdentity
+	9, // 1: rank.SubmitScoreRequest.loadout:type_name -> identity.ProtoPlayerLoadout
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -483,7 +530,7 @@ func file_protorank_rank_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_request_proto_rawDesc), len(file_protorank_rank_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   6,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
