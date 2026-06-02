@@ -59,7 +59,7 @@ namespace Mobius.Proto.Rank {
             "bmdFdmVudFN0YXRQb3B1bGFyQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9jYXJk",
             "X2lkGAEgASgJInAKGVByb3RvUmFua2luZ0V2ZW50U2NoZWR1bGUSEAoIZXZl",
             "bnRfaWQYASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIMCgRjb2RlGAMgASgJ",
-            "Eg4KBmxlbmd0aBgEIAEoAxIPCgdyZXBlYXRzGAUgASgIQktaNWdpdGh1Yi5j",
+            "Eg4KBmxlbmd0aBgEIAEoBRIPCgdyZXBlYXRzGAUgASgIQktaNWdpdGh1Yi5j",
             "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5r",
             "qgIRTW9iaXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -2499,9 +2499,9 @@ namespace Mobius.Proto.Rank {
 
     /// <summary>Field number for the "length" field.</summary>
     public const int LengthFieldNumber = 4;
-    private long length_;
+    private int length_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Length {
+    public int Length {
       get { return length_; }
       set {
         length_ = value;
@@ -2546,7 +2546,7 @@ namespace Mobius.Proto.Rank {
       if (EventId.Length != 0) hash ^= EventId.GetHashCode();
       if (StartDate != 0L) hash ^= StartDate.GetHashCode();
       if (Code.Length != 0) hash ^= Code.GetHashCode();
-      if (Length != 0L) hash ^= Length.GetHashCode();
+      if (Length != 0) hash ^= Length.GetHashCode();
       if (Repeats != false) hash ^= Repeats.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2576,9 +2576,9 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(26);
         output.WriteString(Code);
       }
-      if (Length != 0L) {
+      if (Length != 0) {
         output.WriteRawTag(32);
-        output.WriteInt64(Length);
+        output.WriteInt32(Length);
       }
       if (Repeats != false) {
         output.WriteRawTag(40);
@@ -2605,9 +2605,9 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(26);
         output.WriteString(Code);
       }
-      if (Length != 0L) {
+      if (Length != 0) {
         output.WriteRawTag(32);
-        output.WriteInt64(Length);
+        output.WriteInt32(Length);
       }
       if (Repeats != false) {
         output.WriteRawTag(40);
@@ -2631,8 +2631,8 @@ namespace Mobius.Proto.Rank {
       if (Code.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Code);
       }
-      if (Length != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Length);
+      if (Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Length);
       }
       if (Repeats != false) {
         size += 1 + 1;
@@ -2657,7 +2657,7 @@ namespace Mobius.Proto.Rank {
       if (other.Code.Length != 0) {
         Code = other.Code;
       }
-      if (other.Length != 0L) {
+      if (other.Length != 0) {
         Length = other.Length;
       }
       if (other.Repeats != false) {
@@ -2690,7 +2690,7 @@ namespace Mobius.Proto.Rank {
             break;
           }
           case 32: {
-            Length = input.ReadInt64();
+            Length = input.ReadInt32();
             break;
           }
           case 40: {
@@ -2724,7 +2724,7 @@ namespace Mobius.Proto.Rank {
             break;
           }
           case 32: {
-            Length = input.ReadInt64();
+            Length = input.ReadInt32();
             break;
           }
           case 40: {

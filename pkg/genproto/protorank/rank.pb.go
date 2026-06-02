@@ -617,7 +617,7 @@ type ProtoRankingEventSchedule struct {
 	EventId       string                 `protobuf:"bytes,1,opt,name=event_id,json=eventId,proto3" json:"event_id,omitempty"`
 	StartDate     int64                  `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
 	Code          string                 `protobuf:"bytes,3,opt,name=code,proto3" json:"code,omitempty"`
-	Length        int64                  `protobuf:"varint,4,opt,name=length,proto3" json:"length,omitempty"`
+	Length        int32                  `protobuf:"varint,4,opt,name=length,proto3" json:"length,omitempty"`
 	Repeats       bool                   `protobuf:"varint,5,opt,name=repeats,proto3" json:"repeats,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -674,7 +674,7 @@ func (x *ProtoRankingEventSchedule) GetCode() string {
 	return ""
 }
 
-func (x *ProtoRankingEventSchedule) GetLength() int64 {
+func (x *ProtoRankingEventSchedule) GetLength() int32 {
 	if x != nil {
 		return x.Length
 	}
@@ -754,7 +754,7 @@ const file_protorank_rank_proto_rawDesc = "" +
 	"\n" +
 	"start_date\x18\x02 \x01(\x03R\tstartDate\x12\x12\n" +
 	"\x04code\x18\x03 \x01(\tR\x04code\x12\x16\n" +
-	"\x06length\x18\x04 \x01(\x03R\x06length\x12\x18\n" +
+	"\x06length\x18\x04 \x01(\x05R\x06length\x12\x18\n" +
 	"\arepeats\x18\x05 \x01(\bR\arepeatsBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
 
 var (
