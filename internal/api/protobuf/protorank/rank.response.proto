@@ -31,3 +31,16 @@ message RefreshSpecialRankRangeResponse {
 message GetTopRankResponse {
   repeated ProtoPlayerRankSetDetails rankings = 1;
 }
+
+message FetchPlayerRankingInfoResponse {
+  repeated ProtoRankingInfo active = 1;
+  repeated ProtoRankingEventClaim claims = 2;
+  repeated ProtoRankingEventSchedule schedules = 3;
+}
+
+message GetPlayerEventRewardsResponse {
+  string event_name = 1;
+  repeated ProtoRankingEventReward rewards = 2;
+  repeated string item_drop_tables = 3;
+  repeated string card_drop_tables = 4;
+}

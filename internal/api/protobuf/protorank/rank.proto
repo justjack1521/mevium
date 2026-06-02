@@ -66,3 +66,11 @@ message ProtoRankingEventStatPopularRegion {
 message ProtoRankingEventStatPopularAbilityCard {
   string ability_card_id = 1;
 }
+
+message ProtoRankingEventSchedule {
+  string event_id = 1;
+  int64 start_date = 2;
+  string code = 3;
+  int64 length = 4;
+  bool repeats = 5;
+}

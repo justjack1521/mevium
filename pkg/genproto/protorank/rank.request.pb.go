@@ -308,58 +308,6 @@ func (x *FetchPlayerRankingInfoRequest) GetPlayerId() string {
 	return ""
 }
 
-type FetchPlayerRankingInfoResponse struct {
-	state         protoimpl.MessageState    `protogen:"open.v1"`
-	Active        []*ProtoRankingInfo       `protobuf:"bytes,1,rep,name=active,proto3" json:"active,omitempty"`
-	Claims        []*ProtoRankingEventClaim `protobuf:"bytes,2,rep,name=claims,proto3" json:"claims,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *FetchPlayerRankingInfoResponse) Reset() {
-	*x = FetchPlayerRankingInfoResponse{}
-	mi := &file_protorank_rank_request_proto_msgTypes[4]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *FetchPlayerRankingInfoResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*FetchPlayerRankingInfoResponse) ProtoMessage() {}
-
-func (x *FetchPlayerRankingInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_request_proto_msgTypes[4]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use FetchPlayerRankingInfoResponse.ProtoReflect.Descriptor instead.
-func (*FetchPlayerRankingInfoResponse) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_request_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *FetchPlayerRankingInfoResponse) GetActive() []*ProtoRankingInfo {
-	if x != nil {
-		return x.Active
-	}
-	return nil
-}
-
-func (x *FetchPlayerRankingInfoResponse) GetClaims() []*ProtoRankingEventClaim {
-	if x != nil {
-		return x.Claims
-	}
-	return nil
-}
-
 type GetPlayerEventRewardsRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
@@ -370,7 +318,7 @@ type GetPlayerEventRewardsRequest struct {
 
 func (x *GetPlayerEventRewardsRequest) Reset() {
 	*x = GetPlayerEventRewardsRequest{}
-	mi := &file_protorank_rank_request_proto_msgTypes[5]
+	mi := &file_protorank_rank_request_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -382,7 +330,7 @@ func (x *GetPlayerEventRewardsRequest) String() string {
 func (*GetPlayerEventRewardsRequest) ProtoMessage() {}
 
 func (x *GetPlayerEventRewardsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_request_proto_msgTypes[5]
+	mi := &file_protorank_rank_request_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -395,7 +343,7 @@ func (x *GetPlayerEventRewardsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetPlayerEventRewardsRequest.ProtoReflect.Descriptor instead.
 func (*GetPlayerEventRewardsRequest) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_request_proto_rawDescGZIP(), []int{5}
+	return file_protorank_rank_request_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *GetPlayerEventRewardsRequest) GetPlayerId() string {
@@ -412,74 +360,6 @@ func (x *GetPlayerEventRewardsRequest) GetCode() string {
 	return ""
 }
 
-type GetPlayerEventRewardsResponse struct {
-	state          protoimpl.MessageState     `protogen:"open.v1"`
-	EventName      string                     `protobuf:"bytes,1,opt,name=event_name,json=eventName,proto3" json:"event_name,omitempty"`
-	Rewards        []*ProtoRankingEventReward `protobuf:"bytes,2,rep,name=rewards,proto3" json:"rewards,omitempty"`
-	ItemDropTables []string                   `protobuf:"bytes,3,rep,name=item_drop_tables,json=itemDropTables,proto3" json:"item_drop_tables,omitempty"`
-	CardDropTables []string                   `protobuf:"bytes,4,rep,name=card_drop_tables,json=cardDropTables,proto3" json:"card_drop_tables,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
-}
-
-func (x *GetPlayerEventRewardsResponse) Reset() {
-	*x = GetPlayerEventRewardsResponse{}
-	mi := &file_protorank_rank_request_proto_msgTypes[6]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *GetPlayerEventRewardsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetPlayerEventRewardsResponse) ProtoMessage() {}
-
-func (x *GetPlayerEventRewardsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_request_proto_msgTypes[6]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetPlayerEventRewardsResponse.ProtoReflect.Descriptor instead.
-func (*GetPlayerEventRewardsResponse) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_request_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *GetPlayerEventRewardsResponse) GetEventName() string {
-	if x != nil {
-		return x.EventName
-	}
-	return ""
-}
-
-func (x *GetPlayerEventRewardsResponse) GetRewards() []*ProtoRankingEventReward {
-	if x != nil {
-		return x.Rewards
-	}
-	return nil
-}
-
-func (x *GetPlayerEventRewardsResponse) GetItemDropTables() []string {
-	if x != nil {
-		return x.ItemDropTables
-	}
-	return nil
-}
-
-func (x *GetPlayerEventRewardsResponse) GetCardDropTables() []string {
-	if x != nil {
-		return x.CardDropTables
-	}
-	return nil
-}
-
 type GetTopRankRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	EventName     string                 `protobuf:"bytes,1,opt,name=event_name,json=eventName,proto3" json:"event_name,omitempty"`
@@ -489,7 +369,7 @@ type GetTopRankRequest struct {
 
 func (x *GetTopRankRequest) Reset() {
 	*x = GetTopRankRequest{}
-	mi := &file_protorank_rank_request_proto_msgTypes[7]
+	mi := &file_protorank_rank_request_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -501,7 +381,7 @@ func (x *GetTopRankRequest) String() string {
 func (*GetTopRankRequest) ProtoMessage() {}
 
 func (x *GetTopRankRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_request_proto_msgTypes[7]
+	mi := &file_protorank_rank_request_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -514,7 +394,7 @@ func (x *GetTopRankRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTopRankRequest.ProtoReflect.Descriptor instead.
 func (*GetTopRankRequest) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_request_proto_rawDescGZIP(), []int{7}
+	return file_protorank_rank_request_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *GetTopRankRequest) GetEventName() string {
@@ -528,7 +408,7 @@ var File_protorank_rank_request_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_request_proto_rawDesc = "" +
 	"\n" +
-	"\x1cprotorank/rank.request.proto\x12\x04rank\x1a\x14protorank/rank.proto\x1a\x1aprotoidentity/player.proto\"\x9d\x02\n" +
+	"\x1cprotorank/rank.request.proto\x12\x04rank\x1a\x1aprotoidentity/player.proto\"\x9d\x02\n" +
 	"\x12SubmitScoreRequest\x12\x1f\n" +
 	"\vplayer_name\x18\x02 \x01(\tR\n" +
 	"playerName\x12!\n" +
@@ -546,19 +426,10 @@ const file_protorank_rank_request_proto_rawDesc = "" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1b\n" +
 	"\tregion_id\x18\x02 \x01(\tR\bregionId\"<\n" +
 	"\x1dFetchPlayerRankingInfoRequest\x12\x1b\n" +
-	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"\x86\x01\n" +
-	"\x1eFetchPlayerRankingInfoResponse\x12.\n" +
-	"\x06active\x18\x01 \x03(\v2\x16.rank.ProtoRankingInfoR\x06active\x124\n" +
-	"\x06claims\x18\x02 \x03(\v2\x1c.rank.ProtoRankingEventClaimR\x06claims\"O\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"O\n" +
 	"\x1cGetPlayerEventRewardsRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x12\n" +
-	"\x04code\x18\x02 \x01(\tR\x04code\"\xcb\x01\n" +
-	"\x1dGetPlayerEventRewardsResponse\x12\x1d\n" +
-	"\n" +
-	"event_name\x18\x01 \x01(\tR\teventName\x127\n" +
-	"\arewards\x18\x02 \x03(\v2\x1d.rank.ProtoRankingEventRewardR\arewards\x12(\n" +
-	"\x10item_drop_tables\x18\x03 \x03(\tR\x0eitemDropTables\x12(\n" +
-	"\x10card_drop_tables\x18\x04 \x03(\tR\x0ecardDropTables\"2\n" +
+	"\x04code\x18\x02 \x01(\tR\x04code\"2\n" +
 	"\x11GetTopRankRequest\x12\x1d\n" +
 	"\n" +
 	"event_name\x18\x01 \x01(\tR\teventName*4\n" +
@@ -579,34 +450,26 @@ func file_protorank_rank_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protorank_rank_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protorank_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_protorank_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protorank_rank_request_proto_goTypes = []any{
 	(RankRequestType)(0),                      // 0: rank.RankRequestType
 	(*SubmitScoreRequest)(nil),                // 1: rank.SubmitScoreRequest
 	(*RefreshWeeklyRankRangeRequest)(nil),     // 2: rank.RefreshWeeklyRankRangeRequest
 	(*RefreshSpecialRankRangeRequest)(nil),    // 3: rank.RefreshSpecialRankRangeRequest
 	(*FetchPlayerRankingInfoRequest)(nil),     // 4: rank.FetchPlayerRankingInfoRequest
-	(*FetchPlayerRankingInfoResponse)(nil),    // 5: rank.FetchPlayerRankingInfoResponse
-	(*GetPlayerEventRewardsRequest)(nil),      // 6: rank.GetPlayerEventRewardsRequest
-	(*GetPlayerEventRewardsResponse)(nil),     // 7: rank.GetPlayerEventRewardsResponse
-	(*GetTopRankRequest)(nil),                 // 8: rank.GetTopRankRequest
-	(*protoidentity.ProtoPlayerIdentity)(nil), // 9: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),  // 10: identity.ProtoPlayerLoadout
-	(*ProtoRankingInfo)(nil),                  // 11: rank.ProtoRankingInfo
-	(*ProtoRankingEventClaim)(nil),            // 12: rank.ProtoRankingEventClaim
-	(*ProtoRankingEventReward)(nil),           // 13: rank.ProtoRankingEventReward
+	(*GetPlayerEventRewardsRequest)(nil),      // 5: rank.GetPlayerEventRewardsRequest
+	(*GetTopRankRequest)(nil),                 // 6: rank.GetTopRankRequest
+	(*protoidentity.ProtoPlayerIdentity)(nil), // 7: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),  // 8: identity.ProtoPlayerLoadout
 }
 var file_protorank_rank_request_proto_depIdxs = []int32{
-	9,  // 0: rank.SubmitScoreRequest.identity:type_name -> identity.ProtoPlayerIdentity
-	10, // 1: rank.SubmitScoreRequest.loadout:type_name -> identity.ProtoPlayerLoadout
-	11, // 2: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
-	12, // 3: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
-	13, // 4: rank.GetPlayerEventRewardsResponse.rewards:type_name -> rank.ProtoRankingEventReward
-	5,  // [5:5] is the sub-list for method output_type
-	5,  // [5:5] is the sub-list for method input_type
-	5,  // [5:5] is the sub-list for extension type_name
-	5,  // [5:5] is the sub-list for extension extendee
-	0,  // [0:5] is the sub-list for field type_name
+	7, // 0: rank.SubmitScoreRequest.identity:type_name -> identity.ProtoPlayerIdentity
+	8, // 1: rank.SubmitScoreRequest.loadout:type_name -> identity.ProtoPlayerLoadout
+	2, // [2:2] is the sub-list for method output_type
+	2, // [2:2] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_protorank_rank_request_proto_init() }
@@ -614,14 +477,13 @@ func file_protorank_rank_request_proto_init() {
 	if File_protorank_rank_request_proto != nil {
 		return
 	}
-	file_protorank_rank_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_request_proto_rawDesc), len(file_protorank_rank_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   8,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

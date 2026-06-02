@@ -24,39 +24,30 @@ namespace Mobius.Proto.Rank {
     static RankRequestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chxwcm90b3JhbmsvcmFuay5yZXF1ZXN0LnByb3RvEgRyYW5rGhRwcm90b3Jh",
-            "bmsvcmFuay5wcm90bxoacHJvdG9pZGVudGl0eS9wbGF5ZXIucHJvdG8i1QEK",
-            "ElN1Ym1pdFNjb3JlUmVxdWVzdBITCgtwbGF5ZXJfbmFtZRgCIAEoCRIUCgxw",
-            "bGF5ZXJfbGV2ZWwYAyABKAUSDQoFc2NvcmUYBCABKAQSEQoJcmVnaW9uX2lk",
-            "GAUgASgJEhIKCm5vZGVfaW5kZXgYBiABKAUSLwoIaWRlbnRpdHkYByABKAsy",
-            "HS5pZGVudGl0eS5Qcm90b1BsYXllcklkZW50aXR5Ei0KB2xvYWRvdXQYCCAB",
-            "KAsyHC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRvdXQiRQodUmVmcmVzaFdl",
-            "ZWtseVJhbmtSYW5nZVJlcXVlc3QSEQoJcGxheWVyX2lkGAEgASgJEhEKCXJl",
-            "Z2lvbl9pZBgCIAEoCSJGCh5SZWZyZXNoU3BlY2lhbFJhbmtSYW5nZVJlcXVl",
-            "c3QSEQoJcGxheWVyX2lkGAEgASgJEhEKCXJlZ2lvbl9pZBgCIAEoCSIyCh1G",
-            "ZXRjaFBsYXllclJhbmtpbmdJbmZvUmVxdWVzdBIRCglwbGF5ZXJfaWQYASAB",
-            "KAkidgoeRmV0Y2hQbGF5ZXJSYW5raW5nSW5mb1Jlc3BvbnNlEiYKBmFjdGl2",
-            "ZRgBIAMoCzIWLnJhbmsuUHJvdG9SYW5raW5nSW5mbxIsCgZjbGFpbXMYAiAD",
-            "KAsyHC5yYW5rLlByb3RvUmFua2luZ0V2ZW50Q2xhaW0iPwocR2V0UGxheWVy",
-            "RXZlbnRSZXdhcmRzUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSDAoEY29k",
-            "ZRgCIAEoCSKXAQodR2V0UGxheWVyRXZlbnRSZXdhcmRzUmVzcG9uc2USEgoK",
-            "ZXZlbnRfbmFtZRgBIAEoCRIuCgdyZXdhcmRzGAIgAygLMh0ucmFuay5Qcm90",
-            "b1JhbmtpbmdFdmVudFJld2FyZBIYChBpdGVtX2Ryb3BfdGFibGVzGAMgAygJ",
-            "EhgKEGNhcmRfZHJvcF90YWJsZXMYBCADKAkiJwoRR2V0VG9wUmFua1JlcXVl",
-            "c3QSEgoKZXZlbnRfbmFtZRgBIAEoCSo0Cg9SYW5rUmVxdWVzdFR5cGUSCAoE",
-            "Tk9ORRAAEhcKEkdFVF9SQU5LSU5HX0VWRU5UUxCoFEJLWjVnaXRodWIuY29t",
-            "L2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvcmFua6oC",
-            "EU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
+            "Chxwcm90b3JhbmsvcmFuay5yZXF1ZXN0LnByb3RvEgRyYW5rGhpwcm90b2lk",
+            "ZW50aXR5L3BsYXllci5wcm90byLVAQoSU3VibWl0U2NvcmVSZXF1ZXN0EhMK",
+            "C3BsYXllcl9uYW1lGAIgASgJEhQKDHBsYXllcl9sZXZlbBgDIAEoBRINCgVz",
+            "Y29yZRgEIAEoBBIRCglyZWdpb25faWQYBSABKAkSEgoKbm9kZV9pbmRleBgG",
+            "IAEoBRIvCghpZGVudGl0eRgHIAEoCzIdLmlkZW50aXR5LlByb3RvUGxheWVy",
+            "SWRlbnRpdHkSLQoHbG9hZG91dBgIIAEoCzIcLmlkZW50aXR5LlByb3RvUGxh",
+            "eWVyTG9hZG91dCJFCh1SZWZyZXNoV2Vla2x5UmFua1JhbmdlUmVxdWVzdBIR",
+            "CglwbGF5ZXJfaWQYASABKAkSEQoJcmVnaW9uX2lkGAIgASgJIkYKHlJlZnJl",
+            "c2hTcGVjaWFsUmFua1JhbmdlUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkS",
+            "EQoJcmVnaW9uX2lkGAIgASgJIjIKHUZldGNoUGxheWVyUmFua2luZ0luZm9S",
+            "ZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCSI/ChxHZXRQbGF5ZXJFdmVudFJl",
+            "d2FyZHNSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIMCgRjb2RlGAIgASgJ",
+            "IicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2ZW50X25hbWUYASABKAkqNAoP",
+            "UmFua1JlcXVlc3RUeXBlEggKBE5PTkUQABIXChJHRVRfUkFOS0lOR19FVkVO",
+            "VFMQqBRCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
+            "ZW5wcm90by9wcm90b3JhbmuqAhFNb2JpdXMuUHJvdG8uUmFua2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.SubmitScoreRequest), global::Mobius.Proto.Rank.SubmitScoreRequest.Parser, new[]{ "PlayerName", "PlayerLevel", "Score", "RegionId", "NodeIndex", "Identity", "Loadout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshWeeklyRankRangeRequest), global::Mobius.Proto.Rank.RefreshWeeklyRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest), global::Mobius.Proto.Rank.RefreshSpecialRankRangeRequest.Parser, new[]{ "PlayerId", "RegionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoResponse), global::Mobius.Proto.Rank.FetchPlayerRankingInfoResponse.Parser, new[]{ "Active", "Claims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest), global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest.Parser, new[]{ "PlayerId", "Code" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse), global::Mobius.Proto.Rank.GetPlayerEventRewardsResponse.Parser, new[]{ "EventName", "Rewards", "ItemDropTables", "CardDropTables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null)
           }));
     }
@@ -1066,192 +1057,6 @@ namespace Mobius.Proto.Rank {
 
   }
 
-  public sealed partial class FetchPlayerRankingInfoResponse : pb::IMessage<FetchPlayerRankingInfoResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<FetchPlayerRankingInfoResponse> _parser = new pb::MessageParser<FetchPlayerRankingInfoResponse>(() => new FetchPlayerRankingInfoResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<FetchPlayerRankingInfoResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FetchPlayerRankingInfoResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FetchPlayerRankingInfoResponse(FetchPlayerRankingInfoResponse other) : this() {
-      active_ = other.active_.Clone();
-      claims_ = other.claims_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public FetchPlayerRankingInfoResponse Clone() {
-      return new FetchPlayerRankingInfoResponse(this);
-    }
-
-    /// <summary>Field number for the "active" field.</summary>
-    public const int ActiveFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Rank.ProtoRankingInfo> _repeated_active_codec
-        = pb::FieldCodec.ForMessage(10, global::Mobius.Proto.Rank.ProtoRankingInfo.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingInfo> active_ = new pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingInfo> Active {
-      get { return active_; }
-    }
-
-    /// <summary>Field number for the "claims" field.</summary>
-    public const int ClaimsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Rank.ProtoRankingEventClaim> _repeated_claims_codec
-        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Rank.ProtoRankingEventClaim.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventClaim> claims_ = new pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventClaim>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventClaim> Claims {
-      get { return claims_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as FetchPlayerRankingInfoResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(FetchPlayerRankingInfoResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!active_.Equals(other.active_)) return false;
-      if(!claims_.Equals(other.claims_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= active_.GetHashCode();
-      hash ^= claims_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      active_.WriteTo(output, _repeated_active_codec);
-      claims_.WriteTo(output, _repeated_claims_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      active_.WriteTo(ref output, _repeated_active_codec);
-      claims_.WriteTo(ref output, _repeated_claims_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += active_.CalculateSize(_repeated_active_codec);
-      size += claims_.CalculateSize(_repeated_claims_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(FetchPlayerRankingInfoResponse other) {
-      if (other == null) {
-        return;
-      }
-      active_.Add(other.active_);
-      claims_.Add(other.claims_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            active_.AddEntriesFrom(input, _repeated_active_codec);
-            break;
-          }
-          case 18: {
-            claims_.AddEntriesFrom(input, _repeated_claims_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            active_.AddEntriesFrom(ref input, _repeated_active_codec);
-            break;
-          }
-          case 18: {
-            claims_.AddEntriesFrom(ref input, _repeated_claims_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class GetPlayerEventRewardsRequest : pb::IMessage<GetPlayerEventRewardsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1264,7 +1069,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1460,253 +1265,6 @@ namespace Mobius.Proto.Rank {
 
   }
 
-  public sealed partial class GetPlayerEventRewardsResponse : pb::IMessage<GetPlayerEventRewardsResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetPlayerEventRewardsResponse> _parser = new pb::MessageParser<GetPlayerEventRewardsResponse>(() => new GetPlayerEventRewardsResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetPlayerEventRewardsResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[6]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPlayerEventRewardsResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPlayerEventRewardsResponse(GetPlayerEventRewardsResponse other) : this() {
-      eventName_ = other.eventName_;
-      rewards_ = other.rewards_.Clone();
-      itemDropTables_ = other.itemDropTables_.Clone();
-      cardDropTables_ = other.cardDropTables_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetPlayerEventRewardsResponse Clone() {
-      return new GetPlayerEventRewardsResponse(this);
-    }
-
-    /// <summary>Field number for the "event_name" field.</summary>
-    public const int EventNameFieldNumber = 1;
-    private string eventName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EventName {
-      get { return eventName_; }
-      set {
-        eventName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "rewards" field.</summary>
-    public const int RewardsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Mobius.Proto.Rank.ProtoRankingEventReward> _repeated_rewards_codec
-        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Rank.ProtoRankingEventReward.Parser);
-    private readonly pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventReward> rewards_ = new pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventReward>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventReward> Rewards {
-      get { return rewards_; }
-    }
-
-    /// <summary>Field number for the "item_drop_tables" field.</summary>
-    public const int ItemDropTablesFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_itemDropTables_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> itemDropTables_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> ItemDropTables {
-      get { return itemDropTables_; }
-    }
-
-    /// <summary>Field number for the "card_drop_tables" field.</summary>
-    public const int CardDropTablesFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_cardDropTables_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> cardDropTables_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> CardDropTables {
-      get { return cardDropTables_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GetPlayerEventRewardsResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetPlayerEventRewardsResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (EventName != other.EventName) return false;
-      if(!rewards_.Equals(other.rewards_)) return false;
-      if(!itemDropTables_.Equals(other.itemDropTables_)) return false;
-      if(!cardDropTables_.Equals(other.cardDropTables_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (EventName.Length != 0) hash ^= EventName.GetHashCode();
-      hash ^= rewards_.GetHashCode();
-      hash ^= itemDropTables_.GetHashCode();
-      hash ^= cardDropTables_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (EventName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(EventName);
-      }
-      rewards_.WriteTo(output, _repeated_rewards_codec);
-      itemDropTables_.WriteTo(output, _repeated_itemDropTables_codec);
-      cardDropTables_.WriteTo(output, _repeated_cardDropTables_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EventName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(EventName);
-      }
-      rewards_.WriteTo(ref output, _repeated_rewards_codec);
-      itemDropTables_.WriteTo(ref output, _repeated_itemDropTables_codec);
-      cardDropTables_.WriteTo(ref output, _repeated_cardDropTables_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (EventName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
-      }
-      size += rewards_.CalculateSize(_repeated_rewards_codec);
-      size += itemDropTables_.CalculateSize(_repeated_itemDropTables_codec);
-      size += cardDropTables_.CalculateSize(_repeated_cardDropTables_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetPlayerEventRewardsResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.EventName.Length != 0) {
-        EventName = other.EventName;
-      }
-      rewards_.Add(other.rewards_);
-      itemDropTables_.Add(other.itemDropTables_);
-      cardDropTables_.Add(other.cardDropTables_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            EventName = input.ReadString();
-            break;
-          }
-          case 18: {
-            rewards_.AddEntriesFrom(input, _repeated_rewards_codec);
-            break;
-          }
-          case 26: {
-            itemDropTables_.AddEntriesFrom(input, _repeated_itemDropTables_codec);
-            break;
-          }
-          case 34: {
-            cardDropTables_.AddEntriesFrom(input, _repeated_cardDropTables_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            EventName = input.ReadString();
-            break;
-          }
-          case 18: {
-            rewards_.AddEntriesFrom(ref input, _repeated_rewards_codec);
-            break;
-          }
-          case 26: {
-            itemDropTables_.AddEntriesFrom(ref input, _repeated_itemDropTables_codec);
-            break;
-          }
-          case 34: {
-            cardDropTables_.AddEntriesFrom(ref input, _repeated_cardDropTables_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class GetTopRankRequest : pb::IMessage<GetTopRankRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1719,7 +1277,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

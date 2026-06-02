@@ -57,9 +57,11 @@ namespace Mobius.Proto.Rank {
             "cm90b1JhbmtpbmdFdmVudFN0YXRQb3B1bGFyUmVnaW9uEhUKDXJlZ2lvbl9t",
             "YXBfaWQYASABKAkSEgoKbm9kZV9pbmRleBgCIAEoBSJCCidQcm90b1Jhbmtp",
             "bmdFdmVudFN0YXRQb3B1bGFyQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9jYXJk",
-            "X2lkGAEgASgJQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
-            "a2cvZ2VucHJvdG8vcHJvdG9yYW5rqgIRTW9iaXVzLlByb3RvLlJhbmtiBnBy",
-            "b3RvMw=="));
+            "X2lkGAEgASgJInAKGVByb3RvUmFua2luZ0V2ZW50U2NoZWR1bGUSEAoIZXZl",
+            "bnRfaWQYASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIMCgRjb2RlGAMgASgJ",
+            "Eg4KBmxlbmd0aBgEIAEoAxIPCgdyZXBlYXRzGAUgASgIQktaNWdpdGh1Yi5j",
+            "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5r",
+            "qgIRTW9iaXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,7 +72,8 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStats), global::Mobius.Proto.Rank.ProtoRankingEventStats.Parser, new[]{ "TotalParticipants", "PopularRegion", "PopularJob", "PopularAbilityCard" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularJob), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularJob.Parser, new[]{ "JobCardId", "SubJobIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularRegion), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularRegion.Parser, new[]{ "RegionMapId", "NodeIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard.Parser, new[]{ "AbilityCardId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard.Parser, new[]{ "AbilityCardId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventSchedule), global::Mobius.Proto.Rank.ProtoRankingEventSchedule.Parser, new[]{ "EventId", "StartDate", "Code", "Length", "Repeats" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2410,6 +2413,322 @@ namespace Mobius.Proto.Rank {
             break;
           case 10: {
             AbilityCardId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoRankingEventSchedule : pb::IMessage<ProtoRankingEventSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoRankingEventSchedule> _parser = new pb::MessageParser<ProtoRankingEventSchedule>(() => new ProtoRankingEventSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoRankingEventSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingEventSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingEventSchedule(ProtoRankingEventSchedule other) : this() {
+      eventId_ = other.eventId_;
+      startDate_ = other.startDate_;
+      code_ = other.code_;
+      length_ = other.length_;
+      repeats_ = other.repeats_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingEventSchedule Clone() {
+      return new ProtoRankingEventSchedule(this);
+    }
+
+    /// <summary>Field number for the "event_id" field.</summary>
+    public const int EventIdFieldNumber = 1;
+    private string eventId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string EventId {
+      get { return eventId_; }
+      set {
+        eventId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_date" field.</summary>
+    public const int StartDateFieldNumber = 2;
+    private long startDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartDate {
+      get { return startDate_; }
+      set {
+        startDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "code" field.</summary>
+    public const int CodeFieldNumber = 3;
+    private string code_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Code {
+      get { return code_; }
+      set {
+        code_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "length" field.</summary>
+    public const int LengthFieldNumber = 4;
+    private long length_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Length {
+      get { return length_; }
+      set {
+        length_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "repeats" field.</summary>
+    public const int RepeatsFieldNumber = 5;
+    private bool repeats_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Repeats {
+      get { return repeats_; }
+      set {
+        repeats_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoRankingEventSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoRankingEventSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EventId != other.EventId) return false;
+      if (StartDate != other.StartDate) return false;
+      if (Code != other.Code) return false;
+      if (Length != other.Length) return false;
+      if (Repeats != other.Repeats) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EventId.Length != 0) hash ^= EventId.GetHashCode();
+      if (StartDate != 0L) hash ^= StartDate.GetHashCode();
+      if (Code.Length != 0) hash ^= Code.GetHashCode();
+      if (Length != 0L) hash ^= Length.GetHashCode();
+      if (Repeats != false) hash ^= Repeats.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EventId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventId);
+      }
+      if (StartDate != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartDate);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Code);
+      }
+      if (Length != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Length);
+      }
+      if (Repeats != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Repeats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventId);
+      }
+      if (StartDate != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartDate);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Code);
+      }
+      if (Length != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Length);
+      }
+      if (Repeats != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Repeats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EventId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventId);
+      }
+      if (StartDate != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartDate);
+      }
+      if (Code.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Code);
+      }
+      if (Length != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Length);
+      }
+      if (Repeats != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoRankingEventSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EventId.Length != 0) {
+        EventId = other.EventId;
+      }
+      if (other.StartDate != 0L) {
+        StartDate = other.StartDate;
+      }
+      if (other.Code.Length != 0) {
+        Code = other.Code;
+      }
+      if (other.Length != 0L) {
+        Length = other.Length;
+      }
+      if (other.Repeats != false) {
+        Repeats = other.Repeats;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EventId = input.ReadString();
+            break;
+          }
+          case 16: {
+            StartDate = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Code = input.ReadString();
+            break;
+          }
+          case 32: {
+            Length = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            Repeats = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EventId = input.ReadString();
+            break;
+          }
+          case 16: {
+            StartDate = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Code = input.ReadString();
+            break;
+          }
+          case 32: {
+            Length = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            Repeats = input.ReadBool();
             break;
           }
         }

@@ -612,6 +612,82 @@ func (x *ProtoRankingEventStatPopularAbilityCard) GetAbilityCardId() string {
 	return ""
 }
 
+type ProtoRankingEventSchedule struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	EventId       string                 `protobuf:"bytes,1,opt,name=event_id,json=eventId,proto3" json:"event_id,omitempty"`
+	StartDate     int64                  `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
+	Code          string                 `protobuf:"bytes,3,opt,name=code,proto3" json:"code,omitempty"`
+	Length        int64                  `protobuf:"varint,4,opt,name=length,proto3" json:"length,omitempty"`
+	Repeats       bool                   `protobuf:"varint,5,opt,name=repeats,proto3" json:"repeats,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoRankingEventSchedule) Reset() {
+	*x = ProtoRankingEventSchedule{}
+	mi := &file_protorank_rank_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoRankingEventSchedule) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoRankingEventSchedule) ProtoMessage() {}
+
+func (x *ProtoRankingEventSchedule) ProtoReflect() protoreflect.Message {
+	mi := &file_protorank_rank_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoRankingEventSchedule.ProtoReflect.Descriptor instead.
+func (*ProtoRankingEventSchedule) Descriptor() ([]byte, []int) {
+	return file_protorank_rank_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *ProtoRankingEventSchedule) GetEventId() string {
+	if x != nil {
+		return x.EventId
+	}
+	return ""
+}
+
+func (x *ProtoRankingEventSchedule) GetStartDate() int64 {
+	if x != nil {
+		return x.StartDate
+	}
+	return 0
+}
+
+func (x *ProtoRankingEventSchedule) GetCode() string {
+	if x != nil {
+		return x.Code
+	}
+	return ""
+}
+
+func (x *ProtoRankingEventSchedule) GetLength() int64 {
+	if x != nil {
+		return x.Length
+	}
+	return 0
+}
+
+func (x *ProtoRankingEventSchedule) GetRepeats() bool {
+	if x != nil {
+		return x.Repeats
+	}
+	return false
+}
+
 var File_protorank_rank_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_proto_rawDesc = "" +
@@ -672,7 +748,14 @@ const file_protorank_rank_proto_rawDesc = "" +
 	"\n" +
 	"node_index\x18\x02 \x01(\x05R\tnodeIndex\"Q\n" +
 	"'ProtoRankingEventStatPopularAbilityCard\x12&\n" +
-	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardIdBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
+	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardId\"\x9b\x01\n" +
+	"\x19ProtoRankingEventSchedule\x12\x19\n" +
+	"\bevent_id\x18\x01 \x01(\tR\aeventId\x12\x1d\n" +
+	"\n" +
+	"start_date\x18\x02 \x01(\x03R\tstartDate\x12\x12\n" +
+	"\x04code\x18\x03 \x01(\tR\x04code\x12\x16\n" +
+	"\x06length\x18\x04 \x01(\x03R\x06length\x12\x18\n" +
+	"\arepeats\x18\x05 \x01(\bR\arepeatsBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
 
 var (
 	file_protorank_rank_proto_rawDescOnce sync.Once
@@ -686,26 +769,27 @@ func file_protorank_rank_proto_rawDescGZIP() []byte {
 	return file_protorank_rank_proto_rawDescData
 }
 
-var file_protorank_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
+var file_protorank_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_protorank_rank_proto_goTypes = []any{
-	(*ProtoRankingInfo)(nil),                        // 0: rank.ProtoRankingInfo
-	(*ProtoPlayerRankSetDetails)(nil),               // 1: rank.ProtoPlayerRankSetDetails
-	(*ProtoRankingEventClaim)(nil),                  // 2: rank.ProtoRankingEventClaim
-	(*ProtoRankingEventReward)(nil),                 // 3: rank.ProtoRankingEventReward
-	(*ProtoRankingEventStats)(nil),                  // 4: rank.ProtoRankingEventStats
-	(*ProtoRankingEventStatPopularJob)(nil),         // 5: rank.ProtoRankingEventStatPopularJob
-	(*ProtoRankingEventStatPopularRegion)(nil),      // 6: rank.ProtoRankingEventStatPopularRegion
-	(*ProtoRankingEventStatPopularAbilityCard)(nil), // 7: rank.ProtoRankingEventStatPopularAbilityCard
-	nil, // 8: rank.ProtoRankingInfo.RankRangeScoresEntry
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 9: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 10: identity.ProtoPlayerLoadoutIdentity
+	(*ProtoRankingInfo)(nil),                         // 0: rank.ProtoRankingInfo
+	(*ProtoPlayerRankSetDetails)(nil),                // 1: rank.ProtoPlayerRankSetDetails
+	(*ProtoRankingEventClaim)(nil),                   // 2: rank.ProtoRankingEventClaim
+	(*ProtoRankingEventReward)(nil),                  // 3: rank.ProtoRankingEventReward
+	(*ProtoRankingEventStats)(nil),                   // 4: rank.ProtoRankingEventStats
+	(*ProtoRankingEventStatPopularJob)(nil),          // 5: rank.ProtoRankingEventStatPopularJob
+	(*ProtoRankingEventStatPopularRegion)(nil),       // 6: rank.ProtoRankingEventStatPopularRegion
+	(*ProtoRankingEventStatPopularAbilityCard)(nil),  // 7: rank.ProtoRankingEventStatPopularAbilityCard
+	(*ProtoRankingEventSchedule)(nil),                // 8: rank.ProtoRankingEventSchedule
+	nil,                                              // 9: rank.ProtoRankingInfo.RankRangeScoresEntry
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 10: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 11: identity.ProtoPlayerLoadoutIdentity
 }
 var file_protorank_rank_proto_depIdxs = []int32{
 	1,  // 0: rank.ProtoRankingInfo.player_rankings:type_name -> rank.ProtoPlayerRankSetDetails
 	1,  // 1: rank.ProtoRankingInfo.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	8,  // 2: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
-	9,  // 3: rank.ProtoPlayerRankSetDetails.identity:type_name -> identity.ProtoPlayerIdentity
-	10, // 4: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	9,  // 2: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
+	10, // 3: rank.ProtoPlayerRankSetDetails.identity:type_name -> identity.ProtoPlayerIdentity
+	11, // 4: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
 	1,  // 5: rank.ProtoRankingEventClaim.player_ranking:type_name -> rank.ProtoPlayerRankSetDetails
 	1,  // 6: rank.ProtoRankingEventClaim.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
 	4,  // 7: rank.ProtoRankingEventClaim.statistics:type_name -> rank.ProtoRankingEventStats
@@ -734,7 +818,7 @@ func file_protorank_rank_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_proto_rawDesc), len(file_protorank_rank_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   9,
+			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
