@@ -47,4 +47,5 @@ message GetTopRankRequest {
 
 message RankingRegionAvailableResponse {
   bool available = 1;
+  int64 start_date = 2;
 }

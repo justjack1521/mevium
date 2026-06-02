@@ -36,12 +36,12 @@ namespace Mobius.Proto.Rank {
             "EQoJcmVnaW9uX2lkGAIgASgJIjIKHUZldGNoUGxheWVyUmFua2luZ0luZm9S",
             "ZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCSI/ChxHZXRQbGF5ZXJFdmVudFJl",
             "d2FyZHNSZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCRIMCgRjb2RlGAIgASgJ",
-            "IicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2ZW50X25hbWUYASABKAkiMwoe",
+            "IicKEUdldFRvcFJhbmtSZXF1ZXN0EhIKCmV2ZW50X25hbWUYASABKAkiRwoe",
             "UmFua2luZ1JlZ2lvbkF2YWlsYWJsZVJlc3BvbnNlEhEKCWF2YWlsYWJsZRgB",
-            "IAEoCCo0Cg9SYW5rUmVxdWVzdFR5cGUSCAoETk9ORRAAEhcKEkdFVF9SQU5L",
-            "SU5HX0VWRU5UUxCoFEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZp",
-            "dW0vcGtnL2dlbnByb3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5r",
-            "YgZwcm90bzM="));
+            "IAEoCBISCgpzdGFydF9kYXRlGAIgASgDKjQKD1JhbmtSZXF1ZXN0VHlwZRII",
+            "CgROT05FEAASFwoSR0VUX1JBTktJTkdfRVZFTlRTEKgUQktaNWdpdGh1Yi5j",
+            "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5r",
+            "qgIRTW9iaXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -51,7 +51,7 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest), global::Mobius.Proto.Rank.FetchPlayerRankingInfoRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest), global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest.Parser, new[]{ "PlayerId", "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RankingRegionAvailableResponse), global::Mobius.Proto.Rank.RankingRegionAvailableResponse.Parser, new[]{ "Available" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RankingRegionAvailableResponse), global::Mobius.Proto.Rank.RankingRegionAvailableResponse.Parser, new[]{ "Available", "StartDate" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1470,6 +1470,7 @@ namespace Mobius.Proto.Rank {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RankingRegionAvailableResponse(RankingRegionAvailableResponse other) : this() {
       available_ = other.available_;
+      startDate_ = other.startDate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1489,6 +1490,17 @@ namespace Mobius.Proto.Rank {
       }
     }
 
+    /// <summary>Field number for the "start_date" field.</summary>
+    public const int StartDateFieldNumber = 2;
+    private long startDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartDate {
+      get { return startDate_; }
+      set {
+        startDate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RankingRegionAvailableResponse);
@@ -1503,6 +1515,7 @@ namespace Mobius.Proto.Rank {
         return true;
       }
       if (Available != other.Available) return false;
+      if (StartDate != other.StartDate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1510,6 +1523,7 @@ namespace Mobius.Proto.Rank {
     public override int GetHashCode() {
       int hash = 1;
       if (Available != false) hash ^= Available.GetHashCode();
+      if (StartDate != 0L) hash ^= StartDate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1530,6 +1544,10 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(8);
         output.WriteBool(Available);
       }
+      if (StartDate != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1543,6 +1561,10 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(8);
         output.WriteBool(Available);
       }
+      if (StartDate != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1554,6 +1576,9 @@ namespace Mobius.Proto.Rank {
       int size = 0;
       if (Available != false) {
         size += 1 + 1;
+      }
+      if (StartDate != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartDate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1568,6 +1593,9 @@ namespace Mobius.Proto.Rank {
       }
       if (other.Available != false) {
         Available = other.Available;
+      }
+      if (other.StartDate != 0L) {
+        StartDate = other.StartDate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1587,6 +1615,10 @@ namespace Mobius.Proto.Rank {
             Available = input.ReadBool();
             break;
           }
+          case 16: {
+            StartDate = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1603,6 +1635,10 @@ namespace Mobius.Proto.Rank {
             break;
           case 8: {
             Available = input.ReadBool();
+            break;
+          }
+          case 16: {
+            StartDate = input.ReadInt64();
             break;
           }
         }

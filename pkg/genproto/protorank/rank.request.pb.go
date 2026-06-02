@@ -407,6 +407,7 @@ func (x *GetTopRankRequest) GetEventName() string {
 type RankingRegionAvailableResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Available     bool                   `protobuf:"varint,1,opt,name=available,proto3" json:"available,omitempty"`
+	StartDate     int64                  `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -448,6 +449,13 @@ func (x *RankingRegionAvailableResponse) GetAvailable() bool {
 	return false
 }
 
+func (x *RankingRegionAvailableResponse) GetStartDate() int64 {
+	if x != nil {
+		return x.StartDate
+	}
+	return 0
+}
+
 var File_protorank_rank_request_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_request_proto_rawDesc = "" +
@@ -476,9 +484,11 @@ const file_protorank_rank_request_proto_rawDesc = "" +
 	"\x04code\x18\x02 \x01(\tR\x04code\"2\n" +
 	"\x11GetTopRankRequest\x12\x1d\n" +
 	"\n" +
-	"event_name\x18\x01 \x01(\tR\teventName\">\n" +
+	"event_name\x18\x01 \x01(\tR\teventName\"]\n" +
 	"\x1eRankingRegionAvailableResponse\x12\x1c\n" +
-	"\tavailable\x18\x01 \x01(\bR\tavailable*4\n" +
+	"\tavailable\x18\x01 \x01(\bR\tavailable\x12\x1d\n" +
+	"\n" +
+	"start_date\x18\x02 \x01(\x03R\tstartDate*4\n" +
 	"\x0fRankRequestType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x17\n" +
 	"\x12GET_RANKING_EVENTS\x10\xa8\x14BKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
