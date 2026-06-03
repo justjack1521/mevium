@@ -2448,13 +2448,15 @@ func (x *ProtoItemInventory) GetItemList() []*ProtoItemInstance {
 }
 
 type ProtoGiftBoxInstance struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	PurchasedAt   int64                  `protobuf:"varint,2,opt,name=purchased_at,json=purchasedAt,proto3" json:"purchased_at,omitempty"`
-	PurchaseCount int32                  `protobuf:"varint,3,opt,name=purchase_count,json=purchaseCount,proto3" json:"purchase_count,omitempty"`
-	EffectiveDays int32                  `protobuf:"varint,4,opt,name=effective_days,json=effectiveDays,proto3" json:"effective_days,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state              protoimpl.MessageState `protogen:"open.v1"`
+	Id                 string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	PurchasedAt        int64                  `protobuf:"varint,2,opt,name=purchased_at,json=purchasedAt,proto3" json:"purchased_at,omitempty"`
+	PurchaseCount      int32                  `protobuf:"varint,3,opt,name=purchase_count,json=purchaseCount,proto3" json:"purchase_count,omitempty"`
+	EffectiveDays      int32                  `protobuf:"varint,4,opt,name=effective_days,json=effectiveDays,proto3" json:"effective_days,omitempty"`
+	NotificationStatus int32                  `protobuf:"varint,5,opt,name=notification_status,json=notificationStatus,proto3" json:"notification_status,omitempty"`
+	ExpirationStatus   int32                  `protobuf:"varint,6,opt,name=expiration_status,json=expirationStatus,proto3" json:"expiration_status,omitempty"`
+	unknownFields      protoimpl.UnknownFields
+	sizeCache          protoimpl.SizeCache
 }
 
 func (x *ProtoGiftBoxInstance) Reset() {
@@ -2511,6 +2513,20 @@ func (x *ProtoGiftBoxInstance) GetPurchaseCount() int32 {
 func (x *ProtoGiftBoxInstance) GetEffectiveDays() int32 {
 	if x != nil {
 		return x.EffectiveDays
+	}
+	return 0
+}
+
+func (x *ProtoGiftBoxInstance) GetNotificationStatus() int32 {
+	if x != nil {
+		return x.NotificationStatus
+	}
+	return 0
+}
+
+func (x *ProtoGiftBoxInstance) GetExpirationStatus() int32 {
+	if x != nil {
+		return x.ExpirationStatus
 	}
 	return 0
 }
@@ -6698,12 +6714,14 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\x05R\x03key\x12\x14\n" +
 	"\x05count\x18\x02 \x01(\x05R\x05count\"J\n" +
 	"\x12ProtoItemInventory\x124\n" +
-	"\titem_list\x18\x01 \x03(\v2\x17.game.ProtoItemInstanceR\bitemList\"\x97\x01\n" +
+	"\titem_list\x18\x01 \x03(\v2\x17.game.ProtoItemInstanceR\bitemList\"\xf5\x01\n" +
 	"\x14ProtoGiftBoxInstance\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12!\n" +
 	"\fpurchased_at\x18\x02 \x01(\x03R\vpurchasedAt\x12%\n" +
 	"\x0epurchase_count\x18\x03 \x01(\x05R\rpurchaseCount\x12%\n" +
-	"\x0eeffective_days\x18\x04 \x01(\x05R\reffectiveDays\"~\n" +
+	"\x0eeffective_days\x18\x04 \x01(\x05R\reffectiveDays\x12/\n" +
+	"\x13notification_status\x18\x05 \x01(\x05R\x12notificationStatus\x12+\n" +
+	"\x11expiration_status\x18\x06 \x01(\x05R\x10expirationStatus\"~\n" +
 	"\x11ProtoItemInstance\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12\x1a\n" +
 	"\bquantity\x18\x02 \x01(\x05R\bquantity\x12\x17\n" +

@@ -290,6 +290,8 @@ message ProtoGiftBoxInstance {
   int64 purchased_at = 2;
   int32 purchase_count = 3;
   int32 effective_days = 4;
+  int32 notification_status = 5;
+  int32 expiration_status = 6;
 }
 
 message ProtoItemInstance {
