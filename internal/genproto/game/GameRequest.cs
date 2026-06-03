@@ -100,35 +100,37 @@ namespace Mobius.Proto.Game {
             "FVN0YW1pbmFEZXBvc2l0UmVxdWVzdBIOCgZhbW91bnQYASABKAUSCgoCbXAY",
             "AiABKAgiMwoVU3RhbWluYUNvbnZlcnRSZXF1ZXN0Eg4KBmFtb3VudBgBIAEo",
             "BRIKCgJtcBgCIAEoCCIfChFBcmVuYVN0YXJ0UmVxdWVzdBIKCgJpZBgBIAEo",
-            "CSIfChFBcmVuYUNsYWltUmVxdWVzdBIKCgJpZBgBIAEoCSq2CAoPR2FtZVJl",
-            "cXVlc3RUeXBlEggKBEJBU0UQABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVB",
-            "VEVfUFJPRklMRRCsAhITCg5VUERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NB",
-            "TEUQkAMSFQoQQ0FSRF9GSUxURVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklU",
-            "RRDYBBIQCgtTS0lMTF9QQU5FTBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVD",
-            "S19FRElUX0FMTBCEBxINCghURUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lP",
-            "Tl9FVkVOVBDMCBIeChlQUk9DRVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIK",
-            "DUJBVFRMRV9SRVZJVkUQsAkSFAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNP",
-            "TkZJUk1fREFJTFlfTUlTU0lPThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5H",
-            "EKQNEhIKDUNMQUlNX01BSUxCT1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQ",
-            "ug4SEQoMQkFUVExFX1NUQVJUEOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoR",
-            "RVhQQU5EX0NBUkRfU0xPVFMQghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FS",
-            "RF9GVVNJT05fQk9PU1QQmBESFAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJ",
-            "UlNUX0RBSUxZX0xPR0lOEOASEhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQT",
-            "EhcKEkRFTEVURV9BTExfTUFJTEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVX",
-            "QVJEEPAVEhIKDVBVUkNIQVNFX0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCc",
-            "GBIaChVBQklMSVRZX1NIT1BfUFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5U",
-            "EOQZEhgKE0NMQUlNX0RBSUxZX01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVH",
-            "SU9OX01BUBD0HBIYChNTVU1NT05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNV",
-            "VEVfRElBTE9HVUUQvB4SGQoUQ0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoO",
-            "Q0FSRF9BVVRPX1NFTEwQhCASFgoRVU5MT0NLX1JFR0lPTl9NQVAQ6CASEgoN",
-            "Q0xBSU1fRFVOR0VPThDMIRIXChJVTkxPQ0tfUkVHSU9OX05PREUQsCISFwoS",
-            "UFVSQ0hBU0VfQ09NUEFOSU9OEJQjEhYKEVBVUkNIQVNFX0dJRlRfQk9YEPgj",
-            "EhQKD1NUQU1JTkFfREVQT1NJVBDcJBIUCg9TVEFNSU5BX0NPTlZFUlQQwCUS",
-            "EAoLQVJFTkFfU1RBUlQQpCYSEAoLQVJFTkFfQ0xBSU0QiCcqWAoTVGVsZXBv",
-            "cnRSZXF1ZXN0VHlwZRIUChBJTlZBTElEX1RFTEVQT1JUEAASCQoFTE9HSU4Q",
-            "ARIJCgVXT1JMRBACEgkKBUZJRUxEEAMSCgoGQkFUVExFEARCS1o1Z2l0aHVi",
-            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
-            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "CSIfChFBcmVuYUNsYWltUmVxdWVzdBIKCgJpZBgBIAEoCSJGChVDb25maXJt",
+            "R2lmdEJveFJlcXVlc3QSCgoCaWQYASABKAkSEAoIcmVjZWl2ZWQYAiABKAgS",
+            "DwoHZXhwaXJlZBgDIAEoCCq2CAoPR2FtZVJlcXVlc3RUeXBlEggKBEJBU0UQ",
+            "ABIQCgtHRVRfUFJPRklMRRDIARITCg5DUkVBVEVfUFJPRklMRRCsAhITCg5V",
+            "UERBVEVfUFJPRklMRRDeAhIOCglDQVJEX1NBTEUQkAMSFQoQQ0FSRF9GSUxU",
+            "RVJfU09SVBD0AxITCg5DQVJEX0ZBVk9VUklURRDYBBIQCgtTS0lMTF9QQU5F",
+            "TBC8BRIOCglERUNLX0VESVQQoAYSEgoNREVDS19FRElUX0FMTBCEBxINCghU",
+            "RUxFUE9SVBDoBxIZChRQUk9DRVNTX1JFR0lPTl9FVkVOVBDMCBIeChlQUk9D",
+            "RVNTX1JFR0lPTl9OT0RFX0VWRU5UEP4IEhIKDUJBVFRMRV9SRVZJVkUQsAkS",
+            "FAoPQkFUVExFX0NPTVBMRVRFEJQKEhoKFUNPTkZJUk1fREFJTFlfTUlTU0lP",
+            "ThDADBIYChNDTEFJTV9FVkVOVF9SQU5LSU5HEKQNEhIKDUNMQUlNX01BSUxC",
+            "T1gQiA4SFgoRQ0xBSU1fQUxMX01BSUxCT1gQug4SEQoMQkFUVExFX1NUQVJU",
+            "EOwOEhIKDUNBUkRfVFJBTlNGRVIQ0A8SFgoRRVhQQU5EX0NBUkRfU0xPVFMQ",
+            "ghASEAoLQ0FSRF9GVVNJT04QtBASFgoRQ0FSRF9GVVNJT05fQk9PU1QQmBES",
+            "FAoPU1RBTUlOQV9SRVNUT1JFEPwREhYKEUZJUlNUX0RBSUxZX0xPR0lOEOAS",
+            "EhkKFENMQUlNX0xPR0lOX0NBTVBBSUdOEMQTEhcKEkRFTEVURV9BTExfTUFJ",
+            "TEJPWBCMFRIYChNDTEFJTV9SRU5UQUxfUkVXQVJEEPAVEhIKDVBVUkNIQVNF",
+            "X0lURU0QuBcSEgoNUFVSQ0hBU0VfQ0FSRBCcGBIaChVBQklMSVRZX1NIT1Bf",
+            "UFVSQ0hBU0UQgBkSEQoMQ0FSRF9BVUdNRU5UEOQZEhgKE0NMQUlNX0RBSUxZ",
+            "X01JU1NJT04QyBoSGAoTQ09NUExFVEVfUkVHSU9OX01BUBD0HBIYChNTVU1N",
+            "T05fQUJJTElUWV9DQVJEENgdEhUKEEVYRUNVVEVfRElBTE9HVUUQvB4SGQoU",
+            "Q0xBSU1fSVRFTV9ESVNUSUxMRVIQoB8SEwoOQ0FSRF9BVVRPX1NFTEwQhCAS",
+            "FgoRVU5MT0NLX1JFR0lPTl9NQVAQ6CASEgoNQ0xBSU1fRFVOR0VPThDMIRIX",
+            "ChJVTkxPQ0tfUkVHSU9OX05PREUQsCISFwoSUFVSQ0hBU0VfQ09NUEFOSU9O",
+            "EJQjEhYKEVBVUkNIQVNFX0dJRlRfQk9YEPgjEhQKD1NUQU1JTkFfREVQT1NJ",
+            "VBDcJBIUCg9TVEFNSU5BX0NPTlZFUlQQwCUSEAoLQVJFTkFfU1RBUlQQpCYS",
+            "EAoLQVJFTkFfQ0xBSU0QiCcqWAoTVGVsZXBvcnRSZXF1ZXN0VHlwZRIUChBJ",
+            "TlZBTElEX1RFTEVQT1JUEAASCQoFTE9HSU4QARIJCgVXT1JMRBACEgkKBUZJ",
+            "RUxEEAMSCgoGQkFUVExFEARCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEv",
+            "bWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8u",
+            "R2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -178,7 +180,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaDepositRequest), global::Mobius.Proto.Game.StaminaDepositRequest.Parser, new[]{ "Amount", "Mp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.StaminaConvertRequest), global::Mobius.Proto.Game.StaminaConvertRequest.Parser, new[]{ "Amount", "Mp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaStartRequest), global::Mobius.Proto.Game.ArenaStartRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimRequest), global::Mobius.Proto.Game.ArenaClaimRequest.Parser, new[]{ "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimRequest), global::Mobius.Proto.Game.ArenaClaimRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ConfirmGiftBoxRequest), global::Mobius.Proto.Game.ConfirmGiftBoxRequest.Parser, new[]{ "Id", "Received", "Expired" }, null, null, null, null)
           }));
     }
     #endregion
@@ -10125,6 +10128,250 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ConfirmGiftBoxRequest : pb::IMessage<ConfirmGiftBoxRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConfirmGiftBoxRequest> _parser = new pb::MessageParser<ConfirmGiftBoxRequest>(() => new ConfirmGiftBoxRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ConfirmGiftBoxRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameRequestReflection.Descriptor.MessageTypes[47]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfirmGiftBoxRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfirmGiftBoxRequest(ConfirmGiftBoxRequest other) : this() {
+      id_ = other.id_;
+      received_ = other.received_;
+      expired_ = other.expired_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfirmGiftBoxRequest Clone() {
+      return new ConfirmGiftBoxRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "received" field.</summary>
+    public const int ReceivedFieldNumber = 2;
+    private bool received_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Received {
+      get { return received_; }
+      set {
+        received_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expired" field.</summary>
+    public const int ExpiredFieldNumber = 3;
+    private bool expired_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Expired {
+      get { return expired_; }
+      set {
+        expired_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ConfirmGiftBoxRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ConfirmGiftBoxRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Received != other.Received) return false;
+      if (Expired != other.Expired) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Received != false) hash ^= Received.GetHashCode();
+      if (Expired != false) hash ^= Expired.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Received != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Received);
+      }
+      if (Expired != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Expired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Received != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Received);
+      }
+      if (Expired != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Expired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Received != false) {
+        size += 1 + 1;
+      }
+      if (Expired != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ConfirmGiftBoxRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Received != false) {
+        Received = other.Received;
+      }
+      if (other.Expired != false) {
+        Expired = other.Expired;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            Received = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Expired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            Received = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Expired = input.ReadBool();
             break;
           }
         }

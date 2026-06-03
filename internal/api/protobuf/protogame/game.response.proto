@@ -280,3 +280,7 @@ message ArenaClaimResponse {
   bool unlocked = 3;
   bool completed = 4;
 }
+
+message ConfirmGiftBoxResponse {
+  string id = 1;
+}

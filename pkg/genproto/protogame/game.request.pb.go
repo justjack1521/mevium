@@ -2753,6 +2753,66 @@ func (x *ArenaClaimRequest) GetId() string {
 	return ""
 }
 
+type ConfirmGiftBoxRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Received      bool                   `protobuf:"varint,2,opt,name=received,proto3" json:"received,omitempty"`
+	Expired       bool                   `protobuf:"varint,3,opt,name=expired,proto3" json:"expired,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ConfirmGiftBoxRequest) Reset() {
+	*x = ConfirmGiftBoxRequest{}
+	mi := &file_protogame_game_request_proto_msgTypes[47]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ConfirmGiftBoxRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ConfirmGiftBoxRequest) ProtoMessage() {}
+
+func (x *ConfirmGiftBoxRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_game_request_proto_msgTypes[47]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ConfirmGiftBoxRequest.ProtoReflect.Descriptor instead.
+func (*ConfirmGiftBoxRequest) Descriptor() ([]byte, []int) {
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{47}
+}
+
+func (x *ConfirmGiftBoxRequest) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ConfirmGiftBoxRequest) GetReceived() bool {
+	if x != nil {
+		return x.Received
+	}
+	return false
+}
+
+func (x *ConfirmGiftBoxRequest) GetExpired() bool {
+	if x != nil {
+		return x.Expired
+	}
+	return false
+}
+
 var File_protogame_game_request_proto protoreflect.FileDescriptor
 
 const file_protogame_game_request_proto_rawDesc = "" +
@@ -2916,7 +2976,11 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x11ArenaStartRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\"#\n" +
 	"\x11ArenaClaimRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id*\xb6\b\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\"]\n" +
+	"\x15ConfirmGiftBoxRequest\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1a\n" +
+	"\breceived\x18\x02 \x01(\bR\breceived\x12\x18\n" +
+	"\aexpired\x18\x03 \x01(\bR\aexpired*\xb6\b\n" +
 	"\x0fGameRequestType\x12\b\n" +
 	"\x04BASE\x10\x00\x12\x10\n" +
 	"\vGET_PROFILE\x10\xc8\x01\x12\x13\n" +
@@ -2988,7 +3052,7 @@ func file_protogame_game_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protogame_game_request_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_protogame_game_request_proto_msgTypes = make([]protoimpl.MessageInfo, 47)
+var file_protogame_game_request_proto_msgTypes = make([]protoimpl.MessageInfo, 48)
 var file_protogame_game_request_proto_goTypes = []any{
 	(GameRequestType)(0),                           // 0: game.GameRequestType
 	(TeleportRequestType)(0),                       // 1: game.TeleportRequestType
@@ -3039,12 +3103,13 @@ var file_protogame_game_request_proto_goTypes = []any{
 	(*StaminaConvertRequest)(nil),                  // 46: game.StaminaConvertRequest
 	(*ArenaStartRequest)(nil),                      // 47: game.ArenaStartRequest
 	(*ArenaClaimRequest)(nil),                      // 48: game.ArenaClaimRequest
-	(*ProtoBattleStatistics)(nil),                  // 49: game.ProtoBattleStatistics
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 50: identity.ProtoAbilityCardIdentity
+	(*ConfirmGiftBoxRequest)(nil),                  // 49: game.ConfirmGiftBoxRequest
+	(*ProtoBattleStatistics)(nil),                  // 50: game.ProtoBattleStatistics
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 51: identity.ProtoAbilityCardIdentity
 }
 var file_protogame_game_request_proto_depIdxs = []int32{
-	49, // 0: game.BattleCompleteRequest.statistics:type_name -> game.ProtoBattleStatistics
-	50, // 1: game.BattleStartRequest.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	50, // 0: game.BattleCompleteRequest.statistics:type_name -> game.ProtoBattleStatistics
+	51, // 1: game.BattleStartRequest.rental_card:type_name -> identity.ProtoAbilityCardIdentity
 	22, // 2: game.DeckEditAllRequest.Requests:type_name -> game.DeckEditRequest
 	1,  // 3: game.TeleportRequest.source:type_name -> game.TeleportRequestType
 	4,  // [4:4] is the sub-list for method output_type
@@ -3066,7 +3131,7 @@ func file_protogame_game_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_game_request_proto_rawDesc), len(file_protogame_game_request_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   47,
+			NumMessages:   48,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
