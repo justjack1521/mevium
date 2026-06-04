@@ -57,6 +57,7 @@ enum GameRequestType {
   STAMINA_CONVERT = 4800;
   ARENA_START = 4900;
   ARENA_CLAIM = 5000;
+  CONFIRM_GIFT_BOX = 5100;
 }
 
 enum TeleportRequestType {

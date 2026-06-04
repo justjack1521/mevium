@@ -73,6 +73,7 @@ const (
 	GameRequestType_STAMINA_CONVERT           GameRequestType = 4800
 	GameRequestType_ARENA_START               GameRequestType = 4900
 	GameRequestType_ARENA_CLAIM               GameRequestType = 5000
+	GameRequestType_CONFIRM_GIFT_BOX          GameRequestType = 5100
 )
 
 // Enum value maps for GameRequestType.
@@ -126,6 +127,7 @@ var (
 		4800: "STAMINA_CONVERT",
 		4900: "ARENA_START",
 		5000: "ARENA_CLAIM",
+		5100: "CONFIRM_GIFT_BOX",
 	}
 	GameRequestType_value = map[string]int32{
 		"BASE":                      0,
@@ -176,6 +178,7 @@ var (
 		"STAMINA_CONVERT":           4800,
 		"ARENA_START":               4900,
 		"ARENA_CLAIM":               5000,
+		"CONFIRM_GIFT_BOX":          5100,
 	}
 )
 
@@ -2980,7 +2983,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x15ConfirmGiftBoxRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1a\n" +
 	"\breceived\x18\x02 \x01(\bR\breceived\x12\x18\n" +
-	"\aexpired\x18\x03 \x01(\bR\aexpired*\xb6\b\n" +
+	"\aexpired\x18\x03 \x01(\bR\aexpired*\xcd\b\n" +
 	"\x0fGameRequestType\x12\b\n" +
 	"\x04BASE\x10\x00\x12\x10\n" +
 	"\vGET_PROFILE\x10\xc8\x01\x12\x13\n" +
@@ -3030,7 +3033,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x0fSTAMINA_DEPOSIT\x10\xdc$\x12\x14\n" +
 	"\x0fSTAMINA_CONVERT\x10\xc0%\x12\x10\n" +
 	"\vARENA_START\x10\xa4&\x12\x10\n" +
-	"\vARENA_CLAIM\x10\x88'*X\n" +
+	"\vARENA_CLAIM\x10\x88'\x12\x15\n" +
+	"\x10CONFIRM_GIFT_BOX\x10\xec'*X\n" +
 	"\x13TeleportRequestType\x12\x14\n" +
 	"\x10INVALID_TELEPORT\x10\x00\x12\t\n" +
 	"\x05LOGIN\x10\x01\x12\t\n" +
