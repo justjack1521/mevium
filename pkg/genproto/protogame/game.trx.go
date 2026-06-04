@@ -380,6 +380,14 @@ func NewConfirmGiftBoxRequest(bytes []byte) (*ConfirmGiftBoxRequest, error) {
 	return req, nil
 }
 
+func NewClaimAchievementRequest(bytes []byte) (*ClaimAchievementRequest, error) {
+	req := &ClaimAchievementRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func (x *RegionMapNodeUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
@@ -560,5 +568,9 @@ func (x *ArenaClaimResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *ConfirmGiftBoxResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *ClaimAchievementResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

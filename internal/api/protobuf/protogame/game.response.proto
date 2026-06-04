@@ -287,3 +287,8 @@ message ArenaClaimResponse {
 message ConfirmGiftBoxResponse {
   string id = 1;
 }
+
+message ClaimAchievementResponse {
+  string id = 1;
+  repeated game.ProtoMailBoxItem inbox_claims = 2;
+}

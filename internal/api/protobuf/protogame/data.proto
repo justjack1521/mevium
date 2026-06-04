@@ -36,6 +36,7 @@ message ProtoGameData {
 
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 20;
   map<string, bool> player_progress_data = 100;
+  map<string, bool> player_achievement_data = 110;
 
 }
 

@@ -55,5 +55,6 @@ service MeviusGameService {
   rpc StartArena(game.ArenaStartRequest) returns (game.ArenaStartResponse) {}
   rpc ClaimArena(game.ArenaClaimRequest) returns (game.ArenaClaimResponse) {}
   rpc ConfirmGiftBox(game.ConfirmGiftBoxRequest) returns (game.ConfirmGiftBoxResponse) {}
+  rpc ClaimAchievement(game.ClaimAchievementRequest) returns (game.ClaimAchievementResponse) {}
 }
 

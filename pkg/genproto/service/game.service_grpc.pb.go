@@ -66,6 +66,7 @@ const (
 	MeviusGameService_StartArena_FullMethodName             = "/service.MeviusGameService/StartArena"
 	MeviusGameService_ClaimArena_FullMethodName             = "/service.MeviusGameService/ClaimArena"
 	MeviusGameService_ConfirmGiftBox_FullMethodName         = "/service.MeviusGameService/ConfirmGiftBox"
+	MeviusGameService_ClaimAchievement_FullMethodName       = "/service.MeviusGameService/ClaimAchievement"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -119,6 +120,7 @@ type MeviusGameServiceClient interface {
 	StartArena(ctx context.Context, in *protogame.ArenaStartRequest, opts ...grpc.CallOption) (*protogame.ArenaStartResponse, error)
 	ClaimArena(ctx context.Context, in *protogame.ArenaClaimRequest, opts ...grpc.CallOption) (*protogame.ArenaClaimResponse, error)
 	ConfirmGiftBox(ctx context.Context, in *protogame.ConfirmGiftBoxRequest, opts ...grpc.CallOption) (*protogame.ConfirmGiftBoxResponse, error)
+	ClaimAchievement(ctx context.Context, in *protogame.ClaimAchievementRequest, opts ...grpc.CallOption) (*protogame.ClaimAchievementResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -543,6 +545,15 @@ func (c *meviusGameServiceClient) ConfirmGiftBox(ctx context.Context, in *protog
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) ClaimAchievement(ctx context.Context, in *protogame.ClaimAchievementRequest, opts ...grpc.CallOption) (*protogame.ClaimAchievementResponse, error) {
+	out := new(protogame.ClaimAchievementResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_ClaimAchievement_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -594,6 +605,7 @@ type MeviusGameServiceServer interface {
 	StartArena(context.Context, *protogame.ArenaStartRequest) (*protogame.ArenaStartResponse, error)
 	ClaimArena(context.Context, *protogame.ArenaClaimRequest) (*protogame.ArenaClaimResponse, error)
 	ConfirmGiftBox(context.Context, *protogame.ConfirmGiftBoxRequest) (*protogame.ConfirmGiftBoxResponse, error)
+	ClaimAchievement(context.Context, *protogame.ClaimAchievementRequest) (*protogame.ClaimAchievementResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -737,6 +749,9 @@ func (UnimplementedMeviusGameServiceServer) ClaimArena(context.Context, *protoga
 }
 func (UnimplementedMeviusGameServiceServer) ConfirmGiftBox(context.Context, *protogame.ConfirmGiftBoxRequest) (*protogame.ConfirmGiftBoxResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ConfirmGiftBox not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) ClaimAchievement(context.Context, *protogame.ClaimAchievementRequest) (*protogame.ClaimAchievementResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClaimAchievement not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1578,6 +1593,24 @@ func _MeviusGameService_ConfirmGiftBox_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_ClaimAchievement_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.ClaimAchievementRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).ClaimAchievement(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_ClaimAchievement_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).ClaimAchievement(ctx, req.(*protogame.ClaimAchievementRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1768,6 +1801,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ConfirmGiftBox",
 			Handler:    _MeviusGameService_ConfirmGiftBox_Handler,
+		},
+		{
+			MethodName: "ClaimAchievement",
+			Handler:    _MeviusGameService_ClaimAchievement_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

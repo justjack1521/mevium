@@ -58,6 +58,7 @@ enum GameRequestType {
   ARENA_START = 4900;
   ARENA_CLAIM = 5000;
   CONFIRM_GIFT_BOX = 5100;
+  CLAIM_ACHIEVEMENT = 5200;
 }
 
 enum TeleportRequestType {
@@ -320,4 +321,8 @@ message ConfirmGiftBoxRequest {
   string id = 1;
   bool received = 2;
   bool expired = 3;
+}
+
+message ClaimAchievementRequest {
+  string id = 1;
 }
