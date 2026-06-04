@@ -1211,6 +1211,9 @@ type FirstDailyLoginResponse struct {
 	LoginRewards       []*ProtoMailBoxItem         `protobuf:"bytes,5,rep,name=login_rewards,json=loginRewards,proto3" json:"login_rewards,omitempty"`
 	RentalCount        int32                       `protobuf:"varint,6,opt,name=rental_count,json=rentalCount,proto3" json:"rental_count,omitempty"`
 	RentalClaim        bool                        `protobuf:"varint,7,opt,name=rental_claim,json=rentalClaim,proto3" json:"rental_claim,omitempty"`
+	BonusDay           bool                        `protobuf:"varint,8,opt,name=bonus_day,json=bonusDay,proto3" json:"bonus_day,omitempty"`
+	ReceivedGiftBoxes  []string                    `protobuf:"bytes,9,rep,name=received_gift_boxes,json=receivedGiftBoxes,proto3" json:"received_gift_boxes,omitempty"`
+	ExpiredGiftBoxes   []string                    `protobuf:"bytes,10,rep,name=expired_gift_boxes,json=expiredGiftBoxes,proto3" json:"expired_gift_boxes,omitempty"`
 	unknownFields      protoimpl.UnknownFields
 	sizeCache          protoimpl.SizeCache
 }
@@ -1292,6 +1295,27 @@ func (x *FirstDailyLoginResponse) GetRentalClaim() bool {
 		return x.RentalClaim
 	}
 	return false
+}
+
+func (x *FirstDailyLoginResponse) GetBonusDay() bool {
+	if x != nil {
+		return x.BonusDay
+	}
+	return false
+}
+
+func (x *FirstDailyLoginResponse) GetReceivedGiftBoxes() []string {
+	if x != nil {
+		return x.ReceivedGiftBoxes
+	}
+	return nil
+}
+
+func (x *FirstDailyLoginResponse) GetExpiredGiftBoxes() []string {
+	if x != nil {
+		return x.ExpiredGiftBoxes
+	}
+	return nil
 }
 
 type FilterSortResponse struct {
@@ -2836,7 +2860,7 @@ const file_protogame_game_response_proto_rawDesc = "" +
 	"Collection\x12 \n" +
 	"\vMultiPlayer\x18\x02 \x01(\bR\vMultiPlayer\"B\n" +
 	"\x17FetchPlayerDataResponse\x12'\n" +
-	"\x04data\x18\x01 \x01(\v2\x13.game.ProtoGameDataR\x04data\"\xba\x03\n" +
+	"\x04data\x18\x01 \x01(\v2\x13.game.ProtoGameDataR\x04data\"\xb5\x04\n" +
 	"\x17FirstDailyLoginResponse\x120\n" +
 	"\x14login_bonus_received\x18\x01 \x01(\x03R\x12loginBonusReceived\x12D\n" +
 	"\rdaily_mission\x18\x02 \x01(\v2\x1f.game.ProtoDailyMissionInstanceR\fdailyMission\x12R\n" +
@@ -2844,7 +2868,11 @@ const file_protogame_game_response_proto_rawDesc = "" +
 	"\x13special_login_bonus\x18\x04 \x01(\v2 .game.ProtoLoginCampaignInstanceR\x11specialLoginBonus\x12;\n" +
 	"\rlogin_rewards\x18\x05 \x03(\v2\x16.game.ProtoMailBoxItemR\floginRewards\x12!\n" +
 	"\frental_count\x18\x06 \x01(\x05R\vrentalCount\x12!\n" +
-	"\frental_claim\x18\a \x01(\bR\vrentalClaim\"y\n" +
+	"\frental_claim\x18\a \x01(\bR\vrentalClaim\x12\x1b\n" +
+	"\tbonus_day\x18\b \x01(\bR\bbonusDay\x12.\n" +
+	"\x13received_gift_boxes\x18\t \x03(\tR\x11receivedGiftBoxes\x12,\n" +
+	"\x12expired_gift_boxes\x18\n" +
+	" \x03(\tR\x10expiredGiftBoxes\"y\n" +
 	"\x12FilterSortResponse\x12\x12\n" +
 	"\x04View\x18\x01 \x01(\x05R\x04View\x12\x14\n" +
 	"\x05Index\x18\x02 \x01(\x05R\x05Index\x129\n" +

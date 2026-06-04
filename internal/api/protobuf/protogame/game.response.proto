@@ -138,6 +138,9 @@ message FirstDailyLoginResponse {
   repeated game.ProtoMailBoxItem login_rewards = 5;
   int32 rental_count = 6;
   bool rental_claim = 7;
+  bool bonus_day = 8;
+  repeated string received_gift_boxes = 9;
+  repeated string expired_gift_boxes = 10;
 }
 
 message FilterSortResponse {
