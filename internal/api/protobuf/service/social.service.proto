@@ -14,5 +14,6 @@ service MeviusSocialService {
   rpc FetchPlayerSocialInfo(presence.FetchPlayerSocialInfoRequest) returns (presence.FetchPlayerSocialInfoResponse) {}
 
   rpc GetPlayerIdentity(presence.GetPlayerIdentityRequest) returns (presence.GetPlayerIdentityResponse) {}
+  rpc RentalSearch(presence.RentalSearchRequest) returns (presence.RentalSearchResponse) {}
 
 }

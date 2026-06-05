@@ -25,6 +25,7 @@ const (
 	MeviusSocialService_PlayerSearch_FullMethodName          = "/service.MeviusSocialService/PlayerSearch"
 	MeviusSocialService_FetchPlayerSocialInfo_FullMethodName = "/service.MeviusSocialService/FetchPlayerSocialInfo"
 	MeviusSocialService_GetPlayerIdentity_FullMethodName     = "/service.MeviusSocialService/GetPlayerIdentity"
+	MeviusSocialService_RentalSearch_FullMethodName          = "/service.MeviusSocialService/RentalSearch"
 )
 
 // MeviusSocialServiceClient is the client API for MeviusSocialService service.
@@ -36,6 +37,7 @@ type MeviusSocialServiceClient interface {
 	PlayerSearch(ctx context.Context, in *protosocial.PlayerSearchRequest, opts ...grpc.CallOption) (*protosocial.PlayerSearchResponse, error)
 	FetchPlayerSocialInfo(ctx context.Context, in *protosocial.FetchPlayerSocialInfoRequest, opts ...grpc.CallOption) (*protosocial.FetchPlayerSocialInfoResponse, error)
 	GetPlayerIdentity(ctx context.Context, in *protosocial.GetPlayerIdentityRequest, opts ...grpc.CallOption) (*protosocial.GetPlayerIdentityResponse, error)
+	RentalSearch(ctx context.Context, in *protosocial.RentalSearchRequest, opts ...grpc.CallOption) (*protosocial.RentalSearchResponse, error)
 }
 
 type meviusSocialServiceClient struct {
@@ -91,6 +93,15 @@ func (c *meviusSocialServiceClient) GetPlayerIdentity(ctx context.Context, in *p
 	return out, nil
 }
 
+func (c *meviusSocialServiceClient) RentalSearch(ctx context.Context, in *protosocial.RentalSearchRequest, opts ...grpc.CallOption) (*protosocial.RentalSearchResponse, error) {
+	out := new(protosocial.RentalSearchResponse)
+	err := c.cc.Invoke(ctx, MeviusSocialService_RentalSearch_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusSocialServiceServer is the server API for MeviusSocialService service.
 // All implementations should embed UnimplementedMeviusSocialServiceServer
 // for forward compatibility
@@ -100,6 +111,7 @@ type MeviusSocialServiceServer interface {
 	PlayerSearch(context.Context, *protosocial.PlayerSearchRequest) (*protosocial.PlayerSearchResponse, error)
 	FetchPlayerSocialInfo(context.Context, *protosocial.FetchPlayerSocialInfoRequest) (*protosocial.FetchPlayerSocialInfoResponse, error)
 	GetPlayerIdentity(context.Context, *protosocial.GetPlayerIdentityRequest) (*protosocial.GetPlayerIdentityResponse, error)
+	RentalSearch(context.Context, *protosocial.RentalSearchRequest) (*protosocial.RentalSearchResponse, error)
 }
 
 // UnimplementedMeviusSocialServiceServer should be embedded to have forward compatible implementations.
@@ -120,6 +132,9 @@ func (UnimplementedMeviusSocialServiceServer) FetchPlayerSocialInfo(context.Cont
 }
 func (UnimplementedMeviusSocialServiceServer) GetPlayerIdentity(context.Context, *protosocial.GetPlayerIdentityRequest) (*protosocial.GetPlayerIdentityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerIdentity not implemented")
+}
+func (UnimplementedMeviusSocialServiceServer) RentalSearch(context.Context, *protosocial.RentalSearchRequest) (*protosocial.RentalSearchResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RentalSearch not implemented")
 }
 
 // UnsafeMeviusSocialServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -223,6 +238,24 @@ func _MeviusSocialService_GetPlayerIdentity_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusSocialService_RentalSearch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protosocial.RentalSearchRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusSocialServiceServer).RentalSearch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusSocialService_RentalSearch_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusSocialServiceServer).RentalSearch(ctx, req.(*protosocial.RentalSearchRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusSocialService_ServiceDesc is the grpc.ServiceDesc for MeviusSocialService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -249,6 +282,10 @@ var MeviusSocialService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetPlayerIdentity",
 			Handler:    _MeviusSocialService_GetPlayerIdentity_Handler,
+		},
+		{
+			MethodName: "RentalSearch",
+			Handler:    _MeviusSocialService_RentalSearch_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

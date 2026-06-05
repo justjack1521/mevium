@@ -28,6 +28,7 @@ const (
 	SocialRequestType_FOLLOW_PLAYER   SocialRequestType = 1400
 	SocialRequestType_UNFOLLOW_PLAYER SocialRequestType = 1500
 	SocialRequestType_GET_SOCIAL_DATA SocialRequestType = 2900
+	SocialRequestType_RENTAL_SEARCH   SocialRequestType = 3000
 )
 
 // Enum value maps for SocialRequestType.
@@ -37,12 +38,14 @@ var (
 		1400: "FOLLOW_PLAYER",
 		1500: "UNFOLLOW_PLAYER",
 		2900: "GET_SOCIAL_DATA",
+		3000: "RENTAL_SEARCH",
 	}
 	SocialRequestType_value = map[string]int32{
 		"NONE":            0,
 		"FOLLOW_PLAYER":   1400,
 		"UNFOLLOW_PLAYER": 1500,
 		"GET_SOCIAL_DATA": 2900,
+		"RENTAL_SEARCH":   3000,
 	}
 )
 
@@ -197,6 +200,50 @@ func (x *PlayerSearchRequest) GetPlayerId() string {
 	return ""
 }
 
+type RentalSearchRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *RentalSearchRequest) Reset() {
+	*x = RentalSearchRequest{}
+	mi := &file_protosocial_social_request_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RentalSearchRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RentalSearchRequest) ProtoMessage() {}
+
+func (x *RentalSearchRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protosocial_social_request_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RentalSearchRequest.ProtoReflect.Descriptor instead.
+func (*RentalSearchRequest) Descriptor() ([]byte, []int) {
+	return file_protosocial_social_request_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *RentalSearchRequest) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
 type UnfollowPlayerRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	TargetId      string                 `protobuf:"bytes,2,opt,name=target_id,json=targetId,proto3" json:"target_id,omitempty"`
@@ -206,7 +253,7 @@ type UnfollowPlayerRequest struct {
 
 func (x *UnfollowPlayerRequest) Reset() {
 	*x = UnfollowPlayerRequest{}
-	mi := &file_protosocial_social_request_proto_msgTypes[3]
+	mi := &file_protosocial_social_request_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -218,7 +265,7 @@ func (x *UnfollowPlayerRequest) String() string {
 func (*UnfollowPlayerRequest) ProtoMessage() {}
 
 func (x *UnfollowPlayerRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protosocial_social_request_proto_msgTypes[3]
+	mi := &file_protosocial_social_request_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -231,7 +278,7 @@ func (x *UnfollowPlayerRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnfollowPlayerRequest.ProtoReflect.Descriptor instead.
 func (*UnfollowPlayerRequest) Descriptor() ([]byte, []int) {
-	return file_protosocial_social_request_proto_rawDescGZIP(), []int{3}
+	return file_protosocial_social_request_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *UnfollowPlayerRequest) GetTargetId() string {
@@ -251,7 +298,7 @@ type GetPlayerIdentityRequest struct {
 
 func (x *GetPlayerIdentityRequest) Reset() {
 	*x = GetPlayerIdentityRequest{}
-	mi := &file_protosocial_social_request_proto_msgTypes[4]
+	mi := &file_protosocial_social_request_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -263,7 +310,7 @@ func (x *GetPlayerIdentityRequest) String() string {
 func (*GetPlayerIdentityRequest) ProtoMessage() {}
 
 func (x *GetPlayerIdentityRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protosocial_social_request_proto_msgTypes[4]
+	mi := &file_protosocial_social_request_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -276,7 +323,7 @@ func (x *GetPlayerIdentityRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetPlayerIdentityRequest.ProtoReflect.Descriptor instead.
 func (*GetPlayerIdentityRequest) Descriptor() ([]byte, []int) {
-	return file_protosocial_social_request_proto_rawDescGZIP(), []int{4}
+	return file_protosocial_social_request_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *GetPlayerIdentityRequest) GetPlayerId() string {
@@ -302,18 +349,21 @@ const file_protosocial_social_request_proto_rawDesc = "" +
 	"\x13FollowPlayerRequest\x12\x1b\n" +
 	"\ttarget_id\x18\x02 \x01(\tR\btargetId\"2\n" +
 	"\x13PlayerSearchRequest\x12\x1b\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"2\n" +
+	"\x13RentalSearchRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"4\n" +
 	"\x15UnfollowPlayerRequest\x12\x1b\n" +
 	"\ttarget_id\x18\x02 \x01(\tR\btargetId\"T\n" +
 	"\x18GetPlayerIdentityRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1b\n" +
-	"\ttarget_id\x18\x02 \x01(\tR\btargetId*]\n" +
+	"\ttarget_id\x18\x02 \x01(\tR\btargetId*q\n" +
 	"\x11SocialRequestType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x12\n" +
 	"\rFOLLOW_PLAYER\x10\xf8\n" +
 	"\x12\x14\n" +
 	"\x0fUNFOLLOW_PLAYER\x10\xdc\v\x12\x14\n" +
-	"\x0fGET_SOCIAL_DATA\x10\xd4\x16BOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
+	"\x0fGET_SOCIAL_DATA\x10\xd4\x16\x12\x12\n" +
+	"\rRENTAL_SEARCH\x10\xb8\x17BOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
 
 var (
 	file_protosocial_social_request_proto_rawDescOnce sync.Once
@@ -328,14 +378,15 @@ func file_protosocial_social_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protosocial_social_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protosocial_social_request_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_protosocial_social_request_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protosocial_social_request_proto_goTypes = []any{
 	(SocialRequestType)(0),               // 0: presence.SocialRequestType
 	(*FetchPlayerSocialInfoRequest)(nil), // 1: presence.FetchPlayerSocialInfoRequest
 	(*FollowPlayerRequest)(nil),          // 2: presence.FollowPlayerRequest
 	(*PlayerSearchRequest)(nil),          // 3: presence.PlayerSearchRequest
-	(*UnfollowPlayerRequest)(nil),        // 4: presence.UnfollowPlayerRequest
-	(*GetPlayerIdentityRequest)(nil),     // 5: presence.GetPlayerIdentityRequest
+	(*RentalSearchRequest)(nil),          // 4: presence.RentalSearchRequest
+	(*UnfollowPlayerRequest)(nil),        // 5: presence.UnfollowPlayerRequest
+	(*GetPlayerIdentityRequest)(nil),     // 6: presence.GetPlayerIdentityRequest
 }
 var file_protosocial_social_request_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -356,7 +407,7 @@ func file_protosocial_social_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protosocial_social_request_proto_rawDesc), len(file_protosocial_social_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   5,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

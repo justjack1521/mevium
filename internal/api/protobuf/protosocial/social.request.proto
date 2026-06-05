@@ -10,6 +10,7 @@ enum SocialRequestType {
   FOLLOW_PLAYER = 1400;
   UNFOLLOW_PLAYER = 1500;
   GET_SOCIAL_DATA = 2900;
+  RENTAL_SEARCH = 3000;
 }
 
 message FetchPlayerSocialInfoRequest {
@@ -20,6 +21,10 @@ message FollowPlayerRequest {
 }
 
 message PlayerSearchRequest {
+  string player_id = 1;
+}
+
+message RentalSearchRequest {
   string player_id = 1;
 }
 

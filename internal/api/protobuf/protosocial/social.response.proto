@@ -22,6 +22,10 @@ message PlayerSearchResponse {
   presence.ProtoPlayerSocialInfo player_info = 1;
 }
 
+message RentalSearchResponse {
+  repeated presence.ProtoPlayerSocialInfo players = 1;
+}
+
 message UnfollowPlayerResponse {
   string player_id = 1;
 }
