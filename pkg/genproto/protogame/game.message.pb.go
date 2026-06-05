@@ -377,6 +377,50 @@ func (x *PlayerRentalCardUpdateMessage) GetOverBoostLevel() int32 {
 	return 0
 }
 
+type PlayerBattleRentalMessage struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	RentalCard    string                 `protobuf:"bytes,1,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *PlayerBattleRentalMessage) Reset() {
+	*x = PlayerBattleRentalMessage{}
+	mi := &file_protogame_game_message_proto_msgTypes[5]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PlayerBattleRentalMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerBattleRentalMessage) ProtoMessage() {}
+
+func (x *PlayerBattleRentalMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_game_message_proto_msgTypes[5]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerBattleRentalMessage.ProtoReflect.Descriptor instead.
+func (*PlayerBattleRentalMessage) Descriptor() ([]byte, []int) {
+	return file_protogame_game_message_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *PlayerBattleRentalMessage) GetRentalCard() string {
+	if x != nil {
+		return x.RentalCard
+	}
+	return ""
+}
+
 var File_protogame_game_message_proto protoreflect.FileDescriptor
 
 const file_protogame_game_message_proto_rawDesc = "" +
@@ -413,7 +457,10 @@ const file_protogame_game_message_proto_rawDesc = "" +
 	"card_level\x18\x03 \x01(\x05R\tcardLevel\x12#\n" +
 	"\rability_level\x18\x04 \x01(\x05R\fabilityLevel\x12,\n" +
 	"\x12extra_skill_unlock\x18\x05 \x01(\x05R\x10extraSkillUnlock\x12(\n" +
-	"\x10over_boost_level\x18\x06 \x01(\x05R\x0eoverBoostLevelB7Z5github.com/justjack1521/mevium/pkg/genproto/protogameb\x06proto3"
+	"\x10over_boost_level\x18\x06 \x01(\x05R\x0eoverBoostLevel\"<\n" +
+	"\x19PlayerBattleRentalMessage\x12\x1f\n" +
+	"\vrental_card\x18\x01 \x01(\tR\n" +
+	"rentalCardB7Z5github.com/justjack1521/mevium/pkg/genproto/protogameb\x06proto3"
 
 var (
 	file_protogame_game_message_proto_rawDescOnce sync.Once
@@ -427,13 +474,14 @@ func file_protogame_game_message_proto_rawDescGZIP() []byte {
 	return file_protogame_game_message_proto_rawDescData
 }
 
-var file_protogame_game_message_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_protogame_game_message_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protogame_game_message_proto_goTypes = []any{
 	(*BattleCompleteMessage)(nil),         // 0: game.BattleCompleteMessage
 	(*PlayerProfileCreatedMessage)(nil),   // 1: game.PlayerProfileCreatedMessage
 	(*PlayerProfileDeletedMessage)(nil),   // 2: game.PlayerProfileDeletedMessage
 	(*PlayerLevelUpdateMessage)(nil),      // 3: game.PlayerLevelUpdateMessage
 	(*PlayerRentalCardUpdateMessage)(nil), // 4: game.PlayerRentalCardUpdateMessage
+	(*PlayerBattleRentalMessage)(nil),     // 5: game.PlayerBattleRentalMessage
 }
 var file_protogame_game_message_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -454,7 +502,7 @@ func file_protogame_game_message_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_game_message_proto_rawDesc), len(file_protogame_game_message_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
