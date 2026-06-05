@@ -40,7 +40,8 @@ message ProtoGameData {
 
 }
 
-message ProtoAchievementData {
+message ProtoAchievementData
+{
   string id =1;
   bool complete = 2;
   bool claimed = 3;

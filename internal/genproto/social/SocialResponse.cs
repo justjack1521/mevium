@@ -25,18 +25,27 @@ namespace Mobius.Proto.Social {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFwcm90b3NvY2lhbC9zb2NpYWwucmVzcG9uc2UucHJvdG8SCHByZXNlbmNl",
-            "Ghhwcm90b3NvY2lhbC9zb2NpYWwucHJvdG8iTAoURm9sbG93UGxheWVyUmVz",
-            "cG9uc2USNAoLcGxheWVyX2luZm8YASABKAsyHy5wcmVzZW5jZS5Qcm90b1Bs",
-            "YXllclNvY2lhbEluZm8iTAoUUGxheWVyU2VhcmNoUmVzcG9uc2USNAoLcGxh",
-            "eWVyX2luZm8YASABKAsyHy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lhbElu",
-            "Zm8iKwoWVW5mb2xsb3dQbGF5ZXJSZXNwb25zZRIRCglwbGF5ZXJfaWQYASAB",
-            "KAkiUwoZR2V0UGxheWVySWRlbnRpdHlSZXNwb25zZRI2Cg9wbGF5ZXJfaWRl",
-            "bnRpdHkYASABKAsyHS5wcmVzZW5jZS5Qcm90b1BsYXllcklkZW50aXR5Qk9a",
-            "N2dpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
-            "cHJvdG9zb2NpYWyqAhNNb2JpdXMuUHJvdG8uU29jaWFsYgZwcm90bzM="));
+            "Ghhwcm90b3NvY2lhbC9zb2NpYWwucHJvdG8i3AIKHUZldGNoUGxheWVyU29j",
+            "aWFsSW5mb1Jlc3BvbnNlEjcKDmZvbGxvd2luZ19saXN0GAEgAygLMh8ucHJl",
+            "c2VuY2UuUHJvdG9QbGF5ZXJTb2NpYWxJbmZvEjYKDWZvbGxvd2VyX2xpc3QY",
+            "AiADKAsyHy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lhbEluZm8SNwoOcmVu",
+            "dGFsX3BsYXllcnMYAyADKAsyHy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lh",
+            "bEluZm8SWAoRcmVudGFsX3BvcHVsYXJpdHkYBCADKAsyPS5wcmVzZW5jZS5G",
+            "ZXRjaFBsYXllclNvY2lhbEluZm9SZXNwb25zZS5SZW50YWxQb3B1bGFyaXR5",
+            "RW50cnkaNwoVUmVudGFsUG9wdWxhcml0eUVudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoBToCOAEiTAoURm9sbG93UGxheWVyUmVzcG9uc2USNAoL",
+            "cGxheWVyX2luZm8YASABKAsyHy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lh",
+            "bEluZm8iTAoUUGxheWVyU2VhcmNoUmVzcG9uc2USNAoLcGxheWVyX2luZm8Y",
+            "ASABKAsyHy5wcmVzZW5jZS5Qcm90b1BsYXllclNvY2lhbEluZm8iKwoWVW5m",
+            "b2xsb3dQbGF5ZXJSZXNwb25zZRIRCglwbGF5ZXJfaWQYASABKAkiUwoZR2V0",
+            "UGxheWVySWRlbnRpdHlSZXNwb25zZRI2Cg9wbGF5ZXJfaWRlbnRpdHkYASAB",
+            "KAsyHS5wcmVzZW5jZS5Qcm90b1BsYXllcklkZW50aXR5Qk9aN2dpdGh1Yi5j",
+            "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9zb2Np",
+            "YWyqAhNNb2JpdXMuUHJvdG8uU29jaWFsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Social.SocialReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FetchPlayerSocialInfoResponse), global::Mobius.Proto.Social.FetchPlayerSocialInfoResponse.Parser, new[]{ "FollowingList", "FollowerList", "RentalPlayers", "RentalPopularity" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.FollowPlayerResponse), global::Mobius.Proto.Social.FollowPlayerResponse.Parser, new[]{ "PlayerInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.PlayerSearchResponse), global::Mobius.Proto.Social.PlayerSearchResponse.Parser, new[]{ "PlayerInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.UnfollowPlayerResponse), global::Mobius.Proto.Social.UnfollowPlayerResponse.Parser, new[]{ "PlayerId" }, null, null, null, null),
@@ -47,6 +56,242 @@ namespace Mobius.Proto.Social {
 
   }
   #region Messages
+  public sealed partial class FetchPlayerSocialInfoResponse : pb::IMessage<FetchPlayerSocialInfoResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FetchPlayerSocialInfoResponse> _parser = new pb::MessageParser<FetchPlayerSocialInfoResponse>(() => new FetchPlayerSocialInfoResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FetchPlayerSocialInfoResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FetchPlayerSocialInfoResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FetchPlayerSocialInfoResponse(FetchPlayerSocialInfoResponse other) : this() {
+      followingList_ = other.followingList_.Clone();
+      followerList_ = other.followerList_.Clone();
+      rentalPlayers_ = other.rentalPlayers_.Clone();
+      rentalPopularity_ = other.rentalPopularity_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FetchPlayerSocialInfoResponse Clone() {
+      return new FetchPlayerSocialInfoResponse(this);
+    }
+
+    /// <summary>Field number for the "following_list" field.</summary>
+    public const int FollowingListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> _repeated_followingList_codec
+        = pb::FieldCodec.ForMessage(10, global::Mobius.Proto.Social.ProtoPlayerSocialInfo.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> followingList_ = new pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> FollowingList {
+      get { return followingList_; }
+    }
+
+    /// <summary>Field number for the "follower_list" field.</summary>
+    public const int FollowerListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> _repeated_followerList_codec
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Social.ProtoPlayerSocialInfo.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> followerList_ = new pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> FollowerList {
+      get { return followerList_; }
+    }
+
+    /// <summary>Field number for the "rental_players" field.</summary>
+    public const int RentalPlayersFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> _repeated_rentalPlayers_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Social.ProtoPlayerSocialInfo.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> rentalPlayers_ = new pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Social.ProtoPlayerSocialInfo> RentalPlayers {
+      get { return rentalPlayers_; }
+    }
+
+    /// <summary>Field number for the "rental_popularity" field.</summary>
+    public const int RentalPopularityFieldNumber = 4;
+    private static readonly pbc::MapField<string, int>.Codec _map_rentalPopularity_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 34);
+    private readonly pbc::MapField<string, int> rentalPopularity_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, int> RentalPopularity {
+      get { return rentalPopularity_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FetchPlayerSocialInfoResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FetchPlayerSocialInfoResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!followingList_.Equals(other.followingList_)) return false;
+      if(!followerList_.Equals(other.followerList_)) return false;
+      if(!rentalPlayers_.Equals(other.rentalPlayers_)) return false;
+      if (!RentalPopularity.Equals(other.RentalPopularity)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= followingList_.GetHashCode();
+      hash ^= followerList_.GetHashCode();
+      hash ^= rentalPlayers_.GetHashCode();
+      hash ^= RentalPopularity.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      followingList_.WriteTo(output, _repeated_followingList_codec);
+      followerList_.WriteTo(output, _repeated_followerList_codec);
+      rentalPlayers_.WriteTo(output, _repeated_rentalPlayers_codec);
+      rentalPopularity_.WriteTo(output, _map_rentalPopularity_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      followingList_.WriteTo(ref output, _repeated_followingList_codec);
+      followerList_.WriteTo(ref output, _repeated_followerList_codec);
+      rentalPlayers_.WriteTo(ref output, _repeated_rentalPlayers_codec);
+      rentalPopularity_.WriteTo(ref output, _map_rentalPopularity_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += followingList_.CalculateSize(_repeated_followingList_codec);
+      size += followerList_.CalculateSize(_repeated_followerList_codec);
+      size += rentalPlayers_.CalculateSize(_repeated_rentalPlayers_codec);
+      size += rentalPopularity_.CalculateSize(_map_rentalPopularity_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FetchPlayerSocialInfoResponse other) {
+      if (other == null) {
+        return;
+      }
+      followingList_.Add(other.followingList_);
+      followerList_.Add(other.followerList_);
+      rentalPlayers_.Add(other.rentalPlayers_);
+      rentalPopularity_.Add(other.rentalPopularity_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            followingList_.AddEntriesFrom(input, _repeated_followingList_codec);
+            break;
+          }
+          case 18: {
+            followerList_.AddEntriesFrom(input, _repeated_followerList_codec);
+            break;
+          }
+          case 26: {
+            rentalPlayers_.AddEntriesFrom(input, _repeated_rentalPlayers_codec);
+            break;
+          }
+          case 34: {
+            rentalPopularity_.AddEntriesFrom(input, _map_rentalPopularity_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            followingList_.AddEntriesFrom(ref input, _repeated_followingList_codec);
+            break;
+          }
+          case 18: {
+            followerList_.AddEntriesFrom(ref input, _repeated_followerList_codec);
+            break;
+          }
+          case 26: {
+            rentalPlayers_.AddEntriesFrom(ref input, _repeated_rentalPlayers_codec);
+            break;
+          }
+          case 34: {
+            rentalPopularity_.AddEntriesFrom(ref input, _map_rentalPopularity_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class FollowPlayerResponse : pb::IMessage<FollowPlayerResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -59,7 +304,7 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -240,7 +485,7 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -421,7 +666,7 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -593,7 +838,7 @@ namespace Mobius.Proto.Social {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Mobius.Proto.Social.SocialResponseReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
