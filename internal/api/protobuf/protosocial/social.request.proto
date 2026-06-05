@@ -25,7 +25,7 @@ message PlayerSearchRequest {
 }
 
 message RentalSearchRequest {
-  string player_id = 1;
+  string card_id = 1;
 }
 
 message UnfollowPlayerRequest {

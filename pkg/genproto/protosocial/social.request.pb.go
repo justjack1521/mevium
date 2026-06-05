@@ -202,7 +202,7 @@ func (x *PlayerSearchRequest) GetPlayerId() string {
 
 type RentalSearchRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	CardId        string                 `protobuf:"bytes,1,opt,name=card_id,json=cardId,proto3" json:"card_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -237,9 +237,9 @@ func (*RentalSearchRequest) Descriptor() ([]byte, []int) {
 	return file_protosocial_social_request_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *RentalSearchRequest) GetPlayerId() string {
+func (x *RentalSearchRequest) GetCardId() string {
 	if x != nil {
-		return x.PlayerId
+		return x.CardId
 	}
 	return ""
 }
@@ -349,9 +349,9 @@ const file_protosocial_social_request_proto_rawDesc = "" +
 	"\x13FollowPlayerRequest\x12\x1b\n" +
 	"\ttarget_id\x18\x02 \x01(\tR\btargetId\"2\n" +
 	"\x13PlayerSearchRequest\x12\x1b\n" +
-	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"2\n" +
-	"\x13RentalSearchRequest\x12\x1b\n" +
-	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"4\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\".\n" +
+	"\x13RentalSearchRequest\x12\x17\n" +
+	"\acard_id\x18\x01 \x01(\tR\x06cardId\"4\n" +
 	"\x15UnfollowPlayerRequest\x12\x1b\n" +
 	"\ttarget_id\x18\x02 \x01(\tR\btargetId\"T\n" +
 	"\x18GetPlayerIdentityRequest\x12\x1b\n" +
