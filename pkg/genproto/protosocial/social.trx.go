@@ -37,3 +37,15 @@ func NewFetchPlayerSocialInfo(bytes []byte) (*FetchPlayerSocialInfoRequest, erro
 func (x *FetchPlayerSocialInfoResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewRentalSearchRequest(bytes []byte) (*RentalSearchRequest, error) {
+	req := &RentalSearchRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *RentalSearchResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
