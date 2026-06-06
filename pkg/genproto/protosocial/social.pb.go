@@ -290,6 +290,66 @@ func (x *ProtoPlayerInfo) GetRentalCard() *protoidentity.ProtoAbilityCardIdentit
 	return nil
 }
 
+type ProtoDeckRecommendation struct {
+	state         protoimpl.MessageState                    `protogen:"open.v1"`
+	JobCardId     string                                    `protobuf:"bytes,1,opt,name=job_card_id,json=jobCardId,proto3" json:"job_card_id,omitempty"`
+	Cards         []*protoidentity.ProtoAbilityCardIdentity `protobuf:"bytes,2,rep,name=cards,proto3" json:"cards,omitempty"`
+	Score         int64                                     `protobuf:"varint,3,opt,name=score,proto3" json:"score,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoDeckRecommendation) Reset() {
+	*x = ProtoDeckRecommendation{}
+	mi := &file_protosocial_social_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoDeckRecommendation) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoDeckRecommendation) ProtoMessage() {}
+
+func (x *ProtoDeckRecommendation) ProtoReflect() protoreflect.Message {
+	mi := &file_protosocial_social_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoDeckRecommendation.ProtoReflect.Descriptor instead.
+func (*ProtoDeckRecommendation) Descriptor() ([]byte, []int) {
+	return file_protosocial_social_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ProtoDeckRecommendation) GetJobCardId() string {
+	if x != nil {
+		return x.JobCardId
+	}
+	return ""
+}
+
+func (x *ProtoDeckRecommendation) GetCards() []*protoidentity.ProtoAbilityCardIdentity {
+	if x != nil {
+		return x.Cards
+	}
+	return nil
+}
+
+func (x *ProtoDeckRecommendation) GetScore() int64 {
+	if x != nil {
+		return x.Score
+	}
+	return 0
+}
+
 var File_protosocial_social_proto protoreflect.FileDescriptor
 
 const file_protosocial_social_proto_rawDesc = "" +
@@ -324,7 +384,11 @@ const file_protosocial_social_proto_rawDesc = "" +
 	"\x11sub_weapon_unlock\x18\n" +
 	" \x01(\x05R\x0fsubWeaponUnlock\x12C\n" +
 	"\vrental_card\x18\v \x01(\v2\".identity.ProtoAbilityCardIdentityR\n" +
-	"rentalCardBOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
+	"rentalCard\"\x89\x01\n" +
+	"\x17ProtoDeckRecommendation\x12\x1e\n" +
+	"\vjob_card_id\x18\x01 \x01(\tR\tjobCardId\x128\n" +
+	"\x05cards\x18\x02 \x03(\v2\".identity.ProtoAbilityCardIdentityR\x05cards\x12\x14\n" +
+	"\x05score\x18\x03 \x01(\x03R\x05scoreBOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
 
 var (
 	file_protosocial_social_proto_rawDescOnce sync.Once
@@ -338,21 +402,23 @@ func file_protosocial_social_proto_rawDescGZIP() []byte {
 	return file_protosocial_social_proto_rawDescData
 }
 
-var file_protosocial_social_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_protosocial_social_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_protosocial_social_proto_goTypes = []any{
 	(*ProtoPlayerIdentity)(nil),                    // 0: presence.ProtoPlayerIdentity
 	(*ProtoPlayerSocialInfo)(nil),                  // 1: presence.ProtoPlayerSocialInfo
 	(*ProtoPlayerInfo)(nil),                        // 2: presence.ProtoPlayerInfo
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 3: identity.ProtoAbilityCardIdentity
+	(*ProtoDeckRecommendation)(nil),                // 3: presence.ProtoDeckRecommendation
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 4: identity.ProtoAbilityCardIdentity
 }
 var file_protosocial_social_proto_depIdxs = []int32{
 	2, // 0: presence.ProtoPlayerSocialInfo.player_info:type_name -> presence.ProtoPlayerInfo
-	3, // 1: presence.ProtoPlayerInfo.rental_card:type_name -> identity.ProtoAbilityCardIdentity
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	4, // 1: presence.ProtoPlayerInfo.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	4, // 2: presence.ProtoDeckRecommendation.cards:type_name -> identity.ProtoAbilityCardIdentity
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_protosocial_social_proto_init() }
@@ -366,7 +432,7 @@ func file_protosocial_social_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protosocial_social_proto_rawDesc), len(file_protosocial_social_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

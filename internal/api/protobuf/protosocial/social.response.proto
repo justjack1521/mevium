@@ -33,3 +33,7 @@ message UnfollowPlayerResponse {
 message GetPlayerIdentityResponse {
   ProtoPlayerIdentity player_identity = 1;
 }
+
+message GetDeckRecommendationResponse {
+  repeated presence.ProtoDeckRecommendation results = 1;
+}

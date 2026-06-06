@@ -30,12 +30,14 @@ namespace Mobius.Proto.Social {
             "ZXF1ZXN0EhEKCXBsYXllcl9pZBgBIAEoCSImChNSZW50YWxTZWFyY2hSZXF1",
             "ZXN0Eg8KB2NhcmRfaWQYASABKAkiKgoVVW5mb2xsb3dQbGF5ZXJSZXF1ZXN0",
             "EhEKCXRhcmdldF9pZBgCIAEoCSJAChhHZXRQbGF5ZXJJZGVudGl0eVJlcXVl",
-            "c3QSEQoJcGxheWVyX2lkGAEgASgJEhEKCXRhcmdldF9pZBgCIAEoCSpxChFT",
-            "b2NpYWxSZXF1ZXN0VHlwZRIICgROT05FEAASEgoNRk9MTE9XX1BMQVlFUhD4",
-            "ChIUCg9VTkZPTExPV19QTEFZRVIQ3AsSFAoPR0VUX1NPQ0lBTF9EQVRBENQW",
-            "EhIKDVJFTlRBTF9TRUFSQ0gQuBdCT1o3Z2l0aHViLmNvbS9qdXN0amFjazE1",
-            "MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b3NvY2lhbKoCE01vYml1cy5Q",
-            "cm90by5Tb2NpYWxiBnByb3RvMw=="));
+            "c3QSEQoJcGxheWVyX2lkGAEgASgJEhEKCXRhcmdldF9pZBgCIAEoCSIzChxH",
+            "ZXREZWNrUmVjb21tZW5kYXRpb25SZXF1ZXN0EhMKC2pvYl9jYXJkX2lkGAEg",
+            "ASgJKpABChFTb2NpYWxSZXF1ZXN0VHlwZRIICgROT05FEAASEgoNRk9MTE9X",
+            "X1BMQVlFUhD4ChIUCg9VTkZPTExPV19QTEFZRVIQ3AsSFAoPR0VUX1NPQ0lB",
+            "TF9EQVRBENQWEhIKDVJFTlRBTF9TRUFSQ0gQuBcSHQoYR0VUX0RFQ0tfUkVD",
+            "T01NRU5EQVRJT05TEKAfQk9aN2dpdGh1Yi5jb20vanVzdGphY2sxNTIxL21l",
+            "dml1bS9wa2cvZ2VucHJvdG8vcHJvdG9zb2NpYWyqAhNNb2JpdXMuUHJvdG8u",
+            "U29jaWFsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Social.SocialRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -44,7 +46,8 @@ namespace Mobius.Proto.Social {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.PlayerSearchRequest), global::Mobius.Proto.Social.PlayerSearchRequest.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.RentalSearchRequest), global::Mobius.Proto.Social.RentalSearchRequest.Parser, new[]{ "CardId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.UnfollowPlayerRequest), global::Mobius.Proto.Social.UnfollowPlayerRequest.Parser, new[]{ "TargetId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.GetPlayerIdentityRequest), global::Mobius.Proto.Social.GetPlayerIdentityRequest.Parser, new[]{ "PlayerId", "TargetId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.GetPlayerIdentityRequest), global::Mobius.Proto.Social.GetPlayerIdentityRequest.Parser, new[]{ "PlayerId", "TargetId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Social.GetDeckRecommendationRequest), global::Mobius.Proto.Social.GetDeckRecommendationRequest.Parser, new[]{ "JobCardId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -57,6 +60,7 @@ namespace Mobius.Proto.Social {
     [pbr::OriginalName("UNFOLLOW_PLAYER")] UnfollowPlayer = 1500,
     [pbr::OriginalName("GET_SOCIAL_DATA")] GetSocialData = 2900,
     [pbr::OriginalName("RENTAL_SEARCH")] RentalSearch = 3000,
+    [pbr::OriginalName("GET_DECK_RECOMMENDATIONS")] GetDeckRecommendations = 4000,
   }
 
   #endregion
@@ -1085,6 +1089,178 @@ namespace Mobius.Proto.Social {
           }
           case 18: {
             TargetId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetDeckRecommendationRequest : pb::IMessage<GetDeckRecommendationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetDeckRecommendationRequest> _parser = new pb::MessageParser<GetDeckRecommendationRequest>(() => new GetDeckRecommendationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetDeckRecommendationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Social.SocialRequestReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetDeckRecommendationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetDeckRecommendationRequest(GetDeckRecommendationRequest other) : this() {
+      jobCardId_ = other.jobCardId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetDeckRecommendationRequest Clone() {
+      return new GetDeckRecommendationRequest(this);
+    }
+
+    /// <summary>Field number for the "job_card_id" field.</summary>
+    public const int JobCardIdFieldNumber = 1;
+    private string jobCardId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string JobCardId {
+      get { return jobCardId_; }
+      set {
+        jobCardId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetDeckRecommendationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetDeckRecommendationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (JobCardId != other.JobCardId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (JobCardId.Length != 0) hash ^= JobCardId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (JobCardId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(JobCardId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (JobCardId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(JobCardId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (JobCardId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(JobCardId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetDeckRecommendationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.JobCardId.Length != 0) {
+        JobCardId = other.JobCardId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            JobCardId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            JobCardId = input.ReadString();
             break;
           }
         }

@@ -92,5 +92,3 @@ message ProtoPlayerAbilityCardLoadout {
   ProtoAbilityCardIdentity identity = 1;
   ProtoAbilityCardStat stat = 2;
 }
-
-

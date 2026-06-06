@@ -20,12 +20,13 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MeviusSocialService_FollowPlayer_FullMethodName          = "/service.MeviusSocialService/FollowPlayer"
-	MeviusSocialService_UnfollowPlayer_FullMethodName        = "/service.MeviusSocialService/UnfollowPlayer"
-	MeviusSocialService_PlayerSearch_FullMethodName          = "/service.MeviusSocialService/PlayerSearch"
-	MeviusSocialService_FetchPlayerSocialInfo_FullMethodName = "/service.MeviusSocialService/FetchPlayerSocialInfo"
-	MeviusSocialService_GetPlayerIdentity_FullMethodName     = "/service.MeviusSocialService/GetPlayerIdentity"
-	MeviusSocialService_RentalSearch_FullMethodName          = "/service.MeviusSocialService/RentalSearch"
+	MeviusSocialService_FollowPlayer_FullMethodName           = "/service.MeviusSocialService/FollowPlayer"
+	MeviusSocialService_UnfollowPlayer_FullMethodName         = "/service.MeviusSocialService/UnfollowPlayer"
+	MeviusSocialService_PlayerSearch_FullMethodName           = "/service.MeviusSocialService/PlayerSearch"
+	MeviusSocialService_FetchPlayerSocialInfo_FullMethodName  = "/service.MeviusSocialService/FetchPlayerSocialInfo"
+	MeviusSocialService_GetPlayerIdentity_FullMethodName      = "/service.MeviusSocialService/GetPlayerIdentity"
+	MeviusSocialService_RentalSearch_FullMethodName           = "/service.MeviusSocialService/RentalSearch"
+	MeviusSocialService_GetDeckRecommendations_FullMethodName = "/service.MeviusSocialService/GetDeckRecommendations"
 )
 
 // MeviusSocialServiceClient is the client API for MeviusSocialService service.
@@ -38,6 +39,7 @@ type MeviusSocialServiceClient interface {
 	FetchPlayerSocialInfo(ctx context.Context, in *protosocial.FetchPlayerSocialInfoRequest, opts ...grpc.CallOption) (*protosocial.FetchPlayerSocialInfoResponse, error)
 	GetPlayerIdentity(ctx context.Context, in *protosocial.GetPlayerIdentityRequest, opts ...grpc.CallOption) (*protosocial.GetPlayerIdentityResponse, error)
 	RentalSearch(ctx context.Context, in *protosocial.RentalSearchRequest, opts ...grpc.CallOption) (*protosocial.RentalSearchResponse, error)
+	GetDeckRecommendations(ctx context.Context, in *protosocial.GetDeckRecommendationRequest, opts ...grpc.CallOption) (*protosocial.GetDeckRecommendationResponse, error)
 }
 
 type meviusSocialServiceClient struct {
@@ -102,6 +104,15 @@ func (c *meviusSocialServiceClient) RentalSearch(ctx context.Context, in *protos
 	return out, nil
 }
 
+func (c *meviusSocialServiceClient) GetDeckRecommendations(ctx context.Context, in *protosocial.GetDeckRecommendationRequest, opts ...grpc.CallOption) (*protosocial.GetDeckRecommendationResponse, error) {
+	out := new(protosocial.GetDeckRecommendationResponse)
+	err := c.cc.Invoke(ctx, MeviusSocialService_GetDeckRecommendations_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusSocialServiceServer is the server API for MeviusSocialService service.
 // All implementations should embed UnimplementedMeviusSocialServiceServer
 // for forward compatibility
@@ -112,6 +123,7 @@ type MeviusSocialServiceServer interface {
 	FetchPlayerSocialInfo(context.Context, *protosocial.FetchPlayerSocialInfoRequest) (*protosocial.FetchPlayerSocialInfoResponse, error)
 	GetPlayerIdentity(context.Context, *protosocial.GetPlayerIdentityRequest) (*protosocial.GetPlayerIdentityResponse, error)
 	RentalSearch(context.Context, *protosocial.RentalSearchRequest) (*protosocial.RentalSearchResponse, error)
+	GetDeckRecommendations(context.Context, *protosocial.GetDeckRecommendationRequest) (*protosocial.GetDeckRecommendationResponse, error)
 }
 
 // UnimplementedMeviusSocialServiceServer should be embedded to have forward compatible implementations.
@@ -135,6 +147,9 @@ func (UnimplementedMeviusSocialServiceServer) GetPlayerIdentity(context.Context,
 }
 func (UnimplementedMeviusSocialServiceServer) RentalSearch(context.Context, *protosocial.RentalSearchRequest) (*protosocial.RentalSearchResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RentalSearch not implemented")
+}
+func (UnimplementedMeviusSocialServiceServer) GetDeckRecommendations(context.Context, *protosocial.GetDeckRecommendationRequest) (*protosocial.GetDeckRecommendationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDeckRecommendations not implemented")
 }
 
 // UnsafeMeviusSocialServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -256,6 +271,24 @@ func _MeviusSocialService_RentalSearch_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusSocialService_GetDeckRecommendations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protosocial.GetDeckRecommendationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusSocialServiceServer).GetDeckRecommendations(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusSocialService_GetDeckRecommendations_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusSocialServiceServer).GetDeckRecommendations(ctx, req.(*protosocial.GetDeckRecommendationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusSocialService_ServiceDesc is the grpc.ServiceDesc for MeviusSocialService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -286,6 +319,10 @@ var MeviusSocialService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RentalSearch",
 			Handler:    _MeviusSocialService_RentalSearch_Handler,
+		},
+		{
+			MethodName: "GetDeckRecommendations",
+			Handler:    _MeviusSocialService_GetDeckRecommendations_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

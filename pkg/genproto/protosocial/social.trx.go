@@ -49,3 +49,15 @@ func NewRentalSearchRequest(bytes []byte) (*RentalSearchRequest, error) {
 func (x *RentalSearchResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGetDeckRecommendationRequest(bytes []byte) (*GetDeckRecommendationRequest, error) {
+	req := &GetDeckRecommendationRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GetDeckRecommendationResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

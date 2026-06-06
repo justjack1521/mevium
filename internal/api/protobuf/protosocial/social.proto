@@ -35,3 +35,9 @@ message ProtoPlayerInfo {
   int32 sub_weapon_unlock = 10;
   identity.ProtoAbilityCardIdentity rental_card = 11;
 }
+
+message ProtoDeckRecommendation {
+  string job_card_id = 1;
+  repeated identity.ProtoAbilityCardIdentity cards = 2;
+  int64 score = 3;
+}

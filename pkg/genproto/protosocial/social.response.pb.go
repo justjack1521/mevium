@@ -309,6 +309,50 @@ func (x *GetPlayerIdentityResponse) GetPlayerIdentity() *ProtoPlayerIdentity {
 	return nil
 }
 
+type GetDeckRecommendationResponse struct {
+	state         protoimpl.MessageState     `protogen:"open.v1"`
+	Results       []*ProtoDeckRecommendation `protobuf:"bytes,1,rep,name=results,proto3" json:"results,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetDeckRecommendationResponse) Reset() {
+	*x = GetDeckRecommendationResponse{}
+	mi := &file_protosocial_social_response_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetDeckRecommendationResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDeckRecommendationResponse) ProtoMessage() {}
+
+func (x *GetDeckRecommendationResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protosocial_social_response_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDeckRecommendationResponse.ProtoReflect.Descriptor instead.
+func (*GetDeckRecommendationResponse) Descriptor() ([]byte, []int) {
+	return file_protosocial_social_response_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *GetDeckRecommendationResponse) GetResults() []*ProtoDeckRecommendation {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
 var File_protosocial_social_response_proto protoreflect.FileDescriptor
 
 const file_protosocial_social_response_proto_rawDesc = "" +
@@ -333,7 +377,9 @@ const file_protosocial_social_response_proto_rawDesc = "" +
 	"\x16UnfollowPlayerResponse\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"c\n" +
 	"\x19GetPlayerIdentityResponse\x12F\n" +
-	"\x0fplayer_identity\x18\x01 \x01(\v2\x1d.presence.ProtoPlayerIdentityR\x0eplayerIdentityBOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
+	"\x0fplayer_identity\x18\x01 \x01(\v2\x1d.presence.ProtoPlayerIdentityR\x0eplayerIdentity\"\\\n" +
+	"\x1dGetDeckRecommendationResponse\x12;\n" +
+	"\aresults\x18\x01 \x03(\v2!.presence.ProtoDeckRecommendationR\aresultsBOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
 
 var (
 	file_protosocial_social_response_proto_rawDescOnce sync.Once
@@ -347,7 +393,7 @@ func file_protosocial_social_response_proto_rawDescGZIP() []byte {
 	return file_protosocial_social_response_proto_rawDescData
 }
 
-var file_protosocial_social_response_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_protosocial_social_response_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_protosocial_social_response_proto_goTypes = []any{
 	(*FetchPlayerSocialInfoResponse)(nil), // 0: presence.FetchPlayerSocialInfoResponse
 	(*FollowPlayerResponse)(nil),          // 1: presence.FollowPlayerResponse
@@ -355,24 +401,27 @@ var file_protosocial_social_response_proto_goTypes = []any{
 	(*RentalSearchResponse)(nil),          // 3: presence.RentalSearchResponse
 	(*UnfollowPlayerResponse)(nil),        // 4: presence.UnfollowPlayerResponse
 	(*GetPlayerIdentityResponse)(nil),     // 5: presence.GetPlayerIdentityResponse
-	nil,                                   // 6: presence.FetchPlayerSocialInfoResponse.RentalPopularityEntry
-	(*ProtoPlayerSocialInfo)(nil),         // 7: presence.ProtoPlayerSocialInfo
-	(*ProtoPlayerIdentity)(nil),           // 8: presence.ProtoPlayerIdentity
+	(*GetDeckRecommendationResponse)(nil), // 6: presence.GetDeckRecommendationResponse
+	nil,                                   // 7: presence.FetchPlayerSocialInfoResponse.RentalPopularityEntry
+	(*ProtoPlayerSocialInfo)(nil),         // 8: presence.ProtoPlayerSocialInfo
+	(*ProtoPlayerIdentity)(nil),           // 9: presence.ProtoPlayerIdentity
+	(*ProtoDeckRecommendation)(nil),       // 10: presence.ProtoDeckRecommendation
 }
 var file_protosocial_social_response_proto_depIdxs = []int32{
-	7, // 0: presence.FetchPlayerSocialInfoResponse.following_list:type_name -> presence.ProtoPlayerSocialInfo
-	7, // 1: presence.FetchPlayerSocialInfoResponse.follower_list:type_name -> presence.ProtoPlayerSocialInfo
-	7, // 2: presence.FetchPlayerSocialInfoResponse.rental_players:type_name -> presence.ProtoPlayerSocialInfo
-	6, // 3: presence.FetchPlayerSocialInfoResponse.rental_popularity:type_name -> presence.FetchPlayerSocialInfoResponse.RentalPopularityEntry
-	7, // 4: presence.FollowPlayerResponse.player_info:type_name -> presence.ProtoPlayerSocialInfo
-	7, // 5: presence.PlayerSearchResponse.player_info:type_name -> presence.ProtoPlayerSocialInfo
-	7, // 6: presence.RentalSearchResponse.players:type_name -> presence.ProtoPlayerSocialInfo
-	8, // 7: presence.GetPlayerIdentityResponse.player_identity:type_name -> presence.ProtoPlayerIdentity
-	8, // [8:8] is the sub-list for method output_type
-	8, // [8:8] is the sub-list for method input_type
-	8, // [8:8] is the sub-list for extension type_name
-	8, // [8:8] is the sub-list for extension extendee
-	0, // [0:8] is the sub-list for field type_name
+	8,  // 0: presence.FetchPlayerSocialInfoResponse.following_list:type_name -> presence.ProtoPlayerSocialInfo
+	8,  // 1: presence.FetchPlayerSocialInfoResponse.follower_list:type_name -> presence.ProtoPlayerSocialInfo
+	8,  // 2: presence.FetchPlayerSocialInfoResponse.rental_players:type_name -> presence.ProtoPlayerSocialInfo
+	7,  // 3: presence.FetchPlayerSocialInfoResponse.rental_popularity:type_name -> presence.FetchPlayerSocialInfoResponse.RentalPopularityEntry
+	8,  // 4: presence.FollowPlayerResponse.player_info:type_name -> presence.ProtoPlayerSocialInfo
+	8,  // 5: presence.PlayerSearchResponse.player_info:type_name -> presence.ProtoPlayerSocialInfo
+	8,  // 6: presence.RentalSearchResponse.players:type_name -> presence.ProtoPlayerSocialInfo
+	9,  // 7: presence.GetPlayerIdentityResponse.player_identity:type_name -> presence.ProtoPlayerIdentity
+	10, // 8: presence.GetDeckRecommendationResponse.results:type_name -> presence.ProtoDeckRecommendation
+	9,  // [9:9] is the sub-list for method output_type
+	9,  // [9:9] is the sub-list for method input_type
+	9,  // [9:9] is the sub-list for extension type_name
+	9,  // [9:9] is the sub-list for extension extendee
+	0,  // [0:9] is the sub-list for field type_name
 }
 
 func init() { file_protosocial_social_response_proto_init() }
@@ -387,7 +436,7 @@ func file_protosocial_social_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protosocial_social_response_proto_rawDesc), len(file_protosocial_social_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

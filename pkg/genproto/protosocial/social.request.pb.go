@@ -24,11 +24,12 @@ const (
 type SocialRequestType int32
 
 const (
-	SocialRequestType_NONE            SocialRequestType = 0
-	SocialRequestType_FOLLOW_PLAYER   SocialRequestType = 1400
-	SocialRequestType_UNFOLLOW_PLAYER SocialRequestType = 1500
-	SocialRequestType_GET_SOCIAL_DATA SocialRequestType = 2900
-	SocialRequestType_RENTAL_SEARCH   SocialRequestType = 3000
+	SocialRequestType_NONE                     SocialRequestType = 0
+	SocialRequestType_FOLLOW_PLAYER            SocialRequestType = 1400
+	SocialRequestType_UNFOLLOW_PLAYER          SocialRequestType = 1500
+	SocialRequestType_GET_SOCIAL_DATA          SocialRequestType = 2900
+	SocialRequestType_RENTAL_SEARCH            SocialRequestType = 3000
+	SocialRequestType_GET_DECK_RECOMMENDATIONS SocialRequestType = 4000
 )
 
 // Enum value maps for SocialRequestType.
@@ -39,13 +40,15 @@ var (
 		1500: "UNFOLLOW_PLAYER",
 		2900: "GET_SOCIAL_DATA",
 		3000: "RENTAL_SEARCH",
+		4000: "GET_DECK_RECOMMENDATIONS",
 	}
 	SocialRequestType_value = map[string]int32{
-		"NONE":            0,
-		"FOLLOW_PLAYER":   1400,
-		"UNFOLLOW_PLAYER": 1500,
-		"GET_SOCIAL_DATA": 2900,
-		"RENTAL_SEARCH":   3000,
+		"NONE":                     0,
+		"FOLLOW_PLAYER":            1400,
+		"UNFOLLOW_PLAYER":          1500,
+		"GET_SOCIAL_DATA":          2900,
+		"RENTAL_SEARCH":            3000,
+		"GET_DECK_RECOMMENDATIONS": 4000,
 	}
 )
 
@@ -340,6 +343,50 @@ func (x *GetPlayerIdentityRequest) GetTargetId() string {
 	return ""
 }
 
+type GetDeckRecommendationRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	JobCardId     string                 `protobuf:"bytes,1,opt,name=job_card_id,json=jobCardId,proto3" json:"job_card_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetDeckRecommendationRequest) Reset() {
+	*x = GetDeckRecommendationRequest{}
+	mi := &file_protosocial_social_request_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetDeckRecommendationRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDeckRecommendationRequest) ProtoMessage() {}
+
+func (x *GetDeckRecommendationRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protosocial_social_request_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDeckRecommendationRequest.ProtoReflect.Descriptor instead.
+func (*GetDeckRecommendationRequest) Descriptor() ([]byte, []int) {
+	return file_protosocial_social_request_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *GetDeckRecommendationRequest) GetJobCardId() string {
+	if x != nil {
+		return x.JobCardId
+	}
+	return ""
+}
+
 var File_protosocial_social_request_proto protoreflect.FileDescriptor
 
 const file_protosocial_social_request_proto_rawDesc = "" +
@@ -356,14 +403,17 @@ const file_protosocial_social_request_proto_rawDesc = "" +
 	"\ttarget_id\x18\x02 \x01(\tR\btargetId\"T\n" +
 	"\x18GetPlayerIdentityRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1b\n" +
-	"\ttarget_id\x18\x02 \x01(\tR\btargetId*q\n" +
+	"\ttarget_id\x18\x02 \x01(\tR\btargetId\">\n" +
+	"\x1cGetDeckRecommendationRequest\x12\x1e\n" +
+	"\vjob_card_id\x18\x01 \x01(\tR\tjobCardId*\x90\x01\n" +
 	"\x11SocialRequestType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x12\n" +
 	"\rFOLLOW_PLAYER\x10\xf8\n" +
 	"\x12\x14\n" +
 	"\x0fUNFOLLOW_PLAYER\x10\xdc\v\x12\x14\n" +
 	"\x0fGET_SOCIAL_DATA\x10\xd4\x16\x12\x12\n" +
-	"\rRENTAL_SEARCH\x10\xb8\x17BOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
+	"\rRENTAL_SEARCH\x10\xb8\x17\x12\x1d\n" +
+	"\x18GET_DECK_RECOMMENDATIONS\x10\xa0\x1fBOZ7github.com/justjack1521/mevium/pkg/genproto/protosocial\xaa\x02\x13Mobius.Proto.Socialb\x06proto3"
 
 var (
 	file_protosocial_social_request_proto_rawDescOnce sync.Once
@@ -378,7 +428,7 @@ func file_protosocial_social_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protosocial_social_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protosocial_social_request_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_protosocial_social_request_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_protosocial_social_request_proto_goTypes = []any{
 	(SocialRequestType)(0),               // 0: presence.SocialRequestType
 	(*FetchPlayerSocialInfoRequest)(nil), // 1: presence.FetchPlayerSocialInfoRequest
@@ -387,6 +437,7 @@ var file_protosocial_social_request_proto_goTypes = []any{
 	(*RentalSearchRequest)(nil),          // 4: presence.RentalSearchRequest
 	(*UnfollowPlayerRequest)(nil),        // 5: presence.UnfollowPlayerRequest
 	(*GetPlayerIdentityRequest)(nil),     // 6: presence.GetPlayerIdentityRequest
+	(*GetDeckRecommendationRequest)(nil), // 7: presence.GetDeckRecommendationRequest
 }
 var file_protosocial_social_request_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -407,7 +458,7 @@ func file_protosocial_social_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protosocial_social_request_proto_rawDesc), len(file_protosocial_social_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   6,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

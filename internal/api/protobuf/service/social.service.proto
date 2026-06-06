@@ -15,5 +15,5 @@ service MeviusSocialService {
 
   rpc GetPlayerIdentity(presence.GetPlayerIdentityRequest) returns (presence.GetPlayerIdentityResponse) {}
   rpc RentalSearch(presence.RentalSearchRequest) returns (presence.RentalSearchResponse) {}
-
+  rpc GetDeckRecommendations(presence.GetDeckRecommendationRequest) returns (presence.GetDeckRecommendationResponse) {}
 }

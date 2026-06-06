@@ -11,6 +11,7 @@ enum SocialRequestType {
   UNFOLLOW_PLAYER = 1500;
   GET_SOCIAL_DATA = 2900;
   RENTAL_SEARCH = 3000;
+  GET_DECK_RECOMMENDATIONS = 4000;
 }
 
 message FetchPlayerSocialInfoRequest {
@@ -35,4 +36,8 @@ message UnfollowPlayerRequest {
 message GetPlayerIdentityRequest {
   string player_id = 1;
   string target_id = 2;
+}
+
+message GetDeckRecommendationRequest {
+  string job_card_id = 1;
 }
