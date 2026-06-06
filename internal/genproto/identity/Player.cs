@@ -63,19 +63,19 @@ namespace Mobius.Proto.Identity {
             "GAogASgFEkoKDmF1dG9fYWJpbGl0aWVzGAsgAygLMjIuaWRlbnRpdHkuUHJv",
             "dG9QbGF5ZXJXZWFwb25TdGF0LkF1dG9BYmlsaXRpZXNFbnRyeRo0ChJBdXRv",
             "QWJpbGl0aWVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4",
-            "ASKwAQoYUHJvdG9BYmlsaXR5Q2FyZElkZW50aXR5EhcKD2FiaWxpdHlfY2Fy",
+            "ASLGAQoYUHJvdG9BYmlsaXR5Q2FyZElkZW50aXR5EhcKD2FiaWxpdHlfY2Fy",
             "ZF9pZBgBIAEoCRIaChJhYmlsaXR5X2NhcmRfbGV2ZWwYAiABKAUSFQoNYWJp",
             "bGl0eV9sZXZlbBgDIAEoBRIaChJleHRyYV9za2lsbF91bmxvY2sYBCABKAUS",
             "GAoQb3Zlcl9ib29zdF9sZXZlbBgFIAEoBRISCgpzbG90X2luZGV4GAYgASgF",
-            "IpcBChRQcm90b0FiaWxpdHlDYXJkU3RhdBJJCg5hdXRvX2FiaWxpdGllcxgG",
-            "IAMoCzIxLmlkZW50aXR5LlByb3RvQWJpbGl0eUNhcmRTdGF0LkF1dG9BYmls",
-            "aXRpZXNFbnRyeRo0ChJBdXRvQWJpbGl0aWVzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgFOgI4ASKDAQodUHJvdG9QbGF5ZXJBYmlsaXR5Q2Fy",
-            "ZExvYWRvdXQSNAoIaWRlbnRpdHkYASABKAsyIi5pZGVudGl0eS5Qcm90b0Fi",
-            "aWxpdHlDYXJkSWRlbnRpdHkSLAoEc3RhdBgCIAEoCzIeLmlkZW50aXR5LlBy",
-            "b3RvQWJpbGl0eUNhcmRTdGF0QlNaOWdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
-            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9pZGVudGl0eaoCFU1vYml1cy5Q",
-            "cm90by5JZGVudGl0eWIGcHJvdG8z"));
+            "EhQKDGJhc2VfY2FyZF9pZBgHIAEoCSKXAQoUUHJvdG9BYmlsaXR5Q2FyZFN0",
+            "YXQSSQoOYXV0b19hYmlsaXRpZXMYBiADKAsyMS5pZGVudGl0eS5Qcm90b0Fi",
+            "aWxpdHlDYXJkU3RhdC5BdXRvQWJpbGl0aWVzRW50cnkaNAoSQXV0b0FiaWxp",
+            "dGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEigwEK",
+            "HVByb3RvUGxheWVyQWJpbGl0eUNhcmRMb2Fkb3V0EjQKCGlkZW50aXR5GAEg",
+            "ASgLMiIuaWRlbnRpdHkuUHJvdG9BYmlsaXR5Q2FyZElkZW50aXR5EiwKBHN0",
+            "YXQYAiABKAsyHi5pZGVudGl0eS5Qcm90b0FiaWxpdHlDYXJkU3RhdEJTWjln",
+            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
+            "b3RvaWRlbnRpdHmqAhVNb2JpdXMuUHJvdG8uSWRlbnRpdHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +88,7 @@ namespace Mobius.Proto.Identity {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity), global::Mobius.Proto.Identity.ProtoPlayerWeaponIdentity.Parser, new[]{ "WeaponId", "SubWeaponUnlock" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout), global::Mobius.Proto.Identity.ProtoPlayerWeaponLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerWeaponStat), global::Mobius.Proto.Identity.ProtoPlayerWeaponStat.Parser, new[]{ "HpStatMod", "AttackStatMod", "BreakStatMod", "MagicStatMod", "SpeedStatMod", "DefenseStatMod", "CritChanceStatMod", "UltimateBoost", "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardIdentity), global::Mobius.Proto.Identity.ProtoAbilityCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardIdentity), global::Mobius.Proto.Identity.ProtoAbilityCardIdentity.Parser, new[]{ "AbilityCardId", "AbilityCardLevel", "AbilityLevel", "ExtraSkillUnlock", "OverBoostLevel", "SlotIndex", "BaseCardId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoAbilityCardStat), global::Mobius.Proto.Identity.ProtoAbilityCardStat.Parser, new[]{ "AutoAbilities" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout), global::Mobius.Proto.Identity.ProtoPlayerAbilityCardLoadout.Parser, new[]{ "Identity", "Stat" }, null, null, null, null)
           }));
@@ -2896,6 +2896,7 @@ namespace Mobius.Proto.Identity {
       extraSkillUnlock_ = other.extraSkillUnlock_;
       overBoostLevel_ = other.overBoostLevel_;
       slotIndex_ = other.slotIndex_;
+      baseCardId_ = other.baseCardId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2970,6 +2971,17 @@ namespace Mobius.Proto.Identity {
       }
     }
 
+    /// <summary>Field number for the "base_card_id" field.</summary>
+    public const int BaseCardIdFieldNumber = 7;
+    private string baseCardId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BaseCardId {
+      get { return baseCardId_; }
+      set {
+        baseCardId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoAbilityCardIdentity);
@@ -2989,6 +3001,7 @@ namespace Mobius.Proto.Identity {
       if (ExtraSkillUnlock != other.ExtraSkillUnlock) return false;
       if (OverBoostLevel != other.OverBoostLevel) return false;
       if (SlotIndex != other.SlotIndex) return false;
+      if (BaseCardId != other.BaseCardId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3001,6 +3014,7 @@ namespace Mobius.Proto.Identity {
       if (ExtraSkillUnlock != 0) hash ^= ExtraSkillUnlock.GetHashCode();
       if (OverBoostLevel != 0) hash ^= OverBoostLevel.GetHashCode();
       if (SlotIndex != 0) hash ^= SlotIndex.GetHashCode();
+      if (BaseCardId.Length != 0) hash ^= BaseCardId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3041,6 +3055,10 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(48);
         output.WriteInt32(SlotIndex);
       }
+      if (BaseCardId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(BaseCardId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3074,6 +3092,10 @@ namespace Mobius.Proto.Identity {
         output.WriteRawTag(48);
         output.WriteInt32(SlotIndex);
       }
+      if (BaseCardId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(BaseCardId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3100,6 +3122,9 @@ namespace Mobius.Proto.Identity {
       }
       if (SlotIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SlotIndex);
+      }
+      if (BaseCardId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BaseCardId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3129,6 +3154,9 @@ namespace Mobius.Proto.Identity {
       }
       if (other.SlotIndex != 0) {
         SlotIndex = other.SlotIndex;
+      }
+      if (other.BaseCardId.Length != 0) {
+        BaseCardId = other.BaseCardId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3168,6 +3196,10 @@ namespace Mobius.Proto.Identity {
             SlotIndex = input.ReadInt32();
             break;
           }
+          case 58: {
+            BaseCardId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3204,6 +3236,10 @@ namespace Mobius.Proto.Identity {
           }
           case 48: {
             SlotIndex = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            BaseCardId = input.ReadString();
             break;
           }
         }
