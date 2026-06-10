@@ -42,40 +42,41 @@ namespace Mobius.Proto.Multi {
             "ASgFEicKBnBsYXllchgEIAEoCzIXLm11bHRpLlByb3RvTG9iYnlQbGF5ZXIi",
             "TwoVU3RhbXBTZW5kTm90aWZpY2F0aW9uEhAKCGxvYmJ5X2lkGAEgASgJEhAK",
             "CHN0YW1wX2lkGAIgASgJEhIKCnBhcnR5X3Nsb3QYAyABKAUiKAoVR2FtZVN0",
-            "YXJ0Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkiWQobR2FtZVBsYXll",
-            "clJlYWR5Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkSEwoLcGFydHlf",
-            "aW5kZXgYAiABKAUSFAoMcGxheWVyX2luZGV4GAMgASgFIigKFUdhbWVSZWFk",
-            "eU5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJIsABCh1HYW1lRW5xdWV1",
-            "ZUFjdGlvbk5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJEhMKC3BhcnR5",
-            "X2luZGV4GAIgASgFEhQKDHBsYXllcl9pbmRleBgDIAEoBRIrCgZhY3Rpb24Y",
-            "BCABKA4yGy5tdWx0aS5HYW1lUGxheWVyQWN0aW9uVHlwZRISCgpzbG90X2lu",
-            "ZGV4GAUgASgFEg4KBnRhcmdldBgGIAEoBRISCgplbGVtZW50X2lkGAcgASgJ",
-            "IlsKHUdhbWVEZXF1ZXVlQWN0aW9uTm90aWZpY2F0aW9uEg8KB2dhbWVfaWQY",
-            "ASABKAkSEwoLcGFydHlfaW5kZXgYAiABKAUSFAoMcGxheWVyX2luZGV4GAMg",
-            "ASgFInMKGkdhbWVMb2NrQWN0aW9uTm90aWZpY2F0aW9uEg8KB2dhbWVfaWQY",
-            "ASABKAkSEwoLcGFydHlfaW5kZXgYAiABKAUSFAoMcGxheWVyX2luZGV4GAMg",
-            "ASgFEhkKEWFjdGlvbl9sb2NrX2luZGV4GAQgASgFImMKIkdhbWVBY3Rpb25R",
-            "dWV1ZUNvbmZpcm1Ob3RpZmljYXRpb24SPQoTcGFydHlfYWN0aW9uX3F1ZXVl",
-            "cxgBIAMoCzIgLm11bHRpLlByb3RvR2FtZVBhcnR5QWN0aW9uUXVldWUiWgoc",
-            "R2FtZVBsYXllclJlbW92ZU5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJ",
-            "EhMKC3BhcnR5X2luZGV4GAIgASgFEhQKDHBsYXllcl9pbmRleBgDIAEoBSrc",
-            "AgoaTXVsdGlMb2JieU5vdGlmaWNhdGlvblR5cGUSFQoRTE9CQllfTk9USUZZ",
-            "X05PTkUQABIhCh1MT0JCWV9OT1RJRllfUEFSVElDSVBBTlRfSk9JThBkEiMK",
-            "HkxPQkJZX05PVElGWV9QQVJUSUNJUEFOVF9MRUFWRRDIARIjCh5MT0JCWV9O",
-            "T1RJRllfUEFSVElDSVBBTlRfUkVBRFkQrAISJQogTE9CQllfTk9USUZZX1BB",
-            "UlRJQ0lQQU5UX1VOUkVBRFkQkAMSHAoXTE9CQllfTk9USUZZX1NUQU1QX1NF",
-            "TkQQ9AMSKQokTE9CQllfTk9USUZZX1BBUlRJQ0lQQU5UX0RFQ0tfQ0hBTkdF",
-            "ENgEEhgKE0xPQkJZX05PVElGWV9DQU5DRUwQvAUSFwoSTE9CQllfTk9USUZZ",
-            "X1NUQVJUEKAGEhcKEkxPQkJZX05PVElGWV9SRUFEWRCEByqfAgoZTXVsdGlH",
-            "YW1lTm90aWZpY2F0aW9uVHlwZRIUChBHQU1FX05PVElGWV9OT05FEAASFQoR",
-            "R0FNRV9OT1RJRllfU1RBUlQQZBIWChFHQU1FX05PVElGWV9SRUFEWRDIARId",
-            "ChhHQU1FX05PVElGWV9QTEFZRVJfUkVBRFkQ+gESHgoZR0FNRV9OT1RJRllf",
-            "UExBWUVSX1JFTU9WRRCTAhIfChpHQU1FX05PVElGWV9FTlFVRVVFX0FDVElP",
-            "ThDcCxIfChpHQU1FX05PVElGWV9ERVFVRVVFX0FDVElPThDADBIcChdHQU1F",
-            "X05PVElGWV9MT0NLX0FDVElPThCkDRIeChlHQU1FX05PVElGWV9RVUVVRV9D",
-            "T05GSVJNEIgOQk1aNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
-            "a2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIG",
-            "cHJvdG8z"));
+            "YXJ0Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkiJgoTR2FtZUVuZE5v",
+            "dGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJIlkKG0dhbWVQbGF5ZXJSZWFk",
+            "eU5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJEhMKC3BhcnR5X2luZGV4",
+            "GAIgASgFEhQKDHBsYXllcl9pbmRleBgDIAEoBSIoChVHYW1lUmVhZHlOb3Rp",
+            "ZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEoCSLAAQodR2FtZUVucXVldWVBY3Rp",
+            "b25Ob3RpZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEoCRITCgtwYXJ0eV9pbmRl",
+            "eBgCIAEoBRIUCgxwbGF5ZXJfaW5kZXgYAyABKAUSKwoGYWN0aW9uGAQgASgO",
+            "MhsubXVsdGkuR2FtZVBsYXllckFjdGlvblR5cGUSEgoKc2xvdF9pbmRleBgF",
+            "IAEoBRIOCgZ0YXJnZXQYBiABKAUSEgoKZWxlbWVudF9pZBgHIAEoCSJbCh1H",
+            "YW1lRGVxdWV1ZUFjdGlvbk5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJ",
+            "EhMKC3BhcnR5X2luZGV4GAIgASgFEhQKDHBsYXllcl9pbmRleBgDIAEoBSJz",
+            "ChpHYW1lTG9ja0FjdGlvbk5vdGlmaWNhdGlvbhIPCgdnYW1lX2lkGAEgASgJ",
+            "EhMKC3BhcnR5X2luZGV4GAIgASgFEhQKDHBsYXllcl9pbmRleBgDIAEoBRIZ",
+            "ChFhY3Rpb25fbG9ja19pbmRleBgEIAEoBSJjCiJHYW1lQWN0aW9uUXVldWVD",
+            "b25maXJtTm90aWZpY2F0aW9uEj0KE3BhcnR5X2FjdGlvbl9xdWV1ZXMYASAD",
+            "KAsyIC5tdWx0aS5Qcm90b0dhbWVQYXJ0eUFjdGlvblF1ZXVlIloKHEdhbWVQ",
+            "bGF5ZXJSZW1vdmVOb3RpZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEoCRITCgtw",
+            "YXJ0eV9pbmRleBgCIAEoBRIUCgxwbGF5ZXJfaW5kZXgYAyABKAUq3AIKGk11",
+            "bHRpTG9iYnlOb3RpZmljYXRpb25UeXBlEhUKEUxPQkJZX05PVElGWV9OT05F",
+            "EAASIQodTE9CQllfTk9USUZZX1BBUlRJQ0lQQU5UX0pPSU4QZBIjCh5MT0JC",
+            "WV9OT1RJRllfUEFSVElDSVBBTlRfTEVBVkUQyAESIwoeTE9CQllfTk9USUZZ",
+            "X1BBUlRJQ0lQQU5UX1JFQURZEKwCEiUKIExPQkJZX05PVElGWV9QQVJUSUNJ",
+            "UEFOVF9VTlJFQURZEJADEhwKF0xPQkJZX05PVElGWV9TVEFNUF9TRU5EEPQD",
+            "EikKJExPQkJZX05PVElGWV9QQVJUSUNJUEFOVF9ERUNLX0NIQU5HRRDYBBIY",
+            "ChNMT0JCWV9OT1RJRllfQ0FOQ0VMELwFEhcKEkxPQkJZX05PVElGWV9TVEFS",
+            "VBCgBhIXChJMT0JCWV9OT1RJRllfUkVBRFkQhAcqtQIKGU11bHRpR2FtZU5v",
+            "dGlmaWNhdGlvblR5cGUSFAoQR0FNRV9OT1RJRllfTk9ORRAAEhUKEUdBTUVf",
+            "Tk9USUZZX1NUQVJUEGQSFgoRR0FNRV9OT1RJRllfUkVBRFkQyAESHQoYR0FN",
+            "RV9OT1RJRllfUExBWUVSX1JFQURZEPoBEh4KGUdBTUVfTk9USUZZX1BMQVlF",
+            "Ul9SRU1PVkUQkwISHwoaR0FNRV9OT1RJRllfRU5RVUVVRV9BQ1RJT04Q3AsS",
+            "HwoaR0FNRV9OT1RJRllfREVRVUVVRV9BQ1RJT04QwAwSHAoXR0FNRV9OT1RJ",
+            "RllfTE9DS19BQ1RJT04QpA0SHgoZR0FNRV9OT1RJRllfUVVFVUVfQ09ORklS",
+            "TRCIDhIUCg9HQU1FX05PVElGWV9FTkQQuEVCTVo2Z2l0aHViLmNvbS9qdXN0",
+            "amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b211bHRpqgISTW9i",
+            "aXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,6 +90,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantDeckChangeNotification), global::Mobius.Proto.Multi.ParticipantDeckChangeNotification.Parser, new[]{ "LobbyId", "PlayerSlot", "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.StampSendNotification), global::Mobius.Proto.Multi.StampSendNotification.Parser, new[]{ "LobbyId", "StampId", "PartySlot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameStartNotification), global::Mobius.Proto.Multi.GameStartNotification.Parser, new[]{ "GameId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEndNotification), global::Mobius.Proto.Multi.GameEndNotification.Parser, new[]{ "GameId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReadyNotification), global::Mobius.Proto.Multi.GamePlayerReadyNotification.Parser, new[]{ "GameId", "PartyIndex", "PlayerIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyNotification), global::Mobius.Proto.Multi.GameReadyNotification.Parser, new[]{ "GameId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionNotification), global::Mobius.Proto.Multi.GameEnqueueActionNotification.Parser, new[]{ "GameId", "PartyIndex", "PlayerIndex", "Action", "SlotIndex", "Target", "ElementId" }, null, null, null, null),
@@ -125,6 +127,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("GAME_NOTIFY_DEQUEUE_ACTION")] GameNotifyDequeueAction = 1600,
     [pbr::OriginalName("GAME_NOTIFY_LOCK_ACTION")] GameNotifyLockAction = 1700,
     [pbr::OriginalName("GAME_NOTIFY_QUEUE_CONFIRM")] GameNotifyQueueConfirm = 1800,
+    [pbr::OriginalName("GAME_NOTIFY_END")] GameNotifyEnd = 8888,
   }
 
   #endregion
@@ -2336,6 +2339,178 @@ namespace Mobius.Proto.Multi {
 
   }
 
+  public sealed partial class GameEndNotification : pb::IMessage<GameEndNotification>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameEndNotification> _parser = new pb::MessageParser<GameEndNotification>(() => new GameEndNotification());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GameEndNotification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameEndNotification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameEndNotification(GameEndNotification other) : this() {
+      gameId_ = other.gameId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameEndNotification Clone() {
+      return new GameEndNotification(this);
+    }
+
+    /// <summary>Field number for the "game_id" field.</summary>
+    public const int GameIdFieldNumber = 1;
+    private string gameId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string GameId {
+      get { return gameId_; }
+      set {
+        gameId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GameEndNotification);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GameEndNotification other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GameId != other.GameId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GameId.Length != 0) hash ^= GameId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GameId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GameId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (GameId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GameId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GameEndNotification other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GameId.Length != 0) {
+        GameId = other.GameId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            GameId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GameId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class GamePlayerReadyNotification : pb::IMessage<GamePlayerReadyNotification>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2348,7 +2523,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2592,7 +2767,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2764,7 +2939,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3152,7 +3327,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3396,7 +3571,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3676,7 +3851,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3837,7 +4012,7 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

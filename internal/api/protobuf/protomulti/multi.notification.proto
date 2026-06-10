@@ -79,9 +79,14 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_DEQUEUE_ACTION = 1600;
   GAME_NOTIFY_LOCK_ACTION = 1700;
   GAME_NOTIFY_QUEUE_CONFIRM = 1800;
+  GAME_NOTIFY_END = 8888;
 }
 
 message GameStartNotification {
+  string game_id = 1;
+}
+
+message GameEndNotification {
   string game_id = 1;
 }
 

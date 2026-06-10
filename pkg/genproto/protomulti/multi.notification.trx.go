@@ -205,3 +205,15 @@ func NewGameActionQueueConfirmNotification(bytes []byte) (*GameActionQueueConfir
 func (x *GameActionQueueConfirmNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameEndNotification(bytes []byte) (*GameEndNotification, error) {
+	req := &GameEndNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameEndNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
