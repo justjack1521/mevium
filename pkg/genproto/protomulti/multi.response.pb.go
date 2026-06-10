@@ -781,6 +781,42 @@ func (*ParticipantUnreadyResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{19}
 }
 
+type GameHPConsensusResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GameHPConsensusResponse) Reset() {
+	*x = GameHPConsensusResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[20]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GameHPConsensusResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GameHPConsensusResponse) ProtoMessage() {}
+
+func (x *GameHPConsensusResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[20]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GameHPConsensusResponse.ProtoReflect.Descriptor instead.
+func (*GameHPConsensusResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{20}
+}
+
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_response_proto_rawDesc = "" +
@@ -810,7 +846,8 @@ const file_protomulti_multi_response_proto_rawDesc = "" +
 	"\x1aParticipantUnwatchResponse\"\x1a\n" +
 	"\x18ParticipantReadyResponse\"\x19\n" +
 	"\x17ParticipantFindResponse\"\x1c\n" +
-	"\x1aParticipantUnreadyResponseBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\x1aParticipantUnreadyResponse\"\x19\n" +
+	"\x17GameHPConsensusResponseBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_response_proto_rawDescOnce sync.Once
@@ -824,7 +861,7 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_response_proto_rawDescData
 }
 
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
 var file_protomulti_multi_response_proto_goTypes = []any{
 	(*GetGameResponse)(nil),            // 0: multi.GetGameResponse
 	(*GameReadyPlayerResponse)(nil),    // 1: multi.GameReadyPlayerResponse
@@ -846,12 +883,13 @@ var file_protomulti_multi_response_proto_goTypes = []any{
 	(*ParticipantReadyResponse)(nil),   // 17: multi.ParticipantReadyResponse
 	(*ParticipantFindResponse)(nil),    // 18: multi.ParticipantFindResponse
 	(*ParticipantUnreadyResponse)(nil), // 19: multi.ParticipantUnreadyResponse
-	(*ProtoGameSummary)(nil),           // 20: multi.ProtoGameSummary
-	(*ProtoLobbySummary)(nil),          // 21: multi.ProtoLobbySummary
+	(*GameHPConsensusResponse)(nil),    // 20: multi.GameHPConsensusResponse
+	(*ProtoGameSummary)(nil),           // 21: multi.ProtoGameSummary
+	(*ProtoLobbySummary)(nil),          // 22: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	20, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
-	21, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	21, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
+	22, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
 	2,  // [2:2] is the sub-list for method output_type
 	2,  // [2:2] is the sub-list for method input_type
 	2,  // [2:2] is the sub-list for extension type_name
@@ -871,7 +909,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_response_proto_rawDesc), len(file_protomulti_multi_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   20,
+			NumMessages:   21,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

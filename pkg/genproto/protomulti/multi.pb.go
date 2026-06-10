@@ -906,6 +906,58 @@ func (x *ProtoGameAction) GetElementId() string {
 	return ""
 }
 
+type ProtoGameEnemyHP struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	EnemyIndex    int32                  `protobuf:"varint,1,opt,name=enemy_index,json=enemyIndex,proto3" json:"enemy_index,omitempty"`
+	Hp            int32                  `protobuf:"varint,2,opt,name=hp,proto3" json:"hp,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoGameEnemyHP) Reset() {
+	*x = ProtoGameEnemyHP{}
+	mi := &file_protomulti_multi_proto_msgTypes[12]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoGameEnemyHP) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoGameEnemyHP) ProtoMessage() {}
+
+func (x *ProtoGameEnemyHP) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_proto_msgTypes[12]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoGameEnemyHP.ProtoReflect.Descriptor instead.
+func (*ProtoGameEnemyHP) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *ProtoGameEnemyHP) GetEnemyIndex() int32 {
+	if x != nil {
+		return x.EnemyIndex
+	}
+	return 0
+}
+
+func (x *ProtoGameEnemyHP) GetHp() int32 {
+	if x != nil {
+		return x.Hp
+	}
+	return 0
+}
+
 var File_protomulti_multi_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_proto_rawDesc = "" +
@@ -984,7 +1036,11 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\n" +
 	"slot_index\x18\x03 \x01(\x05R\tslotIndex\x12\x1d\n" +
 	"\n" +
-	"element_id\x18\x04 \x01(\tR\telementId*k\n" +
+	"element_id\x18\x04 \x01(\tR\telementId\"C\n" +
+	"\x10ProtoGameEnemyHP\x12\x1f\n" +
+	"\venemy_index\x18\x01 \x01(\x05R\n" +
+	"enemyIndex\x12\x0e\n" +
+	"\x02hp\x18\x02 \x01(\x05R\x02hp*k\n" +
 	"\x14GamePlayerActionType\x12\x1b\n" +
 	"\x17PLAYER_ACTION_TYPE_NONE\x10\x00\x12\x11\n" +
 	"\rNORMAL_ATTACK\x10\x01\x12\x10\n" +
@@ -1004,7 +1060,7 @@ func file_protomulti_multi_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
 var file_protomulti_multi_proto_goTypes = []any{
 	(GamePlayerActionType)(0),                        // 0: multi.GamePlayerActionType
 	(*ProtoLobbySummary)(nil),                        // 1: multi.ProtoLobbySummary
@@ -1019,20 +1075,21 @@ var file_protomulti_multi_proto_goTypes = []any{
 	(*ProtoGamePartyActionQueue)(nil),                // 10: multi.ProtoGamePartyActionQueue
 	(*ProtoGamePlayerActionQueue)(nil),               // 11: multi.ProtoGamePlayerActionQueue
 	(*ProtoGameAction)(nil),                          // 12: multi.ProtoGameAction
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 13: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 14: identity.ProtoPlayerLoadoutIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),         // 15: identity.ProtoPlayerLoadout
+	(*ProtoGameEnemyHP)(nil),                         // 13: multi.ProtoGameEnemyHP
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 14: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 15: identity.ProtoPlayerLoadoutIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),         // 16: identity.ProtoPlayerLoadout
 }
 var file_protomulti_multi_proto_depIdxs = []int32{
 	2,  // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
 	3,  // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
-	13, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
-	14, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	14, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
+	15, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
 	6,  // 4: multi.ProtoGameInstance.options:type_name -> multi.ProtoGameInstanceOptions
 	4,  // 5: multi.ProtoGameInstanceOptions.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
 	8,  // 6: multi.ProtoGameSummary.parties:type_name -> multi.ProtoGamePartySummary
 	9,  // 7: multi.ProtoGamePartySummary.players:type_name -> multi.ProtoGamePlayer
-	15, // 8: multi.ProtoGamePlayer.loadout:type_name -> identity.ProtoPlayerLoadout
+	16, // 8: multi.ProtoGamePlayer.loadout:type_name -> identity.ProtoPlayerLoadout
 	11, // 9: multi.ProtoGamePartyActionQueue.player_action_queue:type_name -> multi.ProtoGamePlayerActionQueue
 	12, // 10: multi.ProtoGamePlayerActionQueue.actions:type_name -> multi.ProtoGameAction
 	0,  // 11: multi.ProtoGameAction.action:type_name -> multi.GamePlayerActionType
@@ -1054,7 +1111,7 @@ func file_protomulti_multi_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_proto_rawDesc), len(file_protomulti_multi_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   12,
+			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

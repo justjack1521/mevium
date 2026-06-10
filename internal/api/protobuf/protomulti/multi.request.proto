@@ -43,6 +43,10 @@ message GameReadyPlayerRequest {
 
 }
 
+message GameHPConsensusRequest {
+  repeated ProtoGameEnemyHP enemies = 1;
+}
+
 message GameEnqueueActionRequest {
   ProtoGameAction action = 1;
 }

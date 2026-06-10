@@ -99,3 +99,8 @@ message ProtoGameAction {
   int32 slot_index = 3;
   string element_id = 4;
 }
+
+message ProtoGameEnemyHP {
+  int32 enemy_index = 1;
+  int32 hp = 2;
+}

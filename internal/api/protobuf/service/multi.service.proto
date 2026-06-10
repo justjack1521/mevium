@@ -33,5 +33,5 @@ service MeviusMultiService {
   rpc EnqueueAction(multi.GameEnqueueActionRequest) returns (multi.GameEnqueueActionResponse) {}
   rpc DequeueAction(multi.GameDequeueActionRequest) returns (multi.GameDequeueActionResponse) {}
   rpc LockAction(multi.GameLockActionRequest) returns (multi.GameLockActionResponse) {}
-
+  rpc SubmitHPConsensus(multi.GameHPConsensusRequest) returns (multi.GameHPConsensusResponse);
 }

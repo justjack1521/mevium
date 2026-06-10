@@ -79,6 +79,7 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_DEQUEUE_ACTION = 1600;
   GAME_NOTIFY_LOCK_ACTION = 1700;
   GAME_NOTIFY_QUEUE_CONFIRM = 1800;
+  GAME_NOTIFY_HP_CONSENSUS = 2000;
   GAME_NOTIFY_END = 8888;
 }
 
@@ -98,6 +99,11 @@ message GamePlayerReadyNotification {
 
 message GameReadyNotification {
   string game_id = 1;
+}
+
+message GameHPSyncNotification {
+  string game_id = 1;
+  repeated ProtoGameEnemyHP enemies = 2;
 }
 
 message GameEnqueueActionNotification {

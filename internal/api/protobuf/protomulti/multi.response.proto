@@ -86,3 +86,7 @@ message ParticipantFindResponse {
 message ParticipantUnreadyResponse {
 
 }
+
+message GameHPConsensusResponse {
+
+}
