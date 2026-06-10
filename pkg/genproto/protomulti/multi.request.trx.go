@@ -241,3 +241,15 @@ func NewGameLockActionRequest(bytes []byte) (*GameLockActionRequest, error) {
 func (x *GameLockActionResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameHPConsensusRequest(bytes []byte) (*GameHPConsensusRequest, error) {
+	req := &GameHPConsensusRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameHPConsensusResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
