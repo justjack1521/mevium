@@ -52,7 +52,7 @@ namespace Mobius.Proto.Multi {
             "ZXN0IlMKFlBhcnRpY2lwYW50RmluZFJlcXVlc3QSEAoIcXVlc3RfaWQYASAB",
             "KAkSEgoKZGVja19pbmRleBgCIAEoBRITCgt1c2Vfc3RhbWluYRgDIAEoCCIr",
             "ChdQYXJ0aWNpcGFudFdhdGNoUmVxdWVzdBIQCghsb2JieV9pZBgCIAEoCSIb",
-            "ChlQYXJ0aWNpcGFudFVud2F0Y2hSZXF1ZXN0Ku8DChBNdWx0aVJlcXVlc3RU",
+            "ChlQYXJ0aWNpcGFudFVud2F0Y2hSZXF1ZXN0KoQEChBNdWx0aVJlcXVlc3RU",
             "eXBlEhUKEVJFUVVFU1RfVFlQRV9OT05FEAASEgoOU0VTU0lPTl9DUkVBVEUQ",
             "ZBIQCgtTRVNTSU9OX0VORBDIARIRCgxMT0JCWV9TRUFSQ0gQrAISEQoMTE9C",
             "QllfQ1JFQVRFEJADEhEKDExPQkJZX0NBTkNFTBD0AxIQCgtMT0JCWV9SRUFE",
@@ -63,9 +63,10 @@ namespace Mobius.Proto.Multi {
             "QVRDSBDcCxIVChBQQVJUSUNJUEFOVF9GSU5EEIQHEhIKDVBMQVlFUl9TRUFS",
             "Q0gQ0A8SDQoIR0VUX0dBTUUQuBcSFgoRR0FNRV9SRUFEWV9QTEFZRVIQnBgS",
             "GAoTR0FNRV9FTlFVRVVFX0FDVElPThCAGRIYChNHQU1FX0RFUVVFVUVfQUNU",
-            "SU9OEOQZEhYKEUdBTUVfTE9DS19BQ1RJT05TEMgaQk1aNmdpdGh1Yi5jb20v",
-            "anVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tdWx0aaoC",
-            "Ek1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
+            "SU9OEOQZEhYKEUdBTUVfTE9DS19BQ1RJT05TEMgaEhMKDkdBTUVfQ09OU0VO",
+            "U1VTEKwbQk1aNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cv",
+            "Z2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,6 +120,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("GAME_ENQUEUE_ACTION")] GameEnqueueAction = 3200,
     [pbr::OriginalName("GAME_DEQUEUE_ACTION")] GameDequeueAction = 3300,
     [pbr::OriginalName("GAME_LOCK_ACTIONS")] GameLockActions = 3400,
+    [pbr::OriginalName("GAME_CONSENSUS")] GameConsensus = 3500,
   }
 
   #endregion

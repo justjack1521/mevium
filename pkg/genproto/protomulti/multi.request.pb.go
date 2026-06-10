@@ -46,6 +46,7 @@ const (
 	MultiRequestType_GAME_ENQUEUE_ACTION MultiRequestType = 3200
 	MultiRequestType_GAME_DEQUEUE_ACTION MultiRequestType = 3300
 	MultiRequestType_GAME_LOCK_ACTIONS   MultiRequestType = 3400
+	MultiRequestType_GAME_CONSENSUS      MultiRequestType = 3500
 )
 
 // Enum value maps for MultiRequestType.
@@ -73,6 +74,7 @@ var (
 		3200: "GAME_ENQUEUE_ACTION",
 		3300: "GAME_DEQUEUE_ACTION",
 		3400: "GAME_LOCK_ACTIONS",
+		3500: "GAME_CONSENSUS",
 	}
 	MultiRequestType_value = map[string]int32{
 		"REQUEST_TYPE_NONE":   0,
@@ -97,6 +99,7 @@ var (
 		"GAME_ENQUEUE_ACTION": 3200,
 		"GAME_DEQUEUE_ACTION": 3300,
 		"GAME_LOCK_ACTIONS":   3400,
+		"GAME_CONSENSUS":      3500,
 	}
 )
 
@@ -1198,7 +1201,7 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"useStamina\"4\n" +
 	"\x17ParticipantWatchRequest\x12\x19\n" +
 	"\blobby_id\x18\x02 \x01(\tR\alobbyId\"\x1b\n" +
-	"\x19ParticipantUnwatchRequest*\xef\x03\n" +
+	"\x19ParticipantUnwatchRequest*\x84\x04\n" +
 	"\x10MultiRequestType\x12\x15\n" +
 	"\x11REQUEST_TYPE_NONE\x10\x00\x12\x12\n" +
 	"\x0eSESSION_CREATE\x10d\x12\x10\n" +
@@ -1223,7 +1226,8 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\x11GAME_READY_PLAYER\x10\x9c\x18\x12\x18\n" +
 	"\x13GAME_ENQUEUE_ACTION\x10\x80\x19\x12\x18\n" +
 	"\x13GAME_DEQUEUE_ACTION\x10\xe4\x19\x12\x16\n" +
-	"\x11GAME_LOCK_ACTIONS\x10\xc8\x1aBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\x11GAME_LOCK_ACTIONS\x10\xc8\x1a\x12\x13\n" +
+	"\x0eGAME_CONSENSUS\x10\xac\x1bBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_request_proto_rawDescOnce sync.Once
