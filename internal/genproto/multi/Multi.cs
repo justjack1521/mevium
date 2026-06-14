@@ -62,15 +62,23 @@ namespace Mobius.Proto.Multi {
             "b3RvR2FtZUFjdGlvbhIrCgZhY3Rpb24YASABKA4yGy5tdWx0aS5HYW1lUGxh",
             "eWVyQWN0aW9uVHlwZRIOCgZ0YXJnZXQYAiABKAUSEgoKc2xvdF9pbmRleBgD",
             "IAEoBRISCgplbGVtZW50X2lkGAQgASgJIjMKEFByb3RvR2FtZUVuZW15SFAS",
-            "EwoLZW5lbXlfaW5kZXgYASABKAUSCgoCaHAYAiABKAUqawoUR2FtZVBsYXll",
-            "ckFjdGlvblR5cGUSGwoXUExBWUVSX0FDVElPTl9UWVBFX05PTkUQABIRCg1O",
-            "T1JNQUxfQVRUQUNLEAESEAoMQUJJTElUWV9DQVNUEAISEQoNRUxFTUVOVF9E",
-            "UklWRRADQk1aNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cv",
-            "Z2VucHJvdG8vcHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJv",
-            "dG8z"));
+            "EwoLZW5lbXlfaW5kZXgYASABKAUSCgoCaHAYAiABKAUiaAoSUHJvdG9HYW1l",
+            "U3luY1BhcnR5EhMKC3BhcnR5X2luZGV4GAEgASgFEhAKCHBhcnR5X2lkGAIg",
+            "ASgJEisKB3BsYXllcnMYAyADKAsyGi5tdWx0aS5Qcm90b0dhbWVTeW5jUGxh",
+            "eWVyIrABChNQcm90b0dhbWVTeW5jUGxheWVyEhEKCXBsYXllcl9pZBgBIAEo",
+            "CRIUCgxwbGF5ZXJfaW5kZXgYAiABKAUSDQoFcmVhZHkYAyABKAgSDgoGbG9j",
+            "a2VkGAQgASgIEhIKCmxvY2tfaW5kZXgYBSABKAUSFAoMZGlzY29ubmVjdGVk",
+            "GAYgASgIEicKB2FjdGlvbnMYByADKAsyFi5tdWx0aS5Qcm90b0dhbWVBY3Rp",
+            "b24qawoUR2FtZVBsYXllckFjdGlvblR5cGUSGwoXUExBWUVSX0FDVElPTl9U",
+            "WVBFX05PTkUQABIRCg1OT1JNQUxfQVRUQUNLEAESEAoMQUJJTElUWV9DQVNU",
+            "EAISEQoNRUxFTUVOVF9EUklWRRADKm0KDUdhbWVTeW5jUGhhc2USGwoXR0FN",
+            "RV9TWU5DX1BIQVNFX1VOS05PV04QABIfChtHQU1FX1NZTkNfUEhBU0VfUExB",
+            "WUVSX1RVUk4QARIeChpHQU1FX1NZTkNfUEhBU0VfRU5FTVlfVFVSThACQk1a",
+            "NmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8v",
+            "cHJvdG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), typeof(global::Mobius.Proto.Multi.GameSyncPhase), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbySummary), global::Mobius.Proto.Multi.ProtoLobbySummary.Parser, new[]{ "InstanceId", "QuestId", "PartyId", "Comment", "MinimumPlayerLevel", "RegisteredAt", "Players" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot), global::Mobius.Proto.Multi.ProtoLobbyPlayerSlot.Parser, new[]{ "SlotIndex", "Ready", "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoLobbyPlayer), global::Mobius.Proto.Multi.ProtoLobbyPlayer.Parser, new[]{ "Identity", "Loadout" }, null, null, null, null),
@@ -83,7 +91,9 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGamePartyActionQueue), global::Mobius.Proto.Multi.ProtoGamePartyActionQueue.Parser, new[]{ "PartyIndex", "PlayerActionQueue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGamePlayerActionQueue), global::Mobius.Proto.Multi.ProtoGamePlayerActionQueue.Parser, new[]{ "PlayerId", "Actions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameAction), global::Mobius.Proto.Multi.ProtoGameAction.Parser, new[]{ "Action", "Target", "SlotIndex", "ElementId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameEnemyHP), global::Mobius.Proto.Multi.ProtoGameEnemyHP.Parser, new[]{ "EnemyIndex", "Hp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameEnemyHP), global::Mobius.Proto.Multi.ProtoGameEnemyHP.Parser, new[]{ "EnemyIndex", "Hp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameSyncParty), global::Mobius.Proto.Multi.ProtoGameSyncParty.Parser, new[]{ "PartyIndex", "PartyId", "Players" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameSyncPlayer), global::Mobius.Proto.Multi.ProtoGameSyncPlayer.Parser, new[]{ "PlayerId", "PlayerIndex", "Ready", "Locked", "LockIndex", "Disconnected", "Actions" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +105,12 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("NORMAL_ATTACK")] NormalAttack = 1,
     [pbr::OriginalName("ABILITY_CAST")] AbilityCast = 2,
     [pbr::OriginalName("ELEMENT_DRIVE")] ElementDrive = 3,
+  }
+
+  public enum GameSyncPhase {
+    [pbr::OriginalName("GAME_SYNC_PHASE_UNKNOWN")] Unknown = 0,
+    [pbr::OriginalName("GAME_SYNC_PHASE_PLAYER_TURN")] PlayerTurn = 1,
+    [pbr::OriginalName("GAME_SYNC_PHASE_ENEMY_TURN")] EnemyTurn = 2,
   }
 
   #endregion
@@ -3699,6 +3715,631 @@ namespace Mobius.Proto.Multi {
           }
           case 16: {
             Hp = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoGameSyncParty : pb::IMessage<ProtoGameSyncParty>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoGameSyncParty> _parser = new pb::MessageParser<ProtoGameSyncParty>(() => new ProtoGameSyncParty());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoGameSyncParty> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameSyncParty() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameSyncParty(ProtoGameSyncParty other) : this() {
+      partyIndex_ = other.partyIndex_;
+      partyId_ = other.partyId_;
+      players_ = other.players_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameSyncParty Clone() {
+      return new ProtoGameSyncParty(this);
+    }
+
+    /// <summary>Field number for the "party_index" field.</summary>
+    public const int PartyIndexFieldNumber = 1;
+    private int partyIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PartyIndex {
+      get { return partyIndex_; }
+      set {
+        partyIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "party_id" field.</summary>
+    public const int PartyIdFieldNumber = 2;
+    private string partyId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PartyId {
+      get { return partyId_; }
+      set {
+        partyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "players" field.</summary>
+    public const int PlayersFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoGameSyncPlayer> _repeated_players_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Multi.ProtoGameSyncPlayer.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameSyncPlayer> players_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameSyncPlayer>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameSyncPlayer> Players {
+      get { return players_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoGameSyncParty);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoGameSyncParty other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PartyIndex != other.PartyIndex) return false;
+      if (PartyId != other.PartyId) return false;
+      if(!players_.Equals(other.players_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PartyIndex != 0) hash ^= PartyIndex.GetHashCode();
+      if (PartyId.Length != 0) hash ^= PartyId.GetHashCode();
+      hash ^= players_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PartyIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PartyIndex);
+      }
+      if (PartyId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PartyId);
+      }
+      players_.WriteTo(output, _repeated_players_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PartyIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PartyIndex);
+      }
+      if (PartyId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PartyId);
+      }
+      players_.WriteTo(ref output, _repeated_players_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PartyIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PartyIndex);
+      }
+      if (PartyId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PartyId);
+      }
+      size += players_.CalculateSize(_repeated_players_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoGameSyncParty other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PartyIndex != 0) {
+        PartyIndex = other.PartyIndex;
+      }
+      if (other.PartyId.Length != 0) {
+        PartyId = other.PartyId;
+      }
+      players_.Add(other.players_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PartyIndex = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            PartyId = input.ReadString();
+            break;
+          }
+          case 26: {
+            players_.AddEntriesFrom(input, _repeated_players_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PartyIndex = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            PartyId = input.ReadString();
+            break;
+          }
+          case 26: {
+            players_.AddEntriesFrom(ref input, _repeated_players_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoGameSyncPlayer : pb::IMessage<ProtoGameSyncPlayer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoGameSyncPlayer> _parser = new pb::MessageParser<ProtoGameSyncPlayer>(() => new ProtoGameSyncPlayer());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoGameSyncPlayer> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameSyncPlayer() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameSyncPlayer(ProtoGameSyncPlayer other) : this() {
+      playerId_ = other.playerId_;
+      playerIndex_ = other.playerIndex_;
+      ready_ = other.ready_;
+      locked_ = other.locked_;
+      lockIndex_ = other.lockIndex_;
+      disconnected_ = other.disconnected_;
+      actions_ = other.actions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoGameSyncPlayer Clone() {
+      return new ProtoGameSyncPlayer(this);
+    }
+
+    /// <summary>Field number for the "player_id" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private string playerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "player_index" field.</summary>
+    public const int PlayerIndexFieldNumber = 2;
+    private int playerIndex_;
+    /// <summary>
+    /// PartySlot
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PlayerIndex {
+      get { return playerIndex_; }
+      set {
+        playerIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ready" field.</summary>
+    public const int ReadyFieldNumber = 3;
+    private bool ready_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ready {
+      get { return ready_; }
+      set {
+        ready_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "locked" field.</summary>
+    public const int LockedFieldNumber = 4;
+    private bool locked_;
+    /// <summary>
+    /// ActionsLocked
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Locked {
+      get { return locked_; }
+      set {
+        locked_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "lock_index" field.</summary>
+    public const int LockIndexFieldNumber = 5;
+    private int lockIndex_;
+    /// <summary>
+    /// ActionLockIndex (resolution order; valid when locked)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int LockIndex {
+      get { return lockIndex_; }
+      set {
+        lockIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disconnected" field.</summary>
+    public const int DisconnectedFieldNumber = 6;
+    private bool disconnected_;
+    /// <summary>
+    /// current connection status
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Disconnected {
+      get { return disconnected_; }
+      set {
+        disconnected_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "actions" field.</summary>
+    public const int ActionsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoGameAction> _repeated_actions_codec
+        = pb::FieldCodec.ForMessage(58, global::Mobius.Proto.Multi.ProtoGameAction.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameAction> actions_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameAction>();
+    /// <summary>
+    /// currently queued actions
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameAction> Actions {
+      get { return actions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoGameSyncPlayer);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoGameSyncPlayer other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlayerId != other.PlayerId) return false;
+      if (PlayerIndex != other.PlayerIndex) return false;
+      if (Ready != other.Ready) return false;
+      if (Locked != other.Locked) return false;
+      if (LockIndex != other.LockIndex) return false;
+      if (Disconnected != other.Disconnected) return false;
+      if(!actions_.Equals(other.actions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
+      if (PlayerIndex != 0) hash ^= PlayerIndex.GetHashCode();
+      if (Ready != false) hash ^= Ready.GetHashCode();
+      if (Locked != false) hash ^= Locked.GetHashCode();
+      if (LockIndex != 0) hash ^= LockIndex.GetHashCode();
+      if (Disconnected != false) hash ^= Disconnected.GetHashCode();
+      hash ^= actions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
+      if (PlayerIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PlayerIndex);
+      }
+      if (Ready != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Ready);
+      }
+      if (Locked != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Locked);
+      }
+      if (LockIndex != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(LockIndex);
+      }
+      if (Disconnected != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Disconnected);
+      }
+      actions_.WriteTo(output, _repeated_actions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
+      if (PlayerIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PlayerIndex);
+      }
+      if (Ready != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Ready);
+      }
+      if (Locked != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Locked);
+      }
+      if (LockIndex != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(LockIndex);
+      }
+      if (Disconnected != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Disconnected);
+      }
+      actions_.WriteTo(ref output, _repeated_actions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PlayerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      }
+      if (PlayerIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerIndex);
+      }
+      if (Ready != false) {
+        size += 1 + 1;
+      }
+      if (Locked != false) {
+        size += 1 + 1;
+      }
+      if (LockIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LockIndex);
+      }
+      if (Disconnected != false) {
+        size += 1 + 1;
+      }
+      size += actions_.CalculateSize(_repeated_actions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoGameSyncPlayer other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PlayerId.Length != 0) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.PlayerIndex != 0) {
+        PlayerIndex = other.PlayerIndex;
+      }
+      if (other.Ready != false) {
+        Ready = other.Ready;
+      }
+      if (other.Locked != false) {
+        Locked = other.Locked;
+      }
+      if (other.LockIndex != 0) {
+        LockIndex = other.LockIndex;
+      }
+      if (other.Disconnected != false) {
+        Disconnected = other.Disconnected;
+      }
+      actions_.Add(other.actions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PlayerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            PlayerIndex = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Ready = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Locked = input.ReadBool();
+            break;
+          }
+          case 40: {
+            LockIndex = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            Disconnected = input.ReadBool();
+            break;
+          }
+          case 58: {
+            actions_.AddEntriesFrom(input, _repeated_actions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PlayerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            PlayerIndex = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Ready = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Locked = input.ReadBool();
+            break;
+          }
+          case 40: {
+            LockIndex = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            Disconnected = input.ReadBool();
+            break;
+          }
+          case 58: {
+            actions_.AddEntriesFrom(ref input, _repeated_actions_codec);
             break;
           }
         }

@@ -82,8 +82,8 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_HP_CONSENSUS = 2000;
   GAME_NOTIFY_PLAYER_DISCONNECT = 2100;
   GAME_NOTIFY_PLAYER_RECONNECT  = 2200;
+  GAME_NOTIFY_GAME_SYNC = 2300;
   GAME_NOTIFY_END = 8888;
-
 }
 
 message GameStartNotification {
@@ -153,3 +153,15 @@ message GamePlayerReconnectNotification {
   int32  party_index = 2;
   int32  player_index = 3;
 }
+
+message GameSyncNotification {
+  string game_id                   = 1;
+  repeated ProtoGameSyncParty parties = 2;
+
+  // ----- optional, see notes -----
+  GameSyncPhase phase              = 3;  // insurance vs. the detect-latency window
+  int64 turn_remaining_ms          = 4;  // player-turn countdown; 0 if untimed/not player turn
+  repeated ProtoGameEnemyHP enemies = 5; // latest resolved consensus; empty if none yet
+}
+
+

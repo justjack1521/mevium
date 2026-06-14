@@ -65,26 +65,31 @@ namespace Mobius.Proto.Multi {
             "ZXJEaXNjb25uZWN0Tm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkSEwoL",
             "cGFydHlfaW5kZXgYAiABKAUSFAoMcGxheWVyX2luZGV4GAMgASgFIl0KH0dh",
             "bWVQbGF5ZXJSZWNvbm5lY3ROb3RpZmljYXRpb24SDwoHZ2FtZV9pZBgBIAEo",
-            "CRITCgtwYXJ0eV9pbmRleBgCIAEoBRIUCgxwbGF5ZXJfaW5kZXgYAyABKAUq",
-            "3AIKGk11bHRpTG9iYnlOb3RpZmljYXRpb25UeXBlEhUKEUxPQkJZX05PVElG",
-            "WV9OT05FEAASIQodTE9CQllfTk9USUZZX1BBUlRJQ0lQQU5UX0pPSU4QZBIj",
-            "Ch5MT0JCWV9OT1RJRllfUEFSVElDSVBBTlRfTEVBVkUQyAESIwoeTE9CQllf",
-            "Tk9USUZZX1BBUlRJQ0lQQU5UX1JFQURZEKwCEiUKIExPQkJZX05PVElGWV9Q",
-            "QVJUSUNJUEFOVF9VTlJFQURZEJADEhwKF0xPQkJZX05PVElGWV9TVEFNUF9T",
-            "RU5EEPQDEikKJExPQkJZX05PVElGWV9QQVJUSUNJUEFOVF9ERUNLX0NIQU5H",
-            "RRDYBBIYChNMT0JCWV9OT1RJRllfQ0FOQ0VMELwFEhcKEkxPQkJZX05PVElG",
-            "WV9TVEFSVBCgBhIXChJMT0JCWV9OT1RJRllfUkVBRFkQhAcqmwMKGU11bHRp",
-            "R2FtZU5vdGlmaWNhdGlvblR5cGUSFAoQR0FNRV9OT1RJRllfTk9ORRAAEhUK",
-            "EUdBTUVfTk9USUZZX1NUQVJUEGQSFgoRR0FNRV9OT1RJRllfUkVBRFkQyAES",
-            "HQoYR0FNRV9OT1RJRllfUExBWUVSX1JFQURZEPoBEh4KGUdBTUVfTk9USUZZ",
-            "X1BMQVlFUl9SRU1PVkUQkwISHwoaR0FNRV9OT1RJRllfRU5RVUVVRV9BQ1RJ",
-            "T04Q3AsSHwoaR0FNRV9OT1RJRllfREVRVUVVRV9BQ1RJT04QwAwSHAoXR0FN",
-            "RV9OT1RJRllfTE9DS19BQ1RJT04QpA0SHgoZR0FNRV9OT1RJRllfUVVFVUVf",
-            "Q09ORklSTRCIDhIdChhHQU1FX05PVElGWV9IUF9DT05TRU5TVVMQ0A8SIgod",
-            "R0FNRV9OT1RJRllfUExBWUVSX0RJU0NPTk5FQ1QQtBASIQocR0FNRV9OT1RJ",
-            "RllfUExBWUVSX1JFQ09OTkVDVBCYERIUCg9HQU1FX05PVElGWV9FTkQQuEVC",
-            "TVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90",
-            "by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "CRITCgtwYXJ0eV9pbmRleBgCIAEoBRIUCgxwbGF5ZXJfaW5kZXgYAyABKAUi",
+            "vQEKFEdhbWVTeW5jTm90aWZpY2F0aW9uEg8KB2dhbWVfaWQYASABKAkSKgoH",
+            "cGFydGllcxgCIAMoCzIZLm11bHRpLlByb3RvR2FtZVN5bmNQYXJ0eRIjCgVw",
+            "aGFzZRgDIAEoDjIULm11bHRpLkdhbWVTeW5jUGhhc2USGQoRdHVybl9yZW1h",
+            "aW5pbmdfbXMYBCABKAMSKAoHZW5lbWllcxgFIAMoCzIXLm11bHRpLlByb3Rv",
+            "R2FtZUVuZW15SFAq3AIKGk11bHRpTG9iYnlOb3RpZmljYXRpb25UeXBlEhUK",
+            "EUxPQkJZX05PVElGWV9OT05FEAASIQodTE9CQllfTk9USUZZX1BBUlRJQ0lQ",
+            "QU5UX0pPSU4QZBIjCh5MT0JCWV9OT1RJRllfUEFSVElDSVBBTlRfTEVBVkUQ",
+            "yAESIwoeTE9CQllfTk9USUZZX1BBUlRJQ0lQQU5UX1JFQURZEKwCEiUKIExP",
+            "QkJZX05PVElGWV9QQVJUSUNJUEFOVF9VTlJFQURZEJADEhwKF0xPQkJZX05P",
+            "VElGWV9TVEFNUF9TRU5EEPQDEikKJExPQkJZX05PVElGWV9QQVJUSUNJUEFO",
+            "VF9ERUNLX0NIQU5HRRDYBBIYChNMT0JCWV9OT1RJRllfQ0FOQ0VMELwFEhcK",
+            "EkxPQkJZX05PVElGWV9TVEFSVBCgBhIXChJMT0JCWV9OT1RJRllfUkVBRFkQ",
+            "hAcqtwMKGU11bHRpR2FtZU5vdGlmaWNhdGlvblR5cGUSFAoQR0FNRV9OT1RJ",
+            "RllfTk9ORRAAEhUKEUdBTUVfTk9USUZZX1NUQVJUEGQSFgoRR0FNRV9OT1RJ",
+            "RllfUkVBRFkQyAESHQoYR0FNRV9OT1RJRllfUExBWUVSX1JFQURZEPoBEh4K",
+            "GUdBTUVfTk9USUZZX1BMQVlFUl9SRU1PVkUQkwISHwoaR0FNRV9OT1RJRllf",
+            "RU5RVUVVRV9BQ1RJT04Q3AsSHwoaR0FNRV9OT1RJRllfREVRVUVVRV9BQ1RJ",
+            "T04QwAwSHAoXR0FNRV9OT1RJRllfTE9DS19BQ1RJT04QpA0SHgoZR0FNRV9O",
+            "T1RJRllfUVVFVUVfQ09ORklSTRCIDhIdChhHQU1FX05PVElGWV9IUF9DT05T",
+            "RU5TVVMQ0A8SIgodR0FNRV9OT1RJRllfUExBWUVSX0RJU0NPTk5FQ1QQtBAS",
+            "IQocR0FNRV9OT1RJRllfUExBWUVSX1JFQ09OTkVDVBCYERIaChVHQU1FX05P",
+            "VElGWV9HQU1FX1NZTkMQ/BESFAoPR0FNRV9OT1RJRllfRU5EELhFQk1aNmdp",
+            "dGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJv",
+            "dG9tdWx0aaoCEk1vYml1cy5Qcm90by5NdWx0aWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiLobbyNotificationType), typeof(global::Mobius.Proto.Multi.MultiGameNotificationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -108,7 +113,8 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameActionQueueConfirmNotification), global::Mobius.Proto.Multi.GameActionQueueConfirmNotification.Parser, new[]{ "PartyActionQueues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerRemoveNotification), global::Mobius.Proto.Multi.GamePlayerRemoveNotification.Parser, new[]{ "GameId", "PartyIndex", "PlayerIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerDisconnectNotification), global::Mobius.Proto.Multi.GamePlayerDisconnectNotification.Parser, new[]{ "GameId", "PartyIndex", "PlayerIndex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReconnectNotification), global::Mobius.Proto.Multi.GamePlayerReconnectNotification.Parser, new[]{ "GameId", "PartyIndex", "PlayerIndex" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReconnectNotification), global::Mobius.Proto.Multi.GamePlayerReconnectNotification.Parser, new[]{ "GameId", "PartyIndex", "PlayerIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameSyncNotification), global::Mobius.Proto.Multi.GameSyncNotification.Parser, new[]{ "GameId", "Parties", "Phase", "TurnRemainingMs", "Enemies" }, null, null, null, null)
           }));
     }
     #endregion
@@ -141,6 +147,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("GAME_NOTIFY_HP_CONSENSUS")] GameNotifyHpConsensus = 2000,
     [pbr::OriginalName("GAME_NOTIFY_PLAYER_DISCONNECT")] GameNotifyPlayerDisconnect = 2100,
     [pbr::OriginalName("GAME_NOTIFY_PLAYER_RECONNECT")] GameNotifyPlayerReconnect = 2200,
+    [pbr::OriginalName("GAME_NOTIFY_GAME_SYNC")] GameNotifyGameSync = 2300,
     [pbr::OriginalName("GAME_NOTIFY_END")] GameNotifyEnd = 8888,
   }
 
@@ -4934,6 +4941,309 @@ namespace Mobius.Proto.Multi {
           }
           case 24: {
             PlayerIndex = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameSyncNotification : pb::IMessage<GameSyncNotification>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameSyncNotification> _parser = new pb::MessageParser<GameSyncNotification>(() => new GameSyncNotification());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GameSyncNotification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiNotificationReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameSyncNotification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameSyncNotification(GameSyncNotification other) : this() {
+      gameId_ = other.gameId_;
+      parties_ = other.parties_.Clone();
+      phase_ = other.phase_;
+      turnRemainingMs_ = other.turnRemainingMs_;
+      enemies_ = other.enemies_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameSyncNotification Clone() {
+      return new GameSyncNotification(this);
+    }
+
+    /// <summary>Field number for the "game_id" field.</summary>
+    public const int GameIdFieldNumber = 1;
+    private string gameId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string GameId {
+      get { return gameId_; }
+      set {
+        gameId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parties" field.</summary>
+    public const int PartiesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoGameSyncParty> _repeated_parties_codec
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Multi.ProtoGameSyncParty.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameSyncParty> parties_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameSyncParty>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameSyncParty> Parties {
+      get { return parties_; }
+    }
+
+    /// <summary>Field number for the "phase" field.</summary>
+    public const int PhaseFieldNumber = 3;
+    private global::Mobius.Proto.Multi.GameSyncPhase phase_ = global::Mobius.Proto.Multi.GameSyncPhase.Unknown;
+    /// <summary>
+    /// ----- optional, see notes -----
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Multi.GameSyncPhase Phase {
+      get { return phase_; }
+      set {
+        phase_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "turn_remaining_ms" field.</summary>
+    public const int TurnRemainingMsFieldNumber = 4;
+    private long turnRemainingMs_;
+    /// <summary>
+    /// player-turn countdown; 0 if untimed/not player turn
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TurnRemainingMs {
+      get { return turnRemainingMs_; }
+      set {
+        turnRemainingMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enemies" field.</summary>
+    public const int EnemiesFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Multi.ProtoGameEnemyHP> _repeated_enemies_codec
+        = pb::FieldCodec.ForMessage(42, global::Mobius.Proto.Multi.ProtoGameEnemyHP.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameEnemyHP> enemies_ = new pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameEnemyHP>();
+    /// <summary>
+    /// latest resolved consensus; empty if none yet
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Multi.ProtoGameEnemyHP> Enemies {
+      get { return enemies_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GameSyncNotification);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GameSyncNotification other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GameId != other.GameId) return false;
+      if(!parties_.Equals(other.parties_)) return false;
+      if (Phase != other.Phase) return false;
+      if (TurnRemainingMs != other.TurnRemainingMs) return false;
+      if(!enemies_.Equals(other.enemies_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GameId.Length != 0) hash ^= GameId.GetHashCode();
+      hash ^= parties_.GetHashCode();
+      if (Phase != global::Mobius.Proto.Multi.GameSyncPhase.Unknown) hash ^= Phase.GetHashCode();
+      if (TurnRemainingMs != 0L) hash ^= TurnRemainingMs.GetHashCode();
+      hash ^= enemies_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GameId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameId);
+      }
+      parties_.WriteTo(output, _repeated_parties_codec);
+      if (Phase != global::Mobius.Proto.Multi.GameSyncPhase.Unknown) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Phase);
+      }
+      if (TurnRemainingMs != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(TurnRemainingMs);
+      }
+      enemies_.WriteTo(output, _repeated_enemies_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GameId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameId);
+      }
+      parties_.WriteTo(ref output, _repeated_parties_codec);
+      if (Phase != global::Mobius.Proto.Multi.GameSyncPhase.Unknown) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Phase);
+      }
+      if (TurnRemainingMs != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(TurnRemainingMs);
+      }
+      enemies_.WriteTo(ref output, _repeated_enemies_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (GameId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GameId);
+      }
+      size += parties_.CalculateSize(_repeated_parties_codec);
+      if (Phase != global::Mobius.Proto.Multi.GameSyncPhase.Unknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Phase);
+      }
+      if (TurnRemainingMs != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TurnRemainingMs);
+      }
+      size += enemies_.CalculateSize(_repeated_enemies_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GameSyncNotification other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GameId.Length != 0) {
+        GameId = other.GameId;
+      }
+      parties_.Add(other.parties_);
+      if (other.Phase != global::Mobius.Proto.Multi.GameSyncPhase.Unknown) {
+        Phase = other.Phase;
+      }
+      if (other.TurnRemainingMs != 0L) {
+        TurnRemainingMs = other.TurnRemainingMs;
+      }
+      enemies_.Add(other.enemies_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            GameId = input.ReadString();
+            break;
+          }
+          case 18: {
+            parties_.AddEntriesFrom(input, _repeated_parties_codec);
+            break;
+          }
+          case 24: {
+            Phase = (global::Mobius.Proto.Multi.GameSyncPhase) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            TurnRemainingMs = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            enemies_.AddEntriesFrom(input, _repeated_enemies_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GameId = input.ReadString();
+            break;
+          }
+          case 18: {
+            parties_.AddEntriesFrom(ref input, _repeated_parties_codec);
+            break;
+          }
+          case 24: {
+            Phase = (global::Mobius.Proto.Multi.GameSyncPhase) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            TurnRemainingMs = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            enemies_.AddEntriesFrom(ref input, _repeated_enemies_codec);
             break;
           }
         }

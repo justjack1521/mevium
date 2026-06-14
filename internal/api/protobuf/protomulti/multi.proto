@@ -104,3 +104,25 @@ message ProtoGameEnemyHP {
   int32 enemy_index = 1;
   int32 hp = 2;
 }
+
+message ProtoGameSyncParty {
+  int32 party_index                  = 1;
+  string party_id                    = 2;
+  repeated ProtoGameSyncPlayer players = 3;
+}
+
+message ProtoGameSyncPlayer {
+  string player_id                 = 1;
+  int32 player_index               = 2;  // PartySlot
+  bool ready                       = 3;
+  bool locked                      = 4;  // ActionsLocked
+  int32 lock_index                 = 5;  // ActionLockIndex (resolution order; valid when locked)
+  bool disconnected                = 6;  // current connection status
+  repeated ProtoGameAction actions = 7;  // currently queued actions
+}
+
+enum GameSyncPhase {
+  GAME_SYNC_PHASE_UNKNOWN     = 0;
+  GAME_SYNC_PHASE_PLAYER_TURN = 1;
+  GAME_SYNC_PHASE_ENEMY_TURN  = 2;
+}

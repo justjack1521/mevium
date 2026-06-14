@@ -74,6 +74,55 @@ func (GamePlayerActionType) EnumDescriptor() ([]byte, []int) {
 	return file_protomulti_multi_proto_rawDescGZIP(), []int{0}
 }
 
+type GameSyncPhase int32
+
+const (
+	GameSyncPhase_GAME_SYNC_PHASE_UNKNOWN     GameSyncPhase = 0
+	GameSyncPhase_GAME_SYNC_PHASE_PLAYER_TURN GameSyncPhase = 1
+	GameSyncPhase_GAME_SYNC_PHASE_ENEMY_TURN  GameSyncPhase = 2
+)
+
+// Enum value maps for GameSyncPhase.
+var (
+	GameSyncPhase_name = map[int32]string{
+		0: "GAME_SYNC_PHASE_UNKNOWN",
+		1: "GAME_SYNC_PHASE_PLAYER_TURN",
+		2: "GAME_SYNC_PHASE_ENEMY_TURN",
+	}
+	GameSyncPhase_value = map[string]int32{
+		"GAME_SYNC_PHASE_UNKNOWN":     0,
+		"GAME_SYNC_PHASE_PLAYER_TURN": 1,
+		"GAME_SYNC_PHASE_ENEMY_TURN":  2,
+	}
+)
+
+func (x GameSyncPhase) Enum() *GameSyncPhase {
+	p := new(GameSyncPhase)
+	*p = x
+	return p
+}
+
+func (x GameSyncPhase) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (GameSyncPhase) Descriptor() protoreflect.EnumDescriptor {
+	return file_protomulti_multi_proto_enumTypes[1].Descriptor()
+}
+
+func (GameSyncPhase) Type() protoreflect.EnumType {
+	return &file_protomulti_multi_proto_enumTypes[1]
+}
+
+func (x GameSyncPhase) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use GameSyncPhase.Descriptor instead.
+func (GameSyncPhase) EnumDescriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{1}
+}
+
 type ProtoLobbySummary struct {
 	state              protoimpl.MessageState  `protogen:"open.v1"`
 	InstanceId         string                  `protobuf:"bytes,1,opt,name=instance_id,json=instanceId,proto3" json:"instance_id,omitempty"`
@@ -958,6 +1007,158 @@ func (x *ProtoGameEnemyHP) GetHp() int32 {
 	return 0
 }
 
+type ProtoGameSyncParty struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PartyIndex    int32                  `protobuf:"varint,1,opt,name=party_index,json=partyIndex,proto3" json:"party_index,omitempty"`
+	PartyId       string                 `protobuf:"bytes,2,opt,name=party_id,json=partyId,proto3" json:"party_id,omitempty"`
+	Players       []*ProtoGameSyncPlayer `protobuf:"bytes,3,rep,name=players,proto3" json:"players,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoGameSyncParty) Reset() {
+	*x = ProtoGameSyncParty{}
+	mi := &file_protomulti_multi_proto_msgTypes[13]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoGameSyncParty) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoGameSyncParty) ProtoMessage() {}
+
+func (x *ProtoGameSyncParty) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_proto_msgTypes[13]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoGameSyncParty.ProtoReflect.Descriptor instead.
+func (*ProtoGameSyncParty) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *ProtoGameSyncParty) GetPartyIndex() int32 {
+	if x != nil {
+		return x.PartyIndex
+	}
+	return 0
+}
+
+func (x *ProtoGameSyncParty) GetPartyId() string {
+	if x != nil {
+		return x.PartyId
+	}
+	return ""
+}
+
+func (x *ProtoGameSyncParty) GetPlayers() []*ProtoGameSyncPlayer {
+	if x != nil {
+		return x.Players
+	}
+	return nil
+}
+
+type ProtoGameSyncPlayer struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	PlayerIndex   int32                  `protobuf:"varint,2,opt,name=player_index,json=playerIndex,proto3" json:"player_index,omitempty"` // PartySlot
+	Ready         bool                   `protobuf:"varint,3,opt,name=ready,proto3" json:"ready,omitempty"`
+	Locked        bool                   `protobuf:"varint,4,opt,name=locked,proto3" json:"locked,omitempty"`                        // ActionsLocked
+	LockIndex     int32                  `protobuf:"varint,5,opt,name=lock_index,json=lockIndex,proto3" json:"lock_index,omitempty"` // ActionLockIndex (resolution order; valid when locked)
+	Disconnected  bool                   `protobuf:"varint,6,opt,name=disconnected,proto3" json:"disconnected,omitempty"`            // current connection status
+	Actions       []*ProtoGameAction     `protobuf:"bytes,7,rep,name=actions,proto3" json:"actions,omitempty"`                       // currently queued actions
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoGameSyncPlayer) Reset() {
+	*x = ProtoGameSyncPlayer{}
+	mi := &file_protomulti_multi_proto_msgTypes[14]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoGameSyncPlayer) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoGameSyncPlayer) ProtoMessage() {}
+
+func (x *ProtoGameSyncPlayer) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_proto_msgTypes[14]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoGameSyncPlayer.ProtoReflect.Descriptor instead.
+func (*ProtoGameSyncPlayer) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_proto_rawDescGZIP(), []int{14}
+}
+
+func (x *ProtoGameSyncPlayer) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *ProtoGameSyncPlayer) GetPlayerIndex() int32 {
+	if x != nil {
+		return x.PlayerIndex
+	}
+	return 0
+}
+
+func (x *ProtoGameSyncPlayer) GetReady() bool {
+	if x != nil {
+		return x.Ready
+	}
+	return false
+}
+
+func (x *ProtoGameSyncPlayer) GetLocked() bool {
+	if x != nil {
+		return x.Locked
+	}
+	return false
+}
+
+func (x *ProtoGameSyncPlayer) GetLockIndex() int32 {
+	if x != nil {
+		return x.LockIndex
+	}
+	return 0
+}
+
+func (x *ProtoGameSyncPlayer) GetDisconnected() bool {
+	if x != nil {
+		return x.Disconnected
+	}
+	return false
+}
+
+func (x *ProtoGameSyncPlayer) GetActions() []*ProtoGameAction {
+	if x != nil {
+		return x.Actions
+	}
+	return nil
+}
+
 var File_protomulti_multi_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_proto_rawDesc = "" +
@@ -1040,12 +1241,30 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\x10ProtoGameEnemyHP\x12\x1f\n" +
 	"\venemy_index\x18\x01 \x01(\x05R\n" +
 	"enemyIndex\x12\x0e\n" +
-	"\x02hp\x18\x02 \x01(\x05R\x02hp*k\n" +
+	"\x02hp\x18\x02 \x01(\x05R\x02hp\"\x86\x01\n" +
+	"\x12ProtoGameSyncParty\x12\x1f\n" +
+	"\vparty_index\x18\x01 \x01(\x05R\n" +
+	"partyIndex\x12\x19\n" +
+	"\bparty_id\x18\x02 \x01(\tR\apartyId\x124\n" +
+	"\aplayers\x18\x03 \x03(\v2\x1a.multi.ProtoGameSyncPlayerR\aplayers\"\xf8\x01\n" +
+	"\x13ProtoGameSyncPlayer\x12\x1b\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12!\n" +
+	"\fplayer_index\x18\x02 \x01(\x05R\vplayerIndex\x12\x14\n" +
+	"\x05ready\x18\x03 \x01(\bR\x05ready\x12\x16\n" +
+	"\x06locked\x18\x04 \x01(\bR\x06locked\x12\x1d\n" +
+	"\n" +
+	"lock_index\x18\x05 \x01(\x05R\tlockIndex\x12\"\n" +
+	"\fdisconnected\x18\x06 \x01(\bR\fdisconnected\x120\n" +
+	"\aactions\x18\a \x03(\v2\x16.multi.ProtoGameActionR\aactions*k\n" +
 	"\x14GamePlayerActionType\x12\x1b\n" +
 	"\x17PLAYER_ACTION_TYPE_NONE\x10\x00\x12\x11\n" +
 	"\rNORMAL_ATTACK\x10\x01\x12\x10\n" +
 	"\fABILITY_CAST\x10\x02\x12\x11\n" +
-	"\rELEMENT_DRIVE\x10\x03BMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\rELEMENT_DRIVE\x10\x03*m\n" +
+	"\rGameSyncPhase\x12\x1b\n" +
+	"\x17GAME_SYNC_PHASE_UNKNOWN\x10\x00\x12\x1f\n" +
+	"\x1bGAME_SYNC_PHASE_PLAYER_TURN\x10\x01\x12\x1e\n" +
+	"\x1aGAME_SYNC_PHASE_ENEMY_TURN\x10\x02BMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_proto_rawDescOnce sync.Once
@@ -1059,45 +1278,50 @@ func file_protomulti_multi_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_proto_rawDescData
 }
 
-var file_protomulti_multi_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
+var file_protomulti_multi_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_protomulti_multi_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_protomulti_multi_proto_goTypes = []any{
 	(GamePlayerActionType)(0),                        // 0: multi.GamePlayerActionType
-	(*ProtoLobbySummary)(nil),                        // 1: multi.ProtoLobbySummary
-	(*ProtoLobbyPlayerSlot)(nil),                     // 2: multi.ProtoLobbyPlayerSlot
-	(*ProtoLobbyPlayer)(nil),                         // 3: multi.ProtoLobbyPlayer
-	(*ProtoLobbyPlayerSlotRestriction)(nil),          // 4: multi.ProtoLobbyPlayerSlotRestriction
-	(*ProtoGameInstance)(nil),                        // 5: multi.ProtoGameInstance
-	(*ProtoGameInstanceOptions)(nil),                 // 6: multi.ProtoGameInstanceOptions
-	(*ProtoGameSummary)(nil),                         // 7: multi.ProtoGameSummary
-	(*ProtoGamePartySummary)(nil),                    // 8: multi.ProtoGamePartySummary
-	(*ProtoGamePlayer)(nil),                          // 9: multi.ProtoGamePlayer
-	(*ProtoGamePartyActionQueue)(nil),                // 10: multi.ProtoGamePartyActionQueue
-	(*ProtoGamePlayerActionQueue)(nil),               // 11: multi.ProtoGamePlayerActionQueue
-	(*ProtoGameAction)(nil),                          // 12: multi.ProtoGameAction
-	(*ProtoGameEnemyHP)(nil),                         // 13: multi.ProtoGameEnemyHP
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 14: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 15: identity.ProtoPlayerLoadoutIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),         // 16: identity.ProtoPlayerLoadout
+	(GameSyncPhase)(0),                               // 1: multi.GameSyncPhase
+	(*ProtoLobbySummary)(nil),                        // 2: multi.ProtoLobbySummary
+	(*ProtoLobbyPlayerSlot)(nil),                     // 3: multi.ProtoLobbyPlayerSlot
+	(*ProtoLobbyPlayer)(nil),                         // 4: multi.ProtoLobbyPlayer
+	(*ProtoLobbyPlayerSlotRestriction)(nil),          // 5: multi.ProtoLobbyPlayerSlotRestriction
+	(*ProtoGameInstance)(nil),                        // 6: multi.ProtoGameInstance
+	(*ProtoGameInstanceOptions)(nil),                 // 7: multi.ProtoGameInstanceOptions
+	(*ProtoGameSummary)(nil),                         // 8: multi.ProtoGameSummary
+	(*ProtoGamePartySummary)(nil),                    // 9: multi.ProtoGamePartySummary
+	(*ProtoGamePlayer)(nil),                          // 10: multi.ProtoGamePlayer
+	(*ProtoGamePartyActionQueue)(nil),                // 11: multi.ProtoGamePartyActionQueue
+	(*ProtoGamePlayerActionQueue)(nil),               // 12: multi.ProtoGamePlayerActionQueue
+	(*ProtoGameAction)(nil),                          // 13: multi.ProtoGameAction
+	(*ProtoGameEnemyHP)(nil),                         // 14: multi.ProtoGameEnemyHP
+	(*ProtoGameSyncParty)(nil),                       // 15: multi.ProtoGameSyncParty
+	(*ProtoGameSyncPlayer)(nil),                      // 16: multi.ProtoGameSyncPlayer
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 17: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 18: identity.ProtoPlayerLoadoutIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),         // 19: identity.ProtoPlayerLoadout
 }
 var file_protomulti_multi_proto_depIdxs = []int32{
-	2,  // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
-	3,  // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
-	14, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
-	15, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	6,  // 4: multi.ProtoGameInstance.options:type_name -> multi.ProtoGameInstanceOptions
-	4,  // 5: multi.ProtoGameInstanceOptions.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
-	8,  // 6: multi.ProtoGameSummary.parties:type_name -> multi.ProtoGamePartySummary
-	9,  // 7: multi.ProtoGamePartySummary.players:type_name -> multi.ProtoGamePlayer
-	16, // 8: multi.ProtoGamePlayer.loadout:type_name -> identity.ProtoPlayerLoadout
-	11, // 9: multi.ProtoGamePartyActionQueue.player_action_queue:type_name -> multi.ProtoGamePlayerActionQueue
-	12, // 10: multi.ProtoGamePlayerActionQueue.actions:type_name -> multi.ProtoGameAction
+	3,  // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
+	4,  // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
+	17, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
+	18, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	7,  // 4: multi.ProtoGameInstance.options:type_name -> multi.ProtoGameInstanceOptions
+	5,  // 5: multi.ProtoGameInstanceOptions.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	9,  // 6: multi.ProtoGameSummary.parties:type_name -> multi.ProtoGamePartySummary
+	10, // 7: multi.ProtoGamePartySummary.players:type_name -> multi.ProtoGamePlayer
+	19, // 8: multi.ProtoGamePlayer.loadout:type_name -> identity.ProtoPlayerLoadout
+	12, // 9: multi.ProtoGamePartyActionQueue.player_action_queue:type_name -> multi.ProtoGamePlayerActionQueue
+	13, // 10: multi.ProtoGamePlayerActionQueue.actions:type_name -> multi.ProtoGameAction
 	0,  // 11: multi.ProtoGameAction.action:type_name -> multi.GamePlayerActionType
-	12, // [12:12] is the sub-list for method output_type
-	12, // [12:12] is the sub-list for method input_type
-	12, // [12:12] is the sub-list for extension type_name
-	12, // [12:12] is the sub-list for extension extendee
-	0,  // [0:12] is the sub-list for field type_name
+	16, // 12: multi.ProtoGameSyncParty.players:type_name -> multi.ProtoGameSyncPlayer
+	13, // 13: multi.ProtoGameSyncPlayer.actions:type_name -> multi.ProtoGameAction
+	14, // [14:14] is the sub-list for method output_type
+	14, // [14:14] is the sub-list for method input_type
+	14, // [14:14] is the sub-list for extension type_name
+	14, // [14:14] is the sub-list for extension extendee
+	0,  // [0:14] is the sub-list for field type_name
 }
 
 func init() { file_protomulti_multi_proto_init() }
@@ -1110,8 +1334,8 @@ func file_protomulti_multi_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_proto_rawDesc), len(file_protomulti_multi_proto_rawDesc)),
-			NumEnums:      1,
-			NumMessages:   13,
+			NumEnums:      2,
+			NumMessages:   15,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
