@@ -229,3 +229,27 @@ func NewGameHPSyncNotification(bytes []byte) (*GameHPSyncNotification, error) {
 func (x *GameHPSyncNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGamePlayerDisconnectNotification(bytes []byte) (*GamePlayerDisconnectNotification, error) {
+	req := &GamePlayerDisconnectNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerDisconnectNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGamePlayerReconnectNotification(bytes []byte) (*GamePlayerReconnectNotification, error) {
+	req := &GamePlayerReconnectNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReconnectNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

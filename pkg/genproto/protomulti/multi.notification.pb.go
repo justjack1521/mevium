@@ -94,17 +94,19 @@ func (MultiLobbyNotificationType) EnumDescriptor() ([]byte, []int) {
 type MultiGameNotificationType int32
 
 const (
-	MultiGameNotificationType_GAME_NOTIFY_NONE           MultiGameNotificationType = 0
-	MultiGameNotificationType_GAME_NOTIFY_START          MultiGameNotificationType = 100
-	MultiGameNotificationType_GAME_NOTIFY_READY          MultiGameNotificationType = 200
-	MultiGameNotificationType_GAME_NOTIFY_PLAYER_READY   MultiGameNotificationType = 250
-	MultiGameNotificationType_GAME_NOTIFY_PLAYER_REMOVE  MultiGameNotificationType = 275
-	MultiGameNotificationType_GAME_NOTIFY_ENQUEUE_ACTION MultiGameNotificationType = 1500
-	MultiGameNotificationType_GAME_NOTIFY_DEQUEUE_ACTION MultiGameNotificationType = 1600
-	MultiGameNotificationType_GAME_NOTIFY_LOCK_ACTION    MultiGameNotificationType = 1700
-	MultiGameNotificationType_GAME_NOTIFY_QUEUE_CONFIRM  MultiGameNotificationType = 1800
-	MultiGameNotificationType_GAME_NOTIFY_HP_CONSENSUS   MultiGameNotificationType = 2000
-	MultiGameNotificationType_GAME_NOTIFY_END            MultiGameNotificationType = 8888
+	MultiGameNotificationType_GAME_NOTIFY_NONE              MultiGameNotificationType = 0
+	MultiGameNotificationType_GAME_NOTIFY_START             MultiGameNotificationType = 100
+	MultiGameNotificationType_GAME_NOTIFY_READY             MultiGameNotificationType = 200
+	MultiGameNotificationType_GAME_NOTIFY_PLAYER_READY      MultiGameNotificationType = 250
+	MultiGameNotificationType_GAME_NOTIFY_PLAYER_REMOVE     MultiGameNotificationType = 275
+	MultiGameNotificationType_GAME_NOTIFY_ENQUEUE_ACTION    MultiGameNotificationType = 1500
+	MultiGameNotificationType_GAME_NOTIFY_DEQUEUE_ACTION    MultiGameNotificationType = 1600
+	MultiGameNotificationType_GAME_NOTIFY_LOCK_ACTION       MultiGameNotificationType = 1700
+	MultiGameNotificationType_GAME_NOTIFY_QUEUE_CONFIRM     MultiGameNotificationType = 1800
+	MultiGameNotificationType_GAME_NOTIFY_HP_CONSENSUS      MultiGameNotificationType = 2000
+	MultiGameNotificationType_GAME_NOTIFY_PLAYER_DISCONNECT MultiGameNotificationType = 2100
+	MultiGameNotificationType_GAME_NOTIFY_PLAYER_RECONNECT  MultiGameNotificationType = 2200
+	MultiGameNotificationType_GAME_NOTIFY_END               MultiGameNotificationType = 8888
 )
 
 // Enum value maps for MultiGameNotificationType.
@@ -120,20 +122,24 @@ var (
 		1700: "GAME_NOTIFY_LOCK_ACTION",
 		1800: "GAME_NOTIFY_QUEUE_CONFIRM",
 		2000: "GAME_NOTIFY_HP_CONSENSUS",
+		2100: "GAME_NOTIFY_PLAYER_DISCONNECT",
+		2200: "GAME_NOTIFY_PLAYER_RECONNECT",
 		8888: "GAME_NOTIFY_END",
 	}
 	MultiGameNotificationType_value = map[string]int32{
-		"GAME_NOTIFY_NONE":           0,
-		"GAME_NOTIFY_START":          100,
-		"GAME_NOTIFY_READY":          200,
-		"GAME_NOTIFY_PLAYER_READY":   250,
-		"GAME_NOTIFY_PLAYER_REMOVE":  275,
-		"GAME_NOTIFY_ENQUEUE_ACTION": 1500,
-		"GAME_NOTIFY_DEQUEUE_ACTION": 1600,
-		"GAME_NOTIFY_LOCK_ACTION":    1700,
-		"GAME_NOTIFY_QUEUE_CONFIRM":  1800,
-		"GAME_NOTIFY_HP_CONSENSUS":   2000,
-		"GAME_NOTIFY_END":            8888,
+		"GAME_NOTIFY_NONE":              0,
+		"GAME_NOTIFY_START":             100,
+		"GAME_NOTIFY_READY":             200,
+		"GAME_NOTIFY_PLAYER_READY":      250,
+		"GAME_NOTIFY_PLAYER_REMOVE":     275,
+		"GAME_NOTIFY_ENQUEUE_ACTION":    1500,
+		"GAME_NOTIFY_DEQUEUE_ACTION":    1600,
+		"GAME_NOTIFY_LOCK_ACTION":       1700,
+		"GAME_NOTIFY_QUEUE_CONFIRM":     1800,
+		"GAME_NOTIFY_HP_CONSENSUS":      2000,
+		"GAME_NOTIFY_PLAYER_DISCONNECT": 2100,
+		"GAME_NOTIFY_PLAYER_RECONNECT":  2200,
+		"GAME_NOTIFY_END":               8888,
 	}
 )
 
@@ -1232,6 +1238,126 @@ func (x *GamePlayerRemoveNotification) GetPlayerIndex() int32 {
 	return 0
 }
 
+type GamePlayerDisconnectNotification struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	GameId        string                 `protobuf:"bytes,1,opt,name=game_id,json=gameId,proto3" json:"game_id,omitempty"`
+	PartyIndex    int32                  `protobuf:"varint,2,opt,name=party_index,json=partyIndex,proto3" json:"party_index,omitempty"`
+	PlayerIndex   int32                  `protobuf:"varint,3,opt,name=player_index,json=playerIndex,proto3" json:"player_index,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GamePlayerDisconnectNotification) Reset() {
+	*x = GamePlayerDisconnectNotification{}
+	mi := &file_protomulti_multi_notification_proto_msgTypes[19]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GamePlayerDisconnectNotification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerDisconnectNotification) ProtoMessage() {}
+
+func (x *GamePlayerDisconnectNotification) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_notification_proto_msgTypes[19]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerDisconnectNotification.ProtoReflect.Descriptor instead.
+func (*GamePlayerDisconnectNotification) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{19}
+}
+
+func (x *GamePlayerDisconnectNotification) GetGameId() string {
+	if x != nil {
+		return x.GameId
+	}
+	return ""
+}
+
+func (x *GamePlayerDisconnectNotification) GetPartyIndex() int32 {
+	if x != nil {
+		return x.PartyIndex
+	}
+	return 0
+}
+
+func (x *GamePlayerDisconnectNotification) GetPlayerIndex() int32 {
+	if x != nil {
+		return x.PlayerIndex
+	}
+	return 0
+}
+
+type GamePlayerReconnectNotification struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	GameId        string                 `protobuf:"bytes,1,opt,name=game_id,json=gameId,proto3" json:"game_id,omitempty"`
+	PartyIndex    int32                  `protobuf:"varint,2,opt,name=party_index,json=partyIndex,proto3" json:"party_index,omitempty"`
+	PlayerIndex   int32                  `protobuf:"varint,3,opt,name=player_index,json=playerIndex,proto3" json:"player_index,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GamePlayerReconnectNotification) Reset() {
+	*x = GamePlayerReconnectNotification{}
+	mi := &file_protomulti_multi_notification_proto_msgTypes[20]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GamePlayerReconnectNotification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerReconnectNotification) ProtoMessage() {}
+
+func (x *GamePlayerReconnectNotification) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_notification_proto_msgTypes[20]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerReconnectNotification.ProtoReflect.Descriptor instead.
+func (*GamePlayerReconnectNotification) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{20}
+}
+
+func (x *GamePlayerReconnectNotification) GetGameId() string {
+	if x != nil {
+		return x.GameId
+	}
+	return ""
+}
+
+func (x *GamePlayerReconnectNotification) GetPartyIndex() int32 {
+	if x != nil {
+		return x.PartyIndex
+	}
+	return 0
+}
+
+func (x *GamePlayerReconnectNotification) GetPlayerIndex() int32 {
+	if x != nil {
+		return x.PlayerIndex
+	}
+	return 0
+}
+
 var File_protomulti_multi_notification_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_notification_proto_rawDesc = "" +
@@ -1317,6 +1443,16 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"\agame_id\x18\x01 \x01(\tR\x06gameId\x12\x1f\n" +
 	"\vparty_index\x18\x02 \x01(\x05R\n" +
 	"partyIndex\x12!\n" +
+	"\fplayer_index\x18\x03 \x01(\x05R\vplayerIndex\"\x7f\n" +
+	" GamePlayerDisconnectNotification\x12\x17\n" +
+	"\agame_id\x18\x01 \x01(\tR\x06gameId\x12\x1f\n" +
+	"\vparty_index\x18\x02 \x01(\x05R\n" +
+	"partyIndex\x12!\n" +
+	"\fplayer_index\x18\x03 \x01(\x05R\vplayerIndex\"~\n" +
+	"\x1fGamePlayerReconnectNotification\x12\x17\n" +
+	"\agame_id\x18\x01 \x01(\tR\x06gameId\x12\x1f\n" +
+	"\vparty_index\x18\x02 \x01(\x05R\n" +
+	"partyIndex\x12!\n" +
 	"\fplayer_index\x18\x03 \x01(\x05R\vplayerIndex*\xdc\x02\n" +
 	"\x1aMultiLobbyNotificationType\x12\x15\n" +
 	"\x11LOBBY_NOTIFY_NONE\x10\x00\x12!\n" +
@@ -1328,7 +1464,7 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"$LOBBY_NOTIFY_PARTICIPANT_DECK_CHANGE\x10\xd8\x04\x12\x18\n" +
 	"\x13LOBBY_NOTIFY_CANCEL\x10\xbc\x05\x12\x17\n" +
 	"\x12LOBBY_NOTIFY_START\x10\xa0\x06\x12\x17\n" +
-	"\x12LOBBY_NOTIFY_READY\x10\x84\a*\xd4\x02\n" +
+	"\x12LOBBY_NOTIFY_READY\x10\x84\a*\x9b\x03\n" +
 	"\x19MultiGameNotificationType\x12\x14\n" +
 	"\x10GAME_NOTIFY_NONE\x10\x00\x12\x15\n" +
 	"\x11GAME_NOTIFY_START\x10d\x12\x16\n" +
@@ -1339,7 +1475,9 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"\x1aGAME_NOTIFY_DEQUEUE_ACTION\x10\xc0\f\x12\x1c\n" +
 	"\x17GAME_NOTIFY_LOCK_ACTION\x10\xa4\r\x12\x1e\n" +
 	"\x19GAME_NOTIFY_QUEUE_CONFIRM\x10\x88\x0e\x12\x1d\n" +
-	"\x18GAME_NOTIFY_HP_CONSENSUS\x10\xd0\x0f\x12\x14\n" +
+	"\x18GAME_NOTIFY_HP_CONSENSUS\x10\xd0\x0f\x12\"\n" +
+	"\x1dGAME_NOTIFY_PLAYER_DISCONNECT\x10\xb4\x10\x12!\n" +
+	"\x1cGAME_NOTIFY_PLAYER_RECONNECT\x10\x98\x11\x12\x14\n" +
 	"\x0fGAME_NOTIFY_END\x10\xb8EBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
@@ -1355,7 +1493,7 @@ func file_protomulti_multi_notification_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_notification_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_protomulti_multi_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
+var file_protomulti_multi_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
 var file_protomulti_multi_notification_proto_goTypes = []any{
 	(MultiLobbyNotificationType)(0),            // 0: multi.MultiLobbyNotificationType
 	(MultiGameNotificationType)(0),             // 1: multi.MultiGameNotificationType
@@ -1378,17 +1516,19 @@ var file_protomulti_multi_notification_proto_goTypes = []any{
 	(*GameLockActionNotification)(nil),         // 18: multi.GameLockActionNotification
 	(*GameActionQueueConfirmNotification)(nil), // 19: multi.GameActionQueueConfirmNotification
 	(*GamePlayerRemoveNotification)(nil),       // 20: multi.GamePlayerRemoveNotification
-	(*ProtoLobbyPlayer)(nil),                   // 21: multi.ProtoLobbyPlayer
-	(*ProtoGameEnemyHP)(nil),                   // 22: multi.ProtoGameEnemyHP
-	(GamePlayerActionType)(0),                  // 23: multi.GamePlayerActionType
-	(*ProtoGamePartyActionQueue)(nil),          // 24: multi.ProtoGamePartyActionQueue
+	(*GamePlayerDisconnectNotification)(nil),   // 21: multi.GamePlayerDisconnectNotification
+	(*GamePlayerReconnectNotification)(nil),    // 22: multi.GamePlayerReconnectNotification
+	(*ProtoLobbyPlayer)(nil),                   // 23: multi.ProtoLobbyPlayer
+	(*ProtoGameEnemyHP)(nil),                   // 24: multi.ProtoGameEnemyHP
+	(GamePlayerActionType)(0),                  // 25: multi.GamePlayerActionType
+	(*ProtoGamePartyActionQueue)(nil),          // 26: multi.ProtoGamePartyActionQueue
 }
 var file_protomulti_multi_notification_proto_depIdxs = []int32{
-	21, // 0: multi.ParticipantJoinNotification.player:type_name -> multi.ProtoLobbyPlayer
-	21, // 1: multi.ParticipantDeckChangeNotification.player:type_name -> multi.ProtoLobbyPlayer
-	22, // 2: multi.GameHPSyncNotification.enemies:type_name -> multi.ProtoGameEnemyHP
-	23, // 3: multi.GameEnqueueActionNotification.action:type_name -> multi.GamePlayerActionType
-	24, // 4: multi.GameActionQueueConfirmNotification.party_action_queues:type_name -> multi.ProtoGamePartyActionQueue
+	23, // 0: multi.ParticipantJoinNotification.player:type_name -> multi.ProtoLobbyPlayer
+	23, // 1: multi.ParticipantDeckChangeNotification.player:type_name -> multi.ProtoLobbyPlayer
+	24, // 2: multi.GameHPSyncNotification.enemies:type_name -> multi.ProtoGameEnemyHP
+	25, // 3: multi.GameEnqueueActionNotification.action:type_name -> multi.GamePlayerActionType
+	26, // 4: multi.GameActionQueueConfirmNotification.party_action_queues:type_name -> multi.ProtoGamePartyActionQueue
 	5,  // [5:5] is the sub-list for method output_type
 	5,  // [5:5] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
@@ -1408,7 +1548,7 @@ func file_protomulti_multi_notification_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_notification_proto_rawDesc), len(file_protomulti_multi_notification_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   19,
+			NumMessages:   21,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
