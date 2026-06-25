@@ -681,6 +681,7 @@ message ProtoMailboxClaimResult {
     ProtoAbilityCardClaimResult ability_card = 2;
     ProtoJobCardClaimResult job_card = 3;
     ProtoWeaponClaimResult weapon = 4;
+    ProtoCompanionClaimResult companion = 5;
 }
 
 message ProtoItemClaimResult {
@@ -699,6 +700,10 @@ message ProtoJobCardClaimResult {
 
 message ProtoWeaponClaimResult {
   ProtoWeaponInstance weapon = 1;
+}
+
+message ProtoCompanionClaimResult {
+  ProtoFairyCompanionInstance companion = 1;
 }
 
 message ProtoBattleSelection {

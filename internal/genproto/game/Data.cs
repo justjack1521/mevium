@@ -338,19 +338,22 @@ namespace Mobius.Proto.Game {
             "KAgilAEKHFByb3RvSm9iQ2FyZFN1bW1vbkRyYXdSZXN1bHQSLAoIaW5zdGFu",
             "Y2UYASABKAsyGi5nYW1lLlByb3RvSm9iQ2FyZEluc3RhbmNlEjcKEnNraWxs",
             "X3BhbmVsX2dyb3VwcxgCIAEoCzIbLmdhbWUuUHJvdG9Ta2lsbFBhbmVsR3Jv",
-            "dXBzEg0KBWluZGV4GAMgASgFItsBChdQcm90b01haWxib3hDbGFpbVJlc3Vs",
+            "dXBzEg0KBWluZGV4GAMgASgFIo8CChdQcm90b01haWxib3hDbGFpbVJlc3Vs",
             "dBIoCgRpdGVtGAEgASgLMhouZ2FtZS5Qcm90b0l0ZW1DbGFpbVJlc3VsdBI3",
             "CgxhYmlsaXR5X2NhcmQYAiABKAsyIS5nYW1lLlByb3RvQWJpbGl0eUNhcmRD",
             "bGFpbVJlc3VsdBIvCghqb2JfY2FyZBgDIAEoCzIdLmdhbWUuUHJvdG9Kb2JD",
             "YXJkQ2xhaW1SZXN1bHQSLAoGd2VhcG9uGAQgASgLMhwuZ2FtZS5Qcm90b1dl",
-            "YXBvbkNsYWltUmVzdWx0IjkKFFByb3RvSXRlbUNsYWltUmVzdWx0Eg8KB2l0",
-            "ZW1faWQYASABKAkSEAoIcXVhbnRpdHkYAiABKAUiTwobUHJvdG9BYmlsaXR5",
-            "Q2FyZENsYWltUmVzdWx0EjAKCGluc3RhbmNlGAEgASgLMh4uZ2FtZS5Qcm90",
-            "b0FiaWxpdHlDYXJkSW5zdGFuY2UigAEKF1Byb3RvSm9iQ2FyZENsYWltUmVz",
-            "dWx0EiwKCGluc3RhbmNlGAEgASgLMhouZ2FtZS5Qcm90b0pvYkNhcmRJbnN0",
-            "YW5jZRI3ChJza2lsbF9wYW5lbF9ncm91cHMYAiABKAsyGy5nYW1lLlByb3Rv",
-            "U2tpbGxQYW5lbEdyb3VwcyJDChZQcm90b1dlYXBvbkNsYWltUmVzdWx0EikK",
-            "BndlYXBvbhgBIAEoCzIZLmdhbWUuUHJvdG9XZWFwb25JbnN0YW5jZSJKChRQ",
+            "YXBvbkNsYWltUmVzdWx0EjIKCWNvbXBhbmlvbhgFIAEoCzIfLmdhbWUuUHJv",
+            "dG9Db21wYW5pb25DbGFpbVJlc3VsdCI5ChRQcm90b0l0ZW1DbGFpbVJlc3Vs",
+            "dBIPCgdpdGVtX2lkGAEgASgJEhAKCHF1YW50aXR5GAIgASgFIk8KG1Byb3Rv",
+            "QWJpbGl0eUNhcmRDbGFpbVJlc3VsdBIwCghpbnN0YW5jZRgBIAEoCzIeLmdh",
+            "bWUuUHJvdG9BYmlsaXR5Q2FyZEluc3RhbmNlIoABChdQcm90b0pvYkNhcmRD",
+            "bGFpbVJlc3VsdBIsCghpbnN0YW5jZRgBIAEoCzIaLmdhbWUuUHJvdG9Kb2JD",
+            "YXJkSW5zdGFuY2USNwoSc2tpbGxfcGFuZWxfZ3JvdXBzGAIgASgLMhsuZ2Ft",
+            "ZS5Qcm90b1NraWxsUGFuZWxHcm91cHMiQwoWUHJvdG9XZWFwb25DbGFpbVJl",
+            "c3VsdBIpCgZ3ZWFwb24YASABKAsyGS5nYW1lLlByb3RvV2VhcG9uSW5zdGFu",
+            "Y2UiUQoZUHJvdG9Db21wYW5pb25DbGFpbVJlc3VsdBI0Cgljb21wYW5pb24Y",
+            "ASABKAsyIS5nYW1lLlByb3RvRmFpcnlDb21wYW5pb25JbnN0YW5jZSJKChRQ",
             "cm90b0JhdHRsZVNlbGVjdGlvbhIkCgV3YXZlcxgBIAMoCzIVLmdhbWUuUHJv",
             "dG9CYXR0bGVXYXZlEgwKBHNlZWQYAiABKAMiZAoPUHJvdG9CYXR0bGVXYXZl",
             "Eg0KBWluZGV4GAEgASgFEioKBmdyb3VwcxgCIAMoCzIaLmdhbWUuUHJvdG9C",
@@ -445,11 +448,12 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoEnemyDeathStatistic), global::Mobius.Proto.Game.ProtoEnemyDeathStatistic.Parser, new[]{ "FiendId", "ElementId", "JobTypeId", "FromWeakness", "FromNormal", "FromUltimate", "ActionCount", "WaveIndex", "FiendIndex", "GroupIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult), global::Mobius.Proto.Game.ProtoAbilityCardSummonDrawResult.Parser, new[]{ "Instance", "Index", "NewCard", "UpgradeCard" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult), global::Mobius.Proto.Game.ProtoJobCardSummonDrawResult.Parser, new[]{ "Instance", "SkillPanelGroups", "Index" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMailboxClaimResult), global::Mobius.Proto.Game.ProtoMailboxClaimResult.Parser, new[]{ "Item", "AbilityCard", "JobCard", "Weapon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMailboxClaimResult), global::Mobius.Proto.Game.ProtoMailboxClaimResult.Parser, new[]{ "Item", "AbilityCard", "JobCard", "Weapon", "Companion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoItemClaimResult), global::Mobius.Proto.Game.ProtoItemClaimResult.Parser, new[]{ "ItemId", "Quantity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoAbilityCardClaimResult), global::Mobius.Proto.Game.ProtoAbilityCardClaimResult.Parser, new[]{ "Instance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoJobCardClaimResult), global::Mobius.Proto.Game.ProtoJobCardClaimResult.Parser, new[]{ "Instance", "SkillPanelGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoWeaponClaimResult), global::Mobius.Proto.Game.ProtoWeaponClaimResult.Parser, new[]{ "Weapon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoCompanionClaimResult), global::Mobius.Proto.Game.ProtoCompanionClaimResult.Parser, new[]{ "Companion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleSelection), global::Mobius.Proto.Game.ProtoBattleSelection.Parser, new[]{ "Waves", "Seed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWave), global::Mobius.Proto.Game.ProtoBattleWave.Parser, new[]{ "Index", "Groups", "LevelOverride" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWaveGroup), global::Mobius.Proto.Game.ProtoBattleWaveGroup.Parser, new[]{ "Index", "Count", "FiendId" }, null, null, null, null),
@@ -24749,6 +24753,7 @@ namespace Mobius.Proto.Game {
       abilityCard_ = other.abilityCard_ != null ? other.abilityCard_.Clone() : null;
       jobCard_ = other.jobCard_ != null ? other.jobCard_.Clone() : null;
       weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
+      companion_ = other.companion_ != null ? other.companion_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -24801,6 +24806,17 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "companion" field.</summary>
+    public const int CompanionFieldNumber = 5;
+    private global::Mobius.Proto.Game.ProtoCompanionClaimResult companion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Game.ProtoCompanionClaimResult Companion {
+      get { return companion_; }
+      set {
+        companion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoMailboxClaimResult);
@@ -24818,6 +24834,7 @@ namespace Mobius.Proto.Game {
       if (!object.Equals(AbilityCard, other.AbilityCard)) return false;
       if (!object.Equals(JobCard, other.JobCard)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
+      if (!object.Equals(Companion, other.Companion)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -24828,6 +24845,7 @@ namespace Mobius.Proto.Game {
       if (abilityCard_ != null) hash ^= AbilityCard.GetHashCode();
       if (jobCard_ != null) hash ^= JobCard.GetHashCode();
       if (weapon_ != null) hash ^= Weapon.GetHashCode();
+      if (companion_ != null) hash ^= Companion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -24860,6 +24878,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(34);
         output.WriteMessage(Weapon);
       }
+      if (companion_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Companion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -24885,6 +24907,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(34);
         output.WriteMessage(Weapon);
       }
+      if (companion_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Companion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -24905,6 +24931,9 @@ namespace Mobius.Proto.Game {
       }
       if (weapon_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
+      }
+      if (companion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Companion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -24940,6 +24969,12 @@ namespace Mobius.Proto.Game {
           Weapon = new global::Mobius.Proto.Game.ProtoWeaponClaimResult();
         }
         Weapon.MergeFrom(other.Weapon);
+      }
+      if (other.companion_ != null) {
+        if (companion_ == null) {
+          Companion = new global::Mobius.Proto.Game.ProtoCompanionClaimResult();
+        }
+        Companion.MergeFrom(other.Companion);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -24983,6 +25018,13 @@ namespace Mobius.Proto.Game {
             input.ReadMessage(Weapon);
             break;
           }
+          case 42: {
+            if (companion_ == null) {
+              Companion = new global::Mobius.Proto.Game.ProtoCompanionClaimResult();
+            }
+            input.ReadMessage(Companion);
+            break;
+          }
         }
       }
     #endif
@@ -25023,6 +25065,13 @@ namespace Mobius.Proto.Game {
               Weapon = new global::Mobius.Proto.Game.ProtoWeaponClaimResult();
             }
             input.ReadMessage(Weapon);
+            break;
+          }
+          case 42: {
+            if (companion_ == null) {
+              Companion = new global::Mobius.Proto.Game.ProtoCompanionClaimResult();
+            }
+            input.ReadMessage(Companion);
             break;
           }
         }
@@ -25828,6 +25877,187 @@ namespace Mobius.Proto.Game {
 
   }
 
+  public sealed partial class ProtoCompanionClaimResult : pb::IMessage<ProtoCompanionClaimResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoCompanionClaimResult> _parser = new pb::MessageParser<ProtoCompanionClaimResult>(() => new ProtoCompanionClaimResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoCompanionClaimResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[81]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoCompanionClaimResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoCompanionClaimResult(ProtoCompanionClaimResult other) : this() {
+      companion_ = other.companion_ != null ? other.companion_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoCompanionClaimResult Clone() {
+      return new ProtoCompanionClaimResult(this);
+    }
+
+    /// <summary>Field number for the "companion" field.</summary>
+    public const int CompanionFieldNumber = 1;
+    private global::Mobius.Proto.Game.ProtoFairyCompanionInstance companion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Game.ProtoFairyCompanionInstance Companion {
+      get { return companion_; }
+      set {
+        companion_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoCompanionClaimResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoCompanionClaimResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Companion, other.Companion)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (companion_ != null) hash ^= Companion.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (companion_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Companion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (companion_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Companion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (companion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Companion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoCompanionClaimResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.companion_ != null) {
+        if (companion_ == null) {
+          Companion = new global::Mobius.Proto.Game.ProtoFairyCompanionInstance();
+        }
+        Companion.MergeFrom(other.Companion);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (companion_ == null) {
+              Companion = new global::Mobius.Proto.Game.ProtoFairyCompanionInstance();
+            }
+            input.ReadMessage(Companion);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (companion_ == null) {
+              Companion = new global::Mobius.Proto.Game.ProtoFairyCompanionInstance();
+            }
+            input.ReadMessage(Companion);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class ProtoBattleSelection : pb::IMessage<ProtoBattleSelection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -25840,7 +26070,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[81]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[82]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26037,7 +26267,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[82]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[83]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26270,7 +26500,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[83]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[84]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26514,7 +26744,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[84]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[85]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26675,7 +26905,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[85]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[86]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
