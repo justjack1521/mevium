@@ -3242,6 +3242,7 @@ type TaggedBattleCardReward struct {
 	NewCard       bool                   `protobuf:"varint,3,opt,name=new_card,json=newCard,proto3" json:"new_card,omitempty"`
 	Tag           int32                  `protobuf:"varint,4,opt,name=tag,proto3" json:"tag,omitempty"`
 	Source        int32                  `protobuf:"varint,5,opt,name=source,proto3" json:"source,omitempty"`
+	Sold          bool                   `protobuf:"varint,6,opt,name=sold,proto3" json:"sold,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -3309,6 +3310,13 @@ func (x *TaggedBattleCardReward) GetSource() int32 {
 		return x.Source
 	}
 	return 0
+}
+
+func (x *TaggedBattleCardReward) GetSold() bool {
+	if x != nil {
+		return x.Sold
+	}
+	return false
 }
 
 type TaggedBattleCompanionReward struct {
@@ -6926,14 +6934,15 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x16TaggedBattleItemReward\x12\x17\n" +
 	"\aitem_id\x18\x01 \x01(\tR\x06itemId\x12\x1a\n" +
 	"\bquantity\x18\x02 \x01(\x05R\bquantity\x12\x10\n" +
-	"\x03tag\x18\x03 \x01(\x05R\x03tag\"\xa6\x01\n" +
+	"\x03tag\x18\x03 \x01(\x05R\x03tag\"\xba\x01\n" +
 	"\x16TaggedBattleCardReward\x12\x1f\n" +
 	"\vinstance_id\x18\x01 \x01(\tR\n" +
 	"instanceId\x12&\n" +
 	"\x0fability_card_id\x18\x02 \x01(\tR\rabilityCardId\x12\x19\n" +
 	"\bnew_card\x18\x03 \x01(\bR\anewCard\x12\x10\n" +
 	"\x03tag\x18\x04 \x01(\x05R\x03tag\x12\x16\n" +
-	"\x06source\x18\x05 \x01(\x05R\x06source\"@\n" +
+	"\x06source\x18\x05 \x01(\x05R\x06source\x12\x12\n" +
+	"\x04sold\x18\x06 \x01(\bR\x04sold\"@\n" +
 	"\x1bTaggedBattleCompanionReward\x12!\n" +
 	"\fcompanion_id\x18\x01 \x01(\tR\vcompanionId\"Y\n" +
 	"\fProtoMailBox\x12,\n" +

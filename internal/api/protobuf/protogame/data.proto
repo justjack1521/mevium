@@ -383,6 +383,7 @@ message TaggedBattleCardReward {
   bool new_card = 3;
   int32 tag = 4;
   int32 source = 5;
+  bool sold = 6;
 }
 
 message TaggedBattleCompanionReward {
