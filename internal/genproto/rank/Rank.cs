@@ -25,47 +25,53 @@ namespace Mobius.Proto.Rank {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRwcm90b3JhbmsvcmFuay5wcm90bxIEcmFuaxoacHJvdG9pZGVudGl0eS9w",
-            "bGF5ZXIucHJvdG8iowIKEFByb3RvUmFua2luZ0luZm8SCgoCaWQYASABKAkS",
+            "bGF5ZXIucHJvdG8itAMKEFByb3RvUmFua2luZ0luZm8SCgoCaWQYASABKAkS",
             "EgoKc2hvcnRfY29kZRgCIAEoCRI4Cg9wbGF5ZXJfcmFua2luZ3MYAyADKAsy",
             "Hy5yYW5rLlByb3RvUGxheWVyUmFua1NldERldGFpbHMSNQoMdG9wX3Jhbmtp",
             "bmdzGAYgAygLMh8ucmFuay5Qcm90b1BsYXllclJhbmtTZXREZXRhaWxzEkYK",
             "EXJhbmtfcmFuZ2Vfc2NvcmVzGAcgAygLMisucmFuay5Qcm90b1JhbmtpbmdJ",
-            "bmZvLlJhbmtSYW5nZVNjb3Jlc0VudHJ5GjYKFFJhbmtSYW5nZVNjb3Jlc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoAxINCgV2YWx1ZRgCIAEoAToCOAEiqQIKGVByb3Rv",
-            "UGxheWVyUmFua1NldERldGFpbHMSEQoJcGxheWVyX2lkGAEgASgJEhMKC3Bs",
-            "YXllcl9uYW1lGAIgASgJEhQKDHBsYXllcl9sZXZlbBgDIAEoBRINCgVzY29y",
-            "ZRgEIAEoARIMCgRyYW5rGAUgASgDEi8KCGlkZW50aXR5GAYgASgLMh0uaWRl",
-            "bnRpdHkuUHJvdG9QbGF5ZXJJZGVudGl0eRI9Cg9wcmltYXJ5X2xvYWRvdXQY",
-            "ByABKAsyJC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRvdXRJZGVudGl0eRIR",
-            "Cglpc19wbGF5ZXIYCCABKAgSFQoNcHJpbWFyeV9zY29yZRgJIAEoAxIXCg9z",
-            "ZWNvbmRhcnlfc2NvcmUYCiABKAMi/gEKFlByb3RvUmFua2luZ0V2ZW50Q2xh",
-            "aW0SCgoCaWQYASABKAkSEgoKc2hvcnRfY29kZRgCIAEoCRIPCgdjbGFpbWVk",
-            "GAMgASgIEhEKCWNhbl9jbGFpbRgEIAEoCBI3Cg5wbGF5ZXJfcmFua2luZxgF",
-            "IAMoCzIfLnJhbmsuUHJvdG9QbGF5ZXJSYW5rU2V0RGV0YWlscxI1Cgx0b3Bf",
-            "cmFua2luZ3MYBiADKAsyHy5yYW5rLlByb3RvUGxheWVyUmFua1NldERldGFp",
-            "bHMSMAoKc3RhdGlzdGljcxgHIAEoCzIcLnJhbmsuUHJvdG9SYW5raW5nRXZl",
-            "bnRTdGF0cyJjChdQcm90b1JhbmtpbmdFdmVudFJld2FyZBIVCgtyZXdhcmRf",
-            "aXRlbRgBIAEoCUgAEhUKC3Jld2FyZF9jYXJkGAIgASgJSAASEAoIcXVhbnRp",
-            "dHkYAyABKAVCCAoGcmV3YXJkIv8BChZQcm90b1JhbmtpbmdFdmVudFN0YXRz",
-            "EhoKEnRvdGFsX3BhcnRpY2lwYW50cxgBIAEoAxJACg5wb3B1bGFyX3JlZ2lv",
-            "bhgCIAEoCzIoLnJhbmsuUHJvdG9SYW5raW5nRXZlbnRTdGF0UG9wdWxhclJl",
-            "Z2lvbhI6Cgtwb3B1bGFyX2pvYhgDIAEoCzIlLnJhbmsuUHJvdG9SYW5raW5n",
-            "RXZlbnRTdGF0UG9wdWxhckpvYhJLChRwb3B1bGFyX2FiaWxpdHlfY2FyZBgE",
-            "IAEoCzItLnJhbmsuUHJvdG9SYW5raW5nRXZlbnRTdGF0UG9wdWxhckFiaWxp",
-            "dHlDYXJkIk0KH1Byb3RvUmFua2luZ0V2ZW50U3RhdFBvcHVsYXJKb2ISEwoL",
-            "am9iX2NhcmRfaWQYASABKAkSFQoNc3ViX2pvYl9pbmRleBgCIAEoBSJPCiJQ",
-            "cm90b1JhbmtpbmdFdmVudFN0YXRQb3B1bGFyUmVnaW9uEhUKDXJlZ2lvbl9t",
-            "YXBfaWQYASABKAkSEgoKbm9kZV9pbmRleBgCIAEoBSJCCidQcm90b1Jhbmtp",
-            "bmdFdmVudFN0YXRQb3B1bGFyQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9jYXJk",
-            "X2lkGAEgASgJInAKGVByb3RvUmFua2luZ0V2ZW50U2NoZWR1bGUSEAoIZXZl",
-            "bnRfaWQYASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIMCgRjb2RlGAMgASgJ",
-            "Eg4KBmxlbmd0aBgEIAEoBRIPCgdyZXBlYXRzGAUgASgIQktaNWdpdGh1Yi5j",
-            "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5r",
-            "qgIRTW9iaXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
+            "bmZvLlJhbmtSYW5nZVNjb3Jlc0VudHJ5Ej0KDHNjb3JlX3JhbmdlcxgIIAMo",
+            "CzInLnJhbmsuUHJvdG9SYW5raW5nSW5mby5TY29yZVJhbmdlc0VudHJ5GjYK",
+            "FFJhbmtSYW5nZVNjb3Jlc0VudHJ5EgsKA2tleRgBIAEoAxINCgV2YWx1ZRgC",
+            "IAEoAToCOAEaUAoQU2NvcmVSYW5nZXNFbnRyeRILCgNrZXkYASABKAMSKwoF",
+            "dmFsdWUYAiABKAsyHC5yYW5rLlByb3RvUmFua2luZ1Njb3JlUmFuZ2U6AjgB",
+            "IkgKFlByb3RvUmFua2luZ1Njb3JlUmFuZ2USFQoNcHJpbWFyeV9zY29yZRgB",
+            "IAEoAxIXCg9zZWNvbmRhcnlfc2NvcmUYAiABKAMiqQIKGVByb3RvUGxheWVy",
+            "UmFua1NldERldGFpbHMSEQoJcGxheWVyX2lkGAEgASgJEhMKC3BsYXllcl9u",
+            "YW1lGAIgASgJEhQKDHBsYXllcl9sZXZlbBgDIAEoBRINCgVzY29yZRgEIAEo",
+            "ARIMCgRyYW5rGAUgASgDEi8KCGlkZW50aXR5GAYgASgLMh0uaWRlbnRpdHku",
+            "UHJvdG9QbGF5ZXJJZGVudGl0eRI9Cg9wcmltYXJ5X2xvYWRvdXQYByABKAsy",
+            "JC5pZGVudGl0eS5Qcm90b1BsYXllckxvYWRvdXRJZGVudGl0eRIRCglpc19w",
+            "bGF5ZXIYCCABKAgSFQoNcHJpbWFyeV9zY29yZRgJIAEoAxIXCg9zZWNvbmRh",
+            "cnlfc2NvcmUYCiABKAMi/gEKFlByb3RvUmFua2luZ0V2ZW50Q2xhaW0SCgoC",
+            "aWQYASABKAkSEgoKc2hvcnRfY29kZRgCIAEoCRIPCgdjbGFpbWVkGAMgASgI",
+            "EhEKCWNhbl9jbGFpbRgEIAEoCBI3Cg5wbGF5ZXJfcmFua2luZxgFIAMoCzIf",
+            "LnJhbmsuUHJvdG9QbGF5ZXJSYW5rU2V0RGV0YWlscxI1Cgx0b3BfcmFua2lu",
+            "Z3MYBiADKAsyHy5yYW5rLlByb3RvUGxheWVyUmFua1NldERldGFpbHMSMAoK",
+            "c3RhdGlzdGljcxgHIAEoCzIcLnJhbmsuUHJvdG9SYW5raW5nRXZlbnRTdGF0",
+            "cyJjChdQcm90b1JhbmtpbmdFdmVudFJld2FyZBIVCgtyZXdhcmRfaXRlbRgB",
+            "IAEoCUgAEhUKC3Jld2FyZF9jYXJkGAIgASgJSAASEAoIcXVhbnRpdHkYAyAB",
+            "KAVCCAoGcmV3YXJkIv8BChZQcm90b1JhbmtpbmdFdmVudFN0YXRzEhoKEnRv",
+            "dGFsX3BhcnRpY2lwYW50cxgBIAEoAxJACg5wb3B1bGFyX3JlZ2lvbhgCIAEo",
+            "CzIoLnJhbmsuUHJvdG9SYW5raW5nRXZlbnRTdGF0UG9wdWxhclJlZ2lvbhI6",
+            "Cgtwb3B1bGFyX2pvYhgDIAEoCzIlLnJhbmsuUHJvdG9SYW5raW5nRXZlbnRT",
+            "dGF0UG9wdWxhckpvYhJLChRwb3B1bGFyX2FiaWxpdHlfY2FyZBgEIAEoCzIt",
+            "LnJhbmsuUHJvdG9SYW5raW5nRXZlbnRTdGF0UG9wdWxhckFiaWxpdHlDYXJk",
+            "Ik0KH1Byb3RvUmFua2luZ0V2ZW50U3RhdFBvcHVsYXJKb2ISEwoLam9iX2Nh",
+            "cmRfaWQYASABKAkSFQoNc3ViX2pvYl9pbmRleBgCIAEoBSJPCiJQcm90b1Jh",
+            "bmtpbmdFdmVudFN0YXRQb3B1bGFyUmVnaW9uEhUKDXJlZ2lvbl9tYXBfaWQY",
+            "ASABKAkSEgoKbm9kZV9pbmRleBgCIAEoBSJCCidQcm90b1JhbmtpbmdFdmVu",
+            "dFN0YXRQb3B1bGFyQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9jYXJkX2lkGAEg",
+            "ASgJInAKGVByb3RvUmFua2luZ0V2ZW50U2NoZWR1bGUSEAoIZXZlbnRfaWQY",
+            "ASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIMCgRjb2RlGAMgASgJEg4KBmxl",
+            "bmd0aBgEIAEoBRIPCgdyZXBlYXRzGAUgASgIQktaNWdpdGh1Yi5jb20vanVz",
+            "dGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5rqgIRTW9i",
+            "aXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingInfo), global::Mobius.Proto.Rank.ProtoRankingInfo.Parser, new[]{ "Id", "ShortCode", "PlayerRankings", "TopRankings", "RankRangeScores" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingInfo), global::Mobius.Proto.Rank.ProtoRankingInfo.Parser, new[]{ "Id", "ShortCode", "PlayerRankings", "TopRankings", "RankRangeScores", "ScoreRanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingScoreRange), global::Mobius.Proto.Rank.ProtoRankingScoreRange.Parser, new[]{ "PrimaryScore", "SecondaryScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoPlayerRankSetDetails), global::Mobius.Proto.Rank.ProtoPlayerRankSetDetails.Parser, new[]{ "PlayerId", "PlayerName", "PlayerLevel", "Score", "Rank", "Identity", "PrimaryLoadout", "IsPlayer", "PrimaryScore", "SecondaryScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventClaim), global::Mobius.Proto.Rank.ProtoRankingEventClaim.Parser, new[]{ "Id", "ShortCode", "Claimed", "CanClaim", "PlayerRanking", "TopRankings", "Statistics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventReward), global::Mobius.Proto.Rank.ProtoRankingEventReward.Parser, new[]{ "RewardItem", "RewardCard", "Quantity" }, new[]{ "Reward" }, null, null, null),
@@ -114,6 +120,7 @@ namespace Mobius.Proto.Rank {
       playerRankings_ = other.playerRankings_.Clone();
       topRankings_ = other.topRankings_.Clone();
       rankRangeScores_ = other.rankRangeScores_.Clone();
+      scoreRanges_ = other.scoreRanges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -174,6 +181,16 @@ namespace Mobius.Proto.Rank {
       get { return rankRangeScores_; }
     }
 
+    /// <summary>Field number for the "score_ranges" field.</summary>
+    public const int ScoreRangesFieldNumber = 8;
+    private static readonly pbc::MapField<long, global::Mobius.Proto.Rank.ProtoRankingScoreRange>.Codec _map_scoreRanges_codec
+        = new pbc::MapField<long, global::Mobius.Proto.Rank.ProtoRankingScoreRange>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Rank.ProtoRankingScoreRange.Parser), 66);
+    private readonly pbc::MapField<long, global::Mobius.Proto.Rank.ProtoRankingScoreRange> scoreRanges_ = new pbc::MapField<long, global::Mobius.Proto.Rank.ProtoRankingScoreRange>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<long, global::Mobius.Proto.Rank.ProtoRankingScoreRange> ScoreRanges {
+      get { return scoreRanges_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoRankingInfo);
@@ -192,6 +209,7 @@ namespace Mobius.Proto.Rank {
       if(!playerRankings_.Equals(other.playerRankings_)) return false;
       if(!topRankings_.Equals(other.topRankings_)) return false;
       if (!RankRangeScores.Equals(other.RankRangeScores)) return false;
+      if (!ScoreRanges.Equals(other.ScoreRanges)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -203,6 +221,7 @@ namespace Mobius.Proto.Rank {
       hash ^= playerRankings_.GetHashCode();
       hash ^= topRankings_.GetHashCode();
       hash ^= RankRangeScores.GetHashCode();
+      hash ^= ScoreRanges.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,6 +249,7 @@ namespace Mobius.Proto.Rank {
       playerRankings_.WriteTo(output, _repeated_playerRankings_codec);
       topRankings_.WriteTo(output, _repeated_topRankings_codec);
       rankRangeScores_.WriteTo(output, _map_rankRangeScores_codec);
+      scoreRanges_.WriteTo(output, _map_scoreRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -250,6 +270,7 @@ namespace Mobius.Proto.Rank {
       playerRankings_.WriteTo(ref output, _repeated_playerRankings_codec);
       topRankings_.WriteTo(ref output, _repeated_topRankings_codec);
       rankRangeScores_.WriteTo(ref output, _map_rankRangeScores_codec);
+      scoreRanges_.WriteTo(ref output, _map_scoreRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -268,6 +289,7 @@ namespace Mobius.Proto.Rank {
       size += playerRankings_.CalculateSize(_repeated_playerRankings_codec);
       size += topRankings_.CalculateSize(_repeated_topRankings_codec);
       size += rankRangeScores_.CalculateSize(_map_rankRangeScores_codec);
+      size += scoreRanges_.CalculateSize(_map_scoreRanges_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -288,6 +310,7 @@ namespace Mobius.Proto.Rank {
       playerRankings_.Add(other.playerRankings_);
       topRankings_.Add(other.topRankings_);
       rankRangeScores_.Add(other.rankRangeScores_);
+      scoreRanges_.Add(other.scoreRanges_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -320,6 +343,10 @@ namespace Mobius.Proto.Rank {
           }
           case 58: {
             rankRangeScores_.AddEntriesFrom(input, _map_rankRangeScores_codec);
+            break;
+          }
+          case 66: {
+            scoreRanges_.AddEntriesFrom(input, _map_scoreRanges_codec);
             break;
           }
         }
@@ -356,6 +383,218 @@ namespace Mobius.Proto.Rank {
             rankRangeScores_.AddEntriesFrom(ref input, _map_rankRangeScores_codec);
             break;
           }
+          case 66: {
+            scoreRanges_.AddEntriesFrom(ref input, _map_scoreRanges_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoRankingScoreRange : pb::IMessage<ProtoRankingScoreRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoRankingScoreRange> _parser = new pb::MessageParser<ProtoRankingScoreRange>(() => new ProtoRankingScoreRange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoRankingScoreRange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingScoreRange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingScoreRange(ProtoRankingScoreRange other) : this() {
+      primaryScore_ = other.primaryScore_;
+      secondaryScore_ = other.secondaryScore_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingScoreRange Clone() {
+      return new ProtoRankingScoreRange(this);
+    }
+
+    /// <summary>Field number for the "primary_score" field.</summary>
+    public const int PrimaryScoreFieldNumber = 1;
+    private long primaryScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long PrimaryScore {
+      get { return primaryScore_; }
+      set {
+        primaryScore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "secondary_score" field.</summary>
+    public const int SecondaryScoreFieldNumber = 2;
+    private long secondaryScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long SecondaryScore {
+      get { return secondaryScore_; }
+      set {
+        secondaryScore_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoRankingScoreRange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoRankingScoreRange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PrimaryScore != other.PrimaryScore) return false;
+      if (SecondaryScore != other.SecondaryScore) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PrimaryScore != 0L) hash ^= PrimaryScore.GetHashCode();
+      if (SecondaryScore != 0L) hash ^= SecondaryScore.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PrimaryScore != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(PrimaryScore);
+      }
+      if (SecondaryScore != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SecondaryScore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PrimaryScore != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(PrimaryScore);
+      }
+      if (SecondaryScore != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SecondaryScore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PrimaryScore != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PrimaryScore);
+      }
+      if (SecondaryScore != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SecondaryScore);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoRankingScoreRange other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PrimaryScore != 0L) {
+        PrimaryScore = other.PrimaryScore;
+      }
+      if (other.SecondaryScore != 0L) {
+        SecondaryScore = other.SecondaryScore;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PrimaryScore = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            SecondaryScore = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PrimaryScore = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            SecondaryScore = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -375,7 +614,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -889,7 +1128,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1264,7 +1503,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1539,7 +1778,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1846,7 +2085,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2054,7 +2293,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2262,7 +2501,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2434,7 +2673,7 @@ namespace Mobius.Proto.Rank {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

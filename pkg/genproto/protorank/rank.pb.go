@@ -23,12 +23,13 @@ const (
 )
 
 type ProtoRankingInfo struct {
-	state           protoimpl.MessageState       `protogen:"open.v1"`
-	Id              string                       `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ShortCode       string                       `protobuf:"bytes,2,opt,name=short_code,json=shortCode,proto3" json:"short_code,omitempty"`
-	PlayerRankings  []*ProtoPlayerRankSetDetails `protobuf:"bytes,3,rep,name=player_rankings,json=playerRankings,proto3" json:"player_rankings,omitempty"`
-	TopRankings     []*ProtoPlayerRankSetDetails `protobuf:"bytes,6,rep,name=top_rankings,json=topRankings,proto3" json:"top_rankings,omitempty"`
-	RankRangeScores map[int64]float64            `protobuf:"bytes,7,rep,name=rank_range_scores,json=rankRangeScores,proto3" json:"rank_range_scores,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"fixed64,2,opt,name=value"`
+	state           protoimpl.MessageState            `protogen:"open.v1"`
+	Id              string                            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ShortCode       string                            `protobuf:"bytes,2,opt,name=short_code,json=shortCode,proto3" json:"short_code,omitempty"`
+	PlayerRankings  []*ProtoPlayerRankSetDetails      `protobuf:"bytes,3,rep,name=player_rankings,json=playerRankings,proto3" json:"player_rankings,omitempty"`
+	TopRankings     []*ProtoPlayerRankSetDetails      `protobuf:"bytes,6,rep,name=top_rankings,json=topRankings,proto3" json:"top_rankings,omitempty"`
+	RankRangeScores map[int64]float64                 `protobuf:"bytes,7,rep,name=rank_range_scores,json=rankRangeScores,proto3" json:"rank_range_scores,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"fixed64,2,opt,name=value"`
+	ScoreRanges     map[int64]*ProtoRankingScoreRange `protobuf:"bytes,8,rep,name=score_ranges,json=scoreRanges,proto3" json:"score_ranges,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	unknownFields   protoimpl.UnknownFields
 	sizeCache       protoimpl.SizeCache
 }
@@ -98,6 +99,65 @@ func (x *ProtoRankingInfo) GetRankRangeScores() map[int64]float64 {
 	return nil
 }
 
+func (x *ProtoRankingInfo) GetScoreRanges() map[int64]*ProtoRankingScoreRange {
+	if x != nil {
+		return x.ScoreRanges
+	}
+	return nil
+}
+
+type ProtoRankingScoreRange struct {
+	state          protoimpl.MessageState `protogen:"open.v1"`
+	PrimaryScore   int64                  `protobuf:"varint,1,opt,name=primary_score,json=primaryScore,proto3" json:"primary_score,omitempty"`
+	SecondaryScore int64                  `protobuf:"varint,2,opt,name=secondary_score,json=secondaryScore,proto3" json:"secondary_score,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *ProtoRankingScoreRange) Reset() {
+	*x = ProtoRankingScoreRange{}
+	mi := &file_protorank_rank_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoRankingScoreRange) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoRankingScoreRange) ProtoMessage() {}
+
+func (x *ProtoRankingScoreRange) ProtoReflect() protoreflect.Message {
+	mi := &file_protorank_rank_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoRankingScoreRange.ProtoReflect.Descriptor instead.
+func (*ProtoRankingScoreRange) Descriptor() ([]byte, []int) {
+	return file_protorank_rank_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *ProtoRankingScoreRange) GetPrimaryScore() int64 {
+	if x != nil {
+		return x.PrimaryScore
+	}
+	return 0
+}
+
+func (x *ProtoRankingScoreRange) GetSecondaryScore() int64 {
+	if x != nil {
+		return x.SecondaryScore
+	}
+	return 0
+}
+
 type ProtoPlayerRankSetDetails struct {
 	state          protoimpl.MessageState                    `protogen:"open.v1"`
 	PlayerId       string                                    `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
@@ -116,7 +176,7 @@ type ProtoPlayerRankSetDetails struct {
 
 func (x *ProtoPlayerRankSetDetails) Reset() {
 	*x = ProtoPlayerRankSetDetails{}
-	mi := &file_protorank_rank_proto_msgTypes[1]
+	mi := &file_protorank_rank_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -128,7 +188,7 @@ func (x *ProtoPlayerRankSetDetails) String() string {
 func (*ProtoPlayerRankSetDetails) ProtoMessage() {}
 
 func (x *ProtoPlayerRankSetDetails) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[1]
+	mi := &file_protorank_rank_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -141,7 +201,7 @@ func (x *ProtoPlayerRankSetDetails) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoPlayerRankSetDetails.ProtoReflect.Descriptor instead.
 func (*ProtoPlayerRankSetDetails) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{1}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *ProtoPlayerRankSetDetails) GetPlayerId() string {
@@ -229,7 +289,7 @@ type ProtoRankingEventClaim struct {
 
 func (x *ProtoRankingEventClaim) Reset() {
 	*x = ProtoRankingEventClaim{}
-	mi := &file_protorank_rank_proto_msgTypes[2]
+	mi := &file_protorank_rank_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -241,7 +301,7 @@ func (x *ProtoRankingEventClaim) String() string {
 func (*ProtoRankingEventClaim) ProtoMessage() {}
 
 func (x *ProtoRankingEventClaim) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[2]
+	mi := &file_protorank_rank_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -254,7 +314,7 @@ func (x *ProtoRankingEventClaim) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoRankingEventClaim.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventClaim) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{2}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *ProtoRankingEventClaim) GetId() string {
@@ -320,7 +380,7 @@ type ProtoRankingEventReward struct {
 
 func (x *ProtoRankingEventReward) Reset() {
 	*x = ProtoRankingEventReward{}
-	mi := &file_protorank_rank_proto_msgTypes[3]
+	mi := &file_protorank_rank_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -332,7 +392,7 @@ func (x *ProtoRankingEventReward) String() string {
 func (*ProtoRankingEventReward) ProtoMessage() {}
 
 func (x *ProtoRankingEventReward) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[3]
+	mi := &file_protorank_rank_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -345,7 +405,7 @@ func (x *ProtoRankingEventReward) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoRankingEventReward.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventReward) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{3}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *ProtoRankingEventReward) GetReward() isProtoRankingEventReward_Reward {
@@ -408,7 +468,7 @@ type ProtoRankingEventStats struct {
 
 func (x *ProtoRankingEventStats) Reset() {
 	*x = ProtoRankingEventStats{}
-	mi := &file_protorank_rank_proto_msgTypes[4]
+	mi := &file_protorank_rank_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -420,7 +480,7 @@ func (x *ProtoRankingEventStats) String() string {
 func (*ProtoRankingEventStats) ProtoMessage() {}
 
 func (x *ProtoRankingEventStats) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[4]
+	mi := &file_protorank_rank_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -433,7 +493,7 @@ func (x *ProtoRankingEventStats) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoRankingEventStats.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventStats) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{4}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *ProtoRankingEventStats) GetTotalParticipants() int64 {
@@ -474,7 +534,7 @@ type ProtoRankingEventStatPopularJob struct {
 
 func (x *ProtoRankingEventStatPopularJob) Reset() {
 	*x = ProtoRankingEventStatPopularJob{}
-	mi := &file_protorank_rank_proto_msgTypes[5]
+	mi := &file_protorank_rank_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -486,7 +546,7 @@ func (x *ProtoRankingEventStatPopularJob) String() string {
 func (*ProtoRankingEventStatPopularJob) ProtoMessage() {}
 
 func (x *ProtoRankingEventStatPopularJob) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[5]
+	mi := &file_protorank_rank_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -499,7 +559,7 @@ func (x *ProtoRankingEventStatPopularJob) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoRankingEventStatPopularJob.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventStatPopularJob) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{5}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *ProtoRankingEventStatPopularJob) GetJobCardId() string {
@@ -526,7 +586,7 @@ type ProtoRankingEventStatPopularRegion struct {
 
 func (x *ProtoRankingEventStatPopularRegion) Reset() {
 	*x = ProtoRankingEventStatPopularRegion{}
-	mi := &file_protorank_rank_proto_msgTypes[6]
+	mi := &file_protorank_rank_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -538,7 +598,7 @@ func (x *ProtoRankingEventStatPopularRegion) String() string {
 func (*ProtoRankingEventStatPopularRegion) ProtoMessage() {}
 
 func (x *ProtoRankingEventStatPopularRegion) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[6]
+	mi := &file_protorank_rank_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -551,7 +611,7 @@ func (x *ProtoRankingEventStatPopularRegion) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ProtoRankingEventStatPopularRegion.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventStatPopularRegion) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{6}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *ProtoRankingEventStatPopularRegion) GetRegionMapId() string {
@@ -577,7 +637,7 @@ type ProtoRankingEventStatPopularAbilityCard struct {
 
 func (x *ProtoRankingEventStatPopularAbilityCard) Reset() {
 	*x = ProtoRankingEventStatPopularAbilityCard{}
-	mi := &file_protorank_rank_proto_msgTypes[7]
+	mi := &file_protorank_rank_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -589,7 +649,7 @@ func (x *ProtoRankingEventStatPopularAbilityCard) String() string {
 func (*ProtoRankingEventStatPopularAbilityCard) ProtoMessage() {}
 
 func (x *ProtoRankingEventStatPopularAbilityCard) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[7]
+	mi := &file_protorank_rank_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -602,7 +662,7 @@ func (x *ProtoRankingEventStatPopularAbilityCard) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use ProtoRankingEventStatPopularAbilityCard.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventStatPopularAbilityCard) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{7}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *ProtoRankingEventStatPopularAbilityCard) GetAbilityCardId() string {
@@ -625,7 +685,7 @@ type ProtoRankingEventSchedule struct {
 
 func (x *ProtoRankingEventSchedule) Reset() {
 	*x = ProtoRankingEventSchedule{}
-	mi := &file_protorank_rank_proto_msgTypes[8]
+	mi := &file_protorank_rank_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -637,7 +697,7 @@ func (x *ProtoRankingEventSchedule) String() string {
 func (*ProtoRankingEventSchedule) ProtoMessage() {}
 
 func (x *ProtoRankingEventSchedule) ProtoReflect() protoreflect.Message {
-	mi := &file_protorank_rank_proto_msgTypes[8]
+	mi := &file_protorank_rank_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -650,7 +710,7 @@ func (x *ProtoRankingEventSchedule) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoRankingEventSchedule.ProtoReflect.Descriptor instead.
 func (*ProtoRankingEventSchedule) Descriptor() ([]byte, []int) {
-	return file_protorank_rank_proto_rawDescGZIP(), []int{8}
+	return file_protorank_rank_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *ProtoRankingEventSchedule) GetEventId() string {
@@ -692,17 +752,24 @@ var File_protorank_rank_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_proto_rawDesc = "" +
 	"\n" +
-	"\x14protorank/rank.proto\x12\x04rank\x1a\x1aprotoidentity/player.proto\"\xec\x02\n" +
+	"\x14protorank/rank.proto\x12\x04rank\x1a\x1aprotoidentity/player.proto\"\x96\x04\n" +
 	"\x10ProtoRankingInfo\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +
 	"short_code\x18\x02 \x01(\tR\tshortCode\x12H\n" +
 	"\x0fplayer_rankings\x18\x03 \x03(\v2\x1f.rank.ProtoPlayerRankSetDetailsR\x0eplayerRankings\x12B\n" +
 	"\ftop_rankings\x18\x06 \x03(\v2\x1f.rank.ProtoPlayerRankSetDetailsR\vtopRankings\x12W\n" +
-	"\x11rank_range_scores\x18\a \x03(\v2+.rank.ProtoRankingInfo.RankRangeScoresEntryR\x0frankRangeScores\x1aB\n" +
+	"\x11rank_range_scores\x18\a \x03(\v2+.rank.ProtoRankingInfo.RankRangeScoresEntryR\x0frankRangeScores\x12J\n" +
+	"\fscore_ranges\x18\b \x03(\v2'.rank.ProtoRankingInfo.ScoreRangesEntryR\vscoreRanges\x1aB\n" +
 	"\x14RankRangeScoresEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\x03R\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x01R\x05value:\x028\x01\"\x9b\x03\n" +
+	"\x05value\x18\x02 \x01(\x01R\x05value:\x028\x01\x1a\\\n" +
+	"\x10ScoreRangesEntry\x12\x10\n" +
+	"\x03key\x18\x01 \x01(\x03R\x03key\x122\n" +
+	"\x05value\x18\x02 \x01(\v2\x1c.rank.ProtoRankingScoreRangeR\x05value:\x028\x01\"f\n" +
+	"\x16ProtoRankingScoreRange\x12#\n" +
+	"\rprimary_score\x18\x01 \x01(\x03R\fprimaryScore\x12'\n" +
+	"\x0fsecondary_score\x18\x02 \x01(\x03R\x0esecondaryScore\"\x9b\x03\n" +
 	"\x19ProtoPlayerRankSetDetails\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1f\n" +
 	"\vplayer_name\x18\x02 \x01(\tR\n" +
@@ -769,38 +836,42 @@ func file_protorank_rank_proto_rawDescGZIP() []byte {
 	return file_protorank_rank_proto_rawDescData
 }
 
-var file_protorank_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_protorank_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
 var file_protorank_rank_proto_goTypes = []any{
 	(*ProtoRankingInfo)(nil),                         // 0: rank.ProtoRankingInfo
-	(*ProtoPlayerRankSetDetails)(nil),                // 1: rank.ProtoPlayerRankSetDetails
-	(*ProtoRankingEventClaim)(nil),                   // 2: rank.ProtoRankingEventClaim
-	(*ProtoRankingEventReward)(nil),                  // 3: rank.ProtoRankingEventReward
-	(*ProtoRankingEventStats)(nil),                   // 4: rank.ProtoRankingEventStats
-	(*ProtoRankingEventStatPopularJob)(nil),          // 5: rank.ProtoRankingEventStatPopularJob
-	(*ProtoRankingEventStatPopularRegion)(nil),       // 6: rank.ProtoRankingEventStatPopularRegion
-	(*ProtoRankingEventStatPopularAbilityCard)(nil),  // 7: rank.ProtoRankingEventStatPopularAbilityCard
-	(*ProtoRankingEventSchedule)(nil),                // 8: rank.ProtoRankingEventSchedule
-	nil,                                              // 9: rank.ProtoRankingInfo.RankRangeScoresEntry
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 10: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 11: identity.ProtoPlayerLoadoutIdentity
+	(*ProtoRankingScoreRange)(nil),                   // 1: rank.ProtoRankingScoreRange
+	(*ProtoPlayerRankSetDetails)(nil),                // 2: rank.ProtoPlayerRankSetDetails
+	(*ProtoRankingEventClaim)(nil),                   // 3: rank.ProtoRankingEventClaim
+	(*ProtoRankingEventReward)(nil),                  // 4: rank.ProtoRankingEventReward
+	(*ProtoRankingEventStats)(nil),                   // 5: rank.ProtoRankingEventStats
+	(*ProtoRankingEventStatPopularJob)(nil),          // 6: rank.ProtoRankingEventStatPopularJob
+	(*ProtoRankingEventStatPopularRegion)(nil),       // 7: rank.ProtoRankingEventStatPopularRegion
+	(*ProtoRankingEventStatPopularAbilityCard)(nil),  // 8: rank.ProtoRankingEventStatPopularAbilityCard
+	(*ProtoRankingEventSchedule)(nil),                // 9: rank.ProtoRankingEventSchedule
+	nil,                                              // 10: rank.ProtoRankingInfo.RankRangeScoresEntry
+	nil,                                              // 11: rank.ProtoRankingInfo.ScoreRangesEntry
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 12: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 13: identity.ProtoPlayerLoadoutIdentity
 }
 var file_protorank_rank_proto_depIdxs = []int32{
-	1,  // 0: rank.ProtoRankingInfo.player_rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	1,  // 1: rank.ProtoRankingInfo.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	9,  // 2: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
-	10, // 3: rank.ProtoPlayerRankSetDetails.identity:type_name -> identity.ProtoPlayerIdentity
-	11, // 4: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	1,  // 5: rank.ProtoRankingEventClaim.player_ranking:type_name -> rank.ProtoPlayerRankSetDetails
-	1,  // 6: rank.ProtoRankingEventClaim.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	4,  // 7: rank.ProtoRankingEventClaim.statistics:type_name -> rank.ProtoRankingEventStats
-	6,  // 8: rank.ProtoRankingEventStats.popular_region:type_name -> rank.ProtoRankingEventStatPopularRegion
-	5,  // 9: rank.ProtoRankingEventStats.popular_job:type_name -> rank.ProtoRankingEventStatPopularJob
-	7,  // 10: rank.ProtoRankingEventStats.popular_ability_card:type_name -> rank.ProtoRankingEventStatPopularAbilityCard
-	11, // [11:11] is the sub-list for method output_type
-	11, // [11:11] is the sub-list for method input_type
-	11, // [11:11] is the sub-list for extension type_name
-	11, // [11:11] is the sub-list for extension extendee
-	0,  // [0:11] is the sub-list for field type_name
+	2,  // 0: rank.ProtoRankingInfo.player_rankings:type_name -> rank.ProtoPlayerRankSetDetails
+	2,  // 1: rank.ProtoRankingInfo.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
+	10, // 2: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
+	11, // 3: rank.ProtoRankingInfo.score_ranges:type_name -> rank.ProtoRankingInfo.ScoreRangesEntry
+	12, // 4: rank.ProtoPlayerRankSetDetails.identity:type_name -> identity.ProtoPlayerIdentity
+	13, // 5: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	2,  // 6: rank.ProtoRankingEventClaim.player_ranking:type_name -> rank.ProtoPlayerRankSetDetails
+	2,  // 7: rank.ProtoRankingEventClaim.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
+	5,  // 8: rank.ProtoRankingEventClaim.statistics:type_name -> rank.ProtoRankingEventStats
+	7,  // 9: rank.ProtoRankingEventStats.popular_region:type_name -> rank.ProtoRankingEventStatPopularRegion
+	6,  // 10: rank.ProtoRankingEventStats.popular_job:type_name -> rank.ProtoRankingEventStatPopularJob
+	8,  // 11: rank.ProtoRankingEventStats.popular_ability_card:type_name -> rank.ProtoRankingEventStatPopularAbilityCard
+	1,  // 12: rank.ProtoRankingInfo.ScoreRangesEntry.value:type_name -> rank.ProtoRankingScoreRange
+	13, // [13:13] is the sub-list for method output_type
+	13, // [13:13] is the sub-list for method input_type
+	13, // [13:13] is the sub-list for extension type_name
+	13, // [13:13] is the sub-list for extension extendee
+	0,  // [0:13] is the sub-list for field type_name
 }
 
 func init() { file_protorank_rank_proto_init() }
@@ -808,7 +879,7 @@ func file_protorank_rank_proto_init() {
 	if File_protorank_rank_proto != nil {
 		return
 	}
-	file_protorank_rank_proto_msgTypes[3].OneofWrappers = []any{
+	file_protorank_rank_proto_msgTypes[4].OneofWrappers = []any{
 		(*ProtoRankingEventReward_RewardItem)(nil),
 		(*ProtoRankingEventReward_RewardCard)(nil),
 	}
@@ -818,7 +889,7 @@ func file_protorank_rank_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_proto_rawDesc), len(file_protorank_rank_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   10,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
