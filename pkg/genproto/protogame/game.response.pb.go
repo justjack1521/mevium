@@ -34,6 +34,7 @@ type BattleCompleteResponse struct {
 	WeeklyRankUpdate    *protorank.ProtoRankingInfo `protobuf:"bytes,10,opt,name=weekly_rank_update,json=weeklyRankUpdate,proto3" json:"weekly_rank_update,omitempty"`
 	EventRankUpdate     *protorank.ProtoRankingInfo `protobuf:"bytes,11,opt,name=event_rank_update,json=eventRankUpdate,proto3" json:"event_rank_update,omitempty"`
 	CurrentStamina      int32                       `protobuf:"varint,12,opt,name=current_stamina,json=currentStamina,proto3" json:"current_stamina,omitempty"`
+	UnavailableReason   int32                       `protobuf:"varint,13,opt,name=unavailable_reason,json=unavailableReason,proto3" json:"unavailable_reason,omitempty"`
 	unknownFields       protoimpl.UnknownFields
 	sizeCache           protoimpl.SizeCache
 }
@@ -134,6 +135,13 @@ func (x *BattleCompleteResponse) GetEventRankUpdate() *protorank.ProtoRankingInf
 func (x *BattleCompleteResponse) GetCurrentStamina() int32 {
 	if x != nil {
 		return x.CurrentStamina
+	}
+	return 0
+}
+
+func (x *BattleCompleteResponse) GetUnavailableReason() int32 {
+	if x != nil {
+		return x.UnavailableReason
 	}
 	return 0
 }
@@ -2826,7 +2834,7 @@ var File_protogame_game_response_proto protoreflect.FileDescriptor
 
 const file_protogame_game_response_proto_rawDesc = "" +
 	"\n" +
-	"\x1dprotogame/game.response.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x14protorank/rank.proto\"\xc9\x04\n" +
+	"\x1dprotogame/game.response.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x14protorank/rank.proto\"\xf8\x04\n" +
 	"\x16BattleCompleteResponse\x126\n" +
 	"\aResults\x18\x01 \x01(\v2\x1c.game.ProtoLastBattleResultsR\aResults\x12;\n" +
 	"\fseed_rewards\x18\x04 \x03(\v2\x18.game.ProtoItemValuePairR\vseedRewards\x120\n" +
@@ -2839,7 +2847,8 @@ const file_protogame_game_response_proto_rawDesc = "" +
 	"\x12weekly_rank_update\x18\n" +
 	" \x01(\v2\x16.rank.ProtoRankingInfoR\x10weeklyRankUpdate\x12B\n" +
 	"\x11event_rank_update\x18\v \x01(\v2\x16.rank.ProtoRankingInfoR\x0feventRankUpdate\x12'\n" +
-	"\x0fcurrent_stamina\x18\f \x01(\x05R\x0ecurrentStamina\"R\n" +
+	"\x0fcurrent_stamina\x18\f \x01(\x05R\x0ecurrentStamina\x12-\n" +
+	"\x12unavailable_reason\x18\r \x01(\x05R\x11unavailableReason\"R\n" +
 	"\x14BattleReviveResponse\x12:\n" +
 	"\vItemRemoved\x18\x01 \x01(\v2\x18.game.ProtoItemValuePairR\vItemRemoved\"\x8b\x02\n" +
 	"\x13BattleStartResponse\x12D\n" +
