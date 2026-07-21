@@ -3022,6 +3022,7 @@ type ProtoLastBattleResults struct {
 	RegionMissionProgress   map[string]int32               `protobuf:"bytes,14,rep,name=region_mission_progress,json=regionMissionProgress,proto3" json:"region_mission_progress,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	WanderingFiendMovements map[string]int32               `protobuf:"bytes,16,rep,name=wandering_fiend_movements,json=wanderingFiendMovements,proto3" json:"wandering_fiend_movements,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	ArenaProgressData       *ArenaProgressData             `protobuf:"bytes,17,opt,name=arena_progress_data,json=arenaProgressData,proto3" json:"arena_progress_data,omitempty"`
+	UnavailableReason       int32                          `protobuf:"varint,18,opt,name=unavailable_reason,json=unavailableReason,proto3" json:"unavailable_reason,omitempty"`
 	unknownFields           protoimpl.UnknownFields
 	sizeCache               protoimpl.SizeCache
 }
@@ -3173,6 +3174,13 @@ func (x *ProtoLastBattleResults) GetArenaProgressData() *ArenaProgressData {
 		return x.ArenaProgressData
 	}
 	return nil
+}
+
+func (x *ProtoLastBattleResults) GetUnavailableReason() int32 {
+	if x != nil {
+		return x.UnavailableReason
+	}
+	return 0
 }
 
 type TaggedBattleItemReward struct {
@@ -6905,7 +6913,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"crownLevel\x1a@\n" +
 	"\x12AutoAbilitiesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\xd3\t\n" +
+	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\x82\n" +
+	"\n" +
 	"\x16ProtoLastBattleResults\x12\"\n" +
 	"\rregion_map_id\x18\x01 \x01(\tR\vregionMapId\x12*\n" +
 	"\x11region_node_index\x18\x02 \x01(\x05R\x0fregionNodeIndex\x12\x14\n" +
@@ -6924,7 +6933,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x12achievement_unlock\x18\r \x01(\x05R\x11achievementUnlock\x12o\n" +
 	"\x17region_mission_progress\x18\x0e \x03(\v27.game.ProtoLastBattleResults.RegionMissionProgressEntryR\x15regionMissionProgress\x12u\n" +
 	"\x19wandering_fiend_movements\x18\x10 \x03(\v29.game.ProtoLastBattleResults.WanderingFiendMovementsEntryR\x17wanderingFiendMovements\x12G\n" +
-	"\x13arena_progress_data\x18\x11 \x01(\v2\x17.game.ArenaProgressDataR\x11arenaProgressData\x1aH\n" +
+	"\x13arena_progress_data\x18\x11 \x01(\v2\x17.game.ArenaProgressDataR\x11arenaProgressData\x12-\n" +
+	"\x12unavailable_reason\x18\x12 \x01(\x05R\x11unavailableReason\x1aH\n" +
 	"\x1aRegionMissionProgressEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\x1aJ\n" +

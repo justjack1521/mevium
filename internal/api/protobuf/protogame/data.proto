@@ -368,6 +368,7 @@ message ProtoLastBattleResults {
   map<string, int32> region_mission_progress = 14;
   map<string, int32> wandering_fiend_movements = 16;
   ArenaProgressData arena_progress_data = 17;
+  int32 unavailable_reason = 18;
 
 }
 

@@ -22,7 +22,6 @@ message BattleCompleteResponse {
   rank.ProtoRankingInfo event_rank_update = 11;
 
   int32 current_stamina = 12;
-  int32 unavailable_reason = 13;
 
 }
 
