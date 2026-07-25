@@ -2081,6 +2081,7 @@ type ProtoLoginCampaignInstance struct {
 	Claimed        map[int32]bool         `protobuf:"bytes,5,rep,name=claimed,proto3" json:"claimed,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	LastClaimIndex int32                  `protobuf:"varint,3,opt,name=last_claim_index,json=lastClaimIndex,proto3" json:"last_claim_index,omitempty"`
 	LastClaimAdded int64                  `protobuf:"varint,4,opt,name=last_claim_added,json=lastClaimAdded,proto3" json:"last_claim_added,omitempty"`
+	NextReset      int64                  `protobuf:"varint,6,opt,name=next_reset,json=nextReset,proto3" json:"next_reset,omitempty"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -2139,6 +2140,13 @@ func (x *ProtoLoginCampaignInstance) GetLastClaimIndex() int32 {
 func (x *ProtoLoginCampaignInstance) GetLastClaimAdded() int64 {
 	if x != nil {
 		return x.LastClaimAdded
+	}
+	return 0
+}
+
+func (x *ProtoLoginCampaignInstance) GetNextReset() int64 {
+	if x != nil {
+		return x.NextReset
 	}
 	return 0
 }
@@ -6833,12 +6841,14 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x0fcard_categories\x18\x03 \x03(\x05R\x0ecardCategories\x12'\n" +
 	"\x0fspecial_filters\x18\x04 \x03(\x05R\x0especialFilters\x12%\n" +
 	"\x0esort_selectors\x18\x05 \x03(\x05R\rsortSelectors\x12'\n" +
-	"\x0fsort_descending\x18\x06 \x01(\bR\x0esortDescending\"\x85\x02\n" +
+	"\x0fsort_descending\x18\x06 \x01(\bR\x0esortDescending\"\xa4\x02\n" +
 	"\x1aProtoLoginCampaignInstance\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12G\n" +
 	"\aclaimed\x18\x05 \x03(\v2-.game.ProtoLoginCampaignInstance.ClaimedEntryR\aclaimed\x12(\n" +
 	"\x10last_claim_index\x18\x03 \x01(\x05R\x0elastClaimIndex\x12(\n" +
-	"\x10last_claim_added\x18\x04 \x01(\x03R\x0elastClaimAdded\x1a:\n" +
+	"\x10last_claim_added\x18\x04 \x01(\x03R\x0elastClaimAdded\x12\x1d\n" +
+	"\n" +
+	"next_reset\x18\x06 \x01(\x03R\tnextReset\x1a:\n" +
 	"\fClaimedEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\x05R\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\bR\x05value:\x028\x01\"\xc9\x01\n" +
