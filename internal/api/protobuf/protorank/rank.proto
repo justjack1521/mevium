@@ -80,3 +80,10 @@ message ProtoRankingEventSchedule {
   int32 length = 4;
   bool repeats = 5;
 }
+
+message ProtoRankingEventRewardGroup {
+  string id = 1;
+  int64 rank_start = 2;
+  int64 rank_stop = 3;
+  repeated string item_drop_tables = 4;
+}

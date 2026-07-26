@@ -64,9 +64,11 @@ namespace Mobius.Proto.Rank {
             "dFN0YXRQb3B1bGFyQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9jYXJkX2lkGAEg",
             "ASgJInAKGVByb3RvUmFua2luZ0V2ZW50U2NoZWR1bGUSEAoIZXZlbnRfaWQY",
             "ASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIMCgRjb2RlGAMgASgJEg4KBmxl",
-            "bmd0aBgEIAEoBRIPCgdyZXBlYXRzGAUgASgIQktaNWdpdGh1Yi5jb20vanVz",
-            "dGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5rqgIRTW9i",
-            "aXVzLlByb3RvLlJhbmtiBnByb3RvMw=="));
+            "bmd0aBgEIAEoBRIPCgdyZXBlYXRzGAUgASgIImsKHFByb3RvUmFua2luZ0V2",
+            "ZW50UmV3YXJkR3JvdXASCgoCaWQYASABKAkSEgoKcmFua19zdGFydBgCIAEo",
+            "AxIRCglyYW5rX3N0b3AYAyABKAMSGAoQaXRlbV9kcm9wX3RhYmxlcxgEIAMo",
+            "CUJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
+            "b3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -79,7 +81,8 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularJob), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularJob.Parser, new[]{ "JobCardId", "SubJobIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularRegion), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularRegion.Parser, new[]{ "RegionMapId", "NodeIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard.Parser, new[]{ "AbilityCardId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventSchedule), global::Mobius.Proto.Rank.ProtoRankingEventSchedule.Parser, new[]{ "EventId", "StartDate", "Code", "Length", "Repeats" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventSchedule), global::Mobius.Proto.Rank.ProtoRankingEventSchedule.Parser, new[]{ "EventId", "StartDate", "Code", "Length", "Repeats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup), global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup.Parser, new[]{ "Id", "RankStart", "RankStop", "ItemDropTables" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2968,6 +2971,275 @@ namespace Mobius.Proto.Rank {
           }
           case 40: {
             Repeats = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoRankingEventRewardGroup : pb::IMessage<ProtoRankingEventRewardGroup>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoRankingEventRewardGroup> _parser = new pb::MessageParser<ProtoRankingEventRewardGroup>(() => new ProtoRankingEventRewardGroup());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoRankingEventRewardGroup> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Rank.RankReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingEventRewardGroup() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingEventRewardGroup(ProtoRankingEventRewardGroup other) : this() {
+      id_ = other.id_;
+      rankStart_ = other.rankStart_;
+      rankStop_ = other.rankStop_;
+      itemDropTables_ = other.itemDropTables_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoRankingEventRewardGroup Clone() {
+      return new ProtoRankingEventRewardGroup(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rank_start" field.</summary>
+    public const int RankStartFieldNumber = 2;
+    private long rankStart_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RankStart {
+      get { return rankStart_; }
+      set {
+        rankStart_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rank_stop" field.</summary>
+    public const int RankStopFieldNumber = 3;
+    private long rankStop_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RankStop {
+      get { return rankStop_; }
+      set {
+        rankStop_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "item_drop_tables" field.</summary>
+    public const int ItemDropTablesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_itemDropTables_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> itemDropTables_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> ItemDropTables {
+      get { return itemDropTables_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoRankingEventRewardGroup);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoRankingEventRewardGroup other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (RankStart != other.RankStart) return false;
+      if (RankStop != other.RankStop) return false;
+      if(!itemDropTables_.Equals(other.itemDropTables_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (RankStart != 0L) hash ^= RankStart.GetHashCode();
+      if (RankStop != 0L) hash ^= RankStop.GetHashCode();
+      hash ^= itemDropTables_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (RankStart != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RankStart);
+      }
+      if (RankStop != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RankStop);
+      }
+      itemDropTables_.WriteTo(output, _repeated_itemDropTables_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (RankStart != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RankStart);
+      }
+      if (RankStop != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RankStop);
+      }
+      itemDropTables_.WriteTo(ref output, _repeated_itemDropTables_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (RankStart != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RankStart);
+      }
+      if (RankStop != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RankStop);
+      }
+      size += itemDropTables_.CalculateSize(_repeated_itemDropTables_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoRankingEventRewardGroup other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.RankStart != 0L) {
+        RankStart = other.RankStart;
+      }
+      if (other.RankStop != 0L) {
+        RankStop = other.RankStop;
+      }
+      itemDropTables_.Add(other.itemDropTables_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            RankStart = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            RankStop = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            itemDropTables_.AddEntriesFrom(input, _repeated_itemDropTables_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            RankStart = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            RankStop = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            itemDropTables_.AddEntriesFrom(ref input, _repeated_itemDropTables_codec);
             break;
           }
         }

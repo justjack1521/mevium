@@ -748,6 +748,74 @@ func (x *ProtoRankingEventSchedule) GetRepeats() bool {
 	return false
 }
 
+type ProtoRankingEventRewardGroup struct {
+	state          protoimpl.MessageState `protogen:"open.v1"`
+	Id             string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	RankStart      int64                  `protobuf:"varint,2,opt,name=rank_start,json=rankStart,proto3" json:"rank_start,omitempty"`
+	RankStop       int64                  `protobuf:"varint,3,opt,name=rank_stop,json=rankStop,proto3" json:"rank_stop,omitempty"`
+	ItemDropTables []string               `protobuf:"bytes,4,rep,name=item_drop_tables,json=itemDropTables,proto3" json:"item_drop_tables,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *ProtoRankingEventRewardGroup) Reset() {
+	*x = ProtoRankingEventRewardGroup{}
+	mi := &file_protorank_rank_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoRankingEventRewardGroup) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoRankingEventRewardGroup) ProtoMessage() {}
+
+func (x *ProtoRankingEventRewardGroup) ProtoReflect() protoreflect.Message {
+	mi := &file_protorank_rank_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoRankingEventRewardGroup.ProtoReflect.Descriptor instead.
+func (*ProtoRankingEventRewardGroup) Descriptor() ([]byte, []int) {
+	return file_protorank_rank_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *ProtoRankingEventRewardGroup) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProtoRankingEventRewardGroup) GetRankStart() int64 {
+	if x != nil {
+		return x.RankStart
+	}
+	return 0
+}
+
+func (x *ProtoRankingEventRewardGroup) GetRankStop() int64 {
+	if x != nil {
+		return x.RankStop
+	}
+	return 0
+}
+
+func (x *ProtoRankingEventRewardGroup) GetItemDropTables() []string {
+	if x != nil {
+		return x.ItemDropTables
+	}
+	return nil
+}
+
 var File_protorank_rank_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_proto_rawDesc = "" +
@@ -822,7 +890,13 @@ const file_protorank_rank_proto_rawDesc = "" +
 	"start_date\x18\x02 \x01(\x03R\tstartDate\x12\x12\n" +
 	"\x04code\x18\x03 \x01(\tR\x04code\x12\x16\n" +
 	"\x06length\x18\x04 \x01(\x05R\x06length\x12\x18\n" +
-	"\arepeats\x18\x05 \x01(\bR\arepeatsBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
+	"\arepeats\x18\x05 \x01(\bR\arepeats\"\x94\x01\n" +
+	"\x1cProtoRankingEventRewardGroup\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
+	"\n" +
+	"rank_start\x18\x02 \x01(\x03R\trankStart\x12\x1b\n" +
+	"\trank_stop\x18\x03 \x01(\x03R\brankStop\x12(\n" +
+	"\x10item_drop_tables\x18\x04 \x03(\tR\x0eitemDropTablesBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
 
 var (
 	file_protorank_rank_proto_rawDescOnce sync.Once
@@ -836,7 +910,7 @@ func file_protorank_rank_proto_rawDescGZIP() []byte {
 	return file_protorank_rank_proto_rawDescData
 }
 
-var file_protorank_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_protorank_rank_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
 var file_protorank_rank_proto_goTypes = []any{
 	(*ProtoRankingInfo)(nil),                         // 0: rank.ProtoRankingInfo
 	(*ProtoRankingScoreRange)(nil),                   // 1: rank.ProtoRankingScoreRange
@@ -848,18 +922,19 @@ var file_protorank_rank_proto_goTypes = []any{
 	(*ProtoRankingEventStatPopularRegion)(nil),       // 7: rank.ProtoRankingEventStatPopularRegion
 	(*ProtoRankingEventStatPopularAbilityCard)(nil),  // 8: rank.ProtoRankingEventStatPopularAbilityCard
 	(*ProtoRankingEventSchedule)(nil),                // 9: rank.ProtoRankingEventSchedule
-	nil,                                              // 10: rank.ProtoRankingInfo.RankRangeScoresEntry
-	nil,                                              // 11: rank.ProtoRankingInfo.ScoreRangesEntry
-	(*protoidentity.ProtoPlayerIdentity)(nil),        // 12: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 13: identity.ProtoPlayerLoadoutIdentity
+	(*ProtoRankingEventRewardGroup)(nil),             // 10: rank.ProtoRankingEventRewardGroup
+	nil,                                              // 11: rank.ProtoRankingInfo.RankRangeScoresEntry
+	nil,                                              // 12: rank.ProtoRankingInfo.ScoreRangesEntry
+	(*protoidentity.ProtoPlayerIdentity)(nil),        // 13: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadoutIdentity)(nil), // 14: identity.ProtoPlayerLoadoutIdentity
 }
 var file_protorank_rank_proto_depIdxs = []int32{
 	2,  // 0: rank.ProtoRankingInfo.player_rankings:type_name -> rank.ProtoPlayerRankSetDetails
 	2,  // 1: rank.ProtoRankingInfo.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	10, // 2: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
-	11, // 3: rank.ProtoRankingInfo.score_ranges:type_name -> rank.ProtoRankingInfo.ScoreRangesEntry
-	12, // 4: rank.ProtoPlayerRankSetDetails.identity:type_name -> identity.ProtoPlayerIdentity
-	13, // 5: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	11, // 2: rank.ProtoRankingInfo.rank_range_scores:type_name -> rank.ProtoRankingInfo.RankRangeScoresEntry
+	12, // 3: rank.ProtoRankingInfo.score_ranges:type_name -> rank.ProtoRankingInfo.ScoreRangesEntry
+	13, // 4: rank.ProtoPlayerRankSetDetails.identity:type_name -> identity.ProtoPlayerIdentity
+	14, // 5: rank.ProtoPlayerRankSetDetails.primary_loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
 	2,  // 6: rank.ProtoRankingEventClaim.player_ranking:type_name -> rank.ProtoPlayerRankSetDetails
 	2,  // 7: rank.ProtoRankingEventClaim.top_rankings:type_name -> rank.ProtoPlayerRankSetDetails
 	5,  // 8: rank.ProtoRankingEventClaim.statistics:type_name -> rank.ProtoRankingEventStats
@@ -889,7 +964,7 @@ func file_protorank_rank_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_proto_rawDesc), len(file_protorank_rank_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   12,
+			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
