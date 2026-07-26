@@ -62,13 +62,15 @@ namespace Mobius.Proto.Rank {
             "bmtpbmdFdmVudFN0YXRQb3B1bGFyUmVnaW9uEhUKDXJlZ2lvbl9tYXBfaWQY",
             "ASABKAkSEgoKbm9kZV9pbmRleBgCIAEoBSJCCidQcm90b1JhbmtpbmdFdmVu",
             "dFN0YXRQb3B1bGFyQWJpbGl0eUNhcmQSFwoPYWJpbGl0eV9jYXJkX2lkGAEg",
-            "ASgJInAKGVByb3RvUmFua2luZ0V2ZW50U2NoZWR1bGUSEAoIZXZlbnRfaWQY",
-            "ASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIMCgRjb2RlGAMgASgJEg4KBmxl",
-            "bmd0aBgEIAEoBRIPCgdyZXBlYXRzGAUgASgIImsKHFByb3RvUmFua2luZ0V2",
-            "ZW50UmV3YXJkR3JvdXASCgoCaWQYASABKAkSEgoKcmFua19zdGFydBgCIAEo",
-            "AxIRCglyYW5rX3N0b3AYAyABKAMSGAoQaXRlbV9kcm9wX3RhYmxlcxgEIAMo",
-            "CUJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
-            "b3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5SYW5rYgZwcm90bzM="));
+            "ASgJIqsBChlQcm90b1JhbmtpbmdFdmVudFNjaGVkdWxlEhAKCGV2ZW50X2lk",
+            "GAEgASgJEhIKCnN0YXJ0X2RhdGUYAiABKAMSDAoEY29kZRgDIAEoCRIOCgZs",
+            "ZW5ndGgYBCABKAUSDwoHcmVwZWF0cxgFIAEoCBI5Cg1yZXdhcmRfZ3JvdXBz",
+            "GAYgAygLMiIucmFuay5Qcm90b1JhbmtpbmdFdmVudFJld2FyZEdyb3VwImsK",
+            "HFByb3RvUmFua2luZ0V2ZW50UmV3YXJkR3JvdXASCgoCaWQYASABKAkSEgoK",
+            "cmFua19zdGFydBgCIAEoAxIRCglyYW5rX3N0b3AYAyABKAMSGAoQaXRlbV9k",
+            "cm9wX3RhYmxlcxgEIAMoCUJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9t",
+            "ZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvcmFua6oCEU1vYml1cy5Qcm90by5S",
+            "YW5rYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -81,7 +83,7 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularJob), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularJob.Parser, new[]{ "JobCardId", "SubJobIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularRegion), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularRegion.Parser, new[]{ "RegionMapId", "NodeIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard), global::Mobius.Proto.Rank.ProtoRankingEventStatPopularAbilityCard.Parser, new[]{ "AbilityCardId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventSchedule), global::Mobius.Proto.Rank.ProtoRankingEventSchedule.Parser, new[]{ "EventId", "StartDate", "Code", "Length", "Repeats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventSchedule), global::Mobius.Proto.Rank.ProtoRankingEventSchedule.Parser, new[]{ "EventId", "StartDate", "Code", "Length", "Repeats", "RewardGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup), global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup.Parser, new[]{ "Id", "RankStart", "RankStop", "ItemDropTables" }, null, null, null, null)
           }));
     }
@@ -2698,6 +2700,7 @@ namespace Mobius.Proto.Rank {
       code_ = other.code_;
       length_ = other.length_;
       repeats_ = other.repeats_;
+      rewardGroups_ = other.rewardGroups_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2761,6 +2764,16 @@ namespace Mobius.Proto.Rank {
       }
     }
 
+    /// <summary>Field number for the "reward_groups" field.</summary>
+    public const int RewardGroupsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup> _repeated_rewardGroups_codec
+        = pb::FieldCodec.ForMessage(50, global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup> rewardGroups_ = new pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Rank.ProtoRankingEventRewardGroup> RewardGroups {
+      get { return rewardGroups_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoRankingEventSchedule);
@@ -2779,6 +2792,7 @@ namespace Mobius.Proto.Rank {
       if (Code != other.Code) return false;
       if (Length != other.Length) return false;
       if (Repeats != other.Repeats) return false;
+      if(!rewardGroups_.Equals(other.rewardGroups_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2790,6 +2804,7 @@ namespace Mobius.Proto.Rank {
       if (Code.Length != 0) hash ^= Code.GetHashCode();
       if (Length != 0) hash ^= Length.GetHashCode();
       if (Repeats != false) hash ^= Repeats.GetHashCode();
+      hash ^= rewardGroups_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2826,6 +2841,7 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(40);
         output.WriteBool(Repeats);
       }
+      rewardGroups_.WriteTo(output, _repeated_rewardGroups_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2855,6 +2871,7 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(40);
         output.WriteBool(Repeats);
       }
+      rewardGroups_.WriteTo(ref output, _repeated_rewardGroups_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2879,6 +2896,7 @@ namespace Mobius.Proto.Rank {
       if (Repeats != false) {
         size += 1 + 1;
       }
+      size += rewardGroups_.CalculateSize(_repeated_rewardGroups_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2905,6 +2923,7 @@ namespace Mobius.Proto.Rank {
       if (other.Repeats != false) {
         Repeats = other.Repeats;
       }
+      rewardGroups_.Add(other.rewardGroups_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2939,6 +2958,10 @@ namespace Mobius.Proto.Rank {
             Repeats = input.ReadBool();
             break;
           }
+          case 50: {
+            rewardGroups_.AddEntriesFrom(input, _repeated_rewardGroups_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2971,6 +2994,10 @@ namespace Mobius.Proto.Rank {
           }
           case 40: {
             Repeats = input.ReadBool();
+            break;
+          }
+          case 50: {
+            rewardGroups_.AddEntriesFrom(ref input, _repeated_rewardGroups_codec);
             break;
           }
         }

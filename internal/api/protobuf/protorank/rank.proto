@@ -79,6 +79,7 @@ message ProtoRankingEventSchedule {
   string code = 3;
   int32 length = 4;
   bool repeats = 5;
+  repeated ProtoRankingEventRewardGroup reward_groups = 6;
 }
 
 message ProtoRankingEventRewardGroup {

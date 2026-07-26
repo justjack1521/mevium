@@ -673,12 +673,13 @@ func (x *ProtoRankingEventStatPopularAbilityCard) GetAbilityCardId() string {
 }
 
 type ProtoRankingEventSchedule struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	EventId       string                 `protobuf:"bytes,1,opt,name=event_id,json=eventId,proto3" json:"event_id,omitempty"`
-	StartDate     int64                  `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
-	Code          string                 `protobuf:"bytes,3,opt,name=code,proto3" json:"code,omitempty"`
-	Length        int32                  `protobuf:"varint,4,opt,name=length,proto3" json:"length,omitempty"`
-	Repeats       bool                   `protobuf:"varint,5,opt,name=repeats,proto3" json:"repeats,omitempty"`
+	state         protoimpl.MessageState          `protogen:"open.v1"`
+	EventId       string                          `protobuf:"bytes,1,opt,name=event_id,json=eventId,proto3" json:"event_id,omitempty"`
+	StartDate     int64                           `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
+	Code          string                          `protobuf:"bytes,3,opt,name=code,proto3" json:"code,omitempty"`
+	Length        int32                           `protobuf:"varint,4,opt,name=length,proto3" json:"length,omitempty"`
+	Repeats       bool                            `protobuf:"varint,5,opt,name=repeats,proto3" json:"repeats,omitempty"`
+	RewardGroups  []*ProtoRankingEventRewardGroup `protobuf:"bytes,6,rep,name=reward_groups,json=rewardGroups,proto3" json:"reward_groups,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -746,6 +747,13 @@ func (x *ProtoRankingEventSchedule) GetRepeats() bool {
 		return x.Repeats
 	}
 	return false
+}
+
+func (x *ProtoRankingEventSchedule) GetRewardGroups() []*ProtoRankingEventRewardGroup {
+	if x != nil {
+		return x.RewardGroups
+	}
+	return nil
 }
 
 type ProtoRankingEventRewardGroup struct {
@@ -883,14 +891,15 @@ const file_protorank_rank_proto_rawDesc = "" +
 	"\n" +
 	"node_index\x18\x02 \x01(\x05R\tnodeIndex\"Q\n" +
 	"'ProtoRankingEventStatPopularAbilityCard\x12&\n" +
-	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardId\"\x9b\x01\n" +
+	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardId\"\xe4\x01\n" +
 	"\x19ProtoRankingEventSchedule\x12\x19\n" +
 	"\bevent_id\x18\x01 \x01(\tR\aeventId\x12\x1d\n" +
 	"\n" +
 	"start_date\x18\x02 \x01(\x03R\tstartDate\x12\x12\n" +
 	"\x04code\x18\x03 \x01(\tR\x04code\x12\x16\n" +
 	"\x06length\x18\x04 \x01(\x05R\x06length\x12\x18\n" +
-	"\arepeats\x18\x05 \x01(\bR\arepeats\"\x94\x01\n" +
+	"\arepeats\x18\x05 \x01(\bR\arepeats\x12G\n" +
+	"\rreward_groups\x18\x06 \x03(\v2\".rank.ProtoRankingEventRewardGroupR\frewardGroups\"\x94\x01\n" +
 	"\x1cProtoRankingEventRewardGroup\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +
@@ -941,12 +950,13 @@ var file_protorank_rank_proto_depIdxs = []int32{
 	7,  // 9: rank.ProtoRankingEventStats.popular_region:type_name -> rank.ProtoRankingEventStatPopularRegion
 	6,  // 10: rank.ProtoRankingEventStats.popular_job:type_name -> rank.ProtoRankingEventStatPopularJob
 	8,  // 11: rank.ProtoRankingEventStats.popular_ability_card:type_name -> rank.ProtoRankingEventStatPopularAbilityCard
-	1,  // 12: rank.ProtoRankingInfo.ScoreRangesEntry.value:type_name -> rank.ProtoRankingScoreRange
-	13, // [13:13] is the sub-list for method output_type
-	13, // [13:13] is the sub-list for method input_type
-	13, // [13:13] is the sub-list for extension type_name
-	13, // [13:13] is the sub-list for extension extendee
-	0,  // [0:13] is the sub-list for field type_name
+	10, // 12: rank.ProtoRankingEventSchedule.reward_groups:type_name -> rank.ProtoRankingEventRewardGroup
+	1,  // 13: rank.ProtoRankingInfo.ScoreRangesEntry.value:type_name -> rank.ProtoRankingScoreRange
+	14, // [14:14] is the sub-list for method output_type
+	14, // [14:14] is the sub-list for method input_type
+	14, // [14:14] is the sub-list for extension type_name
+	14, // [14:14] is the sub-list for extension extendee
+	0,  // [0:14] is the sub-list for field type_name
 }
 
 func init() { file_protorank_rank_proto_init() }
