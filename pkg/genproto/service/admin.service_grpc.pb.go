@@ -26,6 +26,7 @@ const (
 	MeviusAdminService_CreateAugmentMaterials_FullMethodName = "/service.MeviusAdminService/CreateAugmentMaterials"
 	MeviusAdminService_CreateBaseCard_FullMethodName         = "/service.MeviusAdminService/CreateBaseCard"
 	MeviusAdminService_CreateAbilityCard_FullMethodName      = "/service.MeviusAdminService/CreateAbilityCard"
+	MeviusAdminService_QueryRegionMapData_FullMethodName     = "/service.MeviusAdminService/QueryRegionMapData"
 )
 
 // MeviusAdminServiceClient is the client API for MeviusAdminService service.
@@ -38,6 +39,7 @@ type MeviusAdminServiceClient interface {
 	CreateAugmentMaterials(ctx context.Context, in *protoadmin.CreateAugmentMaterialRequest, opts ...grpc.CallOption) (*protoadmin.CreateAugmentMaterialsResponse, error)
 	CreateBaseCard(ctx context.Context, in *protoadmin.CreateBaseCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateBaseCardResponse, error)
 	CreateAbilityCard(ctx context.Context, in *protoadmin.CreateAbilityCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateAbilityCardResponse, error)
+	QueryRegionMapData(ctx context.Context, in *protoadmin.QueryRegionMapDataRequest, opts ...grpc.CallOption) (*protoadmin.QueryRegionMapDataResponse, error)
 }
 
 type meviusAdminServiceClient struct {
@@ -102,6 +104,15 @@ func (c *meviusAdminServiceClient) CreateAbilityCard(ctx context.Context, in *pr
 	return out, nil
 }
 
+func (c *meviusAdminServiceClient) QueryRegionMapData(ctx context.Context, in *protoadmin.QueryRegionMapDataRequest, opts ...grpc.CallOption) (*protoadmin.QueryRegionMapDataResponse, error) {
+	out := new(protoadmin.QueryRegionMapDataResponse)
+	err := c.cc.Invoke(ctx, MeviusAdminService_QueryRegionMapData_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusAdminServiceServer is the server API for MeviusAdminService service.
 // All implementations should embed UnimplementedMeviusAdminServiceServer
 // for forward compatibility
@@ -112,6 +123,7 @@ type MeviusAdminServiceServer interface {
 	CreateAugmentMaterials(context.Context, *protoadmin.CreateAugmentMaterialRequest) (*protoadmin.CreateAugmentMaterialsResponse, error)
 	CreateBaseCard(context.Context, *protoadmin.CreateBaseCardRequest) (*protoadmin.CreateBaseCardResponse, error)
 	CreateAbilityCard(context.Context, *protoadmin.CreateAbilityCardRequest) (*protoadmin.CreateAbilityCardResponse, error)
+	QueryRegionMapData(context.Context, *protoadmin.QueryRegionMapDataRequest) (*protoadmin.QueryRegionMapDataResponse, error)
 }
 
 // UnimplementedMeviusAdminServiceServer should be embedded to have forward compatible implementations.
@@ -135,6 +147,9 @@ func (UnimplementedMeviusAdminServiceServer) CreateBaseCard(context.Context, *pr
 }
 func (UnimplementedMeviusAdminServiceServer) CreateAbilityCard(context.Context, *protoadmin.CreateAbilityCardRequest) (*protoadmin.CreateAbilityCardResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateAbilityCard not implemented")
+}
+func (UnimplementedMeviusAdminServiceServer) QueryRegionMapData(context.Context, *protoadmin.QueryRegionMapDataRequest) (*protoadmin.QueryRegionMapDataResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method QueryRegionMapData not implemented")
 }
 
 // UnsafeMeviusAdminServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -256,6 +271,24 @@ func _MeviusAdminService_CreateAbilityCard_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusAdminService_QueryRegionMapData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoadmin.QueryRegionMapDataRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusAdminServiceServer).QueryRegionMapData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusAdminService_QueryRegionMapData_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusAdminServiceServer).QueryRegionMapData(ctx, req.(*protoadmin.QueryRegionMapDataRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusAdminService_ServiceDesc is the grpc.ServiceDesc for MeviusAdminService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -286,6 +319,10 @@ var MeviusAdminService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateAbilityCard",
 			Handler:    _MeviusAdminService_CreateAbilityCard_Handler,
+		},
+		{
+			MethodName: "QueryRegionMapData",
+			Handler:    _MeviusAdminService_QueryRegionMapData_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -14,4 +14,5 @@ service MeviusAdminService {
   rpc CreateAugmentMaterials(admin.CreateAugmentMaterialRequest) returns (admin.CreateAugmentMaterialsResponse) {}
   rpc CreateBaseCard(admin.CreateBaseCardRequest) returns (admin.CreateBaseCardResponse) {}
   rpc CreateAbilityCard(admin.CreateAbilityCardRequest) returns (admin.CreateAbilityCardResponse) {}
+  rpc QueryRegionMapData(admin.QueryRegionMapDataRequest) returns (admin.QueryRegionMapDataResponse) {}
 }

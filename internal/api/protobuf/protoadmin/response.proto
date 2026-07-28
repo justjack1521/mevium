@@ -26,3 +26,7 @@ message CreateBaseCardResponse {
 message CreateAbilityCardResponse {
 
 }
+
+message QueryRegionMapDataResponse {
+  repeated bytes data = 1;
+}

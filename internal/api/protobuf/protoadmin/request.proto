@@ -43,3 +43,8 @@ message CreateAugmentMaterialRequest {
   string ability_card_id = 1;
   map<string, int32> materials = 2;
 }
+
+message QueryRegionMapDataRequest {
+  string player_id = 1;
+  string region_id = 2;
+}

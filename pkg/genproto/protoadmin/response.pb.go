@@ -253,6 +253,50 @@ func (*CreateAbilityCardResponse) Descriptor() ([]byte, []int) {
 	return file_protoadmin_response_proto_rawDescGZIP(), []int{5}
 }
 
+type QueryRegionMapDataResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Data          [][]byte               `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *QueryRegionMapDataResponse) Reset() {
+	*x = QueryRegionMapDataResponse{}
+	mi := &file_protoadmin_response_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *QueryRegionMapDataResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryRegionMapDataResponse) ProtoMessage() {}
+
+func (x *QueryRegionMapDataResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protoadmin_response_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryRegionMapDataResponse.ProtoReflect.Descriptor instead.
+func (*QueryRegionMapDataResponse) Descriptor() ([]byte, []int) {
+	return file_protoadmin_response_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *QueryRegionMapDataResponse) GetData() [][]byte {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
 var File_protoadmin_response_proto protoreflect.FileDescriptor
 
 const file_protoadmin_response_proto_rawDesc = "" +
@@ -265,7 +309,9 @@ const file_protoadmin_response_proto_rawDesc = "" +
 	"\acreated\x18\x01 \x01(\bR\acreated\" \n" +
 	"\x1eCreateAugmentMaterialsResponse\"\x18\n" +
 	"\x16CreateBaseCardResponse\"\x1b\n" +
-	"\x19CreateAbilityCardResponseB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
+	"\x19CreateAbilityCardResponse\"0\n" +
+	"\x1aQueryRegionMapDataResponse\x12\x12\n" +
+	"\x04data\x18\x01 \x03(\fR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
 
 var (
 	file_protoadmin_response_proto_rawDescOnce sync.Once
@@ -279,7 +325,7 @@ func file_protoadmin_response_proto_rawDescGZIP() []byte {
 	return file_protoadmin_response_proto_rawDescData
 }
 
-var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_protoadmin_response_proto_goTypes = []any{
 	(*GrantItemResponse)(nil),              // 0: admin.GrantItemResponse
 	(*CreateSkillPanelResponse)(nil),       // 1: admin.CreateSkillPanelResponse
@@ -287,6 +333,7 @@ var file_protoadmin_response_proto_goTypes = []any{
 	(*CreateAugmentMaterialsResponse)(nil), // 3: admin.CreateAugmentMaterialsResponse
 	(*CreateBaseCardResponse)(nil),         // 4: admin.CreateBaseCardResponse
 	(*CreateAbilityCardResponse)(nil),      // 5: admin.CreateAbilityCardResponse
+	(*QueryRegionMapDataResponse)(nil),     // 6: admin.QueryRegionMapDataResponse
 }
 var file_protoadmin_response_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -307,7 +354,7 @@ func file_protoadmin_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoadmin_response_proto_rawDesc), len(file_protoadmin_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   6,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
