@@ -255,8 +255,8 @@ func (*CreateAbilityCardResponse) Descriptor() ([]byte, []int) {
 }
 
 type QueryRegionMapDataResponse struct {
-	state         protoimpl.MessageState        `protogen:"open.v1"`
-	Data          *protogame.ProtoRegionMapData `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+	state         protoimpl.MessageState            `protogen:"open.v1"`
+	Data          *protogame.ProtoRegionMapInstance `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -291,7 +291,7 @@ func (*QueryRegionMapDataResponse) Descriptor() ([]byte, []int) {
 	return file_protoadmin_response_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *QueryRegionMapDataResponse) GetData() *protogame.ProtoRegionMapData {
+func (x *QueryRegionMapDataResponse) GetData() *protogame.ProtoRegionMapInstance {
 	if x != nil {
 		return x.Data
 	}
@@ -310,9 +310,9 @@ const file_protoadmin_response_proto_rawDesc = "" +
 	"\acreated\x18\x01 \x01(\bR\acreated\" \n" +
 	"\x1eCreateAugmentMaterialsResponse\"\x18\n" +
 	"\x16CreateBaseCardResponse\"\x1b\n" +
-	"\x19CreateAbilityCardResponse\"J\n" +
-	"\x1aQueryRegionMapDataResponse\x12,\n" +
-	"\x04data\x18\x01 \x01(\v2\x18.game.ProtoRegionMapDataR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
+	"\x19CreateAbilityCardResponse\"N\n" +
+	"\x1aQueryRegionMapDataResponse\x120\n" +
+	"\x04data\x18\x01 \x01(\v2\x1c.game.ProtoRegionMapInstanceR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
 
 var (
 	file_protoadmin_response_proto_rawDescOnce sync.Once
@@ -328,17 +328,17 @@ func file_protoadmin_response_proto_rawDescGZIP() []byte {
 
 var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_protoadmin_response_proto_goTypes = []any{
-	(*GrantItemResponse)(nil),              // 0: admin.GrantItemResponse
-	(*CreateSkillPanelResponse)(nil),       // 1: admin.CreateSkillPanelResponse
-	(*CreateBaseJobCardResponse)(nil),      // 2: admin.CreateBaseJobCardResponse
-	(*CreateAugmentMaterialsResponse)(nil), // 3: admin.CreateAugmentMaterialsResponse
-	(*CreateBaseCardResponse)(nil),         // 4: admin.CreateBaseCardResponse
-	(*CreateAbilityCardResponse)(nil),      // 5: admin.CreateAbilityCardResponse
-	(*QueryRegionMapDataResponse)(nil),     // 6: admin.QueryRegionMapDataResponse
-	(*protogame.ProtoRegionMapData)(nil),   // 7: game.ProtoRegionMapData
+	(*GrantItemResponse)(nil),                // 0: admin.GrantItemResponse
+	(*CreateSkillPanelResponse)(nil),         // 1: admin.CreateSkillPanelResponse
+	(*CreateBaseJobCardResponse)(nil),        // 2: admin.CreateBaseJobCardResponse
+	(*CreateAugmentMaterialsResponse)(nil),   // 3: admin.CreateAugmentMaterialsResponse
+	(*CreateBaseCardResponse)(nil),           // 4: admin.CreateBaseCardResponse
+	(*CreateAbilityCardResponse)(nil),        // 5: admin.CreateAbilityCardResponse
+	(*QueryRegionMapDataResponse)(nil),       // 6: admin.QueryRegionMapDataResponse
+	(*protogame.ProtoRegionMapInstance)(nil), // 7: game.ProtoRegionMapInstance
 }
 var file_protoadmin_response_proto_depIdxs = []int32{
-	7, // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapData
+	7, // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapInstance
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

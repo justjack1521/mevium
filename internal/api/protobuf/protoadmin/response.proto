@@ -30,5 +30,5 @@ message CreateAbilityCardResponse {
 }
 
 message QueryRegionMapDataResponse {
-  game.ProtoRegionMapData data = 1;
+  game.ProtoRegionMapInstance data = 1;
 }
