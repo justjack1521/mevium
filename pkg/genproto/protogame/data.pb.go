@@ -1369,6 +1369,7 @@ type ProtoCardProgressData struct {
 	ExtraSkillUnlock            bool                   `protobuf:"varint,6,opt,name=extra_skill_unlock,json=extraSkillUnlock,proto3" json:"extra_skill_unlock,omitempty"`
 	ExtraSkillUnlockRequirement int32                  `protobuf:"varint,7,opt,name=extra_skill_unlock_requirement,json=extraSkillUnlockRequirement,proto3" json:"extra_skill_unlock_requirement,omitempty"`
 	ExtraSkillProgressed        bool                   `protobuf:"varint,8,opt,name=extra_skill_progressed,json=extraSkillProgressed,proto3" json:"extra_skill_progressed,omitempty"`
+	ExtraSkillProgressCount     int32                  `protobuf:"varint,9,opt,name=extra_skill_progress_count,json=extraSkillProgressCount,proto3" json:"extra_skill_progress_count,omitempty"`
 	unknownFields               protoimpl.UnknownFields
 	sizeCache                   protoimpl.SizeCache
 }
@@ -1457,6 +1458,13 @@ func (x *ProtoCardProgressData) GetExtraSkillProgressed() bool {
 		return x.ExtraSkillProgressed
 	}
 	return false
+}
+
+func (x *ProtoCardProgressData) GetExtraSkillProgressCount() int32 {
+	if x != nil {
+		return x.ExtraSkillProgressCount
+	}
+	return 0
 }
 
 type ProtoMission struct {
@@ -6783,7 +6791,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x11ArenaProgressData\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12%\n" +
 	"\x0ebracket_number\x18\x02 \x01(\x05R\rbracketNumber\x12\"\n" +
-	"\fparticipants\x18\x03 \x03(\x05R\fparticipants\"\xd0\x02\n" +
+	"\fparticipants\x18\x03 \x03(\x05R\fparticipants\"\x8d\x03\n" +
 	"\x15ProtoCardProgressData\x12\x1f\n" +
 	"\vinstance_id\x18\x01 \x01(\tR\n" +
 	"instanceId\x12\x1d\n" +
@@ -6794,7 +6802,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\taccum_exp\x18\x05 \x01(\x04R\baccumExp\x12,\n" +
 	"\x12extra_skill_unlock\x18\x06 \x01(\bR\x10extraSkillUnlock\x12C\n" +
 	"\x1eextra_skill_unlock_requirement\x18\a \x01(\x05R\x1bextraSkillUnlockRequirement\x124\n" +
-	"\x16extra_skill_progressed\x18\b \x01(\bR\x14extraSkillProgressed\"\xaf\x01\n" +
+	"\x16extra_skill_progressed\x18\b \x01(\bR\x14extraSkillProgressed\x12;\n" +
+	"\x1aextra_skill_progress_count\x18\t \x01(\x05R\x17extraSkillProgressCount\"\xaf\x01\n" +
 	"\fProtoMission\x12!\n" +
 	"\freference_id\x18\x01 \x01(\tR\vreferenceId\x12-\n" +
 	"\x12primary_definition\x18\x02 \x01(\x05R\x11primaryDefinition\x121\n" +
