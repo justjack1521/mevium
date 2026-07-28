@@ -187,7 +187,7 @@ message ProtoCardProgressData {
   bool extra_skill_unlock = 6;
   int32 extra_skill_unlock_requirement = 7;
   bool extra_skill_progressed = 8;
-  int32 extra_skill_progress_count = 9;
+  int32 extra_skill_progress = 9;
 }
 
 message ProtoMission {
