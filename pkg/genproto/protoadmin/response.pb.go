@@ -7,6 +7,7 @@
 package protoadmin
 
 import (
+	protogame "github.com/justjack1521/mevium/pkg/genproto/protogame"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -254,8 +255,8 @@ func (*CreateAbilityCardResponse) Descriptor() ([]byte, []int) {
 }
 
 type QueryRegionMapDataResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Data          []byte                 `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+	state         protoimpl.MessageState        `protogen:"open.v1"`
+	Data          *protogame.ProtoRegionMapData `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -290,7 +291,7 @@ func (*QueryRegionMapDataResponse) Descriptor() ([]byte, []int) {
 	return file_protoadmin_response_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *QueryRegionMapDataResponse) GetData() []byte {
+func (x *QueryRegionMapDataResponse) GetData() *protogame.ProtoRegionMapData {
 	if x != nil {
 		return x.Data
 	}
@@ -301,7 +302,7 @@ var File_protoadmin_response_proto protoreflect.FileDescriptor
 
 const file_protoadmin_response_proto_rawDesc = "" +
 	"\n" +
-	"\x19protoadmin/response.proto\x12\x05admin\"\x13\n" +
+	"\x19protoadmin/response.proto\x12\x05admin\x1a\x14protogame/data.proto\"\x13\n" +
 	"\x11GrantItemResponse\"4\n" +
 	"\x18CreateSkillPanelResponse\x12\x18\n" +
 	"\acreated\x18\x01 \x01(\bR\acreated\"5\n" +
@@ -309,9 +310,9 @@ const file_protoadmin_response_proto_rawDesc = "" +
 	"\acreated\x18\x01 \x01(\bR\acreated\" \n" +
 	"\x1eCreateAugmentMaterialsResponse\"\x18\n" +
 	"\x16CreateBaseCardResponse\"\x1b\n" +
-	"\x19CreateAbilityCardResponse\"0\n" +
-	"\x1aQueryRegionMapDataResponse\x12\x12\n" +
-	"\x04data\x18\x01 \x01(\fR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
+	"\x19CreateAbilityCardResponse\"J\n" +
+	"\x1aQueryRegionMapDataResponse\x12,\n" +
+	"\x04data\x18\x01 \x01(\v2\x18.game.ProtoRegionMapDataR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
 
 var (
 	file_protoadmin_response_proto_rawDescOnce sync.Once
@@ -334,13 +335,15 @@ var file_protoadmin_response_proto_goTypes = []any{
 	(*CreateBaseCardResponse)(nil),         // 4: admin.CreateBaseCardResponse
 	(*CreateAbilityCardResponse)(nil),      // 5: admin.CreateAbilityCardResponse
 	(*QueryRegionMapDataResponse)(nil),     // 6: admin.QueryRegionMapDataResponse
+	(*protogame.ProtoRegionMapData)(nil),   // 7: game.ProtoRegionMapData
 }
 var file_protoadmin_response_proto_depIdxs = []int32{
-	0, // [0:0] is the sub-list for method output_type
-	0, // [0:0] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	7, // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapData
+	1, // [1:1] is the sub-list for method output_type
+	1, // [1:1] is the sub-list for method input_type
+	1, // [1:1] is the sub-list for extension type_name
+	1, // [1:1] is the sub-list for extension extendee
+	0, // [0:1] is the sub-list for field type_name
 }
 
 func init() { file_protoadmin_response_proto_init() }
