@@ -255,7 +255,7 @@ func (*CreateAbilityCardResponse) Descriptor() ([]byte, []int) {
 
 type QueryRegionMapDataResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Data          [][]byte               `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+	Data          []byte                 `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -290,7 +290,7 @@ func (*QueryRegionMapDataResponse) Descriptor() ([]byte, []int) {
 	return file_protoadmin_response_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *QueryRegionMapDataResponse) GetData() [][]byte {
+func (x *QueryRegionMapDataResponse) GetData() []byte {
 	if x != nil {
 		return x.Data
 	}
@@ -311,7 +311,7 @@ const file_protoadmin_response_proto_rawDesc = "" +
 	"\x16CreateBaseCardResponse\"\x1b\n" +
 	"\x19CreateAbilityCardResponse\"0\n" +
 	"\x1aQueryRegionMapDataResponse\x12\x12\n" +
-	"\x04data\x18\x01 \x03(\fR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
+	"\x04data\x18\x01 \x01(\fR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
 
 var (
 	file_protoadmin_response_proto_rawDescOnce sync.Once
