@@ -41,13 +41,13 @@ namespace Mobius.Proto.Rank {
             "IAEoCBISCgpzdGFydF9kYXRlGAIgASgDInAKG0dldFBsYXllclJhbmtEZXRh",
             "aWxzUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEQoJc2hvcnRjb2RlGAIg",
             "ASgJEhUKDXdpdGhfaWRlbnRpdHkYAyABKAgSFAoMd2l0aF9sb2Fkb3V0GAQg",
-            "ASgIIn8KIEdldFBsYXllclJhbmtSYW5nZURldGFpbHNSZXF1ZXN0EhEKCXBs",
-            "YXllcl9pZBgBIAEoCRINCgVzdGFydBgCIAEoBRIMCgRzdG9wGAMgASgFEhUK",
-            "DXdpdGhfaWRlbnRpdHkYBCABKAgSFAoMd2l0aF9sb2Fkb3V0GAUgASgIKjQK",
-            "D1JhbmtSZXF1ZXN0VHlwZRIICgROT05FEAASFwoSR0VUX1JBTktJTkdfRVZF",
-            "TlRTEKgUQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cv",
-            "Z2VucHJvdG8vcHJvdG9yYW5rqgIRTW9iaXVzLlByb3RvLlJhbmtiBnByb3Rv",
-            "Mw=="));
+            "ASgIIpIBCiBHZXRQbGF5ZXJSYW5rUmFuZ2VEZXRhaWxzUmVxdWVzdBIRCglw",
+            "bGF5ZXJfaWQYASABKAkSEQoJc2hvcnRjb2RlGAIgASgJEg0KBXN0YXJ0GAMg",
+            "ASgFEgwKBHN0b3AYBCABKAUSFQoNd2l0aF9pZGVudGl0eRgFIAEoCBIUCgx3",
+            "aXRoX2xvYWRvdXQYBiABKAgqNAoPUmFua1JlcXVlc3RUeXBlEggKBE5PTkUQ",
+            "ABIXChJHRVRfUkFOS0lOR19FVkVOVFMQqBRCS1o1Z2l0aHViLmNvbS9qdXN0",
+            "amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b3JhbmuqAhFNb2Jp",
+            "dXMuUHJvdG8uUmFua2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,7 +59,7 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RankingRegionAvailableResponse), global::Mobius.Proto.Rank.RankingRegionAvailableResponse.Parser, new[]{ "Available", "StartDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerRankDetailsRequest), global::Mobius.Proto.Rank.GetPlayerRankDetailsRequest.Parser, new[]{ "PlayerId", "Shortcode", "WithIdentity", "WithLoadout" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerRankRangeDetailsRequest), global::Mobius.Proto.Rank.GetPlayerRankRangeDetailsRequest.Parser, new[]{ "PlayerId", "Start", "Stop", "WithIdentity", "WithLoadout" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerRankRangeDetailsRequest), global::Mobius.Proto.Rank.GetPlayerRankRangeDetailsRequest.Parser, new[]{ "PlayerId", "Shortcode", "Start", "Stop", "WithIdentity", "WithLoadout" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1966,6 +1966,7 @@ namespace Mobius.Proto.Rank {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPlayerRankRangeDetailsRequest(GetPlayerRankRangeDetailsRequest other) : this() {
       playerId_ = other.playerId_;
+      shortcode_ = other.shortcode_;
       start_ = other.start_;
       stop_ = other.stop_;
       withIdentity_ = other.withIdentity_;
@@ -1989,8 +1990,19 @@ namespace Mobius.Proto.Rank {
       }
     }
 
+    /// <summary>Field number for the "shortcode" field.</summary>
+    public const int ShortcodeFieldNumber = 2;
+    private string shortcode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Shortcode {
+      get { return shortcode_; }
+      set {
+        shortcode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "start" field.</summary>
-    public const int StartFieldNumber = 2;
+    public const int StartFieldNumber = 3;
     private int start_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Start {
@@ -2001,7 +2013,7 @@ namespace Mobius.Proto.Rank {
     }
 
     /// <summary>Field number for the "stop" field.</summary>
-    public const int StopFieldNumber = 3;
+    public const int StopFieldNumber = 4;
     private int stop_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Stop {
@@ -2012,7 +2024,7 @@ namespace Mobius.Proto.Rank {
     }
 
     /// <summary>Field number for the "with_identity" field.</summary>
-    public const int WithIdentityFieldNumber = 4;
+    public const int WithIdentityFieldNumber = 5;
     private bool withIdentity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool WithIdentity {
@@ -2023,7 +2035,7 @@ namespace Mobius.Proto.Rank {
     }
 
     /// <summary>Field number for the "with_loadout" field.</summary>
-    public const int WithLoadoutFieldNumber = 5;
+    public const int WithLoadoutFieldNumber = 6;
     private bool withLoadout_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool WithLoadout {
@@ -2047,6 +2059,7 @@ namespace Mobius.Proto.Rank {
         return true;
       }
       if (PlayerId != other.PlayerId) return false;
+      if (Shortcode != other.Shortcode) return false;
       if (Start != other.Start) return false;
       if (Stop != other.Stop) return false;
       if (WithIdentity != other.WithIdentity) return false;
@@ -2058,6 +2071,7 @@ namespace Mobius.Proto.Rank {
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
+      if (Shortcode.Length != 0) hash ^= Shortcode.GetHashCode();
       if (Start != 0) hash ^= Start.GetHashCode();
       if (Stop != 0) hash ^= Stop.GetHashCode();
       if (WithIdentity != false) hash ^= WithIdentity.GetHashCode();
@@ -2082,20 +2096,24 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(10);
         output.WriteString(PlayerId);
       }
+      if (Shortcode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Shortcode);
+      }
       if (Start != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(Start);
       }
       if (Stop != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt32(Stop);
       }
       if (WithIdentity != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(WithIdentity);
       }
       if (WithLoadout != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteBool(WithLoadout);
       }
       if (_unknownFields != null) {
@@ -2111,20 +2129,24 @@ namespace Mobius.Proto.Rank {
         output.WriteRawTag(10);
         output.WriteString(PlayerId);
       }
+      if (Shortcode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Shortcode);
+      }
       if (Start != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(Start);
       }
       if (Stop != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt32(Stop);
       }
       if (WithIdentity != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(WithIdentity);
       }
       if (WithLoadout != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteBool(WithLoadout);
       }
       if (_unknownFields != null) {
@@ -2138,6 +2160,9 @@ namespace Mobius.Proto.Rank {
       int size = 0;
       if (PlayerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      }
+      if (Shortcode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Shortcode);
       }
       if (Start != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Start);
@@ -2164,6 +2189,9 @@ namespace Mobius.Proto.Rank {
       }
       if (other.PlayerId.Length != 0) {
         PlayerId = other.PlayerId;
+      }
+      if (other.Shortcode.Length != 0) {
+        Shortcode = other.Shortcode;
       }
       if (other.Start != 0) {
         Start = other.Start;
@@ -2195,19 +2223,23 @@ namespace Mobius.Proto.Rank {
             PlayerId = input.ReadString();
             break;
           }
-          case 16: {
-            Start = input.ReadInt32();
+          case 18: {
+            Shortcode = input.ReadString();
             break;
           }
           case 24: {
-            Stop = input.ReadInt32();
+            Start = input.ReadInt32();
             break;
           }
           case 32: {
-            WithIdentity = input.ReadBool();
+            Stop = input.ReadInt32();
             break;
           }
           case 40: {
+            WithIdentity = input.ReadBool();
+            break;
+          }
+          case 48: {
             WithLoadout = input.ReadBool();
             break;
           }
@@ -2229,19 +2261,23 @@ namespace Mobius.Proto.Rank {
             PlayerId = input.ReadString();
             break;
           }
-          case 16: {
-            Start = input.ReadInt32();
+          case 18: {
+            Shortcode = input.ReadString();
             break;
           }
           case 24: {
-            Stop = input.ReadInt32();
+            Start = input.ReadInt32();
             break;
           }
           case 32: {
-            WithIdentity = input.ReadBool();
+            Stop = input.ReadInt32();
             break;
           }
           case 40: {
+            WithIdentity = input.ReadBool();
+            break;
+          }
+          case 48: {
             WithLoadout = input.ReadBool();
             break;
           }

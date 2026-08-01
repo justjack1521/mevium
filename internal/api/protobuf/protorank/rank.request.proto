@@ -59,8 +59,9 @@ message GetPlayerRankDetailsRequest {
 
 message GetPlayerRankRangeDetailsRequest {
   string player_id = 1;
-  int32 start = 2;
-  int32 stop = 3;
-  bool with_identity = 4;
-  bool with_loadout = 5;
+  string shortcode = 2;
+  int32 start = 3;
+  int32 stop = 4;
+  bool with_identity = 5;
+  bool with_loadout = 6;
 }

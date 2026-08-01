@@ -527,10 +527,11 @@ func (x *GetPlayerRankDetailsRequest) GetWithLoadout() bool {
 type GetPlayerRankRangeDetailsRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
-	Start         int32                  `protobuf:"varint,2,opt,name=start,proto3" json:"start,omitempty"`
-	Stop          int32                  `protobuf:"varint,3,opt,name=stop,proto3" json:"stop,omitempty"`
-	WithIdentity  bool                   `protobuf:"varint,4,opt,name=with_identity,json=withIdentity,proto3" json:"with_identity,omitempty"`
-	WithLoadout   bool                   `protobuf:"varint,5,opt,name=with_loadout,json=withLoadout,proto3" json:"with_loadout,omitempty"`
+	Shortcode     string                 `protobuf:"bytes,2,opt,name=shortcode,proto3" json:"shortcode,omitempty"`
+	Start         int32                  `protobuf:"varint,3,opt,name=start,proto3" json:"start,omitempty"`
+	Stop          int32                  `protobuf:"varint,4,opt,name=stop,proto3" json:"stop,omitempty"`
+	WithIdentity  bool                   `protobuf:"varint,5,opt,name=with_identity,json=withIdentity,proto3" json:"with_identity,omitempty"`
+	WithLoadout   bool                   `protobuf:"varint,6,opt,name=with_loadout,json=withLoadout,proto3" json:"with_loadout,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -568,6 +569,13 @@ func (*GetPlayerRankRangeDetailsRequest) Descriptor() ([]byte, []int) {
 func (x *GetPlayerRankRangeDetailsRequest) GetPlayerId() string {
 	if x != nil {
 		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *GetPlayerRankRangeDetailsRequest) GetShortcode() string {
+	if x != nil {
+		return x.Shortcode
 	}
 	return ""
 }
@@ -637,13 +645,14 @@ const file_protorank_rank_request_proto_rawDesc = "" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1c\n" +
 	"\tshortcode\x18\x02 \x01(\tR\tshortcode\x12#\n" +
 	"\rwith_identity\x18\x03 \x01(\bR\fwithIdentity\x12!\n" +
-	"\fwith_loadout\x18\x04 \x01(\bR\vwithLoadout\"\xb1\x01\n" +
+	"\fwith_loadout\x18\x04 \x01(\bR\vwithLoadout\"\xcf\x01\n" +
 	" GetPlayerRankRangeDetailsRequest\x12\x1b\n" +
-	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x14\n" +
-	"\x05start\x18\x02 \x01(\x05R\x05start\x12\x12\n" +
-	"\x04stop\x18\x03 \x01(\x05R\x04stop\x12#\n" +
-	"\rwith_identity\x18\x04 \x01(\bR\fwithIdentity\x12!\n" +
-	"\fwith_loadout\x18\x05 \x01(\bR\vwithLoadout*4\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1c\n" +
+	"\tshortcode\x18\x02 \x01(\tR\tshortcode\x12\x14\n" +
+	"\x05start\x18\x03 \x01(\x05R\x05start\x12\x12\n" +
+	"\x04stop\x18\x04 \x01(\x05R\x04stop\x12#\n" +
+	"\rwith_identity\x18\x05 \x01(\bR\fwithIdentity\x12!\n" +
+	"\fwith_loadout\x18\x06 \x01(\bR\vwithLoadout*4\n" +
 	"\x0fRankRequestType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x17\n" +
 	"\x12GET_RANKING_EVENTS\x10\xa8\x14BKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
