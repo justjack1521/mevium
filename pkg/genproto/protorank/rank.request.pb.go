@@ -456,6 +456,74 @@ func (x *RankingRegionAvailableResponse) GetStartDate() int64 {
 	return 0
 }
 
+type GetPlayerRankDetailsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	Shortcode     string                 `protobuf:"bytes,2,opt,name=shortcode,proto3" json:"shortcode,omitempty"`
+	WithIdentity  bool                   `protobuf:"varint,3,opt,name=with_identity,json=withIdentity,proto3" json:"with_identity,omitempty"`
+	WithLoadout   bool                   `protobuf:"varint,4,opt,name=with_loadout,json=withLoadout,proto3" json:"with_loadout,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetPlayerRankDetailsRequest) Reset() {
+	*x = GetPlayerRankDetailsRequest{}
+	mi := &file_protorank_rank_request_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetPlayerRankDetailsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetPlayerRankDetailsRequest) ProtoMessage() {}
+
+func (x *GetPlayerRankDetailsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protorank_rank_request_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetPlayerRankDetailsRequest.ProtoReflect.Descriptor instead.
+func (*GetPlayerRankDetailsRequest) Descriptor() ([]byte, []int) {
+	return file_protorank_rank_request_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *GetPlayerRankDetailsRequest) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *GetPlayerRankDetailsRequest) GetShortcode() string {
+	if x != nil {
+		return x.Shortcode
+	}
+	return ""
+}
+
+func (x *GetPlayerRankDetailsRequest) GetWithIdentity() bool {
+	if x != nil {
+		return x.WithIdentity
+	}
+	return false
+}
+
+func (x *GetPlayerRankDetailsRequest) GetWithLoadout() bool {
+	if x != nil {
+		return x.WithLoadout
+	}
+	return false
+}
+
 var File_protorank_rank_request_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_request_proto_rawDesc = "" +
@@ -488,7 +556,12 @@ const file_protorank_rank_request_proto_rawDesc = "" +
 	"\x1eRankingRegionAvailableResponse\x12\x1c\n" +
 	"\tavailable\x18\x01 \x01(\bR\tavailable\x12\x1d\n" +
 	"\n" +
-	"start_date\x18\x02 \x01(\x03R\tstartDate*4\n" +
+	"start_date\x18\x02 \x01(\x03R\tstartDate\"\xa0\x01\n" +
+	"\x1bGetPlayerRankDetailsRequest\x12\x1b\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1c\n" +
+	"\tshortcode\x18\x02 \x01(\tR\tshortcode\x12#\n" +
+	"\rwith_identity\x18\x03 \x01(\bR\fwithIdentity\x12!\n" +
+	"\fwith_loadout\x18\x04 \x01(\bR\vwithLoadout*4\n" +
 	"\x0fRankRequestType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\x17\n" +
 	"\x12GET_RANKING_EVENTS\x10\xa8\x14BKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
@@ -506,7 +579,7 @@ func file_protorank_rank_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protorank_rank_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protorank_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_protorank_rank_request_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_protorank_rank_request_proto_goTypes = []any{
 	(RankRequestType)(0),                      // 0: rank.RankRequestType
 	(*SubmitScoreRequest)(nil),                // 1: rank.SubmitScoreRequest
@@ -516,17 +589,18 @@ var file_protorank_rank_request_proto_goTypes = []any{
 	(*GetPlayerEventRewardsRequest)(nil),      // 5: rank.GetPlayerEventRewardsRequest
 	(*GetTopRankRequest)(nil),                 // 6: rank.GetTopRankRequest
 	(*RankingRegionAvailableResponse)(nil),    // 7: rank.RankingRegionAvailableResponse
-	(*protoidentity.ProtoPlayerIdentity)(nil), // 8: identity.ProtoPlayerIdentity
-	(*protoidentity.ProtoPlayerLoadout)(nil),  // 9: identity.ProtoPlayerLoadout
+	(*GetPlayerRankDetailsRequest)(nil),       // 8: rank.GetPlayerRankDetailsRequest
+	(*protoidentity.ProtoPlayerIdentity)(nil), // 9: identity.ProtoPlayerIdentity
+	(*protoidentity.ProtoPlayerLoadout)(nil),  // 10: identity.ProtoPlayerLoadout
 }
 var file_protorank_rank_request_proto_depIdxs = []int32{
-	8, // 0: rank.SubmitScoreRequest.identity:type_name -> identity.ProtoPlayerIdentity
-	9, // 1: rank.SubmitScoreRequest.loadout:type_name -> identity.ProtoPlayerLoadout
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	9,  // 0: rank.SubmitScoreRequest.identity:type_name -> identity.ProtoPlayerIdentity
+	10, // 1: rank.SubmitScoreRequest.loadout:type_name -> identity.ProtoPlayerLoadout
+	2,  // [2:2] is the sub-list for method output_type
+	2,  // [2:2] is the sub-list for method input_type
+	2,  // [2:2] is the sub-list for extension type_name
+	2,  // [2:2] is the sub-list for extension extendee
+	0,  // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_protorank_rank_request_proto_init() }
@@ -540,7 +614,7 @@ func file_protorank_rank_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_request_proto_rawDesc), len(file_protorank_rank_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   7,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

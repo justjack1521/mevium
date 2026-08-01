@@ -48,3 +48,7 @@ message GetPlayerEventRewardsResponse {
 message RankingRegionAvailableRequest {
   string id = 1;
 }
+
+message GetPlayerRankDetailsResponse {
+    ProtoPlayerRankSetDetails details = 1;
+}
