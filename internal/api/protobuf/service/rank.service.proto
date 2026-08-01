@@ -26,5 +26,6 @@ service MeviusRankService {
 
   rpc GetRankingRegionAvailable(rank.RankingRegionAvailableRequest) returns (rank.RankingRegionAvailableResponse) {}
   rpc GetPlayerRankDetails(rank.GetPlayerRankDetailsRequest) returns (rank.GetPlayerRankDetailsResponse) {}
+  rpc GetPlayerRankRangeDetails(rank.GetPlayerRankRangeDetailsRequest) returns (rank.GetPlayerRankRangeDetailsResponse) {}
 
 }

@@ -56,3 +56,11 @@ message GetPlayerRankDetailsRequest {
   bool with_identity = 3;
   bool with_loadout = 4;
 }
+
+message GetPlayerRankRangeDetailsRequest {
+  string player_id = 1;
+  int32 start = 2;
+  int32 stop = 3;
+  bool with_identity = 4;
+  bool with_loadout = 5;
+}

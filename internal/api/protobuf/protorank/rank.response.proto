@@ -52,3 +52,7 @@ message RankingRegionAvailableRequest {
 message GetPlayerRankDetailsResponse {
     ProtoPlayerRankSetDetails details = 1;
 }
+
+message GetPlayerRankRangeDetailsResponse {
+  repeated ProtoPlayerRankSetDetails details = 1;
+}

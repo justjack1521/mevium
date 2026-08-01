@@ -32,6 +32,7 @@ const (
 	MeviusRankService_GetTopRankings_FullMethodName            = "/service.MeviusRankService/GetTopRankings"
 	MeviusRankService_GetRankingRegionAvailable_FullMethodName = "/service.MeviusRankService/GetRankingRegionAvailable"
 	MeviusRankService_GetPlayerRankDetails_FullMethodName      = "/service.MeviusRankService/GetPlayerRankDetails"
+	MeviusRankService_GetPlayerRankRangeDetails_FullMethodName = "/service.MeviusRankService/GetPlayerRankRangeDetails"
 )
 
 // MeviusRankServiceClient is the client API for MeviusRankService service.
@@ -49,6 +50,7 @@ type MeviusRankServiceClient interface {
 	GetTopRankings(ctx context.Context, in *protorank.GetTopRankRequest, opts ...grpc.CallOption) (*protorank.GetTopRankResponse, error)
 	GetRankingRegionAvailable(ctx context.Context, in *protorank.RankingRegionAvailableRequest, opts ...grpc.CallOption) (*protorank.RankingRegionAvailableResponse, error)
 	GetPlayerRankDetails(ctx context.Context, in *protorank.GetPlayerRankDetailsRequest, opts ...grpc.CallOption) (*protorank.GetPlayerRankDetailsResponse, error)
+	GetPlayerRankRangeDetails(ctx context.Context, in *protorank.GetPlayerRankRangeDetailsRequest, opts ...grpc.CallOption) (*protorank.GetPlayerRankRangeDetailsResponse, error)
 }
 
 type meviusRankServiceClient struct {
@@ -158,6 +160,15 @@ func (c *meviusRankServiceClient) GetPlayerRankDetails(ctx context.Context, in *
 	return out, nil
 }
 
+func (c *meviusRankServiceClient) GetPlayerRankRangeDetails(ctx context.Context, in *protorank.GetPlayerRankRangeDetailsRequest, opts ...grpc.CallOption) (*protorank.GetPlayerRankRangeDetailsResponse, error) {
+	out := new(protorank.GetPlayerRankRangeDetailsResponse)
+	err := c.cc.Invoke(ctx, MeviusRankService_GetPlayerRankRangeDetails_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusRankServiceServer is the server API for MeviusRankService service.
 // All implementations should embed UnimplementedMeviusRankServiceServer
 // for forward compatibility
@@ -173,6 +184,7 @@ type MeviusRankServiceServer interface {
 	GetTopRankings(context.Context, *protorank.GetTopRankRequest) (*protorank.GetTopRankResponse, error)
 	GetRankingRegionAvailable(context.Context, *protorank.RankingRegionAvailableRequest) (*protorank.RankingRegionAvailableResponse, error)
 	GetPlayerRankDetails(context.Context, *protorank.GetPlayerRankDetailsRequest) (*protorank.GetPlayerRankDetailsResponse, error)
+	GetPlayerRankRangeDetails(context.Context, *protorank.GetPlayerRankRangeDetailsRequest) (*protorank.GetPlayerRankRangeDetailsResponse, error)
 }
 
 // UnimplementedMeviusRankServiceServer should be embedded to have forward compatible implementations.
@@ -211,6 +223,9 @@ func (UnimplementedMeviusRankServiceServer) GetRankingRegionAvailable(context.Co
 }
 func (UnimplementedMeviusRankServiceServer) GetPlayerRankDetails(context.Context, *protorank.GetPlayerRankDetailsRequest) (*protorank.GetPlayerRankDetailsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerRankDetails not implemented")
+}
+func (UnimplementedMeviusRankServiceServer) GetPlayerRankRangeDetails(context.Context, *protorank.GetPlayerRankRangeDetailsRequest) (*protorank.GetPlayerRankRangeDetailsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPlayerRankRangeDetails not implemented")
 }
 
 // UnsafeMeviusRankServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -422,6 +437,24 @@ func _MeviusRankService_GetPlayerRankDetails_Handler(srv interface{}, ctx contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusRankService_GetPlayerRankRangeDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protorank.GetPlayerRankRangeDetailsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusRankServiceServer).GetPlayerRankRangeDetails(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusRankService_GetPlayerRankRangeDetails_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusRankServiceServer).GetPlayerRankRangeDetails(ctx, req.(*protorank.GetPlayerRankRangeDetailsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusRankService_ServiceDesc is the grpc.ServiceDesc for MeviusRankService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -472,6 +505,10 @@ var MeviusRankService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetPlayerRankDetails",
 			Handler:    _MeviusRankService_GetPlayerRankDetails_Handler,
+		},
+		{
+			MethodName: "GetPlayerRankRangeDetails",
+			Handler:    _MeviusRankService_GetPlayerRankRangeDetails_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

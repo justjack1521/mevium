@@ -485,6 +485,50 @@ func (x *GetPlayerRankDetailsResponse) GetDetails() *ProtoPlayerRankSetDetails {
 	return nil
 }
 
+type GetPlayerRankRangeDetailsResponse struct {
+	state         protoimpl.MessageState       `protogen:"open.v1"`
+	Details       []*ProtoPlayerRankSetDetails `protobuf:"bytes,1,rep,name=details,proto3" json:"details,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetPlayerRankRangeDetailsResponse) Reset() {
+	*x = GetPlayerRankRangeDetailsResponse{}
+	mi := &file_protorank_rank_response_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetPlayerRankRangeDetailsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetPlayerRankRangeDetailsResponse) ProtoMessage() {}
+
+func (x *GetPlayerRankRangeDetailsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protorank_rank_response_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetPlayerRankRangeDetailsResponse.ProtoReflect.Descriptor instead.
+func (*GetPlayerRankRangeDetailsResponse) Descriptor() ([]byte, []int) {
+	return file_protorank_rank_response_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *GetPlayerRankRangeDetailsResponse) GetDetails() []*ProtoPlayerRankSetDetails {
+	if x != nil {
+		return x.Details
+	}
+	return nil
+}
+
 var File_protorank_rank_response_proto protoreflect.FileDescriptor
 
 const file_protorank_rank_response_proto_rawDesc = "" +
@@ -523,7 +567,9 @@ const file_protorank_rank_response_proto_rawDesc = "" +
 	"\x1dRankingRegionAvailableRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\"Y\n" +
 	"\x1cGetPlayerRankDetailsResponse\x129\n" +
-	"\adetails\x18\x01 \x01(\v2\x1f.rank.ProtoPlayerRankSetDetailsR\adetailsBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
+	"\adetails\x18\x01 \x01(\v2\x1f.rank.ProtoPlayerRankSetDetailsR\adetails\"^\n" +
+	"!GetPlayerRankRangeDetailsResponse\x129\n" +
+	"\adetails\x18\x01 \x03(\v2\x1f.rank.ProtoPlayerRankSetDetailsR\adetailsBKZ5github.com/justjack1521/mevium/pkg/genproto/protorank\xaa\x02\x11Mobius.Proto.Rankb\x06proto3"
 
 var (
 	file_protorank_rank_response_proto_rawDescOnce sync.Once
@@ -537,38 +583,40 @@ func file_protorank_rank_response_proto_rawDescGZIP() []byte {
 	return file_protorank_rank_response_proto_rawDescData
 }
 
-var file_protorank_rank_response_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_protorank_rank_response_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_protorank_rank_response_proto_goTypes = []any{
-	(*SubmitScoreResponse)(nil),             // 0: rank.SubmitScoreResponse
-	(*RefreshWeeklyRankRangeResponse)(nil),  // 1: rank.RefreshWeeklyRankRangeResponse
-	(*RefreshSpecialRankRangeResponse)(nil), // 2: rank.RefreshSpecialRankRangeResponse
-	(*GetTopRankResponse)(nil),              // 3: rank.GetTopRankResponse
-	(*FetchPlayerRankingInfoResponse)(nil),  // 4: rank.FetchPlayerRankingInfoResponse
-	(*GetPlayerEventRewardsResponse)(nil),   // 5: rank.GetPlayerEventRewardsResponse
-	(*RankingRegionAvailableRequest)(nil),   // 6: rank.RankingRegionAvailableRequest
-	(*GetPlayerRankDetailsResponse)(nil),    // 7: rank.GetPlayerRankDetailsResponse
-	(*ProtoRankingInfo)(nil),                // 8: rank.ProtoRankingInfo
-	(*ProtoPlayerRankSetDetails)(nil),       // 9: rank.ProtoPlayerRankSetDetails
-	(*ProtoRankingEventClaim)(nil),          // 10: rank.ProtoRankingEventClaim
-	(*ProtoRankingEventSchedule)(nil),       // 11: rank.ProtoRankingEventSchedule
-	(*ProtoRankingEventReward)(nil),         // 12: rank.ProtoRankingEventReward
+	(*SubmitScoreResponse)(nil),               // 0: rank.SubmitScoreResponse
+	(*RefreshWeeklyRankRangeResponse)(nil),    // 1: rank.RefreshWeeklyRankRangeResponse
+	(*RefreshSpecialRankRangeResponse)(nil),   // 2: rank.RefreshSpecialRankRangeResponse
+	(*GetTopRankResponse)(nil),                // 3: rank.GetTopRankResponse
+	(*FetchPlayerRankingInfoResponse)(nil),    // 4: rank.FetchPlayerRankingInfoResponse
+	(*GetPlayerEventRewardsResponse)(nil),     // 5: rank.GetPlayerEventRewardsResponse
+	(*RankingRegionAvailableRequest)(nil),     // 6: rank.RankingRegionAvailableRequest
+	(*GetPlayerRankDetailsResponse)(nil),      // 7: rank.GetPlayerRankDetailsResponse
+	(*GetPlayerRankRangeDetailsResponse)(nil), // 8: rank.GetPlayerRankRangeDetailsResponse
+	(*ProtoRankingInfo)(nil),                  // 9: rank.ProtoRankingInfo
+	(*ProtoPlayerRankSetDetails)(nil),         // 10: rank.ProtoPlayerRankSetDetails
+	(*ProtoRankingEventClaim)(nil),            // 11: rank.ProtoRankingEventClaim
+	(*ProtoRankingEventSchedule)(nil),         // 12: rank.ProtoRankingEventSchedule
+	(*ProtoRankingEventReward)(nil),           // 13: rank.ProtoRankingEventReward
 }
 var file_protorank_rank_response_proto_depIdxs = []int32{
-	8,  // 0: rank.SubmitScoreResponse.weekly_rank_update:type_name -> rank.ProtoRankingInfo
-	8,  // 1: rank.SubmitScoreResponse.event_rank_update:type_name -> rank.ProtoRankingInfo
-	8,  // 2: rank.RefreshWeeklyRankRangeResponse.rank_ranges:type_name -> rank.ProtoRankingInfo
-	8,  // 3: rank.RefreshSpecialRankRangeResponse.rank_ranges:type_name -> rank.ProtoRankingInfo
-	9,  // 4: rank.GetTopRankResponse.rankings:type_name -> rank.ProtoPlayerRankSetDetails
-	8,  // 5: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
-	10, // 6: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
-	11, // 7: rank.FetchPlayerRankingInfoResponse.schedules:type_name -> rank.ProtoRankingEventSchedule
-	12, // 8: rank.GetPlayerEventRewardsResponse.rewards:type_name -> rank.ProtoRankingEventReward
-	9,  // 9: rank.GetPlayerRankDetailsResponse.details:type_name -> rank.ProtoPlayerRankSetDetails
-	10, // [10:10] is the sub-list for method output_type
-	10, // [10:10] is the sub-list for method input_type
-	10, // [10:10] is the sub-list for extension type_name
-	10, // [10:10] is the sub-list for extension extendee
-	0,  // [0:10] is the sub-list for field type_name
+	9,  // 0: rank.SubmitScoreResponse.weekly_rank_update:type_name -> rank.ProtoRankingInfo
+	9,  // 1: rank.SubmitScoreResponse.event_rank_update:type_name -> rank.ProtoRankingInfo
+	9,  // 2: rank.RefreshWeeklyRankRangeResponse.rank_ranges:type_name -> rank.ProtoRankingInfo
+	9,  // 3: rank.RefreshSpecialRankRangeResponse.rank_ranges:type_name -> rank.ProtoRankingInfo
+	10, // 4: rank.GetTopRankResponse.rankings:type_name -> rank.ProtoPlayerRankSetDetails
+	9,  // 5: rank.FetchPlayerRankingInfoResponse.active:type_name -> rank.ProtoRankingInfo
+	11, // 6: rank.FetchPlayerRankingInfoResponse.claims:type_name -> rank.ProtoRankingEventClaim
+	12, // 7: rank.FetchPlayerRankingInfoResponse.schedules:type_name -> rank.ProtoRankingEventSchedule
+	13, // 8: rank.GetPlayerEventRewardsResponse.rewards:type_name -> rank.ProtoRankingEventReward
+	10, // 9: rank.GetPlayerRankDetailsResponse.details:type_name -> rank.ProtoPlayerRankSetDetails
+	10, // 10: rank.GetPlayerRankRangeDetailsResponse.details:type_name -> rank.ProtoPlayerRankSetDetails
+	11, // [11:11] is the sub-list for method output_type
+	11, // [11:11] is the sub-list for method input_type
+	11, // [11:11] is the sub-list for extension type_name
+	11, // [11:11] is the sub-list for extension extendee
+	0,  // [0:11] is the sub-list for field type_name
 }
 
 func init() { file_protorank_rank_response_proto_init() }
@@ -583,7 +631,7 @@ func file_protorank_rank_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protorank_rank_response_proto_rawDesc), len(file_protorank_rank_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

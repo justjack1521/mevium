@@ -41,10 +41,13 @@ namespace Mobius.Proto.Rank {
             "IAEoCBISCgpzdGFydF9kYXRlGAIgASgDInAKG0dldFBsYXllclJhbmtEZXRh",
             "aWxzUmVxdWVzdBIRCglwbGF5ZXJfaWQYASABKAkSEQoJc2hvcnRjb2RlGAIg",
             "ASgJEhUKDXdpdGhfaWRlbnRpdHkYAyABKAgSFAoMd2l0aF9sb2Fkb3V0GAQg",
-            "ASgIKjQKD1JhbmtSZXF1ZXN0VHlwZRIICgROT05FEAASFwoSR0VUX1JBTktJ",
-            "TkdfRVZFTlRTEKgUQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1",
-            "bS9wa2cvZ2VucHJvdG8vcHJvdG9yYW5rqgIRTW9iaXVzLlByb3RvLlJhbmti",
-            "BnByb3RvMw=="));
+            "ASgIIn8KIEdldFBsYXllclJhbmtSYW5nZURldGFpbHNSZXF1ZXN0EhEKCXBs",
+            "YXllcl9pZBgBIAEoCRINCgVzdGFydBgCIAEoBRIMCgRzdG9wGAMgASgFEhUK",
+            "DXdpdGhfaWRlbnRpdHkYBCABKAgSFAoMd2l0aF9sb2Fkb3V0GAUgASgIKjQK",
+            "D1JhbmtSZXF1ZXN0VHlwZRIICgROT05FEAASFwoSR0VUX1JBTktJTkdfRVZF",
+            "TlRTEKgUQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cv",
+            "Z2VucHJvdG8vcHJvdG9yYW5rqgIRTW9iaXVzLlByb3RvLlJhbmtiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Rank.RankRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -55,7 +58,8 @@ namespace Mobius.Proto.Rank {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest), global::Mobius.Proto.Rank.GetPlayerEventRewardsRequest.Parser, new[]{ "PlayerId", "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetTopRankRequest), global::Mobius.Proto.Rank.GetTopRankRequest.Parser, new[]{ "EventName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.RankingRegionAvailableResponse), global::Mobius.Proto.Rank.RankingRegionAvailableResponse.Parser, new[]{ "Available", "StartDate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerRankDetailsRequest), global::Mobius.Proto.Rank.GetPlayerRankDetailsRequest.Parser, new[]{ "PlayerId", "Shortcode", "WithIdentity", "WithLoadout" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerRankDetailsRequest), global::Mobius.Proto.Rank.GetPlayerRankDetailsRequest.Parser, new[]{ "PlayerId", "Shortcode", "WithIdentity", "WithLoadout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Rank.GetPlayerRankRangeDetailsRequest), global::Mobius.Proto.Rank.GetPlayerRankRangeDetailsRequest.Parser, new[]{ "PlayerId", "Start", "Stop", "WithIdentity", "WithLoadout" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1922,6 +1926,322 @@ namespace Mobius.Proto.Rank {
             break;
           }
           case 32: {
+            WithLoadout = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetPlayerRankRangeDetailsRequest : pb::IMessage<GetPlayerRankRangeDetailsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetPlayerRankRangeDetailsRequest> _parser = new pb::MessageParser<GetPlayerRankRangeDetailsRequest>(() => new GetPlayerRankRangeDetailsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetPlayerRankRangeDetailsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Rank.RankRequestReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPlayerRankRangeDetailsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPlayerRankRangeDetailsRequest(GetPlayerRankRangeDetailsRequest other) : this() {
+      playerId_ = other.playerId_;
+      start_ = other.start_;
+      stop_ = other.stop_;
+      withIdentity_ = other.withIdentity_;
+      withLoadout_ = other.withLoadout_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetPlayerRankRangeDetailsRequest Clone() {
+      return new GetPlayerRankRangeDetailsRequest(this);
+    }
+
+    /// <summary>Field number for the "player_id" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private string playerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start" field.</summary>
+    public const int StartFieldNumber = 2;
+    private int start_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Start {
+      get { return start_; }
+      set {
+        start_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stop" field.</summary>
+    public const int StopFieldNumber = 3;
+    private int stop_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Stop {
+      get { return stop_; }
+      set {
+        stop_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "with_identity" field.</summary>
+    public const int WithIdentityFieldNumber = 4;
+    private bool withIdentity_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool WithIdentity {
+      get { return withIdentity_; }
+      set {
+        withIdentity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "with_loadout" field.</summary>
+    public const int WithLoadoutFieldNumber = 5;
+    private bool withLoadout_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool WithLoadout {
+      get { return withLoadout_; }
+      set {
+        withLoadout_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetPlayerRankRangeDetailsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetPlayerRankRangeDetailsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlayerId != other.PlayerId) return false;
+      if (Start != other.Start) return false;
+      if (Stop != other.Stop) return false;
+      if (WithIdentity != other.WithIdentity) return false;
+      if (WithLoadout != other.WithLoadout) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
+      if (Start != 0) hash ^= Start.GetHashCode();
+      if (Stop != 0) hash ^= Stop.GetHashCode();
+      if (WithIdentity != false) hash ^= WithIdentity.GetHashCode();
+      if (WithLoadout != false) hash ^= WithLoadout.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
+      if (Start != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Start);
+      }
+      if (Stop != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Stop);
+      }
+      if (WithIdentity != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(WithIdentity);
+      }
+      if (WithLoadout != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(WithLoadout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
+      if (Start != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Start);
+      }
+      if (Stop != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Stop);
+      }
+      if (WithIdentity != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(WithIdentity);
+      }
+      if (WithLoadout != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(WithLoadout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PlayerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      }
+      if (Start != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Start);
+      }
+      if (Stop != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Stop);
+      }
+      if (WithIdentity != false) {
+        size += 1 + 1;
+      }
+      if (WithLoadout != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetPlayerRankRangeDetailsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PlayerId.Length != 0) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.Start != 0) {
+        Start = other.Start;
+      }
+      if (other.Stop != 0) {
+        Stop = other.Stop;
+      }
+      if (other.WithIdentity != false) {
+        WithIdentity = other.WithIdentity;
+      }
+      if (other.WithLoadout != false) {
+        WithLoadout = other.WithLoadout;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PlayerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Start = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Stop = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            WithIdentity = input.ReadBool();
+            break;
+          }
+          case 40: {
+            WithLoadout = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PlayerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Start = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Stop = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            WithIdentity = input.ReadBool();
+            break;
+          }
+          case 40: {
             WithLoadout = input.ReadBool();
             break;
           }
