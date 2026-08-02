@@ -33,7 +33,7 @@ message BaseAbilityCard {
 }
 
 message Ability {
-  string ability = 1;
+  string sys_id = 1;
   string element = 2;
   string card_type = 3;
   bool active = 4;
