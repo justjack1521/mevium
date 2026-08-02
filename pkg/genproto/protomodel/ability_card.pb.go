@@ -274,6 +274,8 @@ type Ability struct {
 	Ability       string                 `protobuf:"bytes,1,opt,name=ability,proto3" json:"ability,omitempty"`
 	Element       string                 `protobuf:"bytes,2,opt,name=element,proto3" json:"element,omitempty"`
 	CardType      string                 `protobuf:"bytes,3,opt,name=card_type,json=cardType,proto3" json:"card_type,omitempty"`
+	Active        bool                   `protobuf:"varint,4,opt,name=active,proto3" json:"active,omitempty"`
+	Name          string                 `protobuf:"bytes,5,opt,name=name,proto3" json:"name,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -325,6 +327,20 @@ func (x *Ability) GetElement() string {
 func (x *Ability) GetCardType() string {
 	if x != nil {
 		return x.CardType
+	}
+	return ""
+}
+
+func (x *Ability) GetActive() bool {
+	if x != nil {
+		return x.Active
+	}
+	return false
+}
+
+func (x *Ability) GetName() string {
+	if x != nil {
+		return x.Name
 	}
 	return ""
 }
@@ -524,11 +540,13 @@ const file_protomodel_ability_card_proto_rawDesc = "" +
 	" \x01(\tR\aelement\x12\x1a\n" +
 	"\bcategory\x18\v \x01(\tR\bcategory\x12!\n" +
 	"\ffast_learner\x18\f \x01(\bR\vfastLearner\x122\n" +
-	"\x15exp_fusion_multiplier\x18\r \x01(\x02R\x13expFusionMultiplier\"Z\n" +
+	"\x15exp_fusion_multiplier\x18\r \x01(\x02R\x13expFusionMultiplier\"\x86\x01\n" +
 	"\aAbility\x12\x18\n" +
 	"\aability\x18\x01 \x01(\tR\aability\x12\x18\n" +
 	"\aelement\x18\x02 \x01(\tR\aelement\x12\x1b\n" +
-	"\tcard_type\x18\x03 \x01(\tR\bcardType\"\xda\x04\n" +
+	"\tcard_type\x18\x03 \x01(\tR\bcardType\x12\x16\n" +
+	"\x06active\x18\x04 \x01(\bR\x06active\x12\x12\n" +
+	"\x04name\x18\x05 \x01(\tR\x04name\"\xda\x04\n" +
 	"\rAugmentConfig\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12\x1e\n" +
 	"\vbase_sys_id\x18\x02 \x01(\tR\tbaseSysId\x12&\n" +

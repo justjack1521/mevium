@@ -36,6 +36,8 @@ message Ability {
   string ability = 1;
   string element = 2;
   string card_type = 3;
+  bool active = 4;
+  string name = 5;
 }
 
 message AugmentConfig {
