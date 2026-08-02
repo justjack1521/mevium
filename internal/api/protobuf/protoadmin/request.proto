@@ -21,6 +21,10 @@ message CreateAbilityCardRequest {
   model.AbilityCard card = 1;
 }
 
+message CreateAbilityRequest {
+  model.Ability ability = 1;
+}
+
 message CreateSkillPanelRequest {
   string base_job_id = 1;
   int32 page_index = 2;

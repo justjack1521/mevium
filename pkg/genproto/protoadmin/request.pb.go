@@ -171,6 +171,50 @@ func (x *CreateAbilityCardRequest) GetCard() *protomodel.AbilityCard {
 	return nil
 }
 
+type CreateAbilityRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Ability       *protomodel.Ability    `protobuf:"bytes,1,opt,name=ability,proto3" json:"ability,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateAbilityRequest) Reset() {
+	*x = CreateAbilityRequest{}
+	mi := &file_protoadmin_request_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateAbilityRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateAbilityRequest) ProtoMessage() {}
+
+func (x *CreateAbilityRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protoadmin_request_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateAbilityRequest.ProtoReflect.Descriptor instead.
+func (*CreateAbilityRequest) Descriptor() ([]byte, []int) {
+	return file_protoadmin_request_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *CreateAbilityRequest) GetAbility() *protomodel.Ability {
+	if x != nil {
+		return x.Ability
+	}
+	return nil
+}
+
 type CreateSkillPanelRequest struct {
 	state          protoimpl.MessageState          `protogen:"open.v1"`
 	BaseJobId      string                          `protobuf:"bytes,1,opt,name=base_job_id,json=baseJobId,proto3" json:"base_job_id,omitempty"`
@@ -186,7 +230,7 @@ type CreateSkillPanelRequest struct {
 
 func (x *CreateSkillPanelRequest) Reset() {
 	*x = CreateSkillPanelRequest{}
-	mi := &file_protoadmin_request_proto_msgTypes[3]
+	mi := &file_protoadmin_request_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -198,7 +242,7 @@ func (x *CreateSkillPanelRequest) String() string {
 func (*CreateSkillPanelRequest) ProtoMessage() {}
 
 func (x *CreateSkillPanelRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protoadmin_request_proto_msgTypes[3]
+	mi := &file_protoadmin_request_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -211,7 +255,7 @@ func (x *CreateSkillPanelRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateSkillPanelRequest.ProtoReflect.Descriptor instead.
 func (*CreateSkillPanelRequest) Descriptor() ([]byte, []int) {
-	return file_protoadmin_request_proto_rawDescGZIP(), []int{3}
+	return file_protoadmin_request_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CreateSkillPanelRequest) GetBaseJobId() string {
@@ -276,7 +320,7 @@ type CreateBaseJobCardRequest struct {
 
 func (x *CreateBaseJobCardRequest) Reset() {
 	*x = CreateBaseJobCardRequest{}
-	mi := &file_protoadmin_request_proto_msgTypes[4]
+	mi := &file_protoadmin_request_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -288,7 +332,7 @@ func (x *CreateBaseJobCardRequest) String() string {
 func (*CreateBaseJobCardRequest) ProtoMessage() {}
 
 func (x *CreateBaseJobCardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protoadmin_request_proto_msgTypes[4]
+	mi := &file_protoadmin_request_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -301,7 +345,7 @@ func (x *CreateBaseJobCardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateBaseJobCardRequest.ProtoReflect.Descriptor instead.
 func (*CreateBaseJobCardRequest) Descriptor() ([]byte, []int) {
-	return file_protoadmin_request_proto_rawDescGZIP(), []int{4}
+	return file_protoadmin_request_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CreateBaseJobCardRequest) GetSysId() string {
@@ -349,7 +393,7 @@ type CreateAugmentMaterialRequest struct {
 
 func (x *CreateAugmentMaterialRequest) Reset() {
 	*x = CreateAugmentMaterialRequest{}
-	mi := &file_protoadmin_request_proto_msgTypes[5]
+	mi := &file_protoadmin_request_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -361,7 +405,7 @@ func (x *CreateAugmentMaterialRequest) String() string {
 func (*CreateAugmentMaterialRequest) ProtoMessage() {}
 
 func (x *CreateAugmentMaterialRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protoadmin_request_proto_msgTypes[5]
+	mi := &file_protoadmin_request_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -374,7 +418,7 @@ func (x *CreateAugmentMaterialRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateAugmentMaterialRequest.ProtoReflect.Descriptor instead.
 func (*CreateAugmentMaterialRequest) Descriptor() ([]byte, []int) {
-	return file_protoadmin_request_proto_rawDescGZIP(), []int{5}
+	return file_protoadmin_request_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *CreateAugmentMaterialRequest) GetAbilityCardId() string {
@@ -401,7 +445,7 @@ type QueryRegionMapDataRequest struct {
 
 func (x *QueryRegionMapDataRequest) Reset() {
 	*x = QueryRegionMapDataRequest{}
-	mi := &file_protoadmin_request_proto_msgTypes[6]
+	mi := &file_protoadmin_request_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -413,7 +457,7 @@ func (x *QueryRegionMapDataRequest) String() string {
 func (*QueryRegionMapDataRequest) ProtoMessage() {}
 
 func (x *QueryRegionMapDataRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protoadmin_request_proto_msgTypes[6]
+	mi := &file_protoadmin_request_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -426,7 +470,7 @@ func (x *QueryRegionMapDataRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryRegionMapDataRequest.ProtoReflect.Descriptor instead.
 func (*QueryRegionMapDataRequest) Descriptor() ([]byte, []int) {
-	return file_protoadmin_request_proto_rawDescGZIP(), []int{6}
+	return file_protoadmin_request_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *QueryRegionMapDataRequest) GetPlayerId() string {
@@ -455,7 +499,9 @@ const file_protoadmin_request_proto_rawDesc = "" +
 	"\x15CreateBaseCardRequest\x12*\n" +
 	"\x04card\x18\x01 \x01(\v2\x16.model.BaseAbilityCardR\x04card\"B\n" +
 	"\x18CreateAbilityCardRequest\x12&\n" +
-	"\x04card\x18\x01 \x01(\v2\x12.model.AbilityCardR\x04card\"\x89\x02\n" +
+	"\x04card\x18\x01 \x01(\v2\x12.model.AbilityCardR\x04card\"@\n" +
+	"\x14CreateAbilityRequest\x12(\n" +
+	"\aability\x18\x01 \x01(\v2\x0e.model.AbilityR\aability\"\x89\x02\n" +
 	"\x17CreateSkillPanelRequest\x12\x1e\n" +
 	"\vbase_job_id\x18\x01 \x01(\tR\tbaseJobId\x12\x1d\n" +
 	"\n" +
@@ -495,30 +541,33 @@ func file_protoadmin_request_proto_rawDescGZIP() []byte {
 	return file_protoadmin_request_proto_rawDescData
 }
 
-var file_protoadmin_request_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_protoadmin_request_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_protoadmin_request_proto_goTypes = []any{
 	(*GrantItemRequest)(nil),             // 0: admin.GrantItemRequest
 	(*CreateBaseCardRequest)(nil),        // 1: admin.CreateBaseCardRequest
 	(*CreateAbilityCardRequest)(nil),     // 2: admin.CreateAbilityCardRequest
-	(*CreateSkillPanelRequest)(nil),      // 3: admin.CreateSkillPanelRequest
-	(*CreateBaseJobCardRequest)(nil),     // 4: admin.CreateBaseJobCardRequest
-	(*CreateAugmentMaterialRequest)(nil), // 5: admin.CreateAugmentMaterialRequest
-	(*QueryRegionMapDataRequest)(nil),    // 6: admin.QueryRegionMapDataRequest
-	nil,                                  // 7: admin.CreateAugmentMaterialRequest.MaterialsEntry
-	(*protomodel.BaseAbilityCard)(nil),   // 8: model.BaseAbilityCard
-	(*protomodel.AbilityCard)(nil),       // 9: model.AbilityCard
-	(*protogame.ProtoItemValuePair)(nil), // 10: game.ProtoItemValuePair
+	(*CreateAbilityRequest)(nil),         // 3: admin.CreateAbilityRequest
+	(*CreateSkillPanelRequest)(nil),      // 4: admin.CreateSkillPanelRequest
+	(*CreateBaseJobCardRequest)(nil),     // 5: admin.CreateBaseJobCardRequest
+	(*CreateAugmentMaterialRequest)(nil), // 6: admin.CreateAugmentMaterialRequest
+	(*QueryRegionMapDataRequest)(nil),    // 7: admin.QueryRegionMapDataRequest
+	nil,                                  // 8: admin.CreateAugmentMaterialRequest.MaterialsEntry
+	(*protomodel.BaseAbilityCard)(nil),   // 9: model.BaseAbilityCard
+	(*protomodel.AbilityCard)(nil),       // 10: model.AbilityCard
+	(*protomodel.Ability)(nil),           // 11: model.Ability
+	(*protogame.ProtoItemValuePair)(nil), // 12: game.ProtoItemValuePair
 }
 var file_protoadmin_request_proto_depIdxs = []int32{
-	8,  // 0: admin.CreateBaseCardRequest.card:type_name -> model.BaseAbilityCard
-	9,  // 1: admin.CreateAbilityCardRequest.card:type_name -> model.AbilityCard
-	10, // 2: admin.CreateSkillPanelRequest.cost_items:type_name -> game.ProtoItemValuePair
-	7,  // 3: admin.CreateAugmentMaterialRequest.materials:type_name -> admin.CreateAugmentMaterialRequest.MaterialsEntry
-	4,  // [4:4] is the sub-list for method output_type
-	4,  // [4:4] is the sub-list for method input_type
-	4,  // [4:4] is the sub-list for extension type_name
-	4,  // [4:4] is the sub-list for extension extendee
-	0,  // [0:4] is the sub-list for field type_name
+	9,  // 0: admin.CreateBaseCardRequest.card:type_name -> model.BaseAbilityCard
+	10, // 1: admin.CreateAbilityCardRequest.card:type_name -> model.AbilityCard
+	11, // 2: admin.CreateAbilityRequest.ability:type_name -> model.Ability
+	12, // 3: admin.CreateSkillPanelRequest.cost_items:type_name -> game.ProtoItemValuePair
+	8,  // 4: admin.CreateAugmentMaterialRequest.materials:type_name -> admin.CreateAugmentMaterialRequest.MaterialsEntry
+	5,  // [5:5] is the sub-list for method output_type
+	5,  // [5:5] is the sub-list for method input_type
+	5,  // [5:5] is the sub-list for extension type_name
+	5,  // [5:5] is the sub-list for extension extendee
+	0,  // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_protoadmin_request_proto_init() }
@@ -532,7 +581,7 @@ func file_protoadmin_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoadmin_request_proto_rawDesc), len(file_protoadmin_request_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

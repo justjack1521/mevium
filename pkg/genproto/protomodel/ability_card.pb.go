@@ -269,6 +269,66 @@ func (x *BaseAbilityCard) GetExpFusionMultiplier() float32 {
 	return 0
 }
 
+type Ability struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Ability       string                 `protobuf:"bytes,1,opt,name=ability,proto3" json:"ability,omitempty"`
+	Element       string                 `protobuf:"bytes,2,opt,name=element,proto3" json:"element,omitempty"`
+	CardType      string                 `protobuf:"bytes,3,opt,name=card_type,json=cardType,proto3" json:"card_type,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Ability) Reset() {
+	*x = Ability{}
+	mi := &file_protomodel_ability_card_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Ability) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Ability) ProtoMessage() {}
+
+func (x *Ability) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_ability_card_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Ability.ProtoReflect.Descriptor instead.
+func (*Ability) Descriptor() ([]byte, []int) {
+	return file_protomodel_ability_card_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *Ability) GetAbility() string {
+	if x != nil {
+		return x.Ability
+	}
+	return ""
+}
+
+func (x *Ability) GetElement() string {
+	if x != nil {
+		return x.Element
+	}
+	return ""
+}
+
+func (x *Ability) GetCardType() string {
+	if x != nil {
+		return x.CardType
+	}
+	return ""
+}
+
 type AugmentConfig struct {
 	state               protoimpl.MessageState `protogen:"open.v1"`
 	SysId               string                 `protobuf:"bytes,1,opt,name=sys_id,json=sysId,proto3" json:"sys_id,omitempty"`
@@ -293,7 +353,7 @@ type AugmentConfig struct {
 
 func (x *AugmentConfig) Reset() {
 	*x = AugmentConfig{}
-	mi := &file_protomodel_ability_card_proto_msgTypes[2]
+	mi := &file_protomodel_ability_card_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -305,7 +365,7 @@ func (x *AugmentConfig) String() string {
 func (*AugmentConfig) ProtoMessage() {}
 
 func (x *AugmentConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_protomodel_ability_card_proto_msgTypes[2]
+	mi := &file_protomodel_ability_card_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -318,7 +378,7 @@ func (x *AugmentConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AugmentConfig.ProtoReflect.Descriptor instead.
 func (*AugmentConfig) Descriptor() ([]byte, []int) {
-	return file_protomodel_ability_card_proto_rawDescGZIP(), []int{2}
+	return file_protomodel_ability_card_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *AugmentConfig) GetSysId() string {
@@ -464,7 +524,11 @@ const file_protomodel_ability_card_proto_rawDesc = "" +
 	" \x01(\tR\aelement\x12\x1a\n" +
 	"\bcategory\x18\v \x01(\tR\bcategory\x12!\n" +
 	"\ffast_learner\x18\f \x01(\bR\vfastLearner\x122\n" +
-	"\x15exp_fusion_multiplier\x18\r \x01(\x02R\x13expFusionMultiplier\"\xda\x04\n" +
+	"\x15exp_fusion_multiplier\x18\r \x01(\x02R\x13expFusionMultiplier\"Z\n" +
+	"\aAbility\x12\x18\n" +
+	"\aability\x18\x01 \x01(\tR\aability\x12\x18\n" +
+	"\aelement\x18\x02 \x01(\tR\aelement\x12\x1b\n" +
+	"\tcard_type\x18\x03 \x01(\tR\bcardType\"\xda\x04\n" +
 	"\rAugmentConfig\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12\x1e\n" +
 	"\vbase_sys_id\x18\x02 \x01(\tR\tbaseSysId\x12&\n" +
@@ -499,15 +563,16 @@ func file_protomodel_ability_card_proto_rawDescGZIP() []byte {
 	return file_protomodel_ability_card_proto_rawDescData
 }
 
-var file_protomodel_ability_card_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_protomodel_ability_card_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_protomodel_ability_card_proto_goTypes = []any{
 	(*AbilityCard)(nil),     // 0: model.AbilityCard
 	(*BaseAbilityCard)(nil), // 1: model.BaseAbilityCard
-	(*AugmentConfig)(nil),   // 2: model.AugmentConfig
+	(*Ability)(nil),         // 2: model.Ability
+	(*AugmentConfig)(nil),   // 3: model.AugmentConfig
 }
 var file_protomodel_ability_card_proto_depIdxs = []int32{
 	1, // 0: model.AbilityCard.base_ability_card:type_name -> model.BaseAbilityCard
-	2, // 1: model.AbilityCard.augment_config:type_name -> model.AugmentConfig
+	3, // 1: model.AbilityCard.augment_config:type_name -> model.AugmentConfig
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -526,7 +591,7 @@ func file_protomodel_ability_card_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomodel_ability_card_proto_rawDesc), len(file_protomodel_ability_card_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -32,6 +32,12 @@ message BaseAbilityCard {
   float exp_fusion_multiplier = 13;
 }
 
+message Ability {
+  string ability = 1;
+  string element = 2;
+  string card_type = 3;
+}
+
 message AugmentConfig {
   string sys_id = 1;
   string base_sys_id = 2;

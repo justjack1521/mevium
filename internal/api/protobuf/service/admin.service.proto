@@ -15,4 +15,5 @@ service MeviusAdminService {
   rpc CreateBaseCard(admin.CreateBaseCardRequest) returns (admin.CreateBaseCardResponse) {}
   rpc CreateAbilityCard(admin.CreateAbilityCardRequest) returns (admin.CreateAbilityCardResponse) {}
   rpc QueryRegionMapData(admin.QueryRegionMapDataRequest) returns (admin.QueryRegionMapDataResponse) {}
+  rpc CreateAbility(admin.CreateAbilityRequest) returns (admin.CreateAbilityResponse) {}
 }

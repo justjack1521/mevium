@@ -218,6 +218,42 @@ func (*CreateBaseCardResponse) Descriptor() ([]byte, []int) {
 	return file_protoadmin_response_proto_rawDescGZIP(), []int{4}
 }
 
+type CreateAbilityResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateAbilityResponse) Reset() {
+	*x = CreateAbilityResponse{}
+	mi := &file_protoadmin_response_proto_msgTypes[5]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateAbilityResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateAbilityResponse) ProtoMessage() {}
+
+func (x *CreateAbilityResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protoadmin_response_proto_msgTypes[5]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateAbilityResponse.ProtoReflect.Descriptor instead.
+func (*CreateAbilityResponse) Descriptor() ([]byte, []int) {
+	return file_protoadmin_response_proto_rawDescGZIP(), []int{5}
+}
+
 type CreateAbilityCardResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -226,7 +262,7 @@ type CreateAbilityCardResponse struct {
 
 func (x *CreateAbilityCardResponse) Reset() {
 	*x = CreateAbilityCardResponse{}
-	mi := &file_protoadmin_response_proto_msgTypes[5]
+	mi := &file_protoadmin_response_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -238,7 +274,7 @@ func (x *CreateAbilityCardResponse) String() string {
 func (*CreateAbilityCardResponse) ProtoMessage() {}
 
 func (x *CreateAbilityCardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protoadmin_response_proto_msgTypes[5]
+	mi := &file_protoadmin_response_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -251,7 +287,7 @@ func (x *CreateAbilityCardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateAbilityCardResponse.ProtoReflect.Descriptor instead.
 func (*CreateAbilityCardResponse) Descriptor() ([]byte, []int) {
-	return file_protoadmin_response_proto_rawDescGZIP(), []int{5}
+	return file_protoadmin_response_proto_rawDescGZIP(), []int{6}
 }
 
 type QueryRegionMapDataResponse struct {
@@ -263,7 +299,7 @@ type QueryRegionMapDataResponse struct {
 
 func (x *QueryRegionMapDataResponse) Reset() {
 	*x = QueryRegionMapDataResponse{}
-	mi := &file_protoadmin_response_proto_msgTypes[6]
+	mi := &file_protoadmin_response_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -275,7 +311,7 @@ func (x *QueryRegionMapDataResponse) String() string {
 func (*QueryRegionMapDataResponse) ProtoMessage() {}
 
 func (x *QueryRegionMapDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protoadmin_response_proto_msgTypes[6]
+	mi := &file_protoadmin_response_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -288,7 +324,7 @@ func (x *QueryRegionMapDataResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryRegionMapDataResponse.ProtoReflect.Descriptor instead.
 func (*QueryRegionMapDataResponse) Descriptor() ([]byte, []int) {
-	return file_protoadmin_response_proto_rawDescGZIP(), []int{6}
+	return file_protoadmin_response_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *QueryRegionMapDataResponse) GetData() *protogame.ProtoRegionMapInstance {
@@ -309,7 +345,8 @@ const file_protoadmin_response_proto_rawDesc = "" +
 	"\x19CreateBaseJobCardResponse\x12\x18\n" +
 	"\acreated\x18\x01 \x01(\bR\acreated\" \n" +
 	"\x1eCreateAugmentMaterialsResponse\"\x18\n" +
-	"\x16CreateBaseCardResponse\"\x1b\n" +
+	"\x16CreateBaseCardResponse\"\x17\n" +
+	"\x15CreateAbilityResponse\"\x1b\n" +
 	"\x19CreateAbilityCardResponse\"N\n" +
 	"\x1aQueryRegionMapDataResponse\x120\n" +
 	"\x04data\x18\x01 \x01(\v2\x1c.game.ProtoRegionMapInstanceR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
@@ -326,19 +363,20 @@ func file_protoadmin_response_proto_rawDescGZIP() []byte {
 	return file_protoadmin_response_proto_rawDescData
 }
 
-var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_protoadmin_response_proto_goTypes = []any{
 	(*GrantItemResponse)(nil),                // 0: admin.GrantItemResponse
 	(*CreateSkillPanelResponse)(nil),         // 1: admin.CreateSkillPanelResponse
 	(*CreateBaseJobCardResponse)(nil),        // 2: admin.CreateBaseJobCardResponse
 	(*CreateAugmentMaterialsResponse)(nil),   // 3: admin.CreateAugmentMaterialsResponse
 	(*CreateBaseCardResponse)(nil),           // 4: admin.CreateBaseCardResponse
-	(*CreateAbilityCardResponse)(nil),        // 5: admin.CreateAbilityCardResponse
-	(*QueryRegionMapDataResponse)(nil),       // 6: admin.QueryRegionMapDataResponse
-	(*protogame.ProtoRegionMapInstance)(nil), // 7: game.ProtoRegionMapInstance
+	(*CreateAbilityResponse)(nil),            // 5: admin.CreateAbilityResponse
+	(*CreateAbilityCardResponse)(nil),        // 6: admin.CreateAbilityCardResponse
+	(*QueryRegionMapDataResponse)(nil),       // 7: admin.QueryRegionMapDataResponse
+	(*protogame.ProtoRegionMapInstance)(nil), // 8: game.ProtoRegionMapInstance
 }
 var file_protoadmin_response_proto_depIdxs = []int32{
-	7, // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapInstance
+	8, // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapInstance
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -357,7 +395,7 @@ func file_protoadmin_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoadmin_response_proto_rawDesc), len(file_protoadmin_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
