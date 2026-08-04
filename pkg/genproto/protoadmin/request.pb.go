@@ -487,6 +487,58 @@ func (x *QueryRegionMapDataRequest) GetRegionId() string {
 	return ""
 }
 
+type SimulateSummonBannerRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	BannerId      string                 `protobuf:"bytes,2,opt,name=banner_id,json=bannerId,proto3" json:"banner_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SimulateSummonBannerRequest) Reset() {
+	*x = SimulateSummonBannerRequest{}
+	mi := &file_protoadmin_request_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SimulateSummonBannerRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SimulateSummonBannerRequest) ProtoMessage() {}
+
+func (x *SimulateSummonBannerRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protoadmin_request_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SimulateSummonBannerRequest.ProtoReflect.Descriptor instead.
+func (*SimulateSummonBannerRequest) Descriptor() ([]byte, []int) {
+	return file_protoadmin_request_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *SimulateSummonBannerRequest) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *SimulateSummonBannerRequest) GetBannerId() string {
+	if x != nil {
+		return x.BannerId
+	}
+	return ""
+}
+
 var File_protoadmin_request_proto protoreflect.FileDescriptor
 
 const file_protoadmin_request_proto_rawDesc = "" +
@@ -527,7 +579,10 @@ const file_protoadmin_request_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"U\n" +
 	"\x19QueryRegionMapDataRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1b\n" +
-	"\tregion_id\x18\x02 \x01(\tR\bregionIdB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
+	"\tregion_id\x18\x02 \x01(\tR\bregionId\"W\n" +
+	"\x1bSimulateSummonBannerRequest\x12\x1b\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1b\n" +
+	"\tbanner_id\x18\x02 \x01(\tR\bbannerIdB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
 
 var (
 	file_protoadmin_request_proto_rawDescOnce sync.Once
@@ -541,7 +596,7 @@ func file_protoadmin_request_proto_rawDescGZIP() []byte {
 	return file_protoadmin_request_proto_rawDescData
 }
 
-var file_protoadmin_request_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
+var file_protoadmin_request_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_protoadmin_request_proto_goTypes = []any{
 	(*GrantItemRequest)(nil),             // 0: admin.GrantItemRequest
 	(*CreateBaseCardRequest)(nil),        // 1: admin.CreateBaseCardRequest
@@ -551,18 +606,19 @@ var file_protoadmin_request_proto_goTypes = []any{
 	(*CreateBaseJobCardRequest)(nil),     // 5: admin.CreateBaseJobCardRequest
 	(*CreateAugmentMaterialRequest)(nil), // 6: admin.CreateAugmentMaterialRequest
 	(*QueryRegionMapDataRequest)(nil),    // 7: admin.QueryRegionMapDataRequest
-	nil,                                  // 8: admin.CreateAugmentMaterialRequest.MaterialsEntry
-	(*protomodel.BaseAbilityCard)(nil),   // 9: model.BaseAbilityCard
-	(*protomodel.AbilityCard)(nil),       // 10: model.AbilityCard
-	(*protomodel.Ability)(nil),           // 11: model.Ability
-	(*protogame.ProtoItemValuePair)(nil), // 12: game.ProtoItemValuePair
+	(*SimulateSummonBannerRequest)(nil),  // 8: admin.SimulateSummonBannerRequest
+	nil,                                  // 9: admin.CreateAugmentMaterialRequest.MaterialsEntry
+	(*protomodel.BaseAbilityCard)(nil),   // 10: model.BaseAbilityCard
+	(*protomodel.AbilityCard)(nil),       // 11: model.AbilityCard
+	(*protomodel.Ability)(nil),           // 12: model.Ability
+	(*protogame.ProtoItemValuePair)(nil), // 13: game.ProtoItemValuePair
 }
 var file_protoadmin_request_proto_depIdxs = []int32{
-	9,  // 0: admin.CreateBaseCardRequest.card:type_name -> model.BaseAbilityCard
-	10, // 1: admin.CreateAbilityCardRequest.card:type_name -> model.AbilityCard
-	11, // 2: admin.CreateAbilityRequest.ability:type_name -> model.Ability
-	12, // 3: admin.CreateSkillPanelRequest.cost_items:type_name -> game.ProtoItemValuePair
-	8,  // 4: admin.CreateAugmentMaterialRequest.materials:type_name -> admin.CreateAugmentMaterialRequest.MaterialsEntry
+	10, // 0: admin.CreateBaseCardRequest.card:type_name -> model.BaseAbilityCard
+	11, // 1: admin.CreateAbilityCardRequest.card:type_name -> model.AbilityCard
+	12, // 2: admin.CreateAbilityRequest.ability:type_name -> model.Ability
+	13, // 3: admin.CreateSkillPanelRequest.cost_items:type_name -> game.ProtoItemValuePair
+	9,  // 4: admin.CreateAugmentMaterialRequest.materials:type_name -> admin.CreateAugmentMaterialRequest.MaterialsEntry
 	5,  // [5:5] is the sub-list for method output_type
 	5,  // [5:5] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
@@ -581,7 +637,7 @@ func file_protoadmin_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoadmin_request_proto_rawDesc), len(file_protoadmin_request_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   9,
+			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

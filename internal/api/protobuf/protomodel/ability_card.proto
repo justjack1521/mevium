@@ -58,3 +58,10 @@ message AugmentConfig {
   int32 max_ability_level = 15;
   int32 sale_gold = 16;
 }
+
+message SummonAttemptResult {
+  string reference_id = 1;
+  string reference_source = 2;
+  bool max_boost = 3;
+  bool upgrade = 4;
+}

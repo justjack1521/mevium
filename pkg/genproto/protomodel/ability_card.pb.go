@@ -509,6 +509,74 @@ func (x *AugmentConfig) GetSaleGold() int32 {
 	return 0
 }
 
+type SummonAttemptResult struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	ReferenceId     string                 `protobuf:"bytes,1,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
+	ReferenceSource string                 `protobuf:"bytes,2,opt,name=reference_source,json=referenceSource,proto3" json:"reference_source,omitempty"`
+	MaxBoost        bool                   `protobuf:"varint,3,opt,name=max_boost,json=maxBoost,proto3" json:"max_boost,omitempty"`
+	Upgrade         bool                   `protobuf:"varint,4,opt,name=upgrade,proto3" json:"upgrade,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *SummonAttemptResult) Reset() {
+	*x = SummonAttemptResult{}
+	mi := &file_protomodel_ability_card_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SummonAttemptResult) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SummonAttemptResult) ProtoMessage() {}
+
+func (x *SummonAttemptResult) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_ability_card_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SummonAttemptResult.ProtoReflect.Descriptor instead.
+func (*SummonAttemptResult) Descriptor() ([]byte, []int) {
+	return file_protomodel_ability_card_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *SummonAttemptResult) GetReferenceId() string {
+	if x != nil {
+		return x.ReferenceId
+	}
+	return ""
+}
+
+func (x *SummonAttemptResult) GetReferenceSource() string {
+	if x != nil {
+		return x.ReferenceSource
+	}
+	return ""
+}
+
+func (x *SummonAttemptResult) GetMaxBoost() bool {
+	if x != nil {
+		return x.MaxBoost
+	}
+	return false
+}
+
+func (x *SummonAttemptResult) GetUpgrade() bool {
+	if x != nil {
+		return x.Upgrade
+	}
+	return false
+}
+
 var File_protomodel_ability_card_proto protoreflect.FileDescriptor
 
 const file_protomodel_ability_card_proto_rawDesc = "" +
@@ -567,7 +635,12 @@ const file_protomodel_ability_card_proto_rawDesc = "" +
 	"\fsale_tickets\x18\r \x01(\x05R\vsaleTickets\x12!\n" +
 	"\faugment_cost\x18\x0e \x01(\x05R\vaugmentCost\x12*\n" +
 	"\x11max_ability_level\x18\x0f \x01(\x05R\x0fmaxAbilityLevel\x12\x1b\n" +
-	"\tsale_gold\x18\x10 \x01(\x05R\bsaleGoldB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
+	"\tsale_gold\x18\x10 \x01(\x05R\bsaleGold\"\x9a\x01\n" +
+	"\x13SummonAttemptResult\x12!\n" +
+	"\freference_id\x18\x01 \x01(\tR\vreferenceId\x12)\n" +
+	"\x10reference_source\x18\x02 \x01(\tR\x0freferenceSource\x12\x1b\n" +
+	"\tmax_boost\x18\x03 \x01(\bR\bmaxBoost\x12\x18\n" +
+	"\aupgrade\x18\x04 \x01(\bR\aupgradeB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
 
 var (
 	file_protomodel_ability_card_proto_rawDescOnce sync.Once
@@ -581,12 +654,13 @@ func file_protomodel_ability_card_proto_rawDescGZIP() []byte {
 	return file_protomodel_ability_card_proto_rawDescData
 }
 
-var file_protomodel_ability_card_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_protomodel_ability_card_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_protomodel_ability_card_proto_goTypes = []any{
-	(*AbilityCard)(nil),     // 0: model.AbilityCard
-	(*BaseAbilityCard)(nil), // 1: model.BaseAbilityCard
-	(*Ability)(nil),         // 2: model.Ability
-	(*AugmentConfig)(nil),   // 3: model.AugmentConfig
+	(*AbilityCard)(nil),         // 0: model.AbilityCard
+	(*BaseAbilityCard)(nil),     // 1: model.BaseAbilityCard
+	(*Ability)(nil),             // 2: model.Ability
+	(*AugmentConfig)(nil),       // 3: model.AugmentConfig
+	(*SummonAttemptResult)(nil), // 4: model.SummonAttemptResult
 }
 var file_protomodel_ability_card_proto_depIdxs = []int32{
 	1, // 0: model.AbilityCard.base_ability_card:type_name -> model.BaseAbilityCard
@@ -609,7 +683,7 @@ func file_protomodel_ability_card_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomodel_ability_card_proto_rawDesc), len(file_protomodel_ability_card_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

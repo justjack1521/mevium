@@ -16,4 +16,5 @@ service MeviusAdminService {
   rpc CreateAbilityCard(admin.CreateAbilityCardRequest) returns (admin.CreateAbilityCardResponse) {}
   rpc QueryRegionMapData(admin.QueryRegionMapDataRequest) returns (admin.QueryRegionMapDataResponse) {}
   rpc CreateAbility(admin.CreateAbilityRequest) returns (admin.CreateAbilityResponse) {}
+  rpc SimulateSummonBanner(admin.SimulateSummonBannerRequest) returns (admin.SimulateSummonBannerResponse) {}
 }

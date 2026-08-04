@@ -28,6 +28,7 @@ const (
 	MeviusAdminService_CreateAbilityCard_FullMethodName      = "/service.MeviusAdminService/CreateAbilityCard"
 	MeviusAdminService_QueryRegionMapData_FullMethodName     = "/service.MeviusAdminService/QueryRegionMapData"
 	MeviusAdminService_CreateAbility_FullMethodName          = "/service.MeviusAdminService/CreateAbility"
+	MeviusAdminService_SimulateSummonBanner_FullMethodName   = "/service.MeviusAdminService/SimulateSummonBanner"
 )
 
 // MeviusAdminServiceClient is the client API for MeviusAdminService service.
@@ -42,6 +43,7 @@ type MeviusAdminServiceClient interface {
 	CreateAbilityCard(ctx context.Context, in *protoadmin.CreateAbilityCardRequest, opts ...grpc.CallOption) (*protoadmin.CreateAbilityCardResponse, error)
 	QueryRegionMapData(ctx context.Context, in *protoadmin.QueryRegionMapDataRequest, opts ...grpc.CallOption) (*protoadmin.QueryRegionMapDataResponse, error)
 	CreateAbility(ctx context.Context, in *protoadmin.CreateAbilityRequest, opts ...grpc.CallOption) (*protoadmin.CreateAbilityResponse, error)
+	SimulateSummonBanner(ctx context.Context, in *protoadmin.SimulateSummonBannerRequest, opts ...grpc.CallOption) (*protoadmin.SimulateSummonBannerResponse, error)
 }
 
 type meviusAdminServiceClient struct {
@@ -124,6 +126,15 @@ func (c *meviusAdminServiceClient) CreateAbility(ctx context.Context, in *protoa
 	return out, nil
 }
 
+func (c *meviusAdminServiceClient) SimulateSummonBanner(ctx context.Context, in *protoadmin.SimulateSummonBannerRequest, opts ...grpc.CallOption) (*protoadmin.SimulateSummonBannerResponse, error) {
+	out := new(protoadmin.SimulateSummonBannerResponse)
+	err := c.cc.Invoke(ctx, MeviusAdminService_SimulateSummonBanner_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusAdminServiceServer is the server API for MeviusAdminService service.
 // All implementations should embed UnimplementedMeviusAdminServiceServer
 // for forward compatibility
@@ -136,6 +147,7 @@ type MeviusAdminServiceServer interface {
 	CreateAbilityCard(context.Context, *protoadmin.CreateAbilityCardRequest) (*protoadmin.CreateAbilityCardResponse, error)
 	QueryRegionMapData(context.Context, *protoadmin.QueryRegionMapDataRequest) (*protoadmin.QueryRegionMapDataResponse, error)
 	CreateAbility(context.Context, *protoadmin.CreateAbilityRequest) (*protoadmin.CreateAbilityResponse, error)
+	SimulateSummonBanner(context.Context, *protoadmin.SimulateSummonBannerRequest) (*protoadmin.SimulateSummonBannerResponse, error)
 }
 
 // UnimplementedMeviusAdminServiceServer should be embedded to have forward compatible implementations.
@@ -165,6 +177,9 @@ func (UnimplementedMeviusAdminServiceServer) QueryRegionMapData(context.Context,
 }
 func (UnimplementedMeviusAdminServiceServer) CreateAbility(context.Context, *protoadmin.CreateAbilityRequest) (*protoadmin.CreateAbilityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateAbility not implemented")
+}
+func (UnimplementedMeviusAdminServiceServer) SimulateSummonBanner(context.Context, *protoadmin.SimulateSummonBannerRequest) (*protoadmin.SimulateSummonBannerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SimulateSummonBanner not implemented")
 }
 
 // UnsafeMeviusAdminServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -322,6 +337,24 @@ func _MeviusAdminService_CreateAbility_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusAdminService_SimulateSummonBanner_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protoadmin.SimulateSummonBannerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusAdminServiceServer).SimulateSummonBanner(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusAdminService_SimulateSummonBanner_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusAdminServiceServer).SimulateSummonBanner(ctx, req.(*protoadmin.SimulateSummonBannerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusAdminService_ServiceDesc is the grpc.ServiceDesc for MeviusAdminService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -360,6 +393,10 @@ var MeviusAdminService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateAbility",
 			Handler:    _MeviusAdminService_CreateAbility_Handler,
+		},
+		{
+			MethodName: "SimulateSummonBanner",
+			Handler:    _MeviusAdminService_SimulateSummonBanner_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

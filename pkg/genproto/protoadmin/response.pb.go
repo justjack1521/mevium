@@ -8,6 +8,7 @@ package protoadmin
 
 import (
 	protogame "github.com/justjack1521/mevium/pkg/genproto/protogame"
+	protomodel "github.com/justjack1521/mevium/pkg/genproto/protomodel"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -334,11 +335,55 @@ func (x *QueryRegionMapDataResponse) GetData() *protogame.ProtoRegionMapInstance
 	return nil
 }
 
+type SimulateSummonBannerResponse struct {
+	state         protoimpl.MessageState            `protogen:"open.v1"`
+	Results       []*protomodel.SummonAttemptResult `protobuf:"bytes,1,rep,name=results,proto3" json:"results,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SimulateSummonBannerResponse) Reset() {
+	*x = SimulateSummonBannerResponse{}
+	mi := &file_protoadmin_response_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SimulateSummonBannerResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SimulateSummonBannerResponse) ProtoMessage() {}
+
+func (x *SimulateSummonBannerResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protoadmin_response_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SimulateSummonBannerResponse.ProtoReflect.Descriptor instead.
+func (*SimulateSummonBannerResponse) Descriptor() ([]byte, []int) {
+	return file_protoadmin_response_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *SimulateSummonBannerResponse) GetResults() []*protomodel.SummonAttemptResult {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
 var File_protoadmin_response_proto protoreflect.FileDescriptor
 
 const file_protoadmin_response_proto_rawDesc = "" +
 	"\n" +
-	"\x19protoadmin/response.proto\x12\x05admin\x1a\x14protogame/data.proto\"\x13\n" +
+	"\x19protoadmin/response.proto\x12\x05admin\x1a\x14protogame/data.proto\x1a\x1dprotomodel/ability_card.proto\"\x13\n" +
 	"\x11GrantItemResponse\"4\n" +
 	"\x18CreateSkillPanelResponse\x12\x18\n" +
 	"\acreated\x18\x01 \x01(\bR\acreated\"5\n" +
@@ -349,7 +394,9 @@ const file_protoadmin_response_proto_rawDesc = "" +
 	"\x15CreateAbilityResponse\"\x1b\n" +
 	"\x19CreateAbilityCardResponse\"N\n" +
 	"\x1aQueryRegionMapDataResponse\x120\n" +
-	"\x04data\x18\x01 \x01(\v2\x1c.game.ProtoRegionMapInstanceR\x04dataB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
+	"\x04data\x18\x01 \x01(\v2\x1c.game.ProtoRegionMapInstanceR\x04data\"T\n" +
+	"\x1cSimulateSummonBannerResponse\x124\n" +
+	"\aresults\x18\x01 \x03(\v2\x1a.model.SummonAttemptResultR\aresultsB8Z6github.com/justjack1521/mevium/pkg/genproto/protoadminb\x06proto3"
 
 var (
 	file_protoadmin_response_proto_rawDescOnce sync.Once
@@ -363,7 +410,7 @@ func file_protoadmin_response_proto_rawDescGZIP() []byte {
 	return file_protoadmin_response_proto_rawDescData
 }
 
-var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_protoadmin_response_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_protoadmin_response_proto_goTypes = []any{
 	(*GrantItemResponse)(nil),                // 0: admin.GrantItemResponse
 	(*CreateSkillPanelResponse)(nil),         // 1: admin.CreateSkillPanelResponse
@@ -373,15 +420,18 @@ var file_protoadmin_response_proto_goTypes = []any{
 	(*CreateAbilityResponse)(nil),            // 5: admin.CreateAbilityResponse
 	(*CreateAbilityCardResponse)(nil),        // 6: admin.CreateAbilityCardResponse
 	(*QueryRegionMapDataResponse)(nil),       // 7: admin.QueryRegionMapDataResponse
-	(*protogame.ProtoRegionMapInstance)(nil), // 8: game.ProtoRegionMapInstance
+	(*SimulateSummonBannerResponse)(nil),     // 8: admin.SimulateSummonBannerResponse
+	(*protogame.ProtoRegionMapInstance)(nil), // 9: game.ProtoRegionMapInstance
+	(*protomodel.SummonAttemptResult)(nil),   // 10: model.SummonAttemptResult
 }
 var file_protoadmin_response_proto_depIdxs = []int32{
-	8, // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapInstance
-	1, // [1:1] is the sub-list for method output_type
-	1, // [1:1] is the sub-list for method input_type
-	1, // [1:1] is the sub-list for extension type_name
-	1, // [1:1] is the sub-list for extension extendee
-	0, // [0:1] is the sub-list for field type_name
+	9,  // 0: admin.QueryRegionMapDataResponse.data:type_name -> game.ProtoRegionMapInstance
+	10, // 1: admin.SimulateSummonBannerResponse.results:type_name -> model.SummonAttemptResult
+	2,  // [2:2] is the sub-list for method output_type
+	2,  // [2:2] is the sub-list for method input_type
+	2,  // [2:2] is the sub-list for extension type_name
+	2,  // [2:2] is the sub-list for extension extendee
+	0,  // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_protoadmin_response_proto_init() }
@@ -395,7 +445,7 @@ func file_protoadmin_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoadmin_response_proto_rawDesc), len(file_protoadmin_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   8,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

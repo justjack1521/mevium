@@ -5,6 +5,7 @@ package admin;
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protoadmin";
 
 import "protogame/data.proto";
+import "protomodel/ability_card.proto";
 
 message GrantItemResponse {
 }
@@ -35,4 +36,8 @@ message CreateAbilityCardResponse {
 
 message QueryRegionMapDataResponse {
   game.ProtoRegionMapInstance data = 1;
+}
+
+message SimulateSummonBannerResponse {
+  repeated model.SummonAttemptResult results = 1;
 }

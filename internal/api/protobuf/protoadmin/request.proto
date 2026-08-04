@@ -52,3 +52,8 @@ message QueryRegionMapDataRequest {
   string player_id = 1;
   string region_id = 2;
 }
+
+message SimulateSummonBannerRequest {
+  string player_id = 1;
+  string banner_id = 2;
+}
