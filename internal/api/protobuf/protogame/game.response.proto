@@ -219,6 +219,8 @@ message AbilityCardSummonResponse {
   repeated game.ProtoAbilityCardSummonDrawResult ability_card_results = 1;
   repeated game.ProtoJobCardSummonDrawResult job_card_results = 2;
   repeated ProtoItemValuePair cost_items = 3;
+  int32 pity_counter = 4;
+  int32 draw_counter = 5;
 }
 
 message ExecuteDialogueResponse {

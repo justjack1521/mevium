@@ -126,43 +126,44 @@ namespace Mobius.Proto.Game {
             "aW9uRXZlbnQSVAoVYXVnbWVudF9sZXZlbF9yZXdhcmRzGAQgAygLMjUuZ2Ft",
             "ZS5DbGFpbVJlZ2lvbk1hcFJlc3BvbnNlLkF1Z21lbnRMZXZlbFJld2FyZHNF",
             "bnRyeRo6ChhBdWdtZW50TGV2ZWxSZXdhcmRzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgFOgI4ASLNAQoZQWJpbGl0eUNhcmRTdW1tb25SZXNw",
+            "Eg0KBXZhbHVlGAIgASgFOgI4ASL5AQoZQWJpbGl0eUNhcmRTdW1tb25SZXNw",
             "b25zZRJEChRhYmlsaXR5X2NhcmRfcmVzdWx0cxgBIAMoCzImLmdhbWUuUHJv",
             "dG9BYmlsaXR5Q2FyZFN1bW1vbkRyYXdSZXN1bHQSPAoQam9iX2NhcmRfcmVz",
             "dWx0cxgCIAMoCzIiLmdhbWUuUHJvdG9Kb2JDYXJkU3VtbW9uRHJhd1Jlc3Vs",
             "dBIsCgpjb3N0X2l0ZW1zGAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBh",
-            "aXIiSgoXRXhlY3V0ZURpYWxvZ3VlUmVzcG9uc2USLwoLbm9kZV9ldmVudHMY",
-            "ASADKAsyGi5nYW1lLlByb3RvUmVnaW9uTm9kZUV2ZW50IkAKGkNsYWltSXRl",
-            "bURpc3RpbGxlclJlc3BvbnNlEhAKCHJlY2VpdmVkGAEgASgFEhAKCGRlY190",
-            "aW1lGAIgASgDIlwKF1JlZ2lvbk1hcFVubG9ja1Jlc3BvbnNlEhMKC3VubG9j",
-            "a190aW1lGAEgASgDEiwKCmNvc3RfaXRlbXMYAiADKAsyGC5nYW1lLlByb3Rv",
-            "SXRlbVZhbHVlUGFpciJSChRDbGFpbUR1bmdlb25SZXNwb25zZRIKCgJpZBgB",
-            "IAEoCRIuCgxyZXdhcmRfaXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZh",
-            "bHVlUGFpciJlChtSZWdpb25NYXBOb2RlVW5sb2NrUmVzcG9uc2USFQoNdW5s",
-            "b2NrZWRfbm9kZRgBIAEoCRIvCg1pdGVtc19yZW1vdmVkGAIgAygLMhguZ2Ft",
-            "ZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiVAoZUHVyY2hhc2VDb21wYW5pb25SZXNw",
-            "b25zZRIKCgJpZBgBIAEoCRIrCgljb3N0X2l0ZW0YAiABKAsyGC5nYW1lLlBy",
-            "b3RvSXRlbVZhbHVlUGFpciKiAQoXUHVyY2hhc2VHaWZ0Qm94UmVzcG9uc2US",
-            "LAoIaW5zdGFuY2UYASABKAsyGi5nYW1lLlByb3RvR2lmdEJveEluc3RhbmNl",
-            "EisKCWNvc3RfaXRlbRgCIAEoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWly",
-            "EiwKDGluYm94X2NsYWltcxgDIAMoCzIWLmdhbWUuUHJvdG9NYWlsQm94SXRl",
-            "bSJcChZTdGFtaW5hRGVwb3NpdFJlc3BvbnNlEhcKD3N0YW1pbmFfY3VycmVu",
-            "dBgBIAEoBRITCgtzdGFtaW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2JhbmsY",
-            "AyABKAUiXAoWU3RhbWluYUNvbnZlcnRSZXNwb25zZRIXCg9zdGFtaW5hX2N1",
-            "cnJlbnQYASABKAUSEwoLc3RhbWluYV9kZWMYAiABKAQSFAoMc3RhbWluYV9i",
-            "YW5rGAMgASgFItMBChJBcmVuYVN0YXJ0UmVzcG9uc2USOQoQYXJlbmFfZW50",
-            "cnlfZGF0YRgBIAEoCzIfLmdhbWUuUHJvdG9SZWdpb25BcmVuYUVudHJ5RGF0",
-            "YRIqCgZldmVudHMYAiADKAsyGi5nYW1lLlByb3RvUmVnaW9uTm9kZUV2ZW50",
-            "EhcKD3N0YW1pbmFfY3VycmVudBgDIAEoBRITCgtzdGFtaW5hX2RlYxgEIAEo",
-            "BBIQCghhcmVuYV9pZBgFIAEoCRIWCg5hcmVuYV9lbnRyeV9pZBgGIAEoCSJ1",
-            "ChJBcmVuYUNsYWltUmVzcG9uc2USCgoCaWQYASABKAkSLgoMcmV3YXJkX2l0",
-            "ZW1zGAIgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXISEAoIdW5sb2Nr",
-            "ZWQYAyABKAgSEQoJY29tcGxldGVkGAQgASgIIiQKFkNvbmZpcm1HaWZ0Qm94",
-            "UmVzcG9uc2USCgoCaWQYASABKAkiVAoYQ2xhaW1BY2hpZXZlbWVudFJlc3Bv",
-            "bnNlEgoKAmlkGAEgASgJEiwKDGluYm94X2NsYWltcxgCIAMoCzIWLmdhbWUu",
-            "UHJvdG9NYWlsQm94SXRlbUJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9t",
-            "ZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5H",
-            "YW1lYgZwcm90bzM="));
+            "aXISFAoMcGl0eV9jb3VudGVyGAQgASgFEhQKDGRyYXdfY291bnRlchgFIAEo",
+            "BSJKChdFeGVjdXRlRGlhbG9ndWVSZXNwb25zZRIvCgtub2RlX2V2ZW50cxgB",
+            "IAMoCzIaLmdhbWUuUHJvdG9SZWdpb25Ob2RlRXZlbnQiQAoaQ2xhaW1JdGVt",
+            "RGlzdGlsbGVyUmVzcG9uc2USEAoIcmVjZWl2ZWQYASABKAUSEAoIZGVjX3Rp",
+            "bWUYAiABKAMiXAoXUmVnaW9uTWFwVW5sb2NrUmVzcG9uc2USEwoLdW5sb2Nr",
+            "X3RpbWUYASABKAMSLAoKY29zdF9pdGVtcxgCIAMoCzIYLmdhbWUuUHJvdG9J",
+            "dGVtVmFsdWVQYWlyIlIKFENsYWltRHVuZ2VvblJlc3BvbnNlEgoKAmlkGAEg",
+            "ASgJEi4KDHJld2FyZF9pdGVtcxgCIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFs",
+            "dWVQYWlyImUKG1JlZ2lvbk1hcE5vZGVVbmxvY2tSZXNwb25zZRIVCg11bmxv",
+            "Y2tlZF9ub2RlGAEgASgJEi8KDWl0ZW1zX3JlbW92ZWQYAiADKAsyGC5nYW1l",
+            "LlByb3RvSXRlbVZhbHVlUGFpciJUChlQdXJjaGFzZUNvbXBhbmlvblJlc3Bv",
+            "bnNlEgoKAmlkGAEgASgJEisKCWNvc3RfaXRlbRgCIAEoCzIYLmdhbWUuUHJv",
+            "dG9JdGVtVmFsdWVQYWlyIqIBChdQdXJjaGFzZUdpZnRCb3hSZXNwb25zZRIs",
+            "CghpbnN0YW5jZRgBIAEoCzIaLmdhbWUuUHJvdG9HaWZ0Qm94SW5zdGFuY2US",
+            "KwoJY29zdF9pdGVtGAIgASgLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIS",
+            "LAoMaW5ib3hfY2xhaW1zGAMgAygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVt",
+            "IlwKFlN0YW1pbmFEZXBvc2l0UmVzcG9uc2USFwoPc3RhbWluYV9jdXJyZW50",
+            "GAEgASgFEhMKC3N0YW1pbmFfZGVjGAIgASgEEhQKDHN0YW1pbmFfYmFuaxgD",
+            "IAEoBSJcChZTdGFtaW5hQ29udmVydFJlc3BvbnNlEhcKD3N0YW1pbmFfY3Vy",
+            "cmVudBgBIAEoBRITCgtzdGFtaW5hX2RlYxgCIAEoBBIUCgxzdGFtaW5hX2Jh",
+            "bmsYAyABKAUi0wEKEkFyZW5hU3RhcnRSZXNwb25zZRI5ChBhcmVuYV9lbnRy",
+            "eV9kYXRhGAEgASgLMh8uZ2FtZS5Qcm90b1JlZ2lvbkFyZW5hRW50cnlEYXRh",
+            "EioKBmV2ZW50cxgCIAMoCzIaLmdhbWUuUHJvdG9SZWdpb25Ob2RlRXZlbnQS",
+            "FwoPc3RhbWluYV9jdXJyZW50GAMgASgFEhMKC3N0YW1pbmFfZGVjGAQgASgE",
+            "EhAKCGFyZW5hX2lkGAUgASgJEhYKDmFyZW5hX2VudHJ5X2lkGAYgASgJInUK",
+            "EkFyZW5hQ2xhaW1SZXNwb25zZRIKCgJpZBgBIAEoCRIuCgxyZXdhcmRfaXRl",
+            "bXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpchIQCgh1bmxvY2tl",
+            "ZBgDIAEoCBIRCgljb21wbGV0ZWQYBCABKAgiJAoWQ29uZmlybUdpZnRCb3hS",
+            "ZXNwb25zZRIKCgJpZBgBIAEoCSJUChhDbGFpbUFjaGlldmVtZW50UmVzcG9u",
+            "c2USCgoCaWQYASABKAkSLAoMaW5ib3hfY2xhaW1zGAIgAygLMhYuZ2FtZS5Q",
+            "cm90b01haWxCb3hJdGVtQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21l",
+            "dml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdh",
+            "bWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -200,7 +201,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ItemShopCardPurchaseResponse), global::Mobius.Proto.Game.ItemShopCardPurchaseResponse.Parser, new[]{ "AbilityCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityShopPurchaseResponse), global::Mobius.Proto.Game.AbilityShopPurchaseResponse.Parser, new[]{ "AbilityCardInstance", "CostItem" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimRegionMapResponse), global::Mobius.Proto.Game.ClaimRegionMapResponse.Parser, new[]{ "RegionMapId", "RegionEvents", "AugmentLevelRewards" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonResponse), global::Mobius.Proto.Game.AbilityCardSummonResponse.Parser, new[]{ "AbilityCardResults", "JobCardResults", "CostItems" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.AbilityCardSummonResponse), global::Mobius.Proto.Game.AbilityCardSummonResponse.Parser, new[]{ "AbilityCardResults", "JobCardResults", "CostItems", "PityCounter", "DrawCounter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ExecuteDialogueResponse), global::Mobius.Proto.Game.ExecuteDialogueResponse.Parser, new[]{ "NodeEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimItemDistillerResponse), global::Mobius.Proto.Game.ClaimItemDistillerResponse.Parser, new[]{ "Received", "DecTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.RegionMapUnlockResponse), global::Mobius.Proto.Game.RegionMapUnlockResponse.Parser, new[]{ "UnlockTime", "CostItems" }, null, null, null, null),
@@ -8298,6 +8299,8 @@ namespace Mobius.Proto.Game {
       abilityCardResults_ = other.abilityCardResults_.Clone();
       jobCardResults_ = other.jobCardResults_.Clone();
       costItems_ = other.costItems_.Clone();
+      pityCounter_ = other.pityCounter_;
+      drawCounter_ = other.drawCounter_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8336,6 +8339,28 @@ namespace Mobius.Proto.Game {
       get { return costItems_; }
     }
 
+    /// <summary>Field number for the "pity_counter" field.</summary>
+    public const int PityCounterFieldNumber = 4;
+    private int pityCounter_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PityCounter {
+      get { return pityCounter_; }
+      set {
+        pityCounter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "draw_counter" field.</summary>
+    public const int DrawCounterFieldNumber = 5;
+    private int drawCounter_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DrawCounter {
+      get { return drawCounter_; }
+      set {
+        drawCounter_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AbilityCardSummonResponse);
@@ -8352,6 +8377,8 @@ namespace Mobius.Proto.Game {
       if(!abilityCardResults_.Equals(other.abilityCardResults_)) return false;
       if(!jobCardResults_.Equals(other.jobCardResults_)) return false;
       if(!costItems_.Equals(other.costItems_)) return false;
+      if (PityCounter != other.PityCounter) return false;
+      if (DrawCounter != other.DrawCounter) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8361,6 +8388,8 @@ namespace Mobius.Proto.Game {
       hash ^= abilityCardResults_.GetHashCode();
       hash ^= jobCardResults_.GetHashCode();
       hash ^= costItems_.GetHashCode();
+      if (PityCounter != 0) hash ^= PityCounter.GetHashCode();
+      if (DrawCounter != 0) hash ^= DrawCounter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8380,6 +8409,14 @@ namespace Mobius.Proto.Game {
       abilityCardResults_.WriteTo(output, _repeated_abilityCardResults_codec);
       jobCardResults_.WriteTo(output, _repeated_jobCardResults_codec);
       costItems_.WriteTo(output, _repeated_costItems_codec);
+      if (PityCounter != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PityCounter);
+      }
+      if (DrawCounter != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DrawCounter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8392,6 +8429,14 @@ namespace Mobius.Proto.Game {
       abilityCardResults_.WriteTo(ref output, _repeated_abilityCardResults_codec);
       jobCardResults_.WriteTo(ref output, _repeated_jobCardResults_codec);
       costItems_.WriteTo(ref output, _repeated_costItems_codec);
+      if (PityCounter != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PityCounter);
+      }
+      if (DrawCounter != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DrawCounter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8404,6 +8449,12 @@ namespace Mobius.Proto.Game {
       size += abilityCardResults_.CalculateSize(_repeated_abilityCardResults_codec);
       size += jobCardResults_.CalculateSize(_repeated_jobCardResults_codec);
       size += costItems_.CalculateSize(_repeated_costItems_codec);
+      if (PityCounter != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PityCounter);
+      }
+      if (DrawCounter != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DrawCounter);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8418,6 +8469,12 @@ namespace Mobius.Proto.Game {
       abilityCardResults_.Add(other.abilityCardResults_);
       jobCardResults_.Add(other.jobCardResults_);
       costItems_.Add(other.costItems_);
+      if (other.PityCounter != 0) {
+        PityCounter = other.PityCounter;
+      }
+      if (other.DrawCounter != 0) {
+        DrawCounter = other.DrawCounter;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8444,6 +8501,14 @@ namespace Mobius.Proto.Game {
             costItems_.AddEntriesFrom(input, _repeated_costItems_codec);
             break;
           }
+          case 32: {
+            PityCounter = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            DrawCounter = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -8468,6 +8533,14 @@ namespace Mobius.Proto.Game {
           }
           case 26: {
             costItems_.AddEntriesFrom(ref input, _repeated_costItems_codec);
+            break;
+          }
+          case 32: {
+            PityCounter = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            DrawCounter = input.ReadInt32();
             break;
           }
         }

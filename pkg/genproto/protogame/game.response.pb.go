@@ -2035,6 +2035,8 @@ type AbilityCardSummonResponse struct {
 	AbilityCardResults []*ProtoAbilityCardSummonDrawResult `protobuf:"bytes,1,rep,name=ability_card_results,json=abilityCardResults,proto3" json:"ability_card_results,omitempty"`
 	JobCardResults     []*ProtoJobCardSummonDrawResult     `protobuf:"bytes,2,rep,name=job_card_results,json=jobCardResults,proto3" json:"job_card_results,omitempty"`
 	CostItems          []*ProtoItemValuePair               `protobuf:"bytes,3,rep,name=cost_items,json=costItems,proto3" json:"cost_items,omitempty"`
+	PityCounter        int32                               `protobuf:"varint,4,opt,name=pity_counter,json=pityCounter,proto3" json:"pity_counter,omitempty"`
+	DrawCounter        int32                               `protobuf:"varint,5,opt,name=draw_counter,json=drawCounter,proto3" json:"draw_counter,omitempty"`
 	unknownFields      protoimpl.UnknownFields
 	sizeCache          protoimpl.SizeCache
 }
@@ -2088,6 +2090,20 @@ func (x *AbilityCardSummonResponse) GetCostItems() []*ProtoItemValuePair {
 		return x.CostItems
 	}
 	return nil
+}
+
+func (x *AbilityCardSummonResponse) GetPityCounter() int32 {
+	if x != nil {
+		return x.PityCounter
+	}
+	return 0
+}
+
+func (x *AbilityCardSummonResponse) GetDrawCounter() int32 {
+	if x != nil {
+		return x.DrawCounter
+	}
+	return 0
 }
 
 type ExecuteDialogueResponse struct {
@@ -2988,12 +3004,14 @@ const file_protogame_game_response_proto_rawDesc = "" +
 	"\x15augment_level_rewards\x18\x04 \x03(\v25.game.ClaimRegionMapResponse.AugmentLevelRewardsEntryR\x13augmentLevelRewards\x1aF\n" +
 	"\x18AugmentLevelRewardsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\xfc\x01\n" +
+	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\xc2\x02\n" +
 	"\x19AbilityCardSummonResponse\x12X\n" +
 	"\x14ability_card_results\x18\x01 \x03(\v2&.game.ProtoAbilityCardSummonDrawResultR\x12abilityCardResults\x12L\n" +
 	"\x10job_card_results\x18\x02 \x03(\v2\".game.ProtoJobCardSummonDrawResultR\x0ejobCardResults\x127\n" +
 	"\n" +
-	"cost_items\x18\x03 \x03(\v2\x18.game.ProtoItemValuePairR\tcostItems\"V\n" +
+	"cost_items\x18\x03 \x03(\v2\x18.game.ProtoItemValuePairR\tcostItems\x12!\n" +
+	"\fpity_counter\x18\x04 \x01(\x05R\vpityCounter\x12!\n" +
+	"\fdraw_counter\x18\x05 \x01(\x05R\vdrawCounter\"V\n" +
 	"\x17ExecuteDialogueResponse\x12;\n" +
 	"\vnode_events\x18\x01 \x03(\v2\x1a.game.ProtoRegionNodeEventR\n" +
 	"nodeEvents\"S\n" +
