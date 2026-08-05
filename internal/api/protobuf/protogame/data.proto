@@ -34,6 +34,8 @@ message ProtoGameData {
   game.ProtoBattleData single_play_battle_data = 10;
   game.ProtoBattleData multi_play_battle_data = 11;
 
+  game.ProtoSummonData summon_data = 12;
+
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 20;
   map<string, bool> player_progress_data = 100;
   repeated ProtoAchievementData player_achievement_data = 110;
@@ -740,4 +742,23 @@ message ProtoTowerInstance {
   uint64 score = 4;
   uint64 highest_score = 5;
   int64 updated = 99;
+}
+
+message ProtoSummonData {
+  repeated ProtoSummonBannerData banners = 1;
+}
+
+message ProtoSummonBannerData {
+  string id =1;
+  ProtoSummonBannerSchedule schedule = 2;
+  bool upcoming = 3;
+  repeated string batches = 4;
+  int32 pity_counter = 5;
+  int32 draw_counter = 6;
+}
+
+message ProtoSummonBannerSchedule {
+  string id = 1;
+  int64 start_date = 2;
+  int64 end_date = 3;
 }
