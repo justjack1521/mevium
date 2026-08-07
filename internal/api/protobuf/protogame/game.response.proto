@@ -23,6 +23,8 @@ message BattleCompleteResponse {
 
   int32 current_stamina = 12;
 
+  map<string, float> seed_multipliers = 13;
+
 }
 
 message BattleReviveResponse {
