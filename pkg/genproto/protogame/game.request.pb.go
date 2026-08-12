@@ -388,6 +388,8 @@ type BattleStartRequest struct {
 	RentalCard     *protoidentity.ProtoAbilityCardIdentity `protobuf:"bytes,6,opt,name=rental_card,json=rentalCard,proto3" json:"rental_card,omitempty"`
 	ChargeUltimate bool                                    `protobuf:"varint,7,opt,name=charge_ultimate,json=chargeUltimate,proto3" json:"charge_ultimate,omitempty"`
 	Warp           bool                                    `protobuf:"varint,8,opt,name=warp,proto3" json:"warp,omitempty"`
+	QuestId        string                                  `protobuf:"bytes,9,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
+	PlayMode       string                                  `protobuf:"bytes,10,opt,name=play_mode,json=playMode,proto3" json:"play_mode,omitempty"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -469,6 +471,20 @@ func (x *BattleStartRequest) GetWarp() bool {
 		return x.Warp
 	}
 	return false
+}
+
+func (x *BattleStartRequest) GetQuestId() string {
+	if x != nil {
+		return x.QuestId
+	}
+	return ""
+}
+
+func (x *BattleStartRequest) GetPlayMode() string {
+	if x != nil {
+		return x.PlayMode
+	}
+	return ""
 }
 
 type CardAugmentRequest struct {
@@ -2876,7 +2892,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x0fultimate_charge\x18\x03 \x01(\x04R\x0eultimateCharge\x12-\n" +
 	"\x13auto_sell_new_cards\x18\x04 \x01(\bR\x10autoSellNewCards\x127\n" +
 	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\"\x15\n" +
-	"\x13BattleReviveRequest\"\x92\x02\n" +
+	"\x13BattleReviveRequest\"\xca\x02\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
 	"\n" +
@@ -2886,7 +2902,10 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\vrental_card\x18\x06 \x01(\v2\".identity.ProtoAbilityCardIdentityR\n" +
 	"rentalCard\x12'\n" +
 	"\x0fcharge_ultimate\x18\a \x01(\bR\x0echargeUltimate\x12\x12\n" +
-	"\x04warp\x18\b \x01(\bR\x04warp\"\x98\x01\n" +
+	"\x04warp\x18\b \x01(\bR\x04warp\x12\x19\n" +
+	"\bquest_id\x18\t \x01(\tR\aquestId\x12\x1b\n" +
+	"\tplay_mode\x18\n" +
+	" \x01(\tR\bplayMode\"\x98\x01\n" +
 	"\x12CardAugmentRequest\x12*\n" +
 	"\x11target_card_index\x18\x01 \x01(\x05R\x0ftargetCardIndex\x12/\n" +
 	"\x13inventory_materials\x18\x02 \x03(\x05R\x12inventoryMaterials\x12%\n" +

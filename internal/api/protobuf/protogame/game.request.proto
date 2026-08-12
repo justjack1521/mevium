@@ -89,6 +89,8 @@ message BattleStartRequest {
   identity.ProtoAbilityCardIdentity rental_card = 6;
   bool charge_ultimate = 7;
   bool warp = 8;
+  string quest_id = 9;
+  string play_mode = 10;
 }
 
 message CardAugmentRequest {
