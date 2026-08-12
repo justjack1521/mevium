@@ -2760,12 +2760,13 @@ func (x *ProtoItemValuePair) GetValue() int32 {
 }
 
 type ProtoJobCardData struct {
-	state         protoimpl.MessageState            `protogen:"open.v1"`
-	Jobs          *ProtoJobInventory                `protobuf:"bytes,1,opt,name=jobs,proto3" json:"jobs,omitempty"`
-	Weapons       *ProtoWeaponInventory             `protobuf:"bytes,2,opt,name=weapons,proto3" json:"weapons,omitempty"`
-	SkillPanels   map[string]*ProtoSkillPanelGroups `protobuf:"bytes,3,rep,name=skill_panels,json=skillPanels,proto3" json:"skill_panels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state                protoimpl.MessageState            `protogen:"open.v1"`
+	Jobs                 *ProtoJobInventory                `protobuf:"bytes,1,opt,name=jobs,proto3" json:"jobs,omitempty"`
+	Weapons              *ProtoWeaponInventory             `protobuf:"bytes,2,opt,name=weapons,proto3" json:"weapons,omitempty"`
+	SkillPanels          map[string]*ProtoSkillPanelGroups `protobuf:"bytes,3,rep,name=skill_panels,json=skillPanels,proto3" json:"skill_panels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	CharacterEquippedJob map[string]string                 `protobuf:"bytes,4,rep,name=character_equipped_job,json=characterEquippedJob,proto3" json:"character_equipped_job,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	unknownFields        protoimpl.UnknownFields
+	sizeCache            protoimpl.SizeCache
 }
 
 func (x *ProtoJobCardData) Reset() {
@@ -2815,6 +2816,13 @@ func (x *ProtoJobCardData) GetWeapons() *ProtoWeaponInventory {
 func (x *ProtoJobCardData) GetSkillPanels() map[string]*ProtoSkillPanelGroups {
 	if x != nil {
 		return x.SkillPanels
+	}
+	return nil
+}
+
+func (x *ProtoJobCardData) GetCharacterEquippedJob() map[string]string {
+	if x != nil {
+		return x.CharacterEquippedJob
 	}
 	return nil
 }
@@ -2882,6 +2890,7 @@ type ProtoJobCardInstance struct {
 	UltimateBoost     int32                  `protobuf:"varint,18,opt,name=ultimate_boost,json=ultimateBoost,proto3" json:"ultimate_boost,omitempty"`
 	AutoAbilities     map[string]int32       `protobuf:"bytes,19,rep,name=auto_abilities,json=autoAbilities,proto3" json:"auto_abilities,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	CrownLevel        int32                  `protobuf:"varint,20,opt,name=crown_level,json=crownLevel,proto3" json:"crown_level,omitempty"`
+	LastSubJobId      string                 `protobuf:"bytes,21,opt,name=last_sub_job_id,json=lastSubJobId,proto3" json:"last_sub_job_id,omitempty"`
 	unknownFields     protoimpl.UnknownFields
 	sizeCache         protoimpl.SizeCache
 }
@@ -3033,6 +3042,13 @@ func (x *ProtoJobCardInstance) GetCrownLevel() int32 {
 		return x.CrownLevel
 	}
 	return 0
+}
+
+func (x *ProtoJobCardInstance) GetLastSubJobId() string {
+	if x != nil {
+		return x.LastSubJobId
+	}
+	return ""
 }
 
 type ProtoLastBattleResults struct {
@@ -3610,6 +3626,8 @@ type ProtoPlayerDeck struct {
 	DeckIndex           int32                  `protobuf:"varint,7,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
 	JobCardSubIndex     int32                  `protobuf:"varint,8,opt,name=job_card_sub_index,json=jobCardSubIndex,proto3" json:"job_card_sub_index,omitempty"`
 	SubJobCardSubIndex  int32                  `protobuf:"varint,9,opt,name=sub_job_card_sub_index,json=subJobCardSubIndex,proto3" json:"sub_job_card_sub_index,omitempty"`
+	SubJobCardId        string                 `protobuf:"bytes,10,opt,name=sub_job_card_id,json=subJobCardId,proto3" json:"sub_job_card_id,omitempty"`
+	SubJobCardSubId     string                 `protobuf:"bytes,11,opt,name=sub_job_card_sub_id,json=subJobCardSubId,proto3" json:"sub_job_card_sub_id,omitempty"`
 	unknownFields       protoimpl.UnknownFields
 	sizeCache           protoimpl.SizeCache
 }
@@ -3705,6 +3723,20 @@ func (x *ProtoPlayerDeck) GetSubJobCardSubIndex() int32 {
 		return x.SubJobCardSubIndex
 	}
 	return 0
+}
+
+func (x *ProtoPlayerDeck) GetSubJobCardId() string {
+	if x != nil {
+		return x.SubJobCardId
+	}
+	return ""
+}
+
+func (x *ProtoPlayerDeck) GetSubJobCardSubId() string {
+	if x != nil {
+		return x.SubJobCardSubId
+	}
+	return ""
 }
 
 type ProtoPlayerDeckSlot struct {
@@ -7106,16 +7138,20 @@ const file_protogame_data_proto_rawDesc = "" +
 	"created_at\x18\x04 \x01(\x03R\tcreatedAt\"C\n" +
 	"\x12ProtoItemValuePair\x12\x17\n" +
 	"\aitem_id\x18\x01 \x01(\tR\x06itemId\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x05R\x05value\"\x9e\x02\n" +
+	"\x05value\x18\x02 \x01(\x05R\x05value\"\xcf\x03\n" +
 	"\x10ProtoJobCardData\x12+\n" +
 	"\x04jobs\x18\x01 \x01(\v2\x17.game.ProtoJobInventoryR\x04jobs\x124\n" +
 	"\aweapons\x18\x02 \x01(\v2\x1a.game.ProtoWeaponInventoryR\aweapons\x12J\n" +
-	"\fskill_panels\x18\x03 \x03(\v2'.game.ProtoJobCardData.SkillPanelsEntryR\vskillPanels\x1a[\n" +
+	"\fskill_panels\x18\x03 \x03(\v2'.game.ProtoJobCardData.SkillPanelsEntryR\vskillPanels\x12f\n" +
+	"\x16character_equipped_job\x18\x04 \x03(\v20.game.ProtoJobCardData.CharacterEquippedJobEntryR\x14characterEquippedJob\x1a[\n" +
 	"\x10SkillPanelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x121\n" +
-	"\x05value\x18\x02 \x01(\v2\x1b.game.ProtoSkillPanelGroupsR\x05value:\x028\x01\"J\n" +
+	"\x05value\x18\x02 \x01(\v2\x1b.game.ProtoSkillPanelGroupsR\x05value:\x028\x01\x1aG\n" +
+	"\x19CharacterEquippedJobEntry\x12\x10\n" +
+	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\"J\n" +
 	"\x11ProtoJobInventory\x125\n" +
-	"\bjob_list\x18\x01 \x03(\v2\x1a.game.ProtoJobCardInstanceR\ajobList\"\xa3\x06\n" +
+	"\bjob_list\x18\x01 \x03(\v2\x1a.game.ProtoJobCardInstanceR\ajobList\"\xca\x06\n" +
 	"\x14ProtoJobCardInstance\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12$\n" +
 	"\x0esub_job_unlock\x18\x02 \x01(\x05R\fsubJobUnlock\x12(\n" +
@@ -7136,7 +7172,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x0eultimate_boost\x18\x12 \x01(\x05R\rultimateBoost\x12T\n" +
 	"\x0eauto_abilities\x18\x13 \x03(\v2-.game.ProtoJobCardInstance.AutoAbilitiesEntryR\rautoAbilities\x12\x1f\n" +
 	"\vcrown_level\x18\x14 \x01(\x05R\n" +
-	"crownLevel\x1a@\n" +
+	"crownLevel\x12%\n" +
+	"\x0flast_sub_job_id\x18\x15 \x01(\tR\flastSubJobId\x1a@\n" +
 	"\x12AutoAbilitiesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01\"\x82\n" +
@@ -7195,7 +7232,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\tconfirmed\x18\a \x01(\bR\tconfirmed\"v\n" +
 	"\x19ProtoPlayerDeckCollection\x12,\n" +
 	"\x12current_deck_index\x18\x01 \x01(\x05R\x10currentDeckIndex\x12+\n" +
-	"\x05decks\x18\x02 \x03(\v2\x15.game.ProtoPlayerDeckR\x05decks\"\xca\x03\n" +
+	"\x05decks\x18\x02 \x03(\v2\x15.game.ProtoPlayerDeckR\x05decks\"\x9f\x04\n" +
 	"\x0fProtoPlayerDeck\x12$\n" +
 	"\x0ejob_card_index\x18\x01 \x01(\x05R\fjobCardIndex\x12+\n" +
 	"\x12sub_job_card_index\x18\x02 \x01(\x05R\x0fsubJobCardIndex\x12G\n" +
@@ -7206,7 +7243,10 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\n" +
 	"deck_index\x18\a \x01(\x05R\tdeckIndex\x12+\n" +
 	"\x12job_card_sub_index\x18\b \x01(\x05R\x0fjobCardSubIndex\x122\n" +
-	"\x16sub_job_card_sub_index\x18\t \x01(\x05R\x12subJobCardSubIndex\"\\\n" +
+	"\x16sub_job_card_sub_index\x18\t \x01(\x05R\x12subJobCardSubIndex\x12%\n" +
+	"\x0fsub_job_card_id\x18\n" +
+	" \x01(\tR\fsubJobCardId\x12,\n" +
+	"\x13sub_job_card_sub_id\x18\v \x01(\tR\x0fsubJobCardSubId\"\\\n" +
 	"\x13ProtoPlayerDeckSlot\x12&\n" +
 	"\x0fability_card_id\x18\x01 \x01(\tR\rabilityCardId\x12\x1d\n" +
 	"\n" +
@@ -7509,7 +7549,7 @@ func file_protogame_data_proto_rawDescGZIP() []byte {
 }
 
 var file_protogame_data_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protogame_data_proto_msgTypes = make([]protoimpl.MessageInfo, 102)
+var file_protogame_data_proto_msgTypes = make([]protoimpl.MessageInfo, 103)
 var file_protogame_data_proto_goTypes = []any{
 	(ReferenceSource)(0),                           // 0: game.ReferenceSource
 	(*ProtoGameData)(nil),                          // 1: game.ProtoGameData
@@ -7609,12 +7649,13 @@ var file_protogame_data_proto_goTypes = []any{
 	nil,                                            // 95: game.ProtoLoginCampaignInstance.ClaimedEntry
 	nil,                                            // 96: game.ProtoItemData.LimitDataEntry
 	nil,                                            // 97: game.ProtoJobCardData.SkillPanelsEntry
-	nil,                                            // 98: game.ProtoJobCardInstance.AutoAbilitiesEntry
-	nil,                                            // 99: game.ProtoLastBattleResults.RegionMissionProgressEntry
-	nil,                                            // 100: game.ProtoLastBattleResults.WanderingFiendMovementsEntry
-	nil,                                            // 101: game.ProtoRegionNodeData.FlagsEntry
-	nil,                                            // 102: game.ProtoWeaponInstance.AutoAbilitiesEntry
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 103: identity.ProtoAbilityCardIdentity
+	nil,                                            // 98: game.ProtoJobCardData.CharacterEquippedJobEntry
+	nil,                                            // 99: game.ProtoJobCardInstance.AutoAbilitiesEntry
+	nil,                                            // 100: game.ProtoLastBattleResults.RegionMissionProgressEntry
+	nil,                                            // 101: game.ProtoLastBattleResults.WanderingFiendMovementsEntry
+	nil,                                            // 102: game.ProtoRegionNodeData.FlagsEntry
+	nil,                                            // 103: game.ProtoWeaponInstance.AutoAbilitiesEntry
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 104: identity.ProtoAbilityCardIdentity
 }
 var file_protogame_data_proto_depIdxs = []int32{
 	43,  // 0: game.ProtoGameData.mailbox:type_name -> game.ProtoMailBox
@@ -7647,7 +7688,7 @@ var file_protogame_data_proto_depIdxs = []int32{
 	19,  // 27: game.ProtoBattleStartData.card_drop_table:type_name -> game.BattleCardDrop
 	12,  // 28: game.ProtoBattleStartData.progress_data:type_name -> game.ProtoBattleProgressData
 	14,  // 29: game.ProtoBattleStartData.card_progress_data:type_name -> game.ProtoCardProgressData
-	103, // 30: game.ProtoBattleStartData.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	104, // 30: game.ProtoBattleStartData.rental_card:type_name -> identity.ProtoAbilityCardIdentity
 	11,  // 31: game.ProtoBattleStartData.fiend_spawns:type_name -> game.ProtoBattleFiendSpawn
 	83,  // 32: game.ProtoBattleStartData.selection_results:type_name -> game.ProtoBattleSelection
 	15,  // 33: game.ProtoMissionInstance.mission:type_name -> game.ProtoMission
@@ -7669,74 +7710,75 @@ var file_protogame_data_proto_depIdxs = []int32{
 	37,  // 49: game.ProtoJobCardData.jobs:type_name -> game.ProtoJobInventory
 	69,  // 50: game.ProtoJobCardData.weapons:type_name -> game.ProtoWeaponInventory
 	97,  // 51: game.ProtoJobCardData.skill_panels:type_name -> game.ProtoJobCardData.SkillPanelsEntry
-	38,  // 52: game.ProtoJobInventory.job_list:type_name -> game.ProtoJobCardInstance
-	66,  // 53: game.ProtoJobCardInstance.skill_panel_unlocks:type_name -> game.ProtoSkillPanelGroups
-	98,  // 54: game.ProtoJobCardInstance.auto_abilities:type_name -> game.ProtoJobCardInstance.AutoAbilitiesEntry
-	12,  // 55: game.ProtoLastBattleResults.progress_data:type_name -> game.ProtoBattleProgressData
-	14,  // 56: game.ProtoLastBattleResults.card_progress_data:type_name -> game.ProtoCardProgressData
-	40,  // 57: game.ProtoLastBattleResults.item_rewards:type_name -> game.TaggedBattleItemReward
-	41,  // 58: game.ProtoLastBattleResults.card_rewards:type_name -> game.TaggedBattleCardReward
-	42,  // 59: game.ProtoLastBattleResults.companion_rewards:type_name -> game.TaggedBattleCompanionReward
-	63,  // 60: game.ProtoLastBattleResults.pending_events:type_name -> game.ProtoRegionNodeEvent
-	99,  // 61: game.ProtoLastBattleResults.region_mission_progress:type_name -> game.ProtoLastBattleResults.RegionMissionProgressEntry
-	100, // 62: game.ProtoLastBattleResults.wandering_fiend_movements:type_name -> game.ProtoLastBattleResults.WanderingFiendMovementsEntry
-	13,  // 63: game.ProtoLastBattleResults.arena_progress_data:type_name -> game.ArenaProgressData
-	44,  // 64: game.ProtoMailBox.items:type_name -> game.ProtoMailBoxItem
-	0,   // 65: game.ProtoMailBoxItem.source:type_name -> game.ReferenceSource
-	46,  // 66: game.ProtoPlayerDeckCollection.decks:type_name -> game.ProtoPlayerDeck
-	47,  // 67: game.ProtoPlayerDeck.ability_card_slots:type_name -> game.ProtoPlayerDeckSlot
-	47,  // 68: game.ProtoPlayerDeck.sub_ability_card_slots:type_name -> game.ProtoPlayerDeckSlot
-	52,  // 69: game.ProtoRegionMapData.region_maps:type_name -> game.ProtoRegionMapInstance
-	51,  // 70: game.ProtoRegionHeaderData.headers:type_name -> game.ProtoRegionMapHeader
-	60,  // 71: game.ProtoRegionMapInstance.node_data:type_name -> game.ProtoRegionNodeData
-	61,  // 72: game.ProtoRegionMapInstance.lock_data:type_name -> game.ProtoRegionLockData
-	63,  // 73: game.ProtoRegionMapInstance.pending_events:type_name -> game.ProtoRegionNodeEvent
-	63,  // 74: game.ProtoRegionMapInstance.persisted_events:type_name -> game.ProtoRegionNodeEvent
-	62,  // 75: game.ProtoRegionMapInstance.pending_region_events:type_name -> game.ProtoRegionEvent
-	62,  // 76: game.ProtoRegionMapInstance.persisted_region_events:type_name -> game.ProtoRegionEvent
-	65,  // 77: game.ProtoRegionMapInstance.mission_data:type_name -> game.ProtoRegionMissionInstance
-	53,  // 78: game.ProtoRegionMapInstance.progress:type_name -> game.ProtoRegionProgressData
-	54,  // 79: game.ProtoRegionMapInstance.wandering_fiends:type_name -> game.ProtoWanderingFiendData
-	56,  // 80: game.ProtoRegionProgressData.dialogues:type_name -> game.ProtoRegionDialogueData
-	57,  // 81: game.ProtoRegionProgressData.dungeons:type_name -> game.ProtoRegionDungeonData
-	58,  // 82: game.ProtoRegionProgressData.arenas:type_name -> game.ProtoRegionArenaData
-	55,  // 83: game.ProtoWanderingFiendData.fiends:type_name -> game.ProtoWanderingFiendInstance
-	59,  // 84: game.ProtoRegionArenaData.entries:type_name -> game.ProtoRegionArenaEntryData
-	101, // 85: game.ProtoRegionNodeData.flags:type_name -> game.ProtoRegionNodeData.FlagsEntry
-	16,  // 86: game.ProtoRegionMissionInstance.instance:type_name -> game.ProtoMissionInstance
-	67,  // 87: game.ProtoSkillPanelGroups.panel_pages:type_name -> game.ProtoSkillPanelPage
-	68,  // 88: game.ProtoSkillPanelPage.skill_panels:type_name -> game.ProtoSkillPanel
-	70,  // 89: game.ProtoWeaponInventory.weapon_list:type_name -> game.ProtoWeaponInstance
-	102, // 90: game.ProtoWeaponInstance.auto_abilities:type_name -> game.ProtoWeaponInstance.AutoAbilitiesEntry
-	73,  // 91: game.ProtoBattleStatistics.element_orb_draws:type_name -> game.ElementUsageStatistic
-	73,  // 92: game.ProtoBattleStatistics.element_orb_usage:type_name -> game.ElementUsageStatistic
-	74,  // 93: game.ProtoBattleStatistics.enemy_defeats:type_name -> game.ProtoEnemyDeathStatistic
-	72,  // 94: game.ProtoBattleStatistics.ability_card_usage:type_name -> game.AbilityCardUsageStatistic
-	8,   // 95: game.ProtoAbilityCardSummonDrawResult.instance:type_name -> game.ProtoAbilityCardInstance
-	38,  // 96: game.ProtoJobCardSummonDrawResult.instance:type_name -> game.ProtoJobCardInstance
-	66,  // 97: game.ProtoJobCardSummonDrawResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
-	78,  // 98: game.ProtoMailboxClaimResult.item:type_name -> game.ProtoItemClaimResult
-	79,  // 99: game.ProtoMailboxClaimResult.ability_card:type_name -> game.ProtoAbilityCardClaimResult
-	80,  // 100: game.ProtoMailboxClaimResult.job_card:type_name -> game.ProtoJobCardClaimResult
-	81,  // 101: game.ProtoMailboxClaimResult.weapon:type_name -> game.ProtoWeaponClaimResult
-	82,  // 102: game.ProtoMailboxClaimResult.companion:type_name -> game.ProtoCompanionClaimResult
-	8,   // 103: game.ProtoAbilityCardClaimResult.instance:type_name -> game.ProtoAbilityCardInstance
-	38,  // 104: game.ProtoJobCardClaimResult.instance:type_name -> game.ProtoJobCardInstance
-	66,  // 105: game.ProtoJobCardClaimResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
-	70,  // 106: game.ProtoWeaponClaimResult.weapon:type_name -> game.ProtoWeaponInstance
-	28,  // 107: game.ProtoCompanionClaimResult.companion:type_name -> game.ProtoFairyCompanionInstance
-	84,  // 108: game.ProtoBattleSelection.waves:type_name -> game.ProtoBattleWave
-	85,  // 109: game.ProtoBattleWave.groups:type_name -> game.ProtoBattleWaveGroup
-	87,  // 110: game.ProtoTowerData.towers:type_name -> game.ProtoTowerInstance
-	89,  // 111: game.ProtoSummonData.banners:type_name -> game.ProtoSummonBannerData
-	90,  // 112: game.ProtoSummonBannerData.schedule:type_name -> game.ProtoSummonBannerSchedule
-	31,  // 113: game.ProtoItemData.LimitDataEntry.value:type_name -> game.ProtoItemDropRecord
-	66,  // 114: game.ProtoJobCardData.SkillPanelsEntry.value:type_name -> game.ProtoSkillPanelGroups
-	115, // [115:115] is the sub-list for method output_type
-	115, // [115:115] is the sub-list for method input_type
-	115, // [115:115] is the sub-list for extension type_name
-	115, // [115:115] is the sub-list for extension extendee
-	0,   // [0:115] is the sub-list for field type_name
+	98,  // 52: game.ProtoJobCardData.character_equipped_job:type_name -> game.ProtoJobCardData.CharacterEquippedJobEntry
+	38,  // 53: game.ProtoJobInventory.job_list:type_name -> game.ProtoJobCardInstance
+	66,  // 54: game.ProtoJobCardInstance.skill_panel_unlocks:type_name -> game.ProtoSkillPanelGroups
+	99,  // 55: game.ProtoJobCardInstance.auto_abilities:type_name -> game.ProtoJobCardInstance.AutoAbilitiesEntry
+	12,  // 56: game.ProtoLastBattleResults.progress_data:type_name -> game.ProtoBattleProgressData
+	14,  // 57: game.ProtoLastBattleResults.card_progress_data:type_name -> game.ProtoCardProgressData
+	40,  // 58: game.ProtoLastBattleResults.item_rewards:type_name -> game.TaggedBattleItemReward
+	41,  // 59: game.ProtoLastBattleResults.card_rewards:type_name -> game.TaggedBattleCardReward
+	42,  // 60: game.ProtoLastBattleResults.companion_rewards:type_name -> game.TaggedBattleCompanionReward
+	63,  // 61: game.ProtoLastBattleResults.pending_events:type_name -> game.ProtoRegionNodeEvent
+	100, // 62: game.ProtoLastBattleResults.region_mission_progress:type_name -> game.ProtoLastBattleResults.RegionMissionProgressEntry
+	101, // 63: game.ProtoLastBattleResults.wandering_fiend_movements:type_name -> game.ProtoLastBattleResults.WanderingFiendMovementsEntry
+	13,  // 64: game.ProtoLastBattleResults.arena_progress_data:type_name -> game.ArenaProgressData
+	44,  // 65: game.ProtoMailBox.items:type_name -> game.ProtoMailBoxItem
+	0,   // 66: game.ProtoMailBoxItem.source:type_name -> game.ReferenceSource
+	46,  // 67: game.ProtoPlayerDeckCollection.decks:type_name -> game.ProtoPlayerDeck
+	47,  // 68: game.ProtoPlayerDeck.ability_card_slots:type_name -> game.ProtoPlayerDeckSlot
+	47,  // 69: game.ProtoPlayerDeck.sub_ability_card_slots:type_name -> game.ProtoPlayerDeckSlot
+	52,  // 70: game.ProtoRegionMapData.region_maps:type_name -> game.ProtoRegionMapInstance
+	51,  // 71: game.ProtoRegionHeaderData.headers:type_name -> game.ProtoRegionMapHeader
+	60,  // 72: game.ProtoRegionMapInstance.node_data:type_name -> game.ProtoRegionNodeData
+	61,  // 73: game.ProtoRegionMapInstance.lock_data:type_name -> game.ProtoRegionLockData
+	63,  // 74: game.ProtoRegionMapInstance.pending_events:type_name -> game.ProtoRegionNodeEvent
+	63,  // 75: game.ProtoRegionMapInstance.persisted_events:type_name -> game.ProtoRegionNodeEvent
+	62,  // 76: game.ProtoRegionMapInstance.pending_region_events:type_name -> game.ProtoRegionEvent
+	62,  // 77: game.ProtoRegionMapInstance.persisted_region_events:type_name -> game.ProtoRegionEvent
+	65,  // 78: game.ProtoRegionMapInstance.mission_data:type_name -> game.ProtoRegionMissionInstance
+	53,  // 79: game.ProtoRegionMapInstance.progress:type_name -> game.ProtoRegionProgressData
+	54,  // 80: game.ProtoRegionMapInstance.wandering_fiends:type_name -> game.ProtoWanderingFiendData
+	56,  // 81: game.ProtoRegionProgressData.dialogues:type_name -> game.ProtoRegionDialogueData
+	57,  // 82: game.ProtoRegionProgressData.dungeons:type_name -> game.ProtoRegionDungeonData
+	58,  // 83: game.ProtoRegionProgressData.arenas:type_name -> game.ProtoRegionArenaData
+	55,  // 84: game.ProtoWanderingFiendData.fiends:type_name -> game.ProtoWanderingFiendInstance
+	59,  // 85: game.ProtoRegionArenaData.entries:type_name -> game.ProtoRegionArenaEntryData
+	102, // 86: game.ProtoRegionNodeData.flags:type_name -> game.ProtoRegionNodeData.FlagsEntry
+	16,  // 87: game.ProtoRegionMissionInstance.instance:type_name -> game.ProtoMissionInstance
+	67,  // 88: game.ProtoSkillPanelGroups.panel_pages:type_name -> game.ProtoSkillPanelPage
+	68,  // 89: game.ProtoSkillPanelPage.skill_panels:type_name -> game.ProtoSkillPanel
+	70,  // 90: game.ProtoWeaponInventory.weapon_list:type_name -> game.ProtoWeaponInstance
+	103, // 91: game.ProtoWeaponInstance.auto_abilities:type_name -> game.ProtoWeaponInstance.AutoAbilitiesEntry
+	73,  // 92: game.ProtoBattleStatistics.element_orb_draws:type_name -> game.ElementUsageStatistic
+	73,  // 93: game.ProtoBattleStatistics.element_orb_usage:type_name -> game.ElementUsageStatistic
+	74,  // 94: game.ProtoBattleStatistics.enemy_defeats:type_name -> game.ProtoEnemyDeathStatistic
+	72,  // 95: game.ProtoBattleStatistics.ability_card_usage:type_name -> game.AbilityCardUsageStatistic
+	8,   // 96: game.ProtoAbilityCardSummonDrawResult.instance:type_name -> game.ProtoAbilityCardInstance
+	38,  // 97: game.ProtoJobCardSummonDrawResult.instance:type_name -> game.ProtoJobCardInstance
+	66,  // 98: game.ProtoJobCardSummonDrawResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
+	78,  // 99: game.ProtoMailboxClaimResult.item:type_name -> game.ProtoItemClaimResult
+	79,  // 100: game.ProtoMailboxClaimResult.ability_card:type_name -> game.ProtoAbilityCardClaimResult
+	80,  // 101: game.ProtoMailboxClaimResult.job_card:type_name -> game.ProtoJobCardClaimResult
+	81,  // 102: game.ProtoMailboxClaimResult.weapon:type_name -> game.ProtoWeaponClaimResult
+	82,  // 103: game.ProtoMailboxClaimResult.companion:type_name -> game.ProtoCompanionClaimResult
+	8,   // 104: game.ProtoAbilityCardClaimResult.instance:type_name -> game.ProtoAbilityCardInstance
+	38,  // 105: game.ProtoJobCardClaimResult.instance:type_name -> game.ProtoJobCardInstance
+	66,  // 106: game.ProtoJobCardClaimResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
+	70,  // 107: game.ProtoWeaponClaimResult.weapon:type_name -> game.ProtoWeaponInstance
+	28,  // 108: game.ProtoCompanionClaimResult.companion:type_name -> game.ProtoFairyCompanionInstance
+	84,  // 109: game.ProtoBattleSelection.waves:type_name -> game.ProtoBattleWave
+	85,  // 110: game.ProtoBattleWave.groups:type_name -> game.ProtoBattleWaveGroup
+	87,  // 111: game.ProtoTowerData.towers:type_name -> game.ProtoTowerInstance
+	89,  // 112: game.ProtoSummonData.banners:type_name -> game.ProtoSummonBannerData
+	90,  // 113: game.ProtoSummonBannerData.schedule:type_name -> game.ProtoSummonBannerSchedule
+	31,  // 114: game.ProtoItemData.LimitDataEntry.value:type_name -> game.ProtoItemDropRecord
+	66,  // 115: game.ProtoJobCardData.SkillPanelsEntry.value:type_name -> game.ProtoSkillPanelGroups
+	116, // [116:116] is the sub-list for method output_type
+	116, // [116:116] is the sub-list for method input_type
+	116, // [116:116] is the sub-list for extension type_name
+	116, // [116:116] is the sub-list for extension extendee
+	0,   // [0:116] is the sub-list for field type_name
 }
 
 func init() { file_protogame_data_proto_init() }
@@ -7751,7 +7793,7 @@ func file_protogame_data_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_data_proto_rawDesc), len(file_protogame_data_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   102,
+			NumMessages:   103,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

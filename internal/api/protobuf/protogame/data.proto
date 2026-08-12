@@ -325,6 +325,7 @@ message ProtoJobCardData {
   ProtoJobInventory jobs = 1;
   ProtoWeaponInventory weapons = 2;
   map<string, ProtoSkillPanelGroups> skill_panels = 3;
+  map<string, string> character_equipped_job = 4;
 }
 
 message ProtoJobInventory {
@@ -349,6 +350,7 @@ message ProtoJobCardInstance {
   int32 ultimate_boost = 18;
   map<string, int32> auto_abilities = 19;
   int32 crown_level = 20;
+  string last_sub_job_id = 21;
 }
 
 message ProtoLastBattleResults {
@@ -427,6 +429,8 @@ message ProtoPlayerDeck {
   int32 deck_index = 7;
   int32 job_card_sub_index = 8;
   int32 sub_job_card_sub_index = 9;
+  string sub_job_card_id = 10;
+  string sub_job_card_sub_id = 11;
 }
 
 message ProtoPlayerDeckSlot {
