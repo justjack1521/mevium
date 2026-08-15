@@ -369,21 +369,22 @@ namespace Mobius.Proto.Game {
             "bGV2ZWxfb3ZlcnJpZGUYAyABKAUiRgoUUHJvdG9CYXR0bGVXYXZlR3JvdXAS",
             "DQoFaW5kZXgYASABKAUSDQoFY291bnQYAiABKAUSEAoIZmllbmRfaWQYAyAB",
             "KAkiOgoOUHJvdG9Ub3dlckRhdGESKAoGdG93ZXJzGAEgAygLMhguZ2FtZS5Q",
-            "cm90b1Rvd2VySW5zdGFuY2UigwEKElByb3RvVG93ZXJJbnN0YW5jZRIQCgh0",
+            "cm90b1Rvd2VySW5zdGFuY2UikgEKElByb3RvVG93ZXJJbnN0YW5jZRIQCgh0",
             "b3dlcl9pZBgBIAEoCRINCgVsZXZlbBgCIAEoBRIVCg1oaWdoZXN0X2xldmVs",
             "GAMgASgFEg0KBXNjb3JlGAQgASgEEhUKDWhpZ2hlc3Rfc2NvcmUYBSABKAQS",
-            "DwoHdXBkYXRlZBhjIAEoAyI/Cg9Qcm90b1N1bW1vbkRhdGESLAoHYmFubmVy",
-            "cxgBIAMoCzIbLmdhbWUuUHJvdG9TdW1tb25CYW5uZXJEYXRhIqUBChVQcm90",
-            "b1N1bW1vbkJhbm5lckRhdGESCgoCaWQYASABKAkSMQoIc2NoZWR1bGUYAiAB",
-            "KAsyHy5nYW1lLlByb3RvU3VtbW9uQmFubmVyU2NoZWR1bGUSEAoIdXBjb21p",
-            "bmcYAyABKAgSDwoHYmF0Y2hlcxgEIAMoCRIUCgxwaXR5X2NvdW50ZXIYBSAB",
-            "KAUSFAoMZHJhd19jb3VudGVyGAYgASgFIk0KGVByb3RvU3VtbW9uQmFubmVy",
-            "U2NoZWR1bGUSCgoCaWQYASABKAkSEgoKc3RhcnRfZGF0ZRgCIAEoAxIQCghl",
-            "bmRfZGF0ZRgDIAEoAyp0Cg9SZWZlcmVuY2VTb3VyY2USCAoETk9ORRAAEhAK",
-            "DEFCSUxJVFlfQ0FSRBABEgwKCEpPQl9DQVJEEAISCAoESVRFTRADEgoKBldF",
-            "QVBPThAEEhMKD0ZBSVJZX0NPTVBBTklPThAFEgwKCE1QX1NUQU1QEAZCS1o1",
-            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
-            "cm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "DQoFc2NhbGUYBiABKAUSDwoHdXBkYXRlZBhjIAEoAyI/Cg9Qcm90b1N1bW1v",
+            "bkRhdGESLAoHYmFubmVycxgBIAMoCzIbLmdhbWUuUHJvdG9TdW1tb25CYW5u",
+            "ZXJEYXRhIqUBChVQcm90b1N1bW1vbkJhbm5lckRhdGESCgoCaWQYASABKAkS",
+            "MQoIc2NoZWR1bGUYAiABKAsyHy5nYW1lLlByb3RvU3VtbW9uQmFubmVyU2No",
+            "ZWR1bGUSEAoIdXBjb21pbmcYAyABKAgSDwoHYmF0Y2hlcxgEIAMoCRIUCgxw",
+            "aXR5X2NvdW50ZXIYBSABKAUSFAoMZHJhd19jb3VudGVyGAYgASgFIk0KGVBy",
+            "b3RvU3VtbW9uQmFubmVyU2NoZWR1bGUSCgoCaWQYASABKAkSEgoKc3RhcnRf",
+            "ZGF0ZRgCIAEoAxIQCghlbmRfZGF0ZRgDIAEoAyp0Cg9SZWZlcmVuY2VTb3Vy",
+            "Y2USCAoETk9ORRAAEhAKDEFCSUxJVFlfQ0FSRBABEgwKCEpPQl9DQVJEEAIS",
+            "CAoESVRFTRADEgoKBldFQVBPThAEEhMKD0ZBSVJZX0NPTVBBTklPThAFEgwK",
+            "CE1QX1NUQU1QEAZCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVt",
+            "L3BrZy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -473,7 +474,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWave), global::Mobius.Proto.Game.ProtoBattleWave.Parser, new[]{ "Index", "Groups", "LevelOverride" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoBattleWaveGroup), global::Mobius.Proto.Game.ProtoBattleWaveGroup.Parser, new[]{ "Index", "Count", "FiendId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoTowerData), global::Mobius.Proto.Game.ProtoTowerData.Parser, new[]{ "Towers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoTowerInstance), global::Mobius.Proto.Game.ProtoTowerInstance.Parser, new[]{ "TowerId", "Level", "HighestLevel", "Score", "HighestScore", "Updated" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoTowerInstance), global::Mobius.Proto.Game.ProtoTowerInstance.Parser, new[]{ "TowerId", "Level", "HighestLevel", "Score", "HighestScore", "Scale", "Updated" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonData), global::Mobius.Proto.Game.ProtoSummonData.Parser, new[]{ "Banners" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonBannerData), global::Mobius.Proto.Game.ProtoSummonBannerData.Parser, new[]{ "Id", "Schedule", "Upcoming", "Batches", "PityCounter", "DrawCounter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonBannerSchedule), global::Mobius.Proto.Game.ProtoSummonBannerSchedule.Parser, new[]{ "Id", "StartDate", "EndDate" }, null, null, null, null)
@@ -27303,6 +27304,7 @@ namespace Mobius.Proto.Game {
       highestLevel_ = other.highestLevel_;
       score_ = other.score_;
       highestScore_ = other.highestScore_;
+      scale_ = other.scale_;
       updated_ = other.updated_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -27367,6 +27369,17 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "scale" field.</summary>
+    public const int ScaleFieldNumber = 6;
+    private int scale_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Scale {
+      get { return scale_; }
+      set {
+        scale_ = value;
+      }
+    }
+
     /// <summary>Field number for the "updated" field.</summary>
     public const int UpdatedFieldNumber = 99;
     private long updated_;
@@ -27396,6 +27409,7 @@ namespace Mobius.Proto.Game {
       if (HighestLevel != other.HighestLevel) return false;
       if (Score != other.Score) return false;
       if (HighestScore != other.HighestScore) return false;
+      if (Scale != other.Scale) return false;
       if (Updated != other.Updated) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -27408,6 +27422,7 @@ namespace Mobius.Proto.Game {
       if (HighestLevel != 0) hash ^= HighestLevel.GetHashCode();
       if (Score != 0UL) hash ^= Score.GetHashCode();
       if (HighestScore != 0UL) hash ^= HighestScore.GetHashCode();
+      if (Scale != 0) hash ^= Scale.GetHashCode();
       if (Updated != 0L) hash ^= Updated.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -27445,6 +27460,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(40);
         output.WriteUInt64(HighestScore);
       }
+      if (Scale != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Scale);
+      }
       if (Updated != 0L) {
         output.WriteRawTag(152, 6);
         output.WriteInt64(Updated);
@@ -27478,6 +27497,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(40);
         output.WriteUInt64(HighestScore);
       }
+      if (Scale != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Scale);
+      }
       if (Updated != 0L) {
         output.WriteRawTag(152, 6);
         output.WriteInt64(Updated);
@@ -27505,6 +27528,9 @@ namespace Mobius.Proto.Game {
       }
       if (HighestScore != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(HighestScore);
+      }
+      if (Scale != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Scale);
       }
       if (Updated != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(Updated);
@@ -27534,6 +27560,9 @@ namespace Mobius.Proto.Game {
       }
       if (other.HighestScore != 0UL) {
         HighestScore = other.HighestScore;
+      }
+      if (other.Scale != 0) {
+        Scale = other.Scale;
       }
       if (other.Updated != 0L) {
         Updated = other.Updated;
@@ -27572,6 +27601,10 @@ namespace Mobius.Proto.Game {
             HighestScore = input.ReadUInt64();
             break;
           }
+          case 48: {
+            Scale = input.ReadInt32();
+            break;
+          }
           case 792: {
             Updated = input.ReadInt64();
             break;
@@ -27608,6 +27641,10 @@ namespace Mobius.Proto.Game {
           }
           case 40: {
             HighestScore = input.ReadUInt64();
+            break;
+          }
+          case 48: {
+            Scale = input.ReadInt32();
             break;
           }
           case 792: {

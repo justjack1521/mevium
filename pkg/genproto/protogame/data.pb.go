@@ -6602,6 +6602,7 @@ type ProtoTowerInstance struct {
 	HighestLevel  int32                  `protobuf:"varint,3,opt,name=highest_level,json=highestLevel,proto3" json:"highest_level,omitempty"`
 	Score         uint64                 `protobuf:"varint,4,opt,name=score,proto3" json:"score,omitempty"`
 	HighestScore  uint64                 `protobuf:"varint,5,opt,name=highest_score,json=highestScore,proto3" json:"highest_score,omitempty"`
+	Scale         int32                  `protobuf:"varint,6,opt,name=scale,proto3" json:"scale,omitempty"`
 	Updated       int64                  `protobuf:"varint,99,opt,name=updated,proto3" json:"updated,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -6668,6 +6669,13 @@ func (x *ProtoTowerInstance) GetScore() uint64 {
 func (x *ProtoTowerInstance) GetHighestScore() uint64 {
 	if x != nil {
 		return x.HighestScore
+	}
+	return 0
+}
+
+func (x *ProtoTowerInstance) GetScale() int32 {
+	if x != nil {
+		return x.Scale
 	}
 	return 0
 }
@@ -7504,13 +7512,14 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x05count\x18\x02 \x01(\x05R\x05count\x12\x19\n" +
 	"\bfiend_id\x18\x03 \x01(\tR\afiendId\"B\n" +
 	"\x0eProtoTowerData\x120\n" +
-	"\x06towers\x18\x01 \x03(\v2\x18.game.ProtoTowerInstanceR\x06towers\"\xbf\x01\n" +
+	"\x06towers\x18\x01 \x03(\v2\x18.game.ProtoTowerInstanceR\x06towers\"\xd5\x01\n" +
 	"\x12ProtoTowerInstance\x12\x19\n" +
 	"\btower_id\x18\x01 \x01(\tR\atowerId\x12\x14\n" +
 	"\x05level\x18\x02 \x01(\x05R\x05level\x12#\n" +
 	"\rhighest_level\x18\x03 \x01(\x05R\fhighestLevel\x12\x14\n" +
 	"\x05score\x18\x04 \x01(\x04R\x05score\x12#\n" +
-	"\rhighest_score\x18\x05 \x01(\x04R\fhighestScore\x12\x18\n" +
+	"\rhighest_score\x18\x05 \x01(\x04R\fhighestScore\x12\x14\n" +
+	"\x05scale\x18\x06 \x01(\x05R\x05scale\x12\x18\n" +
 	"\aupdated\x18c \x01(\x03R\aupdated\"H\n" +
 	"\x0fProtoSummonData\x125\n" +
 	"\abanners\x18\x01 \x03(\v2\x1b.game.ProtoSummonBannerDataR\abanners\"\xe0\x01\n" +

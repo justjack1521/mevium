@@ -745,6 +745,7 @@ message ProtoTowerInstance {
   int32 highest_level = 3;
   uint64 score = 4;
   uint64 highest_score = 5;
+  int32 scale = 6;
   int64 updated = 99;
 }
 
