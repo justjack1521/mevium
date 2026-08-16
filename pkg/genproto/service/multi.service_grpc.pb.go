@@ -41,6 +41,7 @@ const (
 	MeviusMultiService_DequeueAction_FullMethodName      = "/service.MeviusMultiService/DequeueAction"
 	MeviusMultiService_LockAction_FullMethodName         = "/service.MeviusMultiService/LockAction"
 	MeviusMultiService_SubmitHPConsensus_FullMethodName  = "/service.MeviusMultiService/SubmitHPConsensus"
+	MeviusMultiService_GameCatchUp_FullMethodName        = "/service.MeviusMultiService/GameCatchUp"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -68,6 +69,7 @@ type MeviusMultiServiceClient interface {
 	DequeueAction(ctx context.Context, in *protomulti.GameDequeueActionRequest, opts ...grpc.CallOption) (*protomulti.GameDequeueActionResponse, error)
 	LockAction(ctx context.Context, in *protomulti.GameLockActionRequest, opts ...grpc.CallOption) (*protomulti.GameLockActionResponse, error)
 	SubmitHPConsensus(ctx context.Context, in *protomulti.GameHPConsensusRequest, opts ...grpc.CallOption) (*protomulti.GameHPConsensusResponse, error)
+	GameCatchUp(ctx context.Context, in *protomulti.GameCatchUpRequest, opts ...grpc.CallOption) (*protomulti.GameCatchUpResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -267,6 +269,15 @@ func (c *meviusMultiServiceClient) SubmitHPConsensus(ctx context.Context, in *pr
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) GameCatchUp(ctx context.Context, in *protomulti.GameCatchUpRequest, opts ...grpc.CallOption) (*protomulti.GameCatchUpResponse, error) {
+	out := new(protomulti.GameCatchUpResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_GameCatchUp_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -292,6 +303,7 @@ type MeviusMultiServiceServer interface {
 	DequeueAction(context.Context, *protomulti.GameDequeueActionRequest) (*protomulti.GameDequeueActionResponse, error)
 	LockAction(context.Context, *protomulti.GameLockActionRequest) (*protomulti.GameLockActionResponse, error)
 	SubmitHPConsensus(context.Context, *protomulti.GameHPConsensusRequest) (*protomulti.GameHPConsensusResponse, error)
+	GameCatchUp(context.Context, *protomulti.GameCatchUpRequest) (*protomulti.GameCatchUpResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -360,6 +372,9 @@ func (UnimplementedMeviusMultiServiceServer) LockAction(context.Context, *protom
 }
 func (UnimplementedMeviusMultiServiceServer) SubmitHPConsensus(context.Context, *protomulti.GameHPConsensusRequest) (*protomulti.GameHPConsensusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SubmitHPConsensus not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) GameCatchUp(context.Context, *protomulti.GameCatchUpRequest) (*protomulti.GameCatchUpResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GameCatchUp not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -751,6 +766,24 @@ func _MeviusMultiService_SubmitHPConsensus_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_GameCatchUp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GameCatchUpRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).GameCatchUp(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_GameCatchUp_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).GameCatchUp(ctx, req.(*protomulti.GameCatchUpRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -841,6 +874,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SubmitHPConsensus",
 			Handler:    _MeviusMultiService_SubmitHPConsensus_Handler,
+		},
+		{
+			MethodName: "GameCatchUp",
+			Handler:    _MeviusMultiService_GameCatchUp_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

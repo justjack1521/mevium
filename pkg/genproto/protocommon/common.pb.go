@@ -400,6 +400,7 @@ type Notification struct {
 	Service       ServiceKey             `protobuf:"varint,1,opt,name=service,proto3,enum=common.ServiceKey" json:"service,omitempty"`
 	Type          int32                  `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
 	Data          []byte                 `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
+	Sequence      uint64                 `protobuf:"varint,4,opt,name=sequence,proto3" json:"sequence,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -455,6 +456,13 @@ func (x *Notification) GetData() []byte {
 	return nil
 }
 
+func (x *Notification) GetSequence() uint64 {
+	if x != nil {
+		return x.Sequence
+	}
+	return 0
+}
+
 var File_protocommon_common_proto protoreflect.FileDescriptor
 
 const file_protocommon_common_proto_rawDesc = "" +
@@ -485,11 +493,12 @@ const file_protocommon_common_proto_rawDesc = "" +
 	"\rerror_message\x18\x02 \x01(\tR\ferrorMessage\"k\n" +
 	"\x12PlayerNotification\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x128\n" +
-	"\fnotification\x18\x02 \x01(\v2\x14.common.NotificationR\fnotification\"d\n" +
+	"\fnotification\x18\x02 \x01(\v2\x14.common.NotificationR\fnotification\"\x80\x01\n" +
 	"\fNotification\x12,\n" +
 	"\aservice\x18\x01 \x01(\x0e2\x12.common.ServiceKeyR\aservice\x12\x12\n" +
 	"\x04type\x18\x02 \x01(\x05R\x04type\x12\x12\n" +
-	"\x04data\x18\x03 \x01(\fR\x04data*X\n" +
+	"\x04data\x18\x03 \x01(\fR\x04data\x12\x1a\n" +
+	"\bsequence\x18\x04 \x01(\x04R\bsequence*X\n" +
 	"\n" +
 	"ServiceKey\x12\t\n" +
 	"\x05EMPTY\x10\x00\x12\b\n" +

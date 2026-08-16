@@ -253,3 +253,15 @@ func NewGameHPConsensusRequest(bytes []byte) (*GameHPConsensusRequest, error) {
 func (x *GameHPConsensusResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameCatchUpRequest(bytes []byte) (*GameCatchUpRequest, error) {
+	req := &GameCatchUpRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameCatchUpResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

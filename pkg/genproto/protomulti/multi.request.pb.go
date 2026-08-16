@@ -1134,6 +1134,50 @@ func (*ParticipantUnwatchRequest) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{20}
 }
 
+type GameCatchUpRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	LastSequence  uint64                 `protobuf:"varint,1,opt,name=last_sequence,json=lastSequence,proto3" json:"last_sequence,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GameCatchUpRequest) Reset() {
+	*x = GameCatchUpRequest{}
+	mi := &file_protomulti_multi_request_proto_msgTypes[21]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GameCatchUpRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GameCatchUpRequest) ProtoMessage() {}
+
+func (x *GameCatchUpRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_request_proto_msgTypes[21]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GameCatchUpRequest.ProtoReflect.Descriptor instead.
+func (*GameCatchUpRequest) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{21}
+}
+
+func (x *GameCatchUpRequest) GetLastSequence() uint64 {
+	if x != nil {
+		return x.LastSequence
+	}
+	return 0
+}
+
 var File_protomulti_multi_request_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_request_proto_rawDesc = "" +
@@ -1201,7 +1245,9 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"useStamina\"4\n" +
 	"\x17ParticipantWatchRequest\x12\x19\n" +
 	"\blobby_id\x18\x02 \x01(\tR\alobbyId\"\x1b\n" +
-	"\x19ParticipantUnwatchRequest*\x84\x04\n" +
+	"\x19ParticipantUnwatchRequest\"9\n" +
+	"\x12GameCatchUpRequest\x12#\n" +
+	"\rlast_sequence\x18\x01 \x01(\x04R\flastSequence*\x84\x04\n" +
 	"\x10MultiRequestType\x12\x15\n" +
 	"\x11REQUEST_TYPE_NONE\x10\x00\x12\x12\n" +
 	"\x0eSESSION_CREATE\x10d\x12\x10\n" +
@@ -1242,7 +1288,7 @@ func file_protomulti_multi_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
+var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 22)
 var file_protomulti_multi_request_proto_goTypes = []any{
 	(MultiRequestType)(0),                   // 0: multi.MultiRequestType
 	(*GetGameRequest)(nil),                  // 1: multi.GetGameRequest
@@ -1266,14 +1312,15 @@ var file_protomulti_multi_request_proto_goTypes = []any{
 	(*ParticipantFindRequest)(nil),          // 19: multi.ParticipantFindRequest
 	(*ParticipantWatchRequest)(nil),         // 20: multi.ParticipantWatchRequest
 	(*ParticipantUnwatchRequest)(nil),       // 21: multi.ParticipantUnwatchRequest
-	(*ProtoGameEnemyHP)(nil),                // 22: multi.ProtoGameEnemyHP
-	(*ProtoGameAction)(nil),                 // 23: multi.ProtoGameAction
-	(*ProtoLobbyPlayerSlotRestriction)(nil), // 24: multi.ProtoLobbyPlayerSlotRestriction
+	(*GameCatchUpRequest)(nil),              // 22: multi.GameCatchUpRequest
+	(*ProtoGameEnemyHP)(nil),                // 23: multi.ProtoGameEnemyHP
+	(*ProtoGameAction)(nil),                 // 24: multi.ProtoGameAction
+	(*ProtoLobbyPlayerSlotRestriction)(nil), // 25: multi.ProtoLobbyPlayerSlotRestriction
 }
 var file_protomulti_multi_request_proto_depIdxs = []int32{
-	22, // 0: multi.GameHPConsensusRequest.enemies:type_name -> multi.ProtoGameEnemyHP
-	23, // 1: multi.GameEnqueueActionRequest.action:type_name -> multi.ProtoGameAction
-	24, // 2: multi.LobbyCreateRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	23, // 0: multi.GameHPConsensusRequest.enemies:type_name -> multi.ProtoGameEnemyHP
+	24, // 1: multi.GameEnqueueActionRequest.action:type_name -> multi.ProtoGameAction
+	25, // 2: multi.LobbyCreateRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
 	3,  // [3:3] is the sub-list for method output_type
 	3,  // [3:3] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
@@ -1293,7 +1340,7 @@ func file_protomulti_multi_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_request_proto_rawDesc), len(file_protomulti_multi_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   21,
+			NumMessages:   22,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

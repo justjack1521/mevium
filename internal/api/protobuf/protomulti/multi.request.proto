@@ -134,3 +134,7 @@ message ParticipantWatchRequest {
 
 message ParticipantUnwatchRequest {
 }
+
+message GameCatchUpRequest  {
+  uint64 last_sequence = 1;
+}

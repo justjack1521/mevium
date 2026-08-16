@@ -35,12 +35,13 @@ namespace Mobius.Proto {
             "Ij0KEEFwcGxpY2F0aW9uRXJyb3ISEgoKZXJyb3JfY29kZRgBIAEoBRIVCg1l",
             "cnJvcl9tZXNzYWdlGAIgASgJIlMKElBsYXllck5vdGlmaWNhdGlvbhIRCglw",
             "bGF5ZXJfaWQYASABKAkSKgoMbm90aWZpY2F0aW9uGAIgASgLMhQuY29tbW9u",
-            "Lk5vdGlmaWNhdGlvbiJPCgxOb3RpZmljYXRpb24SIwoHc2VydmljZRgBIAEo",
+            "Lk5vdGlmaWNhdGlvbiJhCgxOb3RpZmljYXRpb24SIwoHc2VydmljZRgBIAEo",
             "DjISLmNvbW1vbi5TZXJ2aWNlS2V5EgwKBHR5cGUYAiABKAUSDAoEZGF0YRgD",
-            "IAEoDCpYCgpTZXJ2aWNlS2V5EgkKBUVNUFRZEAASCAoER0FNRRBkEgsKBlNP",
-            "Q0lBTBDIARIMCgdSQU5LSU5HEKwCEg4KCUNIQUxMRU5HRRCQAxIKCgVNVUxU",
-            "SRD0A0JIWjdnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dl",
-            "bnByb3RvL3Byb3RvY29tbW9uqgIMTW9iaXVzLlByb3RvYgZwcm90bzM="));
+            "IAEoDBIQCghzZXF1ZW5jZRgEIAEoBCpYCgpTZXJ2aWNlS2V5EgkKBUVNUFRZ",
+            "EAASCAoER0FNRRBkEgsKBlNPQ0lBTBDIARIMCgdSQU5LSU5HEKwCEg4KCUNI",
+            "QUxMRU5HRRCQAxIKCgVNVUxUSRD0A0JIWjdnaXRodWIuY29tL2p1c3RqYWNr",
+            "MTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvY29tbW9uqgIMTW9iaXVz",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.ServiceKey), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -49,7 +50,7 @@ namespace Mobius.Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Response), global::Mobius.Proto.Response.Parser, new[]{ "CommandId", "Service", "Operation", "Data", "Error", "ErrorCode", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.ApplicationError), global::Mobius.Proto.ApplicationError.Parser, new[]{ "ErrorCode", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.PlayerNotification), global::Mobius.Proto.PlayerNotification.Parser, new[]{ "PlayerId", "Notification" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Notification), global::Mobius.Proto.Notification.Parser, new[]{ "Service", "Type", "Data" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Notification), global::Mobius.Proto.Notification.Parser, new[]{ "Service", "Type", "Data", "Sequence" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1401,6 +1402,7 @@ namespace Mobius.Proto {
       service_ = other.service_;
       type_ = other.type_;
       data_ = other.data_;
+      sequence_ = other.sequence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1442,6 +1444,17 @@ namespace Mobius.Proto {
       }
     }
 
+    /// <summary>Field number for the "sequence" field.</summary>
+    public const int SequenceFieldNumber = 4;
+    private ulong sequence_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Sequence {
+      get { return sequence_; }
+      set {
+        sequence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Notification);
@@ -1458,6 +1471,7 @@ namespace Mobius.Proto {
       if (Service != other.Service) return false;
       if (Type != other.Type) return false;
       if (Data != other.Data) return false;
+      if (Sequence != other.Sequence) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1467,6 +1481,7 @@ namespace Mobius.Proto {
       if (Service != global::Mobius.Proto.ServiceKey.Empty) hash ^= Service.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (Sequence != 0UL) hash ^= Sequence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1495,6 +1510,10 @@ namespace Mobius.Proto {
         output.WriteRawTag(26);
         output.WriteBytes(Data);
       }
+      if (Sequence != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Sequence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1516,6 +1535,10 @@ namespace Mobius.Proto {
         output.WriteRawTag(26);
         output.WriteBytes(Data);
       }
+      if (Sequence != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Sequence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1533,6 +1556,9 @@ namespace Mobius.Proto {
       }
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (Sequence != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Sequence);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1553,6 +1579,9 @@ namespace Mobius.Proto {
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
+      }
+      if (other.Sequence != 0UL) {
+        Sequence = other.Sequence;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1580,6 +1609,10 @@ namespace Mobius.Proto {
             Data = input.ReadBytes();
             break;
           }
+          case 32: {
+            Sequence = input.ReadUInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1604,6 +1637,10 @@ namespace Mobius.Proto {
           }
           case 26: {
             Data = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            Sequence = input.ReadUInt64();
             break;
           }
         }

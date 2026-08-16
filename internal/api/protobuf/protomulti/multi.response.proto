@@ -90,3 +90,9 @@ message ParticipantUnreadyResponse {
 message GameHPConsensusResponse {
 
 }
+
+message GameCatchUpResponse {
+  uint64 from_sequence    = 1;
+  uint64 to_sequence      = 2;
+  int64  turn_remaining_ms = 3;
+}

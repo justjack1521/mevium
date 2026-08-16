@@ -52,7 +52,8 @@ namespace Mobius.Proto.Multi {
             "ZXN0IlMKFlBhcnRpY2lwYW50RmluZFJlcXVlc3QSEAoIcXVlc3RfaWQYASAB",
             "KAkSEgoKZGVja19pbmRleBgCIAEoBRITCgt1c2Vfc3RhbWluYRgDIAEoCCIr",
             "ChdQYXJ0aWNpcGFudFdhdGNoUmVxdWVzdBIQCghsb2JieV9pZBgCIAEoCSIb",
-            "ChlQYXJ0aWNpcGFudFVud2F0Y2hSZXF1ZXN0KoQEChBNdWx0aVJlcXVlc3RU",
+            "ChlQYXJ0aWNpcGFudFVud2F0Y2hSZXF1ZXN0IisKEkdhbWVDYXRjaFVwUmVx",
+            "dWVzdBIVCg1sYXN0X3NlcXVlbmNlGAEgASgEKoQEChBNdWx0aVJlcXVlc3RU",
             "eXBlEhUKEVJFUVVFU1RfVFlQRV9OT05FEAASEgoOU0VTU0lPTl9DUkVBVEUQ",
             "ZBIQCgtTRVNTSU9OX0VORBDIARIRCgxMT0JCWV9TRUFSQ0gQrAISEQoMTE9C",
             "QllfQ1JFQVRFEJADEhEKDExPQkJZX0NBTkNFTBD0AxIQCgtMT0JCWV9SRUFE",
@@ -90,7 +91,8 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantLeaveRequest), global::Mobius.Proto.Multi.ParticipantLeaveRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantFindRequest), global::Mobius.Proto.Multi.ParticipantFindRequest.Parser, new[]{ "QuestId", "DeckIndex", "UseStamina" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantWatchRequest), global::Mobius.Proto.Multi.ParticipantWatchRequest.Parser, new[]{ "LobbyId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantUnwatchRequest), global::Mobius.Proto.Multi.ParticipantUnwatchRequest.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantUnwatchRequest), global::Mobius.Proto.Multi.ParticipantUnwatchRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameCatchUpRequest), global::Mobius.Proto.Multi.GameCatchUpRequest.Parser, new[]{ "LastSequence" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4058,6 +4060,178 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameCatchUpRequest : pb::IMessage<GameCatchUpRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameCatchUpRequest> _parser = new pb::MessageParser<GameCatchUpRequest>(() => new GameCatchUpRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GameCatchUpRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiRequestReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameCatchUpRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameCatchUpRequest(GameCatchUpRequest other) : this() {
+      lastSequence_ = other.lastSequence_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameCatchUpRequest Clone() {
+      return new GameCatchUpRequest(this);
+    }
+
+    /// <summary>Field number for the "last_sequence" field.</summary>
+    public const int LastSequenceFieldNumber = 1;
+    private ulong lastSequence_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong LastSequence {
+      get { return lastSequence_; }
+      set {
+        lastSequence_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GameCatchUpRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GameCatchUpRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LastSequence != other.LastSequence) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LastSequence != 0UL) hash ^= LastSequence.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LastSequence != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(LastSequence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LastSequence != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(LastSequence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (LastSequence != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(LastSequence);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GameCatchUpRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LastSequence != 0UL) {
+        LastSequence = other.LastSequence;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LastSequence = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LastSequence = input.ReadUInt64();
+            break;
+          }
         }
       }
     }
