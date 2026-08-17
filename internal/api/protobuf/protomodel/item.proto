@@ -4,10 +4,37 @@ package model;
 
 option go_package = "github.com/justjack1521/mevium/pkg/genproto/protomodel";
 
+import "protogame/data.proto";
+
 message BaseItem {
   string sys_id = 1;
   bool active = 2;
   string name = 3;
   int32 maximum = 4;
   int32 monthly_maximum = 5;
+}
+
+message ProtoItemShop {
+  string id = 1;
+  string name = 2;
+  repeated ProtoItemShopEntry entry = 3;
+}
+
+message ProtoItemShopEntry {
+  string id = 1;
+  string shop_id = 2;
+  string reference_id = 3;
+  game.ReferenceSource source = 4;
+  int32 quantity = 5;
+  int32 maximum_purchase = 6;
+  string requires_purchase = 7;
+}
+
+message ProtoItemShopEntryPurchaseOptions {
+  string id = 1;
+  string entry_id = 2;
+  int64 start_date = 3;
+  int64 end_date = 4;
+  int32 maximum_purchase = 5;
+  string requires_purchase = 6;
 }

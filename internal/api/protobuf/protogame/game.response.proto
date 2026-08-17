@@ -7,6 +7,7 @@ option go_package = "github.com/justjack1521/mevium/pkg/genproto/protogame";
 
 import "protogame/data.proto";
 import "protorank/rank.proto";
+import "protomodel/item.proto";
 
 message BattleCompleteResponse {
   game.ProtoLastBattleResults Results = 1;
@@ -143,6 +144,7 @@ message FirstDailyLoginResponse {
   bool bonus_day = 8;
   repeated string received_gift_boxes = 9;
   repeated string expired_gift_boxes = 10;
+  repeated model.ProtoItemShop item_shops = 11;
 }
 
 message FilterSortResponse {

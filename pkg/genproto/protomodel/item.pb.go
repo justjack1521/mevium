@@ -7,6 +7,7 @@
 package protomodel
 
 import (
+	protogame "github.com/justjack1521/mevium/pkg/genproto/protogame"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -97,17 +98,273 @@ func (x *BaseItem) GetMonthlyMaximum() int32 {
 	return 0
 }
 
+type ProtoItemShop struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Entry         []*ProtoItemShopEntry  `protobuf:"bytes,3,rep,name=entry,proto3" json:"entry,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoItemShop) Reset() {
+	*x = ProtoItemShop{}
+	mi := &file_protomodel_item_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoItemShop) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoItemShop) ProtoMessage() {}
+
+func (x *ProtoItemShop) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_item_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoItemShop.ProtoReflect.Descriptor instead.
+func (*ProtoItemShop) Descriptor() ([]byte, []int) {
+	return file_protomodel_item_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *ProtoItemShop) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProtoItemShop) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ProtoItemShop) GetEntry() []*ProtoItemShopEntry {
+	if x != nil {
+		return x.Entry
+	}
+	return nil
+}
+
+type ProtoItemShopEntry struct {
+	state            protoimpl.MessageState    `protogen:"open.v1"`
+	Id               string                    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ShopId           string                    `protobuf:"bytes,2,opt,name=shop_id,json=shopId,proto3" json:"shop_id,omitempty"`
+	ReferenceId      string                    `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
+	Source           protogame.ReferenceSource `protobuf:"varint,4,opt,name=source,proto3,enum=game.ReferenceSource" json:"source,omitempty"`
+	Quantity         int32                     `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	MaximumPurchase  int32                     `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
+	RequiresPurchase string                    `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *ProtoItemShopEntry) Reset() {
+	*x = ProtoItemShopEntry{}
+	mi := &file_protomodel_item_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoItemShopEntry) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoItemShopEntry) ProtoMessage() {}
+
+func (x *ProtoItemShopEntry) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_item_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoItemShopEntry.ProtoReflect.Descriptor instead.
+func (*ProtoItemShopEntry) Descriptor() ([]byte, []int) {
+	return file_protomodel_item_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *ProtoItemShopEntry) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntry) GetShopId() string {
+	if x != nil {
+		return x.ShopId
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntry) GetReferenceId() string {
+	if x != nil {
+		return x.ReferenceId
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntry) GetSource() protogame.ReferenceSource {
+	if x != nil {
+		return x.Source
+	}
+	return protogame.ReferenceSource(0)
+}
+
+func (x *ProtoItemShopEntry) GetQuantity() int32 {
+	if x != nil {
+		return x.Quantity
+	}
+	return 0
+}
+
+func (x *ProtoItemShopEntry) GetMaximumPurchase() int32 {
+	if x != nil {
+		return x.MaximumPurchase
+	}
+	return 0
+}
+
+func (x *ProtoItemShopEntry) GetRequiresPurchase() string {
+	if x != nil {
+		return x.RequiresPurchase
+	}
+	return ""
+}
+
+type ProtoItemShopEntryPurchaseOptions struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Id               string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	EntryId          string                 `protobuf:"bytes,2,opt,name=entry_id,json=entryId,proto3" json:"entry_id,omitempty"`
+	StartDate        int64                  `protobuf:"varint,3,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
+	EndDate          int64                  `protobuf:"varint,4,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
+	MaximumPurchase  int32                  `protobuf:"varint,5,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
+	RequiresPurchase string                 `protobuf:"bytes,6,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) Reset() {
+	*x = ProtoItemShopEntryPurchaseOptions{}
+	mi := &file_protomodel_item_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoItemShopEntryPurchaseOptions) ProtoMessage() {}
+
+func (x *ProtoItemShopEntryPurchaseOptions) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_item_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoItemShopEntryPurchaseOptions.ProtoReflect.Descriptor instead.
+func (*ProtoItemShopEntryPurchaseOptions) Descriptor() ([]byte, []int) {
+	return file_protomodel_item_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) GetEntryId() string {
+	if x != nil {
+		return x.EntryId
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) GetStartDate() int64 {
+	if x != nil {
+		return x.StartDate
+	}
+	return 0
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) GetEndDate() int64 {
+	if x != nil {
+		return x.EndDate
+	}
+	return 0
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) GetMaximumPurchase() int32 {
+	if x != nil {
+		return x.MaximumPurchase
+	}
+	return 0
+}
+
+func (x *ProtoItemShopEntryPurchaseOptions) GetRequiresPurchase() string {
+	if x != nil {
+		return x.RequiresPurchase
+	}
+	return ""
+}
+
 var File_protomodel_item_proto protoreflect.FileDescriptor
 
 const file_protomodel_item_proto_rawDesc = "" +
 	"\n" +
-	"\x15protomodel/item.proto\x12\x05model\"\x90\x01\n" +
+	"\x15protomodel/item.proto\x12\x05model\x1a\x14protogame/data.proto\"\x90\x01\n" +
 	"\bBaseItem\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12\x16\n" +
 	"\x06active\x18\x02 \x01(\bR\x06active\x12\x12\n" +
 	"\x04name\x18\x03 \x01(\tR\x04name\x12\x18\n" +
 	"\amaximum\x18\x04 \x01(\x05R\amaximum\x12'\n" +
-	"\x0fmonthly_maximum\x18\x05 \x01(\x05R\x0emonthlyMaximumB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
+	"\x0fmonthly_maximum\x18\x05 \x01(\x05R\x0emonthlyMaximum\"d\n" +
+	"\rProtoItemShop\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12/\n" +
+	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\x83\x02\n" +
+	"\x12ProtoItemShopEntry\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
+	"\ashop_id\x18\x02 \x01(\tR\x06shopId\x12!\n" +
+	"\freference_id\x18\x03 \x01(\tR\vreferenceId\x12-\n" +
+	"\x06source\x18\x04 \x01(\x0e2\x15.game.ReferenceSourceR\x06source\x12\x1a\n" +
+	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
+	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
+	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\"\xe0\x01\n" +
+	"!ProtoItemShopEntryPurchaseOptions\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x19\n" +
+	"\bentry_id\x18\x02 \x01(\tR\aentryId\x12\x1d\n" +
+	"\n" +
+	"start_date\x18\x03 \x01(\x03R\tstartDate\x12\x19\n" +
+	"\bend_date\x18\x04 \x01(\x03R\aendDate\x12)\n" +
+	"\x10maximum_purchase\x18\x05 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
+	"\x11requires_purchase\x18\x06 \x01(\tR\x10requiresPurchaseB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
 
 var (
 	file_protomodel_item_proto_rawDescOnce sync.Once
@@ -121,16 +378,22 @@ func file_protomodel_item_proto_rawDescGZIP() []byte {
 	return file_protomodel_item_proto_rawDescData
 }
 
-var file_protomodel_item_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_protomodel_item_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_protomodel_item_proto_goTypes = []any{
-	(*BaseItem)(nil), // 0: model.BaseItem
+	(*BaseItem)(nil),                          // 0: model.BaseItem
+	(*ProtoItemShop)(nil),                     // 1: model.ProtoItemShop
+	(*ProtoItemShopEntry)(nil),                // 2: model.ProtoItemShopEntry
+	(*ProtoItemShopEntryPurchaseOptions)(nil), // 3: model.ProtoItemShopEntryPurchaseOptions
+	(protogame.ReferenceSource)(0),            // 4: game.ReferenceSource
 }
 var file_protomodel_item_proto_depIdxs = []int32{
-	0, // [0:0] is the sub-list for method output_type
-	0, // [0:0] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	2, // 0: model.ProtoItemShop.entry:type_name -> model.ProtoItemShopEntry
+	4, // 1: model.ProtoItemShopEntry.source:type_name -> game.ReferenceSource
+	2, // [2:2] is the sub-list for method output_type
+	2, // [2:2] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_protomodel_item_proto_init() }
@@ -144,7 +407,7 @@ func file_protomodel_item_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomodel_item_proto_rawDesc), len(file_protomodel_item_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   1,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -767,3 +767,4 @@ message ProtoSummonBannerSchedule {
   int64 start_date = 2;
   int64 end_date = 3;
 }
+
