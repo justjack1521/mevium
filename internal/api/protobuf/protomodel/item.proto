@@ -27,6 +27,7 @@ message ProtoItemShopCategory {
 
 message ProtoItemShopEntry {
   string id = 1;
+  string category_id = 2;
   string reference_id = 3;
   int32 source = 4;
   int32 quantity = 5;

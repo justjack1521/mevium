@@ -31,26 +31,26 @@ namespace Model {
             "dHJpZXMYAyADKAsyGS5tb2RlbC5Qcm90b0l0ZW1TaG9wRW50cnkSMAoKY2F0",
             "ZWdvcmllcxgEIAMoCzIcLm1vZGVsLlByb3RvSXRlbVNob3BDYXRlZ29yeSJA",
             "ChVQcm90b0l0ZW1TaG9wQ2F0ZWdvcnkSCgoCaWQYASABKAkSDAoEbmFtZRgC",
-            "IAEoCRINCgVpbmRleBgDIAEoBSLHAQoSUHJvdG9JdGVtU2hvcEVudHJ5EgoK",
-            "AmlkGAEgASgJEhQKDHJlZmVyZW5jZV9pZBgDIAEoCRIOCgZzb3VyY2UYBCAB",
-            "KAUSEAoIcXVhbnRpdHkYBSABKAUSGAoQbWF4aW11bV9wdXJjaGFzZRgGIAEo",
-            "BRIZChFyZXF1aXJlc19wdXJjaGFzZRgHIAEoCRI4CgdvcHRpb25zGAggAygL",
-            "MicubW9kZWwuUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb24ixAEK",
-            "IFByb3RvSXRlbVNob3BFbnRyeVB1cmNoYXNlT3B0aW9uEgoKAmlkGAEgASgJ",
-            "EhIKCnN0YXJ0X2RhdGUYAyABKAMSEAoIZW5kX2RhdGUYBCABKAMSGAoQbWF4",
-            "aW11bV9wdXJjaGFzZRgFIAEoBRIZChFyZXF1aXJlc19wdXJjaGFzZRgGIAEo",
-            "CRI5CgRjb3N0GAcgAygLMisubW9kZWwuUHJvdG9JdGVtU2hvcEVudHJ5UHVy",
-            "Y2hhc2VPcHRpb25Db3N0IkkKJFByb3RvSXRlbVNob3BFbnRyeVB1cmNoYXNl",
-            "T3B0aW9uQ29zdBIPCgdpdGVtX2lkGAIgASgJEhAKCHF1YW50aXR5GAMgASgF",
-            "QjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJv",
-            "dG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
+            "IAEoCRINCgVpbmRleBgDIAEoBSLcAQoSUHJvdG9JdGVtU2hvcEVudHJ5EgoK",
+            "AmlkGAEgASgJEhMKC2NhdGVnb3J5X2lkGAIgASgJEhQKDHJlZmVyZW5jZV9p",
+            "ZBgDIAEoCRIOCgZzb3VyY2UYBCABKAUSEAoIcXVhbnRpdHkYBSABKAUSGAoQ",
+            "bWF4aW11bV9wdXJjaGFzZRgGIAEoBRIZChFyZXF1aXJlc19wdXJjaGFzZRgH",
+            "IAEoCRI4CgdvcHRpb25zGAggAygLMicubW9kZWwuUHJvdG9JdGVtU2hvcEVu",
+            "dHJ5UHVyY2hhc2VPcHRpb24ixAEKIFByb3RvSXRlbVNob3BFbnRyeVB1cmNo",
+            "YXNlT3B0aW9uEgoKAmlkGAEgASgJEhIKCnN0YXJ0X2RhdGUYAyABKAMSEAoI",
+            "ZW5kX2RhdGUYBCABKAMSGAoQbWF4aW11bV9wdXJjaGFzZRgFIAEoBRIZChFy",
+            "ZXF1aXJlc19wdXJjaGFzZRgGIAEoCRI5CgRjb3N0GAcgAygLMisubW9kZWwu",
+            "UHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25Db3N0IkkKJFByb3Rv",
+            "SXRlbVNob3BFbnRyeVB1cmNoYXNlT3B0aW9uQ29zdBIPCgdpdGVtX2lkGAIg",
+            "ASgJEhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1Yi5jb20vanVzdGphY2sx",
+            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entries", "Categories" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopCategory), global::Model.ProtoItemShopCategory.Parser, new[]{ "Id", "Name", "Index" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "CategoryId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOption), global::Model.ProtoItemShopEntryPurchaseOption.Parser, new[]{ "Id", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptionCost), global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser, new[]{ "ItemId", "Quantity" }, null, null, null, null)
           }));
@@ -907,6 +907,7 @@ namespace Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoItemShopEntry(ProtoItemShopEntry other) : this() {
       id_ = other.id_;
+      categoryId_ = other.categoryId_;
       referenceId_ = other.referenceId_;
       source_ = other.source_;
       quantity_ = other.quantity_;
@@ -929,6 +930,17 @@ namespace Model {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "category_id" field.</summary>
+    public const int CategoryIdFieldNumber = 2;
+    private string categoryId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CategoryId {
+      get { return categoryId_; }
+      set {
+        categoryId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1011,6 +1023,7 @@ namespace Model {
         return true;
       }
       if (Id != other.Id) return false;
+      if (CategoryId != other.CategoryId) return false;
       if (ReferenceId != other.ReferenceId) return false;
       if (Source != other.Source) return false;
       if (Quantity != other.Quantity) return false;
@@ -1024,6 +1037,7 @@ namespace Model {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (CategoryId.Length != 0) hash ^= CategoryId.GetHashCode();
       if (ReferenceId.Length != 0) hash ^= ReferenceId.GetHashCode();
       if (Source != 0) hash ^= Source.GetHashCode();
       if (Quantity != 0) hash ^= Quantity.GetHashCode();
@@ -1049,6 +1063,10 @@ namespace Model {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
+      }
+      if (CategoryId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CategoryId);
       }
       if (ReferenceId.Length != 0) {
         output.WriteRawTag(26);
@@ -1084,6 +1102,10 @@ namespace Model {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CategoryId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CategoryId);
+      }
       if (ReferenceId.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(ReferenceId);
@@ -1117,6 +1139,9 @@ namespace Model {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
+      if (CategoryId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CategoryId);
+      }
       if (ReferenceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReferenceId);
       }
@@ -1146,6 +1171,9 @@ namespace Model {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.CategoryId.Length != 0) {
+        CategoryId = other.CategoryId;
       }
       if (other.ReferenceId.Length != 0) {
         ReferenceId = other.ReferenceId;
@@ -1179,6 +1207,10 @@ namespace Model {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            CategoryId = input.ReadString();
             break;
           }
           case 26: {
@@ -1221,6 +1253,10 @@ namespace Model {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            CategoryId = input.ReadString();
             break;
           }
           case 26: {

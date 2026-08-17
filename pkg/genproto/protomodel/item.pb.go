@@ -228,6 +228,7 @@ func (x *ProtoItemShopCategory) GetIndex() int32 {
 type ProtoItemShopEntry struct {
 	state            protoimpl.MessageState              `protogen:"open.v1"`
 	Id               string                              `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	CategoryId       string                              `protobuf:"bytes,2,opt,name=category_id,json=categoryId,proto3" json:"category_id,omitempty"`
 	ReferenceId      string                              `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
 	Source           int32                               `protobuf:"varint,4,opt,name=source,proto3" json:"source,omitempty"`
 	Quantity         int32                               `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
@@ -271,6 +272,13 @@ func (*ProtoItemShopEntry) Descriptor() ([]byte, []int) {
 func (x *ProtoItemShopEntry) GetId() string {
 	if x != nil {
 		return x.Id
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntry) GetCategoryId() string {
+	if x != nil {
+		return x.CategoryId
 	}
 	return ""
 }
@@ -474,9 +482,11 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\x15ProtoItemShopCategory\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
-	"\x05index\x18\x03 \x01(\x05R\x05index\"\x96\x02\n" +
+	"\x05index\x18\x03 \x01(\x05R\x05index\"\xb7\x02\n" +
 	"\x12ProtoItemShopEntry\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\x12!\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1f\n" +
+	"\vcategory_id\x18\x02 \x01(\tR\n" +
+	"categoryId\x12!\n" +
 	"\freference_id\x18\x03 \x01(\tR\vreferenceId\x12\x16\n" +
 	"\x06source\x18\x04 \x01(\x05R\x06source\x12\x1a\n" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
