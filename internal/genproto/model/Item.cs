@@ -26,28 +26,32 @@ namespace Model {
           string.Concat(
             "ChVwcm90b21vZGVsL2l0ZW0ucHJvdG8SBW1vZGVsImIKCEJhc2VJdGVtEg4K",
             "BnN5c19pZBgBIAEoCRIOCgZhY3RpdmUYAiABKAgSDAoEbmFtZRgDIAEoCRIP",
-            "CgdtYXhpbXVtGAQgASgFEhcKD21vbnRobHlfbWF4aW11bRgFIAEoBSJTCg1Q",
-            "cm90b0l0ZW1TaG9wEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSKAoFZW50",
-            "cnkYAyADKAsyGS5tb2RlbC5Qcm90b0l0ZW1TaG9wRW50cnkiyAEKElByb3Rv",
-            "SXRlbVNob3BFbnRyeRIKCgJpZBgBIAEoCRIUCgxyZWZlcmVuY2VfaWQYAyAB",
-            "KAkSDgoGc291cmNlGAQgASgFEhAKCHF1YW50aXR5GAUgASgFEhgKEG1heGlt",
-            "dW1fcHVyY2hhc2UYBiABKAUSGQoRcmVxdWlyZXNfcHVyY2hhc2UYByABKAkS",
-            "OQoHb3B0aW9ucxgIIAMoCzIoLm1vZGVsLlByb3RvSXRlbVNob3BFbnRyeVB1",
-            "cmNoYXNlT3B0aW9ucyLFAQohUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VP",
-            "cHRpb25zEgoKAmlkGAEgASgJEhIKCnN0YXJ0X2RhdGUYAyABKAMSEAoIZW5k",
-            "X2RhdGUYBCABKAMSGAoQbWF4aW11bV9wdXJjaGFzZRgFIAEoBRIZChFyZXF1",
-            "aXJlc19wdXJjaGFzZRgGIAEoCRI5CgRjb3N0GAcgAygLMisubW9kZWwuUHJv",
-            "dG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25Db3N0IkkKJFByb3RvSXRl",
-            "bVNob3BFbnRyeVB1cmNoYXNlT3B0aW9uQ29zdBIPCgdpdGVtX2lkGAIgASgJ",
-            "EhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
-            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
+            "CgdtYXhpbXVtGAQgASgFEhcKD21vbnRobHlfbWF4aW11bRgFIAEoBSKHAQoN",
+            "UHJvdG9JdGVtU2hvcBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEioKB2Vu",
+            "dHJpZXMYAyADKAsyGS5tb2RlbC5Qcm90b0l0ZW1TaG9wRW50cnkSMAoKY2F0",
+            "ZWdvcmllcxgEIAMoCzIcLm1vZGVsLlByb3RvSXRlbVNob3BDYXRlZ29yeSJA",
+            "ChVQcm90b0l0ZW1TaG9wQ2F0ZWdvcnkSCgoCaWQYASABKAkSDAoEbmFtZRgC",
+            "IAEoCRINCgVpbmRleBgDIAEoBSLHAQoSUHJvdG9JdGVtU2hvcEVudHJ5EgoK",
+            "AmlkGAEgASgJEhQKDHJlZmVyZW5jZV9pZBgDIAEoCRIOCgZzb3VyY2UYBCAB",
+            "KAUSEAoIcXVhbnRpdHkYBSABKAUSGAoQbWF4aW11bV9wdXJjaGFzZRgGIAEo",
+            "BRIZChFyZXF1aXJlc19wdXJjaGFzZRgHIAEoCRI4CgdvcHRpb25zGAggAygL",
+            "MicubW9kZWwuUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb24ixAEK",
+            "IFByb3RvSXRlbVNob3BFbnRyeVB1cmNoYXNlT3B0aW9uEgoKAmlkGAEgASgJ",
+            "EhIKCnN0YXJ0X2RhdGUYAyABKAMSEAoIZW5kX2RhdGUYBCABKAMSGAoQbWF4",
+            "aW11bV9wdXJjaGFzZRgFIAEoBRIZChFyZXF1aXJlc19wdXJjaGFzZRgGIAEo",
+            "CRI5CgRjb3N0GAcgAygLMisubW9kZWwuUHJvdG9JdGVtU2hvcEVudHJ5UHVy",
+            "Y2hhc2VPcHRpb25Db3N0IkkKJFByb3RvSXRlbVNob3BFbnRyeVB1cmNoYXNl",
+            "T3B0aW9uQ29zdBIPCgdpdGVtX2lkGAIgASgJEhAKCHF1YW50aXR5GAMgASgF",
+            "QjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJv",
+            "dG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entry" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entries", "Categories" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopCategory), global::Model.ProtoItemShopCategory.Parser, new[]{ "Id", "Name", "Index" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptions), global::Model.ProtoItemShopEntryPurchaseOptions.Parser, new[]{ "Id", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOption), global::Model.ProtoItemShopEntryPurchaseOption.Parser, new[]{ "Id", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptionCost), global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser, new[]{ "ItemId", "Quantity" }, null, null, null, null)
           }));
     }
@@ -402,7 +406,8 @@ namespace Model {
     public ProtoItemShop(ProtoItemShop other) : this() {
       id_ = other.id_;
       name_ = other.name_;
-      entry_ = other.entry_.Clone();
+      entries_ = other.entries_.Clone();
+      categories_ = other.categories_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -433,14 +438,24 @@ namespace Model {
       }
     }
 
-    /// <summary>Field number for the "entry" field.</summary>
-    public const int EntryFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Model.ProtoItemShopEntry> _repeated_entry_codec
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Model.ProtoItemShopEntry> _repeated_entries_codec
         = pb::FieldCodec.ForMessage(26, global::Model.ProtoItemShopEntry.Parser);
-    private readonly pbc::RepeatedField<global::Model.ProtoItemShopEntry> entry_ = new pbc::RepeatedField<global::Model.ProtoItemShopEntry>();
+    private readonly pbc::RepeatedField<global::Model.ProtoItemShopEntry> entries_ = new pbc::RepeatedField<global::Model.ProtoItemShopEntry>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Model.ProtoItemShopEntry> Entry {
-      get { return entry_; }
+    public pbc::RepeatedField<global::Model.ProtoItemShopEntry> Entries {
+      get { return entries_; }
+    }
+
+    /// <summary>Field number for the "categories" field.</summary>
+    public const int CategoriesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Model.ProtoItemShopCategory> _repeated_categories_codec
+        = pb::FieldCodec.ForMessage(34, global::Model.ProtoItemShopCategory.Parser);
+    private readonly pbc::RepeatedField<global::Model.ProtoItemShopCategory> categories_ = new pbc::RepeatedField<global::Model.ProtoItemShopCategory>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Model.ProtoItemShopCategory> Categories {
+      get { return categories_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -458,7 +473,8 @@ namespace Model {
       }
       if (Id != other.Id) return false;
       if (Name != other.Name) return false;
-      if(!entry_.Equals(other.entry_)) return false;
+      if(!entries_.Equals(other.entries_)) return false;
+      if(!categories_.Equals(other.categories_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -467,7 +483,8 @@ namespace Model {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      hash ^= entry_.GetHashCode();
+      hash ^= entries_.GetHashCode();
+      hash ^= categories_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -492,7 +509,8 @@ namespace Model {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      entry_.WriteTo(output, _repeated_entry_codec);
+      entries_.WriteTo(output, _repeated_entries_codec);
+      categories_.WriteTo(output, _repeated_categories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -510,7 +528,8 @@ namespace Model {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      entry_.WriteTo(ref output, _repeated_entry_codec);
+      entries_.WriteTo(ref output, _repeated_entries_codec);
+      categories_.WriteTo(ref output, _repeated_categories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -526,7 +545,8 @@ namespace Model {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      size += entry_.CalculateSize(_repeated_entry_codec);
+      size += entries_.CalculateSize(_repeated_entries_codec);
+      size += categories_.CalculateSize(_repeated_categories_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -544,7 +564,8 @@ namespace Model {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      entry_.Add(other.entry_);
+      entries_.Add(other.entries_);
+      categories_.Add(other.categories_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -568,7 +589,11 @@ namespace Model {
             break;
           }
           case 26: {
-            entry_.AddEntriesFrom(input, _repeated_entry_codec);
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+          case 34: {
+            categories_.AddEntriesFrom(input, _repeated_categories_codec);
             break;
           }
         }
@@ -594,7 +619,255 @@ namespace Model {
             break;
           }
           case 26: {
-            entry_.AddEntriesFrom(ref input, _repeated_entry_codec);
+            entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
+            break;
+          }
+          case 34: {
+            categories_.AddEntriesFrom(ref input, _repeated_categories_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoItemShopCategory : pb::IMessage<ProtoItemShopCategory>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoItemShopCategory> _parser = new pb::MessageParser<ProtoItemShopCategory>(() => new ProtoItemShopCategory());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoItemShopCategory> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Model.ItemReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoItemShopCategory() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoItemShopCategory(ProtoItemShopCategory other) : this() {
+      id_ = other.id_;
+      name_ = other.name_;
+      index_ = other.index_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoItemShopCategory Clone() {
+      return new ProtoItemShopCategory(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 3;
+    private int index_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoItemShopCategory);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoItemShopCategory other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Name != other.Name) return false;
+      if (Index != other.Index) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoItemShopCategory other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            Index = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            Index = input.ReadInt32();
             break;
           }
         }
@@ -616,7 +889,7 @@ namespace Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Model.ItemReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Model.ItemReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -716,11 +989,11 @@ namespace Model {
 
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Model.ProtoItemShopEntryPurchaseOptions> _repeated_options_codec
-        = pb::FieldCodec.ForMessage(66, global::Model.ProtoItemShopEntryPurchaseOptions.Parser);
-    private readonly pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptions> options_ = new pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptions>();
+    private static readonly pb::FieldCodec<global::Model.ProtoItemShopEntryPurchaseOption> _repeated_options_codec
+        = pb::FieldCodec.ForMessage(66, global::Model.ProtoItemShopEntryPurchaseOption.Parser);
+    private readonly pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOption> options_ = new pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOption>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptions> Options {
+    public pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOption> Options {
       get { return options_; }
     }
 
@@ -981,19 +1254,19 @@ namespace Model {
 
   }
 
-  public sealed partial class ProtoItemShopEntryPurchaseOptions : pb::IMessage<ProtoItemShopEntryPurchaseOptions>
+  public sealed partial class ProtoItemShopEntryPurchaseOption : pb::IMessage<ProtoItemShopEntryPurchaseOption>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ProtoItemShopEntryPurchaseOptions> _parser = new pb::MessageParser<ProtoItemShopEntryPurchaseOptions>(() => new ProtoItemShopEntryPurchaseOptions());
+    private static readonly pb::MessageParser<ProtoItemShopEntryPurchaseOption> _parser = new pb::MessageParser<ProtoItemShopEntryPurchaseOption>(() => new ProtoItemShopEntryPurchaseOption());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ProtoItemShopEntryPurchaseOptions> Parser { get { return _parser; } }
+    public static pb::MessageParser<ProtoItemShopEntryPurchaseOption> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Model.ItemReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Model.ItemReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1002,14 +1275,14 @@ namespace Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoItemShopEntryPurchaseOptions() {
+    public ProtoItemShopEntryPurchaseOption() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoItemShopEntryPurchaseOptions(ProtoItemShopEntryPurchaseOptions other) : this() {
+    public ProtoItemShopEntryPurchaseOption(ProtoItemShopEntryPurchaseOption other) : this() {
       id_ = other.id_;
       startDate_ = other.startDate_;
       endDate_ = other.endDate_;
@@ -1020,8 +1293,8 @@ namespace Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ProtoItemShopEntryPurchaseOptions Clone() {
-      return new ProtoItemShopEntryPurchaseOptions(this);
+    public ProtoItemShopEntryPurchaseOption Clone() {
+      return new ProtoItemShopEntryPurchaseOption(this);
     }
 
     /// <summary>Field number for the "id" field.</summary>
@@ -1091,11 +1364,11 @@ namespace Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ProtoItemShopEntryPurchaseOptions);
+      return Equals(other as ProtoItemShopEntryPurchaseOption);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ProtoItemShopEntryPurchaseOptions other) {
+    public bool Equals(ProtoItemShopEntryPurchaseOption other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1219,7 +1492,7 @@ namespace Model {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ProtoItemShopEntryPurchaseOptions other) {
+    public void MergeFrom(ProtoItemShopEntryPurchaseOption other) {
       if (other == null) {
         return;
       }
@@ -1334,7 +1607,7 @@ namespace Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Model.ItemReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Model.ItemReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

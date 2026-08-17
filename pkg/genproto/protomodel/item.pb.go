@@ -98,10 +98,11 @@ func (x *BaseItem) GetMonthlyMaximum() int32 {
 }
 
 type ProtoItemShop struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Entry         []*ProtoItemShopEntry  `protobuf:"bytes,3,rep,name=entry,proto3" json:"entry,omitempty"`
+	state         protoimpl.MessageState   `protogen:"open.v1"`
+	Id            string                   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name          string                   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Entries       []*ProtoItemShopEntry    `protobuf:"bytes,3,rep,name=entries,proto3" json:"entries,omitempty"`
+	Categories    []*ProtoItemShopCategory `protobuf:"bytes,4,rep,name=categories,proto3" json:"categories,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -150,29 +151,96 @@ func (x *ProtoItemShop) GetName() string {
 	return ""
 }
 
-func (x *ProtoItemShop) GetEntry() []*ProtoItemShopEntry {
+func (x *ProtoItemShop) GetEntries() []*ProtoItemShopEntry {
 	if x != nil {
-		return x.Entry
+		return x.Entries
 	}
 	return nil
 }
 
+func (x *ProtoItemShop) GetCategories() []*ProtoItemShopCategory {
+	if x != nil {
+		return x.Categories
+	}
+	return nil
+}
+
+type ProtoItemShopCategory struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Index         int32                  `protobuf:"varint,3,opt,name=index,proto3" json:"index,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoItemShopCategory) Reset() {
+	*x = ProtoItemShopCategory{}
+	mi := &file_protomodel_item_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoItemShopCategory) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoItemShopCategory) ProtoMessage() {}
+
+func (x *ProtoItemShopCategory) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_item_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoItemShopCategory.ProtoReflect.Descriptor instead.
+func (*ProtoItemShopCategory) Descriptor() ([]byte, []int) {
+	return file_protomodel_item_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *ProtoItemShopCategory) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProtoItemShopCategory) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ProtoItemShopCategory) GetIndex() int32 {
+	if x != nil {
+		return x.Index
+	}
+	return 0
+}
+
 type ProtoItemShopEntry struct {
-	state            protoimpl.MessageState               `protogen:"open.v1"`
-	Id               string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ReferenceId      string                               `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
-	Source           int32                                `protobuf:"varint,4,opt,name=source,proto3" json:"source,omitempty"`
-	Quantity         int32                                `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
-	MaximumPurchase  int32                                `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
-	RequiresPurchase string                               `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
-	Options          []*ProtoItemShopEntryPurchaseOptions `protobuf:"bytes,8,rep,name=options,proto3" json:"options,omitempty"`
+	state            protoimpl.MessageState              `protogen:"open.v1"`
+	Id               string                              `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ReferenceId      string                              `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
+	Source           int32                               `protobuf:"varint,4,opt,name=source,proto3" json:"source,omitempty"`
+	Quantity         int32                               `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	MaximumPurchase  int32                               `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
+	RequiresPurchase string                              `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	Options          []*ProtoItemShopEntryPurchaseOption `protobuf:"bytes,8,rep,name=options,proto3" json:"options,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
 
 func (x *ProtoItemShopEntry) Reset() {
 	*x = ProtoItemShopEntry{}
-	mi := &file_protomodel_item_proto_msgTypes[2]
+	mi := &file_protomodel_item_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -184,7 +252,7 @@ func (x *ProtoItemShopEntry) String() string {
 func (*ProtoItemShopEntry) ProtoMessage() {}
 
 func (x *ProtoItemShopEntry) ProtoReflect() protoreflect.Message {
-	mi := &file_protomodel_item_proto_msgTypes[2]
+	mi := &file_protomodel_item_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -197,7 +265,7 @@ func (x *ProtoItemShopEntry) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoItemShopEntry.ProtoReflect.Descriptor instead.
 func (*ProtoItemShopEntry) Descriptor() ([]byte, []int) {
-	return file_protomodel_item_proto_rawDescGZIP(), []int{2}
+	return file_protomodel_item_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *ProtoItemShopEntry) GetId() string {
@@ -242,14 +310,14 @@ func (x *ProtoItemShopEntry) GetRequiresPurchase() string {
 	return ""
 }
 
-func (x *ProtoItemShopEntry) GetOptions() []*ProtoItemShopEntryPurchaseOptions {
+func (x *ProtoItemShopEntry) GetOptions() []*ProtoItemShopEntryPurchaseOption {
 	if x != nil {
 		return x.Options
 	}
 	return nil
 }
 
-type ProtoItemShopEntryPurchaseOptions struct {
+type ProtoItemShopEntryPurchaseOption struct {
 	state            protoimpl.MessageState                  `protogen:"open.v1"`
 	Id               string                                  `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	StartDate        int64                                   `protobuf:"varint,3,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
@@ -261,21 +329,21 @@ type ProtoItemShopEntryPurchaseOptions struct {
 	sizeCache        protoimpl.SizeCache
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) Reset() {
-	*x = ProtoItemShopEntryPurchaseOptions{}
-	mi := &file_protomodel_item_proto_msgTypes[3]
+func (x *ProtoItemShopEntryPurchaseOption) Reset() {
+	*x = ProtoItemShopEntryPurchaseOption{}
+	mi := &file_protomodel_item_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) String() string {
+func (x *ProtoItemShopEntryPurchaseOption) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*ProtoItemShopEntryPurchaseOptions) ProtoMessage() {}
+func (*ProtoItemShopEntryPurchaseOption) ProtoMessage() {}
 
-func (x *ProtoItemShopEntryPurchaseOptions) ProtoReflect() protoreflect.Message {
-	mi := &file_protomodel_item_proto_msgTypes[3]
+func (x *ProtoItemShopEntryPurchaseOption) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_item_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -286,47 +354,47 @@ func (x *ProtoItemShopEntryPurchaseOptions) ProtoReflect() protoreflect.Message 
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use ProtoItemShopEntryPurchaseOptions.ProtoReflect.Descriptor instead.
-func (*ProtoItemShopEntryPurchaseOptions) Descriptor() ([]byte, []int) {
-	return file_protomodel_item_proto_rawDescGZIP(), []int{3}
+// Deprecated: Use ProtoItemShopEntryPurchaseOption.ProtoReflect.Descriptor instead.
+func (*ProtoItemShopEntryPurchaseOption) Descriptor() ([]byte, []int) {
+	return file_protomodel_item_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetId() string {
+func (x *ProtoItemShopEntryPurchaseOption) GetId() string {
 	if x != nil {
 		return x.Id
 	}
 	return ""
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetStartDate() int64 {
+func (x *ProtoItemShopEntryPurchaseOption) GetStartDate() int64 {
 	if x != nil {
 		return x.StartDate
 	}
 	return 0
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetEndDate() int64 {
+func (x *ProtoItemShopEntryPurchaseOption) GetEndDate() int64 {
 	if x != nil {
 		return x.EndDate
 	}
 	return 0
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetMaximumPurchase() int32 {
+func (x *ProtoItemShopEntryPurchaseOption) GetMaximumPurchase() int32 {
 	if x != nil {
 		return x.MaximumPurchase
 	}
 	return 0
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetRequiresPurchase() string {
+func (x *ProtoItemShopEntryPurchaseOption) GetRequiresPurchase() string {
 	if x != nil {
 		return x.RequiresPurchase
 	}
 	return ""
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetCost() []*ProtoItemShopEntryPurchaseOptionCost {
+func (x *ProtoItemShopEntryPurchaseOption) GetCost() []*ProtoItemShopEntryPurchaseOptionCost {
 	if x != nil {
 		return x.Cost
 	}
@@ -343,7 +411,7 @@ type ProtoItemShopEntryPurchaseOptionCost struct {
 
 func (x *ProtoItemShopEntryPurchaseOptionCost) Reset() {
 	*x = ProtoItemShopEntryPurchaseOptionCost{}
-	mi := &file_protomodel_item_proto_msgTypes[4]
+	mi := &file_protomodel_item_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -355,7 +423,7 @@ func (x *ProtoItemShopEntryPurchaseOptionCost) String() string {
 func (*ProtoItemShopEntryPurchaseOptionCost) ProtoMessage() {}
 
 func (x *ProtoItemShopEntryPurchaseOptionCost) ProtoReflect() protoreflect.Message {
-	mi := &file_protomodel_item_proto_msgTypes[4]
+	mi := &file_protomodel_item_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -368,7 +436,7 @@ func (x *ProtoItemShopEntryPurchaseOptionCost) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use ProtoItemShopEntryPurchaseOptionCost.ProtoReflect.Descriptor instead.
 func (*ProtoItemShopEntryPurchaseOptionCost) Descriptor() ([]byte, []int) {
-	return file_protomodel_item_proto_rawDescGZIP(), []int{4}
+	return file_protomodel_item_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *ProtoItemShopEntryPurchaseOptionCost) GetItemId() string {
@@ -395,20 +463,27 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\x06active\x18\x02 \x01(\bR\x06active\x12\x12\n" +
 	"\x04name\x18\x03 \x01(\tR\x04name\x12\x18\n" +
 	"\amaximum\x18\x04 \x01(\x05R\amaximum\x12'\n" +
-	"\x0fmonthly_maximum\x18\x05 \x01(\x05R\x0emonthlyMaximum\"d\n" +
+	"\x0fmonthly_maximum\x18\x05 \x01(\x05R\x0emonthlyMaximum\"\xa6\x01\n" +
 	"\rProtoItemShop\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
-	"\x04name\x18\x02 \x01(\tR\x04name\x12/\n" +
-	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\x97\x02\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x123\n" +
+	"\aentries\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\aentries\x12<\n" +
+	"\n" +
+	"categories\x18\x04 \x03(\v2\x1c.model.ProtoItemShopCategoryR\n" +
+	"categories\"Q\n" +
+	"\x15ProtoItemShopCategory\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
+	"\x05index\x18\x03 \x01(\x05R\x05index\"\x96\x02\n" +
 	"\x12ProtoItemShopEntry\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12!\n" +
 	"\freference_id\x18\x03 \x01(\tR\vreferenceId\x12\x16\n" +
 	"\x06source\x18\x04 \x01(\x05R\x06source\x12\x1a\n" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
 	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
-	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12B\n" +
-	"\aoptions\x18\b \x03(\v2(.model.ProtoItemShopEntryPurchaseOptionsR\aoptions\"\x86\x02\n" +
-	"!ProtoItemShopEntryPurchaseOptions\x12\x0e\n" +
+	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12A\n" +
+	"\aoptions\x18\b \x03(\v2'.model.ProtoItemShopEntryPurchaseOptionR\aoptions\"\x85\x02\n" +
+	" ProtoItemShopEntryPurchaseOption\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +
 	"start_date\x18\x03 \x01(\x03R\tstartDate\x12\x19\n" +
@@ -432,23 +507,25 @@ func file_protomodel_item_proto_rawDescGZIP() []byte {
 	return file_protomodel_item_proto_rawDescData
 }
 
-var file_protomodel_item_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_protomodel_item_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protomodel_item_proto_goTypes = []any{
 	(*BaseItem)(nil),                             // 0: model.BaseItem
 	(*ProtoItemShop)(nil),                        // 1: model.ProtoItemShop
-	(*ProtoItemShopEntry)(nil),                   // 2: model.ProtoItemShopEntry
-	(*ProtoItemShopEntryPurchaseOptions)(nil),    // 3: model.ProtoItemShopEntryPurchaseOptions
-	(*ProtoItemShopEntryPurchaseOptionCost)(nil), // 4: model.ProtoItemShopEntryPurchaseOptionCost
+	(*ProtoItemShopCategory)(nil),                // 2: model.ProtoItemShopCategory
+	(*ProtoItemShopEntry)(nil),                   // 3: model.ProtoItemShopEntry
+	(*ProtoItemShopEntryPurchaseOption)(nil),     // 4: model.ProtoItemShopEntryPurchaseOption
+	(*ProtoItemShopEntryPurchaseOptionCost)(nil), // 5: model.ProtoItemShopEntryPurchaseOptionCost
 }
 var file_protomodel_item_proto_depIdxs = []int32{
-	2, // 0: model.ProtoItemShop.entry:type_name -> model.ProtoItemShopEntry
-	3, // 1: model.ProtoItemShopEntry.options:type_name -> model.ProtoItemShopEntryPurchaseOptions
-	4, // 2: model.ProtoItemShopEntryPurchaseOptions.cost:type_name -> model.ProtoItemShopEntryPurchaseOptionCost
-	3, // [3:3] is the sub-list for method output_type
-	3, // [3:3] is the sub-list for method input_type
-	3, // [3:3] is the sub-list for extension type_name
-	3, // [3:3] is the sub-list for extension extendee
-	0, // [0:3] is the sub-list for field type_name
+	3, // 0: model.ProtoItemShop.entries:type_name -> model.ProtoItemShopEntry
+	2, // 1: model.ProtoItemShop.categories:type_name -> model.ProtoItemShopCategory
+	4, // 2: model.ProtoItemShopEntry.options:type_name -> model.ProtoItemShopEntryPurchaseOption
+	5, // 3: model.ProtoItemShopEntryPurchaseOption.cost:type_name -> model.ProtoItemShopEntryPurchaseOptionCost
+	4, // [4:4] is the sub-list for method output_type
+	4, // [4:4] is the sub-list for method input_type
+	4, // [4:4] is the sub-list for extension type_name
+	4, // [4:4] is the sub-list for extension extendee
+	0, // [0:4] is the sub-list for field type_name
 }
 
 func init() { file_protomodel_item_proto_init() }
@@ -462,7 +539,7 @@ func file_protomodel_item_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomodel_item_proto_rawDesc), len(file_protomodel_item_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

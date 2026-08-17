@@ -15,7 +15,14 @@ message BaseItem {
 message ProtoItemShop {
   string id = 1;
   string name = 2;
-  repeated ProtoItemShopEntry entry = 3;
+  repeated ProtoItemShopEntry entries = 3;
+  repeated ProtoItemShopCategory categories = 4;
+}
+
+message ProtoItemShopCategory {
+  string id = 1;
+  string name = 2;
+  int32 index = 3;
 }
 
 message ProtoItemShopEntry {
@@ -25,10 +32,10 @@ message ProtoItemShopEntry {
   int32 quantity = 5;
   int32 maximum_purchase = 6;
   string requires_purchase = 7;
-  repeated ProtoItemShopEntryPurchaseOptions options = 8;
+  repeated ProtoItemShopEntryPurchaseOption options = 8;
 }
 
-message ProtoItemShopEntryPurchaseOptions {
+message ProtoItemShopEntryPurchaseOption {
   string id = 1;
   int64 start_date = 3;
   int64 end_date = 4;
