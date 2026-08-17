@@ -38,4 +38,11 @@ message ProtoItemShopEntryPurchaseOptions {
   int64 end_date = 4;
   int32 maximum_purchase = 5;
   string requires_purchase = 6;
+  repeated ProtoItemShopEntryPurchaseOptionCost cost = 7;
+}
+
+message ProtoItemShopEntryPurchaseOptionCost {
+  string purchase_option_id = 1;
+  string item_id = 2;
+  int32 quantity = 3;
 }

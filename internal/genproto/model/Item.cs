@@ -34,19 +34,24 @@ namespace Model {
             "c291cmNlGAQgASgOMhUuZ2FtZS5SZWZlcmVuY2VTb3VyY2USEAoIcXVhbnRp",
             "dHkYBSABKAUSGAoQbWF4aW11bV9wdXJjaGFzZRgGIAEoBRIZChFyZXF1aXJl",
             "c19wdXJjaGFzZRgHIAEoCRI5CgdvcHRpb25zGAggAygLMigubW9kZWwuUHJv",
-            "dG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25zIpwBCiFQcm90b0l0ZW1T",
+            "dG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25zItcBCiFQcm90b0l0ZW1T",
             "aG9wRW50cnlQdXJjaGFzZU9wdGlvbnMSCgoCaWQYASABKAkSEAoIZW50cnlf",
             "aWQYAiABKAkSEgoKc3RhcnRfZGF0ZRgDIAEoAxIQCghlbmRfZGF0ZRgEIAEo",
             "AxIYChBtYXhpbXVtX3B1cmNoYXNlGAUgASgFEhkKEXJlcXVpcmVzX3B1cmNo",
-            "YXNlGAYgASgJQjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
-            "a2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
+            "YXNlGAYgASgJEjkKBGNvc3QYByADKAsyKy5tb2RlbC5Qcm90b0l0ZW1TaG9w",
+            "RW50cnlQdXJjaGFzZU9wdGlvbkNvc3QiZQokUHJvdG9JdGVtU2hvcEVudHJ5",
+            "UHVyY2hhc2VPcHRpb25Db3N0EhoKEnB1cmNoYXNlX29wdGlvbl9pZBgBIAEo",
+            "CRIPCgdpdGVtX2lkGAIgASgJEhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1",
+            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9t",
+            "b2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ShopId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptions), global::Model.ProtoItemShopEntryPurchaseOptions.Parser, new[]{ "Id", "EntryId", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptions), global::Model.ProtoItemShopEntryPurchaseOptions.Parser, new[]{ "Id", "EntryId", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptionCost), global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser, new[]{ "PurchaseOptionId", "ItemId", "Quantity" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1050,6 +1055,7 @@ namespace Model {
       endDate_ = other.endDate_;
       maximumPurchase_ = other.maximumPurchase_;
       requiresPurchase_ = other.requiresPurchase_;
+      cost_ = other.cost_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1124,6 +1130,16 @@ namespace Model {
       }
     }
 
+    /// <summary>Field number for the "cost" field.</summary>
+    public const int CostFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Model.ProtoItemShopEntryPurchaseOptionCost> _repeated_cost_codec
+        = pb::FieldCodec.ForMessage(58, global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser);
+    private readonly pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptionCost> cost_ = new pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptionCost>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptionCost> Cost {
+      get { return cost_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoItemShopEntryPurchaseOptions);
@@ -1143,6 +1159,7 @@ namespace Model {
       if (EndDate != other.EndDate) return false;
       if (MaximumPurchase != other.MaximumPurchase) return false;
       if (RequiresPurchase != other.RequiresPurchase) return false;
+      if(!cost_.Equals(other.cost_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1155,6 +1172,7 @@ namespace Model {
       if (EndDate != 0L) hash ^= EndDate.GetHashCode();
       if (MaximumPurchase != 0) hash ^= MaximumPurchase.GetHashCode();
       if (RequiresPurchase.Length != 0) hash ^= RequiresPurchase.GetHashCode();
+      hash ^= cost_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1195,6 +1213,7 @@ namespace Model {
         output.WriteRawTag(50);
         output.WriteString(RequiresPurchase);
       }
+      cost_.WriteTo(output, _repeated_cost_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1228,6 +1247,7 @@ namespace Model {
         output.WriteRawTag(50);
         output.WriteString(RequiresPurchase);
       }
+      cost_.WriteTo(ref output, _repeated_cost_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1255,6 +1275,7 @@ namespace Model {
       if (RequiresPurchase.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequiresPurchase);
       }
+      size += cost_.CalculateSize(_repeated_cost_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1284,6 +1305,7 @@ namespace Model {
       if (other.RequiresPurchase.Length != 0) {
         RequiresPurchase = other.RequiresPurchase;
       }
+      cost_.Add(other.cost_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1322,6 +1344,10 @@ namespace Model {
             RequiresPurchase = input.ReadString();
             break;
           }
+          case 58: {
+            cost_.AddEntriesFrom(input, _repeated_cost_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1358,6 +1384,254 @@ namespace Model {
           }
           case 50: {
             RequiresPurchase = input.ReadString();
+            break;
+          }
+          case 58: {
+            cost_.AddEntriesFrom(ref input, _repeated_cost_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ProtoItemShopEntryPurchaseOptionCost : pb::IMessage<ProtoItemShopEntryPurchaseOptionCost>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoItemShopEntryPurchaseOptionCost> _parser = new pb::MessageParser<ProtoItemShopEntryPurchaseOptionCost>(() => new ProtoItemShopEntryPurchaseOptionCost());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoItemShopEntryPurchaseOptionCost> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Model.ItemReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoItemShopEntryPurchaseOptionCost() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoItemShopEntryPurchaseOptionCost(ProtoItemShopEntryPurchaseOptionCost other) : this() {
+      purchaseOptionId_ = other.purchaseOptionId_;
+      itemId_ = other.itemId_;
+      quantity_ = other.quantity_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoItemShopEntryPurchaseOptionCost Clone() {
+      return new ProtoItemShopEntryPurchaseOptionCost(this);
+    }
+
+    /// <summary>Field number for the "purchase_option_id" field.</summary>
+    public const int PurchaseOptionIdFieldNumber = 1;
+    private string purchaseOptionId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PurchaseOptionId {
+      get { return purchaseOptionId_; }
+      set {
+        purchaseOptionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 2;
+    private string itemId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "quantity" field.</summary>
+    public const int QuantityFieldNumber = 3;
+    private int quantity_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Quantity {
+      get { return quantity_; }
+      set {
+        quantity_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoItemShopEntryPurchaseOptionCost);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoItemShopEntryPurchaseOptionCost other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PurchaseOptionId != other.PurchaseOptionId) return false;
+      if (ItemId != other.ItemId) return false;
+      if (Quantity != other.Quantity) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PurchaseOptionId.Length != 0) hash ^= PurchaseOptionId.GetHashCode();
+      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
+      if (Quantity != 0) hash ^= Quantity.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PurchaseOptionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PurchaseOptionId);
+      }
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ItemId);
+      }
+      if (Quantity != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Quantity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PurchaseOptionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PurchaseOptionId);
+      }
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ItemId);
+      }
+      if (Quantity != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Quantity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PurchaseOptionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PurchaseOptionId);
+      }
+      if (ItemId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
+      }
+      if (Quantity != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoItemShopEntryPurchaseOptionCost other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PurchaseOptionId.Length != 0) {
+        PurchaseOptionId = other.PurchaseOptionId;
+      }
+      if (other.ItemId.Length != 0) {
+        ItemId = other.ItemId;
+      }
+      if (other.Quantity != 0) {
+        Quantity = other.Quantity;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PurchaseOptionId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ItemId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Quantity = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PurchaseOptionId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ItemId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Quantity = input.ReadInt32();
             break;
           }
         }

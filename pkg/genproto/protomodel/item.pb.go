@@ -259,13 +259,14 @@ func (x *ProtoItemShopEntry) GetOptions() []*ProtoItemShopEntryPurchaseOptions {
 }
 
 type ProtoItemShopEntryPurchaseOptions struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	Id               string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	EntryId          string                 `protobuf:"bytes,2,opt,name=entry_id,json=entryId,proto3" json:"entry_id,omitempty"`
-	StartDate        int64                  `protobuf:"varint,3,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
-	EndDate          int64                  `protobuf:"varint,4,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
-	MaximumPurchase  int32                  `protobuf:"varint,5,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
-	RequiresPurchase string                 `protobuf:"bytes,6,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	state            protoimpl.MessageState                  `protogen:"open.v1"`
+	Id               string                                  `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	EntryId          string                                  `protobuf:"bytes,2,opt,name=entry_id,json=entryId,proto3" json:"entry_id,omitempty"`
+	StartDate        int64                                   `protobuf:"varint,3,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
+	EndDate          int64                                   `protobuf:"varint,4,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
+	MaximumPurchase  int32                                   `protobuf:"varint,5,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
+	RequiresPurchase string                                  `protobuf:"bytes,6,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	Cost             []*ProtoItemShopEntryPurchaseOptionCost `protobuf:"bytes,7,rep,name=cost,proto3" json:"cost,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -342,6 +343,73 @@ func (x *ProtoItemShopEntryPurchaseOptions) GetRequiresPurchase() string {
 	return ""
 }
 
+func (x *ProtoItemShopEntryPurchaseOptions) GetCost() []*ProtoItemShopEntryPurchaseOptionCost {
+	if x != nil {
+		return x.Cost
+	}
+	return nil
+}
+
+type ProtoItemShopEntryPurchaseOptionCost struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	PurchaseOptionId string                 `protobuf:"bytes,1,opt,name=purchase_option_id,json=purchaseOptionId,proto3" json:"purchase_option_id,omitempty"`
+	ItemId           string                 `protobuf:"bytes,2,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
+	Quantity         int32                  `protobuf:"varint,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *ProtoItemShopEntryPurchaseOptionCost) Reset() {
+	*x = ProtoItemShopEntryPurchaseOptionCost{}
+	mi := &file_protomodel_item_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoItemShopEntryPurchaseOptionCost) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoItemShopEntryPurchaseOptionCost) ProtoMessage() {}
+
+func (x *ProtoItemShopEntryPurchaseOptionCost) ProtoReflect() protoreflect.Message {
+	mi := &file_protomodel_item_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoItemShopEntryPurchaseOptionCost.ProtoReflect.Descriptor instead.
+func (*ProtoItemShopEntryPurchaseOptionCost) Descriptor() ([]byte, []int) {
+	return file_protomodel_item_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *ProtoItemShopEntryPurchaseOptionCost) GetPurchaseOptionId() string {
+	if x != nil {
+		return x.PurchaseOptionId
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntryPurchaseOptionCost) GetItemId() string {
+	if x != nil {
+		return x.ItemId
+	}
+	return ""
+}
+
+func (x *ProtoItemShopEntryPurchaseOptionCost) GetQuantity() int32 {
+	if x != nil {
+		return x.Quantity
+	}
+	return 0
+}
+
 var File_protomodel_item_proto protoreflect.FileDescriptor
 
 const file_protomodel_item_proto_rawDesc = "" +
@@ -365,7 +433,7 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
 	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
 	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12B\n" +
-	"\aoptions\x18\b \x03(\v2(.model.ProtoItemShopEntryPurchaseOptionsR\aoptions\"\xe0\x01\n" +
+	"\aoptions\x18\b \x03(\v2(.model.ProtoItemShopEntryPurchaseOptionsR\aoptions\"\xa1\x02\n" +
 	"!ProtoItemShopEntryPurchaseOptions\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x19\n" +
 	"\bentry_id\x18\x02 \x01(\tR\aentryId\x12\x1d\n" +
@@ -373,7 +441,12 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"start_date\x18\x03 \x01(\x03R\tstartDate\x12\x19\n" +
 	"\bend_date\x18\x04 \x01(\x03R\aendDate\x12)\n" +
 	"\x10maximum_purchase\x18\x05 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
-	"\x11requires_purchase\x18\x06 \x01(\tR\x10requiresPurchaseB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
+	"\x11requires_purchase\x18\x06 \x01(\tR\x10requiresPurchase\x12?\n" +
+	"\x04cost\x18\a \x03(\v2+.model.ProtoItemShopEntryPurchaseOptionCostR\x04cost\"\x89\x01\n" +
+	"$ProtoItemShopEntryPurchaseOptionCost\x12,\n" +
+	"\x12purchase_option_id\x18\x01 \x01(\tR\x10purchaseOptionId\x12\x17\n" +
+	"\aitem_id\x18\x02 \x01(\tR\x06itemId\x12\x1a\n" +
+	"\bquantity\x18\x03 \x01(\x05R\bquantityB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
 
 var (
 	file_protomodel_item_proto_rawDescOnce sync.Once
@@ -387,23 +460,25 @@ func file_protomodel_item_proto_rawDescGZIP() []byte {
 	return file_protomodel_item_proto_rawDescData
 }
 
-var file_protomodel_item_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_protomodel_item_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_protomodel_item_proto_goTypes = []any{
-	(*BaseItem)(nil),                          // 0: model.BaseItem
-	(*ProtoItemShop)(nil),                     // 1: model.ProtoItemShop
-	(*ProtoItemShopEntry)(nil),                // 2: model.ProtoItemShopEntry
-	(*ProtoItemShopEntryPurchaseOptions)(nil), // 3: model.ProtoItemShopEntryPurchaseOptions
-	(protogame.ReferenceSource)(0),            // 4: game.ReferenceSource
+	(*BaseItem)(nil),                             // 0: model.BaseItem
+	(*ProtoItemShop)(nil),                        // 1: model.ProtoItemShop
+	(*ProtoItemShopEntry)(nil),                   // 2: model.ProtoItemShopEntry
+	(*ProtoItemShopEntryPurchaseOptions)(nil),    // 3: model.ProtoItemShopEntryPurchaseOptions
+	(*ProtoItemShopEntryPurchaseOptionCost)(nil), // 4: model.ProtoItemShopEntryPurchaseOptionCost
+	(protogame.ReferenceSource)(0),               // 5: game.ReferenceSource
 }
 var file_protomodel_item_proto_depIdxs = []int32{
 	2, // 0: model.ProtoItemShop.entry:type_name -> model.ProtoItemShopEntry
-	4, // 1: model.ProtoItemShopEntry.source:type_name -> game.ReferenceSource
+	5, // 1: model.ProtoItemShopEntry.source:type_name -> game.ReferenceSource
 	3, // 2: model.ProtoItemShopEntry.options:type_name -> model.ProtoItemShopEntryPurchaseOptions
-	3, // [3:3] is the sub-list for method output_type
-	3, // [3:3] is the sub-list for method input_type
-	3, // [3:3] is the sub-list for extension type_name
-	3, // [3:3] is the sub-list for extension extendee
-	0, // [0:3] is the sub-list for field type_name
+	4, // 3: model.ProtoItemShopEntryPurchaseOptions.cost:type_name -> model.ProtoItemShopEntryPurchaseOptionCost
+	4, // [4:4] is the sub-list for method output_type
+	4, // [4:4] is the sub-list for method input_type
+	4, // [4:4] is the sub-list for extension type_name
+	4, // [4:4] is the sub-list for extension extendee
+	0, // [0:4] is the sub-list for field type_name
 }
 
 func init() { file_protomodel_item_proto_init() }
@@ -417,7 +492,7 @@ func file_protomodel_item_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomodel_item_proto_rawDesc), len(file_protomodel_item_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
