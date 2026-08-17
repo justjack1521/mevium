@@ -22,7 +22,6 @@ message ProtoItemShop {
 
 message ProtoItemShopEntry {
   string id = 1;
-  string shop_id = 2;
   string reference_id = 3;
   game.ReferenceSource source = 4;
   int32 quantity = 5;
@@ -33,7 +32,6 @@ message ProtoItemShopEntry {
 
 message ProtoItemShopEntryPurchaseOptions {
   string id = 1;
-  string entry_id = 2;
   int64 start_date = 3;
   int64 end_date = 4;
   int32 maximum_purchase = 5;
@@ -42,7 +40,6 @@ message ProtoItemShopEntryPurchaseOptions {
 }
 
 message ProtoItemShopEntryPurchaseOptionCost {
-  string purchase_option_id = 1;
   string item_id = 2;
   int32 quantity = 3;
 }

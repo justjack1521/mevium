@@ -29,29 +29,27 @@ namespace Model {
             "GAIgASgIEgwKBG5hbWUYAyABKAkSDwoHbWF4aW11bRgEIAEoBRIXCg9tb250",
             "aGx5X21heGltdW0YBSABKAUiUwoNUHJvdG9JdGVtU2hvcBIKCgJpZBgBIAEo",
             "CRIMCgRuYW1lGAIgASgJEigKBWVudHJ5GAMgAygLMhkubW9kZWwuUHJvdG9J",
-            "dGVtU2hvcEVudHJ5IvABChJQcm90b0l0ZW1TaG9wRW50cnkSCgoCaWQYASAB",
-            "KAkSDwoHc2hvcF9pZBgCIAEoCRIUCgxyZWZlcmVuY2VfaWQYAyABKAkSJQoG",
-            "c291cmNlGAQgASgOMhUuZ2FtZS5SZWZlcmVuY2VTb3VyY2USEAoIcXVhbnRp",
-            "dHkYBSABKAUSGAoQbWF4aW11bV9wdXJjaGFzZRgGIAEoBRIZChFyZXF1aXJl",
-            "c19wdXJjaGFzZRgHIAEoCRI5CgdvcHRpb25zGAggAygLMigubW9kZWwuUHJv",
-            "dG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25zItcBCiFQcm90b0l0ZW1T",
-            "aG9wRW50cnlQdXJjaGFzZU9wdGlvbnMSCgoCaWQYASABKAkSEAoIZW50cnlf",
-            "aWQYAiABKAkSEgoKc3RhcnRfZGF0ZRgDIAEoAxIQCghlbmRfZGF0ZRgEIAEo",
-            "AxIYChBtYXhpbXVtX3B1cmNoYXNlGAUgASgFEhkKEXJlcXVpcmVzX3B1cmNo",
-            "YXNlGAYgASgJEjkKBGNvc3QYByADKAsyKy5tb2RlbC5Qcm90b0l0ZW1TaG9w",
-            "RW50cnlQdXJjaGFzZU9wdGlvbkNvc3QiZQokUHJvdG9JdGVtU2hvcEVudHJ5",
-            "UHVyY2hhc2VPcHRpb25Db3N0EhoKEnB1cmNoYXNlX29wdGlvbl9pZBgBIAEo",
-            "CRIPCgdpdGVtX2lkGAIgASgJEhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1",
-            "Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9t",
-            "b2RlbGIGcHJvdG8z"));
+            "dGVtU2hvcEVudHJ5It8BChJQcm90b0l0ZW1TaG9wRW50cnkSCgoCaWQYASAB",
+            "KAkSFAoMcmVmZXJlbmNlX2lkGAMgASgJEiUKBnNvdXJjZRgEIAEoDjIVLmdh",
+            "bWUuUmVmZXJlbmNlU291cmNlEhAKCHF1YW50aXR5GAUgASgFEhgKEG1heGlt",
+            "dW1fcHVyY2hhc2UYBiABKAUSGQoRcmVxdWlyZXNfcHVyY2hhc2UYByABKAkS",
+            "OQoHb3B0aW9ucxgIIAMoCzIoLm1vZGVsLlByb3RvSXRlbVNob3BFbnRyeVB1",
+            "cmNoYXNlT3B0aW9ucyLFAQohUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VP",
+            "cHRpb25zEgoKAmlkGAEgASgJEhIKCnN0YXJ0X2RhdGUYAyABKAMSEAoIZW5k",
+            "X2RhdGUYBCABKAMSGAoQbWF4aW11bV9wdXJjaGFzZRgFIAEoBRIZChFyZXF1",
+            "aXJlc19wdXJjaGFzZRgGIAEoCRI5CgRjb3N0GAcgAygLMisubW9kZWwuUHJv",
+            "dG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25Db3N0IkkKJFByb3RvSXRl",
+            "bVNob3BFbnRyeVB1cmNoYXNlT3B0aW9uQ29zdBIPCgdpdGVtX2lkGAIgASgJ",
+            "EhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
+            "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entry" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ShopId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptions), global::Model.ProtoItemShopEntryPurchaseOptions.Parser, new[]{ "Id", "EntryId", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptionCost), global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser, new[]{ "PurchaseOptionId", "ItemId", "Quantity" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptions), global::Model.ProtoItemShopEntryPurchaseOptions.Parser, new[]{ "Id", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptionCost), global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser, new[]{ "ItemId", "Quantity" }, null, null, null, null)
           }));
     }
     #endregion
@@ -637,7 +635,6 @@ namespace Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoItemShopEntry(ProtoItemShopEntry other) : this() {
       id_ = other.id_;
-      shopId_ = other.shopId_;
       referenceId_ = other.referenceId_;
       source_ = other.source_;
       quantity_ = other.quantity_;
@@ -660,17 +657,6 @@ namespace Model {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "shop_id" field.</summary>
-    public const int ShopIdFieldNumber = 2;
-    private string shopId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ShopId {
-      get { return shopId_; }
-      set {
-        shopId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -753,7 +739,6 @@ namespace Model {
         return true;
       }
       if (Id != other.Id) return false;
-      if (ShopId != other.ShopId) return false;
       if (ReferenceId != other.ReferenceId) return false;
       if (Source != other.Source) return false;
       if (Quantity != other.Quantity) return false;
@@ -767,7 +752,6 @@ namespace Model {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (ShopId.Length != 0) hash ^= ShopId.GetHashCode();
       if (ReferenceId.Length != 0) hash ^= ReferenceId.GetHashCode();
       if (Source != global::Mobius.Proto.Game.ReferenceSource.None) hash ^= Source.GetHashCode();
       if (Quantity != 0) hash ^= Quantity.GetHashCode();
@@ -793,10 +777,6 @@ namespace Model {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
-      }
-      if (ShopId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ShopId);
       }
       if (ReferenceId.Length != 0) {
         output.WriteRawTag(26);
@@ -832,10 +812,6 @@ namespace Model {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (ShopId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ShopId);
-      }
       if (ReferenceId.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(ReferenceId);
@@ -869,9 +845,6 @@ namespace Model {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (ShopId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShopId);
-      }
       if (ReferenceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReferenceId);
       }
@@ -901,9 +874,6 @@ namespace Model {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
-      }
-      if (other.ShopId.Length != 0) {
-        ShopId = other.ShopId;
       }
       if (other.ReferenceId.Length != 0) {
         ReferenceId = other.ReferenceId;
@@ -937,10 +907,6 @@ namespace Model {
             break;
           case 10: {
             Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            ShopId = input.ReadString();
             break;
           }
           case 26: {
@@ -983,10 +949,6 @@ namespace Model {
             break;
           case 10: {
             Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            ShopId = input.ReadString();
             break;
           }
           case 26: {
@@ -1050,7 +1012,6 @@ namespace Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoItemShopEntryPurchaseOptions(ProtoItemShopEntryPurchaseOptions other) : this() {
       id_ = other.id_;
-      entryId_ = other.entryId_;
       startDate_ = other.startDate_;
       endDate_ = other.endDate_;
       maximumPurchase_ = other.maximumPurchase_;
@@ -1072,17 +1033,6 @@ namespace Model {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 2;
-    private string entryId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string EntryId {
-      get { return entryId_; }
-      set {
-        entryId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1154,7 +1104,6 @@ namespace Model {
         return true;
       }
       if (Id != other.Id) return false;
-      if (EntryId != other.EntryId) return false;
       if (StartDate != other.StartDate) return false;
       if (EndDate != other.EndDate) return false;
       if (MaximumPurchase != other.MaximumPurchase) return false;
@@ -1167,7 +1116,6 @@ namespace Model {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (EntryId.Length != 0) hash ^= EntryId.GetHashCode();
       if (StartDate != 0L) hash ^= StartDate.GetHashCode();
       if (EndDate != 0L) hash ^= EndDate.GetHashCode();
       if (MaximumPurchase != 0) hash ^= MaximumPurchase.GetHashCode();
@@ -1192,10 +1140,6 @@ namespace Model {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
-      }
-      if (EntryId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EntryId);
       }
       if (StartDate != 0L) {
         output.WriteRawTag(24);
@@ -1227,10 +1171,6 @@ namespace Model {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (EntryId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EntryId);
-      }
       if (StartDate != 0L) {
         output.WriteRawTag(24);
         output.WriteInt64(StartDate);
@@ -1260,9 +1200,6 @@ namespace Model {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (EntryId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntryId);
-      }
       if (StartDate != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartDate);
       }
@@ -1289,9 +1226,6 @@ namespace Model {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
-      }
-      if (other.EntryId.Length != 0) {
-        EntryId = other.EntryId;
       }
       if (other.StartDate != 0L) {
         StartDate = other.StartDate;
@@ -1322,10 +1256,6 @@ namespace Model {
             break;
           case 10: {
             Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            EntryId = input.ReadString();
             break;
           }
           case 24: {
@@ -1364,10 +1294,6 @@ namespace Model {
             break;
           case 10: {
             Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            EntryId = input.ReadString();
             break;
           }
           case 24: {
@@ -1426,7 +1352,6 @@ namespace Model {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoItemShopEntryPurchaseOptionCost(ProtoItemShopEntryPurchaseOptionCost other) : this() {
-      purchaseOptionId_ = other.purchaseOptionId_;
       itemId_ = other.itemId_;
       quantity_ = other.quantity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1435,17 +1360,6 @@ namespace Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ProtoItemShopEntryPurchaseOptionCost Clone() {
       return new ProtoItemShopEntryPurchaseOptionCost(this);
-    }
-
-    /// <summary>Field number for the "purchase_option_id" field.</summary>
-    public const int PurchaseOptionIdFieldNumber = 1;
-    private string purchaseOptionId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PurchaseOptionId {
-      get { return purchaseOptionId_; }
-      set {
-        purchaseOptionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
@@ -1483,7 +1397,6 @@ namespace Model {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PurchaseOptionId != other.PurchaseOptionId) return false;
       if (ItemId != other.ItemId) return false;
       if (Quantity != other.Quantity) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1492,7 +1405,6 @@ namespace Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PurchaseOptionId.Length != 0) hash ^= PurchaseOptionId.GetHashCode();
       if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
       if (Quantity != 0) hash ^= Quantity.GetHashCode();
       if (_unknownFields != null) {
@@ -1511,10 +1423,6 @@ namespace Model {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PurchaseOptionId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PurchaseOptionId);
-      }
       if (ItemId.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(ItemId);
@@ -1532,10 +1440,6 @@ namespace Model {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PurchaseOptionId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(PurchaseOptionId);
-      }
       if (ItemId.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(ItemId);
@@ -1553,9 +1457,6 @@ namespace Model {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PurchaseOptionId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PurchaseOptionId);
-      }
       if (ItemId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
       }
@@ -1572,9 +1473,6 @@ namespace Model {
     public void MergeFrom(ProtoItemShopEntryPurchaseOptionCost other) {
       if (other == null) {
         return;
-      }
-      if (other.PurchaseOptionId.Length != 0) {
-        PurchaseOptionId = other.PurchaseOptionId;
       }
       if (other.ItemId.Length != 0) {
         ItemId = other.ItemId;
@@ -1596,10 +1494,6 @@ namespace Model {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            PurchaseOptionId = input.ReadString();
-            break;
-          }
           case 18: {
             ItemId = input.ReadString();
             break;
@@ -1622,10 +1516,6 @@ namespace Model {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            PurchaseOptionId = input.ReadString();
-            break;
-          }
           case 18: {
             ItemId = input.ReadString();
             break;

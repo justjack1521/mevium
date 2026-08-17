@@ -161,7 +161,6 @@ func (x *ProtoItemShop) GetEntry() []*ProtoItemShopEntry {
 type ProtoItemShopEntry struct {
 	state            protoimpl.MessageState               `protogen:"open.v1"`
 	Id               string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ShopId           string                               `protobuf:"bytes,2,opt,name=shop_id,json=shopId,proto3" json:"shop_id,omitempty"`
 	ReferenceId      string                               `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
 	Source           protogame.ReferenceSource            `protobuf:"varint,4,opt,name=source,proto3,enum=game.ReferenceSource" json:"source,omitempty"`
 	Quantity         int32                                `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
@@ -205,13 +204,6 @@ func (*ProtoItemShopEntry) Descriptor() ([]byte, []int) {
 func (x *ProtoItemShopEntry) GetId() string {
 	if x != nil {
 		return x.Id
-	}
-	return ""
-}
-
-func (x *ProtoItemShopEntry) GetShopId() string {
-	if x != nil {
-		return x.ShopId
 	}
 	return ""
 }
@@ -261,7 +253,6 @@ func (x *ProtoItemShopEntry) GetOptions() []*ProtoItemShopEntryPurchaseOptions {
 type ProtoItemShopEntryPurchaseOptions struct {
 	state            protoimpl.MessageState                  `protogen:"open.v1"`
 	Id               string                                  `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	EntryId          string                                  `protobuf:"bytes,2,opt,name=entry_id,json=entryId,proto3" json:"entry_id,omitempty"`
 	StartDate        int64                                   `protobuf:"varint,3,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
 	EndDate          int64                                   `protobuf:"varint,4,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
 	MaximumPurchase  int32                                   `protobuf:"varint,5,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
@@ -308,13 +299,6 @@ func (x *ProtoItemShopEntryPurchaseOptions) GetId() string {
 	return ""
 }
 
-func (x *ProtoItemShopEntryPurchaseOptions) GetEntryId() string {
-	if x != nil {
-		return x.EntryId
-	}
-	return ""
-}
-
 func (x *ProtoItemShopEntryPurchaseOptions) GetStartDate() int64 {
 	if x != nil {
 		return x.StartDate
@@ -351,12 +335,11 @@ func (x *ProtoItemShopEntryPurchaseOptions) GetCost() []*ProtoItemShopEntryPurch
 }
 
 type ProtoItemShopEntryPurchaseOptionCost struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	PurchaseOptionId string                 `protobuf:"bytes,1,opt,name=purchase_option_id,json=purchaseOptionId,proto3" json:"purchase_option_id,omitempty"`
-	ItemId           string                 `protobuf:"bytes,2,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
-	Quantity         int32                  `protobuf:"varint,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ItemId        string                 `protobuf:"bytes,2,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
+	Quantity      int32                  `protobuf:"varint,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 }
 
 func (x *ProtoItemShopEntryPurchaseOptionCost) Reset() {
@@ -389,13 +372,6 @@ func (*ProtoItemShopEntryPurchaseOptionCost) Descriptor() ([]byte, []int) {
 	return file_protomodel_item_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *ProtoItemShopEntryPurchaseOptionCost) GetPurchaseOptionId() string {
-	if x != nil {
-		return x.PurchaseOptionId
-	}
-	return ""
-}
-
 func (x *ProtoItemShopEntryPurchaseOptionCost) GetItemId() string {
 	if x != nil {
 		return x.ItemId
@@ -424,27 +400,24 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\rProtoItemShop\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12/\n" +
-	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\xc7\x02\n" +
+	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\xae\x02\n" +
 	"\x12ProtoItemShopEntry\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
-	"\ashop_id\x18\x02 \x01(\tR\x06shopId\x12!\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12!\n" +
 	"\freference_id\x18\x03 \x01(\tR\vreferenceId\x12-\n" +
 	"\x06source\x18\x04 \x01(\x0e2\x15.game.ReferenceSourceR\x06source\x12\x1a\n" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
 	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
 	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12B\n" +
-	"\aoptions\x18\b \x03(\v2(.model.ProtoItemShopEntryPurchaseOptionsR\aoptions\"\xa1\x02\n" +
+	"\aoptions\x18\b \x03(\v2(.model.ProtoItemShopEntryPurchaseOptionsR\aoptions\"\x86\x02\n" +
 	"!ProtoItemShopEntryPurchaseOptions\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\x12\x19\n" +
-	"\bentry_id\x18\x02 \x01(\tR\aentryId\x12\x1d\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +
 	"start_date\x18\x03 \x01(\x03R\tstartDate\x12\x19\n" +
 	"\bend_date\x18\x04 \x01(\x03R\aendDate\x12)\n" +
 	"\x10maximum_purchase\x18\x05 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
 	"\x11requires_purchase\x18\x06 \x01(\tR\x10requiresPurchase\x12?\n" +
-	"\x04cost\x18\a \x03(\v2+.model.ProtoItemShopEntryPurchaseOptionCostR\x04cost\"\x89\x01\n" +
-	"$ProtoItemShopEntryPurchaseOptionCost\x12,\n" +
-	"\x12purchase_option_id\x18\x01 \x01(\tR\x10purchaseOptionId\x12\x17\n" +
+	"\x04cost\x18\a \x03(\v2+.model.ProtoItemShopEntryPurchaseOptionCostR\x04cost\"[\n" +
+	"$ProtoItemShopEntryPurchaseOptionCost\x12\x17\n" +
 	"\aitem_id\x18\x02 \x01(\tR\x06itemId\x12\x1a\n" +
 	"\bquantity\x18\x03 \x01(\x05R\bquantityB8Z6github.com/justjack1521/mevium/pkg/genproto/protomodelb\x06proto3"
 
