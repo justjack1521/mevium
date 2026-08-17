@@ -159,14 +159,15 @@ func (x *ProtoItemShop) GetEntry() []*ProtoItemShopEntry {
 }
 
 type ProtoItemShopEntry struct {
-	state            protoimpl.MessageState    `protogen:"open.v1"`
-	Id               string                    `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	ShopId           string                    `protobuf:"bytes,2,opt,name=shop_id,json=shopId,proto3" json:"shop_id,omitempty"`
-	ReferenceId      string                    `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
-	Source           protogame.ReferenceSource `protobuf:"varint,4,opt,name=source,proto3,enum=game.ReferenceSource" json:"source,omitempty"`
-	Quantity         int32                     `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
-	MaximumPurchase  int32                     `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
-	RequiresPurchase string                    `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	state            protoimpl.MessageState               `protogen:"open.v1"`
+	Id               string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ShopId           string                               `protobuf:"bytes,2,opt,name=shop_id,json=shopId,proto3" json:"shop_id,omitempty"`
+	ReferenceId      string                               `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
+	Source           protogame.ReferenceSource            `protobuf:"varint,4,opt,name=source,proto3,enum=game.ReferenceSource" json:"source,omitempty"`
+	Quantity         int32                                `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	MaximumPurchase  int32                                `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
+	RequiresPurchase string                               `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
+	Options          []*ProtoItemShopEntryPurchaseOptions `protobuf:"bytes,8,rep,name=options,proto3" json:"options,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -248,6 +249,13 @@ func (x *ProtoItemShopEntry) GetRequiresPurchase() string {
 		return x.RequiresPurchase
 	}
 	return ""
+}
+
+func (x *ProtoItemShopEntry) GetOptions() []*ProtoItemShopEntryPurchaseOptions {
+	if x != nil {
+		return x.Options
+	}
+	return nil
 }
 
 type ProtoItemShopEntryPurchaseOptions struct {
@@ -348,7 +356,7 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\rProtoItemShop\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12/\n" +
-	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\x83\x02\n" +
+	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\xc7\x02\n" +
 	"\x12ProtoItemShopEntry\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
 	"\ashop_id\x18\x02 \x01(\tR\x06shopId\x12!\n" +
@@ -356,7 +364,8 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\x06source\x18\x04 \x01(\x0e2\x15.game.ReferenceSourceR\x06source\x12\x1a\n" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
 	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
-	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\"\xe0\x01\n" +
+	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12B\n" +
+	"\aoptions\x18\b \x03(\v2(.model.ProtoItemShopEntryPurchaseOptionsR\aoptions\"\xe0\x01\n" +
 	"!ProtoItemShopEntryPurchaseOptions\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x19\n" +
 	"\bentry_id\x18\x02 \x01(\tR\aentryId\x12\x1d\n" +
@@ -389,11 +398,12 @@ var file_protomodel_item_proto_goTypes = []any{
 var file_protomodel_item_proto_depIdxs = []int32{
 	2, // 0: model.ProtoItemShop.entry:type_name -> model.ProtoItemShopEntry
 	4, // 1: model.ProtoItemShopEntry.source:type_name -> game.ReferenceSource
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	3, // 2: model.ProtoItemShopEntry.options:type_name -> model.ProtoItemShopEntryPurchaseOptions
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_protomodel_item_proto_init() }

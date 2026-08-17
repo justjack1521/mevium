@@ -28,6 +28,7 @@ message ProtoItemShopEntry {
   int32 quantity = 5;
   int32 maximum_purchase = 6;
   string requires_purchase = 7;
+  repeated ProtoItemShopEntryPurchaseOptions options = 8;
 }
 
 message ProtoItemShopEntryPurchaseOptions {

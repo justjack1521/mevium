@@ -29,22 +29,23 @@ namespace Model {
             "GAIgASgIEgwKBG5hbWUYAyABKAkSDwoHbWF4aW11bRgEIAEoBRIXCg9tb250",
             "aGx5X21heGltdW0YBSABKAUiUwoNUHJvdG9JdGVtU2hvcBIKCgJpZBgBIAEo",
             "CRIMCgRuYW1lGAIgASgJEigKBWVudHJ5GAMgAygLMhkubW9kZWwuUHJvdG9J",
-            "dGVtU2hvcEVudHJ5IrUBChJQcm90b0l0ZW1TaG9wRW50cnkSCgoCaWQYASAB",
+            "dGVtU2hvcEVudHJ5IvABChJQcm90b0l0ZW1TaG9wRW50cnkSCgoCaWQYASAB",
             "KAkSDwoHc2hvcF9pZBgCIAEoCRIUCgxyZWZlcmVuY2VfaWQYAyABKAkSJQoG",
             "c291cmNlGAQgASgOMhUuZ2FtZS5SZWZlcmVuY2VTb3VyY2USEAoIcXVhbnRp",
             "dHkYBSABKAUSGAoQbWF4aW11bV9wdXJjaGFzZRgGIAEoBRIZChFyZXF1aXJl",
-            "c19wdXJjaGFzZRgHIAEoCSKcAQohUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hh",
-            "c2VPcHRpb25zEgoKAmlkGAEgASgJEhAKCGVudHJ5X2lkGAIgASgJEhIKCnN0",
-            "YXJ0X2RhdGUYAyABKAMSEAoIZW5kX2RhdGUYBCABKAMSGAoQbWF4aW11bV9w",
-            "dXJjaGFzZRgFIAEoBRIZChFyZXF1aXJlc19wdXJjaGFzZRgGIAEoCUI4WjZn",
-            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
-            "b3RvbW9kZWxiBnByb3RvMw=="));
+            "c19wdXJjaGFzZRgHIAEoCRI5CgdvcHRpb25zGAggAygLMigubW9kZWwuUHJv",
+            "dG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25zIpwBCiFQcm90b0l0ZW1T",
+            "aG9wRW50cnlQdXJjaGFzZU9wdGlvbnMSCgoCaWQYASABKAkSEAoIZW50cnlf",
+            "aWQYAiABKAkSEgoKc3RhcnRfZGF0ZRgDIAEoAxIQCghlbmRfZGF0ZRgEIAEo",
+            "AxIYChBtYXhpbXVtX3B1cmNoYXNlGAUgASgFEhkKEXJlcXVpcmVzX3B1cmNo",
+            "YXNlGAYgASgJQjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21ldml1bS9w",
+            "a2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entry" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ShopId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "ShopId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptions), global::Model.ProtoItemShopEntryPurchaseOptions.Parser, new[]{ "Id", "EntryId", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase" }, null, null, null, null)
           }));
     }
@@ -637,6 +638,7 @@ namespace Model {
       quantity_ = other.quantity_;
       maximumPurchase_ = other.maximumPurchase_;
       requiresPurchase_ = other.requiresPurchase_;
+      options_ = other.options_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -722,6 +724,16 @@ namespace Model {
       }
     }
 
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Model.ProtoItemShopEntryPurchaseOptions> _repeated_options_codec
+        = pb::FieldCodec.ForMessage(66, global::Model.ProtoItemShopEntryPurchaseOptions.Parser);
+    private readonly pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptions> options_ = new pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptions>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Model.ProtoItemShopEntryPurchaseOptions> Options {
+      get { return options_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoItemShopEntry);
@@ -742,6 +754,7 @@ namespace Model {
       if (Quantity != other.Quantity) return false;
       if (MaximumPurchase != other.MaximumPurchase) return false;
       if (RequiresPurchase != other.RequiresPurchase) return false;
+      if(!options_.Equals(other.options_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -755,6 +768,7 @@ namespace Model {
       if (Quantity != 0) hash ^= Quantity.GetHashCode();
       if (MaximumPurchase != 0) hash ^= MaximumPurchase.GetHashCode();
       if (RequiresPurchase.Length != 0) hash ^= RequiresPurchase.GetHashCode();
+      hash ^= options_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -799,6 +813,7 @@ namespace Model {
         output.WriteRawTag(58);
         output.WriteString(RequiresPurchase);
       }
+      options_.WriteTo(output, _repeated_options_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -836,6 +851,7 @@ namespace Model {
         output.WriteRawTag(58);
         output.WriteString(RequiresPurchase);
       }
+      options_.WriteTo(ref output, _repeated_options_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -866,6 +882,7 @@ namespace Model {
       if (RequiresPurchase.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequiresPurchase);
       }
+      size += options_.CalculateSize(_repeated_options_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -898,6 +915,7 @@ namespace Model {
       if (other.RequiresPurchase.Length != 0) {
         RequiresPurchase = other.RequiresPurchase;
       }
+      options_.Add(other.options_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -940,6 +958,10 @@ namespace Model {
             RequiresPurchase = input.ReadString();
             break;
           }
+          case 66: {
+            options_.AddEntriesFrom(input, _repeated_options_codec);
+            break;
+          }
         }
       }
     #endif
@@ -980,6 +1002,10 @@ namespace Model {
           }
           case 58: {
             RequiresPurchase = input.ReadString();
+            break;
+          }
+          case 66: {
+            options_.AddEntriesFrom(ref input, _repeated_options_codec);
             break;
           }
         }
