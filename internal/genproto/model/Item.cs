@@ -24,14 +24,13 @@ namespace Model {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVwcm90b21vZGVsL2l0ZW0ucHJvdG8SBW1vZGVsGhRwcm90b2dhbWUvZGF0",
-            "YS5wcm90byJiCghCYXNlSXRlbRIOCgZzeXNfaWQYASABKAkSDgoGYWN0aXZl",
-            "GAIgASgIEgwKBG5hbWUYAyABKAkSDwoHbWF4aW11bRgEIAEoBRIXCg9tb250",
-            "aGx5X21heGltdW0YBSABKAUiUwoNUHJvdG9JdGVtU2hvcBIKCgJpZBgBIAEo",
-            "CRIMCgRuYW1lGAIgASgJEigKBWVudHJ5GAMgAygLMhkubW9kZWwuUHJvdG9J",
-            "dGVtU2hvcEVudHJ5It8BChJQcm90b0l0ZW1TaG9wRW50cnkSCgoCaWQYASAB",
-            "KAkSFAoMcmVmZXJlbmNlX2lkGAMgASgJEiUKBnNvdXJjZRgEIAEoDjIVLmdh",
-            "bWUuUmVmZXJlbmNlU291cmNlEhAKCHF1YW50aXR5GAUgASgFEhgKEG1heGlt",
+            "ChVwcm90b21vZGVsL2l0ZW0ucHJvdG8SBW1vZGVsImIKCEJhc2VJdGVtEg4K",
+            "BnN5c19pZBgBIAEoCRIOCgZhY3RpdmUYAiABKAgSDAoEbmFtZRgDIAEoCRIP",
+            "CgdtYXhpbXVtGAQgASgFEhcKD21vbnRobHlfbWF4aW11bRgFIAEoBSJTCg1Q",
+            "cm90b0l0ZW1TaG9wEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSKAoFZW50",
+            "cnkYAyADKAsyGS5tb2RlbC5Qcm90b0l0ZW1TaG9wRW50cnkiyAEKElByb3Rv",
+            "SXRlbVNob3BFbnRyeRIKCgJpZBgBIAEoCRIUCgxyZWZlcmVuY2VfaWQYAyAB",
+            "KAkSDgoGc291cmNlGAQgASgFEhAKCHF1YW50aXR5GAUgASgFEhgKEG1heGlt",
             "dW1fcHVyY2hhc2UYBiABKAUSGQoRcmVxdWlyZXNfcHVyY2hhc2UYByABKAkS",
             "OQoHb3B0aW9ucxgIIAMoCzIoLm1vZGVsLlByb3RvSXRlbVNob3BFbnRyeVB1",
             "cmNoYXNlT3B0aW9ucyLFAQohUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VP",
@@ -43,7 +42,7 @@ namespace Model {
             "EhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1Yi5jb20vanVzdGphY2sxNTIx",
             "L21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entry" }, null, null, null, null),
@@ -673,9 +672,9 @@ namespace Model {
 
     /// <summary>Field number for the "source" field.</summary>
     public const int SourceFieldNumber = 4;
-    private global::Mobius.Proto.Game.ReferenceSource source_ = global::Mobius.Proto.Game.ReferenceSource.None;
+    private int source_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mobius.Proto.Game.ReferenceSource Source {
+    public int Source {
       get { return source_; }
       set {
         source_ = value;
@@ -753,7 +752,7 @@ namespace Model {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (ReferenceId.Length != 0) hash ^= ReferenceId.GetHashCode();
-      if (Source != global::Mobius.Proto.Game.ReferenceSource.None) hash ^= Source.GetHashCode();
+      if (Source != 0) hash ^= Source.GetHashCode();
       if (Quantity != 0) hash ^= Quantity.GetHashCode();
       if (MaximumPurchase != 0) hash ^= MaximumPurchase.GetHashCode();
       if (RequiresPurchase.Length != 0) hash ^= RequiresPurchase.GetHashCode();
@@ -782,9 +781,9 @@ namespace Model {
         output.WriteRawTag(26);
         output.WriteString(ReferenceId);
       }
-      if (Source != global::Mobius.Proto.Game.ReferenceSource.None) {
+      if (Source != 0) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) Source);
+        output.WriteInt32(Source);
       }
       if (Quantity != 0) {
         output.WriteRawTag(40);
@@ -816,9 +815,9 @@ namespace Model {
         output.WriteRawTag(26);
         output.WriteString(ReferenceId);
       }
-      if (Source != global::Mobius.Proto.Game.ReferenceSource.None) {
+      if (Source != 0) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) Source);
+        output.WriteInt32(Source);
       }
       if (Quantity != 0) {
         output.WriteRawTag(40);
@@ -848,8 +847,8 @@ namespace Model {
       if (ReferenceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReferenceId);
       }
-      if (Source != global::Mobius.Proto.Game.ReferenceSource.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
+      if (Source != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Source);
       }
       if (Quantity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
@@ -878,7 +877,7 @@ namespace Model {
       if (other.ReferenceId.Length != 0) {
         ReferenceId = other.ReferenceId;
       }
-      if (other.Source != global::Mobius.Proto.Game.ReferenceSource.None) {
+      if (other.Source != 0) {
         Source = other.Source;
       }
       if (other.Quantity != 0) {
@@ -914,7 +913,7 @@ namespace Model {
             break;
           }
           case 32: {
-            Source = (global::Mobius.Proto.Game.ReferenceSource) input.ReadEnum();
+            Source = input.ReadInt32();
             break;
           }
           case 40: {
@@ -956,7 +955,7 @@ namespace Model {
             break;
           }
           case 32: {
-            Source = (global::Mobius.Proto.Game.ReferenceSource) input.ReadEnum();
+            Source = input.ReadInt32();
             break;
           }
           case 40: {

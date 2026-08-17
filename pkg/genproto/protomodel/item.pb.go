@@ -7,7 +7,6 @@
 package protomodel
 
 import (
-	protogame "github.com/justjack1521/mevium/pkg/genproto/protogame"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -162,7 +161,7 @@ type ProtoItemShopEntry struct {
 	state            protoimpl.MessageState               `protogen:"open.v1"`
 	Id               string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	ReferenceId      string                               `protobuf:"bytes,3,opt,name=reference_id,json=referenceId,proto3" json:"reference_id,omitempty"`
-	Source           protogame.ReferenceSource            `protobuf:"varint,4,opt,name=source,proto3,enum=game.ReferenceSource" json:"source,omitempty"`
+	Source           int32                                `protobuf:"varint,4,opt,name=source,proto3" json:"source,omitempty"`
 	Quantity         int32                                `protobuf:"varint,5,opt,name=quantity,proto3" json:"quantity,omitempty"`
 	MaximumPurchase  int32                                `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
 	RequiresPurchase string                               `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
@@ -215,11 +214,11 @@ func (x *ProtoItemShopEntry) GetReferenceId() string {
 	return ""
 }
 
-func (x *ProtoItemShopEntry) GetSource() protogame.ReferenceSource {
+func (x *ProtoItemShopEntry) GetSource() int32 {
 	if x != nil {
 		return x.Source
 	}
-	return protogame.ReferenceSource(0)
+	return 0
 }
 
 func (x *ProtoItemShopEntry) GetQuantity() int32 {
@@ -390,7 +389,7 @@ var File_protomodel_item_proto protoreflect.FileDescriptor
 
 const file_protomodel_item_proto_rawDesc = "" +
 	"\n" +
-	"\x15protomodel/item.proto\x12\x05model\x1a\x14protogame/data.proto\"\x90\x01\n" +
+	"\x15protomodel/item.proto\x12\x05model\"\x90\x01\n" +
 	"\bBaseItem\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12\x16\n" +
 	"\x06active\x18\x02 \x01(\bR\x06active\x12\x12\n" +
@@ -400,11 +399,11 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\rProtoItemShop\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12/\n" +
-	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\xae\x02\n" +
+	"\x05entry\x18\x03 \x03(\v2\x19.model.ProtoItemShopEntryR\x05entry\"\x97\x02\n" +
 	"\x12ProtoItemShopEntry\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12!\n" +
-	"\freference_id\x18\x03 \x01(\tR\vreferenceId\x12-\n" +
-	"\x06source\x18\x04 \x01(\x0e2\x15.game.ReferenceSourceR\x06source\x12\x1a\n" +
+	"\freference_id\x18\x03 \x01(\tR\vreferenceId\x12\x16\n" +
+	"\x06source\x18\x04 \x01(\x05R\x06source\x12\x1a\n" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
 	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
 	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12B\n" +
@@ -440,18 +439,16 @@ var file_protomodel_item_proto_goTypes = []any{
 	(*ProtoItemShopEntry)(nil),                   // 2: model.ProtoItemShopEntry
 	(*ProtoItemShopEntryPurchaseOptions)(nil),    // 3: model.ProtoItemShopEntryPurchaseOptions
 	(*ProtoItemShopEntryPurchaseOptionCost)(nil), // 4: model.ProtoItemShopEntryPurchaseOptionCost
-	(protogame.ReferenceSource)(0),               // 5: game.ReferenceSource
 }
 var file_protomodel_item_proto_depIdxs = []int32{
 	2, // 0: model.ProtoItemShop.entry:type_name -> model.ProtoItemShopEntry
-	5, // 1: model.ProtoItemShopEntry.source:type_name -> game.ReferenceSource
-	3, // 2: model.ProtoItemShopEntry.options:type_name -> model.ProtoItemShopEntryPurchaseOptions
-	4, // 3: model.ProtoItemShopEntryPurchaseOptions.cost:type_name -> model.ProtoItemShopEntryPurchaseOptionCost
-	4, // [4:4] is the sub-list for method output_type
-	4, // [4:4] is the sub-list for method input_type
-	4, // [4:4] is the sub-list for extension type_name
-	4, // [4:4] is the sub-list for extension extendee
-	0, // [0:4] is the sub-list for field type_name
+	3, // 1: model.ProtoItemShopEntry.options:type_name -> model.ProtoItemShopEntryPurchaseOptions
+	4, // 2: model.ProtoItemShopEntryPurchaseOptions.cost:type_name -> model.ProtoItemShopEntryPurchaseOptionCost
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_protomodel_item_proto_init() }
