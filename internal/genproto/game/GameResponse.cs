@@ -165,9 +165,13 @@ namespace Mobius.Proto.Game {
             "bHVlUGFpchIQCgh1bmxvY2tlZBgDIAEoCBIRCgljb21wbGV0ZWQYBCABKAgi",
             "JAoWQ29uZmlybUdpZnRCb3hSZXNwb25zZRIKCgJpZBgBIAEoCSJUChhDbGFp",
             "bUFjaGlldmVtZW50UmVzcG9uc2USCgoCaWQYASABKAkSLAoMaW5ib3hfY2xh",
-            "aW1zGAIgAygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtQktaNWdpdGh1Yi5j",
-            "b20vanVzdGphY2sxNTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1l",
-            "qgIRTW9iaXVzLlByb3RvLkdhbWViBnByb3RvMw=="));
+            "aW1zGAIgAygLMhYuZ2FtZS5Qcm90b01haWxCb3hJdGVtIrsBChlQdXJjaGFz",
+            "ZVNob3BFbnRyeVJlc3BvbnNlEj4KFnJlY2VpdmVkX2FiaWxpdHlfY2FyZHMY",
+            "ASADKAsyHi5nYW1lLlByb3RvQWJpbGl0eUNhcmRJbnN0YW5jZRIwCg5yZWNl",
+            "aXZlZF9pdGVtcxgCIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyEiwK",
+            "CmNvc3RfaXRlbXMYAyADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpckJL",
+            "WjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3Rv",
+            "L3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Model.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -218,7 +222,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaStartResponse), global::Mobius.Proto.Game.ArenaStartResponse.Parser, new[]{ "ArenaEntryData", "Events", "StaminaCurrent", "StaminaDec", "ArenaId", "ArenaEntryId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimResponse), global::Mobius.Proto.Game.ArenaClaimResponse.Parser, new[]{ "Id", "RewardItems", "Unlocked", "Completed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ConfirmGiftBoxResponse), global::Mobius.Proto.Game.ConfirmGiftBoxResponse.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimAchievementResponse), global::Mobius.Proto.Game.ClaimAchievementResponse.Parser, new[]{ "Id", "InboxClaims" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimAchievementResponse), global::Mobius.Proto.Game.ClaimAchievementResponse.Parser, new[]{ "Id", "InboxClaims" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseShopEntryResponse), global::Mobius.Proto.Game.PurchaseShopEntryResponse.Parser, new[]{ "ReceivedAbilityCards", "ReceivedItems", "CostItems" }, null, null, null, null)
           }));
     }
     #endregion
@@ -11499,6 +11504,217 @@ namespace Mobius.Proto.Game {
           }
           case 18: {
             inboxClaims_.AddEntriesFrom(ref input, _repeated_inboxClaims_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class PurchaseShopEntryResponse : pb::IMessage<PurchaseShopEntryResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PurchaseShopEntryResponse> _parser = new pb::MessageParser<PurchaseShopEntryResponse>(() => new PurchaseShopEntryResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PurchaseShopEntryResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameResponseReflection.Descriptor.MessageTypes[48]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PurchaseShopEntryResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PurchaseShopEntryResponse(PurchaseShopEntryResponse other) : this() {
+      receivedAbilityCards_ = other.receivedAbilityCards_.Clone();
+      receivedItems_ = other.receivedItems_.Clone();
+      costItems_ = other.costItems_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PurchaseShopEntryResponse Clone() {
+      return new PurchaseShopEntryResponse(this);
+    }
+
+    /// <summary>Field number for the "received_ability_cards" field.</summary>
+    public const int ReceivedAbilityCardsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoAbilityCardInstance> _repeated_receivedAbilityCards_codec
+        = pb::FieldCodec.ForMessage(10, global::Mobius.Proto.Game.ProtoAbilityCardInstance.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoAbilityCardInstance> receivedAbilityCards_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoAbilityCardInstance>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoAbilityCardInstance> ReceivedAbilityCards {
+      get { return receivedAbilityCards_; }
+    }
+
+    /// <summary>Field number for the "received_items" field.</summary>
+    public const int ReceivedItemsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoItemValuePair> _repeated_receivedItems_codec
+        = pb::FieldCodec.ForMessage(18, global::Mobius.Proto.Game.ProtoItemValuePair.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> receivedItems_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> ReceivedItems {
+      get { return receivedItems_; }
+    }
+
+    /// <summary>Field number for the "cost_items" field.</summary>
+    public const int CostItemsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoItemValuePair> _repeated_costItems_codec
+        = pb::FieldCodec.ForMessage(26, global::Mobius.Proto.Game.ProtoItemValuePair.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> costItems_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoItemValuePair> CostItems {
+      get { return costItems_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PurchaseShopEntryResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PurchaseShopEntryResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!receivedAbilityCards_.Equals(other.receivedAbilityCards_)) return false;
+      if(!receivedItems_.Equals(other.receivedItems_)) return false;
+      if(!costItems_.Equals(other.costItems_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= receivedAbilityCards_.GetHashCode();
+      hash ^= receivedItems_.GetHashCode();
+      hash ^= costItems_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      receivedAbilityCards_.WriteTo(output, _repeated_receivedAbilityCards_codec);
+      receivedItems_.WriteTo(output, _repeated_receivedItems_codec);
+      costItems_.WriteTo(output, _repeated_costItems_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      receivedAbilityCards_.WriteTo(ref output, _repeated_receivedAbilityCards_codec);
+      receivedItems_.WriteTo(ref output, _repeated_receivedItems_codec);
+      costItems_.WriteTo(ref output, _repeated_costItems_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += receivedAbilityCards_.CalculateSize(_repeated_receivedAbilityCards_codec);
+      size += receivedItems_.CalculateSize(_repeated_receivedItems_codec);
+      size += costItems_.CalculateSize(_repeated_costItems_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PurchaseShopEntryResponse other) {
+      if (other == null) {
+        return;
+      }
+      receivedAbilityCards_.Add(other.receivedAbilityCards_);
+      receivedItems_.Add(other.receivedItems_);
+      costItems_.Add(other.costItems_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            receivedAbilityCards_.AddEntriesFrom(input, _repeated_receivedAbilityCards_codec);
+            break;
+          }
+          case 18: {
+            receivedItems_.AddEntriesFrom(input, _repeated_receivedItems_codec);
+            break;
+          }
+          case 26: {
+            costItems_.AddEntriesFrom(input, _repeated_costItems_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            receivedAbilityCards_.AddEntriesFrom(ref input, _repeated_receivedAbilityCards_codec);
+            break;
+          }
+          case 18: {
+            receivedItems_.AddEntriesFrom(ref input, _repeated_receivedItems_codec);
+            break;
+          }
+          case 26: {
+            costItems_.AddEntriesFrom(ref input, _repeated_costItems_codec);
             break;
           }
         }

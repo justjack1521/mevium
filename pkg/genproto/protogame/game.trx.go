@@ -388,6 +388,18 @@ func NewClaimAchievementRequest(bytes []byte) (*ClaimAchievementRequest, error) 
 	return req, nil
 }
 
+func NewPurchaseShopEntryRequest(bytes []byte) (*PurchaseShopEntryRequest, error) {
+	req := &PurchaseShopEntryRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *PurchaseShopEntryResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *RegionMapNodeUnlockResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

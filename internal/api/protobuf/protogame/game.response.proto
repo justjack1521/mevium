@@ -298,3 +298,9 @@ message ClaimAchievementResponse {
   string id = 1;
   repeated game.ProtoMailBoxItem inbox_claims = 2;
 }
+
+message PurchaseShopEntryResponse {
+  repeated game.ProtoAbilityCardInstance received_ability_cards = 1;
+  repeated ProtoItemValuePair received_items = 2;
+  repeated ProtoItemValuePair cost_items = 3;
+}

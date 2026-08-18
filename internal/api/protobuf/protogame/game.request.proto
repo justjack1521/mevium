@@ -59,6 +59,7 @@ enum GameRequestType {
   ARENA_CLAIM = 5000;
   CONFIRM_GIFT_BOX = 5100;
   CLAIM_ACHIEVEMENT = 5200;
+  PURCHASE_SHOP_ENTRY = 5300;
 }
 
 enum TeleportRequestType {
@@ -327,4 +328,10 @@ message ConfirmGiftBoxRequest {
 
 message ClaimAchievementRequest {
   string id = 1;
+}
+
+message PurchaseShopEntryRequest {
+  string entry_id = 1;
+  string purchase_option_id = 2;
+  int32 quantity = 3;
 }
