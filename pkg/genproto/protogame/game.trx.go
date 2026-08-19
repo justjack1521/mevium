@@ -396,6 +396,18 @@ func NewPurchaseShopEntryRequest(bytes []byte) (*PurchaseShopEntryRequest, error
 	return req, nil
 }
 
+func NewSkillPanelMultiUnlockRequest(bytes []byte) (*SkillPanelMultiUnlockRequest, error) {
+	req := &SkillPanelMultiUnlockRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *SkillPanelMultiUnlockResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func (x *PurchaseShopEntryResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }

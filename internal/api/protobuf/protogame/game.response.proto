@@ -178,6 +178,21 @@ message SkillPanelUnlockResponse {
   int32 speed_stat_increase = 11;
 }
 
+message SkillPanelMultiUnlockResponse {
+  repeated ProtoItemValuePair items_removed = 1;   // aggregated by item id
+  int32 hp_stat_increase = 2;
+  int32 attack_stat_increase = 3;
+  int32 break_power_stat_increase = 4;
+  int32 magic_stat_increase = 5;
+  int32 sub_job_unlock_increase = 6;
+  int32 ultimate_boost_increase = 7;
+  map<string, int32> weapon_unlock = 8;
+  map<string, int32> auto_abilities_added = 9;
+  int32 crown_level_increase = 10;
+  int32 speed_stat_increase = 11;
+  int32 panels_unlocked = 12;
+}
+
 message TeleportResponse {
   string region_map = 1;
   int32 region_map_node = 2;

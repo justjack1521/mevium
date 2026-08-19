@@ -1762,6 +1762,66 @@ func (x *SkillPanelUnlockRequest) GetAlternate() bool {
 	return false
 }
 
+type SkillPanelMultiUnlockRequest struct {
+	state         protoimpl.MessageState         `protogen:"open.v1"`
+	JobCardIndex  int32                          `protobuf:"varint,1,opt,name=job_card_index,json=jobCardIndex,proto3" json:"job_card_index,omitempty"`
+	Panels        []*ProtoSkillPanelUnlockTarget `protobuf:"bytes,2,rep,name=panels,proto3" json:"panels,omitempty"`
+	Alternate     bool                           `protobuf:"varint,3,opt,name=alternate,proto3" json:"alternate,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SkillPanelMultiUnlockRequest) Reset() {
+	*x = SkillPanelMultiUnlockRequest{}
+	mi := &file_protogame_game_request_proto_msgTypes[27]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SkillPanelMultiUnlockRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SkillPanelMultiUnlockRequest) ProtoMessage() {}
+
+func (x *SkillPanelMultiUnlockRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_game_request_proto_msgTypes[27]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SkillPanelMultiUnlockRequest.ProtoReflect.Descriptor instead.
+func (*SkillPanelMultiUnlockRequest) Descriptor() ([]byte, []int) {
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{27}
+}
+
+func (x *SkillPanelMultiUnlockRequest) GetJobCardIndex() int32 {
+	if x != nil {
+		return x.JobCardIndex
+	}
+	return 0
+}
+
+func (x *SkillPanelMultiUnlockRequest) GetPanels() []*ProtoSkillPanelUnlockTarget {
+	if x != nil {
+		return x.Panels
+	}
+	return nil
+}
+
+func (x *SkillPanelMultiUnlockRequest) GetAlternate() bool {
+	if x != nil {
+		return x.Alternate
+	}
+	return false
+}
+
 type StaminaRestoreRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	MultiPlayer   bool                   `protobuf:"varint,1,opt,name=multi_player,json=multiPlayer,proto3" json:"multi_player,omitempty"`
@@ -1771,7 +1831,7 @@ type StaminaRestoreRequest struct {
 
 func (x *StaminaRestoreRequest) Reset() {
 	*x = StaminaRestoreRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[27]
+	mi := &file_protogame_game_request_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1783,7 +1843,7 @@ func (x *StaminaRestoreRequest) String() string {
 func (*StaminaRestoreRequest) ProtoMessage() {}
 
 func (x *StaminaRestoreRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[27]
+	mi := &file_protogame_game_request_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1796,7 +1856,7 @@ func (x *StaminaRestoreRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StaminaRestoreRequest.ProtoReflect.Descriptor instead.
 func (*StaminaRestoreRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{27}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *StaminaRestoreRequest) GetMultiPlayer() bool {
@@ -1817,7 +1877,7 @@ type TeleportRequest struct {
 
 func (x *TeleportRequest) Reset() {
 	*x = TeleportRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[28]
+	mi := &file_protogame_game_request_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1829,7 +1889,7 @@ func (x *TeleportRequest) String() string {
 func (*TeleportRequest) ProtoMessage() {}
 
 func (x *TeleportRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[28]
+	mi := &file_protogame_game_request_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1842,7 +1902,7 @@ func (x *TeleportRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TeleportRequest.ProtoReflect.Descriptor instead.
 func (*TeleportRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{28}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *TeleportRequest) GetRegionMap() string {
@@ -1878,7 +1938,7 @@ type UpdateProfileRequest struct {
 
 func (x *UpdateProfileRequest) Reset() {
 	*x = UpdateProfileRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[29]
+	mi := &file_protogame_game_request_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1890,7 +1950,7 @@ func (x *UpdateProfileRequest) String() string {
 func (*UpdateProfileRequest) ProtoMessage() {}
 
 func (x *UpdateProfileRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[29]
+	mi := &file_protogame_game_request_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1903,7 +1963,7 @@ func (x *UpdateProfileRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateProfileRequest.ProtoReflect.Descriptor instead.
 func (*UpdateProfileRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{29}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *UpdateProfileRequest) GetName() string {
@@ -1944,7 +2004,7 @@ type ExpandAbilityCardSlotRequest struct {
 
 func (x *ExpandAbilityCardSlotRequest) Reset() {
 	*x = ExpandAbilityCardSlotRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[30]
+	mi := &file_protogame_game_request_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1956,7 +2016,7 @@ func (x *ExpandAbilityCardSlotRequest) String() string {
 func (*ExpandAbilityCardSlotRequest) ProtoMessage() {}
 
 func (x *ExpandAbilityCardSlotRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[30]
+	mi := &file_protogame_game_request_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1969,7 +2029,7 @@ func (x *ExpandAbilityCardSlotRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExpandAbilityCardSlotRequest.ProtoReflect.Descriptor instead.
 func (*ExpandAbilityCardSlotRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{30}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *ExpandAbilityCardSlotRequest) GetSource() int32 {
@@ -1998,7 +2058,7 @@ type ItemShopItemPurchaseRequest struct {
 
 func (x *ItemShopItemPurchaseRequest) Reset() {
 	*x = ItemShopItemPurchaseRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[31]
+	mi := &file_protogame_game_request_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2010,7 +2070,7 @@ func (x *ItemShopItemPurchaseRequest) String() string {
 func (*ItemShopItemPurchaseRequest) ProtoMessage() {}
 
 func (x *ItemShopItemPurchaseRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[31]
+	mi := &file_protogame_game_request_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2023,7 +2083,7 @@ func (x *ItemShopItemPurchaseRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ItemShopItemPurchaseRequest.ProtoReflect.Descriptor instead.
 func (*ItemShopItemPurchaseRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{31}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *ItemShopItemPurchaseRequest) GetReceiveItem() string {
@@ -2067,7 +2127,7 @@ type ItemShopCardPurchaseRequest struct {
 
 func (x *ItemShopCardPurchaseRequest) Reset() {
 	*x = ItemShopCardPurchaseRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[32]
+	mi := &file_protogame_game_request_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2079,7 +2139,7 @@ func (x *ItemShopCardPurchaseRequest) String() string {
 func (*ItemShopCardPurchaseRequest) ProtoMessage() {}
 
 func (x *ItemShopCardPurchaseRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[32]
+	mi := &file_protogame_game_request_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2092,7 +2152,7 @@ func (x *ItemShopCardPurchaseRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ItemShopCardPurchaseRequest.ProtoReflect.Descriptor instead.
 func (*ItemShopCardPurchaseRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{32}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *ItemShopCardPurchaseRequest) GetReceiveCard() string {
@@ -2140,7 +2200,7 @@ type AbilityShopPurchaseRequest struct {
 
 func (x *AbilityShopPurchaseRequest) Reset() {
 	*x = AbilityShopPurchaseRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[33]
+	mi := &file_protogame_game_request_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2152,7 +2212,7 @@ func (x *AbilityShopPurchaseRequest) String() string {
 func (*AbilityShopPurchaseRequest) ProtoMessage() {}
 
 func (x *AbilityShopPurchaseRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[33]
+	mi := &file_protogame_game_request_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2165,7 +2225,7 @@ func (x *AbilityShopPurchaseRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AbilityShopPurchaseRequest.ProtoReflect.Descriptor instead.
 func (*AbilityShopPurchaseRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{33}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *AbilityShopPurchaseRequest) GetAbilityCardId() string {
@@ -2191,7 +2251,7 @@ type ClaimRegionMapRequest struct {
 
 func (x *ClaimRegionMapRequest) Reset() {
 	*x = ClaimRegionMapRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[34]
+	mi := &file_protogame_game_request_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2203,7 +2263,7 @@ func (x *ClaimRegionMapRequest) String() string {
 func (*ClaimRegionMapRequest) ProtoMessage() {}
 
 func (x *ClaimRegionMapRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[34]
+	mi := &file_protogame_game_request_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2216,7 +2276,7 @@ func (x *ClaimRegionMapRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ClaimRegionMapRequest.ProtoReflect.Descriptor instead.
 func (*ClaimRegionMapRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{34}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *ClaimRegionMapRequest) GetRegionMapId() string {
@@ -2236,7 +2296,7 @@ type AbilityCardSummonRequest struct {
 
 func (x *AbilityCardSummonRequest) Reset() {
 	*x = AbilityCardSummonRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[35]
+	mi := &file_protogame_game_request_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2248,7 +2308,7 @@ func (x *AbilityCardSummonRequest) String() string {
 func (*AbilityCardSummonRequest) ProtoMessage() {}
 
 func (x *AbilityCardSummonRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[35]
+	mi := &file_protogame_game_request_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2261,7 +2321,7 @@ func (x *AbilityCardSummonRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AbilityCardSummonRequest.ProtoReflect.Descriptor instead.
 func (*AbilityCardSummonRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{35}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *AbilityCardSummonRequest) GetBannerId() string {
@@ -2287,7 +2347,7 @@ type ExecuteDialogueRequest struct {
 
 func (x *ExecuteDialogueRequest) Reset() {
 	*x = ExecuteDialogueRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[36]
+	mi := &file_protogame_game_request_proto_msgTypes[37]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2299,7 +2359,7 @@ func (x *ExecuteDialogueRequest) String() string {
 func (*ExecuteDialogueRequest) ProtoMessage() {}
 
 func (x *ExecuteDialogueRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[36]
+	mi := &file_protogame_game_request_proto_msgTypes[37]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2312,7 +2372,7 @@ func (x *ExecuteDialogueRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExecuteDialogueRequest.ProtoReflect.Descriptor instead.
 func (*ExecuteDialogueRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{36}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{37}
 }
 
 func (x *ExecuteDialogueRequest) GetSysId() string {
@@ -2331,7 +2391,7 @@ type ClaimItemDistillerRequest struct {
 
 func (x *ClaimItemDistillerRequest) Reset() {
 	*x = ClaimItemDistillerRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[37]
+	mi := &file_protogame_game_request_proto_msgTypes[38]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2343,7 +2403,7 @@ func (x *ClaimItemDistillerRequest) String() string {
 func (*ClaimItemDistillerRequest) ProtoMessage() {}
 
 func (x *ClaimItemDistillerRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[37]
+	mi := &file_protogame_game_request_proto_msgTypes[38]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2356,7 +2416,7 @@ func (x *ClaimItemDistillerRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ClaimItemDistillerRequest.ProtoReflect.Descriptor instead.
 func (*ClaimItemDistillerRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{37}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{38}
 }
 
 func (x *ClaimItemDistillerRequest) GetItemId() string {
@@ -2375,7 +2435,7 @@ type RegionMapUnlockRequest struct {
 
 func (x *RegionMapUnlockRequest) Reset() {
 	*x = RegionMapUnlockRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[38]
+	mi := &file_protogame_game_request_proto_msgTypes[39]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2387,7 +2447,7 @@ func (x *RegionMapUnlockRequest) String() string {
 func (*RegionMapUnlockRequest) ProtoMessage() {}
 
 func (x *RegionMapUnlockRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[38]
+	mi := &file_protogame_game_request_proto_msgTypes[39]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2400,7 +2460,7 @@ func (x *RegionMapUnlockRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegionMapUnlockRequest.ProtoReflect.Descriptor instead.
 func (*RegionMapUnlockRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{38}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *RegionMapUnlockRequest) GetMapId() string {
@@ -2419,7 +2479,7 @@ type RegionMapNodeUnlockRequest struct {
 
 func (x *RegionMapNodeUnlockRequest) Reset() {
 	*x = RegionMapNodeUnlockRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[39]
+	mi := &file_protogame_game_request_proto_msgTypes[40]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2431,7 +2491,7 @@ func (x *RegionMapNodeUnlockRequest) String() string {
 func (*RegionMapNodeUnlockRequest) ProtoMessage() {}
 
 func (x *RegionMapNodeUnlockRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[39]
+	mi := &file_protogame_game_request_proto_msgTypes[40]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2444,7 +2504,7 @@ func (x *RegionMapNodeUnlockRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegionMapNodeUnlockRequest.ProtoReflect.Descriptor instead.
 func (*RegionMapNodeUnlockRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{39}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *RegionMapNodeUnlockRequest) GetLockId() string {
@@ -2463,7 +2523,7 @@ type ClaimDungeonRequest struct {
 
 func (x *ClaimDungeonRequest) Reset() {
 	*x = ClaimDungeonRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[40]
+	mi := &file_protogame_game_request_proto_msgTypes[41]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2475,7 +2535,7 @@ func (x *ClaimDungeonRequest) String() string {
 func (*ClaimDungeonRequest) ProtoMessage() {}
 
 func (x *ClaimDungeonRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[40]
+	mi := &file_protogame_game_request_proto_msgTypes[41]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2488,7 +2548,7 @@ func (x *ClaimDungeonRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ClaimDungeonRequest.ProtoReflect.Descriptor instead.
 func (*ClaimDungeonRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{40}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *ClaimDungeonRequest) GetId() string {
@@ -2507,7 +2567,7 @@ type PurchaseCompanionRequest struct {
 
 func (x *PurchaseCompanionRequest) Reset() {
 	*x = PurchaseCompanionRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[41]
+	mi := &file_protogame_game_request_proto_msgTypes[42]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2519,7 +2579,7 @@ func (x *PurchaseCompanionRequest) String() string {
 func (*PurchaseCompanionRequest) ProtoMessage() {}
 
 func (x *PurchaseCompanionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[41]
+	mi := &file_protogame_game_request_proto_msgTypes[42]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2532,7 +2592,7 @@ func (x *PurchaseCompanionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PurchaseCompanionRequest.ProtoReflect.Descriptor instead.
 func (*PurchaseCompanionRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{41}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *PurchaseCompanionRequest) GetId() string {
@@ -2551,7 +2611,7 @@ type PurchaseGiftBoxRequest struct {
 
 func (x *PurchaseGiftBoxRequest) Reset() {
 	*x = PurchaseGiftBoxRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[42]
+	mi := &file_protogame_game_request_proto_msgTypes[43]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2563,7 +2623,7 @@ func (x *PurchaseGiftBoxRequest) String() string {
 func (*PurchaseGiftBoxRequest) ProtoMessage() {}
 
 func (x *PurchaseGiftBoxRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[42]
+	mi := &file_protogame_game_request_proto_msgTypes[43]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2576,7 +2636,7 @@ func (x *PurchaseGiftBoxRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PurchaseGiftBoxRequest.ProtoReflect.Descriptor instead.
 func (*PurchaseGiftBoxRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{42}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *PurchaseGiftBoxRequest) GetId() string {
@@ -2596,7 +2656,7 @@ type StaminaDepositRequest struct {
 
 func (x *StaminaDepositRequest) Reset() {
 	*x = StaminaDepositRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[43]
+	mi := &file_protogame_game_request_proto_msgTypes[44]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2608,7 +2668,7 @@ func (x *StaminaDepositRequest) String() string {
 func (*StaminaDepositRequest) ProtoMessage() {}
 
 func (x *StaminaDepositRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[43]
+	mi := &file_protogame_game_request_proto_msgTypes[44]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2621,7 +2681,7 @@ func (x *StaminaDepositRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StaminaDepositRequest.ProtoReflect.Descriptor instead.
 func (*StaminaDepositRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{43}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *StaminaDepositRequest) GetAmount() int32 {
@@ -2648,7 +2708,7 @@ type StaminaConvertRequest struct {
 
 func (x *StaminaConvertRequest) Reset() {
 	*x = StaminaConvertRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[44]
+	mi := &file_protogame_game_request_proto_msgTypes[45]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2660,7 +2720,7 @@ func (x *StaminaConvertRequest) String() string {
 func (*StaminaConvertRequest) ProtoMessage() {}
 
 func (x *StaminaConvertRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[44]
+	mi := &file_protogame_game_request_proto_msgTypes[45]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2673,7 +2733,7 @@ func (x *StaminaConvertRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StaminaConvertRequest.ProtoReflect.Descriptor instead.
 func (*StaminaConvertRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{44}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *StaminaConvertRequest) GetAmount() int32 {
@@ -2699,7 +2759,7 @@ type ArenaStartRequest struct {
 
 func (x *ArenaStartRequest) Reset() {
 	*x = ArenaStartRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[45]
+	mi := &file_protogame_game_request_proto_msgTypes[46]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2711,7 +2771,7 @@ func (x *ArenaStartRequest) String() string {
 func (*ArenaStartRequest) ProtoMessage() {}
 
 func (x *ArenaStartRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[45]
+	mi := &file_protogame_game_request_proto_msgTypes[46]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2724,7 +2784,7 @@ func (x *ArenaStartRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ArenaStartRequest.ProtoReflect.Descriptor instead.
 func (*ArenaStartRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{45}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *ArenaStartRequest) GetId() string {
@@ -2743,7 +2803,7 @@ type ArenaClaimRequest struct {
 
 func (x *ArenaClaimRequest) Reset() {
 	*x = ArenaClaimRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[46]
+	mi := &file_protogame_game_request_proto_msgTypes[47]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2755,7 +2815,7 @@ func (x *ArenaClaimRequest) String() string {
 func (*ArenaClaimRequest) ProtoMessage() {}
 
 func (x *ArenaClaimRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[46]
+	mi := &file_protogame_game_request_proto_msgTypes[47]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2768,7 +2828,7 @@ func (x *ArenaClaimRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ArenaClaimRequest.ProtoReflect.Descriptor instead.
 func (*ArenaClaimRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{46}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{47}
 }
 
 func (x *ArenaClaimRequest) GetId() string {
@@ -2789,7 +2849,7 @@ type ConfirmGiftBoxRequest struct {
 
 func (x *ConfirmGiftBoxRequest) Reset() {
 	*x = ConfirmGiftBoxRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[47]
+	mi := &file_protogame_game_request_proto_msgTypes[48]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2801,7 +2861,7 @@ func (x *ConfirmGiftBoxRequest) String() string {
 func (*ConfirmGiftBoxRequest) ProtoMessage() {}
 
 func (x *ConfirmGiftBoxRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[47]
+	mi := &file_protogame_game_request_proto_msgTypes[48]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2814,7 +2874,7 @@ func (x *ConfirmGiftBoxRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfirmGiftBoxRequest.ProtoReflect.Descriptor instead.
 func (*ConfirmGiftBoxRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{47}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{48}
 }
 
 func (x *ConfirmGiftBoxRequest) GetId() string {
@@ -2847,7 +2907,7 @@ type ClaimAchievementRequest struct {
 
 func (x *ClaimAchievementRequest) Reset() {
 	*x = ClaimAchievementRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[48]
+	mi := &file_protogame_game_request_proto_msgTypes[49]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2859,7 +2919,7 @@ func (x *ClaimAchievementRequest) String() string {
 func (*ClaimAchievementRequest) ProtoMessage() {}
 
 func (x *ClaimAchievementRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[48]
+	mi := &file_protogame_game_request_proto_msgTypes[49]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2872,7 +2932,7 @@ func (x *ClaimAchievementRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ClaimAchievementRequest.ProtoReflect.Descriptor instead.
 func (*ClaimAchievementRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{48}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{49}
 }
 
 func (x *ClaimAchievementRequest) GetId() string {
@@ -2893,7 +2953,7 @@ type PurchaseShopEntryRequest struct {
 
 func (x *PurchaseShopEntryRequest) Reset() {
 	*x = PurchaseShopEntryRequest{}
-	mi := &file_protogame_game_request_proto_msgTypes[49]
+	mi := &file_protogame_game_request_proto_msgTypes[50]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2905,7 +2965,7 @@ func (x *PurchaseShopEntryRequest) String() string {
 func (*PurchaseShopEntryRequest) ProtoMessage() {}
 
 func (x *PurchaseShopEntryRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_game_request_proto_msgTypes[49]
+	mi := &file_protogame_game_request_proto_msgTypes[50]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2918,7 +2978,7 @@ func (x *PurchaseShopEntryRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PurchaseShopEntryRequest.ProtoReflect.Descriptor instead.
 func (*PurchaseShopEntryRequest) Descriptor() ([]byte, []int) {
-	return file_protogame_game_request_proto_rawDescGZIP(), []int{49}
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{50}
 }
 
 func (x *PurchaseShopEntryRequest) GetEntryId() string {
@@ -3049,7 +3109,11 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"page_index\x18\x03 \x01(\x05R\tpageIndex\x12\x1f\n" +
 	"\vpanel_index\x18\x04 \x01(\x05R\n" +
 	"panelIndex\x12\x1c\n" +
-	"\talternate\x18\x05 \x01(\bR\talternate\":\n" +
+	"\talternate\x18\x05 \x01(\bR\talternate\"\x9d\x01\n" +
+	"\x1cSkillPanelMultiUnlockRequest\x12$\n" +
+	"\x0ejob_card_index\x18\x01 \x01(\x05R\fjobCardIndex\x129\n" +
+	"\x06panels\x18\x02 \x03(\v2!.game.ProtoSkillPanelUnlockTargetR\x06panels\x12\x1c\n" +
+	"\talternate\x18\x03 \x01(\bR\talternate\":\n" +
 	"\x15StaminaRestoreRequest\x12!\n" +
 	"\fmulti_player\x18\x01 \x01(\bR\vmultiPlayer\"\x8b\x01\n" +
 	"\x0fTeleportRequest\x12\x1d\n" +
@@ -3193,7 +3257,7 @@ func file_protogame_game_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protogame_game_request_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_protogame_game_request_proto_msgTypes = make([]protoimpl.MessageInfo, 50)
+var file_protogame_game_request_proto_msgTypes = make([]protoimpl.MessageInfo, 51)
 var file_protogame_game_request_proto_goTypes = []any{
 	(GameRequestType)(0),                           // 0: game.GameRequestType
 	(TeleportRequestType)(0),                       // 1: game.TeleportRequestType
@@ -3224,42 +3288,45 @@ var file_protogame_game_request_proto_goTypes = []any{
 	(*ProcessRegionEventRequest)(nil),              // 26: game.ProcessRegionEventRequest
 	(*ProcessRegionNodeEventRequest)(nil),          // 27: game.ProcessRegionNodeEventRequest
 	(*SkillPanelUnlockRequest)(nil),                // 28: game.SkillPanelUnlockRequest
-	(*StaminaRestoreRequest)(nil),                  // 29: game.StaminaRestoreRequest
-	(*TeleportRequest)(nil),                        // 30: game.TeleportRequest
-	(*UpdateProfileRequest)(nil),                   // 31: game.UpdateProfileRequest
-	(*ExpandAbilityCardSlotRequest)(nil),           // 32: game.ExpandAbilityCardSlotRequest
-	(*ItemShopItemPurchaseRequest)(nil),            // 33: game.ItemShopItemPurchaseRequest
-	(*ItemShopCardPurchaseRequest)(nil),            // 34: game.ItemShopCardPurchaseRequest
-	(*AbilityShopPurchaseRequest)(nil),             // 35: game.AbilityShopPurchaseRequest
-	(*ClaimRegionMapRequest)(nil),                  // 36: game.ClaimRegionMapRequest
-	(*AbilityCardSummonRequest)(nil),               // 37: game.AbilityCardSummonRequest
-	(*ExecuteDialogueRequest)(nil),                 // 38: game.ExecuteDialogueRequest
-	(*ClaimItemDistillerRequest)(nil),              // 39: game.ClaimItemDistillerRequest
-	(*RegionMapUnlockRequest)(nil),                 // 40: game.RegionMapUnlockRequest
-	(*RegionMapNodeUnlockRequest)(nil),             // 41: game.RegionMapNodeUnlockRequest
-	(*ClaimDungeonRequest)(nil),                    // 42: game.ClaimDungeonRequest
-	(*PurchaseCompanionRequest)(nil),               // 43: game.PurchaseCompanionRequest
-	(*PurchaseGiftBoxRequest)(nil),                 // 44: game.PurchaseGiftBoxRequest
-	(*StaminaDepositRequest)(nil),                  // 45: game.StaminaDepositRequest
-	(*StaminaConvertRequest)(nil),                  // 46: game.StaminaConvertRequest
-	(*ArenaStartRequest)(nil),                      // 47: game.ArenaStartRequest
-	(*ArenaClaimRequest)(nil),                      // 48: game.ArenaClaimRequest
-	(*ConfirmGiftBoxRequest)(nil),                  // 49: game.ConfirmGiftBoxRequest
-	(*ClaimAchievementRequest)(nil),                // 50: game.ClaimAchievementRequest
-	(*PurchaseShopEntryRequest)(nil),               // 51: game.PurchaseShopEntryRequest
-	(*ProtoBattleStatistics)(nil),                  // 52: game.ProtoBattleStatistics
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 53: identity.ProtoAbilityCardIdentity
+	(*SkillPanelMultiUnlockRequest)(nil),           // 29: game.SkillPanelMultiUnlockRequest
+	(*StaminaRestoreRequest)(nil),                  // 30: game.StaminaRestoreRequest
+	(*TeleportRequest)(nil),                        // 31: game.TeleportRequest
+	(*UpdateProfileRequest)(nil),                   // 32: game.UpdateProfileRequest
+	(*ExpandAbilityCardSlotRequest)(nil),           // 33: game.ExpandAbilityCardSlotRequest
+	(*ItemShopItemPurchaseRequest)(nil),            // 34: game.ItemShopItemPurchaseRequest
+	(*ItemShopCardPurchaseRequest)(nil),            // 35: game.ItemShopCardPurchaseRequest
+	(*AbilityShopPurchaseRequest)(nil),             // 36: game.AbilityShopPurchaseRequest
+	(*ClaimRegionMapRequest)(nil),                  // 37: game.ClaimRegionMapRequest
+	(*AbilityCardSummonRequest)(nil),               // 38: game.AbilityCardSummonRequest
+	(*ExecuteDialogueRequest)(nil),                 // 39: game.ExecuteDialogueRequest
+	(*ClaimItemDistillerRequest)(nil),              // 40: game.ClaimItemDistillerRequest
+	(*RegionMapUnlockRequest)(nil),                 // 41: game.RegionMapUnlockRequest
+	(*RegionMapNodeUnlockRequest)(nil),             // 42: game.RegionMapNodeUnlockRequest
+	(*ClaimDungeonRequest)(nil),                    // 43: game.ClaimDungeonRequest
+	(*PurchaseCompanionRequest)(nil),               // 44: game.PurchaseCompanionRequest
+	(*PurchaseGiftBoxRequest)(nil),                 // 45: game.PurchaseGiftBoxRequest
+	(*StaminaDepositRequest)(nil),                  // 46: game.StaminaDepositRequest
+	(*StaminaConvertRequest)(nil),                  // 47: game.StaminaConvertRequest
+	(*ArenaStartRequest)(nil),                      // 48: game.ArenaStartRequest
+	(*ArenaClaimRequest)(nil),                      // 49: game.ArenaClaimRequest
+	(*ConfirmGiftBoxRequest)(nil),                  // 50: game.ConfirmGiftBoxRequest
+	(*ClaimAchievementRequest)(nil),                // 51: game.ClaimAchievementRequest
+	(*PurchaseShopEntryRequest)(nil),               // 52: game.PurchaseShopEntryRequest
+	(*ProtoBattleStatistics)(nil),                  // 53: game.ProtoBattleStatistics
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 54: identity.ProtoAbilityCardIdentity
+	(*ProtoSkillPanelUnlockTarget)(nil),            // 55: game.ProtoSkillPanelUnlockTarget
 }
 var file_protogame_game_request_proto_depIdxs = []int32{
-	52, // 0: game.BattleCompleteRequest.statistics:type_name -> game.ProtoBattleStatistics
-	53, // 1: game.BattleStartRequest.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	53, // 0: game.BattleCompleteRequest.statistics:type_name -> game.ProtoBattleStatistics
+	54, // 1: game.BattleStartRequest.rental_card:type_name -> identity.ProtoAbilityCardIdentity
 	22, // 2: game.DeckEditAllRequest.Requests:type_name -> game.DeckEditRequest
-	1,  // 3: game.TeleportRequest.source:type_name -> game.TeleportRequestType
-	4,  // [4:4] is the sub-list for method output_type
-	4,  // [4:4] is the sub-list for method input_type
-	4,  // [4:4] is the sub-list for extension type_name
-	4,  // [4:4] is the sub-list for extension extendee
-	0,  // [0:4] is the sub-list for field type_name
+	55, // 3: game.SkillPanelMultiUnlockRequest.panels:type_name -> game.ProtoSkillPanelUnlockTarget
+	1,  // 4: game.TeleportRequest.source:type_name -> game.TeleportRequestType
+	5,  // [5:5] is the sub-list for method output_type
+	5,  // [5:5] is the sub-list for method input_type
+	5,  // [5:5] is the sub-list for extension type_name
+	5,  // [5:5] is the sub-list for extension extendee
+	0,  // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_protogame_game_request_proto_init() }
@@ -3274,7 +3341,7 @@ func file_protogame_game_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_game_request_proto_rawDesc), len(file_protogame_game_request_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   50,
+			NumMessages:   51,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -47,6 +47,7 @@ const (
 	MeviusGameService_ProcessRegionNodeEvent_FullMethodName = "/service.MeviusGameService/ProcessRegionNodeEvent"
 	MeviusGameService_RestoreStamina_FullMethodName         = "/service.MeviusGameService/RestoreStamina"
 	MeviusGameService_SkillPanelUnlock_FullMethodName       = "/service.MeviusGameService/SkillPanelUnlock"
+	MeviusGameService_SkillPanelMultiUnlock_FullMethodName  = "/service.MeviusGameService/SkillPanelMultiUnlock"
 	MeviusGameService_Teleport_FullMethodName               = "/service.MeviusGameService/Teleport"
 	MeviusGameService_UpdateProfile_FullMethodName          = "/service.MeviusGameService/UpdateProfile"
 	MeviusGameService_PurchaseItem_FullMethodName           = "/service.MeviusGameService/PurchaseItem"
@@ -102,6 +103,7 @@ type MeviusGameServiceClient interface {
 	ProcessRegionNodeEvent(ctx context.Context, in *protogame.ProcessRegionNodeEventRequest, opts ...grpc.CallOption) (*protogame.ProcessRegionEventResponse, error)
 	RestoreStamina(ctx context.Context, in *protogame.StaminaRestoreRequest, opts ...grpc.CallOption) (*protogame.StaminaRestoreResponse, error)
 	SkillPanelUnlock(ctx context.Context, in *protogame.SkillPanelUnlockRequest, opts ...grpc.CallOption) (*protogame.SkillPanelUnlockResponse, error)
+	SkillPanelMultiUnlock(ctx context.Context, in *protogame.SkillPanelMultiUnlockRequest, opts ...grpc.CallOption) (*protogame.SkillPanelMultiUnlockResponse, error)
 	Teleport(ctx context.Context, in *protogame.TeleportRequest, opts ...grpc.CallOption) (*protogame.TeleportResponse, error)
 	UpdateProfile(ctx context.Context, in *protogame.UpdateProfileRequest, opts ...grpc.CallOption) (*protogame.UpdateProfileResponse, error)
 	PurchaseItem(ctx context.Context, in *protogame.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopItemPurchaseResponse, error)
@@ -376,6 +378,15 @@ func (c *meviusGameServiceClient) SkillPanelUnlock(ctx context.Context, in *prot
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) SkillPanelMultiUnlock(ctx context.Context, in *protogame.SkillPanelMultiUnlockRequest, opts ...grpc.CallOption) (*protogame.SkillPanelMultiUnlockResponse, error) {
+	out := new(protogame.SkillPanelMultiUnlockResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_SkillPanelMultiUnlock_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusGameServiceClient) Teleport(ctx context.Context, in *protogame.TeleportRequest, opts ...grpc.CallOption) (*protogame.TeleportResponse, error) {
 	out := new(protogame.TeleportResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_Teleport_FullMethodName, in, out, opts...)
@@ -597,6 +608,7 @@ type MeviusGameServiceServer interface {
 	ProcessRegionNodeEvent(context.Context, *protogame.ProcessRegionNodeEventRequest) (*protogame.ProcessRegionEventResponse, error)
 	RestoreStamina(context.Context, *protogame.StaminaRestoreRequest) (*protogame.StaminaRestoreResponse, error)
 	SkillPanelUnlock(context.Context, *protogame.SkillPanelUnlockRequest) (*protogame.SkillPanelUnlockResponse, error)
+	SkillPanelMultiUnlock(context.Context, *protogame.SkillPanelMultiUnlockRequest) (*protogame.SkillPanelMultiUnlockResponse, error)
 	Teleport(context.Context, *protogame.TeleportRequest) (*protogame.TeleportResponse, error)
 	UpdateProfile(context.Context, *protogame.UpdateProfileRequest) (*protogame.UpdateProfileResponse, error)
 	PurchaseItem(context.Context, *protogame.ItemShopItemPurchaseRequest) (*protogame.ItemShopItemPurchaseResponse, error)
@@ -704,6 +716,9 @@ func (UnimplementedMeviusGameServiceServer) RestoreStamina(context.Context, *pro
 }
 func (UnimplementedMeviusGameServiceServer) SkillPanelUnlock(context.Context, *protogame.SkillPanelUnlockRequest) (*protogame.SkillPanelUnlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SkillPanelUnlock not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) SkillPanelMultiUnlock(context.Context, *protogame.SkillPanelMultiUnlockRequest) (*protogame.SkillPanelMultiUnlockResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SkillPanelMultiUnlock not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protogame.TeleportRequest) (*protogame.TeleportResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Teleport not implemented")
@@ -1266,6 +1281,24 @@ func _MeviusGameService_SkillPanelUnlock_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_SkillPanelMultiUnlock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.SkillPanelMultiUnlockRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).SkillPanelMultiUnlock(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_SkillPanelMultiUnlock_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).SkillPanelMultiUnlock(ctx, req.(*protogame.SkillPanelMultiUnlockRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusGameService_Teleport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protogame.TeleportRequest)
 	if err := dec(in); err != nil {
@@ -1758,6 +1791,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SkillPanelUnlock",
 			Handler:    _MeviusGameService_SkillPanelUnlock_Handler,
+		},
+		{
+			MethodName: "SkillPanelMultiUnlock",
+			Handler:    _MeviusGameService_SkillPanelMultiUnlock_Handler,
 		},
 		{
 			MethodName: "Teleport",

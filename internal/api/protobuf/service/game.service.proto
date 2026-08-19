@@ -36,6 +36,7 @@ service MeviusGameService {
   rpc ProcessRegionNodeEvent(game.ProcessRegionNodeEventRequest) returns (game.ProcessRegionEventResponse) {}
   rpc RestoreStamina(game.StaminaRestoreRequest) returns (game.StaminaRestoreResponse) {}
   rpc SkillPanelUnlock(game.SkillPanelUnlockRequest) returns (game.SkillPanelUnlockResponse) {}
+  rpc SkillPanelMultiUnlock(game.SkillPanelMultiUnlockRequest) returns (game.SkillPanelMultiUnlockResponse) {}
   rpc Teleport(game.TeleportRequest) returns (game.TeleportResponse) {}
   rpc UpdateProfile(game.UpdateProfileRequest) returns (game.UpdateProfileResponse) {}
   rpc PurchaseItem(game.ItemShopItemPurchaseRequest) returns (game.ItemShopItemPurchaseResponse) {}
