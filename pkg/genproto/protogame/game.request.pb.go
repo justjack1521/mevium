@@ -33,6 +33,7 @@ const (
 	GameRequestType_CARD_FILTER_SORT          GameRequestType = 500
 	GameRequestType_CARD_FAVOURITE            GameRequestType = 600
 	GameRequestType_SKILL_PANEL               GameRequestType = 700
+	GameRequestType_SKILL_PANEL_MULTI         GameRequestType = 750
 	GameRequestType_DECK_EDIT                 GameRequestType = 800
 	GameRequestType_DECK_EDIT_ALL             GameRequestType = 900
 	GameRequestType_TELEPORT                  GameRequestType = 1000
@@ -89,6 +90,7 @@ var (
 		500:  "CARD_FILTER_SORT",
 		600:  "CARD_FAVOURITE",
 		700:  "SKILL_PANEL",
+		750:  "SKILL_PANEL_MULTI",
 		800:  "DECK_EDIT",
 		900:  "DECK_EDIT_ALL",
 		1000: "TELEPORT",
@@ -142,6 +144,7 @@ var (
 		"CARD_FILTER_SORT":          500,
 		"CARD_FAVOURITE":            600,
 		"SKILL_PANEL":               700,
+		"SKILL_PANEL_MULTI":         750,
 		"DECK_EDIT":                 800,
 		"DECK_EDIT_ALL":             900,
 		"TELEPORT":                  1000,
@@ -3182,7 +3185,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x18PurchaseShopEntryRequest\x12\x19\n" +
 	"\bentry_id\x18\x01 \x01(\tR\aentryId\x12,\n" +
 	"\x12purchase_option_id\x18\x02 \x01(\tR\x10purchaseOptionId\x12\x1a\n" +
-	"\bquantity\x18\x03 \x01(\x05R\bquantity*\xff\b\n" +
+	"\bquantity\x18\x03 \x01(\x05R\bquantity*\x97\t\n" +
 	"\x0fGameRequestType\x12\b\n" +
 	"\x04BASE\x10\x00\x12\x10\n" +
 	"\vGET_PROFILE\x10\xc8\x01\x12\x13\n" +
@@ -3191,7 +3194,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\tCARD_SALE\x10\x90\x03\x12\x15\n" +
 	"\x10CARD_FILTER_SORT\x10\xf4\x03\x12\x13\n" +
 	"\x0eCARD_FAVOURITE\x10\xd8\x04\x12\x10\n" +
-	"\vSKILL_PANEL\x10\xbc\x05\x12\x0e\n" +
+	"\vSKILL_PANEL\x10\xbc\x05\x12\x16\n" +
+	"\x11SKILL_PANEL_MULTI\x10\xee\x05\x12\x0e\n" +
 	"\tDECK_EDIT\x10\xa0\x06\x12\x12\n" +
 	"\rDECK_EDIT_ALL\x10\x84\a\x12\r\n" +
 	"\bTELEPORT\x10\xe8\a\x12\x19\n" +

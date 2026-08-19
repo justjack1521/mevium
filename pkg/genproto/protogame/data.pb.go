@@ -1855,6 +1855,7 @@ type BattleItemDropResult struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	ItemId        string                 `protobuf:"bytes,1,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
 	Quantity      int32                  `protobuf:"varint,2,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	SkipOnRevive  bool                   `protobuf:"varint,3,opt,name=skip_on_revive,json=skipOnRevive,proto3" json:"skip_on_revive,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1901,6 +1902,13 @@ func (x *BattleItemDropResult) GetQuantity() int32 {
 		return x.Quantity
 	}
 	return 0
+}
+
+func (x *BattleItemDropResult) GetSkipOnRevive() bool {
+	if x != nil {
+		return x.SkipOnRevive
+	}
+	return false
 }
 
 type BattleCardDropResult struct {
@@ -7283,10 +7291,11 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\n" +
 	"wave_index\x18\x03 \x01(\x05R\twaveIndex\x12\x1f\n" +
 	"\vgroup_index\x18\x04 \x01(\x05R\n" +
-	"groupIndex\"K\n" +
+	"groupIndex\"q\n" +
 	"\x14BattleItemDropResult\x12\x17\n" +
 	"\aitem_id\x18\x01 \x01(\tR\x06itemId\x12\x1a\n" +
-	"\bquantity\x18\x02 \x01(\x05R\bquantity\"J\n" +
+	"\bquantity\x18\x02 \x01(\x05R\bquantity\x12$\n" +
+	"\x0eskip_on_revive\x18\x03 \x01(\bR\fskipOnRevive\"J\n" +
 	"\x14BattleCardDropResult\x12\x17\n" +
 	"\acard_id\x18\x01 \x01(\tR\x06cardId\x12\x19\n" +
 	"\bnew_card\x18\x02 \x01(\bR\anewCard\"[\n" +
