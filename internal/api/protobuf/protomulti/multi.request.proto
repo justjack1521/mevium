@@ -133,6 +133,7 @@ message ParticipantWatchRequest {
 }
 
 message ParticipantUnwatchRequest {
+  string lobby_id = 1;
 }
 
 message GameCatchUpRequest  {

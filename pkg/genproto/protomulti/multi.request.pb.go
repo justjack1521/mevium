@@ -1100,6 +1100,7 @@ func (x *ParticipantWatchRequest) GetLobbyId() string {
 
 type ParticipantUnwatchRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	LobbyId       string                 `protobuf:"bytes,1,opt,name=lobby_id,json=lobbyId,proto3" json:"lobby_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1132,6 +1133,13 @@ func (x *ParticipantUnwatchRequest) ProtoReflect() protoreflect.Message {
 // Deprecated: Use ParticipantUnwatchRequest.ProtoReflect.Descriptor instead.
 func (*ParticipantUnwatchRequest) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{20}
+}
+
+func (x *ParticipantUnwatchRequest) GetLobbyId() string {
+	if x != nil {
+		return x.LobbyId
+	}
+	return ""
 }
 
 type GameCatchUpRequest struct {
@@ -1244,8 +1252,9 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\vuse_stamina\x18\x03 \x01(\bR\n" +
 	"useStamina\"4\n" +
 	"\x17ParticipantWatchRequest\x12\x19\n" +
-	"\blobby_id\x18\x02 \x01(\tR\alobbyId\"\x1b\n" +
-	"\x19ParticipantUnwatchRequest\"9\n" +
+	"\blobby_id\x18\x02 \x01(\tR\alobbyId\"6\n" +
+	"\x19ParticipantUnwatchRequest\x12\x19\n" +
+	"\blobby_id\x18\x01 \x01(\tR\alobbyId\"9\n" +
 	"\x12GameCatchUpRequest\x12#\n" +
 	"\rlast_sequence\x18\x01 \x01(\x04R\flastSequence*\x84\x04\n" +
 	"\x10MultiRequestType\x12\x15\n" +
