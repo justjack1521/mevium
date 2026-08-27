@@ -265,3 +265,27 @@ func NewGameSyncNotification(bytes []byte) (*GameSyncNotification, error) {
 func (x *GameSyncNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGamePlayerDeathNotification(bytes []byte) (*GamePlayerDeathNotification, error) {
+	req := &GamePlayerDeathNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerDeathNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGamePlayerReviveNotification(bytes []byte) (*GamePlayerReviveNotification, error) {
+	req := &GamePlayerReviveNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReviveNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

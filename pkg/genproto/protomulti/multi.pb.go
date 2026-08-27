@@ -80,6 +80,8 @@ const (
 	GameSyncPhase_GAME_SYNC_PHASE_UNKNOWN     GameSyncPhase = 0
 	GameSyncPhase_GAME_SYNC_PHASE_PLAYER_TURN GameSyncPhase = 1
 	GameSyncPhase_GAME_SYNC_PHASE_ENEMY_TURN  GameSyncPhase = 2
+	GameSyncPhase_GAME_SYNC_PHASE_PENDING     GameSyncPhase = 3
+	GameSyncPhase_GAME_SYNC_PHASE_END_GAME    GameSyncPhase = 4
 )
 
 // Enum value maps for GameSyncPhase.
@@ -88,11 +90,15 @@ var (
 		0: "GAME_SYNC_PHASE_UNKNOWN",
 		1: "GAME_SYNC_PHASE_PLAYER_TURN",
 		2: "GAME_SYNC_PHASE_ENEMY_TURN",
+		3: "GAME_SYNC_PHASE_PENDING",
+		4: "GAME_SYNC_PHASE_END_GAME",
 	}
 	GameSyncPhase_value = map[string]int32{
 		"GAME_SYNC_PHASE_UNKNOWN":     0,
 		"GAME_SYNC_PHASE_PLAYER_TURN": 1,
 		"GAME_SYNC_PHASE_ENEMY_TURN":  2,
+		"GAME_SYNC_PHASE_PENDING":     3,
+		"GAME_SYNC_PHASE_END_GAME":    4,
 	}
 )
 
@@ -496,14 +502,15 @@ func (x *ProtoGameInstance) GetRegisteredAt() int64 {
 }
 
 type ProtoGameInstanceOptions struct {
-	state              protoimpl.MessageState             `protogen:"open.v1"`
-	MinimumPlayerLevel int32                              `protobuf:"varint,1,opt,name=minimum_player_level,json=minimumPlayerLevel,proto3" json:"minimum_player_level,omitempty"`
-	MaxRunTime         int64                              `protobuf:"varint,2,opt,name=max_run_time,json=maxRunTime,proto3" json:"max_run_time,omitempty"`
-	PlayerTurnDuration int64                              `protobuf:"varint,3,opt,name=player_turn_duration,json=playerTurnDuration,proto3" json:"player_turn_duration,omitempty"`
-	MaxPlayerCount     int32                              `protobuf:"varint,4,opt,name=max_player_count,json=maxPlayerCount,proto3" json:"max_player_count,omitempty"`
-	Restrictions       []*ProtoLobbyPlayerSlotRestriction `protobuf:"bytes,20,rep,name=restrictions,proto3" json:"restrictions,omitempty"`
-	unknownFields      protoimpl.UnknownFields
-	sizeCache          protoimpl.SizeCache
+	state                  protoimpl.MessageState             `protogen:"open.v1"`
+	MinimumPlayerLevel     int32                              `protobuf:"varint,1,opt,name=minimum_player_level,json=minimumPlayerLevel,proto3" json:"minimum_player_level,omitempty"`
+	MaxRunTime             int64                              `protobuf:"varint,2,opt,name=max_run_time,json=maxRunTime,proto3" json:"max_run_time,omitempty"`
+	PlayerTurnDuration     int64                              `protobuf:"varint,3,opt,name=player_turn_duration,json=playerTurnDuration,proto3" json:"player_turn_duration,omitempty"`
+	MaxPlayerCount         int32                              `protobuf:"varint,4,opt,name=max_player_count,json=maxPlayerCount,proto3" json:"max_player_count,omitempty"`
+	DeadPlayerKickDuration int64                              `protobuf:"varint,5,opt,name=dead_player_kick_duration,json=deadPlayerKickDuration,proto3" json:"dead_player_kick_duration,omitempty"`
+	Restrictions           []*ProtoLobbyPlayerSlotRestriction `protobuf:"bytes,20,rep,name=restrictions,proto3" json:"restrictions,omitempty"`
+	unknownFields          protoimpl.UnknownFields
+	sizeCache              protoimpl.SizeCache
 }
 
 func (x *ProtoGameInstanceOptions) Reset() {
@@ -560,6 +567,13 @@ func (x *ProtoGameInstanceOptions) GetPlayerTurnDuration() int64 {
 func (x *ProtoGameInstanceOptions) GetMaxPlayerCount() int32 {
 	if x != nil {
 		return x.MaxPlayerCount
+	}
+	return 0
+}
+
+func (x *ProtoGameInstanceOptions) GetDeadPlayerKickDuration() int64 {
+	if x != nil {
+		return x.DeadPlayerKickDuration
 	}
 	return 0
 }
@@ -1076,6 +1090,7 @@ type ProtoGameSyncPlayer struct {
 	LockIndex     int32                  `protobuf:"varint,5,opt,name=lock_index,json=lockIndex,proto3" json:"lock_index,omitempty"` // ActionLockIndex (resolution order; valid when locked)
 	Disconnected  bool                   `protobuf:"varint,6,opt,name=disconnected,proto3" json:"disconnected,omitempty"`            // current connection status
 	Actions       []*ProtoGameAction     `protobuf:"bytes,7,rep,name=actions,proto3" json:"actions,omitempty"`                       // currently queued actions
+	Dead          bool                   `protobuf:"varint,8,opt,name=dead,proto3" json:"dead,omitempty"`                            // fallen; cannot act until revived
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1159,6 +1174,13 @@ func (x *ProtoGameSyncPlayer) GetActions() []*ProtoGameAction {
 	return nil
 }
 
+func (x *ProtoGameSyncPlayer) GetDead() bool {
+	if x != nil {
+		return x.Dead
+	}
+	return false
+}
+
 var File_protomulti_multi_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_proto_rawDesc = "" +
@@ -1197,13 +1219,14 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\n" +
 	"started_at\x18\x05 \x01(\x03R\tstartedAt\x129\n" +
 	"\aoptions\x18\x13 \x01(\v2\x1f.multi.ProtoGameInstanceOptionsR\aoptions\x12#\n" +
-	"\rregistered_at\x18\x14 \x01(\x03R\fregisteredAt\"\x96\x02\n" +
+	"\rregistered_at\x18\x14 \x01(\x03R\fregisteredAt\"\xd1\x02\n" +
 	"\x18ProtoGameInstanceOptions\x120\n" +
 	"\x14minimum_player_level\x18\x01 \x01(\x05R\x12minimumPlayerLevel\x12 \n" +
 	"\fmax_run_time\x18\x02 \x01(\x03R\n" +
 	"maxRunTime\x120\n" +
 	"\x14player_turn_duration\x18\x03 \x01(\x03R\x12playerTurnDuration\x12(\n" +
-	"\x10max_player_count\x18\x04 \x01(\x05R\x0emaxPlayerCount\x12J\n" +
+	"\x10max_player_count\x18\x04 \x01(\x05R\x0emaxPlayerCount\x129\n" +
+	"\x19dead_player_kick_duration\x18\x05 \x01(\x03R\x16deadPlayerKickDuration\x12J\n" +
 	"\frestrictions\x18\x14 \x03(\v2&.multi.ProtoLobbyPlayerSlotRestrictionR\frestrictions\"u\n" +
 	"\x10ProtoGameSummary\x12\x15\n" +
 	"\x06sys_id\x18\x01 \x01(\tR\x05sysId\x12\x12\n" +
@@ -1246,7 +1269,7 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\vparty_index\x18\x01 \x01(\x05R\n" +
 	"partyIndex\x12\x19\n" +
 	"\bparty_id\x18\x02 \x01(\tR\apartyId\x124\n" +
-	"\aplayers\x18\x03 \x03(\v2\x1a.multi.ProtoGameSyncPlayerR\aplayers\"\xf8\x01\n" +
+	"\aplayers\x18\x03 \x03(\v2\x1a.multi.ProtoGameSyncPlayerR\aplayers\"\x8c\x02\n" +
 	"\x13ProtoGameSyncPlayer\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12!\n" +
 	"\fplayer_index\x18\x02 \x01(\x05R\vplayerIndex\x12\x14\n" +
@@ -1255,16 +1278,19 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\n" +
 	"lock_index\x18\x05 \x01(\x05R\tlockIndex\x12\"\n" +
 	"\fdisconnected\x18\x06 \x01(\bR\fdisconnected\x120\n" +
-	"\aactions\x18\a \x03(\v2\x16.multi.ProtoGameActionR\aactions*k\n" +
+	"\aactions\x18\a \x03(\v2\x16.multi.ProtoGameActionR\aactions\x12\x12\n" +
+	"\x04dead\x18\b \x01(\bR\x04dead*k\n" +
 	"\x14GamePlayerActionType\x12\x1b\n" +
 	"\x17PLAYER_ACTION_TYPE_NONE\x10\x00\x12\x11\n" +
 	"\rNORMAL_ATTACK\x10\x01\x12\x10\n" +
 	"\fABILITY_CAST\x10\x02\x12\x11\n" +
-	"\rELEMENT_DRIVE\x10\x03*m\n" +
+	"\rELEMENT_DRIVE\x10\x03*\xa8\x01\n" +
 	"\rGameSyncPhase\x12\x1b\n" +
 	"\x17GAME_SYNC_PHASE_UNKNOWN\x10\x00\x12\x1f\n" +
 	"\x1bGAME_SYNC_PHASE_PLAYER_TURN\x10\x01\x12\x1e\n" +
-	"\x1aGAME_SYNC_PHASE_ENEMY_TURN\x10\x02BMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\x1aGAME_SYNC_PHASE_ENEMY_TURN\x10\x02\x12\x1b\n" +
+	"\x17GAME_SYNC_PHASE_PENDING\x10\x03\x12\x1c\n" +
+	"\x18GAME_SYNC_PHASE_END_GAME\x10\x04BMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_proto_rawDescOnce sync.Once

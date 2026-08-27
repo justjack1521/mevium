@@ -96,3 +96,7 @@ message GameCatchUpResponse {
   uint64 to_sequence      = 2;
   int64  turn_remaining_ms = 3;
 }
+
+message GamePlayerDeathResponse {}
+
+message GamePlayerReviveResponse {}

@@ -265,3 +265,27 @@ func NewGameCatchUpRequest(bytes []byte) (*GameCatchUpRequest, error) {
 func (x *GameCatchUpResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGamePlayerDeathRequest(bytes []byte) (*GamePlayerDeathRequest, error) {
+	req := &GamePlayerDeathRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerDeathResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGamePlayerReviveRequest(bytes []byte) (*GamePlayerReviveRequest, error) {
+	req := &GamePlayerReviveRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReviveResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

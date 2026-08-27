@@ -33,7 +33,8 @@ enum MultiRequestType {
   GAME_DEQUEUE_ACTION = 3300;
   GAME_LOCK_ACTIONS = 3400;
   GAME_CONSENSUS = 3500;
-
+  GAME_PLAYER_DEATH = 3600;
+  GAME_PLAYER_REVIVE = 3700;
 }
 
 message GetGameRequest {
@@ -138,4 +139,12 @@ message ParticipantUnwatchRequest {
 
 message GameCatchUpRequest  {
   uint64 last_sequence = 1;
+}
+
+message GamePlayerDeathRequest {
+
+}
+
+message GamePlayerReviveRequest {
+  string target_player_id = 1;
 }

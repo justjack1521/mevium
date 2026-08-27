@@ -58,6 +58,7 @@ message ProtoGameInstanceOptions {
   int64 max_run_time = 2;
   int64 player_turn_duration = 3;
   int32 max_player_count = 4;
+  int64 dead_player_kick_duration = 5;
   repeated ProtoLobbyPlayerSlotRestriction restrictions = 20;
 }
 
@@ -119,10 +120,13 @@ message ProtoGameSyncPlayer {
   int32 lock_index                 = 5;  // ActionLockIndex (resolution order; valid when locked)
   bool disconnected                = 6;  // current connection status
   repeated ProtoGameAction actions = 7;  // currently queued actions
+  bool dead                        = 8;  // fallen; cannot act until revived
 }
 
 enum GameSyncPhase {
   GAME_SYNC_PHASE_UNKNOWN     = 0;
   GAME_SYNC_PHASE_PLAYER_TURN = 1;
   GAME_SYNC_PHASE_ENEMY_TURN  = 2;
+  GAME_SYNC_PHASE_PENDING     = 3;
+  GAME_SYNC_PHASE_END_GAME    = 4;
 }

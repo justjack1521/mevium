@@ -35,4 +35,7 @@ service MeviusMultiService {
   rpc LockAction(multi.GameLockActionRequest) returns (multi.GameLockActionResponse) {}
   rpc SubmitHPConsensus(multi.GameHPConsensusRequest) returns (multi.GameHPConsensusResponse);
   rpc GameCatchUp (multi.GameCatchUpRequest) returns (multi.GameCatchUpResponse);
+
+  rpc PlayerDeath(multi.GamePlayerDeathRequest) returns (multi.GamePlayerDeathResponse) {}
+  rpc PlayerRevive(multi.GamePlayerReviveRequest) returns (multi.GamePlayerReviveResponse) {}
 }

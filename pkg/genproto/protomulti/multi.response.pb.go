@@ -877,6 +877,78 @@ func (x *GameCatchUpResponse) GetTurnRemainingMs() int64 {
 	return 0
 }
 
+type GamePlayerDeathResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GamePlayerDeathResponse) Reset() {
+	*x = GamePlayerDeathResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[22]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GamePlayerDeathResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerDeathResponse) ProtoMessage() {}
+
+func (x *GamePlayerDeathResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[22]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerDeathResponse.ProtoReflect.Descriptor instead.
+func (*GamePlayerDeathResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{22}
+}
+
+type GamePlayerReviveResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GamePlayerReviveResponse) Reset() {
+	*x = GamePlayerReviveResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[23]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GamePlayerReviveResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerReviveResponse) ProtoMessage() {}
+
+func (x *GamePlayerReviveResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[23]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerReviveResponse.ProtoReflect.Descriptor instead.
+func (*GamePlayerReviveResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{23}
+}
+
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_response_proto_rawDesc = "" +
@@ -912,7 +984,9 @@ const file_protomulti_multi_response_proto_rawDesc = "" +
 	"\rfrom_sequence\x18\x01 \x01(\x04R\ffromSequence\x12\x1f\n" +
 	"\vto_sequence\x18\x02 \x01(\x04R\n" +
 	"toSequence\x12*\n" +
-	"\x11turn_remaining_ms\x18\x03 \x01(\x03R\x0fturnRemainingMsBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\x11turn_remaining_ms\x18\x03 \x01(\x03R\x0fturnRemainingMs\"\x19\n" +
+	"\x17GamePlayerDeathResponse\"\x1a\n" +
+	"\x18GamePlayerReviveResponseBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_response_proto_rawDescOnce sync.Once
@@ -926,7 +1000,7 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_response_proto_rawDescData
 }
 
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 22)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 24)
 var file_protomulti_multi_response_proto_goTypes = []any{
 	(*GetGameResponse)(nil),            // 0: multi.GetGameResponse
 	(*GameReadyPlayerResponse)(nil),    // 1: multi.GameReadyPlayerResponse
@@ -950,12 +1024,14 @@ var file_protomulti_multi_response_proto_goTypes = []any{
 	(*ParticipantUnreadyResponse)(nil), // 19: multi.ParticipantUnreadyResponse
 	(*GameHPConsensusResponse)(nil),    // 20: multi.GameHPConsensusResponse
 	(*GameCatchUpResponse)(nil),        // 21: multi.GameCatchUpResponse
-	(*ProtoGameSummary)(nil),           // 22: multi.ProtoGameSummary
-	(*ProtoLobbySummary)(nil),          // 23: multi.ProtoLobbySummary
+	(*GamePlayerDeathResponse)(nil),    // 22: multi.GamePlayerDeathResponse
+	(*GamePlayerReviveResponse)(nil),   // 23: multi.GamePlayerReviveResponse
+	(*ProtoGameSummary)(nil),           // 24: multi.ProtoGameSummary
+	(*ProtoLobbySummary)(nil),          // 25: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	22, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
-	23, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	24, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
+	25, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
 	2,  // [2:2] is the sub-list for method output_type
 	2,  // [2:2] is the sub-list for method input_type
 	2,  // [2:2] is the sub-list for extension type_name
@@ -975,7 +1051,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_response_proto_rawDesc), len(file_protomulti_multi_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   22,
+			NumMessages:   24,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

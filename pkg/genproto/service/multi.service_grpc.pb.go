@@ -42,6 +42,8 @@ const (
 	MeviusMultiService_LockAction_FullMethodName         = "/service.MeviusMultiService/LockAction"
 	MeviusMultiService_SubmitHPConsensus_FullMethodName  = "/service.MeviusMultiService/SubmitHPConsensus"
 	MeviusMultiService_GameCatchUp_FullMethodName        = "/service.MeviusMultiService/GameCatchUp"
+	MeviusMultiService_PlayerDeath_FullMethodName        = "/service.MeviusMultiService/PlayerDeath"
+	MeviusMultiService_PlayerRevive_FullMethodName       = "/service.MeviusMultiService/PlayerRevive"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -70,6 +72,8 @@ type MeviusMultiServiceClient interface {
 	LockAction(ctx context.Context, in *protomulti.GameLockActionRequest, opts ...grpc.CallOption) (*protomulti.GameLockActionResponse, error)
 	SubmitHPConsensus(ctx context.Context, in *protomulti.GameHPConsensusRequest, opts ...grpc.CallOption) (*protomulti.GameHPConsensusResponse, error)
 	GameCatchUp(ctx context.Context, in *protomulti.GameCatchUpRequest, opts ...grpc.CallOption) (*protomulti.GameCatchUpResponse, error)
+	PlayerDeath(ctx context.Context, in *protomulti.GamePlayerDeathRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerDeathResponse, error)
+	PlayerRevive(ctx context.Context, in *protomulti.GamePlayerReviveRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -278,6 +282,24 @@ func (c *meviusMultiServiceClient) GameCatchUp(ctx context.Context, in *protomul
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) PlayerDeath(ctx context.Context, in *protomulti.GamePlayerDeathRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerDeathResponse, error) {
+	out := new(protomulti.GamePlayerDeathResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_PlayerDeath_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusMultiServiceClient) PlayerRevive(ctx context.Context, in *protomulti.GamePlayerReviveRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveResponse, error) {
+	out := new(protomulti.GamePlayerReviveResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_PlayerRevive_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -304,6 +326,8 @@ type MeviusMultiServiceServer interface {
 	LockAction(context.Context, *protomulti.GameLockActionRequest) (*protomulti.GameLockActionResponse, error)
 	SubmitHPConsensus(context.Context, *protomulti.GameHPConsensusRequest) (*protomulti.GameHPConsensusResponse, error)
 	GameCatchUp(context.Context, *protomulti.GameCatchUpRequest) (*protomulti.GameCatchUpResponse, error)
+	PlayerDeath(context.Context, *protomulti.GamePlayerDeathRequest) (*protomulti.GamePlayerDeathResponse, error)
+	PlayerRevive(context.Context, *protomulti.GamePlayerReviveRequest) (*protomulti.GamePlayerReviveResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -375,6 +399,12 @@ func (UnimplementedMeviusMultiServiceServer) SubmitHPConsensus(context.Context, 
 }
 func (UnimplementedMeviusMultiServiceServer) GameCatchUp(context.Context, *protomulti.GameCatchUpRequest) (*protomulti.GameCatchUpResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GameCatchUp not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) PlayerDeath(context.Context, *protomulti.GamePlayerDeathRequest) (*protomulti.GamePlayerDeathResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PlayerDeath not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) PlayerRevive(context.Context, *protomulti.GamePlayerReviveRequest) (*protomulti.GamePlayerReviveResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PlayerRevive not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -784,6 +814,42 @@ func _MeviusMultiService_GameCatchUp_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_PlayerDeath_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GamePlayerDeathRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).PlayerDeath(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_PlayerDeath_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).PlayerDeath(ctx, req.(*protomulti.GamePlayerDeathRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusMultiService_PlayerRevive_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GamePlayerReviveRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).PlayerRevive(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_PlayerRevive_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).PlayerRevive(ctx, req.(*protomulti.GamePlayerReviveRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -878,6 +944,14 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GameCatchUp",
 			Handler:    _MeviusMultiService_GameCatchUp_Handler,
+		},
+		{
+			MethodName: "PlayerDeath",
+			Handler:    _MeviusMultiService_PlayerDeath_Handler,
+		},
+		{
+			MethodName: "PlayerRevive",
+			Handler:    _MeviusMultiService_PlayerRevive_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
