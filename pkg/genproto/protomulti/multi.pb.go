@@ -1082,17 +1082,19 @@ func (x *ProtoGameSyncParty) GetPlayers() []*ProtoGameSyncPlayer {
 }
 
 type ProtoGameSyncPlayer struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
-	PlayerIndex   int32                  `protobuf:"varint,2,opt,name=player_index,json=playerIndex,proto3" json:"player_index,omitempty"` // PartySlot
-	Ready         bool                   `protobuf:"varint,3,opt,name=ready,proto3" json:"ready,omitempty"`
-	Locked        bool                   `protobuf:"varint,4,opt,name=locked,proto3" json:"locked,omitempty"`                        // ActionsLocked
-	LockIndex     int32                  `protobuf:"varint,5,opt,name=lock_index,json=lockIndex,proto3" json:"lock_index,omitempty"` // ActionLockIndex (resolution order; valid when locked)
-	Disconnected  bool                   `protobuf:"varint,6,opt,name=disconnected,proto3" json:"disconnected,omitempty"`            // current connection status
-	Actions       []*ProtoGameAction     `protobuf:"bytes,7,rep,name=actions,proto3" json:"actions,omitempty"`                       // currently queued actions
-	Dead          bool                   `protobuf:"varint,8,opt,name=dead,proto3" json:"dead,omitempty"`                            // fallen; cannot act until revived
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state                  protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId               string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	PlayerIndex            int32                  `protobuf:"varint,2,opt,name=player_index,json=playerIndex,proto3" json:"player_index,omitempty"` // PartySlot
+	Ready                  bool                   `protobuf:"varint,3,opt,name=ready,proto3" json:"ready,omitempty"`
+	Locked                 bool                   `protobuf:"varint,4,opt,name=locked,proto3" json:"locked,omitempty"`                                                                    // ActionsLocked
+	LockIndex              int32                  `protobuf:"varint,5,opt,name=lock_index,json=lockIndex,proto3" json:"lock_index,omitempty"`                                             // ActionLockIndex (resolution order; valid when locked)
+	Disconnected           bool                   `protobuf:"varint,6,opt,name=disconnected,proto3" json:"disconnected,omitempty"`                                                        // current connection status
+	Actions                []*ProtoGameAction     `protobuf:"bytes,7,rep,name=actions,proto3" json:"actions,omitempty"`                                                                   // currently queued actions
+	Dead                   bool                   `protobuf:"varint,8,opt,name=dead,proto3" json:"dead,omitempty"`                                                                        // fallen; cannot act until revived
+	ReviveClaimSourceId    string                 `protobuf:"bytes,9,opt,name=revive_claim_source_id,json=reviveClaimSourceId,proto3" json:"revive_claim_source_id,omitempty"`            // holder of an active revive claim; empty = none
+	ReviveClaimRemainingMs int64                  `protobuf:"varint,10,opt,name=revive_claim_remaining_ms,json=reviveClaimRemainingMs,proto3" json:"revive_claim_remaining_ms,omitempty"` // ms until that claim decays; 0 when no claim
+	unknownFields          protoimpl.UnknownFields
+	sizeCache              protoimpl.SizeCache
 }
 
 func (x *ProtoGameSyncPlayer) Reset() {
@@ -1179,6 +1181,20 @@ func (x *ProtoGameSyncPlayer) GetDead() bool {
 		return x.Dead
 	}
 	return false
+}
+
+func (x *ProtoGameSyncPlayer) GetReviveClaimSourceId() string {
+	if x != nil {
+		return x.ReviveClaimSourceId
+	}
+	return ""
+}
+
+func (x *ProtoGameSyncPlayer) GetReviveClaimRemainingMs() int64 {
+	if x != nil {
+		return x.ReviveClaimRemainingMs
+	}
+	return 0
 }
 
 var File_protomulti_multi_proto protoreflect.FileDescriptor
@@ -1269,7 +1285,7 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\vparty_index\x18\x01 \x01(\x05R\n" +
 	"partyIndex\x12\x19\n" +
 	"\bparty_id\x18\x02 \x01(\tR\apartyId\x124\n" +
-	"\aplayers\x18\x03 \x03(\v2\x1a.multi.ProtoGameSyncPlayerR\aplayers\"\x8c\x02\n" +
+	"\aplayers\x18\x03 \x03(\v2\x1a.multi.ProtoGameSyncPlayerR\aplayers\"\xfc\x02\n" +
 	"\x13ProtoGameSyncPlayer\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12!\n" +
 	"\fplayer_index\x18\x02 \x01(\x05R\vplayerIndex\x12\x14\n" +
@@ -1279,7 +1295,10 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"lock_index\x18\x05 \x01(\x05R\tlockIndex\x12\"\n" +
 	"\fdisconnected\x18\x06 \x01(\bR\fdisconnected\x120\n" +
 	"\aactions\x18\a \x03(\v2\x16.multi.ProtoGameActionR\aactions\x12\x12\n" +
-	"\x04dead\x18\b \x01(\bR\x04dead*k\n" +
+	"\x04dead\x18\b \x01(\bR\x04dead\x123\n" +
+	"\x16revive_claim_source_id\x18\t \x01(\tR\x13reviveClaimSourceId\x129\n" +
+	"\x19revive_claim_remaining_ms\x18\n" +
+	" \x01(\x03R\x16reviveClaimRemainingMs*k\n" +
 	"\x14GamePlayerActionType\x12\x1b\n" +
 	"\x17PLAYER_ACTION_TYPE_NONE\x10\x00\x12\x11\n" +
 	"\rNORMAL_ATTACK\x10\x01\x12\x10\n" +

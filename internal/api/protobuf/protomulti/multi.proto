@@ -121,6 +121,8 @@ message ProtoGameSyncPlayer {
   bool disconnected                = 6;  // current connection status
   repeated ProtoGameAction actions = 7;  // currently queued actions
   bool dead                        = 8;  // fallen; cannot act until revived
+  string revive_claim_source_id    = 9;  // holder of an active revive claim; empty = none
+  int64 revive_claim_remaining_ms  = 10; // ms until that claim decays; 0 when no claim
 }
 
 enum GameSyncPhase {

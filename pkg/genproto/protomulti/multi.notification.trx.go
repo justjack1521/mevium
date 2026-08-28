@@ -289,3 +289,27 @@ func NewGamePlayerReviveNotification(bytes []byte) (*GamePlayerReviveNotificatio
 func (x *GamePlayerReviveNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGamePlayerReviveClaimNotification(bytes []byte) (*GamePlayerReviveClaimNotification, error) {
+	req := &GamePlayerReviveClaimNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReviveClaimNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGamePlayerReviveClaimExpireNotification(bytes []byte) (*GamePlayerReviveClaimExpireNotification, error) {
+	req := &GamePlayerReviveClaimExpireNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReviveClaimExpireNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

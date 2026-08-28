@@ -65,20 +65,21 @@ namespace Mobius.Proto.Multi {
             "ZW1lbnRfaWQYBCABKAkiMwoQUHJvdG9HYW1lRW5lbXlIUBITCgtlbmVteV9p",
             "bmRleBgBIAEoBRIKCgJocBgCIAEoBSJoChJQcm90b0dhbWVTeW5jUGFydHkS",
             "EwoLcGFydHlfaW5kZXgYASABKAUSEAoIcGFydHlfaWQYAiABKAkSKwoHcGxh",
-            "eWVycxgDIAMoCzIaLm11bHRpLlByb3RvR2FtZVN5bmNQbGF5ZXIivgEKE1By",
+            "eWVycxgDIAMoCzIaLm11bHRpLlByb3RvR2FtZVN5bmNQbGF5ZXIigQIKE1By",
             "b3RvR2FtZVN5bmNQbGF5ZXISEQoJcGxheWVyX2lkGAEgASgJEhQKDHBsYXll",
             "cl9pbmRleBgCIAEoBRINCgVyZWFkeRgDIAEoCBIOCgZsb2NrZWQYBCABKAgS",
             "EgoKbG9ja19pbmRleBgFIAEoBRIUCgxkaXNjb25uZWN0ZWQYBiABKAgSJwoH",
             "YWN0aW9ucxgHIAMoCzIWLm11bHRpLlByb3RvR2FtZUFjdGlvbhIMCgRkZWFk",
-            "GAggASgIKmsKFEdhbWVQbGF5ZXJBY3Rpb25UeXBlEhsKF1BMQVlFUl9BQ1RJ",
-            "T05fVFlQRV9OT05FEAASEQoNTk9STUFMX0FUVEFDSxABEhAKDEFCSUxJVFlf",
-            "Q0FTVBACEhEKDUVMRU1FTlRfRFJJVkUQAyqoAQoNR2FtZVN5bmNQaGFzZRIb",
-            "ChdHQU1FX1NZTkNfUEhBU0VfVU5LTk9XThAAEh8KG0dBTUVfU1lOQ19QSEFT",
-            "RV9QTEFZRVJfVFVSThABEh4KGkdBTUVfU1lOQ19QSEFTRV9FTkVNWV9UVVJO",
-            "EAISGwoXR0FNRV9TWU5DX1BIQVNFX1BFTkRJTkcQAxIcChhHQU1FX1NZTkNf",
-            "UEhBU0VfRU5EX0dBTUUQBEJNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9t",
-            "ZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8u",
-            "TXVsdGliBnByb3RvMw=="));
+            "GAggASgIEh4KFnJldml2ZV9jbGFpbV9zb3VyY2VfaWQYCSABKAkSIQoZcmV2",
+            "aXZlX2NsYWltX3JlbWFpbmluZ19tcxgKIAEoAyprChRHYW1lUGxheWVyQWN0",
+            "aW9uVHlwZRIbChdQTEFZRVJfQUNUSU9OX1RZUEVfTk9ORRAAEhEKDU5PUk1B",
+            "TF9BVFRBQ0sQARIQCgxBQklMSVRZX0NBU1QQAhIRCg1FTEVNRU5UX0RSSVZF",
+            "EAMqqAEKDUdhbWVTeW5jUGhhc2USGwoXR0FNRV9TWU5DX1BIQVNFX1VOS05P",
+            "V04QABIfChtHQU1FX1NZTkNfUEhBU0VfUExBWUVSX1RVUk4QARIeChpHQU1F",
+            "X1NZTkNfUEhBU0VfRU5FTVlfVFVSThACEhsKF0dBTUVfU1lOQ19QSEFTRV9Q",
+            "RU5ESU5HEAMSHAoYR0FNRV9TWU5DX1BIQVNFX0VORF9HQU1FEARCTVo2Z2l0",
+            "aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90",
+            "b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), typeof(global::Mobius.Proto.Multi.GameSyncPhase), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,7 +97,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameAction), global::Mobius.Proto.Multi.ProtoGameAction.Parser, new[]{ "Action", "Target", "SlotIndex", "ElementId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameEnemyHP), global::Mobius.Proto.Multi.ProtoGameEnemyHP.Parser, new[]{ "EnemyIndex", "Hp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameSyncParty), global::Mobius.Proto.Multi.ProtoGameSyncParty.Parser, new[]{ "PartyIndex", "PartyId", "Players" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameSyncPlayer), global::Mobius.Proto.Multi.ProtoGameSyncPlayer.Parser, new[]{ "PlayerId", "PlayerIndex", "Ready", "Locked", "LockIndex", "Disconnected", "Actions", "Dead" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ProtoGameSyncPlayer), global::Mobius.Proto.Multi.ProtoGameSyncPlayer.Parser, new[]{ "PlayerId", "PlayerIndex", "Ready", "Locked", "LockIndex", "Disconnected", "Actions", "Dead", "ReviveClaimSourceId", "ReviveClaimRemainingMs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4035,6 +4036,8 @@ namespace Mobius.Proto.Multi {
       disconnected_ = other.disconnected_;
       actions_ = other.actions_.Clone();
       dead_ = other.dead_;
+      reviveClaimSourceId_ = other.reviveClaimSourceId_;
+      reviveClaimRemainingMs_ = other.reviveClaimRemainingMs_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4148,6 +4151,34 @@ namespace Mobius.Proto.Multi {
       }
     }
 
+    /// <summary>Field number for the "revive_claim_source_id" field.</summary>
+    public const int ReviveClaimSourceIdFieldNumber = 9;
+    private string reviveClaimSourceId_ = "";
+    /// <summary>
+    /// holder of an active revive claim; empty = none
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ReviveClaimSourceId {
+      get { return reviveClaimSourceId_; }
+      set {
+        reviveClaimSourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "revive_claim_remaining_ms" field.</summary>
+    public const int ReviveClaimRemainingMsFieldNumber = 10;
+    private long reviveClaimRemainingMs_;
+    /// <summary>
+    /// ms until that claim decays; 0 when no claim
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ReviveClaimRemainingMs {
+      get { return reviveClaimRemainingMs_; }
+      set {
+        reviveClaimRemainingMs_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoGameSyncPlayer);
@@ -4169,6 +4200,8 @@ namespace Mobius.Proto.Multi {
       if (Disconnected != other.Disconnected) return false;
       if(!actions_.Equals(other.actions_)) return false;
       if (Dead != other.Dead) return false;
+      if (ReviveClaimSourceId != other.ReviveClaimSourceId) return false;
+      if (ReviveClaimRemainingMs != other.ReviveClaimRemainingMs) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4183,6 +4216,8 @@ namespace Mobius.Proto.Multi {
       if (Disconnected != false) hash ^= Disconnected.GetHashCode();
       hash ^= actions_.GetHashCode();
       if (Dead != false) hash ^= Dead.GetHashCode();
+      if (ReviveClaimSourceId.Length != 0) hash ^= ReviveClaimSourceId.GetHashCode();
+      if (ReviveClaimRemainingMs != 0L) hash ^= ReviveClaimRemainingMs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4228,6 +4263,14 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(64);
         output.WriteBool(Dead);
       }
+      if (ReviveClaimSourceId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ReviveClaimSourceId);
+      }
+      if (ReviveClaimRemainingMs != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(ReviveClaimRemainingMs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4266,6 +4309,14 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(64);
         output.WriteBool(Dead);
       }
+      if (ReviveClaimSourceId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ReviveClaimSourceId);
+      }
+      if (ReviveClaimRemainingMs != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(ReviveClaimRemainingMs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4296,6 +4347,12 @@ namespace Mobius.Proto.Multi {
       size += actions_.CalculateSize(_repeated_actions_codec);
       if (Dead != false) {
         size += 1 + 1;
+      }
+      if (ReviveClaimSourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReviveClaimSourceId);
+      }
+      if (ReviveClaimRemainingMs != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReviveClaimRemainingMs);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4329,6 +4386,12 @@ namespace Mobius.Proto.Multi {
       actions_.Add(other.actions_);
       if (other.Dead != false) {
         Dead = other.Dead;
+      }
+      if (other.ReviveClaimSourceId.Length != 0) {
+        ReviveClaimSourceId = other.ReviveClaimSourceId;
+      }
+      if (other.ReviveClaimRemainingMs != 0L) {
+        ReviveClaimRemainingMs = other.ReviveClaimRemainingMs;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4376,6 +4439,14 @@ namespace Mobius.Proto.Multi {
             Dead = input.ReadBool();
             break;
           }
+          case 74: {
+            ReviveClaimSourceId = input.ReadString();
+            break;
+          }
+          case 80: {
+            ReviveClaimRemainingMs = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -4420,6 +4491,14 @@ namespace Mobius.Proto.Multi {
           }
           case 64: {
             Dead = input.ReadBool();
+            break;
+          }
+          case 74: {
+            ReviveClaimSourceId = input.ReadString();
+            break;
+          }
+          case 80: {
+            ReviveClaimRemainingMs = input.ReadInt64();
             break;
           }
         }
