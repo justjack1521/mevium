@@ -44,6 +44,7 @@ const (
 	MeviusMultiService_GameCatchUp_FullMethodName        = "/service.MeviusMultiService/GameCatchUp"
 	MeviusMultiService_PlayerDeath_FullMethodName        = "/service.MeviusMultiService/PlayerDeath"
 	MeviusMultiService_PlayerRevive_FullMethodName       = "/service.MeviusMultiService/PlayerRevive"
+	MeviusMultiService_PlayerReviveClaim_FullMethodName  = "/service.MeviusMultiService/PlayerReviveClaim"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -74,6 +75,7 @@ type MeviusMultiServiceClient interface {
 	GameCatchUp(ctx context.Context, in *protomulti.GameCatchUpRequest, opts ...grpc.CallOption) (*protomulti.GameCatchUpResponse, error)
 	PlayerDeath(ctx context.Context, in *protomulti.GamePlayerDeathRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerDeathResponse, error)
 	PlayerRevive(ctx context.Context, in *protomulti.GamePlayerReviveRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveResponse, error)
+	PlayerReviveClaim(ctx context.Context, in *protomulti.GamePlayerReviveClaimRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveClaimResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -300,6 +302,15 @@ func (c *meviusMultiServiceClient) PlayerRevive(ctx context.Context, in *protomu
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) PlayerReviveClaim(ctx context.Context, in *protomulti.GamePlayerReviveClaimRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveClaimResponse, error) {
+	out := new(protomulti.GamePlayerReviveClaimResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_PlayerReviveClaim_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -328,6 +339,7 @@ type MeviusMultiServiceServer interface {
 	GameCatchUp(context.Context, *protomulti.GameCatchUpRequest) (*protomulti.GameCatchUpResponse, error)
 	PlayerDeath(context.Context, *protomulti.GamePlayerDeathRequest) (*protomulti.GamePlayerDeathResponse, error)
 	PlayerRevive(context.Context, *protomulti.GamePlayerReviveRequest) (*protomulti.GamePlayerReviveResponse, error)
+	PlayerReviveClaim(context.Context, *protomulti.GamePlayerReviveClaimRequest) (*protomulti.GamePlayerReviveClaimResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -405,6 +417,9 @@ func (UnimplementedMeviusMultiServiceServer) PlayerDeath(context.Context, *proto
 }
 func (UnimplementedMeviusMultiServiceServer) PlayerRevive(context.Context, *protomulti.GamePlayerReviveRequest) (*protomulti.GamePlayerReviveResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PlayerRevive not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) PlayerReviveClaim(context.Context, *protomulti.GamePlayerReviveClaimRequest) (*protomulti.GamePlayerReviveClaimResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PlayerReviveClaim not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -850,6 +865,24 @@ func _MeviusMultiService_PlayerRevive_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_PlayerReviveClaim_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GamePlayerReviveClaimRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).PlayerReviveClaim(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_PlayerReviveClaim_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).PlayerReviveClaim(ctx, req.(*protomulti.GamePlayerReviveClaimRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -952,6 +985,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PlayerRevive",
 			Handler:    _MeviusMultiService_PlayerRevive_Handler,
+		},
+		{
+			MethodName: "PlayerReviveClaim",
+			Handler:    _MeviusMultiService_PlayerReviveClaim_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

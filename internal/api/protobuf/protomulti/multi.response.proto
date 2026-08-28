@@ -100,3 +100,17 @@ message GameCatchUpResponse {
 message GamePlayerDeathResponse {}
 
 message GamePlayerReviveResponse {}
+
+enum ReviveClaimDenyReason {
+  REVIVE_CLAIM_DENY_NONE = 0;
+  REVIVE_CLAIM_DENY_TARGET_NOT_FOUND = 1;
+  REVIVE_CLAIM_DENY_TARGET_ALIVE = 2;
+  REVIVE_CLAIM_DENY_ALREADY_CLAIMED = 3;
+  REVIVE_CLAIM_DENY_UNAVAILABLE = 4;
+}
+
+message GamePlayerReviveClaimResponse {
+  bool                  granted      = 1;
+  ReviveClaimDenyReason deny_reason  = 2;
+  int64                 remaining_ms = 3;
+}

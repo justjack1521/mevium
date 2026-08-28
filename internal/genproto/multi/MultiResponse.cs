@@ -43,12 +43,20 @@ namespace Mobius.Proto.Multi {
             "F0dhbWVIUENvbnNlbnN1c1Jlc3BvbnNlIlwKE0dhbWVDYXRjaFVwUmVzcG9u",
             "c2USFQoNZnJvbV9zZXF1ZW5jZRgBIAEoBBITCgt0b19zZXF1ZW5jZRgCIAEo",
             "BBIZChF0dXJuX3JlbWFpbmluZ19tcxgDIAEoAyIZChdHYW1lUGxheWVyRGVh",
-            "dGhSZXNwb25zZSIaChhHYW1lUGxheWVyUmV2aXZlUmVzcG9uc2VCTVo2Z2l0",
-            "aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90",
-            "b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "dGhSZXNwb25zZSIaChhHYW1lUGxheWVyUmV2aXZlUmVzcG9uc2UieQodR2Ft",
+            "ZVBsYXllclJldml2ZUNsYWltUmVzcG9uc2USDwoHZ3JhbnRlZBgBIAEoCBIx",
+            "CgtkZW55X3JlYXNvbhgCIAEoDjIcLm11bHRpLlJldml2ZUNsYWltRGVueVJl",
+            "YXNvbhIUCgxyZW1haW5pbmdfbXMYAyABKAMqyQEKFVJldml2ZUNsYWltRGVu",
+            "eVJlYXNvbhIaChZSRVZJVkVfQ0xBSU1fREVOWV9OT05FEAASJgoiUkVWSVZF",
+            "X0NMQUlNX0RFTllfVEFSR0VUX05PVF9GT1VORBABEiIKHlJFVklWRV9DTEFJ",
+            "TV9ERU5ZX1RBUkdFVF9BTElWRRACEiUKIVJFVklWRV9DTEFJTV9ERU5ZX0FM",
+            "UkVBRFlfQ0xBSU1FRBADEiEKHVJFVklWRV9DTEFJTV9ERU5ZX1VOQVZBSUxB",
+            "QkxFEARCTVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
+            "ZW5wcm90by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.ReviveClaimDenyReason), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GetGameResponse), global::Mobius.Proto.Multi.GetGameResponse.Parser, new[]{ "GameSummary" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameReadyPlayerResponse), global::Mobius.Proto.Multi.GameReadyPlayerResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameEnqueueActionResponse), global::Mobius.Proto.Multi.GameEnqueueActionResponse.Parser, null, null, null, null, null),
@@ -72,12 +80,24 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameHPConsensusResponse), global::Mobius.Proto.Multi.GameHPConsensusResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameCatchUpResponse), global::Mobius.Proto.Multi.GameCatchUpResponse.Parser, new[]{ "FromSequence", "ToSequence", "TurnRemainingMs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerDeathResponse), global::Mobius.Proto.Multi.GamePlayerDeathResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReviveResponse), global::Mobius.Proto.Multi.GamePlayerReviveResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReviveResponse), global::Mobius.Proto.Multi.GamePlayerReviveResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReviveClaimResponse), global::Mobius.Proto.Multi.GamePlayerReviveClaimResponse.Parser, new[]{ "Granted", "DenyReason", "RemainingMs" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  public enum ReviveClaimDenyReason {
+    [pbr::OriginalName("REVIVE_CLAIM_DENY_NONE")] ReviveClaimDenyNone = 0,
+    [pbr::OriginalName("REVIVE_CLAIM_DENY_TARGET_NOT_FOUND")] ReviveClaimDenyTargetNotFound = 1,
+    [pbr::OriginalName("REVIVE_CLAIM_DENY_TARGET_ALIVE")] ReviveClaimDenyTargetAlive = 2,
+    [pbr::OriginalName("REVIVE_CLAIM_DENY_ALREADY_CLAIMED")] ReviveClaimDenyAlreadyClaimed = 3,
+    [pbr::OriginalName("REVIVE_CLAIM_DENY_UNAVAILABLE")] ReviveClaimDenyUnavailable = 4,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class GetGameResponse : pb::IMessage<GetGameResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3622,6 +3642,250 @@ namespace Mobius.Proto.Multi {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GamePlayerReviveClaimResponse : pb::IMessage<GamePlayerReviveClaimResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GamePlayerReviveClaimResponse> _parser = new pb::MessageParser<GamePlayerReviveClaimResponse>(() => new GamePlayerReviveClaimResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GamePlayerReviveClaimResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiResponseReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GamePlayerReviveClaimResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GamePlayerReviveClaimResponse(GamePlayerReviveClaimResponse other) : this() {
+      granted_ = other.granted_;
+      denyReason_ = other.denyReason_;
+      remainingMs_ = other.remainingMs_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GamePlayerReviveClaimResponse Clone() {
+      return new GamePlayerReviveClaimResponse(this);
+    }
+
+    /// <summary>Field number for the "granted" field.</summary>
+    public const int GrantedFieldNumber = 1;
+    private bool granted_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Granted {
+      get { return granted_; }
+      set {
+        granted_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deny_reason" field.</summary>
+    public const int DenyReasonFieldNumber = 2;
+    private global::Mobius.Proto.Multi.ReviveClaimDenyReason denyReason_ = global::Mobius.Proto.Multi.ReviveClaimDenyReason.ReviveClaimDenyNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Mobius.Proto.Multi.ReviveClaimDenyReason DenyReason {
+      get { return denyReason_; }
+      set {
+        denyReason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "remaining_ms" field.</summary>
+    public const int RemainingMsFieldNumber = 3;
+    private long remainingMs_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RemainingMs {
+      get { return remainingMs_; }
+      set {
+        remainingMs_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GamePlayerReviveClaimResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GamePlayerReviveClaimResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Granted != other.Granted) return false;
+      if (DenyReason != other.DenyReason) return false;
+      if (RemainingMs != other.RemainingMs) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Granted != false) hash ^= Granted.GetHashCode();
+      if (DenyReason != global::Mobius.Proto.Multi.ReviveClaimDenyReason.ReviveClaimDenyNone) hash ^= DenyReason.GetHashCode();
+      if (RemainingMs != 0L) hash ^= RemainingMs.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Granted != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Granted);
+      }
+      if (DenyReason != global::Mobius.Proto.Multi.ReviveClaimDenyReason.ReviveClaimDenyNone) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DenyReason);
+      }
+      if (RemainingMs != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RemainingMs);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Granted != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Granted);
+      }
+      if (DenyReason != global::Mobius.Proto.Multi.ReviveClaimDenyReason.ReviveClaimDenyNone) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DenyReason);
+      }
+      if (RemainingMs != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RemainingMs);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Granted != false) {
+        size += 1 + 1;
+      }
+      if (DenyReason != global::Mobius.Proto.Multi.ReviveClaimDenyReason.ReviveClaimDenyNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DenyReason);
+      }
+      if (RemainingMs != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RemainingMs);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GamePlayerReviveClaimResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Granted != false) {
+        Granted = other.Granted;
+      }
+      if (other.DenyReason != global::Mobius.Proto.Multi.ReviveClaimDenyReason.ReviveClaimDenyNone) {
+        DenyReason = other.DenyReason;
+      }
+      if (other.RemainingMs != 0L) {
+        RemainingMs = other.RemainingMs;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Granted = input.ReadBool();
+            break;
+          }
+          case 16: {
+            DenyReason = (global::Mobius.Proto.Multi.ReviveClaimDenyReason) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            RemainingMs = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Granted = input.ReadBool();
+            break;
+          }
+          case 16: {
+            DenyReason = (global::Mobius.Proto.Multi.ReviveClaimDenyReason) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            RemainingMs = input.ReadInt64();
+            break;
+          }
         }
       }
     }

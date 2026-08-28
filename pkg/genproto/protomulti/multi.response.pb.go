@@ -21,6 +21,61 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type ReviveClaimDenyReason int32
+
+const (
+	ReviveClaimDenyReason_REVIVE_CLAIM_DENY_NONE             ReviveClaimDenyReason = 0
+	ReviveClaimDenyReason_REVIVE_CLAIM_DENY_TARGET_NOT_FOUND ReviveClaimDenyReason = 1
+	ReviveClaimDenyReason_REVIVE_CLAIM_DENY_TARGET_ALIVE     ReviveClaimDenyReason = 2
+	ReviveClaimDenyReason_REVIVE_CLAIM_DENY_ALREADY_CLAIMED  ReviveClaimDenyReason = 3
+	ReviveClaimDenyReason_REVIVE_CLAIM_DENY_UNAVAILABLE      ReviveClaimDenyReason = 4
+)
+
+// Enum value maps for ReviveClaimDenyReason.
+var (
+	ReviveClaimDenyReason_name = map[int32]string{
+		0: "REVIVE_CLAIM_DENY_NONE",
+		1: "REVIVE_CLAIM_DENY_TARGET_NOT_FOUND",
+		2: "REVIVE_CLAIM_DENY_TARGET_ALIVE",
+		3: "REVIVE_CLAIM_DENY_ALREADY_CLAIMED",
+		4: "REVIVE_CLAIM_DENY_UNAVAILABLE",
+	}
+	ReviveClaimDenyReason_value = map[string]int32{
+		"REVIVE_CLAIM_DENY_NONE":             0,
+		"REVIVE_CLAIM_DENY_TARGET_NOT_FOUND": 1,
+		"REVIVE_CLAIM_DENY_TARGET_ALIVE":     2,
+		"REVIVE_CLAIM_DENY_ALREADY_CLAIMED":  3,
+		"REVIVE_CLAIM_DENY_UNAVAILABLE":      4,
+	}
+)
+
+func (x ReviveClaimDenyReason) Enum() *ReviveClaimDenyReason {
+	p := new(ReviveClaimDenyReason)
+	*p = x
+	return p
+}
+
+func (x ReviveClaimDenyReason) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (ReviveClaimDenyReason) Descriptor() protoreflect.EnumDescriptor {
+	return file_protomulti_multi_response_proto_enumTypes[0].Descriptor()
+}
+
+func (ReviveClaimDenyReason) Type() protoreflect.EnumType {
+	return &file_protomulti_multi_response_proto_enumTypes[0]
+}
+
+func (x ReviveClaimDenyReason) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use ReviveClaimDenyReason.Descriptor instead.
+func (ReviveClaimDenyReason) EnumDescriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{0}
+}
+
 type GetGameResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	GameSummary   *ProtoGameSummary      `protobuf:"bytes,1,opt,name=game_summary,json=gameSummary,proto3" json:"game_summary,omitempty"`
@@ -949,6 +1004,66 @@ func (*GamePlayerReviveResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{23}
 }
 
+type GamePlayerReviveClaimResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Granted       bool                   `protobuf:"varint,1,opt,name=granted,proto3" json:"granted,omitempty"`
+	DenyReason    ReviveClaimDenyReason  `protobuf:"varint,2,opt,name=deny_reason,json=denyReason,proto3,enum=multi.ReviveClaimDenyReason" json:"deny_reason,omitempty"`
+	RemainingMs   int64                  `protobuf:"varint,3,opt,name=remaining_ms,json=remainingMs,proto3" json:"remaining_ms,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GamePlayerReviveClaimResponse) Reset() {
+	*x = GamePlayerReviveClaimResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[24]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GamePlayerReviveClaimResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerReviveClaimResponse) ProtoMessage() {}
+
+func (x *GamePlayerReviveClaimResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[24]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerReviveClaimResponse.ProtoReflect.Descriptor instead.
+func (*GamePlayerReviveClaimResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *GamePlayerReviveClaimResponse) GetGranted() bool {
+	if x != nil {
+		return x.Granted
+	}
+	return false
+}
+
+func (x *GamePlayerReviveClaimResponse) GetDenyReason() ReviveClaimDenyReason {
+	if x != nil {
+		return x.DenyReason
+	}
+	return ReviveClaimDenyReason_REVIVE_CLAIM_DENY_NONE
+}
+
+func (x *GamePlayerReviveClaimResponse) GetRemainingMs() int64 {
+	if x != nil {
+		return x.RemainingMs
+	}
+	return 0
+}
+
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_response_proto_rawDesc = "" +
@@ -986,7 +1101,18 @@ const file_protomulti_multi_response_proto_rawDesc = "" +
 	"toSequence\x12*\n" +
 	"\x11turn_remaining_ms\x18\x03 \x01(\x03R\x0fturnRemainingMs\"\x19\n" +
 	"\x17GamePlayerDeathResponse\"\x1a\n" +
-	"\x18GamePlayerReviveResponseBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\x18GamePlayerReviveResponse\"\x9b\x01\n" +
+	"\x1dGamePlayerReviveClaimResponse\x12\x18\n" +
+	"\agranted\x18\x01 \x01(\bR\agranted\x12=\n" +
+	"\vdeny_reason\x18\x02 \x01(\x0e2\x1c.multi.ReviveClaimDenyReasonR\n" +
+	"denyReason\x12!\n" +
+	"\fremaining_ms\x18\x03 \x01(\x03R\vremainingMs*\xc9\x01\n" +
+	"\x15ReviveClaimDenyReason\x12\x1a\n" +
+	"\x16REVIVE_CLAIM_DENY_NONE\x10\x00\x12&\n" +
+	"\"REVIVE_CLAIM_DENY_TARGET_NOT_FOUND\x10\x01\x12\"\n" +
+	"\x1eREVIVE_CLAIM_DENY_TARGET_ALIVE\x10\x02\x12%\n" +
+	"!REVIVE_CLAIM_DENY_ALREADY_CLAIMED\x10\x03\x12!\n" +
+	"\x1dREVIVE_CLAIM_DENY_UNAVAILABLE\x10\x04BMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_response_proto_rawDescOnce sync.Once
@@ -1000,43 +1126,47 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 	return file_protomulti_multi_response_proto_rawDescData
 }
 
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 24)
+var file_protomulti_multi_response_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 25)
 var file_protomulti_multi_response_proto_goTypes = []any{
-	(*GetGameResponse)(nil),            // 0: multi.GetGameResponse
-	(*GameReadyPlayerResponse)(nil),    // 1: multi.GameReadyPlayerResponse
-	(*GameEnqueueActionResponse)(nil),  // 2: multi.GameEnqueueActionResponse
-	(*GameDequeueActionResponse)(nil),  // 3: multi.GameDequeueActionResponse
-	(*GameLockActionResponse)(nil),     // 4: multi.GameLockActionResponse
-	(*SessionCreateResponse)(nil),      // 5: multi.SessionCreateResponse
-	(*SessionEndResponse)(nil),         // 6: multi.SessionEndResponse
-	(*LobbyCreateResponse)(nil),        // 7: multi.LobbyCreateResponse
-	(*LobbyCancelResponse)(nil),        // 8: multi.LobbyCancelResponse
-	(*LobbyReadyResponse)(nil),         // 9: multi.LobbyReadyResponse
-	(*LobbyStartResponse)(nil),         // 10: multi.LobbyStartResponse
-	(*LobbyStampResponse)(nil),         // 11: multi.LobbyStampResponse
-	(*LobbySearchResponse)(nil),        // 12: multi.LobbySearchResponse
-	(*ParticipantJoinResponse)(nil),    // 13: multi.ParticipantJoinResponse
-	(*ParticipantLeaveResponse)(nil),   // 14: multi.ParticipantLeaveResponse
-	(*ParticipantWatchResponse)(nil),   // 15: multi.ParticipantWatchResponse
-	(*ParticipantUnwatchResponse)(nil), // 16: multi.ParticipantUnwatchResponse
-	(*ParticipantReadyResponse)(nil),   // 17: multi.ParticipantReadyResponse
-	(*ParticipantFindResponse)(nil),    // 18: multi.ParticipantFindResponse
-	(*ParticipantUnreadyResponse)(nil), // 19: multi.ParticipantUnreadyResponse
-	(*GameHPConsensusResponse)(nil),    // 20: multi.GameHPConsensusResponse
-	(*GameCatchUpResponse)(nil),        // 21: multi.GameCatchUpResponse
-	(*GamePlayerDeathResponse)(nil),    // 22: multi.GamePlayerDeathResponse
-	(*GamePlayerReviveResponse)(nil),   // 23: multi.GamePlayerReviveResponse
-	(*ProtoGameSummary)(nil),           // 24: multi.ProtoGameSummary
-	(*ProtoLobbySummary)(nil),          // 25: multi.ProtoLobbySummary
+	(ReviveClaimDenyReason)(0),            // 0: multi.ReviveClaimDenyReason
+	(*GetGameResponse)(nil),               // 1: multi.GetGameResponse
+	(*GameReadyPlayerResponse)(nil),       // 2: multi.GameReadyPlayerResponse
+	(*GameEnqueueActionResponse)(nil),     // 3: multi.GameEnqueueActionResponse
+	(*GameDequeueActionResponse)(nil),     // 4: multi.GameDequeueActionResponse
+	(*GameLockActionResponse)(nil),        // 5: multi.GameLockActionResponse
+	(*SessionCreateResponse)(nil),         // 6: multi.SessionCreateResponse
+	(*SessionEndResponse)(nil),            // 7: multi.SessionEndResponse
+	(*LobbyCreateResponse)(nil),           // 8: multi.LobbyCreateResponse
+	(*LobbyCancelResponse)(nil),           // 9: multi.LobbyCancelResponse
+	(*LobbyReadyResponse)(nil),            // 10: multi.LobbyReadyResponse
+	(*LobbyStartResponse)(nil),            // 11: multi.LobbyStartResponse
+	(*LobbyStampResponse)(nil),            // 12: multi.LobbyStampResponse
+	(*LobbySearchResponse)(nil),           // 13: multi.LobbySearchResponse
+	(*ParticipantJoinResponse)(nil),       // 14: multi.ParticipantJoinResponse
+	(*ParticipantLeaveResponse)(nil),      // 15: multi.ParticipantLeaveResponse
+	(*ParticipantWatchResponse)(nil),      // 16: multi.ParticipantWatchResponse
+	(*ParticipantUnwatchResponse)(nil),    // 17: multi.ParticipantUnwatchResponse
+	(*ParticipantReadyResponse)(nil),      // 18: multi.ParticipantReadyResponse
+	(*ParticipantFindResponse)(nil),       // 19: multi.ParticipantFindResponse
+	(*ParticipantUnreadyResponse)(nil),    // 20: multi.ParticipantUnreadyResponse
+	(*GameHPConsensusResponse)(nil),       // 21: multi.GameHPConsensusResponse
+	(*GameCatchUpResponse)(nil),           // 22: multi.GameCatchUpResponse
+	(*GamePlayerDeathResponse)(nil),       // 23: multi.GamePlayerDeathResponse
+	(*GamePlayerReviveResponse)(nil),      // 24: multi.GamePlayerReviveResponse
+	(*GamePlayerReviveClaimResponse)(nil), // 25: multi.GamePlayerReviveClaimResponse
+	(*ProtoGameSummary)(nil),              // 26: multi.ProtoGameSummary
+	(*ProtoLobbySummary)(nil),             // 27: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	24, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
-	25, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
-	2,  // [2:2] is the sub-list for method output_type
-	2,  // [2:2] is the sub-list for method input_type
-	2,  // [2:2] is the sub-list for extension type_name
-	2,  // [2:2] is the sub-list for extension extendee
-	0,  // [0:2] is the sub-list for field type_name
+	26, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
+	27, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	0,  // 2: multi.GamePlayerReviveClaimResponse.deny_reason:type_name -> multi.ReviveClaimDenyReason
+	3,  // [3:3] is the sub-list for method output_type
+	3,  // [3:3] is the sub-list for method input_type
+	3,  // [3:3] is the sub-list for extension type_name
+	3,  // [3:3] is the sub-list for extension extendee
+	0,  // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_protomulti_multi_response_proto_init() }
@@ -1050,13 +1180,14 @@ func file_protomulti_multi_response_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_response_proto_rawDesc), len(file_protomulti_multi_response_proto_rawDesc)),
-			NumEnums:      0,
-			NumMessages:   24,
+			NumEnums:      1,
+			NumMessages:   25,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
 		GoTypes:           file_protomulti_multi_response_proto_goTypes,
 		DependencyIndexes: file_protomulti_multi_response_proto_depIdxs,
+		EnumInfos:         file_protomulti_multi_response_proto_enumTypes,
 		MessageInfos:      file_protomulti_multi_response_proto_msgTypes,
 	}.Build()
 	File_protomulti_multi_response_proto = out.File

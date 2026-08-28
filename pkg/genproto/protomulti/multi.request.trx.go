@@ -289,3 +289,15 @@ func NewGamePlayerReviveRequest(bytes []byte) (*GamePlayerReviveRequest, error) 
 func (x *GamePlayerReviveResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGamePlayerReviveClaimRequest(bytes []byte) (*GamePlayerReviveClaimRequest, error) {
+	req := &GamePlayerReviveClaimRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GamePlayerReviveClaimResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

@@ -24,31 +24,32 @@ const (
 type MultiRequestType int32
 
 const (
-	MultiRequestType_REQUEST_TYPE_NONE   MultiRequestType = 0
-	MultiRequestType_SESSION_CREATE      MultiRequestType = 100
-	MultiRequestType_SESSION_END         MultiRequestType = 200
-	MultiRequestType_LOBBY_SEARCH        MultiRequestType = 300
-	MultiRequestType_LOBBY_CREATE        MultiRequestType = 400
-	MultiRequestType_LOBBY_CANCEL        MultiRequestType = 500
-	MultiRequestType_LOBBY_READY         MultiRequestType = 600
-	MultiRequestType_LOBBY_START         MultiRequestType = 700
-	MultiRequestType_LOBBY_STAMP         MultiRequestType = 800
-	MultiRequestType_PARTICIPANT_JOIN    MultiRequestType = 1000
-	MultiRequestType_PARTICIPANT_READY   MultiRequestType = 1100
-	MultiRequestType_PARTICIPANT_UNREADY MultiRequestType = 1200
-	MultiRequestType_PARTICIPANT_LEAVE   MultiRequestType = 1300
-	MultiRequestType_PARTICIPANT_WATCH   MultiRequestType = 1400
-	MultiRequestType_PARTICIPANT_UNWATCH MultiRequestType = 1500
-	MultiRequestType_PARTICIPANT_FIND    MultiRequestType = 900
-	MultiRequestType_PLAYER_SEARCH       MultiRequestType = 2000
-	MultiRequestType_GET_GAME            MultiRequestType = 3000
-	MultiRequestType_GAME_READY_PLAYER   MultiRequestType = 3100
-	MultiRequestType_GAME_ENQUEUE_ACTION MultiRequestType = 3200
-	MultiRequestType_GAME_DEQUEUE_ACTION MultiRequestType = 3300
-	MultiRequestType_GAME_LOCK_ACTIONS   MultiRequestType = 3400
-	MultiRequestType_GAME_CONSENSUS      MultiRequestType = 3500
-	MultiRequestType_GAME_PLAYER_DEATH   MultiRequestType = 3600
-	MultiRequestType_GAME_PLAYER_REVIVE  MultiRequestType = 3700
+	MultiRequestType_REQUEST_TYPE_NONE        MultiRequestType = 0
+	MultiRequestType_SESSION_CREATE           MultiRequestType = 100
+	MultiRequestType_SESSION_END              MultiRequestType = 200
+	MultiRequestType_LOBBY_SEARCH             MultiRequestType = 300
+	MultiRequestType_LOBBY_CREATE             MultiRequestType = 400
+	MultiRequestType_LOBBY_CANCEL             MultiRequestType = 500
+	MultiRequestType_LOBBY_READY              MultiRequestType = 600
+	MultiRequestType_LOBBY_START              MultiRequestType = 700
+	MultiRequestType_LOBBY_STAMP              MultiRequestType = 800
+	MultiRequestType_PARTICIPANT_JOIN         MultiRequestType = 1000
+	MultiRequestType_PARTICIPANT_READY        MultiRequestType = 1100
+	MultiRequestType_PARTICIPANT_UNREADY      MultiRequestType = 1200
+	MultiRequestType_PARTICIPANT_LEAVE        MultiRequestType = 1300
+	MultiRequestType_PARTICIPANT_WATCH        MultiRequestType = 1400
+	MultiRequestType_PARTICIPANT_UNWATCH      MultiRequestType = 1500
+	MultiRequestType_PARTICIPANT_FIND         MultiRequestType = 900
+	MultiRequestType_PLAYER_SEARCH            MultiRequestType = 2000
+	MultiRequestType_GET_GAME                 MultiRequestType = 3000
+	MultiRequestType_GAME_READY_PLAYER        MultiRequestType = 3100
+	MultiRequestType_GAME_ENQUEUE_ACTION      MultiRequestType = 3200
+	MultiRequestType_GAME_DEQUEUE_ACTION      MultiRequestType = 3300
+	MultiRequestType_GAME_LOCK_ACTIONS        MultiRequestType = 3400
+	MultiRequestType_GAME_CONSENSUS           MultiRequestType = 3500
+	MultiRequestType_GAME_PLAYER_DEATH        MultiRequestType = 3600
+	MultiRequestType_GAME_PLAYER_REVIVE       MultiRequestType = 3700
+	MultiRequestType_GAME_PLAYER_REVIVE_CLAIM MultiRequestType = 3800
 )
 
 // Enum value maps for MultiRequestType.
@@ -79,33 +80,35 @@ var (
 		3500: "GAME_CONSENSUS",
 		3600: "GAME_PLAYER_DEATH",
 		3700: "GAME_PLAYER_REVIVE",
+		3800: "GAME_PLAYER_REVIVE_CLAIM",
 	}
 	MultiRequestType_value = map[string]int32{
-		"REQUEST_TYPE_NONE":   0,
-		"SESSION_CREATE":      100,
-		"SESSION_END":         200,
-		"LOBBY_SEARCH":        300,
-		"LOBBY_CREATE":        400,
-		"LOBBY_CANCEL":        500,
-		"LOBBY_READY":         600,
-		"LOBBY_START":         700,
-		"LOBBY_STAMP":         800,
-		"PARTICIPANT_JOIN":    1000,
-		"PARTICIPANT_READY":   1100,
-		"PARTICIPANT_UNREADY": 1200,
-		"PARTICIPANT_LEAVE":   1300,
-		"PARTICIPANT_WATCH":   1400,
-		"PARTICIPANT_UNWATCH": 1500,
-		"PARTICIPANT_FIND":    900,
-		"PLAYER_SEARCH":       2000,
-		"GET_GAME":            3000,
-		"GAME_READY_PLAYER":   3100,
-		"GAME_ENQUEUE_ACTION": 3200,
-		"GAME_DEQUEUE_ACTION": 3300,
-		"GAME_LOCK_ACTIONS":   3400,
-		"GAME_CONSENSUS":      3500,
-		"GAME_PLAYER_DEATH":   3600,
-		"GAME_PLAYER_REVIVE":  3700,
+		"REQUEST_TYPE_NONE":        0,
+		"SESSION_CREATE":           100,
+		"SESSION_END":              200,
+		"LOBBY_SEARCH":             300,
+		"LOBBY_CREATE":             400,
+		"LOBBY_CANCEL":             500,
+		"LOBBY_READY":              600,
+		"LOBBY_START":              700,
+		"LOBBY_STAMP":              800,
+		"PARTICIPANT_JOIN":         1000,
+		"PARTICIPANT_READY":        1100,
+		"PARTICIPANT_UNREADY":      1200,
+		"PARTICIPANT_LEAVE":        1300,
+		"PARTICIPANT_WATCH":        1400,
+		"PARTICIPANT_UNWATCH":      1500,
+		"PARTICIPANT_FIND":         900,
+		"PLAYER_SEARCH":            2000,
+		"GET_GAME":                 3000,
+		"GAME_READY_PLAYER":        3100,
+		"GAME_ENQUEUE_ACTION":      3200,
+		"GAME_DEQUEUE_ACTION":      3300,
+		"GAME_LOCK_ACTIONS":        3400,
+		"GAME_CONSENSUS":           3500,
+		"GAME_PLAYER_DEATH":        3600,
+		"GAME_PLAYER_REVIVE":       3700,
+		"GAME_PLAYER_REVIVE_CLAIM": 3800,
 	}
 )
 
@@ -1272,6 +1275,50 @@ func (x *GamePlayerReviveRequest) GetTargetPlayerId() string {
 	return ""
 }
 
+type GamePlayerReviveClaimRequest struct {
+	state          protoimpl.MessageState `protogen:"open.v1"`
+	TargetPlayerId string                 `protobuf:"bytes,1,opt,name=target_player_id,json=targetPlayerId,proto3" json:"target_player_id,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *GamePlayerReviveClaimRequest) Reset() {
+	*x = GamePlayerReviveClaimRequest{}
+	mi := &file_protomulti_multi_request_proto_msgTypes[24]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GamePlayerReviveClaimRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GamePlayerReviveClaimRequest) ProtoMessage() {}
+
+func (x *GamePlayerReviveClaimRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_request_proto_msgTypes[24]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GamePlayerReviveClaimRequest.ProtoReflect.Descriptor instead.
+func (*GamePlayerReviveClaimRequest) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *GamePlayerReviveClaimRequest) GetTargetPlayerId() string {
+	if x != nil {
+		return x.TargetPlayerId
+	}
+	return ""
+}
+
 var File_protomulti_multi_request_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_request_proto_rawDesc = "" +
@@ -1345,7 +1392,9 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\rlast_sequence\x18\x01 \x01(\x04R\flastSequence\"\x18\n" +
 	"\x16GamePlayerDeathRequest\"C\n" +
 	"\x17GamePlayerReviveRequest\x12(\n" +
-	"\x10target_player_id\x18\x01 \x01(\tR\x0etargetPlayerId*\xb5\x04\n" +
+	"\x10target_player_id\x18\x01 \x01(\tR\x0etargetPlayerId\"H\n" +
+	"\x1cGamePlayerReviveClaimRequest\x12(\n" +
+	"\x10target_player_id\x18\x01 \x01(\tR\x0etargetPlayerId*\xd4\x04\n" +
 	"\x10MultiRequestType\x12\x15\n" +
 	"\x11REQUEST_TYPE_NONE\x10\x00\x12\x12\n" +
 	"\x0eSESSION_CREATE\x10d\x12\x10\n" +
@@ -1373,7 +1422,8 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\x11GAME_LOCK_ACTIONS\x10\xc8\x1a\x12\x13\n" +
 	"\x0eGAME_CONSENSUS\x10\xac\x1b\x12\x16\n" +
 	"\x11GAME_PLAYER_DEATH\x10\x90\x1c\x12\x17\n" +
-	"\x12GAME_PLAYER_REVIVE\x10\xf4\x1cBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\x12GAME_PLAYER_REVIVE\x10\xf4\x1c\x12\x1d\n" +
+	"\x18GAME_PLAYER_REVIVE_CLAIM\x10\xd8\x1dBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_request_proto_rawDescOnce sync.Once
@@ -1388,7 +1438,7 @@ func file_protomulti_multi_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 24)
+var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 25)
 var file_protomulti_multi_request_proto_goTypes = []any{
 	(MultiRequestType)(0),                   // 0: multi.MultiRequestType
 	(*GetGameRequest)(nil),                  // 1: multi.GetGameRequest
@@ -1415,14 +1465,15 @@ var file_protomulti_multi_request_proto_goTypes = []any{
 	(*GameCatchUpRequest)(nil),              // 22: multi.GameCatchUpRequest
 	(*GamePlayerDeathRequest)(nil),          // 23: multi.GamePlayerDeathRequest
 	(*GamePlayerReviveRequest)(nil),         // 24: multi.GamePlayerReviveRequest
-	(*ProtoGameEnemyHP)(nil),                // 25: multi.ProtoGameEnemyHP
-	(*ProtoGameAction)(nil),                 // 26: multi.ProtoGameAction
-	(*ProtoLobbyPlayerSlotRestriction)(nil), // 27: multi.ProtoLobbyPlayerSlotRestriction
+	(*GamePlayerReviveClaimRequest)(nil),    // 25: multi.GamePlayerReviveClaimRequest
+	(*ProtoGameEnemyHP)(nil),                // 26: multi.ProtoGameEnemyHP
+	(*ProtoGameAction)(nil),                 // 27: multi.ProtoGameAction
+	(*ProtoLobbyPlayerSlotRestriction)(nil), // 28: multi.ProtoLobbyPlayerSlotRestriction
 }
 var file_protomulti_multi_request_proto_depIdxs = []int32{
-	25, // 0: multi.GameHPConsensusRequest.enemies:type_name -> multi.ProtoGameEnemyHP
-	26, // 1: multi.GameEnqueueActionRequest.action:type_name -> multi.ProtoGameAction
-	27, // 2: multi.LobbyCreateRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	26, // 0: multi.GameHPConsensusRequest.enemies:type_name -> multi.ProtoGameEnemyHP
+	27, // 1: multi.GameEnqueueActionRequest.action:type_name -> multi.ProtoGameAction
+	28, // 2: multi.LobbyCreateRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
 	3,  // [3:3] is the sub-list for method output_type
 	3,  // [3:3] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
@@ -1442,7 +1493,7 @@ func file_protomulti_multi_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_request_proto_rawDesc), len(file_protomulti_multi_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   24,
+			NumMessages:   25,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

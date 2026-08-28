@@ -38,4 +38,5 @@ service MeviusMultiService {
 
   rpc PlayerDeath(multi.GamePlayerDeathRequest) returns (multi.GamePlayerDeathResponse) {}
   rpc PlayerRevive(multi.GamePlayerReviveRequest) returns (multi.GamePlayerReviveResponse) {}
+  rpc PlayerReviveClaim(multi.GamePlayerReviveClaimRequest) returns (multi.GamePlayerReviveClaimResponse) {}
 }
