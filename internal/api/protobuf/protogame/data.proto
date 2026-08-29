@@ -36,6 +36,8 @@ message ProtoGameData {
 
   game.ProtoSummonData summon_data = 12;
 
+  game.ProtoStampData stamp_data = 13;
+
   repeated ProtoCardFilterSortSet card_filter_sort_sets = 20;
   map<string, bool> player_progress_data = 100;
   repeated ProtoAchievementData player_achievement_data = 110;
@@ -717,6 +719,7 @@ message ProtoMailboxClaimResult {
     ProtoJobCardClaimResult job_card = 3;
     ProtoWeaponClaimResult weapon = 4;
     ProtoCompanionClaimResult companion = 5;
+    ProtoStampClaimResult stamp = 6;
 }
 
 message ProtoItemClaimResult {
@@ -739,6 +742,10 @@ message ProtoWeaponClaimResult {
 
 message ProtoCompanionClaimResult {
   ProtoFairyCompanionInstance companion = 1;
+}
+
+message ProtoStampClaimResult {
+  ProtoStampInstance stamp = 1;
 }
 
 message ProtoBattleSelection {
@@ -789,5 +796,33 @@ message ProtoSummonBannerSchedule {
   string id = 1;
   int64 start_date = 2;
   int64 end_date = 3;
+}
+
+message ProtoStampData {
+  ProtoStampInventory inventory = 1;
+  ProtoStampLayoutCollection layouts = 2;
+}
+
+message ProtoStampInventory {
+  repeated ProtoStampInstance stamp_list = 1;
+}
+
+message ProtoStampInstance {
+  string base_stamp_id = 1;
+  int64 created_at = 2;
+}
+
+message ProtoStampLayoutCollection {
+  repeated ProtoStampLayout layouts = 1;
+}
+
+message ProtoStampLayout {
+  int32 layout_index = 1;
+  repeated ProtoStampLayoutSlot slots = 2;
+}
+
+message ProtoStampLayoutSlot {
+  string stamp_id = 1;
+  int32 slot_index = 2;
 }
 

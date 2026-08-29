@@ -164,6 +164,10 @@ message StaminaRestoreResponse {
   uint64 stamina_dec = 4;
 }
 
+message StampLayoutEditAllResponse {
+  game.ProtoStampLayoutCollection Collection = 1;
+}
+
 message SkillPanelUnlockResponse {
   repeated game.ProtoItemValuePair items_removed = 1;
   int32 hp_stat_increase = 2;

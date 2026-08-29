@@ -234,6 +234,15 @@ message StaminaRestoreRequest {
   bool multi_player = 1;
 }
 
+message StampLayoutEditRequest {
+  int32             LayoutIndex   =  1;
+  repeated  string  StampIDs      =  2;
+}
+
+message StampLayoutEditAllRequest {
+  repeated StampLayoutEditRequest Requests = 1;
+}
+
 message TeleportRequest {
   string region_map = 1;
   int32 region_map_node = 2;

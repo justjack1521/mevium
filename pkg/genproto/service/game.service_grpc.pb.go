@@ -48,6 +48,7 @@ const (
 	MeviusGameService_RestoreStamina_FullMethodName         = "/service.MeviusGameService/RestoreStamina"
 	MeviusGameService_SkillPanelUnlock_FullMethodName       = "/service.MeviusGameService/SkillPanelUnlock"
 	MeviusGameService_SkillPanelMultiUnlock_FullMethodName  = "/service.MeviusGameService/SkillPanelMultiUnlock"
+	MeviusGameService_StampLayoutEdit_FullMethodName        = "/service.MeviusGameService/StampLayoutEdit"
 	MeviusGameService_Teleport_FullMethodName               = "/service.MeviusGameService/Teleport"
 	MeviusGameService_UpdateProfile_FullMethodName          = "/service.MeviusGameService/UpdateProfile"
 	MeviusGameService_PurchaseItem_FullMethodName           = "/service.MeviusGameService/PurchaseItem"
@@ -104,6 +105,7 @@ type MeviusGameServiceClient interface {
 	RestoreStamina(ctx context.Context, in *protogame.StaminaRestoreRequest, opts ...grpc.CallOption) (*protogame.StaminaRestoreResponse, error)
 	SkillPanelUnlock(ctx context.Context, in *protogame.SkillPanelUnlockRequest, opts ...grpc.CallOption) (*protogame.SkillPanelUnlockResponse, error)
 	SkillPanelMultiUnlock(ctx context.Context, in *protogame.SkillPanelMultiUnlockRequest, opts ...grpc.CallOption) (*protogame.SkillPanelMultiUnlockResponse, error)
+	StampLayoutEdit(ctx context.Context, in *protogame.StampLayoutEditAllRequest, opts ...grpc.CallOption) (*protogame.StampLayoutEditAllResponse, error)
 	Teleport(ctx context.Context, in *protogame.TeleportRequest, opts ...grpc.CallOption) (*protogame.TeleportResponse, error)
 	UpdateProfile(ctx context.Context, in *protogame.UpdateProfileRequest, opts ...grpc.CallOption) (*protogame.UpdateProfileResponse, error)
 	PurchaseItem(ctx context.Context, in *protogame.ItemShopItemPurchaseRequest, opts ...grpc.CallOption) (*protogame.ItemShopItemPurchaseResponse, error)
@@ -387,6 +389,15 @@ func (c *meviusGameServiceClient) SkillPanelMultiUnlock(ctx context.Context, in 
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) StampLayoutEdit(ctx context.Context, in *protogame.StampLayoutEditAllRequest, opts ...grpc.CallOption) (*protogame.StampLayoutEditAllResponse, error) {
+	out := new(protogame.StampLayoutEditAllResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_StampLayoutEdit_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *meviusGameServiceClient) Teleport(ctx context.Context, in *protogame.TeleportRequest, opts ...grpc.CallOption) (*protogame.TeleportResponse, error) {
 	out := new(protogame.TeleportResponse)
 	err := c.cc.Invoke(ctx, MeviusGameService_Teleport_FullMethodName, in, out, opts...)
@@ -609,6 +620,7 @@ type MeviusGameServiceServer interface {
 	RestoreStamina(context.Context, *protogame.StaminaRestoreRequest) (*protogame.StaminaRestoreResponse, error)
 	SkillPanelUnlock(context.Context, *protogame.SkillPanelUnlockRequest) (*protogame.SkillPanelUnlockResponse, error)
 	SkillPanelMultiUnlock(context.Context, *protogame.SkillPanelMultiUnlockRequest) (*protogame.SkillPanelMultiUnlockResponse, error)
+	StampLayoutEdit(context.Context, *protogame.StampLayoutEditAllRequest) (*protogame.StampLayoutEditAllResponse, error)
 	Teleport(context.Context, *protogame.TeleportRequest) (*protogame.TeleportResponse, error)
 	UpdateProfile(context.Context, *protogame.UpdateProfileRequest) (*protogame.UpdateProfileResponse, error)
 	PurchaseItem(context.Context, *protogame.ItemShopItemPurchaseRequest) (*protogame.ItemShopItemPurchaseResponse, error)
@@ -719,6 +731,9 @@ func (UnimplementedMeviusGameServiceServer) SkillPanelUnlock(context.Context, *p
 }
 func (UnimplementedMeviusGameServiceServer) SkillPanelMultiUnlock(context.Context, *protogame.SkillPanelMultiUnlockRequest) (*protogame.SkillPanelMultiUnlockResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SkillPanelMultiUnlock not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) StampLayoutEdit(context.Context, *protogame.StampLayoutEditAllRequest) (*protogame.StampLayoutEditAllResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method StampLayoutEdit not implemented")
 }
 func (UnimplementedMeviusGameServiceServer) Teleport(context.Context, *protogame.TeleportRequest) (*protogame.TeleportResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Teleport not implemented")
@@ -1299,6 +1314,24 @@ func _MeviusGameService_SkillPanelMultiUnlock_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_StampLayoutEdit_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.StampLayoutEditAllRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).StampLayoutEdit(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_StampLayoutEdit_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).StampLayoutEdit(ctx, req.(*protogame.StampLayoutEditAllRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MeviusGameService_Teleport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(protogame.TeleportRequest)
 	if err := dec(in); err != nil {
@@ -1795,6 +1828,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SkillPanelMultiUnlock",
 			Handler:    _MeviusGameService_SkillPanelMultiUnlock_Handler,
+		},
+		{
+			MethodName: "StampLayoutEdit",
+			Handler:    _MeviusGameService_StampLayoutEdit_Handler,
 		},
 		{
 			MethodName: "Teleport",
