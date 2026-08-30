@@ -164,6 +164,14 @@ func NewDeckEditAllRequest(bytes []byte) (*DeckEditAllRequest, error) {
 	return req, nil
 }
 
+func NewStampLayoutEditAllRequest(bytes []byte) (*StampLayoutEditAllRequest, error) {
+	req := &StampLayoutEditAllRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
 func NewFirstDailyLoginRequest(bytes []byte) (*FirstDailyLoginRequest, error) {
 	req := &FirstDailyLoginRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {
@@ -517,6 +525,10 @@ func (x *DeleteAllMailboxItemResponse) MarshallBinary() ([]byte, error) {
 }
 
 func (x *DeckEditAllResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func (x *StampLayoutEditAllResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
