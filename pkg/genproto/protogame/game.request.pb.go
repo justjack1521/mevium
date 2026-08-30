@@ -77,6 +77,7 @@ const (
 	GameRequestType_CONFIRM_GIFT_BOX          GameRequestType = 5100
 	GameRequestType_CLAIM_ACHIEVEMENT         GameRequestType = 5200
 	GameRequestType_PURCHASE_SHOP_ENTRY       GameRequestType = 5300
+	GameRequestType_STAMP_EDIT_ALL            GameRequestType = 5400
 )
 
 // Enum value maps for GameRequestType.
@@ -134,6 +135,7 @@ var (
 		5100: "CONFIRM_GIFT_BOX",
 		5200: "CLAIM_ACHIEVEMENT",
 		5300: "PURCHASE_SHOP_ENTRY",
+		5400: "STAMP_EDIT_ALL",
 	}
 	GameRequestType_value = map[string]int32{
 		"BASE":                      0,
@@ -188,6 +190,7 @@ var (
 		"CONFIRM_GIFT_BOX":          5100,
 		"CLAIM_ACHIEVEMENT":         5200,
 		"PURCHASE_SHOP_ENTRY":       5300,
+		"STAMP_EDIT_ALL":            5400,
 	}
 )
 
@@ -3286,7 +3289,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x18PurchaseShopEntryRequest\x12\x19\n" +
 	"\bentry_id\x18\x01 \x01(\tR\aentryId\x12,\n" +
 	"\x12purchase_option_id\x18\x02 \x01(\tR\x10purchaseOptionId\x12\x1a\n" +
-	"\bquantity\x18\x03 \x01(\x05R\bquantity*\x97\t\n" +
+	"\bquantity\x18\x03 \x01(\x05R\bquantity*\xac\t\n" +
 	"\x0fGameRequestType\x12\b\n" +
 	"\x04BASE\x10\x00\x12\x10\n" +
 	"\vGET_PROFILE\x10\xc8\x01\x12\x13\n" +
@@ -3340,7 +3343,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\vARENA_CLAIM\x10\x88'\x12\x15\n" +
 	"\x10CONFIRM_GIFT_BOX\x10\xec'\x12\x16\n" +
 	"\x11CLAIM_ACHIEVEMENT\x10\xd0(\x12\x18\n" +
-	"\x13PURCHASE_SHOP_ENTRY\x10\xb4)*X\n" +
+	"\x13PURCHASE_SHOP_ENTRY\x10\xb4)\x12\x13\n" +
+	"\x0eSTAMP_EDIT_ALL\x10\x98**X\n" +
 	"\x13TeleportRequestType\x12\x14\n" +
 	"\x10INVALID_TELEPORT\x10\x00\x12\t\n" +
 	"\x05LOGIN\x10\x01\x12\t\n" +

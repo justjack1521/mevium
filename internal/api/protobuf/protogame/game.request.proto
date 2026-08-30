@@ -61,6 +61,7 @@ enum GameRequestType {
   CONFIRM_GIFT_BOX = 5100;
   CLAIM_ACHIEVEMENT = 5200;
   PURCHASE_SHOP_ENTRY = 5300;
+  STAMP_EDIT_ALL = 5400;
 }
 
 enum TeleportRequestType {

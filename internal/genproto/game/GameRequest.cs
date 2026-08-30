@@ -112,7 +112,7 @@ namespace Mobius.Proto.Game {
             "GAMgASgIIiUKF0NsYWltQWNoaWV2ZW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJ",
             "IloKGFB1cmNoYXNlU2hvcEVudHJ5UmVxdWVzdBIQCghlbnRyeV9pZBgBIAEo",
             "CRIaChJwdXJjaGFzZV9vcHRpb25faWQYAiABKAkSEAoIcXVhbnRpdHkYAyAB",
-            "KAUqlwkKD0dhbWVSZXF1ZXN0VHlwZRIICgRCQVNFEAASEAoLR0VUX1BST0ZJ",
+            "KAUqrAkKD0dhbWVSZXF1ZXN0VHlwZRIICgRCQVNFEAASEAoLR0VUX1BST0ZJ",
             "TEUQyAESEwoOQ1JFQVRFX1BST0ZJTEUQrAISEwoOVVBEQVRFX1BST0ZJTEUQ",
             "3gISDgoJQ0FSRF9TQUxFEJADEhUKEENBUkRfRklMVEVSX1NPUlQQ9AMSEwoO",
             "Q0FSRF9GQVZPVVJJVEUQ2AQSEAoLU0tJTExfUEFORUwQvAUSFgoRU0tJTExf",
@@ -138,11 +138,11 @@ namespace Mobius.Proto.Game {
             "SU5BX0RFUE9TSVQQ3CQSFAoPU1RBTUlOQV9DT05WRVJUEMAlEhAKC0FSRU5B",
             "X1NUQVJUEKQmEhAKC0FSRU5BX0NMQUlNEIgnEhUKEENPTkZJUk1fR0lGVF9C",
             "T1gQ7CcSFgoRQ0xBSU1fQUNISUVWRU1FTlQQ0CgSGAoTUFVSQ0hBU0VfU0hP",
-            "UF9FTlRSWRC0KSpYChNUZWxlcG9ydFJlcXVlc3RUeXBlEhQKEElOVkFMSURf",
-            "VEVMRVBPUlQQABIJCgVMT0dJThABEgkKBVdPUkxEEAISCQoFRklFTEQQAxIK",
-            "CgZCQVRUTEUQBEJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0v",
-            "cGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZw",
-            "cm90bzM="));
+            "UF9FTlRSWRC0KRITCg5TVEFNUF9FRElUX0FMTBCYKipYChNUZWxlcG9ydFJl",
+            "cXVlc3RUeXBlEhQKEElOVkFMSURfVEVMRVBPUlQQABIJCgVMT0dJThABEgkK",
+            "BVdPUkxEEAISCQoFRklFTEQQAxIKCgZCQVRUTEUQBEJLWjVnaXRodWIuY29t",
+            "L2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoC",
+            "EU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.GameRequestType), typeof(global::Mobius.Proto.Game.TeleportRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -258,6 +258,7 @@ namespace Mobius.Proto.Game {
     [pbr::OriginalName("CONFIRM_GIFT_BOX")] ConfirmGiftBox = 5100,
     [pbr::OriginalName("CLAIM_ACHIEVEMENT")] ClaimAchievement = 5200,
     [pbr::OriginalName("PURCHASE_SHOP_ENTRY")] PurchaseShopEntry = 5300,
+    [pbr::OriginalName("STAMP_EDIT_ALL")] StampEditAll = 5400,
   }
 
   public enum TeleportRequestType {
