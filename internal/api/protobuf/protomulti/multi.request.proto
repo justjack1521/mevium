@@ -17,6 +17,7 @@ enum MultiRequestType {
   LOBBY_READY = 600;
   LOBBY_START = 700;
   LOBBY_STAMP = 800;
+  LOBBY_CHAT = 850;
 
   PARTICIPANT_JOIN = 1000;
   PARTICIPANT_READY = 1100;
@@ -36,6 +37,7 @@ enum MultiRequestType {
   GAME_PLAYER_DEATH = 3600;
   GAME_PLAYER_REVIVE = 3700;
   GAME_PLAYER_REVIVE_CLAIM = 3800;
+  GAME_CHAT = 3900;
 }
 
 message GetGameRequest {
@@ -92,6 +94,10 @@ message LobbyStartRequest {
 
 message LobbyStampRequest {
   string stamp_id = 1;
+}
+
+message LobbyChatRequest {
+  string message = 1;
 }
 
 message LobbySearchRequest {
@@ -152,4 +158,8 @@ message GamePlayerReviveRequest {
 
 message GamePlayerReviveClaimRequest {
   string target_player_id = 1;
+}
+
+message GameChatRequest {
+  string message = 1;
 }

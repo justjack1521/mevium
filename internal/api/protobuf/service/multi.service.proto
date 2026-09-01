@@ -17,6 +17,7 @@ service MeviusMultiService {
   rpc LobbyReady(multi.LobbyReadyRequest) returns (multi.LobbyReadyResponse) {}
   rpc LobbyStart(multi.LobbyStartRequest) returns (multi.LobbyStartResponse) {}
   rpc LobbyStamp(multi.LobbyStampRequest) returns (multi.LobbyStampResponse) {}
+  rpc LobbyChat(multi.LobbyChatRequest) returns (multi.LobbyChatResponse) {}
   rpc LobbySearch(multi.LobbySearchRequest) returns (multi.LobbySearchResponse) {}
 
   rpc ParticipantJoin(multi.ParticipantJoinRequest) returns (multi.ParticipantJoinResponse) {}
@@ -39,4 +40,5 @@ service MeviusMultiService {
   rpc PlayerDeath(multi.GamePlayerDeathRequest) returns (multi.GamePlayerDeathResponse) {}
   rpc PlayerRevive(multi.GamePlayerReviveRequest) returns (multi.GamePlayerReviveResponse) {}
   rpc PlayerReviveClaim(multi.GamePlayerReviveClaimRequest) returns (multi.GamePlayerReviveClaimResponse) {}
+  rpc GameChat(multi.GameChatRequest) returns (multi.GameChatResponse) {}
 }

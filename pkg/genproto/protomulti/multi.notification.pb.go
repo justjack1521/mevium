@@ -34,21 +34,23 @@ const (
 	MultiLobbyNotificationType_LOBBY_NOTIFY_CANCEL                  MultiLobbyNotificationType = 700
 	MultiLobbyNotificationType_LOBBY_NOTIFY_START                   MultiLobbyNotificationType = 800
 	MultiLobbyNotificationType_LOBBY_NOTIFY_READY                   MultiLobbyNotificationType = 900
+	MultiLobbyNotificationType_LOBBY_NOTIFY_CHAT                    MultiLobbyNotificationType = 1000
 )
 
 // Enum value maps for MultiLobbyNotificationType.
 var (
 	MultiLobbyNotificationType_name = map[int32]string{
-		0:   "LOBBY_NOTIFY_NONE",
-		100: "LOBBY_NOTIFY_PARTICIPANT_JOIN",
-		200: "LOBBY_NOTIFY_PARTICIPANT_LEAVE",
-		300: "LOBBY_NOTIFY_PARTICIPANT_READY",
-		400: "LOBBY_NOTIFY_PARTICIPANT_UNREADY",
-		500: "LOBBY_NOTIFY_STAMP_SEND",
-		600: "LOBBY_NOTIFY_PARTICIPANT_DECK_CHANGE",
-		700: "LOBBY_NOTIFY_CANCEL",
-		800: "LOBBY_NOTIFY_START",
-		900: "LOBBY_NOTIFY_READY",
+		0:    "LOBBY_NOTIFY_NONE",
+		100:  "LOBBY_NOTIFY_PARTICIPANT_JOIN",
+		200:  "LOBBY_NOTIFY_PARTICIPANT_LEAVE",
+		300:  "LOBBY_NOTIFY_PARTICIPANT_READY",
+		400:  "LOBBY_NOTIFY_PARTICIPANT_UNREADY",
+		500:  "LOBBY_NOTIFY_STAMP_SEND",
+		600:  "LOBBY_NOTIFY_PARTICIPANT_DECK_CHANGE",
+		700:  "LOBBY_NOTIFY_CANCEL",
+		800:  "LOBBY_NOTIFY_START",
+		900:  "LOBBY_NOTIFY_READY",
+		1000: "LOBBY_NOTIFY_CHAT",
 	}
 	MultiLobbyNotificationType_value = map[string]int32{
 		"LOBBY_NOTIFY_NONE":                    0,
@@ -61,6 +63,7 @@ var (
 		"LOBBY_NOTIFY_CANCEL":                  700,
 		"LOBBY_NOTIFY_START":                   800,
 		"LOBBY_NOTIFY_READY":                   900,
+		"LOBBY_NOTIFY_CHAT":                    1000,
 	}
 )
 
@@ -111,6 +114,7 @@ const (
 	MultiGameNotificationType_GAME_NOTIFY_PLAYER_REVIVE              MultiGameNotificationType = 2500
 	MultiGameNotificationType_GAME_NOTIFY_PLAYER_REVIVE_CLAIM        MultiGameNotificationType = 2600
 	MultiGameNotificationType_GAME_NOTIFY_PLAYER_REVIVE_CLAIM_EXPIRE MultiGameNotificationType = 2700
+	MultiGameNotificationType_GAME_NOTIFY_CHAT                       MultiGameNotificationType = 2800
 	MultiGameNotificationType_GAME_NOTIFY_END                        MultiGameNotificationType = 8888
 )
 
@@ -134,6 +138,7 @@ var (
 		2500: "GAME_NOTIFY_PLAYER_REVIVE",
 		2600: "GAME_NOTIFY_PLAYER_REVIVE_CLAIM",
 		2700: "GAME_NOTIFY_PLAYER_REVIVE_CLAIM_EXPIRE",
+		2800: "GAME_NOTIFY_CHAT",
 		8888: "GAME_NOTIFY_END",
 	}
 	MultiGameNotificationType_value = map[string]int32{
@@ -154,6 +159,7 @@ var (
 		"GAME_NOTIFY_PLAYER_REVIVE":              2500,
 		"GAME_NOTIFY_PLAYER_REVIVE_CLAIM":        2600,
 		"GAME_NOTIFY_PLAYER_REVIVE_CLAIM_EXPIRE": 2700,
+		"GAME_NOTIFY_CHAT":                       2800,
 		"GAME_NOTIFY_END":                        8888,
 	}
 )
@@ -685,6 +691,66 @@ func (x *StampSendNotification) GetPartySlot() int32 {
 	return 0
 }
 
+type LobbyChatNotification struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	LobbyId       string                 `protobuf:"bytes,1,opt,name=lobby_id,json=lobbyId,proto3" json:"lobby_id,omitempty"`
+	PartySlot     int32                  `protobuf:"varint,2,opt,name=party_slot,json=partySlot,proto3" json:"party_slot,omitempty"`
+	Message       string                 `protobuf:"bytes,3,opt,name=message,proto3" json:"message,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *LobbyChatNotification) Reset() {
+	*x = LobbyChatNotification{}
+	mi := &file_protomulti_multi_notification_proto_msgTypes[9]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *LobbyChatNotification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LobbyChatNotification) ProtoMessage() {}
+
+func (x *LobbyChatNotification) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_notification_proto_msgTypes[9]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LobbyChatNotification.ProtoReflect.Descriptor instead.
+func (*LobbyChatNotification) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *LobbyChatNotification) GetLobbyId() string {
+	if x != nil {
+		return x.LobbyId
+	}
+	return ""
+}
+
+func (x *LobbyChatNotification) GetPartySlot() int32 {
+	if x != nil {
+		return x.PartySlot
+	}
+	return 0
+}
+
+func (x *LobbyChatNotification) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
 type GameStartNotification struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	GameId        string                 `protobuf:"bytes,1,opt,name=game_id,json=gameId,proto3" json:"game_id,omitempty"`
@@ -694,7 +760,7 @@ type GameStartNotification struct {
 
 func (x *GameStartNotification) Reset() {
 	*x = GameStartNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[9]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -706,7 +772,7 @@ func (x *GameStartNotification) String() string {
 func (*GameStartNotification) ProtoMessage() {}
 
 func (x *GameStartNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[9]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -719,7 +785,7 @@ func (x *GameStartNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameStartNotification.ProtoReflect.Descriptor instead.
 func (*GameStartNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{9}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *GameStartNotification) GetGameId() string {
@@ -738,7 +804,7 @@ type GameEndNotification struct {
 
 func (x *GameEndNotification) Reset() {
 	*x = GameEndNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[10]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -750,7 +816,7 @@ func (x *GameEndNotification) String() string {
 func (*GameEndNotification) ProtoMessage() {}
 
 func (x *GameEndNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[10]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -763,7 +829,7 @@ func (x *GameEndNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameEndNotification.ProtoReflect.Descriptor instead.
 func (*GameEndNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{10}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *GameEndNotification) GetGameId() string {
@@ -784,7 +850,7 @@ type GamePlayerReadyNotification struct {
 
 func (x *GamePlayerReadyNotification) Reset() {
 	*x = GamePlayerReadyNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[11]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -796,7 +862,7 @@ func (x *GamePlayerReadyNotification) String() string {
 func (*GamePlayerReadyNotification) ProtoMessage() {}
 
 func (x *GamePlayerReadyNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[11]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -809,7 +875,7 @@ func (x *GamePlayerReadyNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerReadyNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerReadyNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{11}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *GamePlayerReadyNotification) GetGameId() string {
@@ -842,7 +908,7 @@ type GameReadyNotification struct {
 
 func (x *GameReadyNotification) Reset() {
 	*x = GameReadyNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[12]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -854,7 +920,7 @@ func (x *GameReadyNotification) String() string {
 func (*GameReadyNotification) ProtoMessage() {}
 
 func (x *GameReadyNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[12]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -867,7 +933,7 @@ func (x *GameReadyNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameReadyNotification.ProtoReflect.Descriptor instead.
 func (*GameReadyNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{12}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *GameReadyNotification) GetGameId() string {
@@ -887,7 +953,7 @@ type GameHPSyncNotification struct {
 
 func (x *GameHPSyncNotification) Reset() {
 	*x = GameHPSyncNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[13]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -899,7 +965,7 @@ func (x *GameHPSyncNotification) String() string {
 func (*GameHPSyncNotification) ProtoMessage() {}
 
 func (x *GameHPSyncNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[13]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -912,7 +978,7 @@ func (x *GameHPSyncNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameHPSyncNotification.ProtoReflect.Descriptor instead.
 func (*GameHPSyncNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{13}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *GameHPSyncNotification) GetGameId() string {
@@ -944,7 +1010,7 @@ type GameEnqueueActionNotification struct {
 
 func (x *GameEnqueueActionNotification) Reset() {
 	*x = GameEnqueueActionNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[14]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -956,7 +1022,7 @@ func (x *GameEnqueueActionNotification) String() string {
 func (*GameEnqueueActionNotification) ProtoMessage() {}
 
 func (x *GameEnqueueActionNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[14]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -969,7 +1035,7 @@ func (x *GameEnqueueActionNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameEnqueueActionNotification.ProtoReflect.Descriptor instead.
 func (*GameEnqueueActionNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{14}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *GameEnqueueActionNotification) GetGameId() string {
@@ -1032,7 +1098,7 @@ type GameDequeueActionNotification struct {
 
 func (x *GameDequeueActionNotification) Reset() {
 	*x = GameDequeueActionNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[15]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1044,7 +1110,7 @@ func (x *GameDequeueActionNotification) String() string {
 func (*GameDequeueActionNotification) ProtoMessage() {}
 
 func (x *GameDequeueActionNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[15]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1057,7 +1123,7 @@ func (x *GameDequeueActionNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameDequeueActionNotification.ProtoReflect.Descriptor instead.
 func (*GameDequeueActionNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{15}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *GameDequeueActionNotification) GetGameId() string {
@@ -1093,7 +1159,7 @@ type GameLockActionNotification struct {
 
 func (x *GameLockActionNotification) Reset() {
 	*x = GameLockActionNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[16]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1105,7 +1171,7 @@ func (x *GameLockActionNotification) String() string {
 func (*GameLockActionNotification) ProtoMessage() {}
 
 func (x *GameLockActionNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[16]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1118,7 +1184,7 @@ func (x *GameLockActionNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameLockActionNotification.ProtoReflect.Descriptor instead.
 func (*GameLockActionNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{16}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *GameLockActionNotification) GetGameId() string {
@@ -1158,7 +1224,7 @@ type GameActionQueueConfirmNotification struct {
 
 func (x *GameActionQueueConfirmNotification) Reset() {
 	*x = GameActionQueueConfirmNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[17]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1170,7 +1236,7 @@ func (x *GameActionQueueConfirmNotification) String() string {
 func (*GameActionQueueConfirmNotification) ProtoMessage() {}
 
 func (x *GameActionQueueConfirmNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[17]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1183,7 +1249,7 @@ func (x *GameActionQueueConfirmNotification) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use GameActionQueueConfirmNotification.ProtoReflect.Descriptor instead.
 func (*GameActionQueueConfirmNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{17}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *GameActionQueueConfirmNotification) GetPartyActionQueues() []*ProtoGamePartyActionQueue {
@@ -1204,7 +1270,7 @@ type GamePlayerRemoveNotification struct {
 
 func (x *GamePlayerRemoveNotification) Reset() {
 	*x = GamePlayerRemoveNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[18]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1216,7 +1282,7 @@ func (x *GamePlayerRemoveNotification) String() string {
 func (*GamePlayerRemoveNotification) ProtoMessage() {}
 
 func (x *GamePlayerRemoveNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[18]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1229,7 +1295,7 @@ func (x *GamePlayerRemoveNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerRemoveNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerRemoveNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{18}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *GamePlayerRemoveNotification) GetGameId() string {
@@ -1264,7 +1330,7 @@ type GamePlayerDisconnectNotification struct {
 
 func (x *GamePlayerDisconnectNotification) Reset() {
 	*x = GamePlayerDisconnectNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[19]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1276,7 +1342,7 @@ func (x *GamePlayerDisconnectNotification) String() string {
 func (*GamePlayerDisconnectNotification) ProtoMessage() {}
 
 func (x *GamePlayerDisconnectNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[19]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1289,7 +1355,7 @@ func (x *GamePlayerDisconnectNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerDisconnectNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerDisconnectNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{19}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *GamePlayerDisconnectNotification) GetGameId() string {
@@ -1324,7 +1390,7 @@ type GamePlayerReconnectNotification struct {
 
 func (x *GamePlayerReconnectNotification) Reset() {
 	*x = GamePlayerReconnectNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[20]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1336,7 +1402,7 @@ func (x *GamePlayerReconnectNotification) String() string {
 func (*GamePlayerReconnectNotification) ProtoMessage() {}
 
 func (x *GamePlayerReconnectNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[20]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1349,7 +1415,7 @@ func (x *GamePlayerReconnectNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerReconnectNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerReconnectNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{20}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *GamePlayerReconnectNotification) GetGameId() string {
@@ -1384,7 +1450,7 @@ type GamePlayerDeathNotification struct {
 
 func (x *GamePlayerDeathNotification) Reset() {
 	*x = GamePlayerDeathNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[21]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1396,7 +1462,7 @@ func (x *GamePlayerDeathNotification) String() string {
 func (*GamePlayerDeathNotification) ProtoMessage() {}
 
 func (x *GamePlayerDeathNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[21]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1409,7 +1475,7 @@ func (x *GamePlayerDeathNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerDeathNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerDeathNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{21}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *GamePlayerDeathNotification) GetGameId() string {
@@ -1445,7 +1511,7 @@ type GamePlayerReviveNotification struct {
 
 func (x *GamePlayerReviveNotification) Reset() {
 	*x = GamePlayerReviveNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[22]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1457,7 +1523,7 @@ func (x *GamePlayerReviveNotification) String() string {
 func (*GamePlayerReviveNotification) ProtoMessage() {}
 
 func (x *GamePlayerReviveNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[22]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1470,7 +1536,7 @@ func (x *GamePlayerReviveNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerReviveNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerReviveNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{22}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *GamePlayerReviveNotification) GetGameId() string {
@@ -1514,7 +1580,7 @@ type GamePlayerReviveClaimNotification struct {
 
 func (x *GamePlayerReviveClaimNotification) Reset() {
 	*x = GamePlayerReviveClaimNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[23]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1526,7 +1592,7 @@ func (x *GamePlayerReviveClaimNotification) String() string {
 func (*GamePlayerReviveClaimNotification) ProtoMessage() {}
 
 func (x *GamePlayerReviveClaimNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[23]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1539,7 +1605,7 @@ func (x *GamePlayerReviveClaimNotification) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GamePlayerReviveClaimNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerReviveClaimNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{23}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *GamePlayerReviveClaimNotification) GetGameId() string {
@@ -1589,7 +1655,7 @@ type GamePlayerReviveClaimExpireNotification struct {
 
 func (x *GamePlayerReviveClaimExpireNotification) Reset() {
 	*x = GamePlayerReviveClaimExpireNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[24]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1601,7 +1667,7 @@ func (x *GamePlayerReviveClaimExpireNotification) String() string {
 func (*GamePlayerReviveClaimExpireNotification) ProtoMessage() {}
 
 func (x *GamePlayerReviveClaimExpireNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[24]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1614,7 +1680,7 @@ func (x *GamePlayerReviveClaimExpireNotification) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use GamePlayerReviveClaimExpireNotification.ProtoReflect.Descriptor instead.
 func (*GamePlayerReviveClaimExpireNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{24}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *GamePlayerReviveClaimExpireNotification) GetGameId() string {
@@ -1645,6 +1711,74 @@ func (x *GamePlayerReviveClaimExpireNotification) GetSourcePlayerId() string {
 	return ""
 }
 
+type GameChatNotification struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	GameId        string                 `protobuf:"bytes,1,opt,name=game_id,json=gameId,proto3" json:"game_id,omitempty"`
+	PartyIndex    int32                  `protobuf:"varint,2,opt,name=party_index,json=partyIndex,proto3" json:"party_index,omitempty"`
+	PlayerIndex   int32                  `protobuf:"varint,3,opt,name=player_index,json=playerIndex,proto3" json:"player_index,omitempty"`
+	Message       string                 `protobuf:"bytes,4,opt,name=message,proto3" json:"message,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GameChatNotification) Reset() {
+	*x = GameChatNotification{}
+	mi := &file_protomulti_multi_notification_proto_msgTypes[26]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GameChatNotification) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GameChatNotification) ProtoMessage() {}
+
+func (x *GameChatNotification) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_notification_proto_msgTypes[26]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GameChatNotification.ProtoReflect.Descriptor instead.
+func (*GameChatNotification) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{26}
+}
+
+func (x *GameChatNotification) GetGameId() string {
+	if x != nil {
+		return x.GameId
+	}
+	return ""
+}
+
+func (x *GameChatNotification) GetPartyIndex() int32 {
+	if x != nil {
+		return x.PartyIndex
+	}
+	return 0
+}
+
+func (x *GameChatNotification) GetPlayerIndex() int32 {
+	if x != nil {
+		return x.PlayerIndex
+	}
+	return 0
+}
+
+func (x *GameChatNotification) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
 type GameSyncNotification struct {
 	state   protoimpl.MessageState `protogen:"open.v1"`
 	GameId  string                 `protobuf:"bytes,1,opt,name=game_id,json=gameId,proto3" json:"game_id,omitempty"`
@@ -1659,7 +1793,7 @@ type GameSyncNotification struct {
 
 func (x *GameSyncNotification) Reset() {
 	*x = GameSyncNotification{}
-	mi := &file_protomulti_multi_notification_proto_msgTypes[25]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1671,7 +1805,7 @@ func (x *GameSyncNotification) String() string {
 func (*GameSyncNotification) ProtoMessage() {}
 
 func (x *GameSyncNotification) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_notification_proto_msgTypes[25]
+	mi := &file_protomulti_multi_notification_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1684,7 +1818,7 @@ func (x *GameSyncNotification) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameSyncNotification.ProtoReflect.Descriptor instead.
 func (*GameSyncNotification) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{25}
+	return file_protomulti_multi_notification_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *GameSyncNotification) GetGameId() string {
@@ -1764,7 +1898,12 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"\blobby_id\x18\x01 \x01(\tR\alobbyId\x12\x19\n" +
 	"\bstamp_id\x18\x02 \x01(\tR\astampId\x12\x1d\n" +
 	"\n" +
-	"party_slot\x18\x03 \x01(\x05R\tpartySlot\"0\n" +
+	"party_slot\x18\x03 \x01(\x05R\tpartySlot\"k\n" +
+	"\x15LobbyChatNotification\x12\x19\n" +
+	"\blobby_id\x18\x01 \x01(\tR\alobbyId\x12\x1d\n" +
+	"\n" +
+	"party_slot\x18\x02 \x01(\x05R\tpartySlot\x12\x18\n" +
+	"\amessage\x18\x03 \x01(\tR\amessage\"0\n" +
 	"\x15GameStartNotification\x12\x17\n" +
 	"\agame_id\x18\x01 \x01(\tR\x06gameId\".\n" +
 	"\x13GameEndNotification\x12\x17\n" +
@@ -1841,13 +1980,19 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"\vparty_index\x18\x02 \x01(\x05R\n" +
 	"partyIndex\x12!\n" +
 	"\fplayer_index\x18\x03 \x01(\x05R\vplayerIndex\x12(\n" +
-	"\x10source_player_id\x18\x04 \x01(\tR\x0esourcePlayerId\"\xef\x01\n" +
+	"\x10source_player_id\x18\x04 \x01(\tR\x0esourcePlayerId\"\x8d\x01\n" +
+	"\x14GameChatNotification\x12\x17\n" +
+	"\agame_id\x18\x01 \x01(\tR\x06gameId\x12\x1f\n" +
+	"\vparty_index\x18\x02 \x01(\x05R\n" +
+	"partyIndex\x12!\n" +
+	"\fplayer_index\x18\x03 \x01(\x05R\vplayerIndex\x12\x18\n" +
+	"\amessage\x18\x04 \x01(\tR\amessage\"\xef\x01\n" +
 	"\x14GameSyncNotification\x12\x17\n" +
 	"\agame_id\x18\x01 \x01(\tR\x06gameId\x123\n" +
 	"\aparties\x18\x02 \x03(\v2\x19.multi.ProtoGameSyncPartyR\aparties\x12*\n" +
 	"\x05phase\x18\x03 \x01(\x0e2\x14.multi.GameSyncPhaseR\x05phase\x12*\n" +
 	"\x11turn_remaining_ms\x18\x04 \x01(\x03R\x0fturnRemainingMs\x121\n" +
-	"\aenemies\x18\x05 \x03(\v2\x17.multi.ProtoGameEnemyHPR\aenemies*\xdc\x02\n" +
+	"\aenemies\x18\x05 \x03(\v2\x17.multi.ProtoGameEnemyHPR\aenemies*\xf4\x02\n" +
 	"\x1aMultiLobbyNotificationType\x12\x15\n" +
 	"\x11LOBBY_NOTIFY_NONE\x10\x00\x12!\n" +
 	"\x1dLOBBY_NOTIFY_PARTICIPANT_JOIN\x10d\x12#\n" +
@@ -1858,7 +2003,8 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"$LOBBY_NOTIFY_PARTICIPANT_DECK_CHANGE\x10\xd8\x04\x12\x18\n" +
 	"\x13LOBBY_NOTIFY_CANCEL\x10\xbc\x05\x12\x17\n" +
 	"\x12LOBBY_NOTIFY_START\x10\xa0\x06\x12\x17\n" +
-	"\x12LOBBY_NOTIFY_READY\x10\x84\a*\xc9\x04\n" +
+	"\x12LOBBY_NOTIFY_READY\x10\x84\a\x12\x16\n" +
+	"\x11LOBBY_NOTIFY_CHAT\x10\xe8\a*\xe0\x04\n" +
 	"\x19MultiGameNotificationType\x12\x14\n" +
 	"\x10GAME_NOTIFY_NONE\x10\x00\x12\x15\n" +
 	"\x11GAME_NOTIFY_START\x10d\x12\x16\n" +
@@ -1876,7 +2022,8 @@ const file_protomulti_multi_notification_proto_rawDesc = "" +
 	"\x18GAME_NOTIFY_PLAYER_DEATH\x10\xe0\x12\x12\x1e\n" +
 	"\x19GAME_NOTIFY_PLAYER_REVIVE\x10\xc4\x13\x12$\n" +
 	"\x1fGAME_NOTIFY_PLAYER_REVIVE_CLAIM\x10\xa8\x14\x12+\n" +
-	"&GAME_NOTIFY_PLAYER_REVIVE_CLAIM_EXPIRE\x10\x8c\x15\x12\x14\n" +
+	"&GAME_NOTIFY_PLAYER_REVIVE_CLAIM_EXPIRE\x10\x8c\x15\x12\x15\n" +
+	"\x10GAME_NOTIFY_CHAT\x10\xf0\x15\x12\x14\n" +
 	"\x0fGAME_NOTIFY_END\x10\xb8EBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
@@ -1892,7 +2039,7 @@ func file_protomulti_multi_notification_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_notification_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_protomulti_multi_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 26)
+var file_protomulti_multi_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
 var file_protomulti_multi_notification_proto_goTypes = []any{
 	(MultiLobbyNotificationType)(0),                 // 0: multi.MultiLobbyNotificationType
 	(MultiGameNotificationType)(0),                  // 1: multi.MultiGameNotificationType
@@ -1905,39 +2052,41 @@ var file_protomulti_multi_notification_proto_goTypes = []any{
 	(*ParticipantUnreadyNotification)(nil),          // 8: multi.ParticipantUnreadyNotification
 	(*ParticipantDeckChangeNotification)(nil),       // 9: multi.ParticipantDeckChangeNotification
 	(*StampSendNotification)(nil),                   // 10: multi.StampSendNotification
-	(*GameStartNotification)(nil),                   // 11: multi.GameStartNotification
-	(*GameEndNotification)(nil),                     // 12: multi.GameEndNotification
-	(*GamePlayerReadyNotification)(nil),             // 13: multi.GamePlayerReadyNotification
-	(*GameReadyNotification)(nil),                   // 14: multi.GameReadyNotification
-	(*GameHPSyncNotification)(nil),                  // 15: multi.GameHPSyncNotification
-	(*GameEnqueueActionNotification)(nil),           // 16: multi.GameEnqueueActionNotification
-	(*GameDequeueActionNotification)(nil),           // 17: multi.GameDequeueActionNotification
-	(*GameLockActionNotification)(nil),              // 18: multi.GameLockActionNotification
-	(*GameActionQueueConfirmNotification)(nil),      // 19: multi.GameActionQueueConfirmNotification
-	(*GamePlayerRemoveNotification)(nil),            // 20: multi.GamePlayerRemoveNotification
-	(*GamePlayerDisconnectNotification)(nil),        // 21: multi.GamePlayerDisconnectNotification
-	(*GamePlayerReconnectNotification)(nil),         // 22: multi.GamePlayerReconnectNotification
-	(*GamePlayerDeathNotification)(nil),             // 23: multi.GamePlayerDeathNotification
-	(*GamePlayerReviveNotification)(nil),            // 24: multi.GamePlayerReviveNotification
-	(*GamePlayerReviveClaimNotification)(nil),       // 25: multi.GamePlayerReviveClaimNotification
-	(*GamePlayerReviveClaimExpireNotification)(nil), // 26: multi.GamePlayerReviveClaimExpireNotification
-	(*GameSyncNotification)(nil),                    // 27: multi.GameSyncNotification
-	(*ProtoLobbyPlayer)(nil),                        // 28: multi.ProtoLobbyPlayer
-	(*ProtoGameEnemyHP)(nil),                        // 29: multi.ProtoGameEnemyHP
-	(GamePlayerActionType)(0),                       // 30: multi.GamePlayerActionType
-	(*ProtoGamePartyActionQueue)(nil),               // 31: multi.ProtoGamePartyActionQueue
-	(*ProtoGameSyncParty)(nil),                      // 32: multi.ProtoGameSyncParty
-	(GameSyncPhase)(0),                              // 33: multi.GameSyncPhase
+	(*LobbyChatNotification)(nil),                   // 11: multi.LobbyChatNotification
+	(*GameStartNotification)(nil),                   // 12: multi.GameStartNotification
+	(*GameEndNotification)(nil),                     // 13: multi.GameEndNotification
+	(*GamePlayerReadyNotification)(nil),             // 14: multi.GamePlayerReadyNotification
+	(*GameReadyNotification)(nil),                   // 15: multi.GameReadyNotification
+	(*GameHPSyncNotification)(nil),                  // 16: multi.GameHPSyncNotification
+	(*GameEnqueueActionNotification)(nil),           // 17: multi.GameEnqueueActionNotification
+	(*GameDequeueActionNotification)(nil),           // 18: multi.GameDequeueActionNotification
+	(*GameLockActionNotification)(nil),              // 19: multi.GameLockActionNotification
+	(*GameActionQueueConfirmNotification)(nil),      // 20: multi.GameActionQueueConfirmNotification
+	(*GamePlayerRemoveNotification)(nil),            // 21: multi.GamePlayerRemoveNotification
+	(*GamePlayerDisconnectNotification)(nil),        // 22: multi.GamePlayerDisconnectNotification
+	(*GamePlayerReconnectNotification)(nil),         // 23: multi.GamePlayerReconnectNotification
+	(*GamePlayerDeathNotification)(nil),             // 24: multi.GamePlayerDeathNotification
+	(*GamePlayerReviveNotification)(nil),            // 25: multi.GamePlayerReviveNotification
+	(*GamePlayerReviveClaimNotification)(nil),       // 26: multi.GamePlayerReviveClaimNotification
+	(*GamePlayerReviveClaimExpireNotification)(nil), // 27: multi.GamePlayerReviveClaimExpireNotification
+	(*GameChatNotification)(nil),                    // 28: multi.GameChatNotification
+	(*GameSyncNotification)(nil),                    // 29: multi.GameSyncNotification
+	(*ProtoLobbyPlayer)(nil),                        // 30: multi.ProtoLobbyPlayer
+	(*ProtoGameEnemyHP)(nil),                        // 31: multi.ProtoGameEnemyHP
+	(GamePlayerActionType)(0),                       // 32: multi.GamePlayerActionType
+	(*ProtoGamePartyActionQueue)(nil),               // 33: multi.ProtoGamePartyActionQueue
+	(*ProtoGameSyncParty)(nil),                      // 34: multi.ProtoGameSyncParty
+	(GameSyncPhase)(0),                              // 35: multi.GameSyncPhase
 }
 var file_protomulti_multi_notification_proto_depIdxs = []int32{
-	28, // 0: multi.ParticipantJoinNotification.player:type_name -> multi.ProtoLobbyPlayer
-	28, // 1: multi.ParticipantDeckChangeNotification.player:type_name -> multi.ProtoLobbyPlayer
-	29, // 2: multi.GameHPSyncNotification.enemies:type_name -> multi.ProtoGameEnemyHP
-	30, // 3: multi.GameEnqueueActionNotification.action:type_name -> multi.GamePlayerActionType
-	31, // 4: multi.GameActionQueueConfirmNotification.party_action_queues:type_name -> multi.ProtoGamePartyActionQueue
-	32, // 5: multi.GameSyncNotification.parties:type_name -> multi.ProtoGameSyncParty
-	33, // 6: multi.GameSyncNotification.phase:type_name -> multi.GameSyncPhase
-	29, // 7: multi.GameSyncNotification.enemies:type_name -> multi.ProtoGameEnemyHP
+	30, // 0: multi.ParticipantJoinNotification.player:type_name -> multi.ProtoLobbyPlayer
+	30, // 1: multi.ParticipantDeckChangeNotification.player:type_name -> multi.ProtoLobbyPlayer
+	31, // 2: multi.GameHPSyncNotification.enemies:type_name -> multi.ProtoGameEnemyHP
+	32, // 3: multi.GameEnqueueActionNotification.action:type_name -> multi.GamePlayerActionType
+	33, // 4: multi.GameActionQueueConfirmNotification.party_action_queues:type_name -> multi.ProtoGamePartyActionQueue
+	34, // 5: multi.GameSyncNotification.parties:type_name -> multi.ProtoGameSyncParty
+	35, // 6: multi.GameSyncNotification.phase:type_name -> multi.GameSyncPhase
+	31, // 7: multi.GameSyncNotification.enemies:type_name -> multi.ProtoGameEnemyHP
 	8,  // [8:8] is the sub-list for method output_type
 	8,  // [8:8] is the sub-list for method input_type
 	8,  // [8:8] is the sub-list for extension type_name
@@ -1957,7 +2106,7 @@ func file_protomulti_multi_notification_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_notification_proto_rawDesc), len(file_protomulti_multi_notification_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   26,
+			NumMessages:   28,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

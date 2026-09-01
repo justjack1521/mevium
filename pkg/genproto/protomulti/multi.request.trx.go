@@ -182,6 +182,30 @@ func (x *LobbyStampResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
 
+func NewLobbyChatRequest(bytes []byte) (*LobbyChatRequest, error) {
+	req := &LobbyChatRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *LobbyChatResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
+func NewGameChatRequest(bytes []byte) (*GameChatRequest, error) {
+	req := &GameChatRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameChatResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}
+
 func NewGetGameRequest(bytes []byte) (*GetGameRequest, error) {
 	req := &GetGameRequest{}
 	if err := proto.Unmarshal(bytes, req); err != nil {

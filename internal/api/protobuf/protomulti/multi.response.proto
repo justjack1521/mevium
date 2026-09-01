@@ -55,6 +55,10 @@ message LobbyStampResponse {
 
 }
 
+message LobbyChatResponse {
+
+}
+
 message LobbySearchResponse {
   repeated ProtoLobbySummary lobbies = 1;
 }
@@ -113,4 +117,8 @@ message GamePlayerReviveClaimResponse {
   bool                  granted      = 1;
   ReviveClaimDenyReason deny_reason  = 2;
   int64                 remaining_ms = 3;
+}
+
+message GameChatResponse {
+
 }

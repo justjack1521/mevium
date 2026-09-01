@@ -27,6 +27,7 @@ const (
 	MeviusMultiService_LobbyReady_FullMethodName         = "/service.MeviusMultiService/LobbyReady"
 	MeviusMultiService_LobbyStart_FullMethodName         = "/service.MeviusMultiService/LobbyStart"
 	MeviusMultiService_LobbyStamp_FullMethodName         = "/service.MeviusMultiService/LobbyStamp"
+	MeviusMultiService_LobbyChat_FullMethodName          = "/service.MeviusMultiService/LobbyChat"
 	MeviusMultiService_LobbySearch_FullMethodName        = "/service.MeviusMultiService/LobbySearch"
 	MeviusMultiService_ParticipantJoin_FullMethodName    = "/service.MeviusMultiService/ParticipantJoin"
 	MeviusMultiService_ParticipantLeave_FullMethodName   = "/service.MeviusMultiService/ParticipantLeave"
@@ -45,6 +46,7 @@ const (
 	MeviusMultiService_PlayerDeath_FullMethodName        = "/service.MeviusMultiService/PlayerDeath"
 	MeviusMultiService_PlayerRevive_FullMethodName       = "/service.MeviusMultiService/PlayerRevive"
 	MeviusMultiService_PlayerReviveClaim_FullMethodName  = "/service.MeviusMultiService/PlayerReviveClaim"
+	MeviusMultiService_GameChat_FullMethodName           = "/service.MeviusMultiService/GameChat"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -58,6 +60,7 @@ type MeviusMultiServiceClient interface {
 	LobbyReady(ctx context.Context, in *protomulti.LobbyReadyRequest, opts ...grpc.CallOption) (*protomulti.LobbyReadyResponse, error)
 	LobbyStart(ctx context.Context, in *protomulti.LobbyStartRequest, opts ...grpc.CallOption) (*protomulti.LobbyStartResponse, error)
 	LobbyStamp(ctx context.Context, in *protomulti.LobbyStampRequest, opts ...grpc.CallOption) (*protomulti.LobbyStampResponse, error)
+	LobbyChat(ctx context.Context, in *protomulti.LobbyChatRequest, opts ...grpc.CallOption) (*protomulti.LobbyChatResponse, error)
 	LobbySearch(ctx context.Context, in *protomulti.LobbySearchRequest, opts ...grpc.CallOption) (*protomulti.LobbySearchResponse, error)
 	ParticipantJoin(ctx context.Context, in *protomulti.ParticipantJoinRequest, opts ...grpc.CallOption) (*protomulti.ParticipantJoinResponse, error)
 	ParticipantLeave(ctx context.Context, in *protomulti.ParticipantLeaveRequest, opts ...grpc.CallOption) (*protomulti.ParticipantLeaveResponse, error)
@@ -76,6 +79,7 @@ type MeviusMultiServiceClient interface {
 	PlayerDeath(ctx context.Context, in *protomulti.GamePlayerDeathRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerDeathResponse, error)
 	PlayerRevive(ctx context.Context, in *protomulti.GamePlayerReviveRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveResponse, error)
 	PlayerReviveClaim(ctx context.Context, in *protomulti.GamePlayerReviveClaimRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveClaimResponse, error)
+	GameChat(ctx context.Context, in *protomulti.GameChatRequest, opts ...grpc.CallOption) (*protomulti.GameChatResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -143,6 +147,15 @@ func (c *meviusMultiServiceClient) LobbyStart(ctx context.Context, in *protomult
 func (c *meviusMultiServiceClient) LobbyStamp(ctx context.Context, in *protomulti.LobbyStampRequest, opts ...grpc.CallOption) (*protomulti.LobbyStampResponse, error) {
 	out := new(protomulti.LobbyStampResponse)
 	err := c.cc.Invoke(ctx, MeviusMultiService_LobbyStamp_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *meviusMultiServiceClient) LobbyChat(ctx context.Context, in *protomulti.LobbyChatRequest, opts ...grpc.CallOption) (*protomulti.LobbyChatResponse, error) {
+	out := new(protomulti.LobbyChatResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_LobbyChat_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -311,6 +324,15 @@ func (c *meviusMultiServiceClient) PlayerReviveClaim(ctx context.Context, in *pr
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) GameChat(ctx context.Context, in *protomulti.GameChatRequest, opts ...grpc.CallOption) (*protomulti.GameChatResponse, error) {
+	out := new(protomulti.GameChatResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_GameChat_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -322,6 +344,7 @@ type MeviusMultiServiceServer interface {
 	LobbyReady(context.Context, *protomulti.LobbyReadyRequest) (*protomulti.LobbyReadyResponse, error)
 	LobbyStart(context.Context, *protomulti.LobbyStartRequest) (*protomulti.LobbyStartResponse, error)
 	LobbyStamp(context.Context, *protomulti.LobbyStampRequest) (*protomulti.LobbyStampResponse, error)
+	LobbyChat(context.Context, *protomulti.LobbyChatRequest) (*protomulti.LobbyChatResponse, error)
 	LobbySearch(context.Context, *protomulti.LobbySearchRequest) (*protomulti.LobbySearchResponse, error)
 	ParticipantJoin(context.Context, *protomulti.ParticipantJoinRequest) (*protomulti.ParticipantJoinResponse, error)
 	ParticipantLeave(context.Context, *protomulti.ParticipantLeaveRequest) (*protomulti.ParticipantLeaveResponse, error)
@@ -340,6 +363,7 @@ type MeviusMultiServiceServer interface {
 	PlayerDeath(context.Context, *protomulti.GamePlayerDeathRequest) (*protomulti.GamePlayerDeathResponse, error)
 	PlayerRevive(context.Context, *protomulti.GamePlayerReviveRequest) (*protomulti.GamePlayerReviveResponse, error)
 	PlayerReviveClaim(context.Context, *protomulti.GamePlayerReviveClaimRequest) (*protomulti.GamePlayerReviveClaimResponse, error)
+	GameChat(context.Context, *protomulti.GameChatRequest) (*protomulti.GameChatResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -366,6 +390,9 @@ func (UnimplementedMeviusMultiServiceServer) LobbyStart(context.Context, *protom
 }
 func (UnimplementedMeviusMultiServiceServer) LobbyStamp(context.Context, *protomulti.LobbyStampRequest) (*protomulti.LobbyStampResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LobbyStamp not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) LobbyChat(context.Context, *protomulti.LobbyChatRequest) (*protomulti.LobbyChatResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method LobbyChat not implemented")
 }
 func (UnimplementedMeviusMultiServiceServer) LobbySearch(context.Context, *protomulti.LobbySearchRequest) (*protomulti.LobbySearchResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method LobbySearch not implemented")
@@ -420,6 +447,9 @@ func (UnimplementedMeviusMultiServiceServer) PlayerRevive(context.Context, *prot
 }
 func (UnimplementedMeviusMultiServiceServer) PlayerReviveClaim(context.Context, *protomulti.GamePlayerReviveClaimRequest) (*protomulti.GamePlayerReviveClaimResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PlayerReviveClaim not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) GameChat(context.Context, *protomulti.GameChatRequest) (*protomulti.GameChatResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GameChat not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -555,6 +585,24 @@ func _MeviusMultiService_LobbyStamp_Handler(srv interface{}, ctx context.Context
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MeviusMultiServiceServer).LobbyStamp(ctx, req.(*protomulti.LobbyStampRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _MeviusMultiService_LobbyChat_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.LobbyChatRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).LobbyChat(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_LobbyChat_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).LobbyChat(ctx, req.(*protomulti.LobbyChatRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -883,6 +931,24 @@ func _MeviusMultiService_PlayerReviveClaim_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_GameChat_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GameChatRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).GameChat(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_GameChat_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).GameChat(ctx, req.(*protomulti.GameChatRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -917,6 +983,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "LobbyStamp",
 			Handler:    _MeviusMultiService_LobbyStamp_Handler,
+		},
+		{
+			MethodName: "LobbyChat",
+			Handler:    _MeviusMultiService_LobbyChat_Handler,
 		},
 		{
 			MethodName: "LobbySearch",
@@ -989,6 +1059,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PlayerReviveClaim",
 			Handler:    _MeviusMultiService_PlayerReviveClaim_Handler,
+		},
+		{
+			MethodName: "GameChat",
+			Handler:    _MeviusMultiService_GameChat_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -540,6 +540,42 @@ func (*LobbyStampResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{11}
 }
 
+type LobbyChatResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *LobbyChatResponse) Reset() {
+	*x = LobbyChatResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[12]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *LobbyChatResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LobbyChatResponse) ProtoMessage() {}
+
+func (x *LobbyChatResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[12]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LobbyChatResponse.ProtoReflect.Descriptor instead.
+func (*LobbyChatResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{12}
+}
+
 type LobbySearchResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Lobbies       []*ProtoLobbySummary   `protobuf:"bytes,1,rep,name=lobbies,proto3" json:"lobbies,omitempty"`
@@ -549,7 +585,7 @@ type LobbySearchResponse struct {
 
 func (x *LobbySearchResponse) Reset() {
 	*x = LobbySearchResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[12]
+	mi := &file_protomulti_multi_response_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -561,7 +597,7 @@ func (x *LobbySearchResponse) String() string {
 func (*LobbySearchResponse) ProtoMessage() {}
 
 func (x *LobbySearchResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[12]
+	mi := &file_protomulti_multi_response_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -574,7 +610,7 @@ func (x *LobbySearchResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LobbySearchResponse.ProtoReflect.Descriptor instead.
 func (*LobbySearchResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{12}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *LobbySearchResponse) GetLobbies() []*ProtoLobbySummary {
@@ -592,7 +628,7 @@ type ParticipantJoinResponse struct {
 
 func (x *ParticipantJoinResponse) Reset() {
 	*x = ParticipantJoinResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[13]
+	mi := &file_protomulti_multi_response_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -604,7 +640,7 @@ func (x *ParticipantJoinResponse) String() string {
 func (*ParticipantJoinResponse) ProtoMessage() {}
 
 func (x *ParticipantJoinResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[13]
+	mi := &file_protomulti_multi_response_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -617,7 +653,7 @@ func (x *ParticipantJoinResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantJoinResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantJoinResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{13}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{14}
 }
 
 type ParticipantLeaveResponse struct {
@@ -628,7 +664,7 @@ type ParticipantLeaveResponse struct {
 
 func (x *ParticipantLeaveResponse) Reset() {
 	*x = ParticipantLeaveResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[14]
+	mi := &file_protomulti_multi_response_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -640,7 +676,7 @@ func (x *ParticipantLeaveResponse) String() string {
 func (*ParticipantLeaveResponse) ProtoMessage() {}
 
 func (x *ParticipantLeaveResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[14]
+	mi := &file_protomulti_multi_response_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -653,7 +689,7 @@ func (x *ParticipantLeaveResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantLeaveResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantLeaveResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{14}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{15}
 }
 
 type ParticipantWatchResponse struct {
@@ -664,7 +700,7 @@ type ParticipantWatchResponse struct {
 
 func (x *ParticipantWatchResponse) Reset() {
 	*x = ParticipantWatchResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[15]
+	mi := &file_protomulti_multi_response_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -676,7 +712,7 @@ func (x *ParticipantWatchResponse) String() string {
 func (*ParticipantWatchResponse) ProtoMessage() {}
 
 func (x *ParticipantWatchResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[15]
+	mi := &file_protomulti_multi_response_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -689,7 +725,7 @@ func (x *ParticipantWatchResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantWatchResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantWatchResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{15}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{16}
 }
 
 type ParticipantUnwatchResponse struct {
@@ -700,7 +736,7 @@ type ParticipantUnwatchResponse struct {
 
 func (x *ParticipantUnwatchResponse) Reset() {
 	*x = ParticipantUnwatchResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[16]
+	mi := &file_protomulti_multi_response_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -712,7 +748,7 @@ func (x *ParticipantUnwatchResponse) String() string {
 func (*ParticipantUnwatchResponse) ProtoMessage() {}
 
 func (x *ParticipantUnwatchResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[16]
+	mi := &file_protomulti_multi_response_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -725,7 +761,7 @@ func (x *ParticipantUnwatchResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantUnwatchResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantUnwatchResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{16}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{17}
 }
 
 type ParticipantReadyResponse struct {
@@ -736,7 +772,7 @@ type ParticipantReadyResponse struct {
 
 func (x *ParticipantReadyResponse) Reset() {
 	*x = ParticipantReadyResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[17]
+	mi := &file_protomulti_multi_response_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -748,7 +784,7 @@ func (x *ParticipantReadyResponse) String() string {
 func (*ParticipantReadyResponse) ProtoMessage() {}
 
 func (x *ParticipantReadyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[17]
+	mi := &file_protomulti_multi_response_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -761,7 +797,7 @@ func (x *ParticipantReadyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantReadyResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantReadyResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{17}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{18}
 }
 
 type ParticipantFindResponse struct {
@@ -772,7 +808,7 @@ type ParticipantFindResponse struct {
 
 func (x *ParticipantFindResponse) Reset() {
 	*x = ParticipantFindResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[18]
+	mi := &file_protomulti_multi_response_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -784,7 +820,7 @@ func (x *ParticipantFindResponse) String() string {
 func (*ParticipantFindResponse) ProtoMessage() {}
 
 func (x *ParticipantFindResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[18]
+	mi := &file_protomulti_multi_response_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -797,7 +833,7 @@ func (x *ParticipantFindResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantFindResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantFindResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{18}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{19}
 }
 
 type ParticipantUnreadyResponse struct {
@@ -808,7 +844,7 @@ type ParticipantUnreadyResponse struct {
 
 func (x *ParticipantUnreadyResponse) Reset() {
 	*x = ParticipantUnreadyResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[19]
+	mi := &file_protomulti_multi_response_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -820,7 +856,7 @@ func (x *ParticipantUnreadyResponse) String() string {
 func (*ParticipantUnreadyResponse) ProtoMessage() {}
 
 func (x *ParticipantUnreadyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[19]
+	mi := &file_protomulti_multi_response_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -833,7 +869,7 @@ func (x *ParticipantUnreadyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ParticipantUnreadyResponse.ProtoReflect.Descriptor instead.
 func (*ParticipantUnreadyResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{19}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{20}
 }
 
 type GameHPConsensusResponse struct {
@@ -844,7 +880,7 @@ type GameHPConsensusResponse struct {
 
 func (x *GameHPConsensusResponse) Reset() {
 	*x = GameHPConsensusResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[20]
+	mi := &file_protomulti_multi_response_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -856,7 +892,7 @@ func (x *GameHPConsensusResponse) String() string {
 func (*GameHPConsensusResponse) ProtoMessage() {}
 
 func (x *GameHPConsensusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[20]
+	mi := &file_protomulti_multi_response_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -869,7 +905,7 @@ func (x *GameHPConsensusResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameHPConsensusResponse.ProtoReflect.Descriptor instead.
 func (*GameHPConsensusResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{20}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{21}
 }
 
 type GameCatchUpResponse struct {
@@ -883,7 +919,7 @@ type GameCatchUpResponse struct {
 
 func (x *GameCatchUpResponse) Reset() {
 	*x = GameCatchUpResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[21]
+	mi := &file_protomulti_multi_response_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -895,7 +931,7 @@ func (x *GameCatchUpResponse) String() string {
 func (*GameCatchUpResponse) ProtoMessage() {}
 
 func (x *GameCatchUpResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[21]
+	mi := &file_protomulti_multi_response_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -908,7 +944,7 @@ func (x *GameCatchUpResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameCatchUpResponse.ProtoReflect.Descriptor instead.
 func (*GameCatchUpResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{21}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *GameCatchUpResponse) GetFromSequence() uint64 {
@@ -940,7 +976,7 @@ type GamePlayerDeathResponse struct {
 
 func (x *GamePlayerDeathResponse) Reset() {
 	*x = GamePlayerDeathResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[22]
+	mi := &file_protomulti_multi_response_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -952,7 +988,7 @@ func (x *GamePlayerDeathResponse) String() string {
 func (*GamePlayerDeathResponse) ProtoMessage() {}
 
 func (x *GamePlayerDeathResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[22]
+	mi := &file_protomulti_multi_response_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -965,7 +1001,7 @@ func (x *GamePlayerDeathResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerDeathResponse.ProtoReflect.Descriptor instead.
 func (*GamePlayerDeathResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{22}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{23}
 }
 
 type GamePlayerReviveResponse struct {
@@ -976,7 +1012,7 @@ type GamePlayerReviveResponse struct {
 
 func (x *GamePlayerReviveResponse) Reset() {
 	*x = GamePlayerReviveResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[23]
+	mi := &file_protomulti_multi_response_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -988,7 +1024,7 @@ func (x *GamePlayerReviveResponse) String() string {
 func (*GamePlayerReviveResponse) ProtoMessage() {}
 
 func (x *GamePlayerReviveResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[23]
+	mi := &file_protomulti_multi_response_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1001,7 +1037,7 @@ func (x *GamePlayerReviveResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerReviveResponse.ProtoReflect.Descriptor instead.
 func (*GamePlayerReviveResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{23}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{24}
 }
 
 type GamePlayerReviveClaimResponse struct {
@@ -1015,7 +1051,7 @@ type GamePlayerReviveClaimResponse struct {
 
 func (x *GamePlayerReviveClaimResponse) Reset() {
 	*x = GamePlayerReviveClaimResponse{}
-	mi := &file_protomulti_multi_response_proto_msgTypes[24]
+	mi := &file_protomulti_multi_response_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1027,7 +1063,7 @@ func (x *GamePlayerReviveClaimResponse) String() string {
 func (*GamePlayerReviveClaimResponse) ProtoMessage() {}
 
 func (x *GamePlayerReviveClaimResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protomulti_multi_response_proto_msgTypes[24]
+	mi := &file_protomulti_multi_response_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1040,7 +1076,7 @@ func (x *GamePlayerReviveClaimResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamePlayerReviveClaimResponse.ProtoReflect.Descriptor instead.
 func (*GamePlayerReviveClaimResponse) Descriptor() ([]byte, []int) {
-	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{24}
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *GamePlayerReviveClaimResponse) GetGranted() bool {
@@ -1064,6 +1100,42 @@ func (x *GamePlayerReviveClaimResponse) GetRemainingMs() int64 {
 	return 0
 }
 
+type GameChatResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GameChatResponse) Reset() {
+	*x = GameChatResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[26]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GameChatResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GameChatResponse) ProtoMessage() {}
+
+func (x *GameChatResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[26]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GameChatResponse.ProtoReflect.Descriptor instead.
+func (*GameChatResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{26}
+}
+
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_response_proto_rawDesc = "" +
@@ -1084,7 +1156,8 @@ const file_protomulti_multi_response_proto_rawDesc = "" +
 	"\x12LobbyReadyResponse\"-\n" +
 	"\x12LobbyStartResponse\x12\x17\n" +
 	"\agame_id\x18\x01 \x01(\tR\x06gameId\"\x14\n" +
-	"\x12LobbyStampResponse\"I\n" +
+	"\x12LobbyStampResponse\"\x13\n" +
+	"\x11LobbyChatResponse\"I\n" +
 	"\x13LobbySearchResponse\x122\n" +
 	"\alobbies\x18\x01 \x03(\v2\x18.multi.ProtoLobbySummaryR\alobbies\"\x19\n" +
 	"\x17ParticipantJoinResponse\"\x1a\n" +
@@ -1106,7 +1179,8 @@ const file_protomulti_multi_response_proto_rawDesc = "" +
 	"\agranted\x18\x01 \x01(\bR\agranted\x12=\n" +
 	"\vdeny_reason\x18\x02 \x01(\x0e2\x1c.multi.ReviveClaimDenyReasonR\n" +
 	"denyReason\x12!\n" +
-	"\fremaining_ms\x18\x03 \x01(\x03R\vremainingMs*\xc9\x01\n" +
+	"\fremaining_ms\x18\x03 \x01(\x03R\vremainingMs\"\x12\n" +
+	"\x10GameChatResponse*\xc9\x01\n" +
 	"\x15ReviveClaimDenyReason\x12\x1a\n" +
 	"\x16REVIVE_CLAIM_DENY_NONE\x10\x00\x12&\n" +
 	"\"REVIVE_CLAIM_DENY_TARGET_NOT_FOUND\x10\x01\x12\"\n" +
@@ -1127,7 +1201,7 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_response_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 25)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 27)
 var file_protomulti_multi_response_proto_goTypes = []any{
 	(ReviveClaimDenyReason)(0),            // 0: multi.ReviveClaimDenyReason
 	(*GetGameResponse)(nil),               // 1: multi.GetGameResponse
@@ -1142,25 +1216,27 @@ var file_protomulti_multi_response_proto_goTypes = []any{
 	(*LobbyReadyResponse)(nil),            // 10: multi.LobbyReadyResponse
 	(*LobbyStartResponse)(nil),            // 11: multi.LobbyStartResponse
 	(*LobbyStampResponse)(nil),            // 12: multi.LobbyStampResponse
-	(*LobbySearchResponse)(nil),           // 13: multi.LobbySearchResponse
-	(*ParticipantJoinResponse)(nil),       // 14: multi.ParticipantJoinResponse
-	(*ParticipantLeaveResponse)(nil),      // 15: multi.ParticipantLeaveResponse
-	(*ParticipantWatchResponse)(nil),      // 16: multi.ParticipantWatchResponse
-	(*ParticipantUnwatchResponse)(nil),    // 17: multi.ParticipantUnwatchResponse
-	(*ParticipantReadyResponse)(nil),      // 18: multi.ParticipantReadyResponse
-	(*ParticipantFindResponse)(nil),       // 19: multi.ParticipantFindResponse
-	(*ParticipantUnreadyResponse)(nil),    // 20: multi.ParticipantUnreadyResponse
-	(*GameHPConsensusResponse)(nil),       // 21: multi.GameHPConsensusResponse
-	(*GameCatchUpResponse)(nil),           // 22: multi.GameCatchUpResponse
-	(*GamePlayerDeathResponse)(nil),       // 23: multi.GamePlayerDeathResponse
-	(*GamePlayerReviveResponse)(nil),      // 24: multi.GamePlayerReviveResponse
-	(*GamePlayerReviveClaimResponse)(nil), // 25: multi.GamePlayerReviveClaimResponse
-	(*ProtoGameSummary)(nil),              // 26: multi.ProtoGameSummary
-	(*ProtoLobbySummary)(nil),             // 27: multi.ProtoLobbySummary
+	(*LobbyChatResponse)(nil),             // 13: multi.LobbyChatResponse
+	(*LobbySearchResponse)(nil),           // 14: multi.LobbySearchResponse
+	(*ParticipantJoinResponse)(nil),       // 15: multi.ParticipantJoinResponse
+	(*ParticipantLeaveResponse)(nil),      // 16: multi.ParticipantLeaveResponse
+	(*ParticipantWatchResponse)(nil),      // 17: multi.ParticipantWatchResponse
+	(*ParticipantUnwatchResponse)(nil),    // 18: multi.ParticipantUnwatchResponse
+	(*ParticipantReadyResponse)(nil),      // 19: multi.ParticipantReadyResponse
+	(*ParticipantFindResponse)(nil),       // 20: multi.ParticipantFindResponse
+	(*ParticipantUnreadyResponse)(nil),    // 21: multi.ParticipantUnreadyResponse
+	(*GameHPConsensusResponse)(nil),       // 22: multi.GameHPConsensusResponse
+	(*GameCatchUpResponse)(nil),           // 23: multi.GameCatchUpResponse
+	(*GamePlayerDeathResponse)(nil),       // 24: multi.GamePlayerDeathResponse
+	(*GamePlayerReviveResponse)(nil),      // 25: multi.GamePlayerReviveResponse
+	(*GamePlayerReviveClaimResponse)(nil), // 26: multi.GamePlayerReviveClaimResponse
+	(*GameChatResponse)(nil),              // 27: multi.GameChatResponse
+	(*ProtoGameSummary)(nil),              // 28: multi.ProtoGameSummary
+	(*ProtoLobbySummary)(nil),             // 29: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	26, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
-	27, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	28, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
+	29, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
 	0,  // 2: multi.GamePlayerReviveClaimResponse.deny_reason:type_name -> multi.ReviveClaimDenyReason
 	3,  // [3:3] is the sub-list for method output_type
 	3,  // [3:3] is the sub-list for method input_type
@@ -1181,7 +1257,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_response_proto_rawDesc), len(file_protomulti_multi_response_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   25,
+			NumMessages:   27,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
