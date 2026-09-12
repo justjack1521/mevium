@@ -78,6 +78,7 @@ message BattleCompleteRequest {
   uint64 ultimate_charge = 3;
   bool auto_sell_new_cards = 4;
   bool auto_bank_material_cards = 5;
+  string play_mode = 6;
 }
 
 message BattleReviveRequest {

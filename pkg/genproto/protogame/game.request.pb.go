@@ -283,6 +283,7 @@ type BattleCompleteRequest struct {
 	UltimateCharge        uint64                 `protobuf:"varint,3,opt,name=ultimate_charge,json=ultimateCharge,proto3" json:"ultimate_charge,omitempty"`
 	AutoSellNewCards      bool                   `protobuf:"varint,4,opt,name=auto_sell_new_cards,json=autoSellNewCards,proto3" json:"auto_sell_new_cards,omitempty"`
 	AutoBankMaterialCards bool                   `protobuf:"varint,5,opt,name=auto_bank_material_cards,json=autoBankMaterialCards,proto3" json:"auto_bank_material_cards,omitempty"`
+	PlayMode              string                 `protobuf:"bytes,6,opt,name=play_mode,json=playMode,proto3" json:"play_mode,omitempty"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -350,6 +351,13 @@ func (x *BattleCompleteRequest) GetAutoBankMaterialCards() bool {
 		return x.AutoBankMaterialCards
 	}
 	return false
+}
+
+func (x *BattleCompleteRequest) GetPlayMode() string {
+	if x != nil {
+		return x.PlayMode
+	}
+	return ""
 }
 
 type BattleReviveRequest struct {
@@ -3108,7 +3116,7 @@ var File_protogame_game_request_proto protoreflect.FileDescriptor
 
 const file_protogame_game_request_proto_rawDesc = "" +
 	"\n" +
-	"\x1cprotogame/game.request.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x1aprotoidentity/player.proto\"\xfb\x01\n" +
+	"\x1cprotogame/game.request.proto\x12\x04game\x1a\x14protogame/data.proto\x1a\x1aprotoidentity/player.proto\"\x98\x02\n" +
 	"\x15BattleCompleteRequest\x12\x14\n" +
 	"\x05score\x18\x01 \x01(\x04R\x05score\x12;\n" +
 	"\n" +
@@ -3116,7 +3124,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"statistics\x12'\n" +
 	"\x0fultimate_charge\x18\x03 \x01(\x04R\x0eultimateCharge\x12-\n" +
 	"\x13auto_sell_new_cards\x18\x04 \x01(\bR\x10autoSellNewCards\x127\n" +
-	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\"\x15\n" +
+	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\x12\x1b\n" +
+	"\tplay_mode\x18\x06 \x01(\tR\bplayMode\"\x15\n" +
 	"\x13BattleReviveRequest\"\xca\x02\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
