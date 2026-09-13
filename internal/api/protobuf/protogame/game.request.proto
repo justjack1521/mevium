@@ -106,6 +106,7 @@ message CardAugmentRequest {
 message CardFavouriteRequest {
   string card = 1;
   bool value = 2;
+  int32 inventory_source = 3;
 }
 
 message CardFilterSortSetRequest {

@@ -565,11 +565,12 @@ func (x *CardAugmentRequest) GetBankMaterials() []int32 {
 }
 
 type CardFavouriteRequest struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Card          string                 `protobuf:"bytes,1,opt,name=card,proto3" json:"card,omitempty"`
-	Value         bool                   `protobuf:"varint,2,opt,name=value,proto3" json:"value,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	Card            string                 `protobuf:"bytes,1,opt,name=card,proto3" json:"card,omitempty"`
+	Value           bool                   `protobuf:"varint,2,opt,name=value,proto3" json:"value,omitempty"`
+	InventorySource int32                  `protobuf:"varint,3,opt,name=inventory_source,json=inventorySource,proto3" json:"inventory_source,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
 }
 
 func (x *CardFavouriteRequest) Reset() {
@@ -614,6 +615,13 @@ func (x *CardFavouriteRequest) GetValue() bool {
 		return x.Value
 	}
 	return false
+}
+
+func (x *CardFavouriteRequest) GetInventorySource() int32 {
+	if x != nil {
+		return x.InventorySource
+	}
+	return 0
 }
 
 type CardFilterSortSetRequest struct {
@@ -3143,10 +3151,11 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x12CardAugmentRequest\x12*\n" +
 	"\x11target_card_index\x18\x01 \x01(\x05R\x0ftargetCardIndex\x12/\n" +
 	"\x13inventory_materials\x18\x02 \x03(\x05R\x12inventoryMaterials\x12%\n" +
-	"\x0ebank_materials\x18\x03 \x03(\x05R\rbankMaterials\"@\n" +
+	"\x0ebank_materials\x18\x03 \x03(\x05R\rbankMaterials\"k\n" +
 	"\x14CardFavouriteRequest\x12\x12\n" +
 	"\x04card\x18\x01 \x01(\tR\x04card\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\bR\x05value\"\xfc\x01\n" +
+	"\x05value\x18\x02 \x01(\bR\x05value\x12)\n" +
+	"\x10inventory_source\x18\x03 \x01(\x05R\x0finventorySource\"\xfc\x01\n" +
 	"\x18CardFilterSortSetRequest\x12\x12\n" +
 	"\x04View\x18\x01 \x01(\x05R\x04View\x12\x14\n" +
 	"\x05Index\x18\x02 \x01(\x05R\x05Index\x12\x1c\n" +
