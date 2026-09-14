@@ -29,6 +29,7 @@ const (
 	GamePlayerActionType_NORMAL_ATTACK           GamePlayerActionType = 1
 	GamePlayerActionType_ABILITY_CAST            GamePlayerActionType = 2
 	GamePlayerActionType_ELEMENT_DRIVE           GamePlayerActionType = 3
+	GamePlayerActionType_ULTIMATE                GamePlayerActionType = 4
 )
 
 // Enum value maps for GamePlayerActionType.
@@ -38,12 +39,14 @@ var (
 		1: "NORMAL_ATTACK",
 		2: "ABILITY_CAST",
 		3: "ELEMENT_DRIVE",
+		4: "ULTIMATE",
 	}
 	GamePlayerActionType_value = map[string]int32{
 		"PLAYER_ACTION_TYPE_NONE": 0,
 		"NORMAL_ATTACK":           1,
 		"ABILITY_CAST":            2,
 		"ELEMENT_DRIVE":           3,
+		"ULTIMATE":                4,
 	}
 )
 
@@ -1298,12 +1301,13 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\x04dead\x18\b \x01(\bR\x04dead\x123\n" +
 	"\x16revive_claim_source_id\x18\t \x01(\tR\x13reviveClaimSourceId\x129\n" +
 	"\x19revive_claim_remaining_ms\x18\n" +
-	" \x01(\x03R\x16reviveClaimRemainingMs*k\n" +
+	" \x01(\x03R\x16reviveClaimRemainingMs*y\n" +
 	"\x14GamePlayerActionType\x12\x1b\n" +
 	"\x17PLAYER_ACTION_TYPE_NONE\x10\x00\x12\x11\n" +
 	"\rNORMAL_ATTACK\x10\x01\x12\x10\n" +
 	"\fABILITY_CAST\x10\x02\x12\x11\n" +
-	"\rELEMENT_DRIVE\x10\x03*\xa8\x01\n" +
+	"\rELEMENT_DRIVE\x10\x03\x12\f\n" +
+	"\bULTIMATE\x10\x04*\xa8\x01\n" +
 	"\rGameSyncPhase\x12\x1b\n" +
 	"\x17GAME_SYNC_PHASE_UNKNOWN\x10\x00\x12\x1f\n" +
 	"\x1bGAME_SYNC_PHASE_PLAYER_TURN\x10\x01\x12\x1e\n" +

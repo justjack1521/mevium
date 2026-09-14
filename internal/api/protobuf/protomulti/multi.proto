@@ -12,6 +12,7 @@ enum GamePlayerActionType {
   NORMAL_ATTACK = 1;
   ABILITY_CAST = 2;
   ELEMENT_DRIVE = 3;
+  ULTIMATE = 4;
 }
 
 message ProtoLobbySummary {

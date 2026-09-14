@@ -71,15 +71,16 @@ namespace Mobius.Proto.Multi {
             "EgoKbG9ja19pbmRleBgFIAEoBRIUCgxkaXNjb25uZWN0ZWQYBiABKAgSJwoH",
             "YWN0aW9ucxgHIAMoCzIWLm11bHRpLlByb3RvR2FtZUFjdGlvbhIMCgRkZWFk",
             "GAggASgIEh4KFnJldml2ZV9jbGFpbV9zb3VyY2VfaWQYCSABKAkSIQoZcmV2",
-            "aXZlX2NsYWltX3JlbWFpbmluZ19tcxgKIAEoAyprChRHYW1lUGxheWVyQWN0",
+            "aXZlX2NsYWltX3JlbWFpbmluZ19tcxgKIAEoAyp5ChRHYW1lUGxheWVyQWN0",
             "aW9uVHlwZRIbChdQTEFZRVJfQUNUSU9OX1RZUEVfTk9ORRAAEhEKDU5PUk1B",
             "TF9BVFRBQ0sQARIQCgxBQklMSVRZX0NBU1QQAhIRCg1FTEVNRU5UX0RSSVZF",
-            "EAMqqAEKDUdhbWVTeW5jUGhhc2USGwoXR0FNRV9TWU5DX1BIQVNFX1VOS05P",
-            "V04QABIfChtHQU1FX1NZTkNfUEhBU0VfUExBWUVSX1RVUk4QARIeChpHQU1F",
-            "X1NZTkNfUEhBU0VfRU5FTVlfVFVSThACEhsKF0dBTUVfU1lOQ19QSEFTRV9Q",
-            "RU5ESU5HEAMSHAoYR0FNRV9TWU5DX1BIQVNFX0VORF9HQU1FEARCTVo2Z2l0",
-            "aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90",
-            "b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "EAMSDAoIVUxUSU1BVEUQBCqoAQoNR2FtZVN5bmNQaGFzZRIbChdHQU1FX1NZ",
+            "TkNfUEhBU0VfVU5LTk9XThAAEh8KG0dBTUVfU1lOQ19QSEFTRV9QTEFZRVJf",
+            "VFVSThABEh4KGkdBTUVfU1lOQ19QSEFTRV9FTkVNWV9UVVJOEAISGwoXR0FN",
+            "RV9TWU5DX1BIQVNFX1BFTkRJTkcQAxIcChhHQU1FX1NZTkNfUEhBU0VfRU5E",
+            "X0dBTUUQBEJNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtn",
+            "L2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.GamePlayerActionType), typeof(global::Mobius.Proto.Multi.GameSyncPhase), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -109,6 +110,7 @@ namespace Mobius.Proto.Multi {
     [pbr::OriginalName("NORMAL_ATTACK")] NormalAttack = 1,
     [pbr::OriginalName("ABILITY_CAST")] AbilityCast = 2,
     [pbr::OriginalName("ELEMENT_DRIVE")] ElementDrive = 3,
+    [pbr::OriginalName("ULTIMATE")] Ultimate = 4,
   }
 
   public enum GameSyncPhase {
