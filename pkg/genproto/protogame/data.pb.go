@@ -956,6 +956,7 @@ type ProtoBattleStartData struct {
 	TowerId               string                                  `protobuf:"bytes,26,opt,name=tower_id,json=towerId,proto3" json:"tower_id,omitempty"`
 	Id                    string                                  `protobuf:"bytes,25,opt,name=id,proto3" json:"id,omitempty"`
 	UnavailableReason     int32                                   `protobuf:"varint,27,opt,name=unavailable_reason,json=unavailableReason,proto3" json:"unavailable_reason,omitempty"`
+	QuestId               string                                  `protobuf:"bytes,28,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -1177,6 +1178,13 @@ func (x *ProtoBattleStartData) GetUnavailableReason() int32 {
 		return x.UnavailableReason
 	}
 	return 0
+}
+
+func (x *ProtoBattleStartData) GetQuestId() string {
+	if x != nil {
+		return x.QuestId
+	}
+	return ""
 }
 
 type ProtoBattleFiendSpawn struct {
@@ -7557,7 +7565,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x04R\x05value:\x028\x01B\r\n" +
 	"\v_start_dataB\n" +
 	"\n" +
-	"\b_results\"\xd8\t\n" +
+	"\b_results\"\xf3\t\n" +
 	"\x14ProtoBattleStartData\x12\"\n" +
 	"\rregion_map_id\x18\x01 \x01(\tR\vregionMapId\x12$\n" +
 	"\x0eregion_node_id\x18\x02 \x01(\tR\fregionNodeId\x12*\n" +
@@ -7591,7 +7599,8 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\barena_id\x18\x18 \x01(\tR\aarenaId\x12\x19\n" +
 	"\btower_id\x18\x1a \x01(\tR\atowerId\x12\x0e\n" +
 	"\x02id\x18\x19 \x01(\tR\x02id\x12-\n" +
-	"\x12unavailable_reason\x18\x1b \x01(\x05R\x11unavailableReason\"c\n" +
+	"\x12unavailable_reason\x18\x1b \x01(\x05R\x11unavailableReason\x12\x19\n" +
+	"\bquest_id\x18\x1c \x01(\tR\aquestId\"c\n" +
 	"\x15ProtoBattleFiendSpawn\x12%\n" +
 	"\x0ereplaces_fiend\x18\x01 \x01(\tR\rreplacesFiend\x12#\n" +
 	"\rreplaces_with\x18\x02 \x01(\tR\freplacesWith\"\xd3\x01\n" +

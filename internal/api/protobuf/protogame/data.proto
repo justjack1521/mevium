@@ -159,6 +159,7 @@ message ProtoBattleStartData {
   string id = 25;
 
   int32 unavailable_reason = 27;
+  string quest_id = 28;
 
 }
 
