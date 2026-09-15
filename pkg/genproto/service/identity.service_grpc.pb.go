@@ -36,8 +36,8 @@ type MeviusIdentityServiceClient interface {
 	GetSinglePlayerIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerIdentityResponse, error)
 	GetSinglePlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error)
 	GetSinglePlayerLoadout(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutRequest, opts ...grpc.CallOption) (*protoidentity.GetSinglePlayerLoadoutResponse, error)
-	GetMultiPlayerIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerIdentityResponse, error)
-	GetMultiPlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error)
+	GetMultiPlayerIdentity(ctx context.Context, in *protoidentity.GetMultiPlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerIdentityResponse, error)
+	GetMultiPlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetMultiPlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error)
 	GetMultiPlayerLoadout(ctx context.Context, in *protoidentity.GetMultiPlayerLoadoutRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutResponse, error)
 	GetRentalCard(ctx context.Context, in *protoidentity.GetRentalCardRequest, opts ...grpc.CallOption) (*protoidentity.GetRentalCardResponse, error)
 }
@@ -77,7 +77,7 @@ func (c *meviusIdentityServiceClient) GetSinglePlayerLoadout(ctx context.Context
 	return out, nil
 }
 
-func (c *meviusIdentityServiceClient) GetMultiPlayerIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerIdentityResponse, error) {
+func (c *meviusIdentityServiceClient) GetMultiPlayerIdentity(ctx context.Context, in *protoidentity.GetMultiPlayerIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerIdentityResponse, error) {
 	out := new(protoidentity.GetMultiPlayerIdentityResponse)
 	err := c.cc.Invoke(ctx, MeviusIdentityService_GetMultiPlayerIdentity_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -86,7 +86,7 @@ func (c *meviusIdentityServiceClient) GetMultiPlayerIdentity(ctx context.Context
 	return out, nil
 }
 
-func (c *meviusIdentityServiceClient) GetMultiPlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetSinglePlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error) {
+func (c *meviusIdentityServiceClient) GetMultiPlayerLoadoutIdentity(ctx context.Context, in *protoidentity.GetMultiPlayerLoadoutIdentityRequest, opts ...grpc.CallOption) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error) {
 	out := new(protoidentity.GetMultiPlayerLoadoutIdentityResponse)
 	err := c.cc.Invoke(ctx, MeviusIdentityService_GetMultiPlayerLoadoutIdentity_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -120,8 +120,8 @@ type MeviusIdentityServiceServer interface {
 	GetSinglePlayerIdentity(context.Context, *protoidentity.GetSinglePlayerIdentityRequest) (*protoidentity.GetSinglePlayerIdentityResponse, error)
 	GetSinglePlayerLoadoutIdentity(context.Context, *protoidentity.GetSinglePlayerLoadoutIdentityRequest) (*protoidentity.GetSinglePlayerLoadoutIdentityResponse, error)
 	GetSinglePlayerLoadout(context.Context, *protoidentity.GetSinglePlayerLoadoutRequest) (*protoidentity.GetSinglePlayerLoadoutResponse, error)
-	GetMultiPlayerIdentity(context.Context, *protoidentity.GetSinglePlayerIdentityRequest) (*protoidentity.GetMultiPlayerIdentityResponse, error)
-	GetMultiPlayerLoadoutIdentity(context.Context, *protoidentity.GetSinglePlayerLoadoutIdentityRequest) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error)
+	GetMultiPlayerIdentity(context.Context, *protoidentity.GetMultiPlayerIdentityRequest) (*protoidentity.GetMultiPlayerIdentityResponse, error)
+	GetMultiPlayerLoadoutIdentity(context.Context, *protoidentity.GetMultiPlayerLoadoutIdentityRequest) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error)
 	GetMultiPlayerLoadout(context.Context, *protoidentity.GetMultiPlayerLoadoutRequest) (*protoidentity.GetMultiPlayerLoadoutResponse, error)
 	GetRentalCard(context.Context, *protoidentity.GetRentalCardRequest) (*protoidentity.GetRentalCardResponse, error)
 }
@@ -139,10 +139,10 @@ func (UnimplementedMeviusIdentityServiceServer) GetSinglePlayerLoadoutIdentity(c
 func (UnimplementedMeviusIdentityServiceServer) GetSinglePlayerLoadout(context.Context, *protoidentity.GetSinglePlayerLoadoutRequest) (*protoidentity.GetSinglePlayerLoadoutResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSinglePlayerLoadout not implemented")
 }
-func (UnimplementedMeviusIdentityServiceServer) GetMultiPlayerIdentity(context.Context, *protoidentity.GetSinglePlayerIdentityRequest) (*protoidentity.GetMultiPlayerIdentityResponse, error) {
+func (UnimplementedMeviusIdentityServiceServer) GetMultiPlayerIdentity(context.Context, *protoidentity.GetMultiPlayerIdentityRequest) (*protoidentity.GetMultiPlayerIdentityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMultiPlayerIdentity not implemented")
 }
-func (UnimplementedMeviusIdentityServiceServer) GetMultiPlayerLoadoutIdentity(context.Context, *protoidentity.GetSinglePlayerLoadoutIdentityRequest) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error) {
+func (UnimplementedMeviusIdentityServiceServer) GetMultiPlayerLoadoutIdentity(context.Context, *protoidentity.GetMultiPlayerLoadoutIdentityRequest) (*protoidentity.GetMultiPlayerLoadoutIdentityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMultiPlayerLoadoutIdentity not implemented")
 }
 func (UnimplementedMeviusIdentityServiceServer) GetMultiPlayerLoadout(context.Context, *protoidentity.GetMultiPlayerLoadoutRequest) (*protoidentity.GetMultiPlayerLoadoutResponse, error) {
@@ -218,7 +218,7 @@ func _MeviusIdentityService_GetSinglePlayerLoadout_Handler(srv interface{}, ctx 
 }
 
 func _MeviusIdentityService_GetMultiPlayerIdentity_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoidentity.GetSinglePlayerIdentityRequest)
+	in := new(protoidentity.GetMultiPlayerIdentityRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -230,13 +230,13 @@ func _MeviusIdentityService_GetMultiPlayerIdentity_Handler(srv interface{}, ctx 
 		FullMethod: MeviusIdentityService_GetMultiPlayerIdentity_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusIdentityServiceServer).GetMultiPlayerIdentity(ctx, req.(*protoidentity.GetSinglePlayerIdentityRequest))
+		return srv.(MeviusIdentityServiceServer).GetMultiPlayerIdentity(ctx, req.(*protoidentity.GetMultiPlayerIdentityRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _MeviusIdentityService_GetMultiPlayerLoadoutIdentity_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(protoidentity.GetSinglePlayerLoadoutIdentityRequest)
+	in := new(protoidentity.GetMultiPlayerLoadoutIdentityRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -248,7 +248,7 @@ func _MeviusIdentityService_GetMultiPlayerLoadoutIdentity_Handler(srv interface{
 		FullMethod: MeviusIdentityService_GetMultiPlayerLoadoutIdentity_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MeviusIdentityServiceServer).GetMultiPlayerLoadoutIdentity(ctx, req.(*protoidentity.GetSinglePlayerLoadoutIdentityRequest))
+		return srv.(MeviusIdentityServiceServer).GetMultiPlayerLoadoutIdentity(ctx, req.(*protoidentity.GetMultiPlayerLoadoutIdentityRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

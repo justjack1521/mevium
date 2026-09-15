@@ -13,8 +13,8 @@ service MeviusIdentityService {
   rpc GetSinglePlayerLoadoutIdentity(identity.GetSinglePlayerLoadoutIdentityRequest) returns (identity.GetSinglePlayerLoadoutIdentityResponse) {}
   rpc GetSinglePlayerLoadout(identity.GetSinglePlayerLoadoutRequest) returns (identity.GetSinglePlayerLoadoutResponse) {}
 
-  rpc GetMultiPlayerIdentity(identity.GetSinglePlayerIdentityRequest) returns (identity.GetMultiPlayerIdentityResponse) {}
-  rpc GetMultiPlayerLoadoutIdentity(identity.GetSinglePlayerLoadoutIdentityRequest) returns (identity.GetMultiPlayerLoadoutIdentityResponse) {}
+  rpc GetMultiPlayerIdentity(identity.GetMultiPlayerIdentityRequest) returns (identity.GetMultiPlayerIdentityResponse) {}
+  rpc GetMultiPlayerLoadoutIdentity(identity.GetMultiPlayerLoadoutIdentityRequest) returns (identity.GetMultiPlayerLoadoutIdentityResponse) {}
 
   rpc GetMultiPlayerLoadout(identity.GetMultiPlayerLoadoutRequest) returns (identity.GetMultiPlayerLoadoutResponse) {}
 
