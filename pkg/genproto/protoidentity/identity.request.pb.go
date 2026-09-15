@@ -169,6 +169,102 @@ func (x *GetSinglePlayerLoadoutRequest) GetDeckIndex() int32 {
 	return 0
 }
 
+type GetMultiPlayerIdentityRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMultiPlayerIdentityRequest) Reset() {
+	*x = GetMultiPlayerIdentityRequest{}
+	mi := &file_protoidentity_identity_request_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMultiPlayerIdentityRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMultiPlayerIdentityRequest) ProtoMessage() {}
+
+func (x *GetMultiPlayerIdentityRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protoidentity_identity_request_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMultiPlayerIdentityRequest.ProtoReflect.Descriptor instead.
+func (*GetMultiPlayerIdentityRequest) Descriptor() ([]byte, []int) {
+	return file_protoidentity_identity_request_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *GetMultiPlayerIdentityRequest) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+type GetMultiPlayerLoadoutIdentityRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	DeckIndex     int32                  `protobuf:"varint,2,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMultiPlayerLoadoutIdentityRequest) Reset() {
+	*x = GetMultiPlayerLoadoutIdentityRequest{}
+	mi := &file_protoidentity_identity_request_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMultiPlayerLoadoutIdentityRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMultiPlayerLoadoutIdentityRequest) ProtoMessage() {}
+
+func (x *GetMultiPlayerLoadoutIdentityRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protoidentity_identity_request_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMultiPlayerLoadoutIdentityRequest.ProtoReflect.Descriptor instead.
+func (*GetMultiPlayerLoadoutIdentityRequest) Descriptor() ([]byte, []int) {
+	return file_protoidentity_identity_request_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetMultiPlayerLoadoutIdentityRequest) GetPlayerId() string {
+	if x != nil {
+		return x.PlayerId
+	}
+	return ""
+}
+
+func (x *GetMultiPlayerLoadoutIdentityRequest) GetDeckIndex() int32 {
+	if x != nil {
+		return x.DeckIndex
+	}
+	return 0
+}
+
 type GetMultiPlayerLoadoutRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	PlayerId      string                 `protobuf:"bytes,1,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
@@ -179,7 +275,7 @@ type GetMultiPlayerLoadoutRequest struct {
 
 func (x *GetMultiPlayerLoadoutRequest) Reset() {
 	*x = GetMultiPlayerLoadoutRequest{}
-	mi := &file_protoidentity_identity_request_proto_msgTypes[3]
+	mi := &file_protoidentity_identity_request_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -191,7 +287,7 @@ func (x *GetMultiPlayerLoadoutRequest) String() string {
 func (*GetMultiPlayerLoadoutRequest) ProtoMessage() {}
 
 func (x *GetMultiPlayerLoadoutRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protoidentity_identity_request_proto_msgTypes[3]
+	mi := &file_protoidentity_identity_request_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -204,7 +300,7 @@ func (x *GetMultiPlayerLoadoutRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMultiPlayerLoadoutRequest.ProtoReflect.Descriptor instead.
 func (*GetMultiPlayerLoadoutRequest) Descriptor() ([]byte, []int) {
-	return file_protoidentity_identity_request_proto_rawDescGZIP(), []int{3}
+	return file_protoidentity_identity_request_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *GetMultiPlayerLoadoutRequest) GetPlayerId() string {
@@ -230,7 +326,7 @@ type GetRentalCardRequest struct {
 
 func (x *GetRentalCardRequest) Reset() {
 	*x = GetRentalCardRequest{}
-	mi := &file_protoidentity_identity_request_proto_msgTypes[4]
+	mi := &file_protoidentity_identity_request_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -242,7 +338,7 @@ func (x *GetRentalCardRequest) String() string {
 func (*GetRentalCardRequest) ProtoMessage() {}
 
 func (x *GetRentalCardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protoidentity_identity_request_proto_msgTypes[4]
+	mi := &file_protoidentity_identity_request_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -255,7 +351,7 @@ func (x *GetRentalCardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRentalCardRequest.ProtoReflect.Descriptor instead.
 func (*GetRentalCardRequest) Descriptor() ([]byte, []int) {
-	return file_protoidentity_identity_request_proto_rawDescGZIP(), []int{4}
+	return file_protoidentity_identity_request_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *GetRentalCardRequest) GetPlayerId() string {
@@ -279,6 +375,12 @@ const file_protoidentity_identity_request_proto_rawDesc = "" +
 	"\x1dGetSinglePlayerLoadoutRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1d\n" +
 	"\n" +
+	"deck_index\x18\x02 \x01(\x05R\tdeckIndex\"<\n" +
+	"\x1dGetMultiPlayerIdentityRequest\x12\x1b\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\"b\n" +
+	"$GetMultiPlayerLoadoutIdentityRequest\x12\x1b\n" +
+	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1d\n" +
+	"\n" +
 	"deck_index\x18\x02 \x01(\x05R\tdeckIndex\"Z\n" +
 	"\x1cGetMultiPlayerLoadoutRequest\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1d\n" +
@@ -299,13 +401,15 @@ func file_protoidentity_identity_request_proto_rawDescGZIP() []byte {
 	return file_protoidentity_identity_request_proto_rawDescData
 }
 
-var file_protoidentity_identity_request_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_protoidentity_identity_request_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_protoidentity_identity_request_proto_goTypes = []any{
 	(*GetSinglePlayerIdentityRequest)(nil),        // 0: identity.GetSinglePlayerIdentityRequest
 	(*GetSinglePlayerLoadoutIdentityRequest)(nil), // 1: identity.GetSinglePlayerLoadoutIdentityRequest
 	(*GetSinglePlayerLoadoutRequest)(nil),         // 2: identity.GetSinglePlayerLoadoutRequest
-	(*GetMultiPlayerLoadoutRequest)(nil),          // 3: identity.GetMultiPlayerLoadoutRequest
-	(*GetRentalCardRequest)(nil),                  // 4: identity.GetRentalCardRequest
+	(*GetMultiPlayerIdentityRequest)(nil),         // 3: identity.GetMultiPlayerIdentityRequest
+	(*GetMultiPlayerLoadoutIdentityRequest)(nil),  // 4: identity.GetMultiPlayerLoadoutIdentityRequest
+	(*GetMultiPlayerLoadoutRequest)(nil),          // 5: identity.GetMultiPlayerLoadoutRequest
+	(*GetRentalCardRequest)(nil),                  // 6: identity.GetRentalCardRequest
 }
 var file_protoidentity_identity_request_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -326,7 +430,7 @@ func file_protoidentity_identity_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoidentity_identity_request_proto_rawDesc), len(file_protoidentity_identity_request_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -21,6 +21,15 @@ message GetSinglePlayerLoadoutResponse {
   identity.ProtoPlayerLoadout loadout = 2;
 }
 
+message GetMultiPlayerIdentityResponse {
+  identity.ProtoPlayerIdentity identity = 1;
+}
+
+message GetMultiPlayerLoadoutIdentityResponse {
+  identity.ProtoPlayerIdentity identity = 1;
+  identity.ProtoPlayerLoadoutIdentity loadout = 2;
+}
+
 message GetMultiPlayerLoadoutResponse {
   identity.ProtoPlayerIdentity identity = 1;
   identity.ProtoPlayerLoadout loadout = 2;

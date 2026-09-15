@@ -169,6 +169,102 @@ func (x *GetSinglePlayerLoadoutResponse) GetLoadout() *ProtoPlayerLoadout {
 	return nil
 }
 
+type GetMultiPlayerIdentityResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Identity      *ProtoPlayerIdentity   `protobuf:"bytes,1,opt,name=identity,proto3" json:"identity,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMultiPlayerIdentityResponse) Reset() {
+	*x = GetMultiPlayerIdentityResponse{}
+	mi := &file_protoidentity_identity_response_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMultiPlayerIdentityResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMultiPlayerIdentityResponse) ProtoMessage() {}
+
+func (x *GetMultiPlayerIdentityResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protoidentity_identity_response_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMultiPlayerIdentityResponse.ProtoReflect.Descriptor instead.
+func (*GetMultiPlayerIdentityResponse) Descriptor() ([]byte, []int) {
+	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *GetMultiPlayerIdentityResponse) GetIdentity() *ProtoPlayerIdentity {
+	if x != nil {
+		return x.Identity
+	}
+	return nil
+}
+
+type GetMultiPlayerLoadoutIdentityResponse struct {
+	state         protoimpl.MessageState      `protogen:"open.v1"`
+	Identity      *ProtoPlayerIdentity        `protobuf:"bytes,1,opt,name=identity,proto3" json:"identity,omitempty"`
+	Loadout       *ProtoPlayerLoadoutIdentity `protobuf:"bytes,2,opt,name=loadout,proto3" json:"loadout,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMultiPlayerLoadoutIdentityResponse) Reset() {
+	*x = GetMultiPlayerLoadoutIdentityResponse{}
+	mi := &file_protoidentity_identity_response_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMultiPlayerLoadoutIdentityResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMultiPlayerLoadoutIdentityResponse) ProtoMessage() {}
+
+func (x *GetMultiPlayerLoadoutIdentityResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protoidentity_identity_response_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMultiPlayerLoadoutIdentityResponse.ProtoReflect.Descriptor instead.
+func (*GetMultiPlayerLoadoutIdentityResponse) Descriptor() ([]byte, []int) {
+	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetMultiPlayerLoadoutIdentityResponse) GetIdentity() *ProtoPlayerIdentity {
+	if x != nil {
+		return x.Identity
+	}
+	return nil
+}
+
+func (x *GetMultiPlayerLoadoutIdentityResponse) GetLoadout() *ProtoPlayerLoadoutIdentity {
+	if x != nil {
+		return x.Loadout
+	}
+	return nil
+}
+
 type GetMultiPlayerLoadoutResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Identity      *ProtoPlayerIdentity   `protobuf:"bytes,1,opt,name=identity,proto3" json:"identity,omitempty"`
@@ -179,7 +275,7 @@ type GetMultiPlayerLoadoutResponse struct {
 
 func (x *GetMultiPlayerLoadoutResponse) Reset() {
 	*x = GetMultiPlayerLoadoutResponse{}
-	mi := &file_protoidentity_identity_response_proto_msgTypes[3]
+	mi := &file_protoidentity_identity_response_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -191,7 +287,7 @@ func (x *GetMultiPlayerLoadoutResponse) String() string {
 func (*GetMultiPlayerLoadoutResponse) ProtoMessage() {}
 
 func (x *GetMultiPlayerLoadoutResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protoidentity_identity_response_proto_msgTypes[3]
+	mi := &file_protoidentity_identity_response_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -204,7 +300,7 @@ func (x *GetMultiPlayerLoadoutResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMultiPlayerLoadoutResponse.ProtoReflect.Descriptor instead.
 func (*GetMultiPlayerLoadoutResponse) Descriptor() ([]byte, []int) {
-	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{3}
+	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *GetMultiPlayerLoadoutResponse) GetIdentity() *ProtoPlayerIdentity {
@@ -230,7 +326,7 @@ type GetRentalCardResponse struct {
 
 func (x *GetRentalCardResponse) Reset() {
 	*x = GetRentalCardResponse{}
-	mi := &file_protoidentity_identity_response_proto_msgTypes[4]
+	mi := &file_protoidentity_identity_response_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -242,7 +338,7 @@ func (x *GetRentalCardResponse) String() string {
 func (*GetRentalCardResponse) ProtoMessage() {}
 
 func (x *GetRentalCardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protoidentity_identity_response_proto_msgTypes[4]
+	mi := &file_protoidentity_identity_response_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -255,7 +351,7 @@ func (x *GetRentalCardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRentalCardResponse.ProtoReflect.Descriptor instead.
 func (*GetRentalCardResponse) Descriptor() ([]byte, []int) {
-	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{4}
+	return file_protoidentity_identity_response_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *GetRentalCardResponse) GetRentalCard() *ProtoAbilityCardIdentity {
@@ -277,7 +373,12 @@ const file_protoidentity_identity_response_proto_rawDesc = "" +
 	"\aloadout\x18\x02 \x01(\v2$.identity.ProtoPlayerLoadoutIdentityR\aloadout\"\x93\x01\n" +
 	"\x1eGetSinglePlayerLoadoutResponse\x129\n" +
 	"\bidentity\x18\x01 \x01(\v2\x1d.identity.ProtoPlayerIdentityR\bidentity\x126\n" +
-	"\aloadout\x18\x02 \x01(\v2\x1c.identity.ProtoPlayerLoadoutR\aloadout\"\x92\x01\n" +
+	"\aloadout\x18\x02 \x01(\v2\x1c.identity.ProtoPlayerLoadoutR\aloadout\"[\n" +
+	"\x1eGetMultiPlayerIdentityResponse\x129\n" +
+	"\bidentity\x18\x01 \x01(\v2\x1d.identity.ProtoPlayerIdentityR\bidentity\"\xa2\x01\n" +
+	"%GetMultiPlayerLoadoutIdentityResponse\x129\n" +
+	"\bidentity\x18\x01 \x01(\v2\x1d.identity.ProtoPlayerIdentityR\bidentity\x12>\n" +
+	"\aloadout\x18\x02 \x01(\v2$.identity.ProtoPlayerLoadoutIdentityR\aloadout\"\x92\x01\n" +
 	"\x1dGetMultiPlayerLoadoutResponse\x129\n" +
 	"\bidentity\x18\x01 \x01(\v2\x1d.identity.ProtoPlayerIdentityR\bidentity\x126\n" +
 	"\aloadout\x18\x02 \x01(\v2\x1c.identity.ProtoPlayerLoadoutR\aloadout\"\\\n" +
@@ -297,32 +398,37 @@ func file_protoidentity_identity_response_proto_rawDescGZIP() []byte {
 	return file_protoidentity_identity_response_proto_rawDescData
 }
 
-var file_protoidentity_identity_response_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_protoidentity_identity_response_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_protoidentity_identity_response_proto_goTypes = []any{
 	(*GetSinglePlayerIdentityResponse)(nil),        // 0: identity.GetSinglePlayerIdentityResponse
 	(*GetSinglePlayerLoadoutIdentityResponse)(nil), // 1: identity.GetSinglePlayerLoadoutIdentityResponse
 	(*GetSinglePlayerLoadoutResponse)(nil),         // 2: identity.GetSinglePlayerLoadoutResponse
-	(*GetMultiPlayerLoadoutResponse)(nil),          // 3: identity.GetMultiPlayerLoadoutResponse
-	(*GetRentalCardResponse)(nil),                  // 4: identity.GetRentalCardResponse
-	(*ProtoPlayerIdentity)(nil),                    // 5: identity.ProtoPlayerIdentity
-	(*ProtoPlayerLoadoutIdentity)(nil),             // 6: identity.ProtoPlayerLoadoutIdentity
-	(*ProtoPlayerLoadout)(nil),                     // 7: identity.ProtoPlayerLoadout
-	(*ProtoAbilityCardIdentity)(nil),               // 8: identity.ProtoAbilityCardIdentity
+	(*GetMultiPlayerIdentityResponse)(nil),         // 3: identity.GetMultiPlayerIdentityResponse
+	(*GetMultiPlayerLoadoutIdentityResponse)(nil),  // 4: identity.GetMultiPlayerLoadoutIdentityResponse
+	(*GetMultiPlayerLoadoutResponse)(nil),          // 5: identity.GetMultiPlayerLoadoutResponse
+	(*GetRentalCardResponse)(nil),                  // 6: identity.GetRentalCardResponse
+	(*ProtoPlayerIdentity)(nil),                    // 7: identity.ProtoPlayerIdentity
+	(*ProtoPlayerLoadoutIdentity)(nil),             // 8: identity.ProtoPlayerLoadoutIdentity
+	(*ProtoPlayerLoadout)(nil),                     // 9: identity.ProtoPlayerLoadout
+	(*ProtoAbilityCardIdentity)(nil),               // 10: identity.ProtoAbilityCardIdentity
 }
 var file_protoidentity_identity_response_proto_depIdxs = []int32{
-	5, // 0: identity.GetSinglePlayerIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	5, // 1: identity.GetSinglePlayerLoadoutIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	6, // 2: identity.GetSinglePlayerLoadoutIdentityResponse.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	5, // 3: identity.GetSinglePlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	7, // 4: identity.GetSinglePlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
-	5, // 5: identity.GetMultiPlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
-	7, // 6: identity.GetMultiPlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
-	8, // 7: identity.GetRentalCardResponse.rental_card:type_name -> identity.ProtoAbilityCardIdentity
-	8, // [8:8] is the sub-list for method output_type
-	8, // [8:8] is the sub-list for method input_type
-	8, // [8:8] is the sub-list for extension type_name
-	8, // [8:8] is the sub-list for extension extendee
-	0, // [0:8] is the sub-list for field type_name
+	7,  // 0: identity.GetSinglePlayerIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	7,  // 1: identity.GetSinglePlayerLoadoutIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	8,  // 2: identity.GetSinglePlayerLoadoutIdentityResponse.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	7,  // 3: identity.GetSinglePlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	9,  // 4: identity.GetSinglePlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
+	7,  // 5: identity.GetMultiPlayerIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	7,  // 6: identity.GetMultiPlayerLoadoutIdentityResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	8,  // 7: identity.GetMultiPlayerLoadoutIdentityResponse.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	7,  // 8: identity.GetMultiPlayerLoadoutResponse.identity:type_name -> identity.ProtoPlayerIdentity
+	9,  // 9: identity.GetMultiPlayerLoadoutResponse.loadout:type_name -> identity.ProtoPlayerLoadout
+	10, // 10: identity.GetRentalCardResponse.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	11, // [11:11] is the sub-list for method output_type
+	11, // [11:11] is the sub-list for method input_type
+	11, // [11:11] is the sub-list for extension type_name
+	11, // [11:11] is the sub-list for extension extendee
+	0,  // [0:11] is the sub-list for field type_name
 }
 
 func init() { file_protoidentity_identity_response_proto_init() }
@@ -337,7 +443,7 @@ func file_protoidentity_identity_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protoidentity_identity_response_proto_rawDesc), len(file_protoidentity_identity_response_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

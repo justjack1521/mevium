@@ -19,6 +19,15 @@ message GetSinglePlayerLoadoutRequest {
   int32 deck_index = 2;
 }
 
+message GetMultiPlayerIdentityRequest {
+  string player_id = 1;
+}
+
+message GetMultiPlayerLoadoutIdentityRequest {
+  string player_id = 1;
+  int32 deck_index = 2;
+}
+
 message GetMultiPlayerLoadoutRequest {
   string player_id = 1;
   int32 deck_index = 2;
