@@ -509,6 +509,7 @@ message ProtoRegionMapInstance {
 
   ProtoRegionProgressData progress = 15;
   ProtoWanderingFiendData wandering_fiends = 16;
+  repeated ProtoRegionQuestInstance quest_data = 17;
 
 }
 
@@ -616,6 +617,11 @@ message ProtoRegionMissionInstance {
   ProtoMissionInstance instance = 2;
   bool apply_to_node = 3;
   int32 node_index = 4;
+}
+
+message ProtoRegionQuestInstance {
+  string quest_id = 1;
+  bool completed = 2;
 }
 
 message ProtoSkillPanelGroups {

@@ -4264,6 +4264,7 @@ type ProtoRegionMapInstance struct {
 	UnlockTime            int64                         `protobuf:"varint,14,opt,name=unlock_time,json=unlockTime,proto3" json:"unlock_time,omitempty"`
 	Progress              *ProtoRegionProgressData      `protobuf:"bytes,15,opt,name=progress,proto3" json:"progress,omitempty"`
 	WanderingFiends       *ProtoWanderingFiendData      `protobuf:"bytes,16,opt,name=wandering_fiends,json=wanderingFiends,proto3" json:"wandering_fiends,omitempty"`
+	QuestData             []*ProtoRegionQuestInstance   `protobuf:"bytes,17,rep,name=quest_data,json=questData,proto3" json:"quest_data,omitempty"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -4399,6 +4400,13 @@ func (x *ProtoRegionMapInstance) GetProgress() *ProtoRegionProgressData {
 func (x *ProtoRegionMapInstance) GetWanderingFiends() *ProtoWanderingFiendData {
 	if x != nil {
 		return x.WanderingFiends
+	}
+	return nil
+}
+
+func (x *ProtoRegionMapInstance) GetQuestData() []*ProtoRegionQuestInstance {
+	if x != nil {
+		return x.QuestData
 	}
 	return nil
 }
@@ -5407,6 +5415,58 @@ func (x *ProtoRegionMissionInstance) GetNodeIndex() int32 {
 	return 0
 }
 
+type ProtoRegionQuestInstance struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	QuestId       string                 `protobuf:"bytes,1,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
+	Completed     bool                   `protobuf:"varint,2,opt,name=completed,proto3" json:"completed,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProtoRegionQuestInstance) Reset() {
+	*x = ProtoRegionQuestInstance{}
+	mi := &file_protogame_data_proto_msgTypes[67]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProtoRegionQuestInstance) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProtoRegionQuestInstance) ProtoMessage() {}
+
+func (x *ProtoRegionQuestInstance) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_data_proto_msgTypes[67]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProtoRegionQuestInstance.ProtoReflect.Descriptor instead.
+func (*ProtoRegionQuestInstance) Descriptor() ([]byte, []int) {
+	return file_protogame_data_proto_rawDescGZIP(), []int{67}
+}
+
+func (x *ProtoRegionQuestInstance) GetQuestId() string {
+	if x != nil {
+		return x.QuestId
+	}
+	return ""
+}
+
+func (x *ProtoRegionQuestInstance) GetCompleted() bool {
+	if x != nil {
+		return x.Completed
+	}
+	return false
+}
+
 type ProtoSkillPanelGroups struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	PanelPages     []*ProtoSkillPanelPage `protobuf:"bytes,1,rep,name=panel_pages,json=panelPages,proto3" json:"panel_pages,omitempty"`
@@ -5417,7 +5477,7 @@ type ProtoSkillPanelGroups struct {
 
 func (x *ProtoSkillPanelGroups) Reset() {
 	*x = ProtoSkillPanelGroups{}
-	mi := &file_protogame_data_proto_msgTypes[67]
+	mi := &file_protogame_data_proto_msgTypes[68]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5429,7 +5489,7 @@ func (x *ProtoSkillPanelGroups) String() string {
 func (*ProtoSkillPanelGroups) ProtoMessage() {}
 
 func (x *ProtoSkillPanelGroups) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[67]
+	mi := &file_protogame_data_proto_msgTypes[68]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5442,7 +5502,7 @@ func (x *ProtoSkillPanelGroups) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSkillPanelGroups.ProtoReflect.Descriptor instead.
 func (*ProtoSkillPanelGroups) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{67}
+	return file_protogame_data_proto_rawDescGZIP(), []int{68}
 }
 
 func (x *ProtoSkillPanelGroups) GetPanelPages() []*ProtoSkillPanelPage {
@@ -5472,7 +5532,7 @@ type ProtoSkillPanelPage struct {
 
 func (x *ProtoSkillPanelPage) Reset() {
 	*x = ProtoSkillPanelPage{}
-	mi := &file_protogame_data_proto_msgTypes[68]
+	mi := &file_protogame_data_proto_msgTypes[69]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5484,7 +5544,7 @@ func (x *ProtoSkillPanelPage) String() string {
 func (*ProtoSkillPanelPage) ProtoMessage() {}
 
 func (x *ProtoSkillPanelPage) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[68]
+	mi := &file_protogame_data_proto_msgTypes[69]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5497,7 +5557,7 @@ func (x *ProtoSkillPanelPage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSkillPanelPage.ProtoReflect.Descriptor instead.
 func (*ProtoSkillPanelPage) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{68}
+	return file_protogame_data_proto_rawDescGZIP(), []int{69}
 }
 
 func (x *ProtoSkillPanelPage) GetIndex() int32 {
@@ -5547,7 +5607,7 @@ type ProtoSkillPanel struct {
 
 func (x *ProtoSkillPanel) Reset() {
 	*x = ProtoSkillPanel{}
-	mi := &file_protogame_data_proto_msgTypes[69]
+	mi := &file_protogame_data_proto_msgTypes[70]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5559,7 +5619,7 @@ func (x *ProtoSkillPanel) String() string {
 func (*ProtoSkillPanel) ProtoMessage() {}
 
 func (x *ProtoSkillPanel) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[69]
+	mi := &file_protogame_data_proto_msgTypes[70]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5572,7 +5632,7 @@ func (x *ProtoSkillPanel) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSkillPanel.ProtoReflect.Descriptor instead.
 func (*ProtoSkillPanel) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{69}
+	return file_protogame_data_proto_rawDescGZIP(), []int{70}
 }
 
 func (x *ProtoSkillPanel) GetIndex() int32 {
@@ -5614,7 +5674,7 @@ type ProtoSkillPanelUnlockTarget struct {
 
 func (x *ProtoSkillPanelUnlockTarget) Reset() {
 	*x = ProtoSkillPanelUnlockTarget{}
-	mi := &file_protogame_data_proto_msgTypes[70]
+	mi := &file_protogame_data_proto_msgTypes[71]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5626,7 +5686,7 @@ func (x *ProtoSkillPanelUnlockTarget) String() string {
 func (*ProtoSkillPanelUnlockTarget) ProtoMessage() {}
 
 func (x *ProtoSkillPanelUnlockTarget) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[70]
+	mi := &file_protogame_data_proto_msgTypes[71]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5639,7 +5699,7 @@ func (x *ProtoSkillPanelUnlockTarget) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSkillPanelUnlockTarget.ProtoReflect.Descriptor instead.
 func (*ProtoSkillPanelUnlockTarget) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{70}
+	return file_protogame_data_proto_rawDescGZIP(), []int{71}
 }
 
 func (x *ProtoSkillPanelUnlockTarget) GetGroupIndex() int32 {
@@ -5672,7 +5732,7 @@ type ProtoWeaponInventory struct {
 
 func (x *ProtoWeaponInventory) Reset() {
 	*x = ProtoWeaponInventory{}
-	mi := &file_protogame_data_proto_msgTypes[71]
+	mi := &file_protogame_data_proto_msgTypes[72]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5684,7 +5744,7 @@ func (x *ProtoWeaponInventory) String() string {
 func (*ProtoWeaponInventory) ProtoMessage() {}
 
 func (x *ProtoWeaponInventory) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[71]
+	mi := &file_protogame_data_proto_msgTypes[72]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5697,7 +5757,7 @@ func (x *ProtoWeaponInventory) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoWeaponInventory.ProtoReflect.Descriptor instead.
 func (*ProtoWeaponInventory) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{71}
+	return file_protogame_data_proto_rawDescGZIP(), []int{72}
 }
 
 func (x *ProtoWeaponInventory) GetWeaponList() []*ProtoWeaponInstance {
@@ -5727,7 +5787,7 @@ type ProtoWeaponInstance struct {
 
 func (x *ProtoWeaponInstance) Reset() {
 	*x = ProtoWeaponInstance{}
-	mi := &file_protogame_data_proto_msgTypes[72]
+	mi := &file_protogame_data_proto_msgTypes[73]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5739,7 +5799,7 @@ func (x *ProtoWeaponInstance) String() string {
 func (*ProtoWeaponInstance) ProtoMessage() {}
 
 func (x *ProtoWeaponInstance) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[72]
+	mi := &file_protogame_data_proto_msgTypes[73]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5752,7 +5812,7 @@ func (x *ProtoWeaponInstance) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoWeaponInstance.ProtoReflect.Descriptor instead.
 func (*ProtoWeaponInstance) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{72}
+	return file_protogame_data_proto_rawDescGZIP(), []int{73}
 }
 
 func (x *ProtoWeaponInstance) GetBaseWeaponId() string {
@@ -5857,7 +5917,7 @@ type ProtoBattleStatistics struct {
 
 func (x *ProtoBattleStatistics) Reset() {
 	*x = ProtoBattleStatistics{}
-	mi := &file_protogame_data_proto_msgTypes[73]
+	mi := &file_protogame_data_proto_msgTypes[74]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5869,7 +5929,7 @@ func (x *ProtoBattleStatistics) String() string {
 func (*ProtoBattleStatistics) ProtoMessage() {}
 
 func (x *ProtoBattleStatistics) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[73]
+	mi := &file_protogame_data_proto_msgTypes[74]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5882,7 +5942,7 @@ func (x *ProtoBattleStatistics) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoBattleStatistics.ProtoReflect.Descriptor instead.
 func (*ProtoBattleStatistics) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{73}
+	return file_protogame_data_proto_rawDescGZIP(), []int{74}
 }
 
 func (x *ProtoBattleStatistics) GetTotalScore() int32 {
@@ -5965,7 +6025,7 @@ type AbilityCardUsageStatistic struct {
 
 func (x *AbilityCardUsageStatistic) Reset() {
 	*x = AbilityCardUsageStatistic{}
-	mi := &file_protogame_data_proto_msgTypes[74]
+	mi := &file_protogame_data_proto_msgTypes[75]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5977,7 +6037,7 @@ func (x *AbilityCardUsageStatistic) String() string {
 func (*AbilityCardUsageStatistic) ProtoMessage() {}
 
 func (x *AbilityCardUsageStatistic) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[74]
+	mi := &file_protogame_data_proto_msgTypes[75]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5990,7 +6050,7 @@ func (x *AbilityCardUsageStatistic) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AbilityCardUsageStatistic.ProtoReflect.Descriptor instead.
 func (*AbilityCardUsageStatistic) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{74}
+	return file_protogame_data_proto_rawDescGZIP(), []int{75}
 }
 
 func (x *AbilityCardUsageStatistic) GetInstanceId() string {
@@ -6017,7 +6077,7 @@ type ElementUsageStatistic struct {
 
 func (x *ElementUsageStatistic) Reset() {
 	*x = ElementUsageStatistic{}
-	mi := &file_protogame_data_proto_msgTypes[75]
+	mi := &file_protogame_data_proto_msgTypes[76]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6029,7 +6089,7 @@ func (x *ElementUsageStatistic) String() string {
 func (*ElementUsageStatistic) ProtoMessage() {}
 
 func (x *ElementUsageStatistic) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[75]
+	mi := &file_protogame_data_proto_msgTypes[76]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6042,7 +6102,7 @@ func (x *ElementUsageStatistic) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ElementUsageStatistic.ProtoReflect.Descriptor instead.
 func (*ElementUsageStatistic) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{75}
+	return file_protogame_data_proto_rawDescGZIP(), []int{76}
 }
 
 func (x *ElementUsageStatistic) GetElementId() string {
@@ -6077,7 +6137,7 @@ type ProtoEnemyDeathStatistic struct {
 
 func (x *ProtoEnemyDeathStatistic) Reset() {
 	*x = ProtoEnemyDeathStatistic{}
-	mi := &file_protogame_data_proto_msgTypes[76]
+	mi := &file_protogame_data_proto_msgTypes[77]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6089,7 +6149,7 @@ func (x *ProtoEnemyDeathStatistic) String() string {
 func (*ProtoEnemyDeathStatistic) ProtoMessage() {}
 
 func (x *ProtoEnemyDeathStatistic) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[76]
+	mi := &file_protogame_data_proto_msgTypes[77]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6102,7 +6162,7 @@ func (x *ProtoEnemyDeathStatistic) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoEnemyDeathStatistic.ProtoReflect.Descriptor instead.
 func (*ProtoEnemyDeathStatistic) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{76}
+	return file_protogame_data_proto_rawDescGZIP(), []int{77}
 }
 
 func (x *ProtoEnemyDeathStatistic) GetFiendId() string {
@@ -6187,7 +6247,7 @@ type ProtoAbilityCardSummonDrawResult struct {
 
 func (x *ProtoAbilityCardSummonDrawResult) Reset() {
 	*x = ProtoAbilityCardSummonDrawResult{}
-	mi := &file_protogame_data_proto_msgTypes[77]
+	mi := &file_protogame_data_proto_msgTypes[78]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6199,7 +6259,7 @@ func (x *ProtoAbilityCardSummonDrawResult) String() string {
 func (*ProtoAbilityCardSummonDrawResult) ProtoMessage() {}
 
 func (x *ProtoAbilityCardSummonDrawResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[77]
+	mi := &file_protogame_data_proto_msgTypes[78]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6212,7 +6272,7 @@ func (x *ProtoAbilityCardSummonDrawResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoAbilityCardSummonDrawResult.ProtoReflect.Descriptor instead.
 func (*ProtoAbilityCardSummonDrawResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{77}
+	return file_protogame_data_proto_rawDescGZIP(), []int{78}
 }
 
 func (x *ProtoAbilityCardSummonDrawResult) GetInstance() *ProtoAbilityCardInstance {
@@ -6254,7 +6314,7 @@ type ProtoJobCardSummonDrawResult struct {
 
 func (x *ProtoJobCardSummonDrawResult) Reset() {
 	*x = ProtoJobCardSummonDrawResult{}
-	mi := &file_protogame_data_proto_msgTypes[78]
+	mi := &file_protogame_data_proto_msgTypes[79]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6266,7 +6326,7 @@ func (x *ProtoJobCardSummonDrawResult) String() string {
 func (*ProtoJobCardSummonDrawResult) ProtoMessage() {}
 
 func (x *ProtoJobCardSummonDrawResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[78]
+	mi := &file_protogame_data_proto_msgTypes[79]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6279,7 +6339,7 @@ func (x *ProtoJobCardSummonDrawResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoJobCardSummonDrawResult.ProtoReflect.Descriptor instead.
 func (*ProtoJobCardSummonDrawResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{78}
+	return file_protogame_data_proto_rawDescGZIP(), []int{79}
 }
 
 func (x *ProtoJobCardSummonDrawResult) GetInstance() *ProtoJobCardInstance {
@@ -6317,7 +6377,7 @@ type ProtoMailboxClaimResult struct {
 
 func (x *ProtoMailboxClaimResult) Reset() {
 	*x = ProtoMailboxClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[79]
+	mi := &file_protogame_data_proto_msgTypes[80]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6329,7 +6389,7 @@ func (x *ProtoMailboxClaimResult) String() string {
 func (*ProtoMailboxClaimResult) ProtoMessage() {}
 
 func (x *ProtoMailboxClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[79]
+	mi := &file_protogame_data_proto_msgTypes[80]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6342,7 +6402,7 @@ func (x *ProtoMailboxClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoMailboxClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoMailboxClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{79}
+	return file_protogame_data_proto_rawDescGZIP(), []int{80}
 }
 
 func (x *ProtoMailboxClaimResult) GetItem() *ProtoItemClaimResult {
@@ -6397,7 +6457,7 @@ type ProtoItemClaimResult struct {
 
 func (x *ProtoItemClaimResult) Reset() {
 	*x = ProtoItemClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[80]
+	mi := &file_protogame_data_proto_msgTypes[81]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6409,7 +6469,7 @@ func (x *ProtoItemClaimResult) String() string {
 func (*ProtoItemClaimResult) ProtoMessage() {}
 
 func (x *ProtoItemClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[80]
+	mi := &file_protogame_data_proto_msgTypes[81]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6422,7 +6482,7 @@ func (x *ProtoItemClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoItemClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoItemClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{80}
+	return file_protogame_data_proto_rawDescGZIP(), []int{81}
 }
 
 func (x *ProtoItemClaimResult) GetItemId() string {
@@ -6448,7 +6508,7 @@ type ProtoAbilityCardClaimResult struct {
 
 func (x *ProtoAbilityCardClaimResult) Reset() {
 	*x = ProtoAbilityCardClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[81]
+	mi := &file_protogame_data_proto_msgTypes[82]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6460,7 +6520,7 @@ func (x *ProtoAbilityCardClaimResult) String() string {
 func (*ProtoAbilityCardClaimResult) ProtoMessage() {}
 
 func (x *ProtoAbilityCardClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[81]
+	mi := &file_protogame_data_proto_msgTypes[82]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6473,7 +6533,7 @@ func (x *ProtoAbilityCardClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoAbilityCardClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoAbilityCardClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{81}
+	return file_protogame_data_proto_rawDescGZIP(), []int{82}
 }
 
 func (x *ProtoAbilityCardClaimResult) GetInstance() *ProtoAbilityCardInstance {
@@ -6493,7 +6553,7 @@ type ProtoJobCardClaimResult struct {
 
 func (x *ProtoJobCardClaimResult) Reset() {
 	*x = ProtoJobCardClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[82]
+	mi := &file_protogame_data_proto_msgTypes[83]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6505,7 +6565,7 @@ func (x *ProtoJobCardClaimResult) String() string {
 func (*ProtoJobCardClaimResult) ProtoMessage() {}
 
 func (x *ProtoJobCardClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[82]
+	mi := &file_protogame_data_proto_msgTypes[83]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6518,7 +6578,7 @@ func (x *ProtoJobCardClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoJobCardClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoJobCardClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{82}
+	return file_protogame_data_proto_rawDescGZIP(), []int{83}
 }
 
 func (x *ProtoJobCardClaimResult) GetInstance() *ProtoJobCardInstance {
@@ -6544,7 +6604,7 @@ type ProtoWeaponClaimResult struct {
 
 func (x *ProtoWeaponClaimResult) Reset() {
 	*x = ProtoWeaponClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[83]
+	mi := &file_protogame_data_proto_msgTypes[84]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6556,7 +6616,7 @@ func (x *ProtoWeaponClaimResult) String() string {
 func (*ProtoWeaponClaimResult) ProtoMessage() {}
 
 func (x *ProtoWeaponClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[83]
+	mi := &file_protogame_data_proto_msgTypes[84]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6569,7 +6629,7 @@ func (x *ProtoWeaponClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoWeaponClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoWeaponClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{83}
+	return file_protogame_data_proto_rawDescGZIP(), []int{84}
 }
 
 func (x *ProtoWeaponClaimResult) GetWeapon() *ProtoWeaponInstance {
@@ -6588,7 +6648,7 @@ type ProtoCompanionClaimResult struct {
 
 func (x *ProtoCompanionClaimResult) Reset() {
 	*x = ProtoCompanionClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[84]
+	mi := &file_protogame_data_proto_msgTypes[85]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6600,7 +6660,7 @@ func (x *ProtoCompanionClaimResult) String() string {
 func (*ProtoCompanionClaimResult) ProtoMessage() {}
 
 func (x *ProtoCompanionClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[84]
+	mi := &file_protogame_data_proto_msgTypes[85]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6613,7 +6673,7 @@ func (x *ProtoCompanionClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoCompanionClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoCompanionClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{84}
+	return file_protogame_data_proto_rawDescGZIP(), []int{85}
 }
 
 func (x *ProtoCompanionClaimResult) GetCompanion() *ProtoFairyCompanionInstance {
@@ -6632,7 +6692,7 @@ type ProtoStampClaimResult struct {
 
 func (x *ProtoStampClaimResult) Reset() {
 	*x = ProtoStampClaimResult{}
-	mi := &file_protogame_data_proto_msgTypes[85]
+	mi := &file_protogame_data_proto_msgTypes[86]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6644,7 +6704,7 @@ func (x *ProtoStampClaimResult) String() string {
 func (*ProtoStampClaimResult) ProtoMessage() {}
 
 func (x *ProtoStampClaimResult) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[85]
+	mi := &file_protogame_data_proto_msgTypes[86]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6657,7 +6717,7 @@ func (x *ProtoStampClaimResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampClaimResult.ProtoReflect.Descriptor instead.
 func (*ProtoStampClaimResult) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{85}
+	return file_protogame_data_proto_rawDescGZIP(), []int{86}
 }
 
 func (x *ProtoStampClaimResult) GetStamp() *ProtoStampInstance {
@@ -6677,7 +6737,7 @@ type ProtoBattleSelection struct {
 
 func (x *ProtoBattleSelection) Reset() {
 	*x = ProtoBattleSelection{}
-	mi := &file_protogame_data_proto_msgTypes[86]
+	mi := &file_protogame_data_proto_msgTypes[87]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6689,7 +6749,7 @@ func (x *ProtoBattleSelection) String() string {
 func (*ProtoBattleSelection) ProtoMessage() {}
 
 func (x *ProtoBattleSelection) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[86]
+	mi := &file_protogame_data_proto_msgTypes[87]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6702,7 +6762,7 @@ func (x *ProtoBattleSelection) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoBattleSelection.ProtoReflect.Descriptor instead.
 func (*ProtoBattleSelection) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{86}
+	return file_protogame_data_proto_rawDescGZIP(), []int{87}
 }
 
 func (x *ProtoBattleSelection) GetWaves() []*ProtoBattleWave {
@@ -6730,7 +6790,7 @@ type ProtoBattleWave struct {
 
 func (x *ProtoBattleWave) Reset() {
 	*x = ProtoBattleWave{}
-	mi := &file_protogame_data_proto_msgTypes[87]
+	mi := &file_protogame_data_proto_msgTypes[88]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6742,7 +6802,7 @@ func (x *ProtoBattleWave) String() string {
 func (*ProtoBattleWave) ProtoMessage() {}
 
 func (x *ProtoBattleWave) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[87]
+	mi := &file_protogame_data_proto_msgTypes[88]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6755,7 +6815,7 @@ func (x *ProtoBattleWave) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoBattleWave.ProtoReflect.Descriptor instead.
 func (*ProtoBattleWave) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{87}
+	return file_protogame_data_proto_rawDescGZIP(), []int{88}
 }
 
 func (x *ProtoBattleWave) GetIndex() int32 {
@@ -6790,7 +6850,7 @@ type ProtoBattleWaveGroup struct {
 
 func (x *ProtoBattleWaveGroup) Reset() {
 	*x = ProtoBattleWaveGroup{}
-	mi := &file_protogame_data_proto_msgTypes[88]
+	mi := &file_protogame_data_proto_msgTypes[89]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6802,7 +6862,7 @@ func (x *ProtoBattleWaveGroup) String() string {
 func (*ProtoBattleWaveGroup) ProtoMessage() {}
 
 func (x *ProtoBattleWaveGroup) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[88]
+	mi := &file_protogame_data_proto_msgTypes[89]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6815,7 +6875,7 @@ func (x *ProtoBattleWaveGroup) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoBattleWaveGroup.ProtoReflect.Descriptor instead.
 func (*ProtoBattleWaveGroup) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{88}
+	return file_protogame_data_proto_rawDescGZIP(), []int{89}
 }
 
 func (x *ProtoBattleWaveGroup) GetIndex() int32 {
@@ -6848,7 +6908,7 @@ type ProtoTowerData struct {
 
 func (x *ProtoTowerData) Reset() {
 	*x = ProtoTowerData{}
-	mi := &file_protogame_data_proto_msgTypes[89]
+	mi := &file_protogame_data_proto_msgTypes[90]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6860,7 +6920,7 @@ func (x *ProtoTowerData) String() string {
 func (*ProtoTowerData) ProtoMessage() {}
 
 func (x *ProtoTowerData) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[89]
+	mi := &file_protogame_data_proto_msgTypes[90]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6873,7 +6933,7 @@ func (x *ProtoTowerData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoTowerData.ProtoReflect.Descriptor instead.
 func (*ProtoTowerData) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{89}
+	return file_protogame_data_proto_rawDescGZIP(), []int{90}
 }
 
 func (x *ProtoTowerData) GetTowers() []*ProtoTowerInstance {
@@ -6898,7 +6958,7 @@ type ProtoTowerInstance struct {
 
 func (x *ProtoTowerInstance) Reset() {
 	*x = ProtoTowerInstance{}
-	mi := &file_protogame_data_proto_msgTypes[90]
+	mi := &file_protogame_data_proto_msgTypes[91]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6910,7 +6970,7 @@ func (x *ProtoTowerInstance) String() string {
 func (*ProtoTowerInstance) ProtoMessage() {}
 
 func (x *ProtoTowerInstance) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[90]
+	mi := &file_protogame_data_proto_msgTypes[91]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6923,7 +6983,7 @@ func (x *ProtoTowerInstance) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoTowerInstance.ProtoReflect.Descriptor instead.
 func (*ProtoTowerInstance) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{90}
+	return file_protogame_data_proto_rawDescGZIP(), []int{91}
 }
 
 func (x *ProtoTowerInstance) GetTowerId() string {
@@ -6984,7 +7044,7 @@ type ProtoSummonData struct {
 
 func (x *ProtoSummonData) Reset() {
 	*x = ProtoSummonData{}
-	mi := &file_protogame_data_proto_msgTypes[91]
+	mi := &file_protogame_data_proto_msgTypes[92]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6996,7 +7056,7 @@ func (x *ProtoSummonData) String() string {
 func (*ProtoSummonData) ProtoMessage() {}
 
 func (x *ProtoSummonData) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[91]
+	mi := &file_protogame_data_proto_msgTypes[92]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7009,7 +7069,7 @@ func (x *ProtoSummonData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSummonData.ProtoReflect.Descriptor instead.
 func (*ProtoSummonData) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{91}
+	return file_protogame_data_proto_rawDescGZIP(), []int{92}
 }
 
 func (x *ProtoSummonData) GetBanners() []*ProtoSummonBannerData {
@@ -7033,7 +7093,7 @@ type ProtoSummonBannerData struct {
 
 func (x *ProtoSummonBannerData) Reset() {
 	*x = ProtoSummonBannerData{}
-	mi := &file_protogame_data_proto_msgTypes[92]
+	mi := &file_protogame_data_proto_msgTypes[93]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7045,7 +7105,7 @@ func (x *ProtoSummonBannerData) String() string {
 func (*ProtoSummonBannerData) ProtoMessage() {}
 
 func (x *ProtoSummonBannerData) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[92]
+	mi := &file_protogame_data_proto_msgTypes[93]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7058,7 +7118,7 @@ func (x *ProtoSummonBannerData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSummonBannerData.ProtoReflect.Descriptor instead.
 func (*ProtoSummonBannerData) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{92}
+	return file_protogame_data_proto_rawDescGZIP(), []int{93}
 }
 
 func (x *ProtoSummonBannerData) GetId() string {
@@ -7114,7 +7174,7 @@ type ProtoSummonBannerSchedule struct {
 
 func (x *ProtoSummonBannerSchedule) Reset() {
 	*x = ProtoSummonBannerSchedule{}
-	mi := &file_protogame_data_proto_msgTypes[93]
+	mi := &file_protogame_data_proto_msgTypes[94]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7126,7 +7186,7 @@ func (x *ProtoSummonBannerSchedule) String() string {
 func (*ProtoSummonBannerSchedule) ProtoMessage() {}
 
 func (x *ProtoSummonBannerSchedule) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[93]
+	mi := &file_protogame_data_proto_msgTypes[94]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7139,7 +7199,7 @@ func (x *ProtoSummonBannerSchedule) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoSummonBannerSchedule.ProtoReflect.Descriptor instead.
 func (*ProtoSummonBannerSchedule) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{93}
+	return file_protogame_data_proto_rawDescGZIP(), []int{94}
 }
 
 func (x *ProtoSummonBannerSchedule) GetId() string {
@@ -7173,7 +7233,7 @@ type ProtoStampData struct {
 
 func (x *ProtoStampData) Reset() {
 	*x = ProtoStampData{}
-	mi := &file_protogame_data_proto_msgTypes[94]
+	mi := &file_protogame_data_proto_msgTypes[95]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7185,7 +7245,7 @@ func (x *ProtoStampData) String() string {
 func (*ProtoStampData) ProtoMessage() {}
 
 func (x *ProtoStampData) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[94]
+	mi := &file_protogame_data_proto_msgTypes[95]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7198,7 +7258,7 @@ func (x *ProtoStampData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampData.ProtoReflect.Descriptor instead.
 func (*ProtoStampData) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{94}
+	return file_protogame_data_proto_rawDescGZIP(), []int{95}
 }
 
 func (x *ProtoStampData) GetInventory() *ProtoStampInventory {
@@ -7224,7 +7284,7 @@ type ProtoStampInventory struct {
 
 func (x *ProtoStampInventory) Reset() {
 	*x = ProtoStampInventory{}
-	mi := &file_protogame_data_proto_msgTypes[95]
+	mi := &file_protogame_data_proto_msgTypes[96]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7236,7 +7296,7 @@ func (x *ProtoStampInventory) String() string {
 func (*ProtoStampInventory) ProtoMessage() {}
 
 func (x *ProtoStampInventory) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[95]
+	mi := &file_protogame_data_proto_msgTypes[96]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7249,7 +7309,7 @@ func (x *ProtoStampInventory) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampInventory.ProtoReflect.Descriptor instead.
 func (*ProtoStampInventory) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{95}
+	return file_protogame_data_proto_rawDescGZIP(), []int{96}
 }
 
 func (x *ProtoStampInventory) GetStampList() []*ProtoStampInstance {
@@ -7269,7 +7329,7 @@ type ProtoStampInstance struct {
 
 func (x *ProtoStampInstance) Reset() {
 	*x = ProtoStampInstance{}
-	mi := &file_protogame_data_proto_msgTypes[96]
+	mi := &file_protogame_data_proto_msgTypes[97]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7281,7 +7341,7 @@ func (x *ProtoStampInstance) String() string {
 func (*ProtoStampInstance) ProtoMessage() {}
 
 func (x *ProtoStampInstance) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[96]
+	mi := &file_protogame_data_proto_msgTypes[97]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7294,7 +7354,7 @@ func (x *ProtoStampInstance) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampInstance.ProtoReflect.Descriptor instead.
 func (*ProtoStampInstance) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{96}
+	return file_protogame_data_proto_rawDescGZIP(), []int{97}
 }
 
 func (x *ProtoStampInstance) GetBaseStampId() string {
@@ -7320,7 +7380,7 @@ type ProtoStampLayoutCollection struct {
 
 func (x *ProtoStampLayoutCollection) Reset() {
 	*x = ProtoStampLayoutCollection{}
-	mi := &file_protogame_data_proto_msgTypes[97]
+	mi := &file_protogame_data_proto_msgTypes[98]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7332,7 +7392,7 @@ func (x *ProtoStampLayoutCollection) String() string {
 func (*ProtoStampLayoutCollection) ProtoMessage() {}
 
 func (x *ProtoStampLayoutCollection) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[97]
+	mi := &file_protogame_data_proto_msgTypes[98]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7345,7 +7405,7 @@ func (x *ProtoStampLayoutCollection) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampLayoutCollection.ProtoReflect.Descriptor instead.
 func (*ProtoStampLayoutCollection) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{97}
+	return file_protogame_data_proto_rawDescGZIP(), []int{98}
 }
 
 func (x *ProtoStampLayoutCollection) GetLayouts() []*ProtoStampLayout {
@@ -7365,7 +7425,7 @@ type ProtoStampLayout struct {
 
 func (x *ProtoStampLayout) Reset() {
 	*x = ProtoStampLayout{}
-	mi := &file_protogame_data_proto_msgTypes[98]
+	mi := &file_protogame_data_proto_msgTypes[99]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7377,7 +7437,7 @@ func (x *ProtoStampLayout) String() string {
 func (*ProtoStampLayout) ProtoMessage() {}
 
 func (x *ProtoStampLayout) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[98]
+	mi := &file_protogame_data_proto_msgTypes[99]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7390,7 +7450,7 @@ func (x *ProtoStampLayout) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampLayout.ProtoReflect.Descriptor instead.
 func (*ProtoStampLayout) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{98}
+	return file_protogame_data_proto_rawDescGZIP(), []int{99}
 }
 
 func (x *ProtoStampLayout) GetLayoutIndex() int32 {
@@ -7417,7 +7477,7 @@ type ProtoStampLayoutSlot struct {
 
 func (x *ProtoStampLayoutSlot) Reset() {
 	*x = ProtoStampLayoutSlot{}
-	mi := &file_protogame_data_proto_msgTypes[99]
+	mi := &file_protogame_data_proto_msgTypes[100]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7429,7 +7489,7 @@ func (x *ProtoStampLayoutSlot) String() string {
 func (*ProtoStampLayoutSlot) ProtoMessage() {}
 
 func (x *ProtoStampLayoutSlot) ProtoReflect() protoreflect.Message {
-	mi := &file_protogame_data_proto_msgTypes[99]
+	mi := &file_protogame_data_proto_msgTypes[100]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7442,7 +7502,7 @@ func (x *ProtoStampLayoutSlot) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProtoStampLayoutSlot.ProtoReflect.Descriptor instead.
 func (*ProtoStampLayoutSlot) Descriptor() ([]byte, []int) {
-	return file_protogame_data_proto_rawDescGZIP(), []int{99}
+	return file_protogame_data_proto_rawDescGZIP(), []int{100}
 }
 
 func (x *ProtoStampLayoutSlot) GetStampId() string {
@@ -7883,7 +7943,7 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x12current_node_index\x18\x04 \x01(\x05R\x10currentNodeIndex\x12\x18\n" +
 	"\avisited\x18\x05 \x01(\bR\avisited\x12\x1f\n" +
 	"\vunlock_time\x18\x06 \x01(\x03R\n" +
-	"unlockTime\"\xc2\x06\n" +
+	"unlockTime\"\x81\a\n" +
 	"\x16ProtoRegionMapInstance\x12\x15\n" +
 	"\x06map_id\x18\x01 \x01(\tR\x05mapId\x126\n" +
 	"\tnode_data\x18\x02 \x03(\v2\x19.game.ProtoRegionNodeDataR\bnodeData\x12,\n" +
@@ -7902,7 +7962,9 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\vunlock_time\x18\x0e \x01(\x03R\n" +
 	"unlockTime\x129\n" +
 	"\bprogress\x18\x0f \x01(\v2\x1d.game.ProtoRegionProgressDataR\bprogress\x12H\n" +
-	"\x10wandering_fiends\x18\x10 \x01(\v2\x1d.game.ProtoWanderingFiendDataR\x0fwanderingFiends\"\xa1\x02\n" +
+	"\x10wandering_fiends\x18\x10 \x01(\v2\x1d.game.ProtoWanderingFiendDataR\x0fwanderingFiends\x12=\n" +
+	"\n" +
+	"quest_data\x18\x11 \x03(\v2\x1e.game.ProtoRegionQuestInstanceR\tquestData\"\xa1\x02\n" +
 	"\x17ProtoRegionProgressData\x12;\n" +
 	"\tdialogues\x18\x01 \x03(\v2\x1d.game.ProtoRegionDialogueDataR\tdialogues\x128\n" +
 	"\bdungeons\x18\x02 \x03(\v2\x1c.game.ProtoRegionDungeonDataR\bdungeons\x12\x18\n" +
@@ -7999,7 +8061,10 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\binstance\x18\x02 \x01(\v2\x1a.game.ProtoMissionInstanceR\binstance\x12\"\n" +
 	"\rapply_to_node\x18\x03 \x01(\bR\vapplyToNode\x12\x1d\n" +
 	"\n" +
-	"node_index\x18\x04 \x01(\x05R\tnodeIndex\"|\n" +
+	"node_index\x18\x04 \x01(\x05R\tnodeIndex\"S\n" +
+	"\x18ProtoRegionQuestInstance\x12\x19\n" +
+	"\bquest_id\x18\x01 \x01(\tR\aquestId\x12\x1c\n" +
+	"\tcompleted\x18\x02 \x01(\bR\tcompleted\"|\n" +
 	"\x15ProtoSkillPanelGroups\x12:\n" +
 	"\vpanel_pages\x18\x01 \x03(\v2\x19.game.ProtoSkillPanelPageR\n" +
 	"panelPages\x12'\n" +
@@ -8187,7 +8252,7 @@ func file_protogame_data_proto_rawDescGZIP() []byte {
 }
 
 var file_protogame_data_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protogame_data_proto_msgTypes = make([]protoimpl.MessageInfo, 113)
+var file_protogame_data_proto_msgTypes = make([]protoimpl.MessageInfo, 114)
 var file_protogame_data_proto_goTypes = []any{
 	(ReferenceSource)(0),                           // 0: game.ReferenceSource
 	(*ProtoGameData)(nil),                          // 1: game.ProtoGameData
@@ -8257,53 +8322,54 @@ var file_protogame_data_proto_goTypes = []any{
 	(*ProtoRegionNodeEvent)(nil),                   // 65: game.ProtoRegionNodeEvent
 	(*ProtoRegionEventData)(nil),                   // 66: game.ProtoRegionEventData
 	(*ProtoRegionMissionInstance)(nil),             // 67: game.ProtoRegionMissionInstance
-	(*ProtoSkillPanelGroups)(nil),                  // 68: game.ProtoSkillPanelGroups
-	(*ProtoSkillPanelPage)(nil),                    // 69: game.ProtoSkillPanelPage
-	(*ProtoSkillPanel)(nil),                        // 70: game.ProtoSkillPanel
-	(*ProtoSkillPanelUnlockTarget)(nil),            // 71: game.ProtoSkillPanelUnlockTarget
-	(*ProtoWeaponInventory)(nil),                   // 72: game.ProtoWeaponInventory
-	(*ProtoWeaponInstance)(nil),                    // 73: game.ProtoWeaponInstance
-	(*ProtoBattleStatistics)(nil),                  // 74: game.ProtoBattleStatistics
-	(*AbilityCardUsageStatistic)(nil),              // 75: game.AbilityCardUsageStatistic
-	(*ElementUsageStatistic)(nil),                  // 76: game.ElementUsageStatistic
-	(*ProtoEnemyDeathStatistic)(nil),               // 77: game.ProtoEnemyDeathStatistic
-	(*ProtoAbilityCardSummonDrawResult)(nil),       // 78: game.ProtoAbilityCardSummonDrawResult
-	(*ProtoJobCardSummonDrawResult)(nil),           // 79: game.ProtoJobCardSummonDrawResult
-	(*ProtoMailboxClaimResult)(nil),                // 80: game.ProtoMailboxClaimResult
-	(*ProtoItemClaimResult)(nil),                   // 81: game.ProtoItemClaimResult
-	(*ProtoAbilityCardClaimResult)(nil),            // 82: game.ProtoAbilityCardClaimResult
-	(*ProtoJobCardClaimResult)(nil),                // 83: game.ProtoJobCardClaimResult
-	(*ProtoWeaponClaimResult)(nil),                 // 84: game.ProtoWeaponClaimResult
-	(*ProtoCompanionClaimResult)(nil),              // 85: game.ProtoCompanionClaimResult
-	(*ProtoStampClaimResult)(nil),                  // 86: game.ProtoStampClaimResult
-	(*ProtoBattleSelection)(nil),                   // 87: game.ProtoBattleSelection
-	(*ProtoBattleWave)(nil),                        // 88: game.ProtoBattleWave
-	(*ProtoBattleWaveGroup)(nil),                   // 89: game.ProtoBattleWaveGroup
-	(*ProtoTowerData)(nil),                         // 90: game.ProtoTowerData
-	(*ProtoTowerInstance)(nil),                     // 91: game.ProtoTowerInstance
-	(*ProtoSummonData)(nil),                        // 92: game.ProtoSummonData
-	(*ProtoSummonBannerData)(nil),                  // 93: game.ProtoSummonBannerData
-	(*ProtoSummonBannerSchedule)(nil),              // 94: game.ProtoSummonBannerSchedule
-	(*ProtoStampData)(nil),                         // 95: game.ProtoStampData
-	(*ProtoStampInventory)(nil),                    // 96: game.ProtoStampInventory
-	(*ProtoStampInstance)(nil),                     // 97: game.ProtoStampInstance
-	(*ProtoStampLayoutCollection)(nil),             // 98: game.ProtoStampLayoutCollection
-	(*ProtoStampLayout)(nil),                       // 99: game.ProtoStampLayout
-	(*ProtoStampLayoutSlot)(nil),                   // 100: game.ProtoStampLayoutSlot
-	nil,                                            // 101: game.ProtoGameData.PlayerProgressDataEntry
-	nil,                                            // 102: game.ProtoAbilityCardData.MaxCardLevelsEntry
-	nil,                                            // 103: game.ProtoAbilityCardInstance.AutoAbilitiesEntry
-	nil,                                            // 104: game.ProtoBattleData.EnemiesDefeatedEntry
-	nil,                                            // 105: game.ProtoLoginCampaignInstance.ClaimedEntry
-	nil,                                            // 106: game.ProtoItemData.LimitDataEntry
-	nil,                                            // 107: game.ProtoJobCardData.SkillPanelsEntry
-	nil,                                            // 108: game.ProtoJobCardData.CharacterEquippedJobEntry
-	nil,                                            // 109: game.ProtoJobCardInstance.AutoAbilitiesEntry
-	nil,                                            // 110: game.ProtoLastBattleResults.RegionMissionProgressEntry
-	nil,                                            // 111: game.ProtoLastBattleResults.WanderingFiendMovementsEntry
-	nil,                                            // 112: game.ProtoRegionNodeData.FlagsEntry
-	nil,                                            // 113: game.ProtoWeaponInstance.AutoAbilitiesEntry
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 114: identity.ProtoAbilityCardIdentity
+	(*ProtoRegionQuestInstance)(nil),               // 68: game.ProtoRegionQuestInstance
+	(*ProtoSkillPanelGroups)(nil),                  // 69: game.ProtoSkillPanelGroups
+	(*ProtoSkillPanelPage)(nil),                    // 70: game.ProtoSkillPanelPage
+	(*ProtoSkillPanel)(nil),                        // 71: game.ProtoSkillPanel
+	(*ProtoSkillPanelUnlockTarget)(nil),            // 72: game.ProtoSkillPanelUnlockTarget
+	(*ProtoWeaponInventory)(nil),                   // 73: game.ProtoWeaponInventory
+	(*ProtoWeaponInstance)(nil),                    // 74: game.ProtoWeaponInstance
+	(*ProtoBattleStatistics)(nil),                  // 75: game.ProtoBattleStatistics
+	(*AbilityCardUsageStatistic)(nil),              // 76: game.AbilityCardUsageStatistic
+	(*ElementUsageStatistic)(nil),                  // 77: game.ElementUsageStatistic
+	(*ProtoEnemyDeathStatistic)(nil),               // 78: game.ProtoEnemyDeathStatistic
+	(*ProtoAbilityCardSummonDrawResult)(nil),       // 79: game.ProtoAbilityCardSummonDrawResult
+	(*ProtoJobCardSummonDrawResult)(nil),           // 80: game.ProtoJobCardSummonDrawResult
+	(*ProtoMailboxClaimResult)(nil),                // 81: game.ProtoMailboxClaimResult
+	(*ProtoItemClaimResult)(nil),                   // 82: game.ProtoItemClaimResult
+	(*ProtoAbilityCardClaimResult)(nil),            // 83: game.ProtoAbilityCardClaimResult
+	(*ProtoJobCardClaimResult)(nil),                // 84: game.ProtoJobCardClaimResult
+	(*ProtoWeaponClaimResult)(nil),                 // 85: game.ProtoWeaponClaimResult
+	(*ProtoCompanionClaimResult)(nil),              // 86: game.ProtoCompanionClaimResult
+	(*ProtoStampClaimResult)(nil),                  // 87: game.ProtoStampClaimResult
+	(*ProtoBattleSelection)(nil),                   // 88: game.ProtoBattleSelection
+	(*ProtoBattleWave)(nil),                        // 89: game.ProtoBattleWave
+	(*ProtoBattleWaveGroup)(nil),                   // 90: game.ProtoBattleWaveGroup
+	(*ProtoTowerData)(nil),                         // 91: game.ProtoTowerData
+	(*ProtoTowerInstance)(nil),                     // 92: game.ProtoTowerInstance
+	(*ProtoSummonData)(nil),                        // 93: game.ProtoSummonData
+	(*ProtoSummonBannerData)(nil),                  // 94: game.ProtoSummonBannerData
+	(*ProtoSummonBannerSchedule)(nil),              // 95: game.ProtoSummonBannerSchedule
+	(*ProtoStampData)(nil),                         // 96: game.ProtoStampData
+	(*ProtoStampInventory)(nil),                    // 97: game.ProtoStampInventory
+	(*ProtoStampInstance)(nil),                     // 98: game.ProtoStampInstance
+	(*ProtoStampLayoutCollection)(nil),             // 99: game.ProtoStampLayoutCollection
+	(*ProtoStampLayout)(nil),                       // 100: game.ProtoStampLayout
+	(*ProtoStampLayoutSlot)(nil),                   // 101: game.ProtoStampLayoutSlot
+	nil,                                            // 102: game.ProtoGameData.PlayerProgressDataEntry
+	nil,                                            // 103: game.ProtoAbilityCardData.MaxCardLevelsEntry
+	nil,                                            // 104: game.ProtoAbilityCardInstance.AutoAbilitiesEntry
+	nil,                                            // 105: game.ProtoBattleData.EnemiesDefeatedEntry
+	nil,                                            // 106: game.ProtoLoginCampaignInstance.ClaimedEntry
+	nil,                                            // 107: game.ProtoItemData.LimitDataEntry
+	nil,                                            // 108: game.ProtoJobCardData.SkillPanelsEntry
+	nil,                                            // 109: game.ProtoJobCardData.CharacterEquippedJobEntry
+	nil,                                            // 110: game.ProtoJobCardInstance.AutoAbilitiesEntry
+	nil,                                            // 111: game.ProtoLastBattleResults.RegionMissionProgressEntry
+	nil,                                            // 112: game.ProtoLastBattleResults.WanderingFiendMovementsEntry
+	nil,                                            // 113: game.ProtoRegionNodeData.FlagsEntry
+	nil,                                            // 114: game.ProtoWeaponInstance.AutoAbilitiesEntry
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 115: identity.ProtoAbilityCardIdentity
 }
 var file_protogame_data_proto_depIdxs = []int32{
 	45,  // 0: game.ProtoGameData.mailbox:type_name -> game.ProtoMailBox
@@ -8314,32 +8380,32 @@ var file_protogame_data_proto_depIdxs = []int32{
 	52,  // 5: game.ProtoGameData.region_map_data:type_name -> game.ProtoRegionHeaderData
 	9,   // 6: game.ProtoGameData.single_play_battle_data:type_name -> game.ProtoBattleData
 	9,   // 7: game.ProtoGameData.multi_play_battle_data:type_name -> game.ProtoBattleData
-	92,  // 8: game.ProtoGameData.summon_data:type_name -> game.ProtoSummonData
-	95,  // 9: game.ProtoGameData.stamp_data:type_name -> game.ProtoStampData
+	93,  // 8: game.ProtoGameData.summon_data:type_name -> game.ProtoSummonData
+	96,  // 9: game.ProtoGameData.stamp_data:type_name -> game.ProtoStampData
 	23,  // 10: game.ProtoGameData.card_filter_sort_sets:type_name -> game.ProtoCardFilterSortSet
-	101, // 11: game.ProtoGameData.player_progress_data:type_name -> game.ProtoGameData.PlayerProgressDataEntry
+	102, // 11: game.ProtoGameData.player_progress_data:type_name -> game.ProtoGameData.PlayerProgressDataEntry
 	2,   // 12: game.ProtoGameData.player_achievement_data:type_name -> game.ProtoAchievementData
 	7,   // 13: game.ProtoAbilityCardData.inventory:type_name -> game.ProtoAbilityCardInventory
 	7,   // 14: game.ProtoAbilityCardData.bank:type_name -> game.ProtoAbilityCardInventory
 	4,   // 15: game.ProtoAbilityCardData.history:type_name -> game.ProtoAbilityCardHistory
-	102, // 16: game.ProtoAbilityCardData.max_card_levels:type_name -> game.ProtoAbilityCardData.MaxCardLevelsEntry
+	103, // 16: game.ProtoAbilityCardData.max_card_levels:type_name -> game.ProtoAbilityCardData.MaxCardLevelsEntry
 	5,   // 17: game.ProtoAbilityCardHistory.base_list:type_name -> game.ProtoBaseCardHistoryInstance
 	6,   // 18: game.ProtoAbilityCardHistory.card_list:type_name -> game.ProtoAbilityCardHistoryInstance
 	8,   // 19: game.ProtoAbilityCardInventory.card_list:type_name -> game.ProtoAbilityCardInstance
-	103, // 20: game.ProtoAbilityCardInstance.auto_abilities:type_name -> game.ProtoAbilityCardInstance.AutoAbilitiesEntry
+	104, // 20: game.ProtoAbilityCardInstance.auto_abilities:type_name -> game.ProtoAbilityCardInstance.AutoAbilitiesEntry
 	50,  // 21: game.ProtoBattleData.stamina:type_name -> game.ProtoPlayerStamina
 	47,  // 22: game.ProtoBattleData.decks:type_name -> game.ProtoPlayerDeckCollection
-	104, // 23: game.ProtoBattleData.enemies_defeated:type_name -> game.ProtoBattleData.EnemiesDefeatedEntry
+	105, // 23: game.ProtoBattleData.enemies_defeated:type_name -> game.ProtoBattleData.EnemiesDefeatedEntry
 	10,  // 24: game.ProtoBattleData.start_data:type_name -> game.ProtoBattleStartData
 	41,  // 25: game.ProtoBattleData.results:type_name -> game.ProtoLastBattleResults
-	90,  // 26: game.ProtoBattleData.towers:type_name -> game.ProtoTowerData
+	91,  // 26: game.ProtoBattleData.towers:type_name -> game.ProtoTowerData
 	18,  // 27: game.ProtoBattleStartData.item_drop_table:type_name -> game.BattleItemDrop
 	19,  // 28: game.ProtoBattleStartData.card_drop_table:type_name -> game.BattleCardDrop
 	12,  // 29: game.ProtoBattleStartData.progress_data:type_name -> game.ProtoBattleProgressData
 	14,  // 30: game.ProtoBattleStartData.card_progress_data:type_name -> game.ProtoCardProgressData
-	114, // 31: game.ProtoBattleStartData.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	115, // 31: game.ProtoBattleStartData.rental_card:type_name -> identity.ProtoAbilityCardIdentity
 	11,  // 32: game.ProtoBattleStartData.fiend_spawns:type_name -> game.ProtoBattleFiendSpawn
-	87,  // 33: game.ProtoBattleStartData.selection_results:type_name -> game.ProtoBattleSelection
+	88,  // 33: game.ProtoBattleStartData.selection_results:type_name -> game.ProtoBattleSelection
 	15,  // 34: game.ProtoMissionInstance.mission:type_name -> game.ProtoMission
 	16,  // 35: game.ProtoDailyMissionInstance.instance:type_name -> game.ProtoMissionInstance
 	37,  // 36: game.ProtoDailyMissionInstance.item_rewards:type_name -> game.ProtoItemValuePair
@@ -8348,31 +8414,31 @@ var file_protogame_data_proto_depIdxs = []int32{
 	20,  // 39: game.BattleCardDrop.key:type_name -> game.BattleDropTableKey
 	22,  // 40: game.BattleCardDrop.drop:type_name -> game.BattleCardDropResult
 	24,  // 41: game.ProtoCardFilterSortSet.sets:type_name -> game.ProtoCardFilterSort
-	105, // 42: game.ProtoLoginCampaignInstance.claimed:type_name -> game.ProtoLoginCampaignInstance.ClaimedEntry
+	106, // 42: game.ProtoLoginCampaignInstance.claimed:type_name -> game.ProtoLoginCampaignInstance.ClaimedEntry
 	27,  // 43: game.ProtoFairyCompanionData.inventory:type_name -> game.ProtoFairyCompanionInventory
 	28,  // 44: game.ProtoFairyCompanionInventory.companion_list:type_name -> game.ProtoFairyCompanionInstance
 	34,  // 45: game.ProtoItemData.inventory:type_name -> game.ProtoItemInventory
-	106, // 46: game.ProtoItemData.limit_data:type_name -> game.ProtoItemData.LimitDataEntry
+	107, // 46: game.ProtoItemData.limit_data:type_name -> game.ProtoItemData.LimitDataEntry
 	32,  // 47: game.ProtoItemData.distillers:type_name -> game.ProtoItemDistiller
 	35,  // 48: game.ProtoItemData.gift_boxes:type_name -> game.ProtoGiftBoxInstance
 	30,  // 49: game.ProtoItemData.item_shop_purchases:type_name -> game.ProtoItemShopEntryPurchase
 	31,  // 50: game.ProtoItemShopEntryPurchase.options:type_name -> game.ProtoItemShopEntryOptionPurchase
 	36,  // 51: game.ProtoItemInventory.item_list:type_name -> game.ProtoItemInstance
 	39,  // 52: game.ProtoJobCardData.jobs:type_name -> game.ProtoJobInventory
-	72,  // 53: game.ProtoJobCardData.weapons:type_name -> game.ProtoWeaponInventory
-	107, // 54: game.ProtoJobCardData.skill_panels:type_name -> game.ProtoJobCardData.SkillPanelsEntry
-	108, // 55: game.ProtoJobCardData.character_equipped_job:type_name -> game.ProtoJobCardData.CharacterEquippedJobEntry
+	73,  // 53: game.ProtoJobCardData.weapons:type_name -> game.ProtoWeaponInventory
+	108, // 54: game.ProtoJobCardData.skill_panels:type_name -> game.ProtoJobCardData.SkillPanelsEntry
+	109, // 55: game.ProtoJobCardData.character_equipped_job:type_name -> game.ProtoJobCardData.CharacterEquippedJobEntry
 	40,  // 56: game.ProtoJobInventory.job_list:type_name -> game.ProtoJobCardInstance
-	68,  // 57: game.ProtoJobCardInstance.skill_panel_unlocks:type_name -> game.ProtoSkillPanelGroups
-	109, // 58: game.ProtoJobCardInstance.auto_abilities:type_name -> game.ProtoJobCardInstance.AutoAbilitiesEntry
+	69,  // 57: game.ProtoJobCardInstance.skill_panel_unlocks:type_name -> game.ProtoSkillPanelGroups
+	110, // 58: game.ProtoJobCardInstance.auto_abilities:type_name -> game.ProtoJobCardInstance.AutoAbilitiesEntry
 	12,  // 59: game.ProtoLastBattleResults.progress_data:type_name -> game.ProtoBattleProgressData
 	14,  // 60: game.ProtoLastBattleResults.card_progress_data:type_name -> game.ProtoCardProgressData
 	42,  // 61: game.ProtoLastBattleResults.item_rewards:type_name -> game.TaggedBattleItemReward
 	43,  // 62: game.ProtoLastBattleResults.card_rewards:type_name -> game.TaggedBattleCardReward
 	44,  // 63: game.ProtoLastBattleResults.companion_rewards:type_name -> game.TaggedBattleCompanionReward
 	65,  // 64: game.ProtoLastBattleResults.pending_events:type_name -> game.ProtoRegionNodeEvent
-	110, // 65: game.ProtoLastBattleResults.region_mission_progress:type_name -> game.ProtoLastBattleResults.RegionMissionProgressEntry
-	111, // 66: game.ProtoLastBattleResults.wandering_fiend_movements:type_name -> game.ProtoLastBattleResults.WanderingFiendMovementsEntry
+	111, // 65: game.ProtoLastBattleResults.region_mission_progress:type_name -> game.ProtoLastBattleResults.RegionMissionProgressEntry
+	112, // 66: game.ProtoLastBattleResults.wandering_fiend_movements:type_name -> game.ProtoLastBattleResults.WanderingFiendMovementsEntry
 	13,  // 67: game.ProtoLastBattleResults.arena_progress_data:type_name -> game.ArenaProgressData
 	46,  // 68: game.ProtoMailBox.items:type_name -> game.ProtoMailBoxItem
 	0,   // 69: game.ProtoMailBoxItem.source:type_name -> game.ReferenceSource
@@ -8390,53 +8456,54 @@ var file_protogame_data_proto_depIdxs = []int32{
 	67,  // 81: game.ProtoRegionMapInstance.mission_data:type_name -> game.ProtoRegionMissionInstance
 	55,  // 82: game.ProtoRegionMapInstance.progress:type_name -> game.ProtoRegionProgressData
 	56,  // 83: game.ProtoRegionMapInstance.wandering_fiends:type_name -> game.ProtoWanderingFiendData
-	58,  // 84: game.ProtoRegionProgressData.dialogues:type_name -> game.ProtoRegionDialogueData
-	59,  // 85: game.ProtoRegionProgressData.dungeons:type_name -> game.ProtoRegionDungeonData
-	60,  // 86: game.ProtoRegionProgressData.arenas:type_name -> game.ProtoRegionArenaData
-	57,  // 87: game.ProtoWanderingFiendData.fiends:type_name -> game.ProtoWanderingFiendInstance
-	61,  // 88: game.ProtoRegionArenaData.entries:type_name -> game.ProtoRegionArenaEntryData
-	112, // 89: game.ProtoRegionNodeData.flags:type_name -> game.ProtoRegionNodeData.FlagsEntry
-	16,  // 90: game.ProtoRegionMissionInstance.instance:type_name -> game.ProtoMissionInstance
-	69,  // 91: game.ProtoSkillPanelGroups.panel_pages:type_name -> game.ProtoSkillPanelPage
-	70,  // 92: game.ProtoSkillPanelPage.skill_panels:type_name -> game.ProtoSkillPanel
-	73,  // 93: game.ProtoWeaponInventory.weapon_list:type_name -> game.ProtoWeaponInstance
-	113, // 94: game.ProtoWeaponInstance.auto_abilities:type_name -> game.ProtoWeaponInstance.AutoAbilitiesEntry
-	76,  // 95: game.ProtoBattleStatistics.element_orb_draws:type_name -> game.ElementUsageStatistic
-	76,  // 96: game.ProtoBattleStatistics.element_orb_usage:type_name -> game.ElementUsageStatistic
-	77,  // 97: game.ProtoBattleStatistics.enemy_defeats:type_name -> game.ProtoEnemyDeathStatistic
-	75,  // 98: game.ProtoBattleStatistics.ability_card_usage:type_name -> game.AbilityCardUsageStatistic
-	8,   // 99: game.ProtoAbilityCardSummonDrawResult.instance:type_name -> game.ProtoAbilityCardInstance
-	40,  // 100: game.ProtoJobCardSummonDrawResult.instance:type_name -> game.ProtoJobCardInstance
-	68,  // 101: game.ProtoJobCardSummonDrawResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
-	81,  // 102: game.ProtoMailboxClaimResult.item:type_name -> game.ProtoItemClaimResult
-	82,  // 103: game.ProtoMailboxClaimResult.ability_card:type_name -> game.ProtoAbilityCardClaimResult
-	83,  // 104: game.ProtoMailboxClaimResult.job_card:type_name -> game.ProtoJobCardClaimResult
-	84,  // 105: game.ProtoMailboxClaimResult.weapon:type_name -> game.ProtoWeaponClaimResult
-	85,  // 106: game.ProtoMailboxClaimResult.companion:type_name -> game.ProtoCompanionClaimResult
-	86,  // 107: game.ProtoMailboxClaimResult.stamp:type_name -> game.ProtoStampClaimResult
-	8,   // 108: game.ProtoAbilityCardClaimResult.instance:type_name -> game.ProtoAbilityCardInstance
-	40,  // 109: game.ProtoJobCardClaimResult.instance:type_name -> game.ProtoJobCardInstance
-	68,  // 110: game.ProtoJobCardClaimResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
-	73,  // 111: game.ProtoWeaponClaimResult.weapon:type_name -> game.ProtoWeaponInstance
-	28,  // 112: game.ProtoCompanionClaimResult.companion:type_name -> game.ProtoFairyCompanionInstance
-	97,  // 113: game.ProtoStampClaimResult.stamp:type_name -> game.ProtoStampInstance
-	88,  // 114: game.ProtoBattleSelection.waves:type_name -> game.ProtoBattleWave
-	89,  // 115: game.ProtoBattleWave.groups:type_name -> game.ProtoBattleWaveGroup
-	91,  // 116: game.ProtoTowerData.towers:type_name -> game.ProtoTowerInstance
-	93,  // 117: game.ProtoSummonData.banners:type_name -> game.ProtoSummonBannerData
-	94,  // 118: game.ProtoSummonBannerData.schedule:type_name -> game.ProtoSummonBannerSchedule
-	96,  // 119: game.ProtoStampData.inventory:type_name -> game.ProtoStampInventory
-	98,  // 120: game.ProtoStampData.layouts:type_name -> game.ProtoStampLayoutCollection
-	97,  // 121: game.ProtoStampInventory.stamp_list:type_name -> game.ProtoStampInstance
-	99,  // 122: game.ProtoStampLayoutCollection.layouts:type_name -> game.ProtoStampLayout
-	100, // 123: game.ProtoStampLayout.slots:type_name -> game.ProtoStampLayoutSlot
-	33,  // 124: game.ProtoItemData.LimitDataEntry.value:type_name -> game.ProtoItemDropRecord
-	68,  // 125: game.ProtoJobCardData.SkillPanelsEntry.value:type_name -> game.ProtoSkillPanelGroups
-	126, // [126:126] is the sub-list for method output_type
-	126, // [126:126] is the sub-list for method input_type
-	126, // [126:126] is the sub-list for extension type_name
-	126, // [126:126] is the sub-list for extension extendee
-	0,   // [0:126] is the sub-list for field type_name
+	68,  // 84: game.ProtoRegionMapInstance.quest_data:type_name -> game.ProtoRegionQuestInstance
+	58,  // 85: game.ProtoRegionProgressData.dialogues:type_name -> game.ProtoRegionDialogueData
+	59,  // 86: game.ProtoRegionProgressData.dungeons:type_name -> game.ProtoRegionDungeonData
+	60,  // 87: game.ProtoRegionProgressData.arenas:type_name -> game.ProtoRegionArenaData
+	57,  // 88: game.ProtoWanderingFiendData.fiends:type_name -> game.ProtoWanderingFiendInstance
+	61,  // 89: game.ProtoRegionArenaData.entries:type_name -> game.ProtoRegionArenaEntryData
+	113, // 90: game.ProtoRegionNodeData.flags:type_name -> game.ProtoRegionNodeData.FlagsEntry
+	16,  // 91: game.ProtoRegionMissionInstance.instance:type_name -> game.ProtoMissionInstance
+	70,  // 92: game.ProtoSkillPanelGroups.panel_pages:type_name -> game.ProtoSkillPanelPage
+	71,  // 93: game.ProtoSkillPanelPage.skill_panels:type_name -> game.ProtoSkillPanel
+	74,  // 94: game.ProtoWeaponInventory.weapon_list:type_name -> game.ProtoWeaponInstance
+	114, // 95: game.ProtoWeaponInstance.auto_abilities:type_name -> game.ProtoWeaponInstance.AutoAbilitiesEntry
+	77,  // 96: game.ProtoBattleStatistics.element_orb_draws:type_name -> game.ElementUsageStatistic
+	77,  // 97: game.ProtoBattleStatistics.element_orb_usage:type_name -> game.ElementUsageStatistic
+	78,  // 98: game.ProtoBattleStatistics.enemy_defeats:type_name -> game.ProtoEnemyDeathStatistic
+	76,  // 99: game.ProtoBattleStatistics.ability_card_usage:type_name -> game.AbilityCardUsageStatistic
+	8,   // 100: game.ProtoAbilityCardSummonDrawResult.instance:type_name -> game.ProtoAbilityCardInstance
+	40,  // 101: game.ProtoJobCardSummonDrawResult.instance:type_name -> game.ProtoJobCardInstance
+	69,  // 102: game.ProtoJobCardSummonDrawResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
+	82,  // 103: game.ProtoMailboxClaimResult.item:type_name -> game.ProtoItemClaimResult
+	83,  // 104: game.ProtoMailboxClaimResult.ability_card:type_name -> game.ProtoAbilityCardClaimResult
+	84,  // 105: game.ProtoMailboxClaimResult.job_card:type_name -> game.ProtoJobCardClaimResult
+	85,  // 106: game.ProtoMailboxClaimResult.weapon:type_name -> game.ProtoWeaponClaimResult
+	86,  // 107: game.ProtoMailboxClaimResult.companion:type_name -> game.ProtoCompanionClaimResult
+	87,  // 108: game.ProtoMailboxClaimResult.stamp:type_name -> game.ProtoStampClaimResult
+	8,   // 109: game.ProtoAbilityCardClaimResult.instance:type_name -> game.ProtoAbilityCardInstance
+	40,  // 110: game.ProtoJobCardClaimResult.instance:type_name -> game.ProtoJobCardInstance
+	69,  // 111: game.ProtoJobCardClaimResult.skill_panel_groups:type_name -> game.ProtoSkillPanelGroups
+	74,  // 112: game.ProtoWeaponClaimResult.weapon:type_name -> game.ProtoWeaponInstance
+	28,  // 113: game.ProtoCompanionClaimResult.companion:type_name -> game.ProtoFairyCompanionInstance
+	98,  // 114: game.ProtoStampClaimResult.stamp:type_name -> game.ProtoStampInstance
+	89,  // 115: game.ProtoBattleSelection.waves:type_name -> game.ProtoBattleWave
+	90,  // 116: game.ProtoBattleWave.groups:type_name -> game.ProtoBattleWaveGroup
+	92,  // 117: game.ProtoTowerData.towers:type_name -> game.ProtoTowerInstance
+	94,  // 118: game.ProtoSummonData.banners:type_name -> game.ProtoSummonBannerData
+	95,  // 119: game.ProtoSummonBannerData.schedule:type_name -> game.ProtoSummonBannerSchedule
+	97,  // 120: game.ProtoStampData.inventory:type_name -> game.ProtoStampInventory
+	99,  // 121: game.ProtoStampData.layouts:type_name -> game.ProtoStampLayoutCollection
+	98,  // 122: game.ProtoStampInventory.stamp_list:type_name -> game.ProtoStampInstance
+	100, // 123: game.ProtoStampLayoutCollection.layouts:type_name -> game.ProtoStampLayout
+	101, // 124: game.ProtoStampLayout.slots:type_name -> game.ProtoStampLayoutSlot
+	33,  // 125: game.ProtoItemData.LimitDataEntry.value:type_name -> game.ProtoItemDropRecord
+	69,  // 126: game.ProtoJobCardData.SkillPanelsEntry.value:type_name -> game.ProtoSkillPanelGroups
+	127, // [127:127] is the sub-list for method output_type
+	127, // [127:127] is the sub-list for method input_type
+	127, // [127:127] is the sub-list for extension type_name
+	127, // [127:127] is the sub-list for extension extendee
+	0,   // [0:127] is the sub-list for field type_name
 }
 
 func init() { file_protogame_data_proto_init() }
@@ -8451,7 +8518,7 @@ func file_protogame_data_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_data_proto_rawDesc), len(file_protogame_data_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   113,
+			NumMessages:   114,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
