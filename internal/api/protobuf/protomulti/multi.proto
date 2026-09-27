@@ -29,6 +29,7 @@ message ProtoLobbyPlayerSlot {
   int32 slot_index = 2;
   bool ready = 3;
   ProtoLobbyPlayer player = 4;
+  ProtoLobbyPlayerSlotRestriction restriction = 5;
 }
 
 message ProtoLobbyPlayer {

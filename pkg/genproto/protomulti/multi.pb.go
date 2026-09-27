@@ -225,10 +225,11 @@ func (x *ProtoLobbySummary) GetPlayers() []*ProtoLobbyPlayerSlot {
 }
 
 type ProtoLobbyPlayerSlot struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	SlotIndex     int32                  `protobuf:"varint,2,opt,name=slot_index,json=slotIndex,proto3" json:"slot_index,omitempty"`
-	Ready         bool                   `protobuf:"varint,3,opt,name=ready,proto3" json:"ready,omitempty"`
-	Player        *ProtoLobbyPlayer      `protobuf:"bytes,4,opt,name=player,proto3" json:"player,omitempty"`
+	state         protoimpl.MessageState           `protogen:"open.v1"`
+	SlotIndex     int32                            `protobuf:"varint,2,opt,name=slot_index,json=slotIndex,proto3" json:"slot_index,omitempty"`
+	Ready         bool                             `protobuf:"varint,3,opt,name=ready,proto3" json:"ready,omitempty"`
+	Player        *ProtoLobbyPlayer                `protobuf:"bytes,4,opt,name=player,proto3" json:"player,omitempty"`
+	Restriction   *ProtoLobbyPlayerSlotRestriction `protobuf:"bytes,5,opt,name=restriction,proto3" json:"restriction,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -280,6 +281,13 @@ func (x *ProtoLobbyPlayerSlot) GetReady() bool {
 func (x *ProtoLobbyPlayerSlot) GetPlayer() *ProtoLobbyPlayer {
 	if x != nil {
 		return x.Player
+	}
+	return nil
+}
+
+func (x *ProtoLobbyPlayerSlot) GetRestriction() *ProtoLobbyPlayerSlotRestriction {
+	if x != nil {
+		return x.Restriction
 	}
 	return nil
 }
@@ -1213,12 +1221,13 @@ const file_protomulti_multi_proto_rawDesc = "" +
 	"\acomment\x18\x04 \x01(\tR\acomment\x120\n" +
 	"\x14minimum_player_level\x18\x05 \x01(\x05R\x12minimumPlayerLevel\x12#\n" +
 	"\rregistered_at\x18\x06 \x01(\x05R\fregisteredAt\x125\n" +
-	"\aplayers\x18\a \x03(\v2\x1b.multi.ProtoLobbyPlayerSlotR\aplayers\"|\n" +
+	"\aplayers\x18\a \x03(\v2\x1b.multi.ProtoLobbyPlayerSlotR\aplayers\"\xc6\x01\n" +
 	"\x14ProtoLobbyPlayerSlot\x12\x1d\n" +
 	"\n" +
 	"slot_index\x18\x02 \x01(\x05R\tslotIndex\x12\x14\n" +
 	"\x05ready\x18\x03 \x01(\bR\x05ready\x12/\n" +
-	"\x06player\x18\x04 \x01(\v2\x17.multi.ProtoLobbyPlayerR\x06player\"\x8d\x01\n" +
+	"\x06player\x18\x04 \x01(\v2\x17.multi.ProtoLobbyPlayerR\x06player\x12H\n" +
+	"\vrestriction\x18\x05 \x01(\v2&.multi.ProtoLobbyPlayerSlotRestrictionR\vrestriction\"\x8d\x01\n" +
 	"\x10ProtoLobbyPlayer\x129\n" +
 	"\bidentity\x18\x01 \x01(\v2\x1d.identity.ProtoPlayerIdentityR\bidentity\x12>\n" +
 	"\aloadout\x18\x02 \x01(\v2$.identity.ProtoPlayerLoadoutIdentityR\aloadout\"\xb6\x01\n" +
@@ -1354,23 +1363,24 @@ var file_protomulti_multi_proto_goTypes = []any{
 var file_protomulti_multi_proto_depIdxs = []int32{
 	3,  // 0: multi.ProtoLobbySummary.players:type_name -> multi.ProtoLobbyPlayerSlot
 	4,  // 1: multi.ProtoLobbyPlayerSlot.player:type_name -> multi.ProtoLobbyPlayer
-	17, // 2: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
-	18, // 3: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
-	7,  // 4: multi.ProtoGameInstance.options:type_name -> multi.ProtoGameInstanceOptions
-	5,  // 5: multi.ProtoGameInstanceOptions.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
-	9,  // 6: multi.ProtoGameSummary.parties:type_name -> multi.ProtoGamePartySummary
-	10, // 7: multi.ProtoGamePartySummary.players:type_name -> multi.ProtoGamePlayer
-	19, // 8: multi.ProtoGamePlayer.loadout:type_name -> identity.ProtoPlayerLoadout
-	12, // 9: multi.ProtoGamePartyActionQueue.player_action_queue:type_name -> multi.ProtoGamePlayerActionQueue
-	13, // 10: multi.ProtoGamePlayerActionQueue.actions:type_name -> multi.ProtoGameAction
-	0,  // 11: multi.ProtoGameAction.action:type_name -> multi.GamePlayerActionType
-	16, // 12: multi.ProtoGameSyncParty.players:type_name -> multi.ProtoGameSyncPlayer
-	13, // 13: multi.ProtoGameSyncPlayer.actions:type_name -> multi.ProtoGameAction
-	14, // [14:14] is the sub-list for method output_type
-	14, // [14:14] is the sub-list for method input_type
-	14, // [14:14] is the sub-list for extension type_name
-	14, // [14:14] is the sub-list for extension extendee
-	0,  // [0:14] is the sub-list for field type_name
+	5,  // 2: multi.ProtoLobbyPlayerSlot.restriction:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	17, // 3: multi.ProtoLobbyPlayer.identity:type_name -> identity.ProtoPlayerIdentity
+	18, // 4: multi.ProtoLobbyPlayer.loadout:type_name -> identity.ProtoPlayerLoadoutIdentity
+	7,  // 5: multi.ProtoGameInstance.options:type_name -> multi.ProtoGameInstanceOptions
+	5,  // 6: multi.ProtoGameInstanceOptions.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	9,  // 7: multi.ProtoGameSummary.parties:type_name -> multi.ProtoGamePartySummary
+	10, // 8: multi.ProtoGamePartySummary.players:type_name -> multi.ProtoGamePlayer
+	19, // 9: multi.ProtoGamePlayer.loadout:type_name -> identity.ProtoPlayerLoadout
+	12, // 10: multi.ProtoGamePartyActionQueue.player_action_queue:type_name -> multi.ProtoGamePlayerActionQueue
+	13, // 11: multi.ProtoGamePlayerActionQueue.actions:type_name -> multi.ProtoGameAction
+	0,  // 12: multi.ProtoGameAction.action:type_name -> multi.GamePlayerActionType
+	16, // 13: multi.ProtoGameSyncParty.players:type_name -> multi.ProtoGameSyncPlayer
+	13, // 14: multi.ProtoGameSyncPlayer.actions:type_name -> multi.ProtoGameAction
+	15, // [15:15] is the sub-list for method output_type
+	15, // [15:15] is the sub-list for method input_type
+	15, // [15:15] is the sub-list for extension type_name
+	15, // [15:15] is the sub-list for extension extendee
+	0,  // [0:15] is the sub-list for field type_name
 }
 
 func init() { file_protomulti_multi_proto_init() }
