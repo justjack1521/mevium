@@ -852,6 +852,7 @@ type ParticipantJoinRequest struct {
 	DeckIndex     int32                  `protobuf:"varint,4,opt,name=deck_index,json=deckIndex,proto3" json:"deck_index,omitempty"`
 	UseStamina    bool                   `protobuf:"varint,5,opt,name=use_stamina,json=useStamina,proto3" json:"use_stamina,omitempty"`
 	FromInvite    bool                   `protobuf:"varint,6,opt,name=from_invite,json=fromInvite,proto3" json:"from_invite,omitempty"`
+	RoleId        string                 `protobuf:"bytes,7,opt,name=role_id,json=roleId,proto3" json:"role_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -919,6 +920,13 @@ func (x *ParticipantJoinRequest) GetFromInvite() bool {
 		return x.FromInvite
 	}
 	return false
+}
+
+func (x *ParticipantJoinRequest) GetRoleId() string {
+	if x != nil {
+		return x.RoleId
+	}
+	return ""
 }
 
 type ParticipantReadyRequest struct {
@@ -1456,7 +1464,7 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"categories\x18\x05 \x03(\tR\n" +
 	"categories\x12(\n" +
 	"\x10min_player_level\x18\x06 \x01(\x05R\x0eminPlayerLevel\x12\x19\n" +
-	"\bparty_id\x18\a \x01(\tR\apartyId\"\xb3\x01\n" +
+	"\bparty_id\x18\a \x01(\tR\apartyId\"\xcc\x01\n" +
 	"\x16ParticipantJoinRequest\x12\x19\n" +
 	"\blobby_id\x18\x02 \x01(\tR\alobbyId\x12\x1d\n" +
 	"\n" +
@@ -1466,7 +1474,8 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\vuse_stamina\x18\x05 \x01(\bR\n" +
 	"useStamina\x12\x1f\n" +
 	"\vfrom_invite\x18\x06 \x01(\bR\n" +
-	"fromInvite\"S\n" +
+	"fromInvite\x12\x17\n" +
+	"\arole_id\x18\a \x01(\tR\x06roleId\"S\n" +
 	"\x17ParticipantReadyRequest\x12\x19\n" +
 	"\blobby_id\x18\x02 \x01(\tR\alobbyId\x12\x1d\n" +
 	"\n" +

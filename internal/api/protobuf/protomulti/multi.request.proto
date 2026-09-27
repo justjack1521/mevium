@@ -115,6 +115,7 @@ message ParticipantJoinRequest {
   int32 deck_index = 4;
   bool use_stamina = 5;
   bool from_invite = 6;
+  string role_id = 7;
 }
 
 message ParticipantReadyRequest {
