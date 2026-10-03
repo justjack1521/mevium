@@ -362,6 +362,7 @@ func (x *BattleCompleteRequest) GetPlayMode() string {
 
 type BattleReviveRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
+	PlayMode      string                 `protobuf:"bytes,1,opt,name=play_mode,json=playMode,proto3" json:"play_mode,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -394,6 +395,13 @@ func (x *BattleReviveRequest) ProtoReflect() protoreflect.Message {
 // Deprecated: Use BattleReviveRequest.ProtoReflect.Descriptor instead.
 func (*BattleReviveRequest) Descriptor() ([]byte, []int) {
 	return file_protogame_game_request_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *BattleReviveRequest) GetPlayMode() string {
+	if x != nil {
+		return x.PlayMode
+	}
+	return ""
 }
 
 type BattleStartRequest struct {
@@ -3133,8 +3141,9 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x0fultimate_charge\x18\x03 \x01(\x04R\x0eultimateCharge\x12-\n" +
 	"\x13auto_sell_new_cards\x18\x04 \x01(\bR\x10autoSellNewCards\x127\n" +
 	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\x12\x1b\n" +
-	"\tplay_mode\x18\x06 \x01(\tR\bplayMode\"\x15\n" +
-	"\x13BattleReviveRequest\"\xca\x02\n" +
+	"\tplay_mode\x18\x06 \x01(\tR\bplayMode\"2\n" +
+	"\x13BattleReviveRequest\x12\x1b\n" +
+	"\tplay_mode\x18\x01 \x01(\tR\bplayMode\"\xca\x02\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
 	"\n" +

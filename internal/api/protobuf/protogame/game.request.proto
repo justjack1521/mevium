@@ -82,7 +82,7 @@ message BattleCompleteRequest {
 }
 
 message BattleReviveRequest {
-
+  string play_mode = 1;
 }
 
 message BattleStartRequest {
