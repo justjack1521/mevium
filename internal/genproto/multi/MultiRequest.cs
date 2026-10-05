@@ -44,37 +44,38 @@ namespace Mobius.Proto.Multi {
             "cmNoUmVxdWVzdBISCgpkZWNrX2luZGV4GAIgASgFEhcKD21vZGVfaWRlbnRp",
             "ZmllchgDIAEoCRIOCgZsZXZlbHMYBCADKAUSEgoKY2F0ZWdvcmllcxgFIAMo",
             "CRIYChBtaW5fcGxheWVyX2xldmVsGAYgASgFEhAKCHBhcnR5X2lkGAcgASgJ",
-            "InwKFlBhcnRpY2lwYW50Sm9pblJlcXVlc3QSEAoIbG9iYnlfaWQYAiABKAkS",
-            "EgoKc2xvdF9pbmRleBgDIAEoBRISCgpkZWNrX2luZGV4GAQgASgFEhMKC3Vz",
-            "ZV9zdGFtaW5hGAUgASgIEhMKC2Zyb21faW52aXRlGAYgASgIIj8KF1BhcnRp",
-            "Y2lwYW50UmVhZHlSZXF1ZXN0EhAKCGxvYmJ5X2lkGAIgASgJEhIKCmRlY2tf",
-            "aW5kZXgYBCABKAUiLQoZUGFydGljaXBhbnRVbnJlYWR5UmVxdWVzdBIQCghs",
-            "b2JieV9pZBgCIAEoCSIZChdQYXJ0aWNpcGFudExlYXZlUmVxdWVzdCJTChZQ",
-            "YXJ0aWNpcGFudEZpbmRSZXF1ZXN0EhAKCHF1ZXN0X2lkGAEgASgJEhIKCmRl",
-            "Y2tfaW5kZXgYAiABKAUSEwoLdXNlX3N0YW1pbmEYAyABKAgiKwoXUGFydGlj",
-            "aXBhbnRXYXRjaFJlcXVlc3QSEAoIbG9iYnlfaWQYAiABKAkiLQoZUGFydGlj",
-            "aXBhbnRVbndhdGNoUmVxdWVzdBIQCghsb2JieV9pZBgBIAEoCSIrChJHYW1l",
-            "Q2F0Y2hVcFJlcXVlc3QSFQoNbGFzdF9zZXF1ZW5jZRgBIAEoBCIYChZHYW1l",
-            "UGxheWVyRGVhdGhSZXF1ZXN0IjMKF0dhbWVQbGF5ZXJSZXZpdmVSZXF1ZXN0",
-            "EhgKEHRhcmdldF9wbGF5ZXJfaWQYASABKAkiOAocR2FtZVBsYXllclJldml2",
-            "ZUNsYWltUmVxdWVzdBIYChB0YXJnZXRfcGxheWVyX2lkGAEgASgJIiIKD0dh",
-            "bWVDaGF0UmVxdWVzdBIPCgdtZXNzYWdlGAEgASgJKvUEChBNdWx0aVJlcXVl",
-            "c3RUeXBlEhUKEVJFUVVFU1RfVFlQRV9OT05FEAASEgoOU0VTU0lPTl9DUkVB",
-            "VEUQZBIQCgtTRVNTSU9OX0VORBDIARIRCgxMT0JCWV9TRUFSQ0gQrAISEQoM",
-            "TE9CQllfQ1JFQVRFEJADEhEKDExPQkJZX0NBTkNFTBD0AxIQCgtMT0JCWV9S",
-            "RUFEWRDYBBIQCgtMT0JCWV9TVEFSVBC8BRIQCgtMT0JCWV9TVEFNUBCgBhIP",
-            "CgpMT0JCWV9DSEFUENIGEhUKEFBBUlRJQ0lQQU5UX0pPSU4Q6AcSFgoRUEFS",
-            "VElDSVBBTlRfUkVBRFkQzAgSGAoTUEFSVElDSVBBTlRfVU5SRUFEWRCwCRIW",
-            "ChFQQVJUSUNJUEFOVF9MRUFWRRCUChIWChFQQVJUSUNJUEFOVF9XQVRDSBD4",
-            "ChIYChNQQVJUSUNJUEFOVF9VTldBVENIENwLEhUKEFBBUlRJQ0lQQU5UX0ZJ",
-            "TkQQhAcSEgoNUExBWUVSX1NFQVJDSBDQDxINCghHRVRfR0FNRRC4FxIWChFH",
-            "QU1FX1JFQURZX1BMQVlFUhCcGBIYChNHQU1FX0VOUVVFVUVfQUNUSU9OEIAZ",
-            "EhgKE0dBTUVfREVRVUVVRV9BQ1RJT04Q5BkSFgoRR0FNRV9MT0NLX0FDVElP",
-            "TlMQyBoSEwoOR0FNRV9DT05TRU5TVVMQrBsSFgoRR0FNRV9QTEFZRVJfREVB",
-            "VEgQkBwSFwoSR0FNRV9QTEFZRVJfUkVWSVZFEPQcEh0KGEdBTUVfUExBWUVS",
-            "X1JFVklWRV9DTEFJTRDYHRIOCglHQU1FX0NIQVQQvB5CTVo2Z2l0aHViLmNv",
-            "bS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b211bHRp",
-            "qgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90bzM="));
+            "Io0BChZQYXJ0aWNpcGFudEpvaW5SZXF1ZXN0EhAKCGxvYmJ5X2lkGAIgASgJ",
+            "EhIKCnNsb3RfaW5kZXgYAyABKAUSEgoKZGVja19pbmRleBgEIAEoBRITCgt1",
+            "c2Vfc3RhbWluYRgFIAEoCBITCgtmcm9tX2ludml0ZRgGIAEoCBIPCgdyb2xl",
+            "X2lkGAcgASgJIj8KF1BhcnRpY2lwYW50UmVhZHlSZXF1ZXN0EhAKCGxvYmJ5",
+            "X2lkGAIgASgJEhIKCmRlY2tfaW5kZXgYBCABKAUiLQoZUGFydGljaXBhbnRV",
+            "bnJlYWR5UmVxdWVzdBIQCghsb2JieV9pZBgCIAEoCSIZChdQYXJ0aWNpcGFu",
+            "dExlYXZlUmVxdWVzdCJTChZQYXJ0aWNpcGFudEZpbmRSZXF1ZXN0EhAKCHF1",
+            "ZXN0X2lkGAEgASgJEhIKCmRlY2tfaW5kZXgYAiABKAUSEwoLdXNlX3N0YW1p",
+            "bmEYAyABKAgiKwoXUGFydGljaXBhbnRXYXRjaFJlcXVlc3QSEAoIbG9iYnlf",
+            "aWQYAiABKAkiLQoZUGFydGljaXBhbnRVbndhdGNoUmVxdWVzdBIQCghsb2Ji",
+            "eV9pZBgBIAEoCSIrChJHYW1lQ2F0Y2hVcFJlcXVlc3QSFQoNbGFzdF9zZXF1",
+            "ZW5jZRgBIAEoBCIYChZHYW1lUGxheWVyRGVhdGhSZXF1ZXN0IjMKF0dhbWVQ",
+            "bGF5ZXJSZXZpdmVSZXF1ZXN0EhgKEHRhcmdldF9wbGF5ZXJfaWQYASABKAki",
+            "OAocR2FtZVBsYXllclJldml2ZUNsYWltUmVxdWVzdBIYChB0YXJnZXRfcGxh",
+            "eWVyX2lkGAEgASgJIiIKD0dhbWVDaGF0UmVxdWVzdBIPCgdtZXNzYWdlGAEg",
+            "ASgJKvUEChBNdWx0aVJlcXVlc3RUeXBlEhUKEVJFUVVFU1RfVFlQRV9OT05F",
+            "EAASEgoOU0VTU0lPTl9DUkVBVEUQZBIQCgtTRVNTSU9OX0VORBDIARIRCgxM",
+            "T0JCWV9TRUFSQ0gQrAISEQoMTE9CQllfQ1JFQVRFEJADEhEKDExPQkJZX0NB",
+            "TkNFTBD0AxIQCgtMT0JCWV9SRUFEWRDYBBIQCgtMT0JCWV9TVEFSVBC8BRIQ",
+            "CgtMT0JCWV9TVEFNUBCgBhIPCgpMT0JCWV9DSEFUENIGEhUKEFBBUlRJQ0lQ",
+            "QU5UX0pPSU4Q6AcSFgoRUEFSVElDSVBBTlRfUkVBRFkQzAgSGAoTUEFSVElD",
+            "SVBBTlRfVU5SRUFEWRCwCRIWChFQQVJUSUNJUEFOVF9MRUFWRRCUChIWChFQ",
+            "QVJUSUNJUEFOVF9XQVRDSBD4ChIYChNQQVJUSUNJUEFOVF9VTldBVENIENwL",
+            "EhUKEFBBUlRJQ0lQQU5UX0ZJTkQQhAcSEgoNUExBWUVSX1NFQVJDSBDQDxIN",
+            "CghHRVRfR0FNRRC4FxIWChFHQU1FX1JFQURZX1BMQVlFUhCcGBIYChNHQU1F",
+            "X0VOUVVFVUVfQUNUSU9OEIAZEhgKE0dBTUVfREVRVUVVRV9BQ1RJT04Q5BkS",
+            "FgoRR0FNRV9MT0NLX0FDVElPTlMQyBoSEwoOR0FNRV9DT05TRU5TVVMQrBsS",
+            "FgoRR0FNRV9QTEFZRVJfREVBVEgQkBwSFwoSR0FNRV9QTEFZRVJfUkVWSVZF",
+            "EPQcEh0KGEdBTUVfUExBWUVSX1JFVklWRV9DTEFJTRDYHRIOCglHQU1FX0NI",
+            "QVQQvB5CTVo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9n",
+            "ZW5wcm90by9wcm90b211bHRpqgISTW9iaXVzLlByb3RvLk11bHRpYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.MultiRequestType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,7 +94,7 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyStampRequest), global::Mobius.Proto.Multi.LobbyStampRequest.Parser, new[]{ "StampId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbyChatRequest), global::Mobius.Proto.Multi.LobbyChatRequest.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.LobbySearchRequest), global::Mobius.Proto.Multi.LobbySearchRequest.Parser, new[]{ "DeckIndex", "ModeIdentifier", "Levels", "Categories", "MinPlayerLevel", "PartyId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantJoinRequest), global::Mobius.Proto.Multi.ParticipantJoinRequest.Parser, new[]{ "LobbyId", "SlotIndex", "DeckIndex", "UseStamina", "FromInvite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantJoinRequest), global::Mobius.Proto.Multi.ParticipantJoinRequest.Parser, new[]{ "LobbyId", "SlotIndex", "DeckIndex", "UseStamina", "FromInvite", "RoleId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantReadyRequest), global::Mobius.Proto.Multi.ParticipantReadyRequest.Parser, new[]{ "LobbyId", "DeckIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantUnreadyRequest), global::Mobius.Proto.Multi.ParticipantUnreadyRequest.Parser, new[]{ "LobbyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.ParticipantLeaveRequest), global::Mobius.Proto.Multi.ParticipantLeaveRequest.Parser, null, null, null, null, null),
@@ -2906,6 +2907,7 @@ namespace Mobius.Proto.Multi {
       deckIndex_ = other.deckIndex_;
       useStamina_ = other.useStamina_;
       fromInvite_ = other.fromInvite_;
+      roleId_ = other.roleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2969,6 +2971,17 @@ namespace Mobius.Proto.Multi {
       }
     }
 
+    /// <summary>Field number for the "role_id" field.</summary>
+    public const int RoleIdFieldNumber = 7;
+    private string roleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RoleId {
+      get { return roleId_; }
+      set {
+        roleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ParticipantJoinRequest);
@@ -2987,6 +3000,7 @@ namespace Mobius.Proto.Multi {
       if (DeckIndex != other.DeckIndex) return false;
       if (UseStamina != other.UseStamina) return false;
       if (FromInvite != other.FromInvite) return false;
+      if (RoleId != other.RoleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2998,6 +3012,7 @@ namespace Mobius.Proto.Multi {
       if (DeckIndex != 0) hash ^= DeckIndex.GetHashCode();
       if (UseStamina != false) hash ^= UseStamina.GetHashCode();
       if (FromInvite != false) hash ^= FromInvite.GetHashCode();
+      if (RoleId.Length != 0) hash ^= RoleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3034,6 +3049,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(48);
         output.WriteBool(FromInvite);
       }
+      if (RoleId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RoleId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3063,6 +3082,10 @@ namespace Mobius.Proto.Multi {
         output.WriteRawTag(48);
         output.WriteBool(FromInvite);
       }
+      if (RoleId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RoleId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3086,6 +3109,9 @@ namespace Mobius.Proto.Multi {
       }
       if (FromInvite != false) {
         size += 1 + 1;
+      }
+      if (RoleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3112,6 +3138,9 @@ namespace Mobius.Proto.Multi {
       }
       if (other.FromInvite != false) {
         FromInvite = other.FromInvite;
+      }
+      if (other.RoleId.Length != 0) {
+        RoleId = other.RoleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3147,6 +3176,10 @@ namespace Mobius.Proto.Multi {
             FromInvite = input.ReadBool();
             break;
           }
+          case 58: {
+            RoleId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3179,6 +3212,10 @@ namespace Mobius.Proto.Multi {
           }
           case 48: {
             FromInvite = input.ReadBool();
+            break;
+          }
+          case 58: {
+            RoleId = input.ReadString();
             break;
           }
         }

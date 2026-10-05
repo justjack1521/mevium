@@ -415,8 +415,10 @@ type BattleStartRequest struct {
 	Warp           bool                                    `protobuf:"varint,8,opt,name=warp,proto3" json:"warp,omitempty"`
 	QuestId        string                                  `protobuf:"bytes,9,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
 	PlayMode       string                                  `protobuf:"bytes,10,opt,name=play_mode,json=playMode,proto3" json:"play_mode,omitempty"`
-	unknownFields  protoimpl.UnknownFields
-	sizeCache      protoimpl.SizeCache
+	// Multiplayer only: the hub game's seed, so every player in the game builds the same waves.
+	Seed          int32 `protobuf:"varint,11,opt,name=seed,proto3" json:"seed,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 }
 
 func (x *BattleStartRequest) Reset() {
@@ -510,6 +512,13 @@ func (x *BattleStartRequest) GetPlayMode() string {
 		return x.PlayMode
 	}
 	return ""
+}
+
+func (x *BattleStartRequest) GetSeed() int32 {
+	if x != nil {
+		return x.Seed
+	}
+	return 0
 }
 
 type CardAugmentRequest struct {
@@ -3143,7 +3152,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\x12\x1b\n" +
 	"\tplay_mode\x18\x06 \x01(\tR\bplayMode\"2\n" +
 	"\x13BattleReviveRequest\x12\x1b\n" +
-	"\tplay_mode\x18\x01 \x01(\tR\bplayMode\"\xca\x02\n" +
+	"\tplay_mode\x18\x01 \x01(\tR\bplayMode\"\xde\x02\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
 	"\n" +
@@ -3156,7 +3165,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x04warp\x18\b \x01(\bR\x04warp\x12\x19\n" +
 	"\bquest_id\x18\t \x01(\tR\aquestId\x12\x1b\n" +
 	"\tplay_mode\x18\n" +
-	" \x01(\tR\bplayMode\"\x98\x01\n" +
+	" \x01(\tR\bplayMode\x12\x12\n" +
+	"\x04seed\x18\v \x01(\x05R\x04seed\"\x98\x01\n" +
 	"\x12CardAugmentRequest\x12*\n" +
 	"\x11target_card_index\x18\x01 \x01(\x05R\x0ftargetCardIndex\x12/\n" +
 	"\x13inventory_materials\x18\x02 \x03(\x05R\x12inventoryMaterials\x12%\n" +

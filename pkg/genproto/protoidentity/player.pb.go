@@ -165,6 +165,7 @@ type ProtoPlayerLoadout struct {
 	Job           *ProtoPlayerJobLoadout           `protobuf:"bytes,4,opt,name=job,proto3" json:"job,omitempty"`
 	Weapon        *ProtoPlayerWeaponLoadout        `protobuf:"bytes,5,opt,name=weapon,proto3" json:"weapon,omitempty"`
 	AbilityCards  []*ProtoPlayerAbilityCardLoadout `protobuf:"bytes,6,rep,name=ability_cards,json=abilityCards,proto3" json:"ability_cards,omitempty"`
+	PlayerLevel   int32                            `protobuf:"varint,7,opt,name=player_level,json=playerLevel,proto3" json:"player_level,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -239,6 +240,13 @@ func (x *ProtoPlayerLoadout) GetAbilityCards() []*ProtoPlayerAbilityCardLoadout 
 		return x.AbilityCards
 	}
 	return nil
+}
+
+func (x *ProtoPlayerLoadout) GetPlayerLevel() int32 {
+	if x != nil {
+		return x.PlayerLevel
+	}
+	return 0
 }
 
 type ProtoPlayerJobIdentity struct {
@@ -884,7 +892,7 @@ const file_protoidentity_player_proto_rawDesc = "" +
 	"\x1aProtoPlayerLoadoutIdentity\x12;\n" +
 	"\bjob_card\x18\x01 \x01(\v2 .identity.ProtoPlayerJobIdentityR\ajobCard\x12;\n" +
 	"\x06weapon\x18\x02 \x01(\v2#.identity.ProtoPlayerWeaponIdentityR\x06weapon\x12G\n" +
-	"\rability_cards\x18\x03 \x03(\v2\".identity.ProtoAbilityCardIdentityR\fabilityCards\"\xae\x02\n" +
+	"\rability_cards\x18\x03 \x03(\v2\".identity.ProtoAbilityCardIdentityR\fabilityCards\"\xd1\x02\n" +
 	"\x12ProtoPlayerLoadout\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\tR\bplayerId\x12\x1f\n" +
 	"\vplayer_name\x18\x02 \x01(\tR\n" +
@@ -893,7 +901,8 @@ const file_protoidentity_player_proto_rawDesc = "" +
 	"deck_index\x18\x03 \x01(\x05R\tdeckIndex\x121\n" +
 	"\x03job\x18\x04 \x01(\v2\x1f.identity.ProtoPlayerJobLoadoutR\x03job\x12:\n" +
 	"\x06weapon\x18\x05 \x01(\v2\".identity.ProtoPlayerWeaponLoadoutR\x06weapon\x12L\n" +
-	"\rability_cards\x18\x06 \x03(\v2'.identity.ProtoPlayerAbilityCardLoadoutR\fabilityCards\"\xa7\x01\n" +
+	"\rability_cards\x18\x06 \x03(\v2'.identity.ProtoPlayerAbilityCardLoadoutR\fabilityCards\x12!\n" +
+	"\fplayer_level\x18\a \x01(\x05R\vplayerLevel\"\xa7\x01\n" +
 	"\x16ProtoPlayerJobIdentity\x12\x1e\n" +
 	"\vjob_card_id\x18\x01 \x01(\tR\tjobCardId\x12\"\n" +
 	"\rsub_job_index\x18\x02 \x01(\x05R\vsubJobIndex\x12\x1f\n" +

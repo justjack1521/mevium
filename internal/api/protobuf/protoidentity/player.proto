@@ -26,6 +26,7 @@ message ProtoPlayerLoadout {
   ProtoPlayerJobLoadout job = 4;
   ProtoPlayerWeaponLoadout weapon = 5;
   repeated ProtoPlayerAbilityCardLoadout ability_cards = 6;
+  int32 player_level = 7;
 }
 
 message ProtoPlayerJobIdentity {
