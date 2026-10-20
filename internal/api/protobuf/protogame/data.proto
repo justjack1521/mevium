@@ -161,6 +161,8 @@ message ProtoBattleStartData {
   int32 unavailable_reason = 27;
   string quest_id = 28;
 
+  int32 stamina_cost = 29;
+
 }
 
 message ProtoBattleFiendSpawn {
