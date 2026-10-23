@@ -52,6 +52,7 @@ const (
 	MultiRequestType_GAME_PLAYER_REVIVE       MultiRequestType = 3700
 	MultiRequestType_GAME_PLAYER_REVIVE_CLAIM MultiRequestType = 3800
 	MultiRequestType_GAME_CHAT                MultiRequestType = 3900
+	MultiRequestType_GAME_STAMP               MultiRequestType = 4000
 )
 
 // Enum value maps for MultiRequestType.
@@ -85,6 +86,7 @@ var (
 		3700: "GAME_PLAYER_REVIVE",
 		3800: "GAME_PLAYER_REVIVE_CLAIM",
 		3900: "GAME_CHAT",
+		4000: "GAME_STAMP",
 	}
 	MultiRequestType_value = map[string]int32{
 		"REQUEST_TYPE_NONE":        0,
@@ -115,6 +117,7 @@ var (
 		"GAME_PLAYER_REVIVE":       3700,
 		"GAME_PLAYER_REVIVE_CLAIM": 3800,
 		"GAME_CHAT":                3900,
+		"GAME_STAMP":               4000,
 	}
 )
 
@@ -1421,6 +1424,50 @@ func (x *GameChatRequest) GetMessage() string {
 	return ""
 }
 
+type GameStampRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	StampId       string                 `protobuf:"bytes,1,opt,name=stamp_id,json=stampId,proto3" json:"stamp_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GameStampRequest) Reset() {
+	*x = GameStampRequest{}
+	mi := &file_protomulti_multi_request_proto_msgTypes[27]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GameStampRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GameStampRequest) ProtoMessage() {}
+
+func (x *GameStampRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_request_proto_msgTypes[27]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GameStampRequest.ProtoReflect.Descriptor instead.
+func (*GameStampRequest) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_request_proto_rawDescGZIP(), []int{27}
+}
+
+func (x *GameStampRequest) GetStampId() string {
+	if x != nil {
+		return x.StampId
+	}
+	return ""
+}
+
 var File_protomulti_multi_request_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_request_proto_rawDesc = "" +
@@ -1501,7 +1548,9 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\x1cGamePlayerReviveClaimRequest\x12(\n" +
 	"\x10target_player_id\x18\x01 \x01(\tR\x0etargetPlayerId\"+\n" +
 	"\x0fGameChatRequest\x12\x18\n" +
-	"\amessage\x18\x01 \x01(\tR\amessage*\xf5\x04\n" +
+	"\amessage\x18\x01 \x01(\tR\amessage\"-\n" +
+	"\x10GameStampRequest\x12\x19\n" +
+	"\bstamp_id\x18\x01 \x01(\tR\astampId*\x86\x05\n" +
 	"\x10MultiRequestType\x12\x15\n" +
 	"\x11REQUEST_TYPE_NONE\x10\x00\x12\x12\n" +
 	"\x0eSESSION_CREATE\x10d\x12\x10\n" +
@@ -1533,7 +1582,9 @@ const file_protomulti_multi_request_proto_rawDesc = "" +
 	"\x11GAME_PLAYER_DEATH\x10\x90\x1c\x12\x17\n" +
 	"\x12GAME_PLAYER_REVIVE\x10\xf4\x1c\x12\x1d\n" +
 	"\x18GAME_PLAYER_REVIVE_CLAIM\x10\xd8\x1d\x12\x0e\n" +
-	"\tGAME_CHAT\x10\xbc\x1eBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
+	"\tGAME_CHAT\x10\xbc\x1e\x12\x0f\n" +
+	"\n" +
+	"GAME_STAMP\x10\xa0\x1fBMZ6github.com/justjack1521/mevium/pkg/genproto/protomulti\xaa\x02\x12Mobius.Proto.Multib\x06proto3"
 
 var (
 	file_protomulti_multi_request_proto_rawDescOnce sync.Once
@@ -1548,7 +1599,7 @@ func file_protomulti_multi_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 27)
+var file_protomulti_multi_request_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
 var file_protomulti_multi_request_proto_goTypes = []any{
 	(MultiRequestType)(0),                   // 0: multi.MultiRequestType
 	(*GetGameRequest)(nil),                  // 1: multi.GetGameRequest
@@ -1578,14 +1629,15 @@ var file_protomulti_multi_request_proto_goTypes = []any{
 	(*GamePlayerReviveRequest)(nil),         // 25: multi.GamePlayerReviveRequest
 	(*GamePlayerReviveClaimRequest)(nil),    // 26: multi.GamePlayerReviveClaimRequest
 	(*GameChatRequest)(nil),                 // 27: multi.GameChatRequest
-	(*ProtoGameEnemyHP)(nil),                // 28: multi.ProtoGameEnemyHP
-	(*ProtoGameAction)(nil),                 // 29: multi.ProtoGameAction
-	(*ProtoLobbyPlayerSlotRestriction)(nil), // 30: multi.ProtoLobbyPlayerSlotRestriction
+	(*GameStampRequest)(nil),                // 28: multi.GameStampRequest
+	(*ProtoGameEnemyHP)(nil),                // 29: multi.ProtoGameEnemyHP
+	(*ProtoGameAction)(nil),                 // 30: multi.ProtoGameAction
+	(*ProtoLobbyPlayerSlotRestriction)(nil), // 31: multi.ProtoLobbyPlayerSlotRestriction
 }
 var file_protomulti_multi_request_proto_depIdxs = []int32{
-	28, // 0: multi.GameHPConsensusRequest.enemies:type_name -> multi.ProtoGameEnemyHP
-	29, // 1: multi.GameEnqueueActionRequest.action:type_name -> multi.ProtoGameAction
-	30, // 2: multi.LobbyCreateRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
+	29, // 0: multi.GameHPConsensusRequest.enemies:type_name -> multi.ProtoGameEnemyHP
+	30, // 1: multi.GameEnqueueActionRequest.action:type_name -> multi.ProtoGameAction
+	31, // 2: multi.LobbyCreateRequest.restrictions:type_name -> multi.ProtoLobbyPlayerSlotRestriction
 	3,  // [3:3] is the sub-list for method output_type
 	3,  // [3:3] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
@@ -1605,7 +1657,7 @@ func file_protomulti_multi_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_request_proto_rawDesc), len(file_protomulti_multi_request_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   27,
+			NumMessages:   28,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

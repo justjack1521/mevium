@@ -47,6 +47,7 @@ const (
 	MeviusMultiService_PlayerRevive_FullMethodName       = "/service.MeviusMultiService/PlayerRevive"
 	MeviusMultiService_PlayerReviveClaim_FullMethodName  = "/service.MeviusMultiService/PlayerReviveClaim"
 	MeviusMultiService_GameChat_FullMethodName           = "/service.MeviusMultiService/GameChat"
+	MeviusMultiService_GameStamp_FullMethodName          = "/service.MeviusMultiService/GameStamp"
 )
 
 // MeviusMultiServiceClient is the client API for MeviusMultiService service.
@@ -80,6 +81,7 @@ type MeviusMultiServiceClient interface {
 	PlayerRevive(ctx context.Context, in *protomulti.GamePlayerReviveRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveResponse, error)
 	PlayerReviveClaim(ctx context.Context, in *protomulti.GamePlayerReviveClaimRequest, opts ...grpc.CallOption) (*protomulti.GamePlayerReviveClaimResponse, error)
 	GameChat(ctx context.Context, in *protomulti.GameChatRequest, opts ...grpc.CallOption) (*protomulti.GameChatResponse, error)
+	GameStamp(ctx context.Context, in *protomulti.GameStampRequest, opts ...grpc.CallOption) (*protomulti.GameStampResponse, error)
 }
 
 type meviusMultiServiceClient struct {
@@ -333,6 +335,15 @@ func (c *meviusMultiServiceClient) GameChat(ctx context.Context, in *protomulti.
 	return out, nil
 }
 
+func (c *meviusMultiServiceClient) GameStamp(ctx context.Context, in *protomulti.GameStampRequest, opts ...grpc.CallOption) (*protomulti.GameStampResponse, error) {
+	out := new(protomulti.GameStampResponse)
+	err := c.cc.Invoke(ctx, MeviusMultiService_GameStamp_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusMultiServiceServer is the server API for MeviusMultiService service.
 // All implementations should embed UnimplementedMeviusMultiServiceServer
 // for forward compatibility
@@ -364,6 +375,7 @@ type MeviusMultiServiceServer interface {
 	PlayerRevive(context.Context, *protomulti.GamePlayerReviveRequest) (*protomulti.GamePlayerReviveResponse, error)
 	PlayerReviveClaim(context.Context, *protomulti.GamePlayerReviveClaimRequest) (*protomulti.GamePlayerReviveClaimResponse, error)
 	GameChat(context.Context, *protomulti.GameChatRequest) (*protomulti.GameChatResponse, error)
+	GameStamp(context.Context, *protomulti.GameStampRequest) (*protomulti.GameStampResponse, error)
 }
 
 // UnimplementedMeviusMultiServiceServer should be embedded to have forward compatible implementations.
@@ -450,6 +462,9 @@ func (UnimplementedMeviusMultiServiceServer) PlayerReviveClaim(context.Context, 
 }
 func (UnimplementedMeviusMultiServiceServer) GameChat(context.Context, *protomulti.GameChatRequest) (*protomulti.GameChatResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GameChat not implemented")
+}
+func (UnimplementedMeviusMultiServiceServer) GameStamp(context.Context, *protomulti.GameStampRequest) (*protomulti.GameStampResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GameStamp not implemented")
 }
 
 // UnsafeMeviusMultiServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -949,6 +964,24 @@ func _MeviusMultiService_GameChat_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusMultiService_GameStamp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protomulti.GameStampRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusMultiServiceServer).GameStamp(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusMultiService_GameStamp_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusMultiServiceServer).GameStamp(ctx, req.(*protomulti.GameStampRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusMultiService_ServiceDesc is the grpc.ServiceDesc for MeviusMultiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1063,6 +1096,10 @@ var MeviusMultiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GameChat",
 			Handler:    _MeviusMultiService_GameChat_Handler,
+		},
+		{
+			MethodName: "GameStamp",
+			Handler:    _MeviusMultiService_GameStamp_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

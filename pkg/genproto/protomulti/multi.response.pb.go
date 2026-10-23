@@ -1136,6 +1136,42 @@ func (*GameChatResponse) Descriptor() ([]byte, []int) {
 	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{26}
 }
 
+type GameStampResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GameStampResponse) Reset() {
+	*x = GameStampResponse{}
+	mi := &file_protomulti_multi_response_proto_msgTypes[27]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GameStampResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GameStampResponse) ProtoMessage() {}
+
+func (x *GameStampResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_protomulti_multi_response_proto_msgTypes[27]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GameStampResponse.ProtoReflect.Descriptor instead.
+func (*GameStampResponse) Descriptor() ([]byte, []int) {
+	return file_protomulti_multi_response_proto_rawDescGZIP(), []int{27}
+}
+
 var File_protomulti_multi_response_proto protoreflect.FileDescriptor
 
 const file_protomulti_multi_response_proto_rawDesc = "" +
@@ -1180,7 +1216,8 @@ const file_protomulti_multi_response_proto_rawDesc = "" +
 	"\vdeny_reason\x18\x02 \x01(\x0e2\x1c.multi.ReviveClaimDenyReasonR\n" +
 	"denyReason\x12!\n" +
 	"\fremaining_ms\x18\x03 \x01(\x03R\vremainingMs\"\x12\n" +
-	"\x10GameChatResponse*\xc9\x01\n" +
+	"\x10GameChatResponse\"\x13\n" +
+	"\x11GameStampResponse*\xc9\x01\n" +
 	"\x15ReviveClaimDenyReason\x12\x1a\n" +
 	"\x16REVIVE_CLAIM_DENY_NONE\x10\x00\x12&\n" +
 	"\"REVIVE_CLAIM_DENY_TARGET_NOT_FOUND\x10\x01\x12\"\n" +
@@ -1201,7 +1238,7 @@ func file_protomulti_multi_response_proto_rawDescGZIP() []byte {
 }
 
 var file_protomulti_multi_response_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 27)
+var file_protomulti_multi_response_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
 var file_protomulti_multi_response_proto_goTypes = []any{
 	(ReviveClaimDenyReason)(0),            // 0: multi.ReviveClaimDenyReason
 	(*GetGameResponse)(nil),               // 1: multi.GetGameResponse
@@ -1231,12 +1268,13 @@ var file_protomulti_multi_response_proto_goTypes = []any{
 	(*GamePlayerReviveResponse)(nil),      // 25: multi.GamePlayerReviveResponse
 	(*GamePlayerReviveClaimResponse)(nil), // 26: multi.GamePlayerReviveClaimResponse
 	(*GameChatResponse)(nil),              // 27: multi.GameChatResponse
-	(*ProtoGameSummary)(nil),              // 28: multi.ProtoGameSummary
-	(*ProtoLobbySummary)(nil),             // 29: multi.ProtoLobbySummary
+	(*GameStampResponse)(nil),             // 28: multi.GameStampResponse
+	(*ProtoGameSummary)(nil),              // 29: multi.ProtoGameSummary
+	(*ProtoLobbySummary)(nil),             // 30: multi.ProtoLobbySummary
 }
 var file_protomulti_multi_response_proto_depIdxs = []int32{
-	28, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
-	29, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
+	29, // 0: multi.GetGameResponse.game_summary:type_name -> multi.ProtoGameSummary
+	30, // 1: multi.LobbySearchResponse.lobbies:type_name -> multi.ProtoLobbySummary
 	0,  // 2: multi.GamePlayerReviveClaimResponse.deny_reason:type_name -> multi.ReviveClaimDenyReason
 	3,  // [3:3] is the sub-list for method output_type
 	3,  // [3:3] is the sub-list for method input_type
@@ -1257,7 +1295,7 @@ func file_protomulti_multi_response_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protomulti_multi_response_proto_rawDesc), len(file_protomulti_multi_response_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   27,
+			NumMessages:   28,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

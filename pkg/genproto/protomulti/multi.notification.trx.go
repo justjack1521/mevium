@@ -337,3 +337,15 @@ func NewGameChatNotification(bytes []byte) (*GameChatNotification, error) {
 func (x *GameChatNotification) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGameStampNotification(bytes []byte) (*GameStampNotification, error) {
+	req := &GameStampNotification{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GameStampNotification) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

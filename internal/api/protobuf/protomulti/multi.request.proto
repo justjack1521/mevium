@@ -38,6 +38,7 @@ enum MultiRequestType {
   GAME_PLAYER_REVIVE = 3700;
   GAME_PLAYER_REVIVE_CLAIM = 3800;
   GAME_CHAT = 3900;
+  GAME_STAMP = 4000;
 }
 
 message GetGameRequest {
@@ -163,4 +164,8 @@ message GamePlayerReviveClaimRequest {
 
 message GameChatRequest {
   string message = 1;
+}
+
+message GameStampRequest {
+  string stamp_id = 1;
 }

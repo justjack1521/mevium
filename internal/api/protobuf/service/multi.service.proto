@@ -41,4 +41,5 @@ service MeviusMultiService {
   rpc PlayerRevive(multi.GamePlayerReviveRequest) returns (multi.GamePlayerReviveResponse) {}
   rpc PlayerReviveClaim(multi.GamePlayerReviveClaimRequest) returns (multi.GamePlayerReviveClaimResponse) {}
   rpc GameChat(multi.GameChatRequest) returns (multi.GameChatResponse) {}
+  rpc GameStamp(multi.GameStampRequest) returns (multi.GameStampResponse) {}
 }

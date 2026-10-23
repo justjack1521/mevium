@@ -95,6 +95,7 @@ enum MultiGameNotificationType {
   GAME_NOTIFY_PLAYER_REVIVE_CLAIM = 2600;
   GAME_NOTIFY_PLAYER_REVIVE_CLAIM_EXPIRE = 2700;
   GAME_NOTIFY_CHAT = 2800;
+  GAME_NOTIFY_STAMP = 2900;
   GAME_NOTIFY_END = 8888;
 }
 
@@ -199,6 +200,13 @@ message GameChatNotification {
   int32  party_index  = 2;
   int32  player_index = 3;
   string message      = 4;
+}
+
+message GameStampNotification {
+  string game_id      = 1;
+  int32  party_index  = 2;
+  int32  player_index = 3;
+  string stamp_id     = 4;
 }
 
 message GameSyncNotification {

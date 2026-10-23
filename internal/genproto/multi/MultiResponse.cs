@@ -47,13 +47,14 @@ namespace Mobius.Proto.Multi {
             "UmV2aXZlUmVzcG9uc2UieQodR2FtZVBsYXllclJldml2ZUNsYWltUmVzcG9u",
             "c2USDwoHZ3JhbnRlZBgBIAEoCBIxCgtkZW55X3JlYXNvbhgCIAEoDjIcLm11",
             "bHRpLlJldml2ZUNsYWltRGVueVJlYXNvbhIUCgxyZW1haW5pbmdfbXMYAyAB",
-            "KAMiEgoQR2FtZUNoYXRSZXNwb25zZSrJAQoVUmV2aXZlQ2xhaW1EZW55UmVh",
-            "c29uEhoKFlJFVklWRV9DTEFJTV9ERU5ZX05PTkUQABImCiJSRVZJVkVfQ0xB",
-            "SU1fREVOWV9UQVJHRVRfTk9UX0ZPVU5EEAESIgoeUkVWSVZFX0NMQUlNX0RF",
-            "TllfVEFSR0VUX0FMSVZFEAISJQohUkVWSVZFX0NMQUlNX0RFTllfQUxSRUFE",
-            "WV9DTEFJTUVEEAMSIQodUkVWSVZFX0NMQUlNX0RFTllfVU5BVkFJTEFCTEUQ",
-            "BEJNWjZnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnBy",
-            "b3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMuUHJvdG8uTXVsdGliBnByb3RvMw=="));
+            "KAMiEgoQR2FtZUNoYXRSZXNwb25zZSITChFHYW1lU3RhbXBSZXNwb25zZSrJ",
+            "AQoVUmV2aXZlQ2xhaW1EZW55UmVhc29uEhoKFlJFVklWRV9DTEFJTV9ERU5Z",
+            "X05PTkUQABImCiJSRVZJVkVfQ0xBSU1fREVOWV9UQVJHRVRfTk9UX0ZPVU5E",
+            "EAESIgoeUkVWSVZFX0NMQUlNX0RFTllfVEFSR0VUX0FMSVZFEAISJQohUkVW",
+            "SVZFX0NMQUlNX0RFTllfQUxSRUFEWV9DTEFJTUVEEAMSIQodUkVWSVZFX0NM",
+            "QUlNX0RFTllfVU5BVkFJTEFCTEUQBEJNWjZnaXRodWIuY29tL2p1c3RqYWNr",
+            "MTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvbXVsdGmqAhJNb2JpdXMu",
+            "UHJvdG8uTXVsdGliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Multi.MultiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Multi.ReviveClaimDenyReason), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +84,8 @@ namespace Mobius.Proto.Multi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerDeathResponse), global::Mobius.Proto.Multi.GamePlayerDeathResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReviveResponse), global::Mobius.Proto.Multi.GamePlayerReviveResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GamePlayerReviveClaimResponse), global::Mobius.Proto.Multi.GamePlayerReviveClaimResponse.Parser, new[]{ "Granted", "DenyReason", "RemainingMs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameChatResponse), global::Mobius.Proto.Multi.GameChatResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameChatResponse), global::Mobius.Proto.Multi.GameChatResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Multi.GameStampResponse), global::Mobius.Proto.Multi.GameStampResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -4129,6 +4131,142 @@ namespace Mobius.Proto.Multi {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(GameChatResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameStampResponse : pb::IMessage<GameStampResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameStampResponse> _parser = new pb::MessageParser<GameStampResponse>(() => new GameStampResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GameStampResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Multi.MultiResponseReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameStampResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameStampResponse(GameStampResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameStampResponse Clone() {
+      return new GameStampResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GameStampResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GameStampResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GameStampResponse other) {
       if (other == null) {
         return;
       }
