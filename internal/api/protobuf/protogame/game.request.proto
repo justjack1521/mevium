@@ -62,6 +62,7 @@ enum GameRequestType {
   CLAIM_ACHIEVEMENT = 5200;
   PURCHASE_SHOP_ENTRY = 5300;
   STAMP_EDIT_ALL = 5400;
+  GET_MULTI_QUEST_SCHEDULE = 5500;
 }
 
 enum TeleportRequestType {
@@ -355,4 +356,7 @@ message PurchaseShopEntryRequest {
   string entry_id = 1;
   string purchase_option_id = 2;
   int32 quantity = 3;
+}
+
+message GetMultiQuestScheduleRequest {
 }

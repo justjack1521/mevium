@@ -185,9 +185,11 @@ namespace Mobius.Proto.Game {
             "aG9wRW50cnlSZXNwb25zZRI+ChZyZWNlaXZlZF9hYmlsaXR5X2NhcmRzGAEg",
             "AygLMh4uZ2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2USMAoOcmVjZWl2",
             "ZWRfaXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpchIsCgpj",
-            "b3N0X2l0ZW1zGAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXJCS1o1",
-            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
-            "cm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "b3N0X2l0ZW1zGAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiUQod",
+            "R2V0TXVsdGlRdWVzdFNjaGVkdWxlUmVzcG9uc2USMAoJc2NoZWR1bGVzGAEg",
+            "AygLMh0uZ2FtZS5Qcm90b011bHRpUXVlc3RTY2hlZHVsZUJLWjVnaXRodWIu",
+            "Y29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2Ft",
+            "ZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Model.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -241,7 +243,8 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimResponse), global::Mobius.Proto.Game.ArenaClaimResponse.Parser, new[]{ "Id", "RewardItems", "Unlocked", "Completed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ConfirmGiftBoxResponse), global::Mobius.Proto.Game.ConfirmGiftBoxResponse.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimAchievementResponse), global::Mobius.Proto.Game.ClaimAchievementResponse.Parser, new[]{ "Id", "InboxClaims" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseShopEntryResponse), global::Mobius.Proto.Game.PurchaseShopEntryResponse.Parser, new[]{ "ReceivedAbilityCards", "ReceivedItems", "CostItems" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseShopEntryResponse), global::Mobius.Proto.Game.PurchaseShopEntryResponse.Parser, new[]{ "ReceivedAbilityCards", "ReceivedItems", "CostItems" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.GetMultiQuestScheduleResponse), global::Mobius.Proto.Game.GetMultiQuestScheduleResponse.Parser, new[]{ "Schedules" }, null, null, null, null)
           }));
     }
     #endregion
@@ -12452,6 +12455,167 @@ namespace Mobius.Proto.Game {
           }
           case 26: {
             costItems_.AddEntriesFrom(ref input, _repeated_costItems_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetMultiQuestScheduleResponse : pb::IMessage<GetMultiQuestScheduleResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetMultiQuestScheduleResponse> _parser = new pb::MessageParser<GetMultiQuestScheduleResponse>(() => new GetMultiQuestScheduleResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetMultiQuestScheduleResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.GameResponseReflection.Descriptor.MessageTypes[51]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMultiQuestScheduleResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMultiQuestScheduleResponse(GetMultiQuestScheduleResponse other) : this() {
+      schedules_ = other.schedules_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMultiQuestScheduleResponse Clone() {
+      return new GetMultiQuestScheduleResponse(this);
+    }
+
+    /// <summary>Field number for the "schedules" field.</summary>
+    public const int SchedulesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoMultiQuestSchedule> _repeated_schedules_codec
+        = pb::FieldCodec.ForMessage(10, global::Mobius.Proto.Game.ProtoMultiQuestSchedule.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMultiQuestSchedule> schedules_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMultiQuestSchedule>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoMultiQuestSchedule> Schedules {
+      get { return schedules_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetMultiQuestScheduleResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetMultiQuestScheduleResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!schedules_.Equals(other.schedules_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= schedules_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      schedules_.WriteTo(output, _repeated_schedules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      schedules_.WriteTo(ref output, _repeated_schedules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += schedules_.CalculateSize(_repeated_schedules_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetMultiQuestScheduleResponse other) {
+      if (other == null) {
+        return;
+      }
+      schedules_.Add(other.schedules_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            schedules_.AddEntriesFrom(input, _repeated_schedules_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            schedules_.AddEntriesFrom(ref input, _repeated_schedules_codec);
             break;
           }
         }

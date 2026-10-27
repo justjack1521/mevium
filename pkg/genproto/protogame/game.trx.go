@@ -610,3 +610,15 @@ func (x *ConfirmGiftBoxResponse) MarshallBinary() ([]byte, error) {
 func (x *ClaimAchievementResponse) MarshallBinary() ([]byte, error) {
 	return proto.Marshal(x)
 }
+
+func NewGetMultiQuestScheduleRequest(bytes []byte) (*GetMultiQuestScheduleRequest, error) {
+	req := &GetMultiQuestScheduleRequest{}
+	if err := proto.Unmarshal(bytes, req); err != nil {
+		return nil, err
+	}
+	return req, nil
+}
+
+func (x *GetMultiQuestScheduleResponse) MarshallBinary() ([]byte, error) {
+	return proto.Marshal(x)
+}

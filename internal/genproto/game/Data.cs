@@ -397,22 +397,24 @@ namespace Mobius.Proto.Game {
             "bWluZxgDIAEoCBIPCgdiYXRjaGVzGAQgAygJEhQKDHBpdHlfY291bnRlchgF",
             "IAEoBRIUCgxkcmF3X2NvdW50ZXIYBiABKAUiTQoZUHJvdG9TdW1tb25CYW5u",
             "ZXJTY2hlZHVsZRIKCgJpZBgBIAEoCRISCgpzdGFydF9kYXRlGAIgASgDEhAK",
-            "CGVuZF9kYXRlGAMgASgDInEKDlByb3RvU3RhbXBEYXRhEiwKCWludmVudG9y",
-            "eRgBIAEoCzIZLmdhbWUuUHJvdG9TdGFtcEludmVudG9yeRIxCgdsYXlvdXRz",
-            "GAIgASgLMiAuZ2FtZS5Qcm90b1N0YW1wTGF5b3V0Q29sbGVjdGlvbiJDChNQ",
-            "cm90b1N0YW1wSW52ZW50b3J5EiwKCnN0YW1wX2xpc3QYASADKAsyGC5nYW1l",
-            "LlByb3RvU3RhbXBJbnN0YW5jZSI/ChJQcm90b1N0YW1wSW5zdGFuY2USFQoN",
-            "YmFzZV9zdGFtcF9pZBgBIAEoCRISCgpjcmVhdGVkX2F0GAIgASgDIkUKGlBy",
-            "b3RvU3RhbXBMYXlvdXRDb2xsZWN0aW9uEicKB2xheW91dHMYASADKAsyFi5n",
-            "YW1lLlByb3RvU3RhbXBMYXlvdXQiUwoQUHJvdG9TdGFtcExheW91dBIUCgxs",
-            "YXlvdXRfaW5kZXgYASABKAUSKQoFc2xvdHMYAiADKAsyGi5nYW1lLlByb3Rv",
-            "U3RhbXBMYXlvdXRTbG90IjwKFFByb3RvU3RhbXBMYXlvdXRTbG90EhAKCHN0",
-            "YW1wX2lkGAEgASgJEhIKCnNsb3RfaW5kZXgYAiABKAUqdAoPUmVmZXJlbmNl",
-            "U291cmNlEggKBE5PTkUQABIQCgxBQklMSVRZX0NBUkQQARIMCghKT0JfQ0FS",
-            "RBACEggKBElURU0QAxIKCgZXRUFQT04QBBITCg9GQUlSWV9DT01QQU5JT04Q",
-            "BRIMCghNUF9TVEFNUBAGQktaNWdpdGh1Yi5jb20vanVzdGphY2sxNTIxL21l",
-            "dml1bS9wa2cvZ2VucHJvdG8vcHJvdG9nYW1lqgIRTW9iaXVzLlByb3RvLkdh",
-            "bWViBnByb3RvMw=="));
+            "CGVuZF9kYXRlGAMgASgDIlEKF1Byb3RvTXVsdGlRdWVzdFNjaGVkdWxlEhAK",
+            "CHF1ZXN0X2lkGAEgASgJEhIKCnN0YXJ0X2RhdGUYAiABKAMSEAoIZW5kX2Rh",
+            "dGUYAyABKAMicQoOUHJvdG9TdGFtcERhdGESLAoJaW52ZW50b3J5GAEgASgL",
+            "MhkuZ2FtZS5Qcm90b1N0YW1wSW52ZW50b3J5EjEKB2xheW91dHMYAiABKAsy",
+            "IC5nYW1lLlByb3RvU3RhbXBMYXlvdXRDb2xsZWN0aW9uIkMKE1Byb3RvU3Rh",
+            "bXBJbnZlbnRvcnkSLAoKc3RhbXBfbGlzdBgBIAMoCzIYLmdhbWUuUHJvdG9T",
+            "dGFtcEluc3RhbmNlIj8KElByb3RvU3RhbXBJbnN0YW5jZRIVCg1iYXNlX3N0",
+            "YW1wX2lkGAEgASgJEhIKCmNyZWF0ZWRfYXQYAiABKAMiRQoaUHJvdG9TdGFt",
+            "cExheW91dENvbGxlY3Rpb24SJwoHbGF5b3V0cxgBIAMoCzIWLmdhbWUuUHJv",
+            "dG9TdGFtcExheW91dCJTChBQcm90b1N0YW1wTGF5b3V0EhQKDGxheW91dF9p",
+            "bmRleBgBIAEoBRIpCgVzbG90cxgCIAMoCzIaLmdhbWUuUHJvdG9TdGFtcExh",
+            "eW91dFNsb3QiPAoUUHJvdG9TdGFtcExheW91dFNsb3QSEAoIc3RhbXBfaWQY",
+            "ASABKAkSEgoKc2xvdF9pbmRleBgCIAEoBSp0Cg9SZWZlcmVuY2VTb3VyY2US",
+            "CAoETk9ORRAAEhAKDEFCSUxJVFlfQ0FSRBABEgwKCEpPQl9DQVJEEAISCAoE",
+            "SVRFTRADEgoKBldFQVBPThAEEhMKD0ZBSVJZX0NPTVBBTklPThAFEgwKCE1Q",
+            "X1NUQU1QEAZCS1o1Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3Br",
+            "Zy9nZW5wcm90by9wcm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -511,6 +513,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonData), global::Mobius.Proto.Game.ProtoSummonData.Parser, new[]{ "Banners" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonBannerData), global::Mobius.Proto.Game.ProtoSummonBannerData.Parser, new[]{ "Id", "Schedule", "Upcoming", "Batches", "PityCounter", "DrawCounter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonBannerSchedule), global::Mobius.Proto.Game.ProtoSummonBannerSchedule.Parser, new[]{ "Id", "StartDate", "EndDate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMultiQuestSchedule), global::Mobius.Proto.Game.ProtoMultiQuestSchedule.Parser, new[]{ "QuestId", "StartDate", "EndDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoStampData), global::Mobius.Proto.Game.ProtoStampData.Parser, new[]{ "Inventory", "Layouts" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoStampInventory), global::Mobius.Proto.Game.ProtoStampInventory.Parser, new[]{ "StampList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoStampInstance), global::Mobius.Proto.Game.ProtoStampInstance.Parser, new[]{ "BaseStampId", "CreatedAt" }, null, null, null, null),
@@ -29918,6 +29921,254 @@ namespace Mobius.Proto.Game {
 
   }
 
+  /// <summary>
+  /// One availability window for a multiplayer quest. A quest may have several;
+  /// zero seconds on either boundary means that side is open ended.
+  /// </summary>
+  public sealed partial class ProtoMultiQuestSchedule : pb::IMessage<ProtoMultiQuestSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProtoMultiQuestSchedule> _parser = new pb::MessageParser<ProtoMultiQuestSchedule>(() => new ProtoMultiQuestSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProtoMultiQuestSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[95]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoMultiQuestSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoMultiQuestSchedule(ProtoMultiQuestSchedule other) : this() {
+      questId_ = other.questId_;
+      startDate_ = other.startDate_;
+      endDate_ = other.endDate_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProtoMultiQuestSchedule Clone() {
+      return new ProtoMultiQuestSchedule(this);
+    }
+
+    /// <summary>Field number for the "quest_id" field.</summary>
+    public const int QuestIdFieldNumber = 1;
+    private string questId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string QuestId {
+      get { return questId_; }
+      set {
+        questId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_date" field.</summary>
+    public const int StartDateFieldNumber = 2;
+    private long startDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartDate {
+      get { return startDate_; }
+      set {
+        startDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_date" field.</summary>
+    public const int EndDateFieldNumber = 3;
+    private long endDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndDate {
+      get { return endDate_; }
+      set {
+        endDate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProtoMultiQuestSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProtoMultiQuestSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (QuestId != other.QuestId) return false;
+      if (StartDate != other.StartDate) return false;
+      if (EndDate != other.EndDate) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (QuestId.Length != 0) hash ^= QuestId.GetHashCode();
+      if (StartDate != 0L) hash ^= StartDate.GetHashCode();
+      if (EndDate != 0L) hash ^= EndDate.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (QuestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(QuestId);
+      }
+      if (StartDate != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartDate);
+      }
+      if (EndDate != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(EndDate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (QuestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(QuestId);
+      }
+      if (StartDate != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartDate);
+      }
+      if (EndDate != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(EndDate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (QuestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(QuestId);
+      }
+      if (StartDate != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartDate);
+      }
+      if (EndDate != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndDate);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProtoMultiQuestSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.QuestId.Length != 0) {
+        QuestId = other.QuestId;
+      }
+      if (other.StartDate != 0L) {
+        StartDate = other.StartDate;
+      }
+      if (other.EndDate != 0L) {
+        EndDate = other.EndDate;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            QuestId = input.ReadString();
+            break;
+          }
+          case 16: {
+            StartDate = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            EndDate = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            QuestId = input.ReadString();
+            break;
+          }
+          case 16: {
+            StartDate = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            EndDate = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class ProtoStampData : pb::IMessage<ProtoStampData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -29930,7 +30181,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[95]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[96]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30156,7 +30407,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[96]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[97]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30317,7 +30568,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[97]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[98]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30525,7 +30776,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[98]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[99]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30686,7 +30937,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[99]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[100]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30883,7 +31134,7 @@ namespace Mobius.Proto.Game {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[100]; }
+      get { return global::Mobius.Proto.Game.DataReflection.Descriptor.MessageTypes[101]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

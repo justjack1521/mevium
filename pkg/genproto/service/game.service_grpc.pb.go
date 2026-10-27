@@ -70,6 +70,7 @@ const (
 	MeviusGameService_ConfirmGiftBox_FullMethodName         = "/service.MeviusGameService/ConfirmGiftBox"
 	MeviusGameService_ClaimAchievement_FullMethodName       = "/service.MeviusGameService/ClaimAchievement"
 	MeviusGameService_PurchaseShopEntry_FullMethodName      = "/service.MeviusGameService/PurchaseShopEntry"
+	MeviusGameService_GetMultiQuestSchedule_FullMethodName  = "/service.MeviusGameService/GetMultiQuestSchedule"
 )
 
 // MeviusGameServiceClient is the client API for MeviusGameService service.
@@ -127,6 +128,7 @@ type MeviusGameServiceClient interface {
 	ConfirmGiftBox(ctx context.Context, in *protogame.ConfirmGiftBoxRequest, opts ...grpc.CallOption) (*protogame.ConfirmGiftBoxResponse, error)
 	ClaimAchievement(ctx context.Context, in *protogame.ClaimAchievementRequest, opts ...grpc.CallOption) (*protogame.ClaimAchievementResponse, error)
 	PurchaseShopEntry(ctx context.Context, in *protogame.PurchaseShopEntryRequest, opts ...grpc.CallOption) (*protogame.PurchaseShopEntryResponse, error)
+	GetMultiQuestSchedule(ctx context.Context, in *protogame.GetMultiQuestScheduleRequest, opts ...grpc.CallOption) (*protogame.GetMultiQuestScheduleResponse, error)
 }
 
 type meviusGameServiceClient struct {
@@ -587,6 +589,15 @@ func (c *meviusGameServiceClient) PurchaseShopEntry(ctx context.Context, in *pro
 	return out, nil
 }
 
+func (c *meviusGameServiceClient) GetMultiQuestSchedule(ctx context.Context, in *protogame.GetMultiQuestScheduleRequest, opts ...grpc.CallOption) (*protogame.GetMultiQuestScheduleResponse, error) {
+	out := new(protogame.GetMultiQuestScheduleResponse)
+	err := c.cc.Invoke(ctx, MeviusGameService_GetMultiQuestSchedule_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MeviusGameServiceServer is the server API for MeviusGameService service.
 // All implementations should embed UnimplementedMeviusGameServiceServer
 // for forward compatibility
@@ -642,6 +653,7 @@ type MeviusGameServiceServer interface {
 	ConfirmGiftBox(context.Context, *protogame.ConfirmGiftBoxRequest) (*protogame.ConfirmGiftBoxResponse, error)
 	ClaimAchievement(context.Context, *protogame.ClaimAchievementRequest) (*protogame.ClaimAchievementResponse, error)
 	PurchaseShopEntry(context.Context, *protogame.PurchaseShopEntryRequest) (*protogame.PurchaseShopEntryResponse, error)
+	GetMultiQuestSchedule(context.Context, *protogame.GetMultiQuestScheduleRequest) (*protogame.GetMultiQuestScheduleResponse, error)
 }
 
 // UnimplementedMeviusGameServiceServer should be embedded to have forward compatible implementations.
@@ -797,6 +809,9 @@ func (UnimplementedMeviusGameServiceServer) ClaimAchievement(context.Context, *p
 }
 func (UnimplementedMeviusGameServiceServer) PurchaseShopEntry(context.Context, *protogame.PurchaseShopEntryRequest) (*protogame.PurchaseShopEntryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurchaseShopEntry not implemented")
+}
+func (UnimplementedMeviusGameServiceServer) GetMultiQuestSchedule(context.Context, *protogame.GetMultiQuestScheduleRequest) (*protogame.GetMultiQuestScheduleResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetMultiQuestSchedule not implemented")
 }
 
 // UnsafeMeviusGameServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -1710,6 +1725,24 @@ func _MeviusGameService_PurchaseShopEntry_Handler(srv interface{}, ctx context.C
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MeviusGameService_GetMultiQuestSchedule_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(protogame.GetMultiQuestScheduleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MeviusGameServiceServer).GetMultiQuestSchedule(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: MeviusGameService_GetMultiQuestSchedule_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MeviusGameServiceServer).GetMultiQuestSchedule(ctx, req.(*protogame.GetMultiQuestScheduleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MeviusGameService_ServiceDesc is the grpc.ServiceDesc for MeviusGameService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1916,6 +1949,10 @@ var MeviusGameService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PurchaseShopEntry",
 			Handler:    _MeviusGameService_PurchaseShopEntry_Handler,
+		},
+		{
+			MethodName: "GetMultiQuestSchedule",
+			Handler:    _MeviusGameService_GetMultiQuestSchedule_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

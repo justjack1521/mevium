@@ -807,6 +807,14 @@ message ProtoSummonBannerSchedule {
   int64 end_date = 3;
 }
 
+// One availability window for a multiplayer quest. A quest may have several;
+// zero seconds on either boundary means that side is open ended.
+message ProtoMultiQuestSchedule {
+  string quest_id = 1;
+  int64 start_date = 2;
+  int64 end_date = 3;
+}
+
 message ProtoStampData {
   ProtoStampInventory inventory = 1;
   ProtoStampLayoutCollection layouts = 2;

@@ -78,6 +78,7 @@ const (
 	GameRequestType_CLAIM_ACHIEVEMENT         GameRequestType = 5200
 	GameRequestType_PURCHASE_SHOP_ENTRY       GameRequestType = 5300
 	GameRequestType_STAMP_EDIT_ALL            GameRequestType = 5400
+	GameRequestType_GET_MULTI_QUEST_SCHEDULE  GameRequestType = 5500
 )
 
 // Enum value maps for GameRequestType.
@@ -136,6 +137,7 @@ var (
 		5200: "CLAIM_ACHIEVEMENT",
 		5300: "PURCHASE_SHOP_ENTRY",
 		5400: "STAMP_EDIT_ALL",
+		5500: "GET_MULTI_QUEST_SCHEDULE",
 	}
 	GameRequestType_value = map[string]int32{
 		"BASE":                      0,
@@ -191,6 +193,7 @@ var (
 		"CLAIM_ACHIEVEMENT":         5200,
 		"PURCHASE_SHOP_ENTRY":       5300,
 		"STAMP_EDIT_ALL":            5400,
+		"GET_MULTI_QUEST_SCHEDULE":  5500,
 	}
 )
 
@@ -3137,6 +3140,42 @@ func (x *PurchaseShopEntryRequest) GetQuantity() int32 {
 	return 0
 }
 
+type GetMultiQuestScheduleRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMultiQuestScheduleRequest) Reset() {
+	*x = GetMultiQuestScheduleRequest{}
+	mi := &file_protogame_game_request_proto_msgTypes[53]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMultiQuestScheduleRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMultiQuestScheduleRequest) ProtoMessage() {}
+
+func (x *GetMultiQuestScheduleRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protogame_game_request_proto_msgTypes[53]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMultiQuestScheduleRequest.ProtoReflect.Descriptor instead.
+func (*GetMultiQuestScheduleRequest) Descriptor() ([]byte, []int) {
+	return file_protogame_game_request_proto_rawDescGZIP(), []int{53}
+}
+
 var File_protogame_game_request_proto protoreflect.FileDescriptor
 
 const file_protogame_game_request_proto_rawDesc = "" +
@@ -3326,7 +3365,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x18PurchaseShopEntryRequest\x12\x19\n" +
 	"\bentry_id\x18\x01 \x01(\tR\aentryId\x12,\n" +
 	"\x12purchase_option_id\x18\x02 \x01(\tR\x10purchaseOptionId\x12\x1a\n" +
-	"\bquantity\x18\x03 \x01(\x05R\bquantity*\xac\t\n" +
+	"\bquantity\x18\x03 \x01(\x05R\bquantity\"\x1e\n" +
+	"\x1cGetMultiQuestScheduleRequest*\xcb\t\n" +
 	"\x0fGameRequestType\x12\b\n" +
 	"\x04BASE\x10\x00\x12\x10\n" +
 	"\vGET_PROFILE\x10\xc8\x01\x12\x13\n" +
@@ -3381,7 +3421,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x10CONFIRM_GIFT_BOX\x10\xec'\x12\x16\n" +
 	"\x11CLAIM_ACHIEVEMENT\x10\xd0(\x12\x18\n" +
 	"\x13PURCHASE_SHOP_ENTRY\x10\xb4)\x12\x13\n" +
-	"\x0eSTAMP_EDIT_ALL\x10\x98**X\n" +
+	"\x0eSTAMP_EDIT_ALL\x10\x98*\x12\x1d\n" +
+	"\x18GET_MULTI_QUEST_SCHEDULE\x10\xfc**X\n" +
 	"\x13TeleportRequestType\x12\x14\n" +
 	"\x10INVALID_TELEPORT\x10\x00\x12\t\n" +
 	"\x05LOGIN\x10\x01\x12\t\n" +
@@ -3403,7 +3444,7 @@ func file_protogame_game_request_proto_rawDescGZIP() []byte {
 }
 
 var file_protogame_game_request_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_protogame_game_request_proto_msgTypes = make([]protoimpl.MessageInfo, 53)
+var file_protogame_game_request_proto_msgTypes = make([]protoimpl.MessageInfo, 54)
 var file_protogame_game_request_proto_goTypes = []any{
 	(GameRequestType)(0),                           // 0: game.GameRequestType
 	(TeleportRequestType)(0),                       // 1: game.TeleportRequestType
@@ -3460,15 +3501,16 @@ var file_protogame_game_request_proto_goTypes = []any{
 	(*ConfirmGiftBoxRequest)(nil),                  // 52: game.ConfirmGiftBoxRequest
 	(*ClaimAchievementRequest)(nil),                // 53: game.ClaimAchievementRequest
 	(*PurchaseShopEntryRequest)(nil),               // 54: game.PurchaseShopEntryRequest
-	(*ProtoBattleStatistics)(nil),                  // 55: game.ProtoBattleStatistics
-	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 56: identity.ProtoAbilityCardIdentity
-	(*ProtoSkillPanelUnlockTarget)(nil),            // 57: game.ProtoSkillPanelUnlockTarget
+	(*GetMultiQuestScheduleRequest)(nil),           // 55: game.GetMultiQuestScheduleRequest
+	(*ProtoBattleStatistics)(nil),                  // 56: game.ProtoBattleStatistics
+	(*protoidentity.ProtoAbilityCardIdentity)(nil), // 57: identity.ProtoAbilityCardIdentity
+	(*ProtoSkillPanelUnlockTarget)(nil),            // 58: game.ProtoSkillPanelUnlockTarget
 }
 var file_protogame_game_request_proto_depIdxs = []int32{
-	55, // 0: game.BattleCompleteRequest.statistics:type_name -> game.ProtoBattleStatistics
-	56, // 1: game.BattleStartRequest.rental_card:type_name -> identity.ProtoAbilityCardIdentity
+	56, // 0: game.BattleCompleteRequest.statistics:type_name -> game.ProtoBattleStatistics
+	57, // 1: game.BattleStartRequest.rental_card:type_name -> identity.ProtoAbilityCardIdentity
 	22, // 2: game.DeckEditAllRequest.Requests:type_name -> game.DeckEditRequest
-	57, // 3: game.SkillPanelMultiUnlockRequest.panels:type_name -> game.ProtoSkillPanelUnlockTarget
+	58, // 3: game.SkillPanelMultiUnlockRequest.panels:type_name -> game.ProtoSkillPanelUnlockTarget
 	31, // 4: game.StampLayoutEditAllRequest.Requests:type_name -> game.StampLayoutEditRequest
 	1,  // 5: game.TeleportRequest.source:type_name -> game.TeleportRequestType
 	6,  // [6:6] is the sub-list for method output_type
@@ -3490,7 +3532,7 @@ func file_protogame_game_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_protogame_game_request_proto_rawDesc), len(file_protogame_game_request_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   53,
+			NumMessages:   54,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

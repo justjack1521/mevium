@@ -323,3 +323,7 @@ message PurchaseShopEntryResponse {
   repeated ProtoItemValuePair received_items = 2;
   repeated ProtoItemValuePair cost_items = 3;
 }
+
+message GetMultiQuestScheduleResponse {
+  repeated game.ProtoMultiQuestSchedule schedules = 1;
+}

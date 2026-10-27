@@ -59,5 +59,6 @@ service MeviusGameService {
   rpc ConfirmGiftBox(game.ConfirmGiftBoxRequest) returns (game.ConfirmGiftBoxResponse) {}
   rpc ClaimAchievement(game.ClaimAchievementRequest) returns (game.ClaimAchievementResponse) {}
   rpc PurchaseShopEntry(game.PurchaseShopEntryRequest) returns (game.PurchaseShopEntryResponse) {}
+  rpc GetMultiQuestSchedule(game.GetMultiQuestScheduleRequest) returns (game.GetMultiQuestScheduleResponse) {}
 }
 
