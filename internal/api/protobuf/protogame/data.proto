@@ -799,6 +799,8 @@ message ProtoSummonBannerData {
   repeated string batches = 4;
   int32 pity_counter = 5;
   int32 draw_counter = 6;
+  // The most draws the banner allows each player; 0 is unlimited.
+  int32 max_draws = 7;
 }
 
 message ProtoSummonBannerSchedule {

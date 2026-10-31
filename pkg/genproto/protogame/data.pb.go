@@ -7088,13 +7088,15 @@ func (x *ProtoSummonData) GetBanners() []*ProtoSummonBannerData {
 }
 
 type ProtoSummonBannerData struct {
-	state         protoimpl.MessageState     `protogen:"open.v1"`
-	Id            string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Schedule      *ProtoSummonBannerSchedule `protobuf:"bytes,2,opt,name=schedule,proto3" json:"schedule,omitempty"`
-	Upcoming      bool                       `protobuf:"varint,3,opt,name=upcoming,proto3" json:"upcoming,omitempty"`
-	Batches       []string                   `protobuf:"bytes,4,rep,name=batches,proto3" json:"batches,omitempty"`
-	PityCounter   int32                      `protobuf:"varint,5,opt,name=pity_counter,json=pityCounter,proto3" json:"pity_counter,omitempty"`
-	DrawCounter   int32                      `protobuf:"varint,6,opt,name=draw_counter,json=drawCounter,proto3" json:"draw_counter,omitempty"`
+	state       protoimpl.MessageState     `protogen:"open.v1"`
+	Id          string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Schedule    *ProtoSummonBannerSchedule `protobuf:"bytes,2,opt,name=schedule,proto3" json:"schedule,omitempty"`
+	Upcoming    bool                       `protobuf:"varint,3,opt,name=upcoming,proto3" json:"upcoming,omitempty"`
+	Batches     []string                   `protobuf:"bytes,4,rep,name=batches,proto3" json:"batches,omitempty"`
+	PityCounter int32                      `protobuf:"varint,5,opt,name=pity_counter,json=pityCounter,proto3" json:"pity_counter,omitempty"`
+	DrawCounter int32                      `protobuf:"varint,6,opt,name=draw_counter,json=drawCounter,proto3" json:"draw_counter,omitempty"`
+	// The most draws the banner allows each player; 0 is unlimited.
+	MaxDraws      int32 `protobuf:"varint,7,opt,name=max_draws,json=maxDraws,proto3" json:"max_draws,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -7167,6 +7169,13 @@ func (x *ProtoSummonBannerData) GetPityCounter() int32 {
 func (x *ProtoSummonBannerData) GetDrawCounter() int32 {
 	if x != nil {
 		return x.DrawCounter
+	}
+	return 0
+}
+
+func (x *ProtoSummonBannerData) GetMaxDraws() int32 {
+	if x != nil {
+		return x.MaxDraws
 	}
 	return 0
 }
@@ -8269,14 +8278,15 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x05scale\x18\x06 \x01(\x05R\x05scale\x12\x18\n" +
 	"\aupdated\x18c \x01(\x03R\aupdated\"H\n" +
 	"\x0fProtoSummonData\x125\n" +
-	"\abanners\x18\x01 \x03(\v2\x1b.game.ProtoSummonBannerDataR\abanners\"\xe0\x01\n" +
+	"\abanners\x18\x01 \x03(\v2\x1b.game.ProtoSummonBannerDataR\abanners\"\xfd\x01\n" +
 	"\x15ProtoSummonBannerData\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12;\n" +
 	"\bschedule\x18\x02 \x01(\v2\x1f.game.ProtoSummonBannerScheduleR\bschedule\x12\x1a\n" +
 	"\bupcoming\x18\x03 \x01(\bR\bupcoming\x12\x18\n" +
 	"\abatches\x18\x04 \x03(\tR\abatches\x12!\n" +
 	"\fpity_counter\x18\x05 \x01(\x05R\vpityCounter\x12!\n" +
-	"\fdraw_counter\x18\x06 \x01(\x05R\vdrawCounter\"e\n" +
+	"\fdraw_counter\x18\x06 \x01(\x05R\vdrawCounter\x12\x1b\n" +
+	"\tmax_draws\x18\a \x01(\x05R\bmaxDraws\"e\n" +
 	"\x19ProtoSummonBannerSchedule\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +
