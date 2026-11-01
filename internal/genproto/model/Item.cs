@@ -31,26 +31,27 @@ namespace Model {
             "dHJpZXMYAyADKAsyGS5tb2RlbC5Qcm90b0l0ZW1TaG9wRW50cnkSMAoKY2F0",
             "ZWdvcmllcxgEIAMoCzIcLm1vZGVsLlByb3RvSXRlbVNob3BDYXRlZ29yeSJA",
             "ChVQcm90b0l0ZW1TaG9wQ2F0ZWdvcnkSCgoCaWQYASABKAkSDAoEbmFtZRgC",
-            "IAEoCRINCgVpbmRleBgDIAEoBSLcAQoSUHJvdG9JdGVtU2hvcEVudHJ5EgoK",
+            "IAEoCRINCgVpbmRleBgDIAEoBSLzAQoSUHJvdG9JdGVtU2hvcEVudHJ5EgoK",
             "AmlkGAEgASgJEhMKC2NhdGVnb3J5X2lkGAIgASgJEhQKDHJlZmVyZW5jZV9p",
             "ZBgDIAEoCRIOCgZzb3VyY2UYBCABKAUSEAoIcXVhbnRpdHkYBSABKAUSGAoQ",
             "bWF4aW11bV9wdXJjaGFzZRgGIAEoBRIZChFyZXF1aXJlc19wdXJjaGFzZRgH",
             "IAEoCRI4CgdvcHRpb25zGAggAygLMicubW9kZWwuUHJvdG9JdGVtU2hvcEVu",
-            "dHJ5UHVyY2hhc2VPcHRpb24ixAEKIFByb3RvSXRlbVNob3BFbnRyeVB1cmNo",
-            "YXNlT3B0aW9uEgoKAmlkGAEgASgJEhIKCnN0YXJ0X2RhdGUYAyABKAMSEAoI",
-            "ZW5kX2RhdGUYBCABKAMSGAoQbWF4aW11bV9wdXJjaGFzZRgFIAEoBRIZChFy",
-            "ZXF1aXJlc19wdXJjaGFzZRgGIAEoCRI5CgRjb3N0GAcgAygLMisubW9kZWwu",
-            "UHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb25Db3N0IkkKJFByb3Rv",
-            "SXRlbVNob3BFbnRyeVB1cmNoYXNlT3B0aW9uQ29zdBIPCgdpdGVtX2lkGAIg",
-            "ASgJEhAKCHF1YW50aXR5GAMgASgFQjhaNmdpdGh1Yi5jb20vanVzdGphY2sx",
-            "NTIxL21ldml1bS9wa2cvZ2VucHJvdG8vcHJvdG9tb2RlbGIGcHJvdG8z"));
+            "dHJ5UHVyY2hhc2VPcHRpb24SFQoNYWJpbGl0eV9sZXZlbBgJIAEoBSLEAQog",
+            "UHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VPcHRpb24SCgoCaWQYASABKAkS",
+            "EgoKc3RhcnRfZGF0ZRgDIAEoAxIQCghlbmRfZGF0ZRgEIAEoAxIYChBtYXhp",
+            "bXVtX3B1cmNoYXNlGAUgASgFEhkKEXJlcXVpcmVzX3B1cmNoYXNlGAYgASgJ",
+            "EjkKBGNvc3QYByADKAsyKy5tb2RlbC5Qcm90b0l0ZW1TaG9wRW50cnlQdXJj",
+            "aGFzZU9wdGlvbkNvc3QiSQokUHJvdG9JdGVtU2hvcEVudHJ5UHVyY2hhc2VP",
+            "cHRpb25Db3N0Eg8KB2l0ZW1faWQYAiABKAkSEAoIcXVhbnRpdHkYAyABKAVC",
+            "OFo2Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90",
+            "by9wcm90b21vZGVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.BaseItem), global::Model.BaseItem.Parser, new[]{ "SysId", "Active", "Name", "Maximum", "MonthlyMaximum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShop), global::Model.ProtoItemShop.Parser, new[]{ "Id", "Name", "Entries", "Categories" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopCategory), global::Model.ProtoItemShopCategory.Parser, new[]{ "Id", "Name", "Index" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "CategoryId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntry), global::Model.ProtoItemShopEntry.Parser, new[]{ "Id", "CategoryId", "ReferenceId", "Source", "Quantity", "MaximumPurchase", "RequiresPurchase", "Options", "AbilityLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOption), global::Model.ProtoItemShopEntryPurchaseOption.Parser, new[]{ "Id", "StartDate", "EndDate", "MaximumPurchase", "RequiresPurchase", "Cost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Model.ProtoItemShopEntryPurchaseOptionCost), global::Model.ProtoItemShopEntryPurchaseOptionCost.Parser, new[]{ "ItemId", "Quantity" }, null, null, null, null)
           }));
@@ -914,6 +915,7 @@ namespace Model {
       maximumPurchase_ = other.maximumPurchase_;
       requiresPurchase_ = other.requiresPurchase_;
       options_ = other.options_.Clone();
+      abilityLevel_ = other.abilityLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1009,6 +1011,21 @@ namespace Model {
       get { return options_; }
     }
 
+    /// <summary>Field number for the "ability_level" field.</summary>
+    public const int AbilityLevelFieldNumber = 9;
+    private int abilityLevel_;
+    /// <summary>
+    /// Ability card entries only: the ability level each card bought arrives at, capped at the
+    /// card's maximum. 0 is a new card's starting level.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AbilityLevel {
+      get { return abilityLevel_; }
+      set {
+        abilityLevel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoItemShopEntry);
@@ -1030,6 +1047,7 @@ namespace Model {
       if (MaximumPurchase != other.MaximumPurchase) return false;
       if (RequiresPurchase != other.RequiresPurchase) return false;
       if(!options_.Equals(other.options_)) return false;
+      if (AbilityLevel != other.AbilityLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1044,6 +1062,7 @@ namespace Model {
       if (MaximumPurchase != 0) hash ^= MaximumPurchase.GetHashCode();
       if (RequiresPurchase.Length != 0) hash ^= RequiresPurchase.GetHashCode();
       hash ^= options_.GetHashCode();
+      if (AbilityLevel != 0) hash ^= AbilityLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1089,6 +1108,10 @@ namespace Model {
         output.WriteString(RequiresPurchase);
       }
       options_.WriteTo(output, _repeated_options_codec);
+      if (AbilityLevel != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(AbilityLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1127,6 +1150,10 @@ namespace Model {
         output.WriteString(RequiresPurchase);
       }
       options_.WriteTo(ref output, _repeated_options_codec);
+      if (AbilityLevel != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(AbilityLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1158,6 +1185,9 @@ namespace Model {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequiresPurchase);
       }
       size += options_.CalculateSize(_repeated_options_codec);
+      if (AbilityLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AbilityLevel);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1191,6 +1221,9 @@ namespace Model {
         RequiresPurchase = other.RequiresPurchase;
       }
       options_.Add(other.options_);
+      if (other.AbilityLevel != 0) {
+        AbilityLevel = other.AbilityLevel;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1237,6 +1270,10 @@ namespace Model {
             options_.AddEntriesFrom(input, _repeated_options_codec);
             break;
           }
+          case 72: {
+            AbilityLevel = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1281,6 +1318,10 @@ namespace Model {
           }
           case 66: {
             options_.AddEntriesFrom(ref input, _repeated_options_codec);
+            break;
+          }
+          case 72: {
+            AbilityLevel = input.ReadInt32();
             break;
           }
         }

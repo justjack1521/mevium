@@ -235,8 +235,11 @@ type ProtoItemShopEntry struct {
 	MaximumPurchase  int32                               `protobuf:"varint,6,opt,name=maximum_purchase,json=maximumPurchase,proto3" json:"maximum_purchase,omitempty"`
 	RequiresPurchase string                              `protobuf:"bytes,7,opt,name=requires_purchase,json=requiresPurchase,proto3" json:"requires_purchase,omitempty"`
 	Options          []*ProtoItemShopEntryPurchaseOption `protobuf:"bytes,8,rep,name=options,proto3" json:"options,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
+	// Ability card entries only: the ability level each card bought arrives at, capped at the
+	// card's maximum. 0 is a new card's starting level.
+	AbilityLevel  int32 `protobuf:"varint,9,opt,name=ability_level,json=abilityLevel,proto3" json:"ability_level,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 }
 
 func (x *ProtoItemShopEntry) Reset() {
@@ -323,6 +326,13 @@ func (x *ProtoItemShopEntry) GetOptions() []*ProtoItemShopEntryPurchaseOption {
 		return x.Options
 	}
 	return nil
+}
+
+func (x *ProtoItemShopEntry) GetAbilityLevel() int32 {
+	if x != nil {
+		return x.AbilityLevel
+	}
+	return 0
 }
 
 type ProtoItemShopEntryPurchaseOption struct {
@@ -482,7 +492,7 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\x15ProtoItemShopCategory\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
-	"\x05index\x18\x03 \x01(\x05R\x05index\"\xb7\x02\n" +
+	"\x05index\x18\x03 \x01(\x05R\x05index\"\xdc\x02\n" +
 	"\x12ProtoItemShopEntry\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1f\n" +
 	"\vcategory_id\x18\x02 \x01(\tR\n" +
@@ -492,7 +502,8 @@ const file_protomodel_item_proto_rawDesc = "" +
 	"\bquantity\x18\x05 \x01(\x05R\bquantity\x12)\n" +
 	"\x10maximum_purchase\x18\x06 \x01(\x05R\x0fmaximumPurchase\x12+\n" +
 	"\x11requires_purchase\x18\a \x01(\tR\x10requiresPurchase\x12A\n" +
-	"\aoptions\x18\b \x03(\v2'.model.ProtoItemShopEntryPurchaseOptionR\aoptions\"\x85\x02\n" +
+	"\aoptions\x18\b \x03(\v2'.model.ProtoItemShopEntryPurchaseOptionR\aoptions\x12#\n" +
+	"\rability_level\x18\t \x01(\x05R\fabilityLevel\"\x85\x02\n" +
 	" ProtoItemShopEntryPurchaseOption\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +

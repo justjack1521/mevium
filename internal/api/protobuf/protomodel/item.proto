@@ -34,6 +34,9 @@ message ProtoItemShopEntry {
   int32 maximum_purchase = 6;
   string requires_purchase = 7;
   repeated ProtoItemShopEntryPurchaseOption options = 8;
+  // Ability card entries only: the ability level each card bought arrives at, capped at the
+  // card's maximum. 0 is a new card's starting level.
+  int32 ability_level = 9;
 }
 
 message ProtoItemShopEntryPurchaseOption {

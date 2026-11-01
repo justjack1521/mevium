@@ -98,6 +98,10 @@ message BattleStartRequest {
   string play_mode = 10;
   // Multiplayer only: the hub game's seed, so every player in the game builds the same waves.
   int32 seed = 11;
+  // Multiplayer joiners only: start the quest without paying its tier's stamina, which also
+  // forfeits the quest drop tables that require it. Waiving rather than opting in, so builds that
+  // never send it keep paying.
+  bool waive_stamina = 12;
 }
 
 message CardAugmentRequest {

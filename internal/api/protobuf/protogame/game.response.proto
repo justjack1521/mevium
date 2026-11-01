@@ -322,6 +322,8 @@ message PurchaseShopEntryResponse {
   repeated game.ProtoAbilityCardInstance received_ability_cards = 1;
   repeated ProtoItemValuePair received_items = 2;
   repeated ProtoItemValuePair cost_items = 3;
+  // The stamp a stamp entry gave. Stamps are one of a kind, so a purchase gives at most one.
+  repeated game.ProtoStampInstance received_stamps = 4;
 }
 
 message GetMultiQuestScheduleResponse {

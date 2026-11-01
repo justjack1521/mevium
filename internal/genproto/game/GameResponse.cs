@@ -181,15 +181,16 @@ namespace Mobius.Proto.Game {
             "ZVBhaXISEAoIdW5sb2NrZWQYAyABKAgSEQoJY29tcGxldGVkGAQgASgIIiQK",
             "FkNvbmZpcm1HaWZ0Qm94UmVzcG9uc2USCgoCaWQYASABKAkiVAoYQ2xhaW1B",
             "Y2hpZXZlbWVudFJlc3BvbnNlEgoKAmlkGAEgASgJEiwKDGluYm94X2NsYWlt",
-            "cxgCIAMoCzIWLmdhbWUuUHJvdG9NYWlsQm94SXRlbSK7AQoZUHVyY2hhc2VT",
+            "cxgCIAMoCzIWLmdhbWUuUHJvdG9NYWlsQm94SXRlbSLuAQoZUHVyY2hhc2VT",
             "aG9wRW50cnlSZXNwb25zZRI+ChZyZWNlaXZlZF9hYmlsaXR5X2NhcmRzGAEg",
             "AygLMh4uZ2FtZS5Qcm90b0FiaWxpdHlDYXJkSW5zdGFuY2USMAoOcmVjZWl2",
             "ZWRfaXRlbXMYAiADKAsyGC5nYW1lLlByb3RvSXRlbVZhbHVlUGFpchIsCgpj",
-            "b3N0X2l0ZW1zGAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXIiUQod",
-            "R2V0TXVsdGlRdWVzdFNjaGVkdWxlUmVzcG9uc2USMAoJc2NoZWR1bGVzGAEg",
-            "AygLMh0uZ2FtZS5Qcm90b011bHRpUXVlc3RTY2hlZHVsZUJLWjVnaXRodWIu",
-            "Y29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2Ft",
-            "ZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
+            "b3N0X2l0ZW1zGAMgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXISMQoP",
+            "cmVjZWl2ZWRfc3RhbXBzGAQgAygLMhguZ2FtZS5Qcm90b1N0YW1wSW5zdGFu",
+            "Y2UiUQodR2V0TXVsdGlRdWVzdFNjaGVkdWxlUmVzcG9uc2USMAoJc2NoZWR1",
+            "bGVzGAEgAygLMh0uZ2FtZS5Qcm90b011bHRpUXVlc3RTY2hlZHVsZUJLWjVn",
+            "aXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3By",
+            "b3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Model.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -243,7 +244,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ArenaClaimResponse), global::Mobius.Proto.Game.ArenaClaimResponse.Parser, new[]{ "Id", "RewardItems", "Unlocked", "Completed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ConfirmGiftBoxResponse), global::Mobius.Proto.Game.ConfirmGiftBoxResponse.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimAchievementResponse), global::Mobius.Proto.Game.ClaimAchievementResponse.Parser, new[]{ "Id", "InboxClaims" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseShopEntryResponse), global::Mobius.Proto.Game.PurchaseShopEntryResponse.Parser, new[]{ "ReceivedAbilityCards", "ReceivedItems", "CostItems" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseShopEntryResponse), global::Mobius.Proto.Game.PurchaseShopEntryResponse.Parser, new[]{ "ReceivedAbilityCards", "ReceivedItems", "CostItems", "ReceivedStamps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.GetMultiQuestScheduleResponse), global::Mobius.Proto.Game.GetMultiQuestScheduleResponse.Parser, new[]{ "Schedules" }, null, null, null, null)
           }));
     }
@@ -12285,6 +12286,7 @@ namespace Mobius.Proto.Game {
       receivedAbilityCards_ = other.receivedAbilityCards_.Clone();
       receivedItems_ = other.receivedItems_.Clone();
       costItems_ = other.costItems_.Clone();
+      receivedStamps_ = other.receivedStamps_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12323,6 +12325,19 @@ namespace Mobius.Proto.Game {
       get { return costItems_; }
     }
 
+    /// <summary>Field number for the "received_stamps" field.</summary>
+    public const int ReceivedStampsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Mobius.Proto.Game.ProtoStampInstance> _repeated_receivedStamps_codec
+        = pb::FieldCodec.ForMessage(34, global::Mobius.Proto.Game.ProtoStampInstance.Parser);
+    private readonly pbc::RepeatedField<global::Mobius.Proto.Game.ProtoStampInstance> receivedStamps_ = new pbc::RepeatedField<global::Mobius.Proto.Game.ProtoStampInstance>();
+    /// <summary>
+    /// The stamp a stamp entry gave. Stamps are one of a kind, so a purchase gives at most one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Mobius.Proto.Game.ProtoStampInstance> ReceivedStamps {
+      get { return receivedStamps_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PurchaseShopEntryResponse);
@@ -12339,6 +12354,7 @@ namespace Mobius.Proto.Game {
       if(!receivedAbilityCards_.Equals(other.receivedAbilityCards_)) return false;
       if(!receivedItems_.Equals(other.receivedItems_)) return false;
       if(!costItems_.Equals(other.costItems_)) return false;
+      if(!receivedStamps_.Equals(other.receivedStamps_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12348,6 +12364,7 @@ namespace Mobius.Proto.Game {
       hash ^= receivedAbilityCards_.GetHashCode();
       hash ^= receivedItems_.GetHashCode();
       hash ^= costItems_.GetHashCode();
+      hash ^= receivedStamps_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12367,6 +12384,7 @@ namespace Mobius.Proto.Game {
       receivedAbilityCards_.WriteTo(output, _repeated_receivedAbilityCards_codec);
       receivedItems_.WriteTo(output, _repeated_receivedItems_codec);
       costItems_.WriteTo(output, _repeated_costItems_codec);
+      receivedStamps_.WriteTo(output, _repeated_receivedStamps_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12379,6 +12397,7 @@ namespace Mobius.Proto.Game {
       receivedAbilityCards_.WriteTo(ref output, _repeated_receivedAbilityCards_codec);
       receivedItems_.WriteTo(ref output, _repeated_receivedItems_codec);
       costItems_.WriteTo(ref output, _repeated_costItems_codec);
+      receivedStamps_.WriteTo(ref output, _repeated_receivedStamps_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -12391,6 +12410,7 @@ namespace Mobius.Proto.Game {
       size += receivedAbilityCards_.CalculateSize(_repeated_receivedAbilityCards_codec);
       size += receivedItems_.CalculateSize(_repeated_receivedItems_codec);
       size += costItems_.CalculateSize(_repeated_costItems_codec);
+      size += receivedStamps_.CalculateSize(_repeated_receivedStamps_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -12405,6 +12425,7 @@ namespace Mobius.Proto.Game {
       receivedAbilityCards_.Add(other.receivedAbilityCards_);
       receivedItems_.Add(other.receivedItems_);
       costItems_.Add(other.costItems_);
+      receivedStamps_.Add(other.receivedStamps_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12431,6 +12452,10 @@ namespace Mobius.Proto.Game {
             costItems_.AddEntriesFrom(input, _repeated_costItems_codec);
             break;
           }
+          case 34: {
+            receivedStamps_.AddEntriesFrom(input, _repeated_receivedStamps_codec);
+            break;
+          }
         }
       }
     #endif
@@ -12455,6 +12480,10 @@ namespace Mobius.Proto.Game {
           }
           case 26: {
             costItems_.AddEntriesFrom(ref input, _repeated_costItems_codec);
+            break;
+          }
+          case 34: {
+            receivedStamps_.AddEntriesFrom(ref input, _repeated_receivedStamps_codec);
             break;
           }
         }

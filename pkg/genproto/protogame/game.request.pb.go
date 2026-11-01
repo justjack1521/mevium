@@ -419,7 +419,11 @@ type BattleStartRequest struct {
 	QuestId        string                                  `protobuf:"bytes,9,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
 	PlayMode       string                                  `protobuf:"bytes,10,opt,name=play_mode,json=playMode,proto3" json:"play_mode,omitempty"`
 	// Multiplayer only: the hub game's seed, so every player in the game builds the same waves.
-	Seed          int32 `protobuf:"varint,11,opt,name=seed,proto3" json:"seed,omitempty"`
+	Seed int32 `protobuf:"varint,11,opt,name=seed,proto3" json:"seed,omitempty"`
+	// Multiplayer joiners only: start the quest without paying its tier's stamina, which also
+	// forfeits the quest drop tables that require it. Waiving rather than opting in, so builds that
+	// never send it keep paying.
+	WaiveStamina  bool `protobuf:"varint,12,opt,name=waive_stamina,json=waiveStamina,proto3" json:"waive_stamina,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -522,6 +526,13 @@ func (x *BattleStartRequest) GetSeed() int32 {
 		return x.Seed
 	}
 	return 0
+}
+
+func (x *BattleStartRequest) GetWaiveStamina() bool {
+	if x != nil {
+		return x.WaiveStamina
+	}
+	return false
 }
 
 type CardAugmentRequest struct {
@@ -3191,7 +3202,7 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\x18auto_bank_material_cards\x18\x05 \x01(\bR\x15autoBankMaterialCards\x12\x1b\n" +
 	"\tplay_mode\x18\x06 \x01(\tR\bplayMode\"2\n" +
 	"\x13BattleReviveRequest\x12\x1b\n" +
-	"\tplay_mode\x18\x01 \x01(\tR\bplayMode\"\xde\x02\n" +
+	"\tplay_mode\x18\x01 \x01(\tR\bplayMode\"\x83\x03\n" +
 	"\x12BattleStartRequest\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1d\n" +
 	"\n" +
@@ -3205,7 +3216,8 @@ const file_protogame_game_request_proto_rawDesc = "" +
 	"\bquest_id\x18\t \x01(\tR\aquestId\x12\x1b\n" +
 	"\tplay_mode\x18\n" +
 	" \x01(\tR\bplayMode\x12\x12\n" +
-	"\x04seed\x18\v \x01(\x05R\x04seed\"\x98\x01\n" +
+	"\x04seed\x18\v \x01(\x05R\x04seed\x12#\n" +
+	"\rwaive_stamina\x18\f \x01(\bR\fwaiveStamina\"\x98\x01\n" +
 	"\x12CardAugmentRequest\x12*\n" +
 	"\x11target_card_index\x18\x01 \x01(\x05R\x0ftargetCardIndex\x12/\n" +
 	"\x13inventory_materials\x18\x02 \x03(\x05R\x12inventoryMaterials\x12%\n" +

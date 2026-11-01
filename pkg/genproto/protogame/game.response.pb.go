@@ -3036,8 +3036,10 @@ type PurchaseShopEntryResponse struct {
 	ReceivedAbilityCards []*ProtoAbilityCardInstance `protobuf:"bytes,1,rep,name=received_ability_cards,json=receivedAbilityCards,proto3" json:"received_ability_cards,omitempty"`
 	ReceivedItems        []*ProtoItemValuePair       `protobuf:"bytes,2,rep,name=received_items,json=receivedItems,proto3" json:"received_items,omitempty"`
 	CostItems            []*ProtoItemValuePair       `protobuf:"bytes,3,rep,name=cost_items,json=costItems,proto3" json:"cost_items,omitempty"`
-	unknownFields        protoimpl.UnknownFields
-	sizeCache            protoimpl.SizeCache
+	// The stamp a stamp entry gave. Stamps are one of a kind, so a purchase gives at most one.
+	ReceivedStamps []*ProtoStampInstance `protobuf:"bytes,4,rep,name=received_stamps,json=receivedStamps,proto3" json:"received_stamps,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
 }
 
 func (x *PurchaseShopEntryResponse) Reset() {
@@ -3087,6 +3089,13 @@ func (x *PurchaseShopEntryResponse) GetReceivedItems() []*ProtoItemValuePair {
 func (x *PurchaseShopEntryResponse) GetCostItems() []*ProtoItemValuePair {
 	if x != nil {
 		return x.CostItems
+	}
+	return nil
+}
+
+func (x *PurchaseShopEntryResponse) GetReceivedStamps() []*ProtoStampInstance {
+	if x != nil {
+		return x.ReceivedStamps
 	}
 	return nil
 }
@@ -3390,12 +3399,13 @@ const file_protogame_game_response_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\tR\x02id\"e\n" +
 	"\x18ClaimAchievementResponse\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x129\n" +
-	"\finbox_claims\x18\x02 \x03(\v2\x16.game.ProtoMailBoxItemR\vinboxClaims\"\xeb\x01\n" +
+	"\finbox_claims\x18\x02 \x03(\v2\x16.game.ProtoMailBoxItemR\vinboxClaims\"\xae\x02\n" +
 	"\x19PurchaseShopEntryResponse\x12T\n" +
 	"\x16received_ability_cards\x18\x01 \x03(\v2\x1e.game.ProtoAbilityCardInstanceR\x14receivedAbilityCards\x12?\n" +
 	"\x0ereceived_items\x18\x02 \x03(\v2\x18.game.ProtoItemValuePairR\rreceivedItems\x127\n" +
 	"\n" +
-	"cost_items\x18\x03 \x03(\v2\x18.game.ProtoItemValuePairR\tcostItems\"\\\n" +
+	"cost_items\x18\x03 \x03(\v2\x18.game.ProtoItemValuePairR\tcostItems\x12A\n" +
+	"\x0freceived_stamps\x18\x04 \x03(\v2\x18.game.ProtoStampInstanceR\x0ereceivedStamps\"\\\n" +
 	"\x1dGetMultiQuestScheduleResponse\x12;\n" +
 	"\tschedules\x18\x01 \x03(\v2\x1d.game.ProtoMultiQuestScheduleR\tschedulesBKZ5github.com/justjack1521/mevium/pkg/genproto/protogame\xaa\x02\x11Mobius.Proto.Gameb\x06proto3"
 
@@ -3492,7 +3502,8 @@ var file_protogame_game_response_proto_goTypes = []any{
 	(*ProtoJobCardSummonDrawResult)(nil),     // 76: game.ProtoJobCardSummonDrawResult
 	(*ProtoGiftBoxInstance)(nil),             // 77: game.ProtoGiftBoxInstance
 	(*ProtoRegionArenaEntryData)(nil),        // 78: game.ProtoRegionArenaEntryData
-	(*ProtoMultiQuestSchedule)(nil),          // 79: game.ProtoMultiQuestSchedule
+	(*ProtoStampInstance)(nil),               // 79: game.ProtoStampInstance
+	(*ProtoMultiQuestSchedule)(nil),          // 80: game.ProtoMultiQuestSchedule
 }
 var file_protogame_game_response_proto_depIdxs = []int32{
 	58, // 0: game.BattleCompleteResponse.Results:type_name -> game.ProtoLastBattleResults
@@ -3556,12 +3567,13 @@ var file_protogame_game_response_proto_depIdxs = []int32{
 	60, // 58: game.PurchaseShopEntryResponse.received_ability_cards:type_name -> game.ProtoAbilityCardInstance
 	59, // 59: game.PurchaseShopEntryResponse.received_items:type_name -> game.ProtoItemValuePair
 	59, // 60: game.PurchaseShopEntryResponse.cost_items:type_name -> game.ProtoItemValuePair
-	79, // 61: game.GetMultiQuestScheduleResponse.schedules:type_name -> game.ProtoMultiQuestSchedule
-	62, // [62:62] is the sub-list for method output_type
-	62, // [62:62] is the sub-list for method input_type
-	62, // [62:62] is the sub-list for extension type_name
-	62, // [62:62] is the sub-list for extension extendee
-	0,  // [0:62] is the sub-list for field type_name
+	79, // 61: game.PurchaseShopEntryResponse.received_stamps:type_name -> game.ProtoStampInstance
+	80, // 62: game.GetMultiQuestScheduleResponse.schedules:type_name -> game.ProtoMultiQuestSchedule
+	63, // [63:63] is the sub-list for method output_type
+	63, // [63:63] is the sub-list for method input_type
+	63, // [63:63] is the sub-list for extension type_name
+	63, // [63:63] is the sub-list for extension extendee
+	0,  // [0:63] is the sub-list for field type_name
 }
 
 func init() { file_protogame_game_response_proto_init() }
