@@ -244,6 +244,8 @@ message AbilityCardSummonResponse {
   repeated ProtoItemValuePair cost_items = 3;
   int32 pity_counter = 4;
   int32 draw_counter = 5;
+  // Banner gifts this summon sent to the inbox.
+  repeated game.ProtoMailBoxItem inbox_claims = 6;
 }
 
 message ExecuteDialogueResponse {
