@@ -7243,10 +7243,12 @@ func (x *ProtoSummonBannerSchedule) GetEndDate() int64 {
 // One availability window for a multiplayer quest. A quest may have several;
 // zero seconds on either boundary means that side is open ended.
 type ProtoMultiQuestSchedule struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	QuestId       string                 `protobuf:"bytes,1,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
-	StartDate     int64                  `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
-	EndDate       int64                  `protobuf:"varint,3,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
+	state     protoimpl.MessageState `protogen:"open.v1"`
+	QuestId   string                 `protobuf:"bytes,1,opt,name=quest_id,json=questId,proto3" json:"quest_id,omitempty"`
+	StartDate int64                  `protobuf:"varint,2,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
+	EndDate   int64                  `protobuf:"varint,3,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
+	// The stamina cost of the quest's tier, the same on every window for the quest.
+	StaminaCost   int32 `protobuf:"varint,4,opt,name=stamina_cost,json=staminaCost,proto3" json:"stamina_cost,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -7298,6 +7300,13 @@ func (x *ProtoMultiQuestSchedule) GetStartDate() int64 {
 func (x *ProtoMultiQuestSchedule) GetEndDate() int64 {
 	if x != nil {
 		return x.EndDate
+	}
+	return 0
+}
+
+func (x *ProtoMultiQuestSchedule) GetStaminaCost() int32 {
+	if x != nil {
+		return x.StaminaCost
 	}
 	return 0
 }
@@ -8291,12 +8300,13 @@ const file_protogame_data_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
 	"\n" +
 	"start_date\x18\x02 \x01(\x03R\tstartDate\x12\x19\n" +
-	"\bend_date\x18\x03 \x01(\x03R\aendDate\"n\n" +
+	"\bend_date\x18\x03 \x01(\x03R\aendDate\"\x91\x01\n" +
 	"\x17ProtoMultiQuestSchedule\x12\x19\n" +
 	"\bquest_id\x18\x01 \x01(\tR\aquestId\x12\x1d\n" +
 	"\n" +
 	"start_date\x18\x02 \x01(\x03R\tstartDate\x12\x19\n" +
-	"\bend_date\x18\x03 \x01(\x03R\aendDate\"\x85\x01\n" +
+	"\bend_date\x18\x03 \x01(\x03R\aendDate\x12!\n" +
+	"\fstamina_cost\x18\x04 \x01(\x05R\vstaminaCost\"\x85\x01\n" +
 	"\x0eProtoStampData\x127\n" +
 	"\tinventory\x18\x01 \x01(\v2\x19.game.ProtoStampInventoryR\tinventory\x12:\n" +
 	"\alayouts\x18\x02 \x01(\v2 .game.ProtoStampLayoutCollectionR\alayouts\"N\n" +

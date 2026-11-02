@@ -815,6 +815,8 @@ message ProtoMultiQuestSchedule {
   string quest_id = 1;
   int64 start_date = 2;
   int64 end_date = 3;
+  // The stamina cost of the quest's tier, the same on every window for the quest.
+  int32 stamina_cost = 4;
 }
 
 message ProtoStampData {
