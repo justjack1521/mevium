@@ -397,24 +397,25 @@ namespace Mobius.Proto.Game {
             "bWluZxgDIAEoCBIPCgdiYXRjaGVzGAQgAygJEhQKDHBpdHlfY291bnRlchgF",
             "IAEoBRIUCgxkcmF3X2NvdW50ZXIYBiABKAUSEQoJbWF4X2RyYXdzGAcgASgF",
             "Ik0KGVByb3RvU3VtbW9uQmFubmVyU2NoZWR1bGUSCgoCaWQYASABKAkSEgoK",
-            "c3RhcnRfZGF0ZRgCIAEoAxIQCghlbmRfZGF0ZRgDIAEoAyJnChdQcm90b011",
+            "c3RhcnRfZGF0ZRgCIAEoAxIQCghlbmRfZGF0ZRgDIAEoAyJ8ChdQcm90b011",
             "bHRpUXVlc3RTY2hlZHVsZRIQCghxdWVzdF9pZBgBIAEoCRISCgpzdGFydF9k",
             "YXRlGAIgASgDEhAKCGVuZF9kYXRlGAMgASgDEhQKDHN0YW1pbmFfY29zdBgE",
-            "IAEoBSJxCg5Qcm90b1N0YW1wRGF0YRIsCglpbnZlbnRvcnkYASABKAsyGS5n",
-            "YW1lLlByb3RvU3RhbXBJbnZlbnRvcnkSMQoHbGF5b3V0cxgCIAEoCzIgLmdh",
-            "bWUuUHJvdG9TdGFtcExheW91dENvbGxlY3Rpb24iQwoTUHJvdG9TdGFtcElu",
-            "dmVudG9yeRIsCgpzdGFtcF9saXN0GAEgAygLMhguZ2FtZS5Qcm90b1N0YW1w",
-            "SW5zdGFuY2UiPwoSUHJvdG9TdGFtcEluc3RhbmNlEhUKDWJhc2Vfc3RhbXBf",
-            "aWQYASABKAkSEgoKY3JlYXRlZF9hdBgCIAEoAyJFChpQcm90b1N0YW1wTGF5",
-            "b3V0Q29sbGVjdGlvbhInCgdsYXlvdXRzGAEgAygLMhYuZ2FtZS5Qcm90b1N0",
-            "YW1wTGF5b3V0IlMKEFByb3RvU3RhbXBMYXlvdXQSFAoMbGF5b3V0X2luZGV4",
-            "GAEgASgFEikKBXNsb3RzGAIgAygLMhouZ2FtZS5Qcm90b1N0YW1wTGF5b3V0",
-            "U2xvdCI8ChRQcm90b1N0YW1wTGF5b3V0U2xvdBIQCghzdGFtcF9pZBgBIAEo",
-            "CRISCgpzbG90X2luZGV4GAIgASgFKnQKD1JlZmVyZW5jZVNvdXJjZRIICgRO",
-            "T05FEAASEAoMQUJJTElUWV9DQVJEEAESDAoISk9CX0NBUkQQAhIICgRJVEVN",
-            "EAMSCgoGV0VBUE9OEAQSEwoPRkFJUllfQ09NUEFOSU9OEAUSDAoITVBfU1RB",
-            "TVAQBkJLWjVnaXRodWIuY29tL2p1c3RqYWNrMTUyMS9tZXZpdW0vcGtnL2dl",
-            "bnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1cy5Qcm90by5HYW1lYgZwcm90bzM="));
+            "IAEoBRITCgtjbGVhcl9jb3VudBgFIAEoBSJxCg5Qcm90b1N0YW1wRGF0YRIs",
+            "CglpbnZlbnRvcnkYASABKAsyGS5nYW1lLlByb3RvU3RhbXBJbnZlbnRvcnkS",
+            "MQoHbGF5b3V0cxgCIAEoCzIgLmdhbWUuUHJvdG9TdGFtcExheW91dENvbGxl",
+            "Y3Rpb24iQwoTUHJvdG9TdGFtcEludmVudG9yeRIsCgpzdGFtcF9saXN0GAEg",
+            "AygLMhguZ2FtZS5Qcm90b1N0YW1wSW5zdGFuY2UiPwoSUHJvdG9TdGFtcElu",
+            "c3RhbmNlEhUKDWJhc2Vfc3RhbXBfaWQYASABKAkSEgoKY3JlYXRlZF9hdBgC",
+            "IAEoAyJFChpQcm90b1N0YW1wTGF5b3V0Q29sbGVjdGlvbhInCgdsYXlvdXRz",
+            "GAEgAygLMhYuZ2FtZS5Qcm90b1N0YW1wTGF5b3V0IlMKEFByb3RvU3RhbXBM",
+            "YXlvdXQSFAoMbGF5b3V0X2luZGV4GAEgASgFEikKBXNsb3RzGAIgAygLMhou",
+            "Z2FtZS5Qcm90b1N0YW1wTGF5b3V0U2xvdCI8ChRQcm90b1N0YW1wTGF5b3V0",
+            "U2xvdBIQCghzdGFtcF9pZBgBIAEoCRISCgpzbG90X2luZGV4GAIgASgFKnQK",
+            "D1JlZmVyZW5jZVNvdXJjZRIICgROT05FEAASEAoMQUJJTElUWV9DQVJEEAES",
+            "DAoISk9CX0NBUkQQAhIICgRJVEVNEAMSCgoGV0VBUE9OEAQSEwoPRkFJUllf",
+            "Q09NUEFOSU9OEAUSDAoITVBfU1RBTVAQBkJLWjVnaXRodWIuY29tL2p1c3Rq",
+            "YWNrMTUyMS9tZXZpdW0vcGtnL2dlbnByb3RvL3Byb3RvZ2FtZaoCEU1vYml1",
+            "cy5Qcm90by5HYW1lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Identity.PlayerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Mobius.Proto.Game.ReferenceSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -513,7 +514,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonData), global::Mobius.Proto.Game.ProtoSummonData.Parser, new[]{ "Banners" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonBannerData), global::Mobius.Proto.Game.ProtoSummonBannerData.Parser, new[]{ "Id", "Schedule", "Upcoming", "Batches", "PityCounter", "DrawCounter", "MaxDraws" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoSummonBannerSchedule), global::Mobius.Proto.Game.ProtoSummonBannerSchedule.Parser, new[]{ "Id", "StartDate", "EndDate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMultiQuestSchedule), global::Mobius.Proto.Game.ProtoMultiQuestSchedule.Parser, new[]{ "QuestId", "StartDate", "EndDate", "StaminaCost" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoMultiQuestSchedule), global::Mobius.Proto.Game.ProtoMultiQuestSchedule.Parser, new[]{ "QuestId", "StartDate", "EndDate", "StaminaCost", "ClearCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoStampData), global::Mobius.Proto.Game.ProtoStampData.Parser, new[]{ "Inventory", "Layouts" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoStampInventory), global::Mobius.Proto.Game.ProtoStampInventory.Parser, new[]{ "StampList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ProtoStampInstance), global::Mobius.Proto.Game.ProtoStampInstance.Parser, new[]{ "BaseStampId", "CreatedAt" }, null, null, null, null),
@@ -29997,6 +29998,7 @@ namespace Mobius.Proto.Game {
       startDate_ = other.startDate_;
       endDate_ = other.endDate_;
       staminaCost_ = other.staminaCost_;
+      clearCount_ = other.clearCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -30052,6 +30054,20 @@ namespace Mobius.Proto.Game {
       }
     }
 
+    /// <summary>Field number for the "clear_count" field.</summary>
+    public const int ClearCountFieldNumber = 5;
+    private int clearCount_;
+    /// <summary>
+    /// How many times the requesting player has cleared the quest. 0 if never.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ClearCount {
+      get { return clearCount_; }
+      set {
+        clearCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProtoMultiQuestSchedule);
@@ -30069,6 +30085,7 @@ namespace Mobius.Proto.Game {
       if (StartDate != other.StartDate) return false;
       if (EndDate != other.EndDate) return false;
       if (StaminaCost != other.StaminaCost) return false;
+      if (ClearCount != other.ClearCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -30079,6 +30096,7 @@ namespace Mobius.Proto.Game {
       if (StartDate != 0L) hash ^= StartDate.GetHashCode();
       if (EndDate != 0L) hash ^= EndDate.GetHashCode();
       if (StaminaCost != 0) hash ^= StaminaCost.GetHashCode();
+      if (ClearCount != 0) hash ^= ClearCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -30111,6 +30129,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(32);
         output.WriteInt32(StaminaCost);
       }
+      if (ClearCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ClearCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -30136,6 +30158,10 @@ namespace Mobius.Proto.Game {
         output.WriteRawTag(32);
         output.WriteInt32(StaminaCost);
       }
+      if (ClearCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ClearCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -30156,6 +30182,9 @@ namespace Mobius.Proto.Game {
       }
       if (StaminaCost != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(StaminaCost);
+      }
+      if (ClearCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ClearCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -30179,6 +30208,9 @@ namespace Mobius.Proto.Game {
       }
       if (other.StaminaCost != 0) {
         StaminaCost = other.StaminaCost;
+      }
+      if (other.ClearCount != 0) {
+        ClearCount = other.ClearCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -30210,6 +30242,10 @@ namespace Mobius.Proto.Game {
             StaminaCost = input.ReadInt32();
             break;
           }
+          case 40: {
+            ClearCount = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -30238,6 +30274,10 @@ namespace Mobius.Proto.Game {
           }
           case 32: {
             StaminaCost = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ClearCount = input.ReadInt32();
             break;
           }
         }

@@ -817,6 +817,8 @@ message ProtoMultiQuestSchedule {
   int64 end_date = 3;
   // The stamina cost of the quest's tier, the same on every window for the quest.
   int32 stamina_cost = 4;
+  // How many times the requesting player has cleared the quest. 0 if never.
+  int32 clear_count = 5;
 }
 
 message ProtoStampData {
