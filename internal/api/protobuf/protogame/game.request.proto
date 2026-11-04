@@ -80,6 +80,12 @@ message BattleCompleteRequest {
   bool auto_sell_new_cards = 4;
   bool auto_bank_material_cards = 5;
   string play_mode = 6;
+  // Multiplayer only: every party member's death in the battle, so a player who falls,
+  // is revived and falls again counts twice. Every client's sim sees every death, so
+  // all of them report the same count.
+  int32 player_deaths = 7;
+  // Multiplayer only: a wave ended with fiends still standing once its required kills died.
+  bool enemies_left_alive = 8;
 }
 
 message BattleReviveRequest {
