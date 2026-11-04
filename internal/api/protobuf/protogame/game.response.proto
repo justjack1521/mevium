@@ -330,4 +330,7 @@ message PurchaseShopEntryResponse {
 
 message GetMultiQuestScheduleResponse {
   repeated game.ProtoMultiQuestSchedule schedules = 1;
+  // Clears by quest id for every quest the requesting player has cleared, scheduled or not, so
+  // progress across a whole tier can be shown. A quest never cleared has no entry.
+  map<string, int32> clear_counts = 2;
 }

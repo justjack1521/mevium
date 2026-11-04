@@ -188,10 +188,13 @@ namespace Mobius.Proto.Game {
             "dmVkX2l0ZW1zGAIgAygLMhguZ2FtZS5Qcm90b0l0ZW1WYWx1ZVBhaXISLAoK",
             "Y29zdF9pdGVtcxgDIAMoCzIYLmdhbWUuUHJvdG9JdGVtVmFsdWVQYWlyEjEK",
             "D3JlY2VpdmVkX3N0YW1wcxgEIAMoCzIYLmdhbWUuUHJvdG9TdGFtcEluc3Rh",
-            "bmNlIlEKHUdldE11bHRpUXVlc3RTY2hlZHVsZVJlc3BvbnNlEjAKCXNjaGVk",
-            "dWxlcxgBIAMoCzIdLmdhbWUuUHJvdG9NdWx0aVF1ZXN0U2NoZWR1bGVCS1o1",
-            "Z2l0aHViLmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9w",
-            "cm90b2dhbWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
+            "bmNlItEBCh1HZXRNdWx0aVF1ZXN0U2NoZWR1bGVSZXNwb25zZRIwCglzY2hl",
+            "ZHVsZXMYASADKAsyHS5nYW1lLlByb3RvTXVsdGlRdWVzdFNjaGVkdWxlEkoK",
+            "DGNsZWFyX2NvdW50cxgCIAMoCzI0LmdhbWUuR2V0TXVsdGlRdWVzdFNjaGVk",
+            "dWxlUmVzcG9uc2UuQ2xlYXJDb3VudHNFbnRyeRoyChBDbGVhckNvdW50c0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAFCS1o1Z2l0aHVi",
+            "LmNvbS9qdXN0amFjazE1MjEvbWV2aXVtL3BrZy9nZW5wcm90by9wcm90b2dh",
+            "bWWqAhFNb2JpdXMuUHJvdG8uR2FtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mobius.Proto.Game.DataReflection.Descriptor, global::Mobius.Proto.Rank.RankReflection.Descriptor, global::Model.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -246,7 +249,7 @@ namespace Mobius.Proto.Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ConfirmGiftBoxResponse), global::Mobius.Proto.Game.ConfirmGiftBoxResponse.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.ClaimAchievementResponse), global::Mobius.Proto.Game.ClaimAchievementResponse.Parser, new[]{ "Id", "InboxClaims" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.PurchaseShopEntryResponse), global::Mobius.Proto.Game.PurchaseShopEntryResponse.Parser, new[]{ "ReceivedAbilityCards", "ReceivedItems", "CostItems", "ReceivedStamps" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.GetMultiQuestScheduleResponse), global::Mobius.Proto.Game.GetMultiQuestScheduleResponse.Parser, new[]{ "Schedules" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mobius.Proto.Game.GetMultiQuestScheduleResponse), global::Mobius.Proto.Game.GetMultiQuestScheduleResponse.Parser, new[]{ "Schedules", "ClearCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -12552,6 +12555,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetMultiQuestScheduleResponse(GetMultiQuestScheduleResponse other) : this() {
       schedules_ = other.schedules_.Clone();
+      clearCounts_ = other.clearCounts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12570,6 +12574,20 @@ namespace Mobius.Proto.Game {
       get { return schedules_; }
     }
 
+    /// <summary>Field number for the "clear_counts" field.</summary>
+    public const int ClearCountsFieldNumber = 2;
+    private static readonly pbc::MapField<string, int>.Codec _map_clearCounts_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 18);
+    private readonly pbc::MapField<string, int> clearCounts_ = new pbc::MapField<string, int>();
+    /// <summary>
+    /// Clears by quest id for every quest the requesting player has cleared, scheduled or not, so
+    /// progress across a whole tier can be shown. A quest never cleared has no entry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, int> ClearCounts {
+      get { return clearCounts_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetMultiQuestScheduleResponse);
@@ -12584,6 +12602,7 @@ namespace Mobius.Proto.Game {
         return true;
       }
       if(!schedules_.Equals(other.schedules_)) return false;
+      if (!ClearCounts.Equals(other.ClearCounts)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12591,6 +12610,7 @@ namespace Mobius.Proto.Game {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= schedules_.GetHashCode();
+      hash ^= ClearCounts.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12608,6 +12628,7 @@ namespace Mobius.Proto.Game {
       output.WriteRawMessage(this);
     #else
       schedules_.WriteTo(output, _repeated_schedules_codec);
+      clearCounts_.WriteTo(output, _map_clearCounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12618,6 +12639,7 @@ namespace Mobius.Proto.Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       schedules_.WriteTo(ref output, _repeated_schedules_codec);
+      clearCounts_.WriteTo(ref output, _map_clearCounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -12628,6 +12650,7 @@ namespace Mobius.Proto.Game {
     public int CalculateSize() {
       int size = 0;
       size += schedules_.CalculateSize(_repeated_schedules_codec);
+      size += clearCounts_.CalculateSize(_map_clearCounts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -12640,6 +12663,7 @@ namespace Mobius.Proto.Game {
         return;
       }
       schedules_.Add(other.schedules_);
+      clearCounts_.Add(other.clearCounts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12658,6 +12682,10 @@ namespace Mobius.Proto.Game {
             schedules_.AddEntriesFrom(input, _repeated_schedules_codec);
             break;
           }
+          case 18: {
+            clearCounts_.AddEntriesFrom(input, _map_clearCounts_codec);
+            break;
+          }
         }
       }
     #endif
@@ -12674,6 +12702,10 @@ namespace Mobius.Proto.Game {
             break;
           case 10: {
             schedules_.AddEntriesFrom(ref input, _repeated_schedules_codec);
+            break;
+          }
+          case 18: {
+            clearCounts_.AddEntriesFrom(ref input, _map_clearCounts_codec);
             break;
           }
         }
